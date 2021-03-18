@@ -10,6 +10,7 @@ public class MethodologyItem_Pojo {
 	private InitData initData;
 	private String ruleContextType;
     private String ruleContextSource;
+    private String relationshipType;
 	
 
 	public InitData getInitData() {
@@ -75,6 +76,15 @@ public class MethodologyItem_Pojo {
 
 	public void setRuleContextSource(String ruleContextSource) {
 		this.ruleContextSource = ruleContextSource;
+	}
+
+
+	public String getRelationshipType() {
+		return relationshipType;
+	}
+
+	public void setRelationshipType(String relationshipType) {
+		this.relationshipType = relationshipType;
 	}
 
 
