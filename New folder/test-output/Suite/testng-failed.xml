@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="restassured.automation.listeners.TestListeners"/>
+  </listeners>
+  <test name="Test">
+    <groups>
+      <run>
+        <include name="IntegrationTests"/>
+        <include name="EndToEnd"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="restassured.automation.testcases.Restassured_Automation_Methodology">
+        <methods>
+          <include name="Methodology_PatchUpdateASpecificMethodologiesWith_Status_204"/>
+        </methods>
+      </class> <!-- restassured.automation.testcases.Restassured_Automation_Methodology -->
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Failed suite [Suite] -->

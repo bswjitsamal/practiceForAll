@@ -1,0 +1,33 @@
+{
+ "Rules_Post200":{
+  "name": "Hide demRuleset",
+  "rootConditionGroup": {
+    "id": "60117a5ec159f0a42faf2631"
+  },
+  "result": {
+  }
+ 
+},
+"Rules_Update": {
+  "name": "Demo",
+  "rootConditionGroup": {
+    "id": "60117a5ec159f0a42faf2631",
+    "operator": "And",
+    "children": null,
+    "conditions": [
+      {
+        "id": "60117a5ec159f0a42faf2637",
+        "sourceId": "60117a5ec159f0a42faf2638",
+        "name": "Velu",
+        "multipleInstanceConjunction": "Any",
+        "type": "SingleItem",
+        "value": "60117a5ec159f0a42faf2639",
+        "singleLogicOperator": "Equal"
+      }
+    ]
+  },
+  "result": {
+ 
+  }
+}
+}

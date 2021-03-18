@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="6512" started-at="2021-03-18T08:26:54Z" finished-at="2021-03-18T08:27:00Z">
+    <groups>
+      <group name="IntegrationTests">
+        <method signature="Restassured_Automation_ItemSelectQuestion.ItemSelectQuestion_CreateANewOptionGroupForAnItemSelectQuestionStatus_200()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_ItemSelectQuestion@3796751b]" name="ItemSelectQuestion_CreateANewOptionGroupForAnItemSelectQuestionStatus_200" class="restassured.automation.testcases.Restassured_Automation_ItemSelectQuestion"/>
+      </group> <!-- IntegrationTests -->
+    </groups>
+    <test name="Default test" duration-ms="6512" started-at="2021-03-18T08:26:54Z" finished-at="2021-03-18T08:27:00Z">
+      <class name="restassured.automation.testcases.Restassured_Automation_ItemSelectQuestion">
+        <test-method status="PASS" signature="setup()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_ItemSelectQuestion@3796751b]" name="setup" is-config="true" duration-ms="9" started-at="2021-03-18T13:56:54Z" finished-at="2021-03-18T13:56:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="ItemSelectQuestion_CreateANewOptionGroupForAnItemSelectQuestionStatus_200()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_ItemSelectQuestion@3796751b]" name="ItemSelectQuestion_CreateANewOptionGroupForAnItemSelectQuestionStatus_200" duration-ms="6489" started-at="2021-03-18T13:56:54Z" finished-at="2021-03-18T13:57:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ItemSelectQuestion_CreateANewOptionGroupForAnItemSelectQuestionStatus_200 -->
+      </class> <!-- restassured.automation.testcases.Restassured_Automation_ItemSelectQuestion -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
