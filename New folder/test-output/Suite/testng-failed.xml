@@ -12,11 +12,36 @@
       </run>
     </groups>
     <classes>
-      <class name="restassured.automation.testcases.Restassured_Automation_Methodology">
-        <methods>
-          <include name="Methodology_PatchUpdateASpecificMethodologiesWith_Status_204"/>
-        </methods>
-      </class> <!-- restassured.automation.testcases.Restassured_Automation_Methodology -->
+      <class name="restassured.automation.testcases.Restassured_Automation_ItemSelectQuestion"/>
     </classes>
   </test> <!-- Test -->
+  <test name="Test(failed)">
+    <groups>
+      <run>
+        <include name="IntegrationTests"/>
+        <include name="EndToEnd"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="restassured.automation.testcases.Restassured_Automation_ItemSelectQuestion">
+        <methods>
+          <include name="ItemSelectQuestion_UpdateASelectQuestionItemOptionGroup_400"/>
+          <include name="setup"/>
+          <include name="ItemSelectQuestion_UpdateASelectQuestionItemOptionGroup_204"/>
+          <include name="ItemSelectQuestion_EndToEnd_Scenario"/>
+          <include name="ItemSelectQuestion_GetOptionsForASpecificItemSelectQuestionMethodologyItem_status400"/>
+          <include name="ItemSelectQuestion_MoveASelectQuestionFromItemOption_status200"/>
+          <include name="ItemSelectQuestion_CreateANewOptionGroupForAnItemSelectQuestionStatus_200"/>
+          <include name="ItemSelectQuestion_MoveASelectQuestionFromItemOption_status400"/>
+          <include name="ItemSelectQuestion_PatchUpdateASelectQuestionItemOption_status200"/>
+          <include name="ItemSelectQuestion_DeleteAnOptionGroupFromAnItemSelectQuestion_400"/>
+          <include name="ItemSelectQuestion_DeleteAnOptionGroupFromAnItemSelectQuestion_204"/>
+          <include name="ItemSelectQuestion_UpdateASelectQuestionItemOptionGroup_404"/>
+          <include name="ItemSelectQuestion_DeleteAnOptionFromAnItemSelectQuestion_status204"/>
+          <include name="ItemSelectQuestion_PostCreateANewOptionForAnItemSelectQuestion_status200"/>
+          <include name="ItemSelectQuestion_DeleteAnOptionGroupFromAnItemSelectQuestion_404"/>
+        </methods>
+      </class> <!-- restassured.automation.testcases.Restassured_Automation_ItemSelectQuestion -->
+    </classes>
+  </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -11,7 +11,35 @@ public class MethodologyItem_Pojo {
 	private String ruleContextType;
     private String ruleContextSource;
     private String relationshipType;
-	
+    private String workProgramId;
+    private String workProgramItemType;
+	private String tailoring;
+	private String visibility;
+	private String workProgramType;
+
+	public String getTailoring() {
+		return tailoring;
+	}
+
+	public void setTailoring(String tailoring) {
+		this.tailoring = tailoring;
+	}
+
+	public String getVisibility() {
+		return visibility;
+	}
+
+	public void setVisibility(String visibility) {
+		this.visibility = visibility;
+	}
+
+	public String getWorkProgramType() {
+		return workProgramType;
+	}
+
+	public void setWorkProgramType(String workProgramType) {
+		this.workProgramType = workProgramType;
+	}
 
 	public InitData getInitData() {
 		return initData;
@@ -86,6 +114,25 @@ public class MethodologyItem_Pojo {
 	public void setRelationshipType(String relationshipType) {
 		this.relationshipType = relationshipType;
 	}
+
+
+	public String getWorkProgramId() {
+		return workProgramId;
+	}
+
+	public void setWorkProgramId(String workProgramId) {
+		this.workProgramId = workProgramId;
+	}
+
+
+	public String getWorkProgramItemType() {
+		return workProgramItemType;
+	}
+
+	public void setWorkProgramItemType(String workProgramItemType) {
+		this.workProgramItemType = workProgramItemType;
+	}
+	
 
 
 	public static class InitData {

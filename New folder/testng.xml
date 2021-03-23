@@ -17,12 +17,9 @@
 		<classes>
 				
 				<class
-				name="restassured.automation.testcases.Restassured_Automation_Methodology" >
+				name="restassured.automation.testcases.Restassured_Automation_ItemSelectQuestion" >
 				
-				<methods>
-            <include name="Methodology_PatchUpdateASpecificMethodologiesWith_Status_204"></include>
-            
-            </methods>
+				
 				</class>
 				
 

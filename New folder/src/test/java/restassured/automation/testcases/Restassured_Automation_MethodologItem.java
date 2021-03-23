@@ -178,7 +178,7 @@ public class Restassured_Automation_MethodologItem  {
 
 		System.out.println(String.valueOf(listRevisionI1.get(0)));
 
-		String revId = String.valueOf(listRevisionI1.get(0));
+		String revId = String.valueOf(listRevisionI1.get(1));
 
 		String patchId = "/api/methodologyItem/revision/" + revId.substring(1, revId.length() - 1);
 
@@ -1138,6 +1138,50 @@ public class Restassured_Automation_MethodologItem  {
 		MethodologyItem.validate_HTTPStrictTransportSecurity(putMethodologyItem);
 
 
+	}
+	@Test(groups="IntegrationTests")
+	public void MethodologyItem_UpdateItemsWorkFlowWithStatus_204()
+	{
+		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
+
+		// fetching Org Id
+
+		Response OrganizationsDetails = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/org");
+		JsonPath jsonPathEvaluator = OrganizationsDetails.jsonPath();
+		listOrdId = jsonPathEvaluator.get("id");
+		OrganizationsDetails.prettyPrint();
+
+		/**
+		 * GETTING THE REVISION ID
+		 */
+
+		Response getMethodologyRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
+				"Organization", listOrdId.get(4));
+		getMethodologyRes.prettyPrint();
+
+		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
+		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator1.get("revisions.id");
+
+		System.out.println(String.valueOf(listRevisionI1.get(0)));
+
+		String revId = String.valueOf(listRevisionI1.get(1));
+
+		String patchId = "/api/methodologyItem/revision/" + revId.substring(1, revId.length() - 1);
+
+		Restassured_Automation_Utils getEngagementType = new Restassured_Automation_Utils();
+
+		Response getEngagementTypeRes = getEngagementType.get_URL_Without_Params(URL, AuthorizationKey, patchId);
+		getEngagementTypeRes.prettyPrint();
+		Assert.assertEquals(getEngagementTypeRes.statusCode(), 200);
+		
+		
+		/**
+		 * Extent report generation
+		 */
+		/*ExtentTestManager.statusLogMessage(getEngagementTypeRes.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,getEngagementTypeRes.asString());
+		System.out.println("This particular below line is based on Sprint 7 & the Requirement ID : 1008");
+		getEngagementType.validate_HTTPStrictTransportSecurity(getEngagementTypeRes);*/
 	}
 	
 	@Test(groups={"EndToEnd"})

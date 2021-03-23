@@ -101,6 +101,17 @@ public Response put_URL(String BaseURL ,String AuthorizationKey , String URI , M
 	.put(BaseURL);		
 }
 
+public Response put_URL_Array(String BaseURL ,String AuthorizationKey , String URI , Map<String, String[]> body ) {
+	
+	BaseURL = BaseURL + URI;
+	
+	return RestAssured.given()
+	.header("Authorization", AuthorizationKey)		
+	.header("Content-Type","application/json")
+	.body(body)
+	.log().all()
+	.put(BaseURL);		
+}
 public Response patch_URL(String BaseURL ,String AuthorizationKey , String URI , Map<String, String> body ) {
 	
 	BaseURL = BaseURL + URI;

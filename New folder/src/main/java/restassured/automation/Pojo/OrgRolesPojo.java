@@ -11,6 +11,7 @@ public class OrgRolesPojo {
 	private String resource;
 	private String name;
 	private String minimumApplicationLevel;
+	private String[] permissions;
 
 
 	public String getResource() {
@@ -85,6 +86,15 @@ public class OrgRolesPojo {
 	public void setMinimumApplicationLevel(String minimumApplicationLevel) {
 		this.minimumApplicationLevel = minimumApplicationLevel;
 	}
+
+	public String[] getPermissions() {
+		return permissions;
+	}
+
+	public void setPermissions(String[] permissions) {
+		this.permissions = permissions;
+	}
+	
 
 	
 	
