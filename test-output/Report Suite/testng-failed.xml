@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Report Suite]">
+  <test name="Report Test">
+    <classes>
+      <class name="restassured.automation.testcases.Restassured_Automation_Engagementtype"/>
+    </classes>
+  </test> <!-- Report Test -->
+  <test name="Report Test(failed)">
+    <classes>
+      <class name="restassured.automation.testcases.Restassured_Automation_Engagementtype">
+        <methods>
+          <include name="Organizations_Add"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- restassured.automation.testcases.Restassured_Automation_Engagementtype -->
+    </classes>
+  </test> <!-- Report Test(failed) -->
+</suite> <!-- Failed suite [Report Suite] -->

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Suite">
+	<listeners>
+		<listener class-name="restassured.automation.utils.ExtentReporterNG" />
+	</listeners>
+	<test name="Test">
+		<groups>
+			<run>
+				<include name="IntegrationTests" />
+			</run>
+		</groups>
+		<classes>
+			<!-- class
+				name="restassured.automation.testcases.Restassured_Automation_FnctnalFlow" /-->
+			<class
+				name="restassured.automation.testcases.Restassured_Automation_Publish" />
+
+
+
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

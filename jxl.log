@@ -1,0 +1,283 @@
+2021-03-24 22:42:00,766 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager  - Get connection for route {}->http://13.83.56.14:80
+2021-03-24 22:42:00,772 [DEBUG] org.apache.http.impl.conn.DefaultClientConnectionOperator  - Connecting to 13.83.56.14:80
+2021-03-24 22:42:01,016 [DEBUG] org.apache.http.client.protocol.RequestAddCookies  - CookieSpec selected: ignoreCookies
+2021-03-24 22:42:01,020 [DEBUG] org.apache.http.client.protocol.RequestAuthCache  - Auth cache not set in the context
+2021-03-24 22:42:01,020 [DEBUG] org.apache.http.client.protocol.RequestProxyAuthentication  - Proxy auth state: UNCHALLENGED
+2021-03-24 22:42:01,020 [DEBUG] org.apache.http.impl.client.DefaultHttpClient  - Attempt 1 to execute request
+2021-03-24 22:42:01,020 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection  - Sending request: POST /api/engagementType HTTP/1.1
+2021-03-24 22:42:01,020 [DEBUG] org.apache.http.wire  -  >> "POST /api/engagementType HTTP/1.1[\r][\n]"
+2021-03-24 22:42:01,020 [DEBUG] org.apache.http.wire  -  >> "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiI3ZTc0OThlNy1hZjZjLTQ3YmQtYmYxNi00ZjljNWQ5NjAxYzgiLCJpc3MiOiJodHRwczovL2xvZ2luLm1pY3Jvc29mdG9ubGluZS5jb20vYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4L3YyLjAiLCJpYXQiOjE2MTY2MDIzNTQsIm5iZiI6MTYxNjYwMjM1NCwiZXhwIjoxNjE2NjA2MjU0LCJhaW8iOiJBVVFBdS84VEFBQUFWS1JEU1N0VU9OVzFwajBFbnBaTGptZ3hXZmlOWHUzRWVmTHcxWUxQdG9reHQyeVFqWTZPWTdsbVJoR1dFcHdnRUl3VUtWL2krVWFUeDRyUXdSTnladz09IiwiaWRwIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvMGI4ZjY3NzAtYTQ5MC00OTVkLTg4M2YtZGM5ZjZiYWUzODRlLyIsIm5hbWUiOiJNTVMgVGVzdCBBbWVyIDciLCJub25jZSI6IjVlNThkYTNlLWExNDItNGFlZC04OTA0LThiODgyYTgzNjk5NiIsIm9pZCI6IjJhZDFmM2I0LTkyNjctNGRjYi04OTZjLTllM2ViOGNlNzc0ZiIsInByZWZlcnJlZF91c2VybmFtZSI6Im1tcy50ZXN0LmFtZXIuN0BndGFkaG9jLmd0LmNvbSIsInJoIjoiMC5BUnNBaTdkdHAwWFpPa3E3UXYwRUVmV0wyT2VZZEg1c3I3MUh2eFpQbkYyV0FjZ2JBREUuIiwic3ViIjoiNkNkTEVOelRVMnlqRFh3S19lTl9mdkw3d2YxTFVwWnNhbVd3OGtncV8zSSIsInRpZCI6ImE3NmRiNzhiLWQ5NDUtNGEzYS1iYjQyLWZkMDQxMWY1OGJkOCIsInV0aSI6Ill1V2dDNHJtMFVDY2w5b2JrYmhEQUEiLCJ2ZXIiOiIyLjAiLCJtZW1iZXJmaXJtaWQiOiJhbWVyLnRlc3QifQ.gDs3tCVZKsyooeuIkRnVqBMOLdBGpU65r0beQC6CY6shoAh0Oz2GpiuhDFMwEhUi2cnAEio9DR2yiLOsxI9SZgVoXJvwucZ_w-rx8GJ1f-OGHFeGYeNjJqiQhQas26MkcL9co9yJ9gq6fkA4AgkEQTgYcj39KSnRNXdaq3w5wVaogoiPOrSsmdtMbwLZEJYMDbORyOHC6t-q8msXmOggylvjTiGyBcQx0oWgya4mL_bZv9RefX6uBZkBsXfIEIm0jvAxm0y1MU8RQ9RoumrNmZ9Bq_nd_HYGlVJ3LhI854UMT5V5-OQCSaDFWF4CLQYJ6-PgZ6zlGW1x-lTNgOgq4A[\r][\n]"
+2021-03-24 22:42:01,020 [DEBUG] org.apache.http.wire  -  >> "Accept: */*[\r][\n]"
+2021-03-24 22:42:01,020 [DEBUG] org.apache.http.wire  -  >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+2021-03-24 22:42:01,020 [DEBUG] org.apache.http.wire  -  >> "Content-Length: 75[\r][\n]"
+2021-03-24 22:42:01,020 [DEBUG] org.apache.http.wire  -  >> "Host: 13.83.56.14[\r][\n]"
+2021-03-24 22:42:01,020 [DEBUG] org.apache.http.wire  -  >> "Connection: Keep-Alive[\r][\n]"
+2021-03-24 22:42:01,020 [DEBUG] org.apache.http.wire  -  >> "User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_161)[\r][\n]"
+2021-03-24 22:42:01,020 [DEBUG] org.apache.http.wire  -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2021-03-24 22:42:01,020 [DEBUG] org.apache.http.wire  -  >> "[\r][\n]"
+2021-03-24 22:42:01,020 [DEBUG] org.apache.http.headers  - >> POST /api/engagementType HTTP/1.1
+2021-03-24 22:42:01,020 [DEBUG] org.apache.http.headers  - >> Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiI3ZTc0OThlNy1hZjZjLTQ3YmQtYmYxNi00ZjljNWQ5NjAxYzgiLCJpc3MiOiJodHRwczovL2xvZ2luLm1pY3Jvc29mdG9ubGluZS5jb20vYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4L3YyLjAiLCJpYXQiOjE2MTY2MDIzNTQsIm5iZiI6MTYxNjYwMjM1NCwiZXhwIjoxNjE2NjA2MjU0LCJhaW8iOiJBVVFBdS84VEFBQUFWS1JEU1N0VU9OVzFwajBFbnBaTGptZ3hXZmlOWHUzRWVmTHcxWUxQdG9reHQyeVFqWTZPWTdsbVJoR1dFcHdnRUl3VUtWL2krVWFUeDRyUXdSTnladz09IiwiaWRwIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvMGI4ZjY3NzAtYTQ5MC00OTVkLTg4M2YtZGM5ZjZiYWUzODRlLyIsIm5hbWUiOiJNTVMgVGVzdCBBbWVyIDciLCJub25jZSI6IjVlNThkYTNlLWExNDItNGFlZC04OTA0LThiODgyYTgzNjk5NiIsIm9pZCI6IjJhZDFmM2I0LTkyNjctNGRjYi04OTZjLTllM2ViOGNlNzc0ZiIsInByZWZlcnJlZF91c2VybmFtZSI6Im1tcy50ZXN0LmFtZXIuN0BndGFkaG9jLmd0LmNvbSIsInJoIjoiMC5BUnNBaTdkdHAwWFpPa3E3UXYwRUVmV0wyT2VZZEg1c3I3MUh2eFpQbkYyV0FjZ2JBREUuIiwic3ViIjoiNkNkTEVOelRVMnlqRFh3S19lTl9mdkw3d2YxTFVwWnNhbVd3OGtncV8zSSIsInRpZCI6ImE3NmRiNzhiLWQ5NDUtNGEzYS1iYjQyLWZkMDQxMWY1OGJkOCIsInV0aSI6Ill1V2dDNHJtMFVDY2w5b2JrYmhEQUEiLCJ2ZXIiOiIyLjAiLCJtZW1iZXJmaXJtaWQiOiJhbWVyLnRlc3QifQ.gDs3tCVZKsyooeuIkRnVqBMOLdBGpU65r0beQC6CY6shoAh0Oz2GpiuhDFMwEhUi2cnAEio9DR2yiLOsxI9SZgVoXJvwucZ_w-rx8GJ1f-OGHFeGYeNjJqiQhQas26MkcL9co9yJ9gq6fkA4AgkEQTgYcj39KSnRNXdaq3w5wVaogoiPOrSsmdtMbwLZEJYMDbORyOHC6t-q8msXmOggylvjTiGyBcQx0oWgya4mL_bZv9RefX6uBZkBsXfIEIm0jvAxm0y1MU8RQ9RoumrNmZ9Bq_nd_HYGlVJ3LhI854UMT5V5-OQCSaDFWF4CLQYJ6-PgZ6zlGW1x-lTNgOgq4A
+2021-03-24 22:42:01,020 [DEBUG] org.apache.http.headers  - >> Accept: */*
+2021-03-24 22:42:01,020 [DEBUG] org.apache.http.headers  - >> Content-Type: application/json; charset=UTF-8
+2021-03-24 22:42:01,020 [DEBUG] org.apache.http.headers  - >> Content-Length: 75
+2021-03-24 22:42:01,020 [DEBUG] org.apache.http.headers  - >> Host: 13.83.56.14
+2021-03-24 22:42:01,020 [DEBUG] org.apache.http.headers  - >> Connection: Keep-Alive
+2021-03-24 22:42:01,020 [DEBUG] org.apache.http.headers  - >> User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_161)
+2021-03-24 22:42:01,020 [DEBUG] org.apache.http.headers  - >> Accept-Encoding: gzip,deflate
+2021-03-24 22:42:01,020 [DEBUG] org.apache.http.wire  -  >> "{"title":"Audit-bs789","organization":"5f950768fc13ae0ade000002","id":null}"
+2021-03-24 22:42:02,536 [DEBUG] org.apache.http.wire  -  << "HTTP/1.1 200 OK[\r][\n]"
+2021-03-24 22:42:02,542 [DEBUG] org.apache.http.wire  -  << "Date: Wed, 24 Mar 2021 17:10:24 GMT[\r][\n]"
+2021-03-24 22:42:02,542 [DEBUG] org.apache.http.wire  -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2021-03-24 22:42:02,542 [DEBUG] org.apache.http.wire  -  << "Content-Length: 113[\r][\n]"
+2021-03-24 22:42:02,542 [DEBUG] org.apache.http.wire  -  << "Connection: keep-alive[\r][\n]"
+2021-03-24 22:42:02,542 [DEBUG] org.apache.http.wire  -  << "Server: Kestrel[\r][\n]"
+2021-03-24 22:42:02,542 [DEBUG] org.apache.http.wire  -  << "[\r][\n]"
+2021-03-24 22:42:02,542 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection  - Receiving response: HTTP/1.1 200 OK
+2021-03-24 22:42:02,542 [DEBUG] org.apache.http.headers  - << HTTP/1.1 200 OK
+2021-03-24 22:42:02,542 [DEBUG] org.apache.http.headers  - << Date: Wed, 24 Mar 2021 17:10:24 GMT
+2021-03-24 22:42:02,542 [DEBUG] org.apache.http.headers  - << Content-Type: application/json; charset=utf-8
+2021-03-24 22:42:02,542 [DEBUG] org.apache.http.headers  - << Content-Length: 113
+2021-03-24 22:42:02,542 [DEBUG] org.apache.http.headers  - << Connection: keep-alive
+2021-03-24 22:42:02,542 [DEBUG] org.apache.http.headers  - << Server: Kestrel
+2021-03-24 22:42:02,542 [DEBUG] org.apache.http.impl.client.DefaultHttpClient  - Connection can be kept alive indefinitely
+2021-03-24 22:42:02,594 [DEBUG] io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder  - Parsing response as: application/json; charset=utf-8
+2021-03-24 22:42:02,594 [DEBUG] io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder  - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+2021-03-24 22:42:02,617 [DEBUG] org.apache.http.wire  -  << "{"title":"Audit-bs789","organization":"5f950768fc13ae0ade000002","deleted":false,"id":"605b7280e678f058550b74b8"}"
+2021-03-24 22:42:02,617 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager  - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@7e0aadd0
+2021-03-24 22:42:02,617 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager  - Connection can be kept alive indefinitely
+2021-03-24 22:42:03,095 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager  - Get connection for route {}->http://13.83.56.14:80
+2021-03-24 22:42:03,095 [DEBUG] org.apache.http.impl.conn.DefaultClientConnectionOperator  - Connecting to 13.83.56.14:80
+2021-03-24 22:42:03,312 [DEBUG] org.apache.http.client.protocol.RequestAddCookies  - CookieSpec selected: ignoreCookies
+2021-03-24 22:42:03,313 [DEBUG] org.apache.http.client.protocol.RequestAuthCache  - Auth cache not set in the context
+2021-03-24 22:42:03,313 [DEBUG] org.apache.http.client.protocol.RequestProxyAuthentication  - Proxy auth state: UNCHALLENGED
+2021-03-24 22:42:03,313 [DEBUG] org.apache.http.impl.client.DefaultHttpClient  - Attempt 1 to execute request
+2021-03-24 22:42:03,313 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection  - Sending request: POST /api/methodology HTTP/1.1
+2021-03-24 22:42:03,313 [DEBUG] org.apache.http.wire  -  >> "POST /api/methodology HTTP/1.1[\r][\n]"
+2021-03-24 22:42:03,315 [DEBUG] org.apache.http.wire  -  >> "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiI3ZTc0OThlNy1hZjZjLTQ3YmQtYmYxNi00ZjljNWQ5NjAxYzgiLCJpc3MiOiJodHRwczovL2xvZ2luLm1pY3Jvc29mdG9ubGluZS5jb20vYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4L3YyLjAiLCJpYXQiOjE2MTY2MDIzNTQsIm5iZiI6MTYxNjYwMjM1NCwiZXhwIjoxNjE2NjA2MjU0LCJhaW8iOiJBVVFBdS84VEFBQUFWS1JEU1N0VU9OVzFwajBFbnBaTGptZ3hXZmlOWHUzRWVmTHcxWUxQdG9reHQyeVFqWTZPWTdsbVJoR1dFcHdnRUl3VUtWL2krVWFUeDRyUXdSTnladz09IiwiaWRwIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvMGI4ZjY3NzAtYTQ5MC00OTVkLTg4M2YtZGM5ZjZiYWUzODRlLyIsIm5hbWUiOiJNTVMgVGVzdCBBbWVyIDciLCJub25jZSI6IjVlNThkYTNlLWExNDItNGFlZC04OTA0LThiODgyYTgzNjk5NiIsIm9pZCI6IjJhZDFmM2I0LTkyNjctNGRjYi04OTZjLTllM2ViOGNlNzc0ZiIsInByZWZlcnJlZF91c2VybmFtZSI6Im1tcy50ZXN0LmFtZXIuN0BndGFkaG9jLmd0LmNvbSIsInJoIjoiMC5BUnNBaTdkdHAwWFpPa3E3UXYwRUVmV0wyT2VZZEg1c3I3MUh2eFpQbkYyV0FjZ2JBREUuIiwic3ViIjoiNkNkTEVOelRVMnlqRFh3S19lTl9mdkw3d2YxTFVwWnNhbVd3OGtncV8zSSIsInRpZCI6ImE3NmRiNzhiLWQ5NDUtNGEzYS1iYjQyLWZkMDQxMWY1OGJkOCIsInV0aSI6Ill1V2dDNHJtMFVDY2w5b2JrYmhEQUEiLCJ2ZXIiOiIyLjAiLCJtZW1iZXJmaXJtaWQiOiJhbWVyLnRlc3QifQ.gDs3tCVZKsyooeuIkRnVqBMOLdBGpU65r0beQC6CY6shoAh0Oz2GpiuhDFMwEhUi2cnAEio9DR2yiLOsxI9SZgVoXJvwucZ_w-rx8GJ1f-OGHFeGYeNjJqiQhQas26MkcL9co9yJ9gq6fkA4AgkEQTgYcj39KSnRNXdaq3w5wVaogoiPOrSsmdtMbwLZEJYMDbORyOHC6t-q8msXmOggylvjTiGyBcQx0oWgya4mL_bZv9RefX6uBZkBsXfIEIm0jvAxm0y1MU8RQ9RoumrNmZ9Bq_nd_HYGlVJ3LhI854UMT5V5-OQCSaDFWF4CLQYJ6-PgZ6zlGW1x-lTNgOgq4A[\r][\n]"
+2021-03-24 22:42:03,315 [DEBUG] org.apache.http.wire  -  >> "Accept: */*[\r][\n]"
+2021-03-24 22:42:03,315 [DEBUG] org.apache.http.wire  -  >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+2021-03-24 22:42:03,315 [DEBUG] org.apache.http.wire  -  >> "Content-Length: 237[\r][\n]"
+2021-03-24 22:42:03,315 [DEBUG] org.apache.http.wire  -  >> "Host: 13.83.56.14[\r][\n]"
+2021-03-24 22:42:03,315 [DEBUG] org.apache.http.wire  -  >> "Connection: Keep-Alive[\r][\n]"
+2021-03-24 22:42:03,315 [DEBUG] org.apache.http.wire  -  >> "User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_161)[\r][\n]"
+2021-03-24 22:42:03,315 [DEBUG] org.apache.http.wire  -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2021-03-24 22:42:03,316 [DEBUG] org.apache.http.wire  -  >> "[\r][\n]"
+2021-03-24 22:42:03,316 [DEBUG] org.apache.http.headers  - >> POST /api/methodology HTTP/1.1
+2021-03-24 22:42:03,316 [DEBUG] org.apache.http.headers  - >> Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiI3ZTc0OThlNy1hZjZjLTQ3YmQtYmYxNi00ZjljNWQ5NjAxYzgiLCJpc3MiOiJodHRwczovL2xvZ2luLm1pY3Jvc29mdG9ubGluZS5jb20vYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4L3YyLjAiLCJpYXQiOjE2MTY2MDIzNTQsIm5iZiI6MTYxNjYwMjM1NCwiZXhwIjoxNjE2NjA2MjU0LCJhaW8iOiJBVVFBdS84VEFBQUFWS1JEU1N0VU9OVzFwajBFbnBaTGptZ3hXZmlOWHUzRWVmTHcxWUxQdG9reHQyeVFqWTZPWTdsbVJoR1dFcHdnRUl3VUtWL2krVWFUeDRyUXdSTnladz09IiwiaWRwIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvMGI4ZjY3NzAtYTQ5MC00OTVkLTg4M2YtZGM5ZjZiYWUzODRlLyIsIm5hbWUiOiJNTVMgVGVzdCBBbWVyIDciLCJub25jZSI6IjVlNThkYTNlLWExNDItNGFlZC04OTA0LThiODgyYTgzNjk5NiIsIm9pZCI6IjJhZDFmM2I0LTkyNjctNGRjYi04OTZjLTllM2ViOGNlNzc0ZiIsInByZWZlcnJlZF91c2VybmFtZSI6Im1tcy50ZXN0LmFtZXIuN0BndGFkaG9jLmd0LmNvbSIsInJoIjoiMC5BUnNBaTdkdHAwWFpPa3E3UXYwRUVmV0wyT2VZZEg1c3I3MUh2eFpQbkYyV0FjZ2JBREUuIiwic3ViIjoiNkNkTEVOelRVMnlqRFh3S19lTl9mdkw3d2YxTFVwWnNhbVd3OGtncV8zSSIsInRpZCI6ImE3NmRiNzhiLWQ5NDUtNGEzYS1iYjQyLWZkMDQxMWY1OGJkOCIsInV0aSI6Ill1V2dDNHJtMFVDY2w5b2JrYmhEQUEiLCJ2ZXIiOiIyLjAiLCJtZW1iZXJmaXJtaWQiOiJhbWVyLnRlc3QifQ.gDs3tCVZKsyooeuIkRnVqBMOLdBGpU65r0beQC6CY6shoAh0Oz2GpiuhDFMwEhUi2cnAEio9DR2yiLOsxI9SZgVoXJvwucZ_w-rx8GJ1f-OGHFeGYeNjJqiQhQas26MkcL9co9yJ9gq6fkA4AgkEQTgYcj39KSnRNXdaq3w5wVaogoiPOrSsmdtMbwLZEJYMDbORyOHC6t-q8msXmOggylvjTiGyBcQx0oWgya4mL_bZv9RefX6uBZkBsXfIEIm0jvAxm0y1MU8RQ9RoumrNmZ9Bq_nd_HYGlVJ3LhI854UMT5V5-OQCSaDFWF4CLQYJ6-PgZ6zlGW1x-lTNgOgq4A
+2021-03-24 22:42:03,316 [DEBUG] org.apache.http.headers  - >> Accept: */*
+2021-03-24 22:42:03,316 [DEBUG] org.apache.http.headers  - >> Content-Type: application/json; charset=UTF-8
+2021-03-24 22:42:03,316 [DEBUG] org.apache.http.headers  - >> Content-Length: 237
+2021-03-24 22:42:03,316 [DEBUG] org.apache.http.headers  - >> Host: 13.83.56.14
+2021-03-24 22:42:03,316 [DEBUG] org.apache.http.headers  - >> Connection: Keep-Alive
+2021-03-24 22:42:03,316 [DEBUG] org.apache.http.headers  - >> User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_161)
+2021-03-24 22:42:03,316 [DEBUG] org.apache.http.headers  - >> Accept-Encoding: gzip,deflate
+2021-03-24 22:42:03,316 [DEBUG] org.apache.http.wire  -  >> "{"id":null,"title":"Audit-bsijk","engagementType":"605b7280e678f058550b74b8","organization":"5f950768fc13ae0ade000002","revisions":null,"revisionId":null,"treeItemId":null,"draftDescription":"This is for testing, please do not consider"}"
+2021-03-24 22:42:08,200 [DEBUG] org.apache.http.wire  -  << "HTTP/1.1 200 OK[\r][\n]"
+2021-03-24 22:42:08,200 [DEBUG] org.apache.http.wire  -  << "Date: Wed, 24 Mar 2021 17:10:30 GMT[\r][\n]"
+2021-03-24 22:42:08,201 [DEBUG] org.apache.http.wire  -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2021-03-24 22:42:08,201 [DEBUG] org.apache.http.wire  -  << "Content-Length: 353[\r][\n]"
+2021-03-24 22:42:08,201 [DEBUG] org.apache.http.wire  -  << "Connection: keep-alive[\r][\n]"
+2021-03-24 22:42:08,201 [DEBUG] org.apache.http.wire  -  << "Server: Kestrel[\r][\n]"
+2021-03-24 22:42:08,201 [DEBUG] org.apache.http.wire  -  << "[\r][\n]"
+2021-03-24 22:42:08,201 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection  - Receiving response: HTTP/1.1 200 OK
+2021-03-24 22:42:08,201 [DEBUG] org.apache.http.headers  - << HTTP/1.1 200 OK
+2021-03-24 22:42:08,201 [DEBUG] org.apache.http.headers  - << Date: Wed, 24 Mar 2021 17:10:30 GMT
+2021-03-24 22:42:08,201 [DEBUG] org.apache.http.headers  - << Content-Type: application/json; charset=utf-8
+2021-03-24 22:42:08,201 [DEBUG] org.apache.http.headers  - << Content-Length: 353
+2021-03-24 22:42:08,201 [DEBUG] org.apache.http.headers  - << Connection: keep-alive
+2021-03-24 22:42:08,201 [DEBUG] org.apache.http.headers  - << Server: Kestrel
+2021-03-24 22:42:08,203 [DEBUG] org.apache.http.impl.client.DefaultHttpClient  - Connection can be kept alive indefinitely
+2021-03-24 22:42:08,204 [DEBUG] io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder  - Parsing response as: application/json; charset=utf-8
+2021-03-24 22:42:08,204 [DEBUG] io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder  - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+2021-03-24 22:42:08,206 [DEBUG] org.apache.http.wire  -  << "{"title":"Audit-bsijk","organization":"5f950768fc13ae0ade000002","engagementType":"605b7280e678f058550b74b8","revisions":[{"id":"605b7282540422dd40263531","draftDescription":"This is for testing, please do not consider"}],"createdById":"2ad1f3b4-9267-4dcb-896c-9e3eb8ce774f","creationDate":"2021-03-24T17:10:26.8811298Z","id":"605b7282540422dd40263530"}"
+2021-03-24 22:42:08,207 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager  - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@430fa4ef
+2021-03-24 22:42:08,207 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager  - Connection can be kept alive indefinitely
+2021-03-24 22:42:08,333 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager  - Get connection for route {}->http://13.83.56.14:80
+2021-03-24 22:42:08,333 [DEBUG] org.apache.http.impl.conn.DefaultClientConnectionOperator  - Connecting to 13.83.56.14:80
+2021-03-24 22:42:08,603 [DEBUG] org.apache.http.client.protocol.RequestAddCookies  - CookieSpec selected: ignoreCookies
+2021-03-24 22:42:08,603 [DEBUG] org.apache.http.client.protocol.RequestAuthCache  - Auth cache not set in the context
+2021-03-24 22:42:08,603 [DEBUG] org.apache.http.client.protocol.RequestProxyAuthentication  - Proxy auth state: UNCHALLENGED
+2021-03-24 22:42:08,603 [DEBUG] org.apache.http.impl.client.DefaultHttpClient  - Attempt 1 to execute request
+2021-03-24 22:42:08,604 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection  - Sending request: POST /api/publish/publish/605b7282540422dd40263530/605b7282540422dd40263531 HTTP/1.1
+2021-03-24 22:42:08,605 [DEBUG] org.apache.http.wire  -  >> "POST /api/publish/publish/605b7282540422dd40263530/605b7282540422dd40263531 HTTP/1.1[\r][\n]"
+2021-03-24 22:42:08,605 [DEBUG] org.apache.http.wire  -  >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+2021-03-24 22:42:08,605 [DEBUG] org.apache.http.wire  -  >> "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiI3ZTc0OThlNy1hZjZjLTQ3YmQtYmYxNi00ZjljNWQ5NjAxYzgiLCJpc3MiOiJodHRwczovL2xvZ2luLm1pY3Jvc29mdG9ubGluZS5jb20vYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4L3YyLjAiLCJpYXQiOjE2MTY2MDIzNTQsIm5iZiI6MTYxNjYwMjM1NCwiZXhwIjoxNjE2NjA2MjU0LCJhaW8iOiJBVVFBdS84VEFBQUFWS1JEU1N0VU9OVzFwajBFbnBaTGptZ3hXZmlOWHUzRWVmTHcxWUxQdG9reHQyeVFqWTZPWTdsbVJoR1dFcHdnRUl3VUtWL2krVWFUeDRyUXdSTnladz09IiwiaWRwIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvMGI4ZjY3NzAtYTQ5MC00OTVkLTg4M2YtZGM5ZjZiYWUzODRlLyIsIm5hbWUiOiJNTVMgVGVzdCBBbWVyIDciLCJub25jZSI6IjVlNThkYTNlLWExNDItNGFlZC04OTA0LThiODgyYTgzNjk5NiIsIm9pZCI6IjJhZDFmM2I0LTkyNjctNGRjYi04OTZjLTllM2ViOGNlNzc0ZiIsInByZWZlcnJlZF91c2VybmFtZSI6Im1tcy50ZXN0LmFtZXIuN0BndGFkaG9jLmd0LmNvbSIsInJoIjoiMC5BUnNBaTdkdHAwWFpPa3E3UXYwRUVmV0wyT2VZZEg1c3I3MUh2eFpQbkYyV0FjZ2JBREUuIiwic3ViIjoiNkNkTEVOelRVMnlqRFh3S19lTl9mdkw3d2YxTFVwWnNhbVd3OGtncV8zSSIsInRpZCI6ImE3NmRiNzhiLWQ5NDUtNGEzYS1iYjQyLWZkMDQxMWY1OGJkOCIsInV0aSI6Ill1V2dDNHJtMFVDY2w5b2JrYmhEQUEiLCJ2ZXIiOiIyLjAiLCJtZW1iZXJmaXJtaWQiOiJhbWVyLnRlc3QifQ.gDs3tCVZKsyooeuIkRnVqBMOLdBGpU65r0beQC6CY6shoAh0Oz2GpiuhDFMwEhUi2cnAEio9DR2yiLOsxI9SZgVoXJvwucZ_w-rx8GJ1f-OGHFeGYeNjJqiQhQas26MkcL9co9yJ9gq6fkA4AgkEQTgYcj39KSnRNXdaq3w5wVaogoiPOrSsmdtMbwLZEJYMDbORyOHC6t-q8msXmOggylvjTiGyBcQx0oWgya4mL_bZv9RefX6uBZkBsXfIEIm0jvAxm0y1MU8RQ9RoumrNmZ9Bq_nd_HYGlVJ3LhI854UMT5V5-OQCSaDFWF4CLQYJ6-PgZ6zlGW1x-lTNgOgq4A[\r][\n]"
+2021-03-24 22:42:08,606 [DEBUG] org.apache.http.wire  -  >> "Accept: */*[\r][\n]"
+2021-03-24 22:42:08,606 [DEBUG] org.apache.http.wire  -  >> "Content-Length: 0[\r][\n]"
+2021-03-24 22:42:08,606 [DEBUG] org.apache.http.wire  -  >> "Host: 13.83.56.14[\r][\n]"
+2021-03-24 22:42:08,606 [DEBUG] org.apache.http.wire  -  >> "Connection: Keep-Alive[\r][\n]"
+2021-03-24 22:42:08,606 [DEBUG] org.apache.http.wire  -  >> "User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_161)[\r][\n]"
+2021-03-24 22:42:08,606 [DEBUG] org.apache.http.wire  -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2021-03-24 22:42:08,606 [DEBUG] org.apache.http.wire  -  >> "[\r][\n]"
+2021-03-24 22:42:08,606 [DEBUG] org.apache.http.headers  - >> POST /api/publish/publish/605b7282540422dd40263530/605b7282540422dd40263531 HTTP/1.1
+2021-03-24 22:42:08,606 [DEBUG] org.apache.http.headers  - >> Content-Type: application/json; charset=UTF-8
+2021-03-24 22:42:08,606 [DEBUG] org.apache.http.headers  - >> Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiI3ZTc0OThlNy1hZjZjLTQ3YmQtYmYxNi00ZjljNWQ5NjAxYzgiLCJpc3MiOiJodHRwczovL2xvZ2luLm1pY3Jvc29mdG9ubGluZS5jb20vYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4L3YyLjAiLCJpYXQiOjE2MTY2MDIzNTQsIm5iZiI6MTYxNjYwMjM1NCwiZXhwIjoxNjE2NjA2MjU0LCJhaW8iOiJBVVFBdS84VEFBQUFWS1JEU1N0VU9OVzFwajBFbnBaTGptZ3hXZmlOWHUzRWVmTHcxWUxQdG9reHQyeVFqWTZPWTdsbVJoR1dFcHdnRUl3VUtWL2krVWFUeDRyUXdSTnladz09IiwiaWRwIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvMGI4ZjY3NzAtYTQ5MC00OTVkLTg4M2YtZGM5ZjZiYWUzODRlLyIsIm5hbWUiOiJNTVMgVGVzdCBBbWVyIDciLCJub25jZSI6IjVlNThkYTNlLWExNDItNGFlZC04OTA0LThiODgyYTgzNjk5NiIsIm9pZCI6IjJhZDFmM2I0LTkyNjctNGRjYi04OTZjLTllM2ViOGNlNzc0ZiIsInByZWZlcnJlZF91c2VybmFtZSI6Im1tcy50ZXN0LmFtZXIuN0BndGFkaG9jLmd0LmNvbSIsInJoIjoiMC5BUnNBaTdkdHAwWFpPa3E3UXYwRUVmV0wyT2VZZEg1c3I3MUh2eFpQbkYyV0FjZ2JBREUuIiwic3ViIjoiNkNkTEVOelRVMnlqRFh3S19lTl9mdkw3d2YxTFVwWnNhbVd3OGtncV8zSSIsInRpZCI6ImE3NmRiNzhiLWQ5NDUtNGEzYS1iYjQyLWZkMDQxMWY1OGJkOCIsInV0aSI6Ill1V2dDNHJtMFVDY2w5b2JrYmhEQUEiLCJ2ZXIiOiIyLjAiLCJtZW1iZXJmaXJtaWQiOiJhbWVyLnRlc3QifQ.gDs3tCVZKsyooeuIkRnVqBMOLdBGpU65r0beQC6CY6shoAh0Oz2GpiuhDFMwEhUi2cnAEio9DR2yiLOsxI9SZgVoXJvwucZ_w-rx8GJ1f-OGHFeGYeNjJqiQhQas26MkcL9co9yJ9gq6fkA4AgkEQTgYcj39KSnRNXdaq3w5wVaogoiPOrSsmdtMbwLZEJYMDbORyOHC6t-q8msXmOggylvjTiGyBcQx0oWgya4mL_bZv9RefX6uBZkBsXfIEIm0jvAxm0y1MU8RQ9RoumrNmZ9Bq_nd_HYGlVJ3LhI854UMT5V5-OQCSaDFWF4CLQYJ6-PgZ6zlGW1x-lTNgOgq4A
+2021-03-24 22:42:08,606 [DEBUG] org.apache.http.headers  - >> Accept: */*
+2021-03-24 22:42:08,606 [DEBUG] org.apache.http.headers  - >> Content-Length: 0
+2021-03-24 22:42:08,606 [DEBUG] org.apache.http.headers  - >> Host: 13.83.56.14
+2021-03-24 22:42:08,606 [DEBUG] org.apache.http.headers  - >> Connection: Keep-Alive
+2021-03-24 22:42:08,606 [DEBUG] org.apache.http.headers  - >> User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_161)
+2021-03-24 22:42:08,606 [DEBUG] org.apache.http.headers  - >> Accept-Encoding: gzip,deflate
+2021-03-24 22:42:32,346 [DEBUG] org.apache.http.wire  -  << "HTTP/1.1 500 Internal Server Error[\r][\n]"
+2021-03-24 22:42:32,346 [DEBUG] org.apache.http.wire  -  << "Date: Wed, 24 Mar 2021 17:10:54 GMT[\r][\n]"
+2021-03-24 22:42:32,347 [DEBUG] org.apache.http.wire  -  << "Content-Length: 0[\r][\n]"
+2021-03-24 22:42:32,347 [DEBUG] org.apache.http.wire  -  << "Connection: keep-alive[\r][\n]"
+2021-03-24 22:42:32,347 [DEBUG] org.apache.http.wire  -  << "Server: Kestrel[\r][\n]"
+2021-03-24 22:42:32,348 [DEBUG] org.apache.http.wire  -  << "[\r][\n]"
+2021-03-24 22:42:32,348 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection  - Receiving response: HTTP/1.1 500 Internal Server Error
+2021-03-24 22:42:32,348 [DEBUG] org.apache.http.headers  - << HTTP/1.1 500 Internal Server Error
+2021-03-24 22:42:32,348 [DEBUG] org.apache.http.headers  - << Date: Wed, 24 Mar 2021 17:10:54 GMT
+2021-03-24 22:42:32,348 [DEBUG] org.apache.http.headers  - << Content-Length: 0
+2021-03-24 22:42:32,348 [DEBUG] org.apache.http.headers  - << Connection: keep-alive
+2021-03-24 22:42:32,348 [DEBUG] org.apache.http.headers  - << Server: Kestrel
+2021-03-24 22:42:32,349 [DEBUG] org.apache.http.impl.client.DefaultHttpClient  - Connection can be kept alive indefinitely
+2021-03-24 22:42:32,402 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager  - Get connection for route {}->http://13.83.56.14:80
+2021-03-24 22:42:32,402 [DEBUG] org.apache.http.impl.conn.DefaultClientConnectionOperator  - Connecting to 13.83.56.14:80
+2021-03-24 22:42:32,612 [DEBUG] org.apache.http.client.protocol.RequestAddCookies  - CookieSpec selected: ignoreCookies
+2021-03-24 22:42:32,612 [DEBUG] org.apache.http.client.protocol.RequestAuthCache  - Auth cache not set in the context
+2021-03-24 22:42:32,613 [DEBUG] org.apache.http.client.protocol.RequestProxyAuthentication  - Proxy auth state: UNCHALLENGED
+2021-03-24 22:42:32,613 [DEBUG] org.apache.http.impl.client.DefaultHttpClient  - Attempt 1 to execute request
+2021-03-24 22:42:32,613 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection  - Sending request: POST /api/engagementType HTTP/1.1
+2021-03-24 22:42:32,613 [DEBUG] org.apache.http.wire  -  >> "POST /api/engagementType HTTP/1.1[\r][\n]"
+2021-03-24 22:42:32,614 [DEBUG] org.apache.http.wire  -  >> "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiI3ZTc0OThlNy1hZjZjLTQ3YmQtYmYxNi00ZjljNWQ5NjAxYzgiLCJpc3MiOiJodHRwczovL2xvZ2luLm1pY3Jvc29mdG9ubGluZS5jb20vYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4L3YyLjAiLCJpYXQiOjE2MTY2MDIzNTQsIm5iZiI6MTYxNjYwMjM1NCwiZXhwIjoxNjE2NjA2MjU0LCJhaW8iOiJBVVFBdS84VEFBQUFWS1JEU1N0VU9OVzFwajBFbnBaTGptZ3hXZmlOWHUzRWVmTHcxWUxQdG9reHQyeVFqWTZPWTdsbVJoR1dFcHdnRUl3VUtWL2krVWFUeDRyUXdSTnladz09IiwiaWRwIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvMGI4ZjY3NzAtYTQ5MC00OTVkLTg4M2YtZGM5ZjZiYWUzODRlLyIsIm5hbWUiOiJNTVMgVGVzdCBBbWVyIDciLCJub25jZSI6IjVlNThkYTNlLWExNDItNGFlZC04OTA0LThiODgyYTgzNjk5NiIsIm9pZCI6IjJhZDFmM2I0LTkyNjctNGRjYi04OTZjLTllM2ViOGNlNzc0ZiIsInByZWZlcnJlZF91c2VybmFtZSI6Im1tcy50ZXN0LmFtZXIuN0BndGFkaG9jLmd0LmNvbSIsInJoIjoiMC5BUnNBaTdkdHAwWFpPa3E3UXYwRUVmV0wyT2VZZEg1c3I3MUh2eFpQbkYyV0FjZ2JBREUuIiwic3ViIjoiNkNkTEVOelRVMnlqRFh3S19lTl9mdkw3d2YxTFVwWnNhbVd3OGtncV8zSSIsInRpZCI6ImE3NmRiNzhiLWQ5NDUtNGEzYS1iYjQyLWZkMDQxMWY1OGJkOCIsInV0aSI6Ill1V2dDNHJtMFVDY2w5b2JrYmhEQUEiLCJ2ZXIiOiIyLjAiLCJtZW1iZXJmaXJtaWQiOiJhbWVyLnRlc3QifQ.gDs3tCVZKsyooeuIkRnVqBMOLdBGpU65r0beQC6CY6shoAh0Oz2GpiuhDFMwEhUi2cnAEio9DR2yiLOsxI9SZgVoXJvwucZ_w-rx8GJ1f-OGHFeGYeNjJqiQhQas26MkcL9co9yJ9gq6fkA4AgkEQTgYcj39KSnRNXdaq3w5wVaogoiPOrSsmdtMbwLZEJYMDbORyOHC6t-q8msXmOggylvjTiGyBcQx0oWgya4mL_bZv9RefX6uBZkBsXfIEIm0jvAxm0y1MU8RQ9RoumrNmZ9Bq_nd_HYGlVJ3LhI854UMT5V5-OQCSaDFWF4CLQYJ6-PgZ6zlGW1x-lTNgOgq4A[\r][\n]"
+2021-03-24 22:42:32,614 [DEBUG] org.apache.http.wire  -  >> "Accept: */*[\r][\n]"
+2021-03-24 22:42:32,614 [DEBUG] org.apache.http.wire  -  >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+2021-03-24 22:42:32,614 [DEBUG] org.apache.http.wire  -  >> "Content-Length: 75[\r][\n]"
+2021-03-24 22:42:32,615 [DEBUG] org.apache.http.wire  -  >> "Host: 13.83.56.14[\r][\n]"
+2021-03-24 22:42:32,615 [DEBUG] org.apache.http.wire  -  >> "Connection: Keep-Alive[\r][\n]"
+2021-03-24 22:42:32,616 [DEBUG] org.apache.http.wire  -  >> "User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_161)[\r][\n]"
+2021-03-24 22:42:32,616 [DEBUG] org.apache.http.wire  -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2021-03-24 22:42:32,616 [DEBUG] org.apache.http.wire  -  >> "[\r][\n]"
+2021-03-24 22:42:32,616 [DEBUG] org.apache.http.headers  - >> POST /api/engagementType HTTP/1.1
+2021-03-24 22:42:32,617 [DEBUG] org.apache.http.headers  - >> Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiI3ZTc0OThlNy1hZjZjLTQ3YmQtYmYxNi00ZjljNWQ5NjAxYzgiLCJpc3MiOiJodHRwczovL2xvZ2luLm1pY3Jvc29mdG9ubGluZS5jb20vYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4L3YyLjAiLCJpYXQiOjE2MTY2MDIzNTQsIm5iZiI6MTYxNjYwMjM1NCwiZXhwIjoxNjE2NjA2MjU0LCJhaW8iOiJBVVFBdS84VEFBQUFWS1JEU1N0VU9OVzFwajBFbnBaTGptZ3hXZmlOWHUzRWVmTHcxWUxQdG9reHQyeVFqWTZPWTdsbVJoR1dFcHdnRUl3VUtWL2krVWFUeDRyUXdSTnladz09IiwiaWRwIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvMGI4ZjY3NzAtYTQ5MC00OTVkLTg4M2YtZGM5ZjZiYWUzODRlLyIsIm5hbWUiOiJNTVMgVGVzdCBBbWVyIDciLCJub25jZSI6IjVlNThkYTNlLWExNDItNGFlZC04OTA0LThiODgyYTgzNjk5NiIsIm9pZCI6IjJhZDFmM2I0LTkyNjctNGRjYi04OTZjLTllM2ViOGNlNzc0ZiIsInByZWZlcnJlZF91c2VybmFtZSI6Im1tcy50ZXN0LmFtZXIuN0BndGFkaG9jLmd0LmNvbSIsInJoIjoiMC5BUnNBaTdkdHAwWFpPa3E3UXYwRUVmV0wyT2VZZEg1c3I3MUh2eFpQbkYyV0FjZ2JBREUuIiwic3ViIjoiNkNkTEVOelRVMnlqRFh3S19lTl9mdkw3d2YxTFVwWnNhbVd3OGtncV8zSSIsInRpZCI6ImE3NmRiNzhiLWQ5NDUtNGEzYS1iYjQyLWZkMDQxMWY1OGJkOCIsInV0aSI6Ill1V2dDNHJtMFVDY2w5b2JrYmhEQUEiLCJ2ZXIiOiIyLjAiLCJtZW1iZXJmaXJtaWQiOiJhbWVyLnRlc3QifQ.gDs3tCVZKsyooeuIkRnVqBMOLdBGpU65r0beQC6CY6shoAh0Oz2GpiuhDFMwEhUi2cnAEio9DR2yiLOsxI9SZgVoXJvwucZ_w-rx8GJ1f-OGHFeGYeNjJqiQhQas26MkcL9co9yJ9gq6fkA4AgkEQTgYcj39KSnRNXdaq3w5wVaogoiPOrSsmdtMbwLZEJYMDbORyOHC6t-q8msXmOggylvjTiGyBcQx0oWgya4mL_bZv9RefX6uBZkBsXfIEIm0jvAxm0y1MU8RQ9RoumrNmZ9Bq_nd_HYGlVJ3LhI854UMT5V5-OQCSaDFWF4CLQYJ6-PgZ6zlGW1x-lTNgOgq4A
+2021-03-24 22:42:32,617 [DEBUG] org.apache.http.headers  - >> Accept: */*
+2021-03-24 22:42:32,617 [DEBUG] org.apache.http.headers  - >> Content-Type: application/json; charset=UTF-8
+2021-03-24 22:42:32,617 [DEBUG] org.apache.http.headers  - >> Content-Length: 75
+2021-03-24 22:42:32,617 [DEBUG] org.apache.http.headers  - >> Host: 13.83.56.14
+2021-03-24 22:42:32,617 [DEBUG] org.apache.http.headers  - >> Connection: Keep-Alive
+2021-03-24 22:42:32,618 [DEBUG] org.apache.http.headers  - >> User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_161)
+2021-03-24 22:42:32,618 [DEBUG] org.apache.http.headers  - >> Accept-Encoding: gzip,deflate
+2021-03-24 22:42:32,618 [DEBUG] org.apache.http.wire  -  >> "{"title":"Audit-bstuv","organization":"5f950768fc13ae0ade000002","id":null}"
+2021-03-24 22:42:34,176 [DEBUG] org.apache.http.wire  -  << "HTTP/1.1 200 OK[\r][\n]"
+2021-03-24 22:42:34,176 [DEBUG] org.apache.http.wire  -  << "Date: Wed, 24 Mar 2021 17:10:56 GMT[\r][\n]"
+2021-03-24 22:42:34,176 [DEBUG] org.apache.http.wire  -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2021-03-24 22:42:34,176 [DEBUG] org.apache.http.wire  -  << "Content-Length: 113[\r][\n]"
+2021-03-24 22:42:34,177 [DEBUG] org.apache.http.wire  -  << "Connection: keep-alive[\r][\n]"
+2021-03-24 22:42:34,177 [DEBUG] org.apache.http.wire  -  << "Server: Kestrel[\r][\n]"
+2021-03-24 22:42:34,177 [DEBUG] org.apache.http.wire  -  << "[\r][\n]"
+2021-03-24 22:42:34,177 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection  - Receiving response: HTTP/1.1 200 OK
+2021-03-24 22:42:34,177 [DEBUG] org.apache.http.headers  - << HTTP/1.1 200 OK
+2021-03-24 22:42:34,177 [DEBUG] org.apache.http.headers  - << Date: Wed, 24 Mar 2021 17:10:56 GMT
+2021-03-24 22:42:34,177 [DEBUG] org.apache.http.headers  - << Content-Type: application/json; charset=utf-8
+2021-03-24 22:42:34,177 [DEBUG] org.apache.http.headers  - << Content-Length: 113
+2021-03-24 22:42:34,177 [DEBUG] org.apache.http.headers  - << Connection: keep-alive
+2021-03-24 22:42:34,177 [DEBUG] org.apache.http.headers  - << Server: Kestrel
+2021-03-24 22:42:34,177 [DEBUG] org.apache.http.impl.client.DefaultHttpClient  - Connection can be kept alive indefinitely
+2021-03-24 22:42:34,177 [DEBUG] io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder  - Parsing response as: application/json; charset=utf-8
+2021-03-24 22:42:34,177 [DEBUG] io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder  - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+2021-03-24 22:42:34,182 [DEBUG] org.apache.http.wire  -  << "{"title":"Audit-bstuv","organization":"5f950768fc13ae0ade000002","deleted":false,"id":"605b729fe678f058550b7531"}"
+2021-03-24 22:42:34,182 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager  - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@d59970a
+2021-03-24 22:42:34,182 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager  - Connection can be kept alive indefinitely
+2021-03-24 22:42:34,235 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager  - Get connection for route {}->http://13.83.56.14:80
+2021-03-24 22:42:34,235 [DEBUG] org.apache.http.impl.conn.DefaultClientConnectionOperator  - Connecting to 13.83.56.14:80
+2021-03-24 22:42:34,441 [DEBUG] org.apache.http.client.protocol.RequestAddCookies  - CookieSpec selected: ignoreCookies
+2021-03-24 22:42:34,444 [DEBUG] org.apache.http.client.protocol.RequestAuthCache  - Auth cache not set in the context
+2021-03-24 22:42:34,444 [DEBUG] org.apache.http.client.protocol.RequestProxyAuthentication  - Proxy auth state: UNCHALLENGED
+2021-03-24 22:42:34,444 [DEBUG] org.apache.http.impl.client.DefaultHttpClient  - Attempt 1 to execute request
+2021-03-24 22:42:34,444 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection  - Sending request: POST /api/methodology HTTP/1.1
+2021-03-24 22:42:34,444 [DEBUG] org.apache.http.wire  -  >> "POST /api/methodology HTTP/1.1[\r][\n]"
+2021-03-24 22:42:34,445 [DEBUG] org.apache.http.wire  -  >> "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiI3ZTc0OThlNy1hZjZjLTQ3YmQtYmYxNi00ZjljNWQ5NjAxYzgiLCJpc3MiOiJodHRwczovL2xvZ2luLm1pY3Jvc29mdG9ubGluZS5jb20vYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4L3YyLjAiLCJpYXQiOjE2MTY2MDIzNTQsIm5iZiI6MTYxNjYwMjM1NCwiZXhwIjoxNjE2NjA2MjU0LCJhaW8iOiJBVVFBdS84VEFBQUFWS1JEU1N0VU9OVzFwajBFbnBaTGptZ3hXZmlOWHUzRWVmTHcxWUxQdG9reHQyeVFqWTZPWTdsbVJoR1dFcHdnRUl3VUtWL2krVWFUeDRyUXdSTnladz09IiwiaWRwIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvMGI4ZjY3NzAtYTQ5MC00OTVkLTg4M2YtZGM5ZjZiYWUzODRlLyIsIm5hbWUiOiJNTVMgVGVzdCBBbWVyIDciLCJub25jZSI6IjVlNThkYTNlLWExNDItNGFlZC04OTA0LThiODgyYTgzNjk5NiIsIm9pZCI6IjJhZDFmM2I0LTkyNjctNGRjYi04OTZjLTllM2ViOGNlNzc0ZiIsInByZWZlcnJlZF91c2VybmFtZSI6Im1tcy50ZXN0LmFtZXIuN0BndGFkaG9jLmd0LmNvbSIsInJoIjoiMC5BUnNBaTdkdHAwWFpPa3E3UXYwRUVmV0wyT2VZZEg1c3I3MUh2eFpQbkYyV0FjZ2JBREUuIiwic3ViIjoiNkNkTEVOelRVMnlqRFh3S19lTl9mdkw3d2YxTFVwWnNhbVd3OGtncV8zSSIsInRpZCI6ImE3NmRiNzhiLWQ5NDUtNGEzYS1iYjQyLWZkMDQxMWY1OGJkOCIsInV0aSI6Ill1V2dDNHJtMFVDY2w5b2JrYmhEQUEiLCJ2ZXIiOiIyLjAiLCJtZW1iZXJmaXJtaWQiOiJhbWVyLnRlc3QifQ.gDs3tCVZKsyooeuIkRnVqBMOLdBGpU65r0beQC6CY6shoAh0Oz2GpiuhDFMwEhUi2cnAEio9DR2yiLOsxI9SZgVoXJvwucZ_w-rx8GJ1f-OGHFeGYeNjJqiQhQas26MkcL9co9yJ9gq6fkA4AgkEQTgYcj39KSnRNXdaq3w5wVaogoiPOrSsmdtMbwLZEJYMDbORyOHC6t-q8msXmOggylvjTiGyBcQx0oWgya4mL_bZv9RefX6uBZkBsXfIEIm0jvAxm0y1MU8RQ9RoumrNmZ9Bq_nd_HYGlVJ3LhI854UMT5V5-OQCSaDFWF4CLQYJ6-PgZ6zlGW1x-lTNgOgq4A[\r][\n]"
+2021-03-24 22:42:34,445 [DEBUG] org.apache.http.wire  -  >> "Accept: */*[\r][\n]"
+2021-03-24 22:42:34,445 [DEBUG] org.apache.http.wire  -  >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+2021-03-24 22:42:34,445 [DEBUG] org.apache.http.wire  -  >> "Content-Length: 237[\r][\n]"
+2021-03-24 22:42:34,446 [DEBUG] org.apache.http.wire  -  >> "Host: 13.83.56.14[\r][\n]"
+2021-03-24 22:42:34,446 [DEBUG] org.apache.http.wire  -  >> "Connection: Keep-Alive[\r][\n]"
+2021-03-24 22:42:34,446 [DEBUG] org.apache.http.wire  -  >> "User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_161)[\r][\n]"
+2021-03-24 22:42:34,446 [DEBUG] org.apache.http.wire  -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2021-03-24 22:42:34,446 [DEBUG] org.apache.http.wire  -  >> "[\r][\n]"
+2021-03-24 22:42:34,446 [DEBUG] org.apache.http.headers  - >> POST /api/methodology HTTP/1.1
+2021-03-24 22:42:34,446 [DEBUG] org.apache.http.headers  - >> Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiI3ZTc0OThlNy1hZjZjLTQ3YmQtYmYxNi00ZjljNWQ5NjAxYzgiLCJpc3MiOiJodHRwczovL2xvZ2luLm1pY3Jvc29mdG9ubGluZS5jb20vYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4L3YyLjAiLCJpYXQiOjE2MTY2MDIzNTQsIm5iZiI6MTYxNjYwMjM1NCwiZXhwIjoxNjE2NjA2MjU0LCJhaW8iOiJBVVFBdS84VEFBQUFWS1JEU1N0VU9OVzFwajBFbnBaTGptZ3hXZmlOWHUzRWVmTHcxWUxQdG9reHQyeVFqWTZPWTdsbVJoR1dFcHdnRUl3VUtWL2krVWFUeDRyUXdSTnladz09IiwiaWRwIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvMGI4ZjY3NzAtYTQ5MC00OTVkLTg4M2YtZGM5ZjZiYWUzODRlLyIsIm5hbWUiOiJNTVMgVGVzdCBBbWVyIDciLCJub25jZSI6IjVlNThkYTNlLWExNDItNGFlZC04OTA0LThiODgyYTgzNjk5NiIsIm9pZCI6IjJhZDFmM2I0LTkyNjctNGRjYi04OTZjLTllM2ViOGNlNzc0ZiIsInByZWZlcnJlZF91c2VybmFtZSI6Im1tcy50ZXN0LmFtZXIuN0BndGFkaG9jLmd0LmNvbSIsInJoIjoiMC5BUnNBaTdkdHAwWFpPa3E3UXYwRUVmV0wyT2VZZEg1c3I3MUh2eFpQbkYyV0FjZ2JBREUuIiwic3ViIjoiNkNkTEVOelRVMnlqRFh3S19lTl9mdkw3d2YxTFVwWnNhbVd3OGtncV8zSSIsInRpZCI6ImE3NmRiNzhiLWQ5NDUtNGEzYS1iYjQyLWZkMDQxMWY1OGJkOCIsInV0aSI6Ill1V2dDNHJtMFVDY2w5b2JrYmhEQUEiLCJ2ZXIiOiIyLjAiLCJtZW1iZXJmaXJtaWQiOiJhbWVyLnRlc3QifQ.gDs3tCVZKsyooeuIkRnVqBMOLdBGpU65r0beQC6CY6shoAh0Oz2GpiuhDFMwEhUi2cnAEio9DR2yiLOsxI9SZgVoXJvwucZ_w-rx8GJ1f-OGHFeGYeNjJqiQhQas26MkcL9co9yJ9gq6fkA4AgkEQTgYcj39KSnRNXdaq3w5wVaogoiPOrSsmdtMbwLZEJYMDbORyOHC6t-q8msXmOggylvjTiGyBcQx0oWgya4mL_bZv9RefX6uBZkBsXfIEIm0jvAxm0y1MU8RQ9RoumrNmZ9Bq_nd_HYGlVJ3LhI854UMT5V5-OQCSaDFWF4CLQYJ6-PgZ6zlGW1x-lTNgOgq4A
+2021-03-24 22:42:34,446 [DEBUG] org.apache.http.headers  - >> Accept: */*
+2021-03-24 22:42:34,446 [DEBUG] org.apache.http.headers  - >> Content-Type: application/json; charset=UTF-8
+2021-03-24 22:42:34,446 [DEBUG] org.apache.http.headers  - >> Content-Length: 237
+2021-03-24 22:42:34,446 [DEBUG] org.apache.http.headers  - >> Host: 13.83.56.14
+2021-03-24 22:42:34,446 [DEBUG] org.apache.http.headers  - >> Connection: Keep-Alive
+2021-03-24 22:42:34,446 [DEBUG] org.apache.http.headers  - >> User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_161)
+2021-03-24 22:42:34,447 [DEBUG] org.apache.http.headers  - >> Accept-Encoding: gzip,deflate
+2021-03-24 22:42:34,447 [DEBUG] org.apache.http.wire  -  >> "{"id":null,"title":"Audit-bsbcd","engagementType":"605b729fe678f058550b7531","organization":"5f950768fc13ae0ade000002","revisions":null,"revisionId":null,"treeItemId":null,"draftDescription":"This is for testing, please do not consider"}"
+2021-03-24 22:42:38,613 [DEBUG] org.apache.http.wire  -  << "HTTP/1.1 200 OK[\r][\n]"
+2021-03-24 22:42:38,613 [DEBUG] org.apache.http.wire  -  << "Date: Wed, 24 Mar 2021 17:11:00 GMT[\r][\n]"
+2021-03-24 22:42:38,614 [DEBUG] org.apache.http.wire  -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2021-03-24 22:42:38,614 [DEBUG] org.apache.http.wire  -  << "Content-Length: 353[\r][\n]"
+2021-03-24 22:42:38,614 [DEBUG] org.apache.http.wire  -  << "Connection: keep-alive[\r][\n]"
+2021-03-24 22:42:38,614 [DEBUG] org.apache.http.wire  -  << "Server: Kestrel[\r][\n]"
+2021-03-24 22:42:38,614 [DEBUG] org.apache.http.wire  -  << "[\r][\n]"
+2021-03-24 22:42:38,615 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection  - Receiving response: HTTP/1.1 200 OK
+2021-03-24 22:42:38,615 [DEBUG] org.apache.http.headers  - << HTTP/1.1 200 OK
+2021-03-24 22:42:38,615 [DEBUG] org.apache.http.headers  - << Date: Wed, 24 Mar 2021 17:11:00 GMT
+2021-03-24 22:42:38,615 [DEBUG] org.apache.http.headers  - << Content-Type: application/json; charset=utf-8
+2021-03-24 22:42:38,615 [DEBUG] org.apache.http.headers  - << Content-Length: 353
+2021-03-24 22:42:38,615 [DEBUG] org.apache.http.headers  - << Connection: keep-alive
+2021-03-24 22:42:38,615 [DEBUG] org.apache.http.headers  - << Server: Kestrel
+2021-03-24 22:42:38,615 [DEBUG] org.apache.http.impl.client.DefaultHttpClient  - Connection can be kept alive indefinitely
+2021-03-24 22:42:38,616 [DEBUG] io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder  - Parsing response as: application/json; charset=utf-8
+2021-03-24 22:42:38,616 [DEBUG] io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder  - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+2021-03-24 22:42:38,618 [DEBUG] org.apache.http.wire  -  << "{"title":"Audit-bsbcd","organization":"5f950768fc13ae0ade000002","engagementType":"605b729fe678f058550b7531","revisions":[{"id":"605b72a1540422dd40263773","draftDescription":"This is for testing, please do not consider"}],"createdById":"2ad1f3b4-9267-4dcb-896c-9e3eb8ce774f","creationDate":"2021-03-24T17:10:57.7527314Z","id":"605b72a1540422dd40263772"}"
+2021-03-24 22:42:38,619 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager  - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@6c8a68c1
+2021-03-24 22:42:38,619 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager  - Connection can be kept alive indefinitely
+2021-03-24 22:42:38,679 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager  - Get connection for route {}->http://13.83.56.14:80
+2021-03-24 22:42:38,679 [DEBUG] org.apache.http.impl.conn.DefaultClientConnectionOperator  - Connecting to 13.83.56.14:80
+2021-03-24 22:42:38,888 [DEBUG] org.apache.http.client.protocol.RequestAddCookies  - CookieSpec selected: ignoreCookies
+2021-03-24 22:42:38,889 [DEBUG] org.apache.http.client.protocol.RequestAuthCache  - Auth cache not set in the context
+2021-03-24 22:42:38,889 [DEBUG] org.apache.http.client.protocol.RequestProxyAuthentication  - Proxy auth state: UNCHALLENGED
+2021-03-24 22:42:38,889 [DEBUG] org.apache.http.impl.client.DefaultHttpClient  - Attempt 1 to execute request
+2021-03-24 22:42:38,889 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection  - Sending request: POST /api/publish/validate/605b72a1540422dd40263772/605b72a1540422dd40263773 HTTP/1.1
+2021-03-24 22:42:38,890 [DEBUG] org.apache.http.wire  -  >> "POST /api/publish/validate/605b72a1540422dd40263772/605b72a1540422dd40263773 HTTP/1.1[\r][\n]"
+2021-03-24 22:42:38,890 [DEBUG] org.apache.http.wire  -  >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+2021-03-24 22:42:38,890 [DEBUG] org.apache.http.wire  -  >> "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiI3ZTc0OThlNy1hZjZjLTQ3YmQtYmYxNi00ZjljNWQ5NjAxYzgiLCJpc3MiOiJodHRwczovL2xvZ2luLm1pY3Jvc29mdG9ubGluZS5jb20vYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4L3YyLjAiLCJpYXQiOjE2MTY2MDIzNTQsIm5iZiI6MTYxNjYwMjM1NCwiZXhwIjoxNjE2NjA2MjU0LCJhaW8iOiJBVVFBdS84VEFBQUFWS1JEU1N0VU9OVzFwajBFbnBaTGptZ3hXZmlOWHUzRWVmTHcxWUxQdG9reHQyeVFqWTZPWTdsbVJoR1dFcHdnRUl3VUtWL2krVWFUeDRyUXdSTnladz09IiwiaWRwIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvMGI4ZjY3NzAtYTQ5MC00OTVkLTg4M2YtZGM5ZjZiYWUzODRlLyIsIm5hbWUiOiJNTVMgVGVzdCBBbWVyIDciLCJub25jZSI6IjVlNThkYTNlLWExNDItNGFlZC04OTA0LThiODgyYTgzNjk5NiIsIm9pZCI6IjJhZDFmM2I0LTkyNjctNGRjYi04OTZjLTllM2ViOGNlNzc0ZiIsInByZWZlcnJlZF91c2VybmFtZSI6Im1tcy50ZXN0LmFtZXIuN0BndGFkaG9jLmd0LmNvbSIsInJoIjoiMC5BUnNBaTdkdHAwWFpPa3E3UXYwRUVmV0wyT2VZZEg1c3I3MUh2eFpQbkYyV0FjZ2JBREUuIiwic3ViIjoiNkNkTEVOelRVMnlqRFh3S19lTl9mdkw3d2YxTFVwWnNhbVd3OGtncV8zSSIsInRpZCI6ImE3NmRiNzhiLWQ5NDUtNGEzYS1iYjQyLWZkMDQxMWY1OGJkOCIsInV0aSI6Ill1V2dDNHJtMFVDY2w5b2JrYmhEQUEiLCJ2ZXIiOiIyLjAiLCJtZW1iZXJmaXJtaWQiOiJhbWVyLnRlc3QifQ.gDs3tCVZKsyooeuIkRnVqBMOLdBGpU65r0beQC6CY6shoAh0Oz2GpiuhDFMwEhUi2cnAEio9DR2yiLOsxI9SZgVoXJvwucZ_w-rx8GJ1f-OGHFeGYeNjJqiQhQas26MkcL9co9yJ9gq6fkA4AgkEQTgYcj39KSnRNXdaq3w5wVaogoiPOrSsmdtMbwLZEJYMDbORyOHC6t-q8msXmOggylvjTiGyBcQx0oWgya4mL_bZv9RefX6uBZkBsXfIEIm0jvAxm0y1MU8RQ9RoumrNmZ9Bq_nd_HYGlVJ3LhI854UMT5V5-OQCSaDFWF4CLQYJ6-PgZ6zlGW1x-lTNgOgq4A[\r][\n]"
+2021-03-24 22:42:38,890 [DEBUG] org.apache.http.wire  -  >> "Accept: */*[\r][\n]"
+2021-03-24 22:42:38,890 [DEBUG] org.apache.http.wire  -  >> "Content-Length: 0[\r][\n]"
+2021-03-24 22:42:38,890 [DEBUG] org.apache.http.wire  -  >> "Host: 13.83.56.14[\r][\n]"
+2021-03-24 22:42:38,890 [DEBUG] org.apache.http.wire  -  >> "Connection: Keep-Alive[\r][\n]"
+2021-03-24 22:42:38,890 [DEBUG] org.apache.http.wire  -  >> "User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_161)[\r][\n]"
+2021-03-24 22:42:38,890 [DEBUG] org.apache.http.wire  -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2021-03-24 22:42:38,890 [DEBUG] org.apache.http.wire  -  >> "[\r][\n]"
+2021-03-24 22:42:38,890 [DEBUG] org.apache.http.headers  - >> POST /api/publish/validate/605b72a1540422dd40263772/605b72a1540422dd40263773 HTTP/1.1
+2021-03-24 22:42:38,892 [DEBUG] org.apache.http.headers  - >> Content-Type: application/json; charset=UTF-8
+2021-03-24 22:42:38,892 [DEBUG] org.apache.http.headers  - >> Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiI3ZTc0OThlNy1hZjZjLTQ3YmQtYmYxNi00ZjljNWQ5NjAxYzgiLCJpc3MiOiJodHRwczovL2xvZ2luLm1pY3Jvc29mdG9ubGluZS5jb20vYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4L3YyLjAiLCJpYXQiOjE2MTY2MDIzNTQsIm5iZiI6MTYxNjYwMjM1NCwiZXhwIjoxNjE2NjA2MjU0LCJhaW8iOiJBVVFBdS84VEFBQUFWS1JEU1N0VU9OVzFwajBFbnBaTGptZ3hXZmlOWHUzRWVmTHcxWUxQdG9reHQyeVFqWTZPWTdsbVJoR1dFcHdnRUl3VUtWL2krVWFUeDRyUXdSTnladz09IiwiaWRwIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvMGI4ZjY3NzAtYTQ5MC00OTVkLTg4M2YtZGM5ZjZiYWUzODRlLyIsIm5hbWUiOiJNTVMgVGVzdCBBbWVyIDciLCJub25jZSI6IjVlNThkYTNlLWExNDItNGFlZC04OTA0LThiODgyYTgzNjk5NiIsIm9pZCI6IjJhZDFmM2I0LTkyNjctNGRjYi04OTZjLTllM2ViOGNlNzc0ZiIsInByZWZlcnJlZF91c2VybmFtZSI6Im1tcy50ZXN0LmFtZXIuN0BndGFkaG9jLmd0LmNvbSIsInJoIjoiMC5BUnNBaTdkdHAwWFpPa3E3UXYwRUVmV0wyT2VZZEg1c3I3MUh2eFpQbkYyV0FjZ2JBREUuIiwic3ViIjoiNkNkTEVOelRVMnlqRFh3S19lTl9mdkw3d2YxTFVwWnNhbVd3OGtncV8zSSIsInRpZCI6ImE3NmRiNzhiLWQ5NDUtNGEzYS1iYjQyLWZkMDQxMWY1OGJkOCIsInV0aSI6Ill1V2dDNHJtMFVDY2w5b2JrYmhEQUEiLCJ2ZXIiOiIyLjAiLCJtZW1iZXJmaXJtaWQiOiJhbWVyLnRlc3QifQ.gDs3tCVZKsyooeuIkRnVqBMOLdBGpU65r0beQC6CY6shoAh0Oz2GpiuhDFMwEhUi2cnAEio9DR2yiLOsxI9SZgVoXJvwucZ_w-rx8GJ1f-OGHFeGYeNjJqiQhQas26MkcL9co9yJ9gq6fkA4AgkEQTgYcj39KSnRNXdaq3w5wVaogoiPOrSsmdtMbwLZEJYMDbORyOHC6t-q8msXmOggylvjTiGyBcQx0oWgya4mL_bZv9RefX6uBZkBsXfIEIm0jvAxm0y1MU8RQ9RoumrNmZ9Bq_nd_HYGlVJ3LhI854UMT5V5-OQCSaDFWF4CLQYJ6-PgZ6zlGW1x-lTNgOgq4A
+2021-03-24 22:42:38,892 [DEBUG] org.apache.http.headers  - >> Accept: */*
+2021-03-24 22:42:38,892 [DEBUG] org.apache.http.headers  - >> Content-Length: 0
+2021-03-24 22:42:38,892 [DEBUG] org.apache.http.headers  - >> Host: 13.83.56.14
+2021-03-24 22:42:38,892 [DEBUG] org.apache.http.headers  - >> Connection: Keep-Alive
+2021-03-24 22:42:38,892 [DEBUG] org.apache.http.headers  - >> User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_161)
+2021-03-24 22:42:38,892 [DEBUG] org.apache.http.headers  - >> Accept-Encoding: gzip,deflate
+2021-03-24 22:42:39,141 [DEBUG] org.apache.http.wire  -  << "HTTP/1.1 200 OK[\r][\n]"
+2021-03-24 22:42:39,148 [DEBUG] org.apache.http.wire  -  << "Date: Wed, 24 Mar 2021 17:11:01 GMT[\r][\n]"
+2021-03-24 22:42:39,148 [DEBUG] org.apache.http.wire  -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2021-03-24 22:42:39,148 [DEBUG] org.apache.http.wire  -  << "Content-Length: 57[\r][\n]"
+2021-03-24 22:42:39,149 [DEBUG] org.apache.http.wire  -  << "Connection: keep-alive[\r][\n]"
+2021-03-24 22:42:39,149 [DEBUG] org.apache.http.wire  -  << "Server: Kestrel[\r][\n]"
+2021-03-24 22:42:39,149 [DEBUG] org.apache.http.wire  -  << "[\r][\n]"
+2021-03-24 22:42:39,149 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection  - Receiving response: HTTP/1.1 200 OK
+2021-03-24 22:42:39,149 [DEBUG] org.apache.http.headers  - << HTTP/1.1 200 OK
+2021-03-24 22:42:39,149 [DEBUG] org.apache.http.headers  - << Date: Wed, 24 Mar 2021 17:11:01 GMT
+2021-03-24 22:42:39,149 [DEBUG] org.apache.http.headers  - << Content-Type: application/json; charset=utf-8
+2021-03-24 22:42:39,150 [DEBUG] org.apache.http.headers  - << Content-Length: 57
+2021-03-24 22:42:39,150 [DEBUG] org.apache.http.headers  - << Connection: keep-alive
+2021-03-24 22:42:39,150 [DEBUG] org.apache.http.headers  - << Server: Kestrel
+2021-03-24 22:42:39,150 [DEBUG] org.apache.http.impl.client.DefaultHttpClient  - Connection can be kept alive indefinitely
+2021-03-24 22:42:39,150 [DEBUG] io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder  - Parsing response as: application/json; charset=utf-8
+2021-03-24 22:42:39,150 [DEBUG] io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder  - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+2021-03-24 22:42:39,154 [DEBUG] org.apache.http.wire  -  << "{"methodologyItemIssues":[],"ruleSetValidationIssues":[]}"
+2021-03-24 22:42:39,154 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager  - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@5d28bcd5
+2021-03-24 22:42:39,155 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager  - Connection can be kept alive indefinitely
+2021-03-24 22:42:39,582 [DEBUG] freemarker.cache  - Couldn't find template in cache for "Extent.ftl"("en_US", UTF-8, parsed); will try to load it.
+2021-03-24 22:42:39,583 [DEBUG] freemarker.cache  - TemplateLoader.findTemplateSource("Extent_en_US.ftl"): Not found
+2021-03-24 22:42:39,584 [DEBUG] freemarker.cache  - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+2021-03-24 22:42:39,585 [DEBUG] freemarker.cache  - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+2021-03-24 22:42:39,585 [DEBUG] freemarker.cache  - Loading template for "Extent.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/33875/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
+2021-03-24 22:42:39,790 [DEBUG] freemarker.cache  - Couldn't find template in cache for "Extent.ftl"("en_US", UTF-8, parsed); will try to load it.
+2021-03-24 22:42:39,791 [DEBUG] freemarker.cache  - TemplateLoader.findTemplateSource("Extent_en_US.ftl"): Not found
+2021-03-24 22:42:39,792 [DEBUG] freemarker.cache  - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+2021-03-24 22:42:39,792 [DEBUG] freemarker.cache  - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+2021-03-24 22:42:39,792 [DEBUG] freemarker.cache  - Loading template for "Extent.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/33875/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
