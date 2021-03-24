@@ -233,7 +233,7 @@ public class Restassured_Automation_Organizations  {
 	}
 
 	@Test(groups =  "EndToEnd")
-	public void Organisation_EndToEnd_Organizations_Scenario() throws JsonIOException, JsonSyntaxException, IOException {
+	public void Organisation_EndToEnd_Scenario() throws JsonIOException, JsonSyntaxException, IOException {
 		/**
 		 * CRREATING THE NEW ORGANISATION
 		 */

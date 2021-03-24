@@ -256,9 +256,112 @@ public class Restassured_Automation_OrgRoles {
 		Response rolesInfoRes = OrganizationsGet.get_URL_Without_Params(URL, AuthorizationKey, patchId);
 		rolesInfoRes.prettyPrint();
 		Assert.assertEquals(rolesInfoRes.getStatusCode(), 200);
+		/**
+		 * Extent report generation
+		 */
+		ExtentTestManager.statusLogMessage(rolesInfoRes.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO, rolesInfoRes.asString());
+		System.out.println("This particular below line is based on Sprint 7 & the Requirement ID : 1008");
+		OrganizationsGet.validate_HTTPStrictTransportSecurity(rolesInfoRes);
 	}
 
 	@Test(groups = "IntegrationTests")
+	public void OrganisationRoles_CreateAnNewRoleAssignmentForAnOrganizationWithStatus_200() {
+
+		/**
+		 * Getting the orgId
+		 */
+		Restassured_Automation_Utils OrganizationsGet = new Restassured_Automation_Utils();
+
+		Response getOrgId = OrganizationsGet.get_URL_Without_Params(URL, AuthorizationKey, "/api/org");
+		// getOrgId.prettyPrint();
+
+		JsonPath jsonPathEvaluator = getOrgId.jsonPath();
+		listOrgId = jsonPathEvaluator.get("id");
+
+		String patchId = "/api/org/" + listOrgId.get(4) + "/roles/assignments";
+		Response rolesInfoRes = OrganizationsGet.get_URL_Without_Params(URL, AuthorizationKey, patchId);
+		rolesInfoRes.prettyPrint();
+		Assert.assertEquals(rolesInfoRes.getStatusCode(), 200);
+		JsonPath roleJson = rolesInfoRes.jsonPath();
+		List<String> userId = roleJson.get("userId");
+		List<String> roleId = roleJson.get("role");
+		List<String> resourceId = roleJson.get("resource");
+		List<String> appLevel = roleJson.get("applicationLevel");
+		String uId = userId.get(0);
+		String rolId = roleId.get(0);
+		String resId = resourceId.get(0);
+		String apLevel = appLevel.get(0);
+
+		OrgRolesPojo pojo = new OrgRolesPojo();
+		pojo.setUserId(uId);
+		pojo.setRole(rolId);
+		pojo.setResource(resId);
+		pojo.setApplicationLevel(apLevel);
+
+		Response postRoleRes = OrganizationsGet.post_URLPOJO(URL, AuthorizationKey, patchId, pojo);
+		postRoleRes.prettyPrint();
+		Assert.assertEquals(postRoleRes.getStatusCode(),200);
+		/**
+		 * Extent report generation
+		 */
+		ExtentTestManager.statusLogMessage(postRoleRes.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO, postRoleRes.asString());
+		System.out.println("This particular below line is based on Sprint 7 & the Requirement ID : 1008");
+		OrganizationsGet.validate_HTTPStrictTransportSecurity(postRoleRes);
+	}
+	@Test(groups = "IntegrationTests")
+	public void OrganisationRoles_DeleteAnNewRoleAssignmentForAnOrganizationWithStatus_200() {
+
+		/**
+		 * Getting the orgId
+		 */
+		Restassured_Automation_Utils OrganizationsGet = new Restassured_Automation_Utils();
+
+		Response getOrgId = OrganizationsGet.get_URL_Without_Params(URL, AuthorizationKey, "/api/org");
+		// getOrgId.prettyPrint();
+
+		JsonPath jsonPathEvaluator = getOrgId.jsonPath();
+		listOrgId = jsonPathEvaluator.get("id");
+
+		String patchId = "/api/org/" + listOrgId.get(4) + "/roles/assignments";
+		Response rolesInfoRes = OrganizationsGet.get_URL_Without_Params(URL, AuthorizationKey, patchId);
+		rolesInfoRes.prettyPrint();
+		Assert.assertEquals(rolesInfoRes.getStatusCode(), 200);
+		JsonPath roleJson = rolesInfoRes.jsonPath();
+		List<String> userId = roleJson.get("userId");
+		List<String> roleId = roleJson.get("role");
+		List<String> resourceId = roleJson.get("resource");
+		List<String> appLevel = roleJson.get("applicationLevel");
+		String uId = userId.get(0);
+		String rolId = roleId.get(0);
+		String resId = resourceId.get(0);
+		String apLevel = appLevel.get(0);
+
+		OrgRolesPojo pojo = new OrgRolesPojo();
+		pojo.setUserId(uId);
+		pojo.setRole(rolId);
+		pojo.setResource(resId);
+		pojo.setApplicationLevel(apLevel);
+
+		Response postRoleRes = OrganizationsGet.post_URLPOJO(URL, AuthorizationKey, patchId, pojo);
+		postRoleRes.prettyPrint();
+		Assert.assertEquals(postRoleRes.getStatusCode(),200);
+		JsonPath postRoleJson=postRoleRes.jsonPath();
+		String deleteId=postRoleJson.get("id");
+		String deletePatch="/api/org/" + listOrgId.get(4) + "/roles/assignments/"+deleteId;
+		Response deleteRes=OrganizationsGet.delete(URL, AuthorizationKey, deletePatch);
+		Assert.assertEquals(deleteRes.getStatusCode(), 204);
+		/**
+		 * Extent report generation
+		 */
+		ExtentTestManager.statusLogMessage(deleteRes.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO, deleteRes.asString());
+		System.out.println("This particular below line is based on Sprint 7 & the Requirement ID : 1008");
+		OrganizationsGet.validate_HTTPStrictTransportSecurity(deleteRes);
+	}
+
+	//@Test(groups = "IntegrationTests")
 	public void OrganisationRoles_CreateANewRoleForAnOrganizationWithStatus_200() {
 
 		/**
@@ -298,7 +401,7 @@ public class Restassured_Automation_OrgRoles {
 
 	}
 
-	@Test(groups="IntegrationTests")
+	@Test(groups = "IntegrationTests")
 	public void OrganisationRoles_SUPER_USE_ENDPOINT_CreateARole_WithStatus_200() throws IOException {
 		Properties post = read_Configuration_Propertites.loadproperty("Configuration");
 		Restassured_Automation_Utils getMethodologyById = new Restassured_Automation_Utils();
@@ -319,8 +422,8 @@ public class Restassured_Automation_OrgRoles {
 		getMethodologyById.validate_HTTPStrictTransportSecurity(roleResponse);
 
 	}
-	
-	@Test(groups="IntegrationTests")
+
+	@Test(groups = "IntegrationTests")
 	public void OrganisationRoles_SUPER_USE_ENDPOINT_UpdateARolePermissionWithStatus_200() throws IOException {
 		Properties post = read_Configuration_Propertites.loadproperty("Configuration");
 		Restassured_Automation_Utils getMethodologyById = new Restassured_Automation_Utils();
@@ -335,18 +438,18 @@ public class Restassured_Automation_OrgRoles {
 		/**
 		 * Update the role
 		 */
-		
-		JsonPath rolejson=roleResponse.jsonPath();
-		String roleId=rolejson.get("id");
-		
+
+		JsonPath rolejson = roleResponse.jsonPath();
+		String roleId = rolejson.get("id");
+
 		OrgRolesPojo pojo1 = new OrgRolesPojo();
-		pojo1.setPermissions(new String [] {post.getProperty("patchRolePermission")});
-		
-		String patchId1="/api/org/roles/"+roleId;
-		
-		Response updateRoleRes=getMethodologyById.patch_URLPOJO(URL, AuthorizationKey, patchId1, pojo1);
+		pojo1.setPermissions(new String[] { post.getProperty("patchRolePermission") });
+
+		String patchId1 = "/api/org/roles/" + roleId;
+
+		Response updateRoleRes = getMethodologyById.patch_URLPOJO(URL, AuthorizationKey, patchId1, pojo1);
 		updateRoleRes.prettyPrint();
-		Assert.assertEquals(updateRoleRes.getStatusCode(),204);
+		Assert.assertEquals(updateRoleRes.getStatusCode(), 204);
 		/**
 		 * Extent report generation
 		 */
@@ -356,7 +459,8 @@ public class Restassured_Automation_OrgRoles {
 		getMethodologyById.validate_HTTPStrictTransportSecurity(updateRoleRes);
 
 	}
-	@Test(groups="IntegrationTests")
+
+	@Test(groups = "IntegrationTests")
 	public void OrganisationRoles_SUPER_USE_ENDPOINT_DeleteARole_WithStatus_200() throws IOException {
 		Properties post = read_Configuration_Propertites.loadproperty("Configuration");
 		Restassured_Automation_Utils getMethodologyById = new Restassured_Automation_Utils();
@@ -369,24 +473,21 @@ public class Restassured_Automation_OrgRoles {
 		roleResponse.prettyPrint();
 		Assert.assertEquals(roleResponse.getStatusCode(), 200);
 
-		JsonPath rolejson=roleResponse.jsonPath();
-		String roleId=rolejson.get("id");
-		String deleteURI="/api/org/roles/"+roleId;
-		Response deleteRoleRes=getMethodologyById.delete(URL, AuthorizationKey, deleteURI);
-		Assert.assertEquals(deleteRoleRes.getStatusCode(),204);
-		
+		JsonPath rolejson = roleResponse.jsonPath();
+		String roleId = rolejson.get("id");
+		String deleteURI = "/api/org/roles/" + roleId;
+		Response deleteRoleRes = getMethodologyById.delete(URL, AuthorizationKey, deleteURI);
+		Assert.assertEquals(deleteRoleRes.getStatusCode(), 204);
+
 		/**
 		 * Extent report generation
 		 */
-		ExtentTestManager.statusLogMessage(roleResponse.statusCode());
-		ExtentTestManager.getTest().log(Status.INFO, roleResponse.asString());
+		ExtentTestManager.statusLogMessage(deleteRoleRes.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO, deleteRoleRes.asString());
 		System.out.println("This particular below line is based on Sprint 7 & the Requirement ID : 1008");
-		getMethodologyById.validate_HTTPStrictTransportSecurity(roleResponse);
+		getMethodologyById.validate_HTTPStrictTransportSecurity(deleteRoleRes);
 
 	}
-	
-	
-	
 
 	@Test(groups = "EndToEnd")
 	public void OrganisationRoles_OrganisationRolesScenario() {

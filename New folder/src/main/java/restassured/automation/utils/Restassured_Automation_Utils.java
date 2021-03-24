@@ -137,6 +137,18 @@ public Response post_URL(String BaseURL ,String AuthorizationKey , String URI , 
 	
 				
 }
+public Response post_URL_WithoutBody(String BaseURL ,String AuthorizationKey , String URI ) {
+	
+	BaseURL = BaseURL + URI;
+	
+	return RestAssured.given()
+	.header("Authorization", AuthorizationKey)		
+	.header("Content-Type","application/json")
+	.log().all()
+	.post(BaseURL);
+	
+				
+}
 
 
 public Response patch_URL(String BaseURL ,String AuthorizationKey , String URI , String body, String engagementType ) {

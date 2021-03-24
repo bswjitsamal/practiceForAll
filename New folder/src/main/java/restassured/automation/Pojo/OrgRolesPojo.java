@@ -12,7 +12,16 @@ public class OrgRolesPojo {
 	private String name;
 	private String minimumApplicationLevel;
 	private String[] permissions;
+	private String applicationLevel;
 
+
+	public String getApplicationLevel() {
+		return applicationLevel;
+	}
+
+	public void setApplicationLevel(String applicationLevel) {
+		this.applicationLevel = applicationLevel;
+	}
 
 	public String getResource() {
 		return resource;
