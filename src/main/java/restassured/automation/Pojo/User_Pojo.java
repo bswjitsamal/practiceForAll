@@ -181,6 +181,17 @@ public class User_Pojo {
 		 Gson Josnbody = new Gson();
 		 return Josnbody.toJson(upDateId);
 	}
+     
+     
+     public String MethodologyItem(Map<String,String> data) {
+ 		
+    	 MethodologyItem_Pojo upDateId = new MethodologyItem_Pojo();
+		 
+		 
+		 
+		 Gson Josnbody = new Gson();
+		 return Josnbody.toJson(upDateId);
+	}
 	
 
 }
