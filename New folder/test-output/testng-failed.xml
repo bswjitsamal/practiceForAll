@@ -3,21 +3,21 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test verbose="2" name="Default test">
     <classes>
-      <class name="restassured.automation.testcases.Restassured_Automation_ItemSelectQuestion">
+      <class name="restassured.automation.testcases.Restassured_Automation_MethodologyItemRelations">
         <methods>
-          <include name="ItemSelectQuestion_DeleteAnOptionFromAnItemSelectQuestion_status204"/>
+          <include name="MethodologyItemRelation_DeleteLinkedMethodologyItemRelationWithStatus_204"/>
         </methods>
-      </class> <!-- restassured.automation.testcases.Restassured_Automation_ItemSelectQuestion -->
+      </class> <!-- restassured.automation.testcases.Restassured_Automation_MethodologyItemRelations -->
     </classes>
   </test> <!-- Default test -->
   <test name="Default test(failed)">
     <classes>
-      <class name="restassured.automation.testcases.Restassured_Automation_ItemSelectQuestion">
+      <class name="restassured.automation.testcases.Restassured_Automation_MethodologyItemRelations">
         <methods>
+          <include name="MethodologyItemRelation_DeleteLinkedMethodologyItemRelationWithStatus_204"/>
           <include name="setup"/>
-          <include name="ItemSelectQuestion_DeleteAnOptionFromAnItemSelectQuestion_status204"/>
         </methods>
-      </class> <!-- restassured.automation.testcases.Restassured_Automation_ItemSelectQuestion -->
+      </class> <!-- restassured.automation.testcases.Restassured_Automation_MethodologyItemRelations -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

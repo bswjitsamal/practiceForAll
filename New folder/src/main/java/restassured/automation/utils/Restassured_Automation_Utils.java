@@ -246,7 +246,7 @@ public Response patch_URLPOJO(String BaseURL, String AuthorizationKey, String UR
 	.header("Authorization", AuthorizationKey)		
 	.header("Content-Type","application/json")
 	.body(obj)
-	//.log().all()
+	.log().all()
 	.patch(BaseURL);
 	
 }

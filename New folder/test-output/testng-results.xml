@@ -2,32 +2,32 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="12250" started-at="2021-03-24T13:00:14Z" finished-at="2021-03-24T13:00:26Z">
+  <suite name="Default suite" duration-ms="14533" started-at="2021-03-26T10:30:30Z" finished-at="2021-03-26T10:30:44Z">
     <groups>
       <group name="IntegrationTests">
-        <method signature="Restassured_Automation_ItemSelectQuestion.ItemSelectQuestion_DeleteAnOptionFromAnItemSelectQuestion_status204()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_ItemSelectQuestion@3796751b]" name="ItemSelectQuestion_DeleteAnOptionFromAnItemSelectQuestion_status204" class="restassured.automation.testcases.Restassured_Automation_ItemSelectQuestion"/>
+        <method signature="Restassured_Automation_MethodologyItemRelations.MethodologyItemRelation_DeleteLinkedMethodologyItemRelationWithStatus_204()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_MethodologyItemRelations@1554909b]" name="MethodologyItemRelation_DeleteLinkedMethodologyItemRelationWithStatus_204" class="restassured.automation.testcases.Restassured_Automation_MethodologyItemRelations"/>
       </group> <!-- IntegrationTests -->
     </groups>
-    <test name="Default test" duration-ms="12250" started-at="2021-03-24T13:00:14Z" finished-at="2021-03-24T13:00:26Z">
-      <class name="restassured.automation.testcases.Restassured_Automation_ItemSelectQuestion">
-        <test-method status="PASS" signature="setup()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_ItemSelectQuestion@3796751b]" name="setup" is-config="true" duration-ms="15" started-at="2021-03-24T18:30:14Z" finished-at="2021-03-24T18:30:14Z">
+    <test name="Default test" duration-ms="14533" started-at="2021-03-26T10:30:30Z" finished-at="2021-03-26T10:30:44Z">
+      <class name="restassured.automation.testcases.Restassured_Automation_MethodologyItemRelations">
+        <test-method status="PASS" signature="setup()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_MethodologyItemRelations@1554909b]" name="setup" is-config="true" duration-ms="22" started-at="2021-03-26T16:00:30Z" finished-at="2021-03-26T16:00:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="FAIL" signature="ItemSelectQuestion_DeleteAnOptionFromAnItemSelectQuestion_status204()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_ItemSelectQuestion@3796751b]" name="ItemSelectQuestion_DeleteAnOptionFromAnItemSelectQuestion_status204" duration-ms="12212" started-at="2021-03-24T18:30:14Z" finished-at="2021-03-24T18:30:26Z">
+        <test-method status="FAIL" signature="MethodologyItemRelation_DeleteLinkedMethodologyItemRelationWithStatus_204()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_MethodologyItemRelations@1554909b]" name="MethodologyItemRelation_DeleteLinkedMethodologyItemRelationWithStatus_204" duration-ms="14495" started-at="2021-03-26T16:00:30Z" finished-at="2021-03-26T16:00:44Z">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [204] but found [500]]]>
+              <![CDATA[expected [200] but found [400]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [204] but found [500]
+              <![CDATA[java.lang.AssertionError: expected [200] but found [400]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:513)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
 	at org.testng.Assert.assertEquals(Assert.java:116)
 	at org.testng.Assert.assertEquals(Assert.java:389)
 	at org.testng.Assert.assertEquals(Assert.java:399)
-	at restassured.automation.testcases.Restassured_Automation_ItemSelectQuestion.ItemSelectQuestion_DeleteAnOptionFromAnItemSelectQuestion_status204(Restassured_Automation_ItemSelectQuestion.java:878)
+	at restassured.automation.testcases.Restassured_Automation_MethodologyItemRelations.MethodologyItemRelation_DeleteLinkedMethodologyItemRelationWithStatus_204(Restassured_Automation_MethodologyItemRelations.java:1118)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -57,8 +57,8 @@
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ItemSelectQuestion_DeleteAnOptionFromAnItemSelectQuestion_status204 -->
-      </class> <!-- restassured.automation.testcases.Restassured_Automation_ItemSelectQuestion -->
+        </test-method> <!-- MethodologyItemRelation_DeleteLinkedMethodologyItemRelationWithStatus_204 -->
+      </class> <!-- restassured.automation.testcases.Restassured_Automation_MethodologyItemRelations -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
