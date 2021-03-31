@@ -18,11 +18,9 @@ import com.google.gson.JsonSyntaxException;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import restassured.automation.Pojo.Engagement_Type_Pojo;
-import restassured.automation.Pojo.MethodologyItemRelationPojo;
-import restassured.automation.Pojo.MethodologyItem_Pojo;
 import restassured.automation.Pojo.Methodology_Pojo;
+import restassured.automation.Pojo.PublishPojo;
 import restassured.automation.Pojo.User_Pojo;
-import restassured.automation.Pojo.Validate_Pojo;
 import restassured.automation.utils.Restassured_Automation_Utils;
 import restassured.automation.utils.read_Configuration_Propertites;
 
@@ -43,7 +41,7 @@ public class Restassured_Automation_Publish extends read_Configuration_Propertit
 	private static String getRandomAlphaNum() {
 		Random r = new Random();
 		int offset = r.nextInt(ALPHANUMERIC_CHARACTERS.length());
-		return ALPHANUMERIC_CHARACTERS.substring(offset, offset + 3);
+		return ALPHANUMERIC_CHARACTERS.substring(offset, offset + 2);
 	}
 
 	@BeforeTest(groups = { "IntegrationTests", "EndToEnd", "IntegrationTests1" })
@@ -57,6 +55,104 @@ public class Restassured_Automation_Publish extends read_Configuration_Propertit
 
 	}
 
+	@Test(groups = { "IntegrationTests" })
+	public void postPublish_status200() throws IOException {
+
+		Properties post = read_Configuration_Propertites.loadproperty("Configuration");
+
+		Engagement_Type_Pojo en = new Engagement_Type_Pojo();
+		en.setTitle(post.getProperty("postEngagementTypeTitle") + getRandomAlphaNum());
+		en.setOrganization(post.getProperty("postEngagementTypeOrganization"));
+
+		Restassured_Automation_Utils engagementType = new Restassured_Automation_Utils();
+
+		// Step 1 create an engagement
+		Response createEngagementType = engagementType.post_URLPOJO(URL, AuthorizationKey, "/api/engagementType", en);
+		createEngagementType.prettyPrint();
+
+		// Retrieving the id as engagementType
+		JsonPath jsonPathEvaluator = createEngagementType.jsonPath();
+		engagementTypeId = jsonPathEvaluator.get("id");
+
+		System.out.println(engagementTypeId);
+
+		Methodology_Pojo mp = new Methodology_Pojo();
+		mp.setTitle(post.getProperty("postEngagementTypeTitle") + getRandomAlphaNum());
+		mp.setEngagementType(engagementTypeId);
+		mp.setDraftDescription(post.getProperty("postMethodologyDraftDescription"));
+		mp.setOrganization(post.getProperty("postEngagementTypeOrganization"));
+
+		// Step 2 create a Methodology
+		Response createMethodology = engagementType.post_URLPOJO(URL, AuthorizationKey, "/api/methodology", mp);
+		createMethodology.prettyPrint();
+
+		JsonPath jsonPathEvaluator1 = createMethodology.jsonPath();
+		methodologyId = jsonPathEvaluator1.get("id");
+		ArrayList<Map<String, ?>> listRevisionId = jsonPathEvaluator1.get("revisions.id");
+
+		System.out.println(String.valueOf(listRevisionId.get(0)));
+
+		String revId = String.valueOf(listRevisionId.get(0));
+
+		// step 3 perfrom validate
+		PublishPojo PublishPojo = new PublishPojo();
+		PublishPojo.setPublishType("Candidate");
+		
+		Response createPublish = engagementType.post_URLPOJO(URL, AuthorizationKey,
+				"/api/publish/publish/" + methodologyId + "/" + revId, PublishPojo);
+		createPublish.prettyPrint();
+		Assert.assertEquals(createPublish.statusCode(), 200);
+
+	}
+
+	@Test(groups = { "IntegrationTests" })
+	public void postValidate_status200() throws IOException {
+
+		Properties post = read_Configuration_Propertites.loadproperty("Configuration");
+
+		Engagement_Type_Pojo en = new Engagement_Type_Pojo();
+		en.setTitle(post.getProperty("postEngagementTypeTitle") + getRandomAlphaNum());
+		en.setOrganization(post.getProperty("postEngagementTypeOrganization"));
+
+		Restassured_Automation_Utils engagementType = new Restassured_Automation_Utils();
+
+		// Step 1 create an engagement
+		Response createEngagementType = engagementType.post_URLPOJO(URL, AuthorizationKey, "/api/engagementType", en);
+		createEngagementType.prettyPrint();
+
+		// Retrieving the id as engagementType
+		JsonPath jsonPathEvaluator = createEngagementType.jsonPath();
+		engagementTypeId = jsonPathEvaluator.get("id");
+
+		System.out.println(engagementTypeId);
+
+		Methodology_Pojo mp = new Methodology_Pojo();
+		mp.setTitle(post.getProperty("postEngagementTypeTitle") + getRandomAlphaNum());
+		mp.setEngagementType(engagementTypeId);
+		mp.setDraftDescription(post.getProperty("postMethodologyDraftDescription"));
+		mp.setOrganization(post.getProperty("postEngagementTypeOrganization"));
+
+		// Step 2 create a Methodology
+		Response createMethodology = engagementType.post_URLPOJO(URL, AuthorizationKey, "/api/methodology", mp);
+		createMethodology.prettyPrint();
+
+		JsonPath jsonPathEvaluator1 = createMethodology.jsonPath();
+		methodologyId = jsonPathEvaluator1.get("id");
+		ArrayList<Map<String, ?>> listRevisionId = jsonPathEvaluator1.get("revisions.id");
+
+		System.out.println(String.valueOf(listRevisionId.get(0)));
+
+		String revId = String.valueOf(listRevisionId.get(0));
+
+		// step 3 perfrom validate
+		
+		Response createValidate = engagementType.post_WithOutBody(URL, AuthorizationKey,
+				"/api/publish/validate/" + methodologyId + "/" + revId);
+		createValidate.prettyPrint();
+		Assert.assertEquals(createValidate.statusCode(), 200);
+
+	}
+	
 	@Test(groups = { "IntegrationTests" })
 	public void getPublish_status200() throws IOException {
 
@@ -97,62 +193,15 @@ public class Restassured_Automation_Publish extends read_Configuration_Propertit
 		String revId = String.valueOf(listRevisionId.get(0));
 
 		// step 3 perfrom validate
-		Validate_Pojo vp = new Validate_Pojo();
-		Response createPublish = engagementType.post_WithOutBody(URL, AuthorizationKey,
-				"/api/publish/publish/" + methodologyId + "/" + revId);
-		createPublish.prettyPrint();
-		Assert.assertEquals(createPublish.statusCode(), 200);
-
-	}
-
-	@Test(groups = { "IntegrationTests" })
-	public void getValidate_status200() throws IOException {
-
-		Properties post = read_Configuration_Propertites.loadproperty("Configuration");
-
-		Engagement_Type_Pojo en = new Engagement_Type_Pojo();
-		en.setTitle(post.getProperty("postEngagementTypeTitle") + getRandomAlphaNum());
-		en.setOrganization(post.getProperty("postEngagementTypeOrganization"));
-
-		Restassured_Automation_Utils engagementType = new Restassured_Automation_Utils();
-
-		// Step 1 create an engagement
-		Response createEngagementType = engagementType.post_URLPOJO(URL, AuthorizationKey, "/api/engagementType", en);
-		createEngagementType.prettyPrint();
-
-		// Retrieving the id as engagementType
-		JsonPath jsonPathEvaluator = createEngagementType.jsonPath();
-		engagementTypeId = jsonPathEvaluator.get("id");
-
-		System.out.println(engagementTypeId);
-
-		Methodology_Pojo mp = new Methodology_Pojo();
-		mp.setTitle(post.getProperty("postEngagementTypeTitle") + getRandomAlphaNum());
-		mp.setEngagementType(engagementTypeId);
-		mp.setDraftDescription(post.getProperty("postMethodologyDraftDescription"));
-		mp.setOrganization(post.getProperty("postEngagementTypeOrganization"));
-
-		// Step 2 create a Methodology
-		Response createMethodology = engagementType.post_URLPOJO(URL, AuthorizationKey, "/api/methodology", mp);
-		createMethodology.prettyPrint();
-
-		JsonPath jsonPathEvaluator1 = createMethodology.jsonPath();
-		methodologyId = jsonPathEvaluator1.get("id");
-		ArrayList<Map<String, ?>> listRevisionId = jsonPathEvaluator1.get("revisions.id");
-
-		System.out.println(String.valueOf(listRevisionId.get(0)));
-
-		String revId = String.valueOf(listRevisionId.get(0));
-
-		// step 3 perfrom validate
-		Validate_Pojo vp = new Validate_Pojo();
-		Response createValidate = engagementType.post_WithOutBody(URL, AuthorizationKey,
-				"/api/publish/validate/" + methodologyId + "/" + revId);
+	
+		Response createValidate = engagementType.get_URL_Without_Params(URL, AuthorizationKey,
+				"/api/publish/publish/" + methodologyId);
 		createValidate.prettyPrint();
 		Assert.assertEquals(createValidate.statusCode(), 200);
-
+		
 	}
-	
+
+		
 	
 	@Test(groups = "IntegrationTests")
 	public void MethodologyItemRelation_DeleteLinkedMethodologyItem_status400()
