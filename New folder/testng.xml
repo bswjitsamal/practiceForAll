@@ -2,11 +2,11 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name="Suite">
-<listeners>
+	<listeners>
 		<listener class-name="restassured.automation.listeners.TestListeners" />
-		</listeners>
+	</listeners>
 	<test name="Test">
-	
+
 		<groups>
 			<run>
 
@@ -15,15 +15,11 @@
 			</run>
 		</groups>
 		<classes>
+			
 				
 				<class
-				name="restassured.automation.testcases.Restassured_Automation_ItemSelectQuestion" >
+					name="restassured.automation.testcases.Restassured_Automation_MethodologyItemRelations" />
 				
-				
-				</class>
-				
-
-
 
 		</classes>
 	</test> <!-- Test -->

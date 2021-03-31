@@ -12,7 +12,7 @@
       </run>
     </groups>
     <classes>
-      <class name="restassured.automation.testcases.Restassured_Automation_ItemSelectQuestion"/>
+      <class name="restassured.automation.testcases.Restassured_Automation_MethodologyItemRelations"/>
     </classes>
   </test> <!-- Test -->
   <test name="Test(failed)">
@@ -23,12 +23,13 @@
       </run>
     </groups>
     <classes>
-      <class name="restassured.automation.testcases.Restassured_Automation_ItemSelectQuestion">
+      <class name="restassured.automation.testcases.Restassured_Automation_MethodologyItemRelations">
         <methods>
+          <include name="MethodologyItemRelation_ListOfAllMethodologyRelation_status400"/>
+          <include name="MethodologyItemRelation_DeleteAnMethodologyRelation_status400"/>
           <include name="setup"/>
-          <include name="ItemSelectQuestion_DeleteAnOptionFromAnItemSelectQuestion_status204"/>
         </methods>
-      </class> <!-- restassured.automation.testcases.Restassured_Automation_ItemSelectQuestion -->
+      </class> <!-- restassured.automation.testcases.Restassured_Automation_MethodologyItemRelations -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

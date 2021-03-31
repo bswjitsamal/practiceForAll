@@ -640,10 +640,15 @@ public class Restassured_Automation_ItemSelectQuestion {
 		Response getMethodologyRes2 = getMethodology.put_URLPOJO(URL, AuthorizationKey, patchId2, isq1);
 		getMethodologyRes2.prettyPrint();
 		Assert.assertEquals(getMethodologyRes2.statusCode(), 200);
+		JsonPath optionGrpIdJson=getMethodologyRes2.jsonPath();
+		List<String> gropId=optionGrpIdJson.get("id");
+		System.out.println("option Id----->"+gropId.get(0));
+		
 		ItemSelectQuestion_Pojo isq2 = new ItemSelectQuestion_Pojo();
+		
 		isq2.setTitle("Patching option");
-		String patchId3 = "/api/methodologyItem/revision/" + revId.substring(1, revId.length() - 1)
-				+ "/itemSelectQuestion/" + s1 + "/option/" + ss;
+		
+		String patchId3 = "/api/methodologyItem/revision/" + revId.substring(1, revId.length() - 1)+ "/itemSelectQuestion/" + s1 + "/option/" + gropId.get(0);
 		Response patchOptionRes = getMethodology.patch_URLPOJO(URL, AuthorizationKey, patchId3, isq2);
 		patchOptionRes.prettyPrint();
 		Assert.assertEquals(patchOptionRes.getStatusCode(), 204);
@@ -796,8 +801,6 @@ public class Restassured_Automation_ItemSelectQuestion {
 		getMethodology.validate_HTTPStrictTransportSecurity(getMethodologyRes2);
 
 	}
-
-	
 
 	@Test(groups = "IntegrationTests")
 	public void ItemSelectQuestion_DeleteAnOptionFromAnItemSelectQuestion_status204() {
@@ -1276,7 +1279,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 		Assert.assertEquals(getOptionRes.getStatusCode(), 200);
 		JsonPath optionJson = getOptionRes.jsonPath();
 		List<String> optionId = optionJson.get("id");
-		String optId = String.valueOf(optionId.get(1));
+		String optId = String.valueOf(optionId.get(0));
 		System.out.println("Option id--------------->" + optId);
 
 		/**
@@ -1367,7 +1370,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 		Assert.assertEquals(getOptionRes.getStatusCode(), 200);
 		JsonPath optionJson = getOptionRes.jsonPath();
 		List<String> optionId = optionJson.get("id");
-		String optId = String.valueOf(optionId.get(1));
+		String optId = String.valueOf(optionId.get(0));
 		System.out.println("Option id--------------->" + optId);
 
 		/**
@@ -1384,7 +1387,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 		/**
 		 * Extent report generation
 		 */
-		ExtentTestManager.statusLogMessage(optionGroupRes.statusCode());
+	ExtentTestManager.statusLogMessage(optionGroupRes.statusCode());
 		ExtentTestManager.getTest().log(Status.INFO, optionGroupRes.asString());
 		System.out.println("This particular below line is based on Sprint 7 & the Requirement ID : 1008");
 		getEngagementType.validate_HTTPStrictTransportSecurity(optionGroupRes);
@@ -1455,7 +1458,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 		Assert.assertEquals(getOptionRes.getStatusCode(), 200);
 		JsonPath optionJson = getOptionRes.jsonPath();
 		List<String> optionId = optionJson.get("id");
-		String optId = String.valueOf(optionId.get(1));
+		String optId = String.valueOf(optionId.get(0));
 		System.out.println("Option id--------------->" + optId);
 
 		/**
@@ -1473,11 +1476,11 @@ public class Restassured_Automation_ItemSelectQuestion {
 		/**
 		 * Extent report generation
 		 */
-		ExtentTestManager.statusLogMessage(optionGroupRes.statusCode());
+		/*ExtentTestManager.statusLogMessage(optionGroupRes.statusCode());
 		ExtentTestManager.getTest().log(Status.INFO, optionGroupRes.asString());
 		System.out.println("This particular below line is based on Sprint 7 & the Requirement ID : 1008");
 		getEngagementType.validate_HTTPStrictTransportSecurity(optionGroupRes);
-
+*/
 	}
 
 	@Test(groups = "IntegrationTests")
@@ -1544,7 +1547,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 		Assert.assertEquals(getOptionRes.getStatusCode(), 200);
 		JsonPath optionJson = getOptionRes.jsonPath();
 		List<String> optionId = optionJson.get("id");
-		String optId = String.valueOf(optionId.get(1));
+		String optId = String.valueOf(optionId.get(0));
 		System.out.println("Option id--------------->" + optId);
 
 		/**
@@ -1631,7 +1634,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 		Assert.assertEquals(getOptionRes.getStatusCode(), 200);
 		JsonPath optionJson = getOptionRes.jsonPath();
 		List<String> optionId = optionJson.get("id");
-		String optId = String.valueOf(optionId.get(1));
+		String optId = String.valueOf(optionId.get(0));
 		System.out.println("Option id--------------->" + optId);
 
 		/**
@@ -1678,21 +1681,20 @@ public class Restassured_Automation_ItemSelectQuestion {
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
 
 		String revId = String.valueOf(listRevisionI1.get(7));
-		
+
 		String patchId = "/api/methodologyItem/revision/" + revId.substring(1, revId.length() - 1);
 
 		Restassured_Automation_Utils getEngagementType = new Restassured_Automation_Utils();
 
 		Response getEngagementTypeRes = getEngagementType.get_URL_Without_Params(URL, AuthorizationKey, patchId);
 		getEngagementTypeRes.prettyPrint();
-		JsonPath methJson=getEngagementTypeRes.jsonPath();
-		listMethodologyId=methJson.get("methodologyItemId");
-		String mid=listMethodologyId.get(0);
+		JsonPath methJson = getEngagementTypeRes.jsonPath();
+		listMethodologyId = methJson.get("methodologyItemId");
+		String mid = listMethodologyId.get(0);
 		List<String> s = getEngagementTypeRes.body().path("options");
 
 		String s1 = getEngagementTypeRes.path("find { it.renderAsSelect == false }.methodologyItemId");
 		System.out.println(s1);
-
 
 		String patchId1 = "/api/methodologyItem/revision/" + revId.substring(1, revId.length() - 1)
 				+ "/itemSelectQuestion/" + s1 + "/option";
@@ -1722,7 +1724,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 		Assert.assertEquals(getOptionRes.getStatusCode(), 200);
 		JsonPath optionJson = getOptionRes.jsonPath();
 		List<String> optionId = optionJson.get("id");
-		String optId = String.valueOf(optionId.get(1));
+		String optId = String.valueOf(optionId.get(0));
 		System.out.println("Option id--------------->" + optId);
 
 		/**
@@ -1730,9 +1732,10 @@ public class Restassured_Automation_ItemSelectQuestion {
 		 */
 
 		String patchId5 = "/api/methodologyItem/revision/" + revId.substring(1, revId.length() - 1)
-				+ "/itemSelectQuestion/" + mid + "/optionGroup/" + optionGrpId;
-
+				+ "/itemSelectQuestion/" + mid + "/optionGroup/" + optId;
+		Response optionGroupRes1 = getEngagementType.delete(URL, AuthorizationKey, patchId5);
 		Response optionGroupRes = getEngagementType.delete(URL, AuthorizationKey, patchId5);
+
 		optionGroupRes.prettyPrint();
 		Assert.assertEquals(optionGroupRes.getStatusCode(), 400);
 		/**
@@ -1745,7 +1748,6 @@ public class Restassured_Automation_ItemSelectQuestion {
 
 	}
 
-	
 	@Test(groups = "IntegrationTests")
 	public void ItemSelectQuestion_MoveASelectQuestionFromItemOption_status200() {
 
@@ -1764,7 +1766,9 @@ public class Restassured_Automation_ItemSelectQuestion {
 		 * GETTING THE REVISION ID
 		 */
 		Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();
-
+		/**
+		 * FETCHING THE ORGANISATION ID
+		 */
 		Response getMethodologyRes = getMethodology.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
 				"Organization", listOrdId.get(4));
 
@@ -1776,6 +1780,9 @@ public class Restassured_Automation_ItemSelectQuestion {
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
 
 		String revId = String.valueOf(listRevisionI1.get(7));
+		/**
+		 * FETCHING THE REVISION ID
+		 */
 
 		String patchId = "/api/methodologyItem/revision/" + revId.substring(1, revId.length() - 1);
 
@@ -1787,6 +1794,9 @@ public class Restassured_Automation_ItemSelectQuestion {
 
 		String s1 = getEngagementTypeRes.path("find { it.renderAsSelect == false }.methodologyItemId");
 		System.out.println(s1);
+		/**
+		 * CREATE AN OPTION
+		 */
 
 		String patchId1 = "/api/methodologyItem/revision/" + revId.substring(1, revId.length() - 1)
 				+ "/itemSelectQuestion/" + s1 + "/option";
@@ -1796,22 +1806,13 @@ public class Restassured_Automation_ItemSelectQuestion {
 
 		Response getMethodologyRes1 = getMethodology.post_URLPOJO(URL, AuthorizationKey, patchId1, isq);
 		getMethodologyRes1.prettyPrint();
-
-		JsonPath jsonPathEvaluator1 = getMethodologyRes1.jsonPath();
-		String ss = jsonPathEvaluator1.get("id");
-		System.out.println(ss);
-		String patchId2 = "/api/methodologyItem/revision/" + revId.substring(1, revId.length() - 1)
-				+ "/itemSelectQuestion/" + s1 + "/option";
-		ItemSelectQuestion_Pojo isq1 = new ItemSelectQuestion_Pojo();
-		isq1.setOptionTitles(new String[] { "demoTesting" });
-
-		Response getMethodologyRes2 = getMethodology.put_URLPOJO(URL, AuthorizationKey, patchId2, isq1);
-		getMethodologyRes2.prettyPrint();
-		Assert.assertEquals(getMethodologyRes2.statusCode(), 200);
+		Assert.assertEquals(getMethodologyRes1.getStatusCode(), 200);
+		JsonPath optionJson=getMethodologyRes1.jsonPath();
+		String optId=optionJson.get("id");
 		ItemSelectQuestion_Pojo isq2 = new ItemSelectQuestion_Pojo();
-		isq2.setIndex("1");
+		isq2.setIndex("0");
 		String patchId3 = "/api/methodologyItem/revision/" + revId.substring(1, revId.length() - 1)
-				+ "/itemSelectQuestion/" + s1 + "/moveOption/" + ss;
+				+ "/itemSelectQuestion/" + s1 + "/moveOption/" + optId;
 		Response patchOptionRes = getMethodology.patch_URLPOJO(URL, AuthorizationKey, patchId3, isq2);
 		patchOptionRes.prettyPrint();
 		Assert.assertEquals(patchOptionRes.getStatusCode(), 204);
@@ -1819,6 +1820,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 		/**
 		 * Extent report generation
 		 */
+
 		ExtentTestManager.statusLogMessage(patchOptionRes.statusCode());
 		ExtentTestManager.getTest().log(Status.INFO, patchOptionRes.asString());
 		System.out.println("This particular below line is based on Sprint 7 & the Requirement ID : 1008");

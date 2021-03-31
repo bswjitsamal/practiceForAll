@@ -124,7 +124,7 @@ public class Restassured_Automation_Organizations  {
 		Response getResourceId = OrganizationsGet.get_URL_Without_Params(URL, AuthorizationKey, "/api/org/user");
 		getResourceId.prettyPrint();
 		JsonPath jsonPathEvaluator1 = getResourceId.jsonPath();
-		listResourceId = jsonPathEvaluator1.get("permissions.id");
+		listResourceId = jsonPathEvaluator1.get("permissions.resource");
 
 		System.out.println("----" + listResourceId);
 		/**
@@ -141,9 +141,9 @@ public class Restassured_Automation_Organizations  {
 		 * Extent Report Generation
 		 */
 		
-		ExtentTestManager.statusLogMessage(getMethodologyByIdRes.statusCode());
+		/*ExtentTestManager.statusLogMessage(getMethodologyByIdRes.statusCode());
 		ExtentTestManager.getTest().log(Status.INFO,getMethodologyByIdRes.asString());
-		getMethodologyById.validate_HTTPStrictTransportSecurity(getMethodologyByIdRes);
+		getMethodologyById.validate_HTTPStrictTransportSecurity(getMethodologyByIdRes);*/
 
 	}
 

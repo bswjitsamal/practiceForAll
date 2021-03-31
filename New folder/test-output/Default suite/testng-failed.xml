@@ -5,19 +5,9 @@
     <classes>
       <class name="restassured.automation.testcases.Restassured_Automation_MethodologyItemRelations">
         <methods>
-          <include name="MethodologyItemRelation_DeleteLinkedMethodologyItemRelationWithStatus_204"/>
+          <include name="MethodologyItemRelation_ListOfAllMethodologyRelation_status200"/>
         </methods>
       </class> <!-- restassured.automation.testcases.Restassured_Automation_MethodologyItemRelations -->
     </classes>
   </test> <!-- Default test -->
-  <test name="Default test(failed)">
-    <classes>
-      <class name="restassured.automation.testcases.Restassured_Automation_MethodologyItemRelations">
-        <methods>
-          <include name="MethodologyItemRelation_DeleteLinkedMethodologyItemRelationWithStatus_204"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- restassured.automation.testcases.Restassured_Automation_MethodologyItemRelations -->
-    </classes>
-  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

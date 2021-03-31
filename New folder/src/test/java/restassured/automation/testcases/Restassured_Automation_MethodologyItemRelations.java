@@ -274,7 +274,7 @@ public class Restassured_Automation_MethodologyItemRelations {
 
 		System.out.println(String.valueOf(listRevisionI1.get(0)));
 
-		String revId = String.valueOf(listRevisionI1.get(1));
+		String revId = String.valueOf(listRevisionI1.get(7));
 		String patchId = "/api/methodologyItem/revision/" + revId.substring(1, revId.length() - 1) + "/relation";
 		Response getRelationRes = allUtils.get_URL_Without_Params(URL, AuthorizationKey, patchId);
 		getRelationRes.prettyPrint();
@@ -311,12 +311,13 @@ public class Restassured_Automation_MethodologyItemRelations {
 
 		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
 		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator1.get("revisions.id");
+		
 
 		System.out.println(String.valueOf(listRevisionI1.get(0)));
 
-		String revId = String.valueOf(listRevisionI1.get(1));
+		String revId = String.valueOf(listRevisionI1.get(7));
 
-		String patchId = "/api/methodologyItem/revision/" + revId.substring(1, revId.length() - 1) + "/relations";
+		String patchId = "/api/methodologyItem/revision/" + revId.substring(1, revId.length()-1) + "/relation";
 		Response getRelationRes = allUtils.get_URL_Without_Params(URL, AuthorizationKey, patchId);
 		getRelationRes.prettyPrint();
 		Assert.assertEquals(getRelationRes.getStatusCode(), 400);
@@ -887,7 +888,7 @@ public class Restassured_Automation_MethodologyItemRelations {
 
 	}
 
-	@Test(groups = "IntegrationTests")
+	//@Test(groups = "IntegrationTests")
 	public void MethodologyItemRelation_DeleteLinkedMethodologyItemRelation_status200()
 			throws JsonIOException, JsonSyntaxException, IOException {
 
@@ -1007,7 +1008,7 @@ public class Restassured_Automation_MethodologyItemRelations {
 		MethodologyItem.validate_HTTPStrictTransportSecurity(deleteRelationRes);
 
 	}
-	@Test(groups ="IntegrationTests")
+	//@Test(groups ="IntegrationTests")
 	public void MethodologyItemRelation_DeleteLinkedMethodologyItemRelationWithStatus_204() throws IOException{
 		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
 

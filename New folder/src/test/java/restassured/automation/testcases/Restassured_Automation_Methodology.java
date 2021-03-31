@@ -157,12 +157,12 @@ public class Restassured_Automation_Methodology {
 
 		// System.out.println(String.valueOf(listRevision.get(0)));
 
-		String revId = String.valueOf(listRevision.get(0));
+		String revId = String.valueOf(listRevision.get(1));
+		System.out.println("revision-------->"+revId);
 
 		System.out.println(methodologyId);
 
-		String patchId = "/api/methodology/" + methodologyId.get(0) + "/revision/"
-				+ revId.substring(1, revId.length() - 1);
+		String patchId = "/api/methodology/" + methodologyId.get(1) + "/revision/"+ revId.substring(1, revId.length() - 1);
 
 		Restassured_Automation_Utils getMethodologyByrevisonId = new Restassured_Automation_Utils();
 
