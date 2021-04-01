@@ -43,15 +43,17 @@ public class ExtentReporterNG implements IReporter {
 			for (ITestResult result : tests.getAllResults()) {
 				test = extent.startTest(result.getMethod().getMethodName());
 				/*
-				 * test.getTest(). = getTime(result.getStartMillis()); test.getTest().endedTime
-				 * = getTime(result.getEndMillis());
+				 * test.getTest(). = getTime(result.getStartMillis());
+				 * test.getTest().endedTime = getTime(result.getEndMillis());
 				 */
 				for (String group : result.getMethod().getGroups())
 					test.assignCategory(group);
 				String message = "Test " + status.toString().toLowerCase() + "ed";
-				if (result.getThrowable() != null)
-					message = result.getThrowable().getMessage();
+				 if (result.getThrowable() != null)
+				//if (result.getStatus() == ITestResult.FAILURE)
+					message= result.getThrowable().getMessage();
 				test.log(status, message);
+
 				extent.endTest(test);
 			}
 		}

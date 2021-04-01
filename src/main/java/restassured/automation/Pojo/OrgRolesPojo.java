@@ -9,7 +9,19 @@ public class OrgRolesPojo {
 	private String permissionSets;
 	private String resourceType;
 	private String resource;
+	private String name;
+	private String minimumApplicationLevel;
+	private String[] permissions;
+	private String applicationLevel;
 
+
+	public String getApplicationLevel() {
+		return applicationLevel;
+	}
+
+	public void setApplicationLevel(String applicationLevel) {
+		this.applicationLevel = applicationLevel;
+	}
 
 	public String getResource() {
 		return resource;
@@ -67,5 +79,34 @@ public class OrgRolesPojo {
 	public void setRole(String role) {
 		this.role = role;
 	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getMinimumApplicationLevel() {
+		return minimumApplicationLevel;
+	}
+
+	public void setMinimumApplicationLevel(String minimumApplicationLevel) {
+		this.minimumApplicationLevel = minimumApplicationLevel;
+	}
+
+	public String[] getPermissions() {
+		return permissions;
+	}
+
+	public void setPermissions(String[] permissions) {
+		this.permissions = permissions;
+	}
+	
+
+	
+	
+	
 
 }

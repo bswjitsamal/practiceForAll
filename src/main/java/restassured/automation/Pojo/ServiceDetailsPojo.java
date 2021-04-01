@@ -5,15 +5,8 @@ public class ServiceDetailsPojo {
 	private String name;
 	private RootConditionGroup rootConditionGroup;
 	private Result result;
-	private boolean isComplex;
 	
 	
-	public boolean getIsComplex() {
-		return isComplex;
-	}
-	public void setIsComplex(boolean b) {
-		this.isComplex = b;
-	}
 	public String getName() {
 		return name;
 	}

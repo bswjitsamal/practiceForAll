@@ -4,6 +4,8 @@ public class ItemSelectQuestion_Pojo {
 	
 	private String title;
 	private String[] optionTitles;
+	private String[] options;
+	private String index;
 
 	public String[] getOptionTitles() {
 		return optionTitles;
@@ -20,6 +22,24 @@ public class ItemSelectQuestion_Pojo {
 	public void setTitle(String title) {
 		this.title = title;
 	}
+
+	public String[] getOptions() {
+		return options;
+	}
+
+	public void setOptions(String[] options) {
+		this.options = options;
+	}
+
+	public String getIndex() {
+		return index;
+	}
+
+	public void setIndex(String index) {
+		this.index = index;
+	}
+	
+	
 	
 
 }

@@ -287,28 +287,4 @@ public class Excel_Data_Source_Utils {
 	  copy.write();
 	  copy.close();
 	 }
-	 
-	 //Write to an existing excel or add a new row
-	 public static void writeToExcelWithMinMax(String excelPath, String outputtestdata,String value, int meanSheetNo 
-			 , int maxSheetNo , int minRow, int maxRow,int c) throws BiffException, IOException, RowsExceededException, 
-	         WriteException	 {
-		 
-	  Workbook workbook = Workbook.getWorkbook(new File(excelPath));
-	  //create a new excel and copy from existing
-	  WritableWorkbook copy = Workbook.createWorkbook(new File(outputtestdata), workbook);
-	  
-	  for(; meanSheetNo<maxSheetNo; meanSheetNo++) {
-		  for(; minRow<=maxRow; minRow++) {
-			  System.out.println("The curent sheet nu: "+meanSheetNo);
-			  WritableSheet sheet = copy.getSheet(meanSheetNo);
-			  //Label(colno, rowno, string)
-			  Label label = new Label(c,minRow, value);
-			  sheet.addCell(label);
-			  
-		  }
-	  }
-	  
-	  copy.write();
-	  copy.close();
-	 }
 }

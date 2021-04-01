@@ -21,6 +21,8 @@ public class Organization_Pojo {
 	private String orgId;
 	private String resourceId;
 	private String memberFirmId;
+	private String permissionSet;
+	
 
 	public String getMemberFirmId() {
 		return memberFirmId;
@@ -65,6 +67,11 @@ public class Organization_Pojo {
 
 	public void setCountryCode(String string) {
 		this.countryCode = string;
+	}
+	
+
+	public void setPermissionSet(String permissionSet) {
+		this.permissionSet = permissionSet;
 	}
 
 	public String postOrganization() throws Exception {

@@ -68,115 +68,6 @@ public class User_Pojo {
 	}
 	
 	 
-	 public String workProgramTypeAdd(Map<String,String> data) {
-			
-		 MethodologyItem_Pojo upDateId = new MethodologyItem_Pojo();
-		
-		 upDateId.setWorkProgramType(data.get("workProgramType"));
-		 upDateId.setTailoring(data.get("tailoring"));
-		 upDateId.setVisibility(data.get("visibility"));
-		 
-		 Gson Josnbody = new Gson();
-		 return Josnbody.toJson(upDateId);		
-	}
-	 
-	 public String initializeWorkProgramType(Map<String,String> data) {
-			
-		 MethodologyItem_Pojo upDateId = new MethodologyItem_Pojo();
-		
-		 upDateId.setRuleContextType(data.get("ruleContextType"));
-		 upDateId.setRuleContextSource(data.get("ruleContextSource"));
-		 
-		 Gson Josnbody = new Gson();
-		 return Josnbody.toJson(upDateId);		
-	}
-	 
-	 public String procedureAdd(Map<String,String> data) {
-		 
-		 MethodologyItem_Pojo upDateId = new MethodologyItem_Pojo();
-		 
-		
-		 upDateId.setTitle(data.get("title"));
-		 upDateId.setItemType(data.get("itemType"));
-		 upDateId.setIndex(data.get("index"));	
-		 upDateId.setRevisions(data.get("parentId"));
-		 upDateId.setWPId(data.get("workProgramId"));
-		 
-		 Gson Josnbody = new Gson();
-		 return Josnbody.toJson(upDateId);	
-		 
-	 }
-	 
-	 
-	public String procedureTypeAdd(Map<String, String> data) {
-
-		MethodologyItem_Pojo upDateId = new MethodologyItem_Pojo();
-
-		upDateId.setWPId(data.get("workProgramItemType"));
-
-		Gson Josnbody = new Gson();
-		return Josnbody.toJson(upDateId);
-
-	}
-
-	
-	public String newRelationAdd(Map<String, String> data) {
-
-		RelationPojo upDateId = new RelationPojo();
-
-		upDateId.setMethodologyItemId(data.get("methodologyItemId"));
-
-		Gson Josnbody = new Gson();
-		return Josnbody.toJson(upDateId);
-
-	}
-	
-	public String patchRelation(Map<String, String> data) {
-
-		RelationPojo upDateId = new RelationPojo();
-
-		upDateId.setLinkedMethodologyItemId(data.get("linkedMethodologyItemId"));
-		upDateId.setRelationshipType(data.get("relationshipType"));
-
-		Gson Josnbody = new Gson();
-		return Josnbody.toJson(upDateId);
-
-	}
-	
-	public String anotherPatchRelation(Map<String, String> data) {
-
-		RelationPojo upDateId = new RelationPojo();
-
-		upDateId.setRelationshipType(data.get("relationshipType"));
-
-		Gson Josnbody = new Gson();
-		return Josnbody.toJson(upDateId);
-
-	}
-	
-	public String createOption() {
-
-		MethodologyItem_Pojo upDateId = new MethodologyItem_Pojo();
-
-		upDateId.setOptionTitles(new String[] { "Yes","No" } );
-
-		Gson Josnbody = new Gson();
-		return Josnbody.toJson(upDateId);
-
-	}
-	
-	public String updateOption(Map<String, String> data) {
-
-		MethodologyItem_Pojo upDateId = new MethodologyItem_Pojo();
-
-		upDateId.setTitle(data.get("title"));
-
-		Gson Josnbody = new Gson();
-		return Josnbody.toJson(upDateId);
-
-	}
-
- 
 	
 	 public String phaseAdd(Map<String,String> data) {
 			
@@ -218,30 +109,146 @@ public class User_Pojo {
 	}
      
      
-     public String PhaseCreate(Map<String,String> data) {
- 		
-    	 MethodologyItem_Pojo upDateId = new MethodologyItem_Pojo();
-		 
-    	 upDateId.setTitle(data.get("title"));
-    	 upDateId.setParentId(data.get("parentId"));
-    	 upDateId.setIndex(data.get("index"));
-    	 upDateId.setItemType(data.get("itemType"));
-		 
-		 Gson Josnbody = new Gson();
-		 return Josnbody.toJson(upDateId);
-	}
      
-     public String PhaseCreatePatch(Map<String,String> data) {
+     	 
+ 	 public String workProgramTypeAdd(Map<String,String> data) {
+ 			
+ 		 MethodologyItem_Pojo upDateId = new MethodologyItem_Pojo();
+ 		
+ 		 upDateId.setWorkProgramType(data.get("workProgramType"));
+ 		 upDateId.setTailoring(data.get("tailoring"));
+ 		 upDateId.setVisibility(data.get("visibility"));
+ 		 
+ 		 Gson Josnbody = new Gson();
+ 		 return Josnbody.toJson(upDateId);		
+ 	}
+ 	 
+ 	 public String initializeWorkProgramType(Map<String,String> data) {
+ 			
+ 		 MethodologyItem_Pojo upDateId = new MethodologyItem_Pojo();
+ 		
+ 		 upDateId.setRuleContextType(data.get("ruleContextType"));
+ 		 upDateId.setRuleContextSource(data.get("ruleContextSource"));
+ 		 
+ 		 Gson Josnbody = new Gson();
+ 		 return Josnbody.toJson(upDateId);		
+ 	}
+ 	 
+ 	 public String procedureAdd(Map<String,String> data) {
+ 		 
+ 		 MethodologyItem_Pojo upDateId = new MethodologyItem_Pojo();
+ 		 
+ 		
+ 		 upDateId.setTitle(data.get("title"));
+ 		 upDateId.setItemType(data.get("itemType"));
+ 		 upDateId.setIndex(data.get("index"));	
+ 		 upDateId.setRevisions(data.get("parentId"));
+ 		 upDateId.setWPId(data.get("workProgramId"));
+ 		 
+ 		 Gson Josnbody = new Gson();
+ 		 return Josnbody.toJson(upDateId);	
+ 		 
+ 	 }
+ 	 
+ 	 
+ 	public String procedureTypeAdd(Map<String, String> data) {
+
+ 		MethodologyItem_Pojo upDateId = new MethodologyItem_Pojo();
+
+ 		upDateId.setWPId(data.get("workProgramItemType"));
+
+ 		Gson Josnbody = new Gson();
+ 		return Josnbody.toJson(upDateId);
+
+ 	}
+
+ 	
+ 	public String newRelationAdd(Map<String, String> data) {
+
+ 		RelationPojo upDateId = new RelationPojo();
+
+ 		upDateId.setMethodologyItemId(data.get("methodologyItemId"));
+
+ 		Gson Josnbody = new Gson();
+ 		return Josnbody.toJson(upDateId);
+
+ 	}
+ 	
+ 	public String patchRelation(Map<String, String> data) {
+
+ 		RelationPojo upDateId = new RelationPojo();
+
+ 		upDateId.setLinkedMethodologyItemId(data.get("linkedMethodologyItemId"));
+ 		upDateId.setRelationshipType(data.get("relationshipType"));
+
+ 		Gson Josnbody = new Gson();
+ 		return Josnbody.toJson(upDateId);
+
+ 	}
+ 	
+ 	public String anotherPatchRelation(Map<String, String> data) {
+
+ 		RelationPojo upDateId = new RelationPojo();
+
+ 		upDateId.setRelationshipType(data.get("relationshipType"));
+
+ 		Gson Josnbody = new Gson();
+ 		return Josnbody.toJson(upDateId);
+
+ 	}
+ 	
+ 	public String createOption() {
+
+ 		MethodologyItem_Pojo upDateId = new MethodologyItem_Pojo();
+
+ 		upDateId.setOptionTitles(new String[] { "Yes","No" } );
+
+ 		Gson Josnbody = new Gson();
+ 		return Josnbody.toJson(upDateId);
+
+ 	}
+ 	
+ 	public String updateOption(Map<String, String> data) {
+
+ 		MethodologyItem_Pojo upDateId = new MethodologyItem_Pojo();
+
+ 		upDateId.setTitle(data.get("title"));
+
+ 		Gson Josnbody = new Gson();
+ 		return Josnbody.toJson(upDateId);
+
+ 	}
+
+  
+ 	
+ 	
+      
+      public String PhaseCreate(Map<String,String> data) {
   		
-    	 MethodologyItem_Pojo upDateId = new MethodologyItem_Pojo();
-		 
-    	 upDateId.setWorkProgramType(data.get("workProgramType"));
-    	 upDateId.setTailoring(data.get("tailoring"));
-    	 upDateId.setVisibility(data.get("visibility"));
-		 
-		 Gson Josnbody = new Gson();
-		 return Josnbody.toJson(upDateId);
-	}
+     	 MethodologyItem_Pojo upDateId = new MethodologyItem_Pojo();
+ 		 
+     	 upDateId.setTitle(data.get("title"));
+     	 upDateId.setParentId(data.get("parentId"));
+     	 upDateId.setIndex(data.get("index"));
+     	 upDateId.setItemType(data.get("itemType"));
+ 		 
+ 		 Gson Josnbody = new Gson();
+ 		 return Josnbody.toJson(upDateId);
+ 	}
+      
+      public String PhaseCreatePatch(Map<String,String> data) {
+   		
+     	 MethodologyItem_Pojo upDateId = new MethodologyItem_Pojo();
+ 		 
+     	 upDateId.setWorkProgramType(data.get("workProgramType"));
+     	 upDateId.setTailoring(data.get("tailoring"));
+     	 upDateId.setVisibility(data.get("visibility"));
+ 		 
+ 		 Gson Josnbody = new Gson();
+ 		 return Josnbody.toJson(upDateId);
+ 	}
+      
+      
 	
 
 }

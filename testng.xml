@@ -3,20 +3,21 @@
 
 <suite name="Suite">
 	<listeners>
-		<listener class-name="restassured.automation.utils.ExtentReporterNG" />
+		<listener class-name="restassured.automation.listeners.TestListeners" />
 	</listeners>
 	<test name="Test">
+
 		<groups>
 			<run>
+
 				<include name="IntegrationTests" />
+				<include name="EndToEnd" />
 			</run>
 		</groups>
 		<classes>
-			<!-- class
-				name="restassured.automation.testcases.Restassured_Automation_FnctnalFlow" /-->
 			<class
-				name="restassured.automation.testcases.Restassured_Automation_Publish" />
-
+				name="restassured.automation.testcases.Restassured_Automation_ItemSelectQuestion" />
+			
 
 
 		</classes>

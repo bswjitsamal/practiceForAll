@@ -1,0 +1,3004 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<meta charset='utf-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+		<link href='https://cdn.rawgit.com/anshooarora/extentreports-java/b4a58fcfd1e137bd9287244035a7c80d3d73b3af/dist/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>Test-Automaton-Report2021-03-23 13_23_36.html</title>
+
+	<style type='text/css'>
+	</style>
+</head>
+
+	<body class='extent standard default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo blue darken-3">Extent</a>
+
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
+			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
+		</ul>
+
+		<!-- report name -->
+		<span class='report-name'>Test-Automaton-Report2021-03-23 13_23_36.html</span>
+		
+		<!-- report headline -->
+		<span class='report-headline'></span>
+
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<li>
+                <a href='#!'>
+                    <span class='label suite-start-time blue darken-3'>Mar 23, 2021 01:23:36 PM</span>
+				</a>
+			</li>
+			<li>
+                <a href='#!'>
+                    <span class='label blue darken-3'>3.1.5</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+		<!-- container -->
+		<div class='container'>
+
+<div id='test-view' class='view'>
+				
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+
+			<!-- category toggle -->
+			<!-- category toggle -->
+
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+					<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+					<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Tests</h5>
+			<ul id='test-collection' class='test-collection'>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>MethodologyItem_DeleteMarkAnItemAsDeleted_status200</span>
+						<span class='test-time'>Mar 23, 2021 01:23:36 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 23, 2021 01:23:36 PM</span>
+	<span class='label end-time'>Mar 23, 2021 01:23:44 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 7s+593ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:23:44 PM</td>
+					<td class='step-details'><pre>java.lang.AssertionError: expected [200] but found [404]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at restassured.automation.testcases.Restassured_Automation_MethodologItem.MethodologyItem_DeleteMarkAnItemAsDeleted_status200(Restassured_Automation_MethodologItem.java:1039)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+</pre></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='2'>
+					<div class='test-heading'>
+						<span class='test-name'>MethodologyItem_DeleteMarkAnItemAsDeleted_status400</span>
+						<span class='test-time'>Mar 23, 2021 01:23:44 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 23, 2021 01:23:44 PM</span>
+	<span class='label end-time'>Mar 23, 2021 01:23:49 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+127ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:23:49 PM</td>
+					<td class='step-details'><pre>java.lang.AssertionError: expected [200] but found [404]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at restassured.automation.testcases.Restassured_Automation_MethodologItem.MethodologyItem_DeleteMarkAnItemAsDeleted_status400(Restassured_Automation_MethodologItem.java:1104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+</pre></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='3'>
+					<div class='test-heading'>
+						<span class='test-name'>MethodologyItem_EndToEnd_Scenario</span>
+						<span class='test-time'>Mar 23, 2021 01:23:49 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 23, 2021 01:23:49 PM</span>
+	<span class='label end-time'>Mar 23, 2021 01:23:54 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+132ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:23:54 PM</td>
+					<td class='step-details'><pre>java.lang.AssertionError: expected [200] but found [404]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at restassured.automation.testcases.Restassured_Automation_MethodologItem.MethodologyItem_EndToEnd_Scenario(Restassured_Automation_MethodologItem.java:1333)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+</pre></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='4'>
+					<div class='test-heading'>
+						<span class='test-name'>MethodologyItem_GetAllMethodologyItemsForARevision_status200</span>
+						<span class='test-time'>Mar 23, 2021 01:23:54 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 23, 2021 01:23:54 PM</span>
+	<span class='label end-time'>Mar 23, 2021 01:24:00 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+489ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:24:00 PM</td>
+					<td class='step-details'>The status code is 200</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:24:00 PM</td>
+					<td class='step-details'>[
+    {
+        "revisionId": "6051284a540422dd4025363c",
+        "methodologyItemId": "605210aad35d4e7456dbded8",
+        "title": "Phase 1",
+        "itemType": "Folder",
+        "workFlowState": "Draft",
+        "updatedOn": "2021-03-17T14:22:34.171Z",
+        "id": "605210aad35d4e7456dbded9"
+    },
+    {
+        "revisionId": "6051284a540422dd4025363c",
+        "methodologyItemId": "605210acd35d4e7456dbdeda",
+        "title": "Phase 2",
+        "itemType": "Folder",
+        "workFlowState": "Approved",
+        "updatedOn": "2021-03-17T14:22:36.305Z",
+        "id": "605210acd35d4e7456dbdedb"
+    },
+    {
+        "revisionId": "6051284a540422dd4025363c",
+        "methodologyItemId": "605210add35d4e7456dbdedc",
+        "title": "Phase 3",
+        "itemType": "Folder",
+        "workFlowState": "Approved",
+        "updatedOn": "2021-03-17T14:22:37.527Z",
+        "id": "605210add35d4e7456dbdedd"
+    },
+    {
+        "revisionId": "6051284a540422dd4025363c",
+        "methodologyItemId": "605210b0d35d4e7456dbdee0",
+        "title": "Section 1",
+        "itemType": "Folder",
+        "workFlowState": "Approved",
+        "updatedOn": "2021-03-17T14:22:40.473Z",
+        "id": "605210b0d35d4e7456dbdee1"
+    },
+    {
+        "ruleContextType": "Standard",
+        "initialized": true,
+        "workProgramType": "Itemized",
+        "tailoring": "Allowed",
+        "visibility": "Show",
+        "revisionId": "6051284a540422dd4025363c",
+        "methodologyItemId": "605210b3d35d4e7456dbdee2",
+        "title": "Approved WP",
+        "itemType": "WorkProgram",
+        "workFlowState": "Approved",
+        "updatedOn": "2021-03-17T16:58:41.148Z",
+        "id": "605210b3d35d4e7456dbdee3"
+    },
+    {
+        "ruleContextType": "Standard",
+        "initialized": true,
+        "workProgramType": "QuestionAnswer",
+        "tailoring": "Allowed",
+        "visibility": "Show",
+        "revisionId": "6051284a540422dd4025363c",
+        "methodologyItemId": "605210b6d35d4e7456dbdeea",
+        "title": "Work Program 2",
+        "itemType": "WorkProgram",
+        "workFlowState": "Approved",
+        "updatedOn": "2021-03-17T14:22:52.042Z",
+        "id": "605210b6d35d4e7456dbdeeb"
+    },
+    {
+        "renderAsSelect": false,
+        "options": [
+            {
+                "title": "Response 1",
+                "id": "605210c0d35d4e7456dbdeee"
+            },
+            {
+                "title": "Response 2",
+                "id": "605210c0d35d4e7456dbdeef"
+            }
+        ],
+        "optionGroups": [
+            
+        ],
+        "workProgramItemType": "MultiItemSelectQuestion",
+        "workProgramId": "605210b6d35d4e7456dbdeea",
+        "revisionId": "6051284a540422dd4025363c",
+        "methodologyItemId": "605210c0d35d4e7456dbdeec",
+        "title": "Procedure 1",
+        "itemType": "WorkProgramItem",
+        "workFlowState": "Approved",
+        "updatedOn": "2021-03-17T14:22:56.702Z",
+        "id": "605210c0d35d4e7456dbdeed"
+    },
+    {
+        "renderAsSelect": false,
+        "options": [
+            {
+                "title": "Yes",
+                "id": "605210c4d35d4e7456dbdef4"
+            },
+            {
+                "title": "No",
+                "id": "605210c4d35d4e7456dbdef5"
+            }
+        ],
+        "optionGroups": [
+            
+        ],
+        "workProgramItemType": "SingleItemSelectQuestion",
+        "workProgramId": "605210b6d35d4e7456dbdeea",
+        "revisionId": "6051284a540422dd4025363c",
+        "methodologyItemId": "605210c4d35d4e7456dbdef2",
+        "title": "Procedure 2",
+        "itemType": "WorkProgramItem",
+        "workFlowState": "Approved",
+        "updatedOn": "2021-03-17T14:23:00.487Z",
+        "id": "605210c4d35d4e7456dbdef3"
+    },
+    {
+        "format": "Number",
+        "decimalsAllowed": 0,
+        "workProgramItemType": "Number",
+        "workProgramId": "605210b3d35d4e7456dbdee2",
+        "revisionId": "6051284a540422dd4025363c",
+        "methodologyItemId": "605210c9d35d4e7456dbdef6",
+        "title": "Procedure 1",
+        "itemType": "WorkProgramItem",
+        "workFlowState": "Approved",
+        "updatedOn": "2021-03-17T14:23:05.504Z",
+        "id": "605210c9d35d4e7456dbdef7"
+    },
+    {
+        "renderAsSelect": false,
+        "options": [
+            {
+                "title": "Response 1",
+                "id": "605210cdd35d4e7456dbdefc"
+            },
+            {
+                "title": "Response 2",
+                "id": "605210cdd35d4e7456dbdefd"
+            }
+        ],
+        "optionGroups": [
+            
+        ],
+        "workProgramItemType": "MultiItemSelectQuestion",
+        "workProgramId": "605210b3d35d4e7456dbdee2",
+        "revisionId": "6051284a540422dd4025363c",
+        "methodologyItemId": "605210ccd35d4e7456dbdefa",
+        "title": "Procedure 2",
+        "itemType": "WorkProgramItem",
+        "workFlowState": "Approved",
+        "updatedOn": "2021-03-17T14:23:09.198Z",
+        "id": "605210ccd35d4e7456dbdefb"
+    },
+    {
+        "workProgramType": "QuestionAnswer",
+        "tailoring": "Allowed",
+        "visibility": "Show",
+        "revisionId": "6051284a540422dd4025363c",
+        "methodologyItemId": "605210d1d35d4e7456dbdefe",
+        "title": "Work Program 3",
+        "itemType": "WorkProgram",
+        "deleted": true,
+        "workFlowState": "Draft",
+        "updatedOn": "2021-03-17T14:23:13.75Z",
+        "id": "605210d1d35d4e7456dbdeff"
+    },
+    {
+        "workProgramType": "Itemized",
+        "tailoring": "Allowed",
+        "visibility": "Show",
+        "revisionId": "6051284a540422dd4025363c",
+        "methodologyItemId": "605210d4d35d4e7456dbdf04",
+        "title": "Work Program 4",
+        "itemType": "WorkProgram",
+        "deleted": true,
+        "workFlowState": "Draft",
+        "updatedOn": "2021-03-17T14:23:16.88Z",
+        "id": "605210d4d35d4e7456dbdf05"
+    },
+    {
+        "revisionId": "6051284a540422dd4025363c",
+        "methodologyItemId": "605210d7d35d4e7456dbdf06",
+        "title": "Section 2",
+        "itemType": "Folder",
+        "workFlowState": "ReadyForReview",
+        "updatedOn": "2021-03-17T14:23:19.279Z",
+        "id": "605210d7d35d4e7456dbdf07"
+    },
+    {
+        "ruleContextType": "Standard",
+        "initialized": true,
+        "workProgramType": "Itemized",
+        "tailoring": "Allowed",
+        "visibility": "Show",
+        "revisionId": "6051284a540422dd4025363c",
+        "methodologyItemId": "605210dad35d4e7456dbdf08",
+        "title": "Work Program 5",
+        "itemType": "WorkProgram",
+        "workFlowState": "ReadyForReview",
+        "updatedOn": "2021-03-17T14:25:08.691Z",
+        "id": "605210dad35d4e7456dbdf09"
+    },
+    {
+        "ruleContextType": "Standard",
+        "initialized": true,
+        "workProgramType": "QuestionAnswer",
+        "tailoring": "Allowed",
+        "visibility": "Show",
+        "revisionId": "6051284a540422dd4025363c",
+        "methodologyItemId": "605210ddd35d4e7456dbdf0a",
+        "title": "Work Program 6",
+        "itemType": "WorkProgram",
+        "workFlowState": "Draft",
+        "updatedOn": "2021-03-17T14:25:18.709Z",
+        "id": "605210ddd35d4e7456dbdf0b"
+    },
+    {
+        "revisionId": "6051284a540422dd4025363c",
+        "methodologyItemId": "605210e2d35d4e7456dbdf0e",
+        "title": "Section 3",
+        "itemType": "Folder",
+        "deleted": true,
+        "workFlowState": "Draft",
+        "updatedOn": "2021-03-17T14:23:30.37Z",
+        "id": "605210e2d35d4e7456dbdf0f"
+    },
+    {
+        "ruleContextType": "Standard",
+        "initialized": true,
+        "workProgramType": "QuestionAnswer",
+        "tailoring": "Allowed",
+        "visibility": "Show",
+        "revisionId": "6051284a540422dd4025363c",
+        "methodologyItemId": "60521103d35d4e7456dbdf18",
+        "title": "Work Program 7",
+        "itemType": "WorkProgram",
+        "workFlowState": "Approved",
+        "updatedOn": "2021-03-17T14:24:48.457Z",
+        "id": "60521103d35d4e7456dbdf19"
+    },
+    {
+        "ruleContextType": "Standard",
+        "initialized": true,
+        "workProgramType": "Itemized",
+        "tailoring": "Allowed",
+        "visibility": "Show",
+        "revisionId": "6051284a540422dd4025363c",
+        "methodologyItemId": "60521107d35d4e7456dbdf1a",
+        "title": "Work Program 8",
+        "itemType": "WorkProgram",
+        "workFlowState": "ReadyForReview",
+        "updatedOn": "2021-03-17T14:24:58.441Z",
+        "id": "60521107d35d4e7456dbdf1b"
+    },
+    {
+        "revisionId": "6051284a540422dd4025363c",
+        "methodologyItemId": "6052110dd35d4e7456dbdf1c",
+        "title": "Section 3",
+        "itemType": "Folder",
+        "workFlowState": "Draft",
+        "updatedOn": "2021-03-17T14:24:13.279Z",
+        "id": "6052110dd35d4e7456dbdf1d"
+    },
+    {
+        "ruleContextType": "Standard",
+        "initialized": true,
+        "workProgramType": "QuestionAnswer",
+        "tailoring": "Allowed",
+        "visibility": "Show",
+        "revisionId": "6051284a540422dd4025363c",
+        "methodologyItemId": "60521111d35d4e7456dbdf1f",
+        "title": "Work Program 9",
+        "itemType": "WorkProgram",
+        "workFlowState": "Draft",
+        "updatedOn": "2021-03-17T14:24:25.24Z",
+        "id": "60521111d35d4e7456dbdf20"
+    },
+    {
+        "ruleContextType": "Global",
+        "initialized": true,
+        "workProgramType": "Itemized",
+        "tailoring": "Allowed",
+        "visibility": "Show",
+        "revisionId": "6051284a540422dd4025363c",
+        "methodologyItemId": "60521114d35d4e7456dbdf21",
+        "title": "Work Program 10",
+        "itemType": "WorkProgram",
+        "workFlowState": "Draft",
+        "updatedOn": "2021-03-17T14:24:29.149Z",
+        "id": "60521114d35d4e7456dbdf22"
+    },
+    {
+        "renderAsSelect": false,
+        "options": [
+            {
+                "title": "Response 1",
+                "id": "60521121d35d4e7456dbdf26"
+            },
+            {
+                "title": "Response 2",
+                "id": "60521121d35d4e7456dbdf27"
+            }
+        ],
+        "optionGroups": [
+            
+        ],
+        "workProgramItemType": "MultiItemSelectQuestion",
+        "workProgramId": "60521111d35d4e7456dbdf1f",
+        "revisionId": "6051284a540422dd4025363c",
+        "methodologyItemId": "60521121d35d4e7456dbdf24",
+        "title": "Procedure 1",
+        "itemType": "WorkProgramItem",
+        "workFlowState": "Draft",
+        "updatedOn": "2021-03-17T14:24:33.484Z",
+        "id": "60521121d35d4e7456dbdf25"
+    },
+    {
+        "renderAsSelect": false,
+        "options": [
+            {
+                "title": "Yes",
+                "id": "60521126d35d4e7456dbdf2a"
+            },
+            {
+                "title": "No",
+                "id": "60521126d35d4e7456dbdf2b"
+            }
+        ],
+        "optionGroups": [
+            
+        ],
+        "workProgramItemType": "SingleItemSelectQuestion",
+        "workProgramId": "60521111d35d4e7456dbdf1f",
+        "revisionId": "6051284a540422dd4025363c",
+        "methodologyItemId": "60521125d35d4e7456dbdf28",
+        "title": "Procedure 2",
+        "itemType": "WorkProgramItem",
+        "workFlowState": "Draft",
+        "updatedOn": "2021-03-17T14:24:37.933Z",
+        "id": "60521125d35d4e7456dbdf29"
+    },
+    {
+        "workProgramItemType": "Statement",
+        "workProgramId": "60521114d35d4e7456dbdf21",
+        "revisionId": "6051284a540422dd4025363c",
+        "methodologyItemId": "6052112ad35d4e7456dbdf2c",
+        "title": "Procedure 1",
+        "itemType": "WorkProgramItem",
+        "workFlowState": "Draft",
+        "updatedOn": "2021-03-17T14:24:42.505Z",
+        "id": "6052112ad35d4e7456dbdf2d"
+    },
+    {
+        "workProgramItemType": "TextQuestion",
+        "workProgramId": "60521114d35d4e7456dbdf21",
+        "revisionId": "6051284a540422dd4025363c",
+        "methodologyItemId": "6052112dd35d4e7456dbdf2e",
+        "title": "Procedure 2",
+        "itemType": "WorkProgramItem",
+        "workFlowState": "Draft",
+        "updatedOn": "2021-03-17T14:24:45.763Z",
+        "id": "6052112dd35d4e7456dbdf2f"
+    },
+    {
+        "renderAsSelect": false,
+        "options": [
+            {
+                "title": "Response 1",
+                "id": "60521133d35d4e7456dbdf32"
+            },
+            {
+                "title": "Response 2",
+                "id": "60521133d35d4e7456dbdf33"
+            }
+        ],
+        "optionGroups": [
+            
+        ],
+        "workProgramItemType": "MultiItemSelectQuestion",
+        "workProgramId": "60521103d35d4e7456dbdf18",
+        "revisionId": "6051284a540422dd4025363c",
+        "methodologyItemId": "60521133d35d4e7456dbdf30",
+        "title": "Procedure 1",
+        "itemType": "WorkProgramItem",
+        "workFlowState": "Approved",
+        "updatedOn": "2021-03-17T14:24:51.87Z",
+        "id": "60521133d35d4e7456dbdf31"
+    },
+    {
+        "renderAsSelect": false,
+        "options": [
+            {
+                "title": "Yes",
+                "id": "60521137d35d4e7456dbdf36"
+            },
+            {
+                "title": "No",
+                "id": "60521137d35d4e7456dbdf37"
+            }
+        ],
+        "optionGroups": [
+            
+        ],
+        "workProgramItemType": "SingleItemSelectQuestion",
+        "workProgramId": "60521103d35d4e7456dbdf18",
+        "revisionId": "6051284a540422dd4025363c",
+        "methodologyItemId": "60521137d35d4e7456dbdf34",
+        "title": "Procedure 2",
+        "itemType": "WorkProgramItem",
+        "workFlowState": "Approved",
+        "updatedOn": "2021-03-17T14:24:55.838Z",
+        "id": "60521137d35d4e7456dbdf35"
+    },
+    {
+        "renderAsSelect": false,
+        "options": [
+            {
+                "title": "Yes",
+                "id": "6052113ed35d4e7456dbdf3a"
+            },
+            {
+                "title": "No",
+                "id": "6052113ed35d4e7456dbdf3b"
+            }
+        ],
+        "optionGroups": [
+            
+        ],
+        "workProgramItemType": "SingleItemSelectQuestion",
+        "workProgramId": "60521107d35d4e7456dbdf1a",
+        "revisionId": "6051284a540422dd4025363c",
+        "methodologyItemId": "6052113dd35d4e7456dbdf38",
+        "title": "Procedure 1",
+        "itemType": "WorkProgramItem",
+        "workFlowState": "ReadyForReview",
+        "updatedOn": "2021-03-17T14:25:02.024Z",
+        "id": "6052113dd35d4e7456dbdf39"
+    },
+    {
+        "relationId": "60521142d35d4e7456dbdf3e",
+        "workProgramItemType": "ResponseLink",
+        "workProgramId": "60521107d35d4e7456dbdf1a",
+        "revisionId": "6051284a540422dd4025363c",
+        "methodologyItemId": "60521141d35d4e7456dbdf3c",
+        "title": "Procedure 2",
+        "itemType": "WorkProgramItem",
+        "workFlowState": "ReadyForReview",
+        "updatedOn": "2021-03-17T14:25:05.619Z",
+        "id": "60521141d35d4e7456dbdf3d"
+    },
+    {
+        "workProgramItemType": "TextQuestion",
+        "workProgramId": "605210dad35d4e7456dbdf08",
+        "revisionId": "6051284a540422dd4025363c",
+        "methodologyItemId": "60521147d35d4e7456dbdf40",
+        "title": "Procedure 1",
+        "itemType": "WorkProgramItem",
+        "workFlowState": "ReadyForReview",
+        "updatedOn": "2021-03-17T14:25:11.812Z",
+        "id": "60521147d35d4e7456dbdf41"
+    },
+    {
+        "workProgramItemType": "TextContent",
+        "workProgramId": "605210dad35d4e7456dbdf08",
+        "revisionId": "6051284a540422dd4025363c",
+        "methodologyItemId": "6052114bd35d4e7456dbdf42",
+        "title": "Procedure 2",
+        "itemType": "WorkProgramItem",
+        "workFlowState": "ReadyForReview",
+        "updatedOn": "2021-03-17T14:25:15.929Z",
+        "id": "6052114bd35d4e7456dbdf43"
+    },
+    {
+        "renderAsSelect": false,
+        "options": [
+            {
+                "title": "Yes",
+                "id": "60521151d35d4e7456dbdf46"
+            },
+            {
+                "title": "No",
+                "id": "60521151d35d4e7456dbdf47"
+            }
+        ],
+        "optionGroups": [
+            
+        ],
+        "workProgramItemType": "SingleItemSelectQuestion",
+        "workProgramId": "605210ddd35d4e7456dbdf0a",
+        "revisionId": "6051284a540422dd4025363c",
+        "methodologyItemId": "60521151d35d4e7456dbdf44",
+        "title": "Procedure 1",
+        "itemType": "WorkProgramItem",
+        "workFlowState": "Draft",
+        "updatedOn": "2021-03-17T14:25:21.732Z",
+        "id": "60521151d35d4e7456dbdf45"
+    },
+    {
+        "workProgramItemType": "Statement",
+        "workProgramId": "605210ddd35d4e7456dbdf0a",
+        "revisionId": "6051284a540422dd4025363c",
+        "methodologyItemId": "60521155d35d4e7456dbdf48",
+        "title": "Procedure 2",
+        "itemType": "WorkProgramItem",
+        "workFlowState": "Draft",
+        "updatedOn": "2021-03-17T14:25:25.64Z",
+        "id": "60521155d35d4e7456dbdf49"
+    },
+    {
+        "revisionId": "6051284a540422dd4025363c",
+        "methodologyItemId": "60522e83d35d4e7456dbdfa8",
+        "title": "Phase 4",
+        "itemType": "Folder",
+        "workFlowState": "Approved",
+        "updatedOn": "2021-03-17T16:29:55.127Z",
+        "id": "60522e83d35d4e7456dbdfa9"
+    },
+    {
+        "ruleContextType": "Standard",
+        "initialized": true,
+        "workProgramType": "QuestionAnswer",
+        "tailoring": "Allowed",
+        "visibility": "Show",
+        "revisionId": "6051284a540422dd4025363c",
+        "methodologyItemId": "60522e87d35d4e7456dbdfaa",
+        "title": "Work Program 11",
+        "itemType": "WorkProgram",
+        "workFlowState": "Approved",
+        "updatedOn": "2021-03-17T16:48:16.073Z",
+        "id": "60522e87d35d4e7456dbdfab"
+    },
+    {
+        "ruleContextType": "Generated",
+        "relationId": "60522ecdd35d4e7456dbdfba",
+        "initialized": true,
+        "workProgramType": "Itemized",
+        "tailoring": "Allowed",
+        "visibility": "Show",
+        "revisionId": "6051284a540422dd4025363c",
+        "methodologyItemId": "60522e8ad35d4e7456dbdfac",
+        "title": "Work Program 12",
+        "itemType": "WorkProgram",
+        "workFlowState": "Draft",
+        "updatedOn": "2021-03-17T16:31:08.788Z",
+        "id": "60522e8ad35d4e7456dbdfad"
+    },
+    {
+        "ruleContextType": "Generated",
+        "relationId": "60522eabd35d4e7456dbdfb8",
+        "initialized": true,
+        "workProgramType": "QuestionAnswer",
+        "tailoring": "Allowed",
+        "visibility": "Show",
+        "revisionId": "6051284a540422dd4025363c",
+        "methodologyItemId": "60522e8dd35d4e7456dbdfae",
+        "title": "Work Program 13",
+        "itemType": "WorkProgram",
+        "workFlowState": "Draft",
+        "updatedOn": "2021-03-17T16:30:34.932Z",
+        "id": "60522e8dd35d4e7456dbdfaf"
+    },
+    {
+        "revisionId": "6051284a540422dd4025363c",
+        "methodologyItemId": "60522e90d35d4e7456dbdfb0",
+        "title": "Phase 5",
+        "itemType": "Folder",
+        "workFlowState": "Draft",
+        "updatedOn": "2021-03-17T16:30:08.434Z",
+        "id": "60522e90d35d4e7456dbdfb1"
+    },
+    {
+        "ruleContextType": "Standard",
+        "initialized": true,
+        "workProgramType": "Itemized",
+        "tailoring": "Allowed",
+        "visibility": "Show",
+        "revisionId": "6051284a540422dd4025363c",
+        "methodologyItemId": "60522e93d35d4e7456dbdfb2",
+        "title": "Work Program 14",
+        "itemType": "WorkProgram",
+        "workFlowState": "Draft",
+        "updatedOn": "2021-03-17T16:30:15.228Z",
+        "id": "60522e93d35d4e7456dbdfb3"
+    },
+    {
+        "renderAsSelect": false,
+        "options": [
+            {
+                "title": "Response 1",
+                "id": "60522e9bd35d4e7456dbdfb6"
+            },
+            {
+                "title": "Response 2",
+                "id": "60522e9bd35d4e7456dbdfb7"
+            }
+        ],
+        "optionGroups": [
+            {
+                "title": "cfdfsfds",
+                "id": "60588a7fd35d4e7456dbf045"
+            }
+        ],
+        "workProgramItemType": "MultiItemSelectQuestion",
+        "workProgramId": "60522e93d35d4e7456dbdfb2",
+        "revisionId": "6051284a540422dd4025363c",
+        "methodologyItemId": "60522e9bd35d4e7456dbdfb4",
+        "title": "Procedure 1",
+        "itemType": "WorkProgramItem",
+        "workFlowState": "Draft",
+        "updatedOn": "2021-03-22T12:15:59.043Z",
+        "id": "60522e9bd35d4e7456dbdfb5"
+    },
+    {
+        "workProgramItemType": "Statement",
+        "workProgramId": "60522e8dd35d4e7456dbdfae",
+        "revisionId": "6051284a540422dd4025363c",
+        "methodologyItemId": "605232f2d35d4e7456dbdfc8",
+        "title": "Procedure 1",
+        "itemType": "WorkProgramItem",
+        "workFlowState": "Draft",
+        "updatedOn": "2021-03-17T16:48:50.292Z",
+        "id": "605232f2d35d4e7456dbdfc9"
+    },
+    {
+        "workProgramItemType": "TextContent",
+        "workProgramId": "60522e8ad35d4e7456dbdfac",
+        "revisionId": "6051284a540422dd4025363c",
+        "methodologyItemId": "605232f9d35d4e7456dbdfca",
+        "title": "Procedure 1",
+        "itemType": "WorkProgramItem",
+        "workFlowState": "Draft",
+        "updatedOn": "2021-03-17T16:48:57.202Z",
+        "id": "605232f9d35d4e7456dbdfcb"
+    },
+    {
+        "renderAsSelect": false,
+        "options": [
+            {
+                "title": "Yes",
+                "id": "6052352ed35d4e7456dbdfdc"
+            },
+            {
+                "title": "No",
+                "id": "6052352ed35d4e7456dbdfdd"
+            }
+        ],
+        "optionGroups": [
+            {
+                "title": "cfdfsfds",
+                "id": "60587efbd35d4e7456dbf025"
+            },
+            {
+                "title": "cfdfsfds",
+                "id": "6058814bd35d4e7456dbf028"
+            },
+            {
+                "title": "cfdfsfds",
+                "id": "60588a69d35d4e7456dbf044"
+            }
+        ],
+        "workProgramItemType": "SingleItemSelectQuestion",
+        "workProgramId": "60521114d35d4e7456dbdf21",
+        "revisionId": "6051284a540422dd4025363c",
+        "methodologyItemId": "6052352dd35d4e7456dbdfda",
+        "title": "Procedure 3",
+        "itemType": "WorkProgramItem",
+        "workFlowState": "Draft",
+        "updatedOn": "2021-03-22T12:15:37.923Z",
+        "id": "6052352ed35d4e7456dbdfdb"
+    },
+    {
+        "revisionId": "6051284a540422dd4025363c",
+        "methodologyItemId": "6058870bd35d4e7456dbf033",
+        "title": "titleForTesitng8",
+        "itemType": "Folder",
+        "workFlowState": "Draft",
+        "updatedOn": "2021-03-22T12:01:15.231Z",
+        "id": "6058870bd35d4e7456dbf034"
+    },
+    {
+        "ruleContextType": "Standard",
+        "initialized": true,
+        "workProgramType": "QuestionAnswer",
+        "tailoring": "Allowed",
+        "visibility": "Show",
+        "revisionId": "6051284a540422dd4025363c",
+        "methodologyItemId": "6058870bd35d4e7456dbf035",
+        "title": "titleForTesitng15",
+        "itemType": "WorkProgram",
+        "workFlowState": "Draft",
+        "updatedOn": "2021-03-22T12:01:16.677Z",
+        "id": "6058870bd35d4e7456dbf036"
+    },
+    {
+        "workProgramItemType": "PlaceHolder",
+        "workProgramId": "6058870bd35d4e7456dbf035",
+        "revisionId": "6051284a540422dd4025363c",
+        "methodologyItemId": "6058870dd35d4e7456dbf037",
+        "title": "Procedure-43",
+        "itemType": "WorkProgramItem",
+        "workFlowState": "Draft",
+        "updatedOn": "2021-03-22T12:01:17.662Z",
+        "id": "6058870dd35d4e7456dbf038"
+    },
+    {
+        "revisionId": "6051284a540422dd4025363c",
+        "methodologyItemId": "60588743d35d4e7456dbf03a",
+        "title": "titleForTesitng35",
+        "itemType": "Folder",
+        "workFlowState": "Draft",
+        "updatedOn": "2021-03-22T12:02:11.951Z",
+        "id": "60588743d35d4e7456dbf03b"
+    },
+    {
+        "ruleContextType": "Standard",
+        "initialized": true,
+        "workProgramType": "QuestionAnswer",
+        "tailoring": "Allowed",
+        "visibility": "Show",
+        "revisionId": "6051284a540422dd4025363c",
+        "methodologyItemId": "60588744d35d4e7456dbf03c",
+        "title": "titleForTesitng1",
+        "itemType": "WorkProgram",
+        "workFlowState": "Draft",
+        "updatedOn": "2021-03-22T12:02:13.381Z",
+        "id": "60588744d35d4e7456dbf03d"
+    },
+    {
+        "workProgramItemType": "PlaceHolder",
+        "workProgramId": "60588744d35d4e7456dbf03c",
+        "revisionId": "6051284a540422dd4025363c",
+        "methodologyItemId": "60588745d35d4e7456dbf03e",
+        "title": "Procedure-16",
+        "itemType": "WorkProgramItem",
+        "workFlowState": "Draft",
+        "updatedOn": "2021-03-22T12:02:14.357Z",
+        "id": "60588745d35d4e7456dbf03f"
+    }
+]</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:24:00 PM</td>
+					<td class='step-details'>This is NOT following HTTPStrictTransportSecurity. This particular validation is based on Sprint 7 & the Requirement ID : 1008</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:24:00 PM</td>
+					<td class='step-details'>Test passed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='5'>
+					<div class='test-heading'>
+						<span class='test-name'>MethodologyItem_GetAllMethodologyItemsForARevision_status400</span>
+						<span class='test-time'>Mar 23, 2021 01:24:00 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 23, 2021 01:24:00 PM</span>
+	<span class='label end-time'>Mar 23, 2021 01:24:05 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+133ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:24:05 PM</td>
+					<td class='step-details'><pre>java.lang.AssertionError: expected [400] but found [500]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at restassured.automation.testcases.Restassured_Automation_MethodologItem.MethodologyItem_GetAllMethodologyItemsForARevision_status400(Restassured_Automation_MethodologItem.java:145)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+</pre></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='6'>
+					<div class='test-heading'>
+						<span class='test-name'>MethodologyItem_PatchUpdateAMethodologyItemForTheRevision_status200</span>
+						<span class='test-time'>Mar 23, 2021 01:24:05 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 23, 2021 01:24:05 PM</span>
+	<span class='label end-time'>Mar 23, 2021 01:24:10 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+111ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:24:10 PM</td>
+					<td class='step-details'><pre>java.lang.AssertionError: expected [200] but found [404]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at restassured.automation.testcases.Restassured_Automation_MethodologItem.MethodologyItem_PatchUpdateAMethodologyItemForTheRevision_status200(Restassured_Automation_MethodologItem.java:616)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+</pre></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='7'>
+					<div class='test-heading'>
+						<span class='test-name'>MethodologyItem_PatchUpdateAMethodologyItemForTheRevision_status400</span>
+						<span class='test-time'>Mar 23, 2021 01:24:10 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 23, 2021 01:24:10 PM</span>
+	<span class='label end-time'>Mar 23, 2021 01:24:15 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+133ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:24:15 PM</td>
+					<td class='step-details'><pre>java.lang.AssertionError: expected [200] but found [404]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at restassured.automation.testcases.Restassured_Automation_MethodologItem.MethodologyItem_PatchUpdateAMethodologyItemForTheRevision_status400(Restassured_Automation_MethodologItem.java:689)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+</pre></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='8'>
+					<div class='test-heading'>
+						<span class='test-name'>MethodologyItem_PatchUpdateAMethodologyItemForTheRevision_status404</span>
+						<span class='test-time'>Mar 23, 2021 01:24:15 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 23, 2021 01:24:15 PM</span>
+	<span class='label end-time'>Mar 23, 2021 01:24:20 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+154ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:24:20 PM</td>
+					<td class='step-details'><pre>java.lang.AssertionError: expected [200] but found [404]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at restassured.automation.testcases.Restassured_Automation_MethodologItem.MethodologyItem_PatchUpdateAMethodologyItemForTheRevision_status404(Restassured_Automation_MethodologItem.java:762)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+</pre></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='9'>
+					<div class='test-heading'>
+						<span class='test-name'>MethodologyItem_PostCreateANewMethodologyItemWithinTheMethodologyTree_status200</span>
+						<span class='test-time'>Mar 23, 2021 01:24:20 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 23, 2021 01:24:20 PM</span>
+	<span class='label end-time'>Mar 23, 2021 01:24:25 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+129ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:24:25 PM</td>
+					<td class='step-details'><pre>java.lang.AssertionError: expected [200] but found [404]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at restassured.automation.testcases.Restassured_Automation_MethodologItem.MethodologyItem_PostCreateANewMethodologyItemWithinTheMethodologyTree_status200(Restassured_Automation_MethodologItem.java:238)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+</pre></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='10'>
+					<div class='test-heading'>
+						<span class='test-name'>MethodologyItem_PostCreateANewMethodologyItemWithinTheMethodologyTree_status400</span>
+						<span class='test-time'>Mar 23, 2021 01:24:25 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 23, 2021 01:24:25 PM</span>
+	<span class='label end-time'>Mar 23, 2021 01:24:30 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+214ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:24:30 PM</td>
+					<td class='step-details'><pre>java.lang.AssertionError: expected [400] but found [404]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at restassured.automation.testcases.Restassured_Automation_MethodologItem.MethodologyItem_PostCreateANewMethodologyItemWithinTheMethodologyTree_status400(Restassured_Automation_MethodologItem.java:289)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+</pre></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='11'>
+					<div class='test-heading'>
+						<span class='test-name'>MethodologyItem_PostCreateANewMethodologyItemWithinTheMethodologyTree_status404</span>
+						<span class='test-time'>Mar 23, 2021 01:24:30 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 23, 2021 01:24:30 PM</span>
+	<span class='label end-time'>Mar 23, 2021 01:24:36 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+88ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:24:36 PM</td>
+					<td class='step-details'>The status code is 404</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:24:36 PM</td>
+					<td class='step-details'></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:24:36 PM</td>
+					<td class='step-details'>This is NOT following HTTPStrictTransportSecurity. This particular validation is based on Sprint 7 & the Requirement ID : 1008</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:24:36 PM</td>
+					<td class='step-details'>Test passed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='12'>
+					<div class='test-heading'>
+						<span class='test-name'>MethodologyItem_PostInitialiseAWorkProgram_status204</span>
+						<span class='test-time'>Mar 23, 2021 01:24:36 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 23, 2021 01:24:36 PM</span>
+	<span class='label end-time'>Mar 23, 2021 01:24:41 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+120ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:24:41 PM</td>
+					<td class='step-details'><pre>java.lang.AssertionError: expected [200] but found [404]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at restassured.automation.testcases.Restassured_Automation_MethodologItem.MethodologyItem_PostInitialiseAWorkProgram_status204(Restassured_Automation_MethodologItem.java:830)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+</pre></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='13'>
+					<div class='test-heading'>
+						<span class='test-name'>MethodologyItem_PostInitialiseAWorkProgram_status400</span>
+						<span class='test-time'>Mar 23, 2021 01:24:41 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 23, 2021 01:24:41 PM</span>
+	<span class='label end-time'>Mar 23, 2021 01:24:46 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+49ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:24:46 PM</td>
+					<td class='step-details'><pre>io.restassured.path.json.exception.JsonPathException: Failed to parse the JSON document
+	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1002)
+	at io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:967)
+	at io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:1047)
+	at io.restassured.path.json.JsonPath.get(JsonPath.java:202)
+	at restassured.automation.testcases.Restassured_Automation_MethodologItem.MethodologyItem_PostInitialiseAWorkProgram_status400(Restassured_Automation_MethodologItem.java:907)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+Caused by: java.lang.IllegalArgumentException: The JSON input text should neither be null nor empty.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:80)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:237)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:249)
+	at io.restassured.internal.path.json.ConfigurableJsonSlurper.parseText(ConfigurableJsonSlurper.groovy:80)
+	at io.restassured.path.json.JsonPath$4$1.method(JsonPath.java:965)
+	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1000)
+	... 28 more
+</pre></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='14'>
+					<div class='test-heading'>
+						<span class='test-name'>MethodologyItem_PostInitialiseAWorkProgram_status404</span>
+						<span class='test-time'>Mar 23, 2021 01:24:46 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 23, 2021 01:24:46 PM</span>
+	<span class='label end-time'>Mar 23, 2021 01:24:51 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+104ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:24:51 PM</td>
+					<td class='step-details'><pre>java.lang.AssertionError: expected [200] but found [404]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at restassured.automation.testcases.Restassured_Automation_MethodologItem.MethodologyItem_PostInitialiseAWorkProgram_status404(Restassured_Automation_MethodologItem.java:971)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+</pre></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='15'>
+					<div class='test-heading'>
+						<span class='test-name'>MethodologyItem_PutMoveATreeItemToAFolderAtSpecifiedIndex_status204</span>
+						<span class='test-time'>Mar 23, 2021 01:24:51 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 23, 2021 01:24:51 PM</span>
+	<span class='label end-time'>Mar 23, 2021 01:24:56 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 4s+987ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:24:56 PM</td>
+					<td class='step-details'><pre>java.lang.StringIndexOutOfBoundsException: String index out of range: 37
+	at java.lang.String.substring(Unknown Source)
+	at restassured.automation.testcases.Restassured_Automation_MethodologItem.getRandomAlphaNum(Restassured_Automation_MethodologItem.java:41)
+	at restassured.automation.testcases.Restassured_Automation_MethodologItem.MethodologyItem_PutMoveATreeItemToAFolderAtSpecifiedIndex_status204(Restassured_Automation_MethodologItem.java:388)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+</pre></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='16'>
+					<div class='test-heading'>
+						<span class='test-name'>MethodologyItem_PutMoveATreeItemToAFolderAtSpecifiedIndex_status400</span>
+						<span class='test-time'>Mar 23, 2021 01:24:56 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 23, 2021 01:24:56 PM</span>
+	<span class='label end-time'>Mar 23, 2021 01:25:01 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+570ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:25:01 PM</td>
+					<td class='step-details'>The status code is 400</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:25:01 PM</td>
+					<td class='step-details'>{"errors":{"parentId":["The supplied value is invalid."]},"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"00-51a58d82889c5f4ba5747661d0b8e294-95f1f5a8f8f1db45-00"}</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:25:01 PM</td>
+					<td class='step-details'>This is NOT following HTTPStrictTransportSecurity. This particular validation is based on Sprint 7 & the Requirement ID : 1008</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:25:01 PM</td>
+					<td class='step-details'>Test passed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='17'>
+					<div class='test-heading'>
+						<span class='test-name'>MethodologyItem_PutMoveATreeItemToAFolderAtSpecifiedIndex_status409</span>
+						<span class='test-time'>Mar 23, 2021 01:25:01 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 23, 2021 01:25:01 PM</span>
+	<span class='label end-time'>Mar 23, 2021 01:25:07 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+157ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:25:07 PM</td>
+					<td class='step-details'><pre>io.restassured.path.json.exception.JsonPathException: Failed to parse the JSON document
+	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1002)
+	at io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:967)
+	at io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:1047)
+	at io.restassured.path.json.JsonPath.get(JsonPath.java:202)
+	at restassured.automation.testcases.Restassured_Automation_MethodologItem.MethodologyItem_PutMoveATreeItemToAFolderAtSpecifiedIndex_status409(Restassured_Automation_MethodologItem.java:551)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+Caused by: java.lang.IllegalArgumentException: The JSON input text should neither be null nor empty.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:80)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:249)
+	at io.restassured.internal.path.json.ConfigurableJsonSlurper.parseText(ConfigurableJsonSlurper.groovy:80)
+	at io.restassured.path.json.JsonPath$4$1.method(JsonPath.java:965)
+	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1000)
+	... 28 more
+</pre></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='18'>
+					<div class='test-heading'>
+						<span class='test-name'>MethodologyItem_UpdateItemsWorkFlowWithStatus_204</span>
+						<span class='test-time'>Mar 23, 2021 01:25:07 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 23, 2021 01:25:07 PM</span>
+	<span class='label end-time'>Mar 23, 2021 01:25:13 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+992ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:25:13 PM</td>
+					<td class='step-details'>The status code is 204</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:25:13 PM</td>
+					<td class='step-details'></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:25:13 PM</td>
+					<td class='step-details'>This is NOT following HTTPStrictTransportSecurity. This particular validation is based on Sprint 7 & the Requirement ID : 1008</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:25:13 PM</td>
+					<td class='step-details'>Test passed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='19'>
+					<div class='test-heading'>
+						<span class='test-name'>MethodologyItem_UpdateItemsWorkFlowWithStatus_400</span>
+						<span class='test-time'>Mar 23, 2021 01:25:13 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 23, 2021 01:25:13 PM</span>
+	<span class='label end-time'>Mar 23, 2021 01:25:18 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+645ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:25:18 PM</td>
+					<td class='step-details'>The status code is 400</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:25:18 PM</td>
+					<td class='step-details'>{
+    "errors": {
+        "state": [
+            "The value 'hello' is not valid."
+        ]
+    },
+    "type": "https://tools.ietf.org/html/rfc7231#section-6.5.1",
+    "title": "One or more validation errors occurred.",
+    "status": 400,
+    "traceId": "00-c014d6b8e9849b4e91e1f5cb4cf2e343-632479013bc11e42-00"
+}</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:25:18 PM</td>
+					<td class='step-details'>This is NOT following HTTPStrictTransportSecurity. This particular validation is based on Sprint 7 & the Requirement ID : 1008</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:25:18 PM</td>
+					<td class='step-details'>Test passed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='20'>
+					<div class='test-heading'>
+						<span class='test-name'>MethodologyItem_UpdateItemsWorkFlowWithStatus_404</span>
+						<span class='test-time'>Mar 23, 2021 01:25:18 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 23, 2021 01:25:18 PM</span>
+	<span class='label end-time'>Mar 23, 2021 01:25:24 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+559ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:25:24 PM</td>
+					<td class='step-details'>The status code is 404</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:25:24 PM</td>
+					<td class='step-details'></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:25:24 PM</td>
+					<td class='step-details'>This is NOT following HTTPStrictTransportSecurity. This particular validation is based on Sprint 7 & the Requirement ID : 1008</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:25:24 PM</td>
+					<td class='step-details'>Test passed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='21'>
+					<div class='test-heading'>
+						<span class='test-name'>MethodologyItem_getAllMethodologyItemsForARevision_status404</span>
+						<span class='test-time'>Mar 23, 2021 01:25:24 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 23, 2021 01:25:24 PM</span>
+	<span class='label end-time'>Mar 23, 2021 01:25:28 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 4s+740ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:25:28 PM</td>
+					<td class='step-details'><pre>java.lang.StringIndexOutOfBoundsException: String index out of range: 12
+	at java.lang.String.substring(Unknown Source)
+	at restassured.automation.testcases.Restassured_Automation_MethodologItem.MethodologyItem_getAllMethodologyItemsForARevision_status404(Restassured_Automation_MethodologItem.java:83)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+</pre></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='test-name'></h5>
+
+			<div id='step-filters' class="right">
+				<span class="blue-text" status="info" alt="info" title="info"><i class="material-icons">info_outline</i></span>
+				<span class="green-text" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></span>
+				<span class="red-text" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></span>
+				<span class="red-text text-darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></span>
+				<span class="pink-text text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></span>
+				<span class="orange-text" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></span>
+				<span class="teal-text" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></span>
+				<span status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></span>
+			</div>
+		</div>
+	</div>
+	<!-- subview right -->
+
+
+<div id='test-view-charts' class='subview-full'>
+	<div id='charts-row' class='row nm-v nm-h'>
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Tests</div>
+				<div class='chart-box'>
+					<canvas id='parent-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='28.571%'><span class='strong'>6</span> test(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='71.429%'>15</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Steps</div>
+				<div class='chart-box'>
+					<canvas id='child-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='15.385%'><span class='strong'>6</span> step(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='38.462%'>15</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='46.154%'>18</span> others
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+</div>
+<!-- test view -->
+<!-- category view -->
+<div id='exception-view' class='view hide'>
+
+    <section id='controls'>
+        <div class='controls grey lighten-4'>
+            <!-- search -->
+            <div class='chip transparent' alt='Search Tests' title='Search Tests'>
+                <a href="#" class='search-div'>
+                    <i class='material-icons'>search</i> Search
+                </a>
+
+                <div class='input-field left hide'>
+                    <input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+                </div>
+
+            </div>
+            <!-- search -->
+        </div>
+    </section>
+
+    <div class='subview-left left'>
+
+        <div class='view-summary'>
+            <h5>Exceptions</h3>
+                <ul id='exception-collection' class='exception-collection'>
+
+                        <li class='exception displayed active'>
+                            <div class='exception-heading'>
+                                <span class='exception-name'>java.lang.AssertionError</span>
+                                <span class='exception-count right'><span class='label red lighten-1 white-text'>11</span></span>
+                            </div>
+                            <div class='exception-content hide'>
+                                <div class='exception-tests'>
+                                    <table class='bordered table-results'>
+                                        <thead>
+                                        <tr>
+                                            <th>Timestamp</th>
+                                            <th>TestName</th>
+                                            <th>Status</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                                    <tr>
+                                                        <td>Mar 23, 2021 01:23:36 PM</td>
+                                                        <td class='linked' test-id='1'>MethodologyItem_DeleteMarkAnItemAsDeleted_status200</td>
+                                                        <td><pre><pre>java.lang.AssertionError: expected [200] but found [404]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at restassured.automation.testcases.Restassured_Automation_MethodologItem.MethodologyItem_DeleteMarkAnItemAsDeleted_status200(Restassured_Automation_MethodologItem.java:1039)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+</pre></pre></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Mar 23, 2021 01:23:44 PM</td>
+                                                        <td class='linked' test-id='2'>MethodologyItem_DeleteMarkAnItemAsDeleted_status400</td>
+                                                        <td><pre><pre>java.lang.AssertionError: expected [200] but found [404]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at restassured.automation.testcases.Restassured_Automation_MethodologItem.MethodologyItem_DeleteMarkAnItemAsDeleted_status400(Restassured_Automation_MethodologItem.java:1104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+</pre></pre></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Mar 23, 2021 01:23:49 PM</td>
+                                                        <td class='linked' test-id='3'>MethodologyItem_EndToEnd_Scenario</td>
+                                                        <td><pre><pre>java.lang.AssertionError: expected [200] but found [404]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at restassured.automation.testcases.Restassured_Automation_MethodologItem.MethodologyItem_EndToEnd_Scenario(Restassured_Automation_MethodologItem.java:1333)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+</pre></pre></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Mar 23, 2021 01:24:00 PM</td>
+                                                        <td class='linked' test-id='5'>MethodologyItem_GetAllMethodologyItemsForARevision_status400</td>
+                                                        <td><pre><pre>java.lang.AssertionError: expected [400] but found [500]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at restassured.automation.testcases.Restassured_Automation_MethodologItem.MethodologyItem_GetAllMethodologyItemsForARevision_status400(Restassured_Automation_MethodologItem.java:145)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+</pre></pre></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Mar 23, 2021 01:24:05 PM</td>
+                                                        <td class='linked' test-id='6'>MethodologyItem_PatchUpdateAMethodologyItemForTheRevision_status200</td>
+                                                        <td><pre><pre>java.lang.AssertionError: expected [200] but found [404]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at restassured.automation.testcases.Restassured_Automation_MethodologItem.MethodologyItem_PatchUpdateAMethodologyItemForTheRevision_status200(Restassured_Automation_MethodologItem.java:616)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+</pre></pre></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Mar 23, 2021 01:24:10 PM</td>
+                                                        <td class='linked' test-id='7'>MethodologyItem_PatchUpdateAMethodologyItemForTheRevision_status400</td>
+                                                        <td><pre><pre>java.lang.AssertionError: expected [200] but found [404]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at restassured.automation.testcases.Restassured_Automation_MethodologItem.MethodologyItem_PatchUpdateAMethodologyItemForTheRevision_status400(Restassured_Automation_MethodologItem.java:689)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+</pre></pre></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Mar 23, 2021 01:24:15 PM</td>
+                                                        <td class='linked' test-id='8'>MethodologyItem_PatchUpdateAMethodologyItemForTheRevision_status404</td>
+                                                        <td><pre><pre>java.lang.AssertionError: expected [200] but found [404]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at restassured.automation.testcases.Restassured_Automation_MethodologItem.MethodologyItem_PatchUpdateAMethodologyItemForTheRevision_status404(Restassured_Automation_MethodologItem.java:762)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+</pre></pre></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Mar 23, 2021 01:24:20 PM</td>
+                                                        <td class='linked' test-id='9'>MethodologyItem_PostCreateANewMethodologyItemWithinTheMethodologyTree_status200</td>
+                                                        <td><pre><pre>java.lang.AssertionError: expected [200] but found [404]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at restassured.automation.testcases.Restassured_Automation_MethodologItem.MethodologyItem_PostCreateANewMethodologyItemWithinTheMethodologyTree_status200(Restassured_Automation_MethodologItem.java:238)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+</pre></pre></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Mar 23, 2021 01:24:25 PM</td>
+                                                        <td class='linked' test-id='10'>MethodologyItem_PostCreateANewMethodologyItemWithinTheMethodologyTree_status400</td>
+                                                        <td><pre><pre>java.lang.AssertionError: expected [400] but found [404]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at restassured.automation.testcases.Restassured_Automation_MethodologItem.MethodologyItem_PostCreateANewMethodologyItemWithinTheMethodologyTree_status400(Restassured_Automation_MethodologItem.java:289)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+</pre></pre></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Mar 23, 2021 01:24:36 PM</td>
+                                                        <td class='linked' test-id='12'>MethodologyItem_PostInitialiseAWorkProgram_status204</td>
+                                                        <td><pre><pre>java.lang.AssertionError: expected [200] but found [404]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at restassured.automation.testcases.Restassured_Automation_MethodologItem.MethodologyItem_PostInitialiseAWorkProgram_status204(Restassured_Automation_MethodologItem.java:830)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+</pre></pre></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Mar 23, 2021 01:24:46 PM</td>
+                                                        <td class='linked' test-id='14'>MethodologyItem_PostInitialiseAWorkProgram_status404</td>
+                                                        <td><pre><pre>java.lang.AssertionError: expected [200] but found [404]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at restassured.automation.testcases.Restassured_Automation_MethodologItem.MethodologyItem_PostInitialiseAWorkProgram_status404(Restassured_Automation_MethodologItem.java:971)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+</pre></pre></td>
+                                                    </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </li>
+                        <li class='exception displayed active'>
+                            <div class='exception-heading'>
+                                <span class='exception-name'>io.restassured.path.json.exception.JsonPathException</span>
+                                <span class='exception-count right'><span class='label red lighten-1 white-text'>2</span></span>
+                            </div>
+                            <div class='exception-content hide'>
+                                <div class='exception-tests'>
+                                    <table class='bordered table-results'>
+                                        <thead>
+                                        <tr>
+                                            <th>Timestamp</th>
+                                            <th>TestName</th>
+                                            <th>Status</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                                    <tr>
+                                                        <td>Mar 23, 2021 01:24:41 PM</td>
+                                                        <td class='linked' test-id='13'>MethodologyItem_PostInitialiseAWorkProgram_status400</td>
+                                                        <td><pre><pre>io.restassured.path.json.exception.JsonPathException: Failed to parse the JSON document
+	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1002)
+	at io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:967)
+	at io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:1047)
+	at io.restassured.path.json.JsonPath.get(JsonPath.java:202)
+	at restassured.automation.testcases.Restassured_Automation_MethodologItem.MethodologyItem_PostInitialiseAWorkProgram_status400(Restassured_Automation_MethodologItem.java:907)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+Caused by: java.lang.IllegalArgumentException: The JSON input text should neither be null nor empty.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:80)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:237)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:249)
+	at io.restassured.internal.path.json.ConfigurableJsonSlurper.parseText(ConfigurableJsonSlurper.groovy:80)
+	at io.restassured.path.json.JsonPath$4$1.method(JsonPath.java:965)
+	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1000)
+	... 28 more
+</pre></pre></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Mar 23, 2021 01:25:01 PM</td>
+                                                        <td class='linked' test-id='17'>MethodologyItem_PutMoveATreeItemToAFolderAtSpecifiedIndex_status409</td>
+                                                        <td><pre><pre>io.restassured.path.json.exception.JsonPathException: Failed to parse the JSON document
+	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1002)
+	at io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:967)
+	at io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:1047)
+	at io.restassured.path.json.JsonPath.get(JsonPath.java:202)
+	at restassured.automation.testcases.Restassured_Automation_MethodologItem.MethodologyItem_PutMoveATreeItemToAFolderAtSpecifiedIndex_status409(Restassured_Automation_MethodologItem.java:551)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+Caused by: java.lang.IllegalArgumentException: The JSON input text should neither be null nor empty.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:80)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:249)
+	at io.restassured.internal.path.json.ConfigurableJsonSlurper.parseText(ConfigurableJsonSlurper.groovy:80)
+	at io.restassured.path.json.JsonPath$4$1.method(JsonPath.java:965)
+	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1000)
+	... 28 more
+</pre></pre></td>
+                                                    </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </li>
+                        <li class='exception displayed active'>
+                            <div class='exception-heading'>
+                                <span class='exception-name'>java.lang.StringIndexOutOfBoundsException</span>
+                                <span class='exception-count right'><span class='label red lighten-1 white-text'>2</span></span>
+                            </div>
+                            <div class='exception-content hide'>
+                                <div class='exception-tests'>
+                                    <table class='bordered table-results'>
+                                        <thead>
+                                        <tr>
+                                            <th>Timestamp</th>
+                                            <th>TestName</th>
+                                            <th>Status</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                                    <tr>
+                                                        <td>Mar 23, 2021 01:24:51 PM</td>
+                                                        <td class='linked' test-id='15'>MethodologyItem_PutMoveATreeItemToAFolderAtSpecifiedIndex_status204</td>
+                                                        <td><pre><pre>java.lang.StringIndexOutOfBoundsException: String index out of range: 37
+	at java.lang.String.substring(Unknown Source)
+	at restassured.automation.testcases.Restassured_Automation_MethodologItem.getRandomAlphaNum(Restassured_Automation_MethodologItem.java:41)
+	at restassured.automation.testcases.Restassured_Automation_MethodologItem.MethodologyItem_PutMoveATreeItemToAFolderAtSpecifiedIndex_status204(Restassured_Automation_MethodologItem.java:388)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+</pre></pre></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Mar 23, 2021 01:25:24 PM</td>
+                                                        <td class='linked' test-id='21'>MethodologyItem_getAllMethodologyItemsForARevision_status404</td>
+                                                        <td><pre><pre>java.lang.StringIndexOutOfBoundsException: String index out of range: 12
+	at java.lang.String.substring(Unknown Source)
+	at restassured.automation.testcases.Restassured_Automation_MethodologItem.MethodologyItem_getAllMethodologyItemsForARevision_status404(Restassured_Automation_MethodologItem.java:83)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+</pre></pre></td>
+                                                    </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </li>
+                </ul>
+        </div>
+    </div>
+
+    <div class='subview-right left'>
+        <div class='view-summary'>
+            <h5 class='exception-name'></h5>
+        </div>
+    </div>
+</div>
+<!-- exception view -->
+<div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>21</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>39</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Mar 23, 2021 01:23:36 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Mar 23, 2021 01:25:29 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>0h 1m 52s+669ms</div>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel dashboard-environment'>
+					<span class='right label cyan white-text'>Environment</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Value</th>
+						</tr>
+							<tr>
+								<td>OS</td>
+								<td>Windows</td>
+							</tr>
+							<tr>
+								<td>AUT</td>
+								<td>QA</td>
+							</tr>
+							<tr>
+								<td>City</td>
+								<td>Bangalore</td>
+							</tr>
+							<tr>
+								<td>Version</td>
+								<td>1.2.3</td>
+							</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->
+		</div>
+		<!-- container -->
+
+		<script>
+			var statusGroup = {
+				passParent: 6,
+				failParent: 15,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 15,
+				
+				passChild: 6,
+				failChild: 15,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 18,
+				exceptionsChild: 15,
+				
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		
+			<script src='https://cdn.rawgit.com/anshooarora/extentreports-java/fca20fb7653aade98810546ab96a2a4360e3e712/dist/js/extent.js' type='text/javascript'></script>
+		
+		
+ 		<script type='text/javascript'>
+ 		</script>
+	</body>
+	
+</html>

@@ -1,14 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="restassured.automation.listeners.TestListeners"/>
+  </listeners>
+  <test name="Test">
+    <groups>
+      <run>
+        <include name="IntegrationTests"/>
+        <include name="EndToEnd"/>
+      </run>
+    </groups>
     <classes>
-      <class name="restassured.automation.testcases.Restassured_Automation_FnctnalFlow">
-        <methods>
-          <include name="createEngagement" invocation-numbers="0 2"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- restassured.automation.testcases.Restassured_Automation_FnctnalFlow -->
+      <class name="restassured.automation.testcases.Restassured_Automation_ItemSelectQuestion"/>
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test -->
+  <test name="Test(failed)">
+    <groups>
+      <run>
+        <include name="IntegrationTests"/>
+        <include name="EndToEnd"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="restassured.automation.testcases.Restassured_Automation_ItemSelectQuestion">
+        <methods>
+          <include name="setup"/>
+          <include name="ItemSelectQuestion_DeleteAnOptionFromAnItemSelectQuestion_status400"/>
+          <include name="ItemSelectQuestion_MoveASelectQuestionFromItemOption_status404"/>
+          <include name="ItemSelectQuestion_DeleteAnOptionGroupFromAnItemSelectQuestion_400"/>
+          <include name="ItemSelectQuestion_UpdateASelectQuestionItemOptionGroup_404"/>
+          <include name="ItemSelectQuestion_MoveASelectQuestionFromItemOption_status200"/>
+          <include name="ItemSelectQuestion_MoveASelectQuestionFromItemOption_status400"/>
+        </methods>
+      </class> <!-- restassured.automation.testcases.Restassured_Automation_ItemSelectQuestion -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

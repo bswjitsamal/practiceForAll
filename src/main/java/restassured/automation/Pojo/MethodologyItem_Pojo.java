@@ -1,5 +1,9 @@
 package restassured.automation.Pojo;
 
+import java.util.Map;
+
+import com.google.gson.Gson;
+
 public class MethodologyItem_Pojo {
 
 	private String revisions;
@@ -143,5 +147,6 @@ public class MethodologyItem_Pojo {
 		}
 
 	}
-
+	
+	
 }

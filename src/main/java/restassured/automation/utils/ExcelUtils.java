@@ -75,7 +75,7 @@ public class ExcelUtils {
 	
     // This method has two parameters: "Test data excel file name" and "Excel sheet name"
     // It creates FileInputStream and set excel file and excel sheet to excelWBook and excelWSheet variables.
-	public static void setExcelFileSheet(String sheetName) {
+	public static void setExcelFileSheet(String sheetName) throws Exception {
 
 		
 		try {
@@ -96,7 +96,7 @@ public class ExcelUtils {
 	
 	//This method reads the test data from the Excel cell.
     //We are passing row number and column number as parameters.
-    public static String getCellData(int RowNum, int ColNum) {
+    public static String getCellData(int RowNum, int ColNum) throws Exception {
         try {
             cell = excelWSheet.getRow(RowNum).getCell(ColNum);
             DataFormatter formatter = new DataFormatter();
@@ -109,7 +109,7 @@ public class ExcelUtils {
 	
 	
     //This method takes row number as a parameter and returns the data of given row number.
-    public static XSSFRow getRowData(int RowNum) {
+    public static XSSFRow getRowData(int RowNum) throws Exception {
         try {
             row = excelWSheet.getRow(RowNum);
             return row;
@@ -120,7 +120,7 @@ public class ExcelUtils {
 	
 	
     //This method gets excel file, row and column number and set a value to the that cell.
-    public static void setCellData(String value, int RowNum, int ColNum) {
+    public static void setCellData(String value, int RowNum, int ColNum) throws Exception {
         try {
             row = excelWSheet.getRow(RowNum);
             cell = row.getCell(ColNum);

@@ -2,24 +2,19 @@ package restassured.automation.utils;
 
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
+import org.testng.Assert;
+
+import com.aventstack.extentreports.Status;
+
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
+import restassured.automation.listeners.ExtentTestManager;
 
 
 public class Restassured_Automation_Utils {
-	
-	String AUTHORITY1 = "https://login.microsoftonline.com/a76db78b-d945-4a3a-bb42-fd0411f58bd8/login";
-	String ACCESSURL = "https://login.microsoftonline.com/a76db78b-d945-4a3a-bb42-fd0411f58bd8/oauth2/v2.0/token";
-	String CLIENT_ID = "7e7498e7-af6c-47bd-bf16-4f9c5d9601c8";
-	String CS = "-Yl08~7hnomK9LzUbrnxc_5~O.Y182TI.y";
-	String UN = "mms.test.amer.7@gtadhoc.gt.com";
-	String PSSWD = "Gr@nt2021!";
-	String URL = "http://13.83.56.14/api/org/user";
 	
 	public static final String ALPHANUMERIC_CHARACTERS = "0123456789abcdefghijklmnopqrstuvwxyz";
 	
@@ -29,7 +24,7 @@ public class Restassured_Automation_Utils {
 	
 	public Response get_URL_Without_Params(String BaseURL, String AuthorizationKey , String URI ) {
 		
-		BaseURL = BaseURL + URI	;
+		BaseURL = BaseURL + URI;	
 		return RestAssured.given()
 		.header("Authorization",AuthorizationKey )		
 		.header("Content-Type","application/json")
@@ -94,18 +89,19 @@ public Response post_URL(String BaseURL ,String AuthorizationKey , String URI , 
 	.post(BaseURL);		
 }
 
-public Response post_WithOutBody(String BaseURL ,String AuthorizationKey , String URI) {
+public Response put_URL(String BaseURL ,String AuthorizationKey , String URI , Map<String, String> organizationdata ) {
 	
 	BaseURL = BaseURL + URI;
 	
 	return RestAssured.given()
 	.header("Authorization", AuthorizationKey)		
 	.header("Content-Type","application/json")
+	.body(organizationdata)
 	.log().all()
-	.post(BaseURL);		
+	.put(BaseURL);		
 }
 
-public Response put_URL(String BaseURL ,String AuthorizationKey , String URI , Map<String, String> body ) {
+public Response put_URL_Array(String BaseURL ,String AuthorizationKey , String URI , Map<String, String[]> body ) {
 	
 	BaseURL = BaseURL + URI;
 	
@@ -116,7 +112,6 @@ public Response put_URL(String BaseURL ,String AuthorizationKey , String URI , M
 	.log().all()
 	.put(BaseURL);		
 }
-
 public Response patch_URL(String BaseURL ,String AuthorizationKey , String URI , Map<String, String> body ) {
 	
 	BaseURL = BaseURL + URI;
@@ -137,6 +132,18 @@ public Response post_URL(String BaseURL ,String AuthorizationKey , String URI , 
 	.header("Authorization", AuthorizationKey)		
 	.header("Content-Type","application/json")
 	.body(body)
+	.log().all()
+	.post(BaseURL);
+	
+				
+}
+public Response post_URL_WithoutBody(String BaseURL ,String AuthorizationKey , String URI ) {
+	
+	BaseURL = BaseURL + URI;
+	
+	return RestAssured.given()
+	.header("Authorization", AuthorizationKey)		
+	.header("Content-Type","application/json")
 	.log().all()
 	.post(BaseURL);
 	
@@ -169,21 +176,6 @@ public Response patch_URL(String BaseURL ,String AuthorizationKey , String URI ,
 	.patch(BaseURL);
 				
 }
-
-
-public Response put_URL(String BaseURL ,String AuthorizationKey , String URI ,String body) {
-	
-	BaseURL = BaseURL + URI;
-	
-	return RestAssured.given()
-	.header("Authorization", AuthorizationKey)		
-	.header("Content-Type","application/json")
-	.body(body)
-	.log().all()
-	.put(BaseURL);
-				
-}
-
 
 public Response delete(String BaseURL ,String AuthorizationKey , String URI , String body ) {
 	
@@ -221,6 +213,18 @@ BaseURL = BaseURL + URI;
 	.log().all()
 	.put(BaseURL);	
 }
+public Response put_URL(String BaseURL ,String AuthorizationKey , String URI ,String body) {
+	
+	BaseURL = BaseURL + URI;
+	
+	return RestAssured.given()
+	.header("Authorization", AuthorizationKey)		
+	.header("Content-Type","application/json")
+	.body(body)
+	.log().all()
+	.put(BaseURL);
+				
+}
 
 public Response delete_URLPOJO(String BaseURL, String AuthorizationKey, String URI, Object obj ) {
 	// TODO Auto-generated method stub
@@ -248,14 +252,15 @@ BaseURL = BaseURL + URI;
 
 public Response patch_URLPOJO(String BaseURL, String AuthorizationKey, String URI, Object obj) {
 	// TODO Auto-generated method stub
-BaseURL = BaseURL + URI;
+	BaseURL = BaseURL + URI;
 	
 	return RestAssured.given()
 	.header("Authorization", AuthorizationKey)		
 	.header("Content-Type","application/json")
 	.body(obj)
 	.log().all()
-	.patch(BaseURL);	
+	.patch(BaseURL);
+	
 }
 
 public Response post_XML(String BaseURL, String AuthorizationKey, String URI,File path) {
@@ -275,24 +280,42 @@ BaseURL = BaseURL + URI;
 // Create a random alphanumeric character in Java
 // Random alphanumeric generator function in Java
 // Only lowercase letters
-	private static String getRandomAlphaNum() {
-		Random r = new Random();
-		int offset = r.nextInt(ALPHANUMERIC_CHARACTERS.length());
-		return ALPHANUMERIC_CHARACTERS.substring(offset, offset + 1);
-	}
+private static String getRandomAlphaNum() {
+    Random r = new Random();
+    int offset = r.nextInt(ALPHANUMERIC_CHARACTERS.length());
+    return ALPHANUMERIC_CHARACTERS.substring(offset, offset+1);
+}
 
-	// Create a random alphabet in Java
-	// Only lowercase letters
-	private static String getRandomAlphabet() {
-		Random r = new Random();
-		return String.valueOf((char) (r.nextInt(26) + 'a'));
-	}
+// Create a random alphabet in Java
+// Only lowercase letters
+private static String getRandomAlphabet() {
+    Random r = new Random();
+    return String.valueOf((char)(r.nextInt(26)+'a'));
+}
 
-	// Create a random ASCII printable character in Java
-	// Returns both lowercase and uppercase letters
-	private static String getRandomCharacter() {
-		Random r = new Random();
-		return String.valueOf((char) (r.nextInt(95) + 32));
-	}
-	
+// Create a random ASCII printable character in Java
+// Returns both lowercase and uppercase letters
+private static String getRandomCharacter() {
+    Random r = new Random();
+    return String.valueOf((char)(r.nextInt(95)+32));
+}
+
+//Validating HTTP Strict Transport security
+public void validate_HTTPStrictTransportSecurity(Response response) {
+
+
+
+    // Reader header of a give name. In this line we will get Header named Server
+    String strictTransportSecurity = response.header("Strict-Transport-Security");
+    System.out.println("Server value: " + strictTransportSecurity);
+    
+    if("max-age=63072000; includeSubDomains; preload" == strictTransportSecurity) {
+        System.out.println("This is following HTTPStrictTransportSecurity");
+        ExtentTestManager.getTest().log(Status.INFO,"This is following HTTPStrictTransportSecurity");
+    }else {
+        System.out.println("This is NOT following HTTPStrictTransportSecurity");
+        ExtentTestManager.getTest().log(Status.INFO,"This is NOT following HTTPStrictTransportSecurity. This particular validation is based on Sprint 7 & the Requirement ID : 1008");
+    }
+    //Assert.assertEquals("max-age=63072000; includeSubDomains; preload", strictTransportSecurity);
+}
 }

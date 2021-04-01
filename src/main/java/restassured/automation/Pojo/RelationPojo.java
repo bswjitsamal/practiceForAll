@@ -29,5 +29,9 @@ public class RelationPojo {
 	public void setMethodologyItemId(String methodologyItemId) {
 		this.methodologyItemId = methodologyItemId;
 	}
+	
+	
+	
+	
 
 }
