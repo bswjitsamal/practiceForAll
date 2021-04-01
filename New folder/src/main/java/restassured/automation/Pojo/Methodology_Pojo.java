@@ -12,6 +12,7 @@ public class Methodology_Pojo {
 	private String revisionId;
 	private String treeItemId ;
 	private String draftDescription;
+	private String[] itemIds;
 	
 	
 	public String getDraftDescription() {
@@ -62,5 +63,12 @@ public class Methodology_Pojo {
 	public void setTreeItemId(String treeItemId) {
 		this.treeItemId = treeItemId;
 	}
+	public String[] getItemIds() {
+		return itemIds;
+	}
+	public void setItemIds(String[] itemIds) {
+		this.itemIds = itemIds;
+	}
+	
 
 }

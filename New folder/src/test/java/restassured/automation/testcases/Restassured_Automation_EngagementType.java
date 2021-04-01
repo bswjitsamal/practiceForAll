@@ -90,11 +90,11 @@ public class Restassured_Automation_EngagementType {
 		Restassured_Automation_Utils engagementType = new Restassured_Automation_Utils();
 
 		Engagement_Type_Pojo en = new Engagement_Type_Pojo();
-		en.setTitle(post.getProperty("postEngagementTypeTitle") + getRandomAlphaNum()
-				+ engagementType.getRandomNumber(1, 20));
+		en.setTitle(post.getProperty("postEngagementTypeTitle") +engagementType.getRandomNumber(1, 20));
 		en.setOrganization(post.getProperty("postEngagementTypeOrganization"));
-
-		Response postEngagementType = engagementType.post_URLPOJO(URL, AuthorizationKey, "/api/engagementType", en);
+		
+		String URI="/api/engagementType";
+		Response postEngagementType = engagementType.post_URLPOJO(URL, AuthorizationKey,URI, en);
 		postEngagementType.prettyPrint();
 
 		String idValue = postEngagementType.then().extract().path("id").toString();

@@ -89,14 +89,14 @@ public Response post_URL(String BaseURL ,String AuthorizationKey , String URI , 
 	.post(BaseURL);		
 }
 
-public Response put_URL(String BaseURL ,String AuthorizationKey , String URI , Map<String, String> body ) {
+public Response put_URL(String BaseURL ,String AuthorizationKey , String URI , Map<String, String> organizationdata ) {
 	
 	BaseURL = BaseURL + URI;
 	
 	return RestAssured.given()
 	.header("Authorization", AuthorizationKey)		
 	.header("Content-Type","application/json")
-	.body(body)
+	.body(organizationdata)
 	.log().all()
 	.put(BaseURL);		
 }
@@ -212,6 +212,18 @@ BaseURL = BaseURL + URI;
 	.body(obj)
 	.log().all()
 	.put(BaseURL);	
+}
+public Response put_URL(String BaseURL ,String AuthorizationKey , String URI ,String body) {
+	
+	BaseURL = BaseURL + URI;
+	
+	return RestAssured.given()
+	.header("Authorization", AuthorizationKey)		
+	.header("Content-Type","application/json")
+	.body(body)
+	.log().all()
+	.put(BaseURL);
+				
 }
 
 public Response delete_URLPOJO(String BaseURL, String AuthorizationKey, String URI, Object obj ) {

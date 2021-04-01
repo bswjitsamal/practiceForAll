@@ -15,11 +15,10 @@
 			</run>
 		</groups>
 		<classes>
+			<class
+				name="restassured.automation.testcases.Restassured_Automation_MethodologItem" />
 			
-				
-				<class
-					name="restassured.automation.testcases.Restassured_Automation_MethodologyItemRelations" />
-				
+
 
 		</classes>
 	</test> <!-- Test -->

@@ -1,5 +1,9 @@
 package restassured.automation.Pojo;
 
+import java.util.Map;
+
+import com.google.gson.Gson;
+
 public class MethodologyItem_Pojo {
 
 	private String revisions;
@@ -7,23 +11,15 @@ public class MethodologyItem_Pojo {
 	private String index;
 	private String itemType;
 	private String parentId;
+	private String WPId;
 	private InitData initData;
-	private String ruleContextType;
-    private String ruleContextSource;
-    private String relationshipType;
-    private String workProgramId;
-    private String workProgramItemType;
-	private String tailoring;
-	private String visibility;
 	private String workProgramType;
-
-	public String getTailoring() {
-		return tailoring;
-	}
-
-	public void setTailoring(String tailoring) {
-		this.tailoring = tailoring;
-	}
+	private String tailoring;
+	private String ruleContextType;
+	private String ruleContextSource;
+	private String[] optionTitles;
+	private String visibility;
+	
 
 	public String getVisibility() {
 		return visibility;
@@ -33,12 +29,52 @@ public class MethodologyItem_Pojo {
 		this.visibility = visibility;
 	}
 
+	public String[] getOptionTitles() {
+		return optionTitles;
+	}
+
+	public void setOptionTitles(String[] optionTitles) {
+		this.optionTitles = optionTitles;
+	}
+
+	public String getRuleContextType() {
+		return ruleContextType;
+	}
+
+	public void setRuleContextType(String ruleContextType) {
+		this.ruleContextType = ruleContextType;
+	}
+
+	public String getRuleContextSource() {
+		return ruleContextSource;
+	}
+
+	public void setRuleContextSource(String ruleContextSource) {
+		this.ruleContextSource = ruleContextSource;
+	}
+
 	public String getWorkProgramType() {
 		return workProgramType;
 	}
 
 	public void setWorkProgramType(String workProgramType) {
 		this.workProgramType = workProgramType;
+	}
+
+	public String getTailoring() {
+		return tailoring;
+	}
+
+	public void setTailoring(String tailoring) {
+		this.tailoring = tailoring;
+	}
+
+	public String getWPId() {
+		return WPId;
+	}
+
+	public void setWPId(String wPId) {
+		WPId = wPId;
 	}
 
 	public InitData getInitData() {
@@ -88,52 +124,6 @@ public class MethodologyItem_Pojo {
 	public void setItemType(String itemType) {
 		this.itemType = itemType;
 	}
-	
-
-	public String getRuleContextType() {
-		return ruleContextType;
-	}
-
-	public void setRuleContextType(String ruleContextType) {
-		this.ruleContextType = ruleContextType;
-	}
-
-	public String getRuleContextSource() {
-		return ruleContextSource;
-	}
-
-	public void setRuleContextSource(String ruleContextSource) {
-		this.ruleContextSource = ruleContextSource;
-	}
-
-
-	public String getRelationshipType() {
-		return relationshipType;
-	}
-
-	public void setRelationshipType(String relationshipType) {
-		this.relationshipType = relationshipType;
-	}
-
-
-	public String getWorkProgramId() {
-		return workProgramId;
-	}
-
-	public void setWorkProgramId(String workProgramId) {
-		this.workProgramId = workProgramId;
-	}
-
-
-	public String getWorkProgramItemType() {
-		return workProgramItemType;
-	}
-
-	public void setWorkProgramItemType(String workProgramItemType) {
-		this.workProgramItemType = workProgramItemType;
-	}
-	
-
 
 	public static class InitData {
 
@@ -157,5 +147,6 @@ public class MethodologyItem_Pojo {
 		}
 
 	}
-
+	
+	
 }
