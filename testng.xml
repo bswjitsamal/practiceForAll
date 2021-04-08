@@ -19,7 +19,7 @@
 
 			
 			<class
-				name="restassured.automation.testcases.Restassured_Automation_Rules" />
+				name="restassured.automation.testcases.Restassured_Automation_ItemSelectQuestion" />
 
 
 

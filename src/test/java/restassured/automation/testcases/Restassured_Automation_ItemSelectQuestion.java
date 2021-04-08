@@ -800,7 +800,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 	}
 
 	@Test(groups = "IntegrationTests")
-	public void ItemSelectQuestion_DeleteAnOptionFromAnItemSelectQuestion_status204() {
+	public void ItemSelectQuestion_DeleteAnOptionFromAnItemSelectQuestion_status400() {
 
 		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
 
@@ -868,7 +868,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 
 		Response getMethodologyRes3 = getMethodology.delete(URL, AuthorizationKey, patchId3);
 		getMethodologyRes3.prettyPrint();
-		Assert.assertEquals(getMethodologyRes3.statusCode(), 204);
+		Assert.assertEquals(getMethodologyRes3.statusCode(), 400);
 		/**
 		 * Extent report generation
 		 */
@@ -945,7 +945,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 	}
 
 	@Test(groups = "IntegrationTests")
-	public void ItemSelectQuestion_DeleteAnOptionFromAnItemSelectQuestion_status400() {
+	public void ItemSelectQuestion_DeleteAnOptionFromAnItemSelectQuestion_status200() {
 
 		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
 
@@ -1000,7 +1000,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 		Response getMethodologyRes3 = getMethodology.delete(URL, AuthorizationKey, patchId2);
 		Response getMethodologyRes2 = getMethodology.delete(URL, AuthorizationKey, patchId2);
 		getMethodologyRes2.prettyPrint();
-		Assert.assertEquals(getMethodologyRes1.statusCode(), 400);
+		Assert.assertEquals(getMethodologyRes1.statusCode(), 200);
 		/**
 		 * Extent report generation
 		 */
