@@ -33,6 +33,17 @@ public class Restassured_Automation_Utils {
 					
 	}
 	
+	public Response post_WithOutBody(String BaseURL ,String AuthorizationKey , String URI) {
+		
+		BaseURL = BaseURL + URI;
+		
+		return RestAssured.given()
+		.header("Authorization", AuthorizationKey)		
+		.header("Content-Type","application/json")
+		.log().all()
+		.post(BaseURL);		
+	}
+	
 public Response get(String BaseURL, String AuthorizationKey , String URI ) {
 		
 		BaseURL = BaseURL + URI;	

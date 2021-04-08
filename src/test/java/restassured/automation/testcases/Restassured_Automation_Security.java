@@ -31,6 +31,7 @@ public class Restassured_Automation_Security {
 
 	String URL;
 	String AuthorizationKey;
+	ArrayList<String> listOrdId;
 
 	final static String ALPHANUMERIC_CHARACTERS = "0123456789abcdefghijklmnopqrstuvwxyz";
 
@@ -200,38 +201,61 @@ public class Restassured_Automation_Security {
 
 		List<Conditions> conditions = new ArrayList<Conditions>();
 		RootConditionGroup.Conditions sel = new RootConditionGroup.Conditions();
-		sel.setId(post.getProperty("postRulesId"));
-		sel.setSourceId(post.getProperty("postRulesSourceId"));
-		sel.setName(post.getProperty("postRulesName")+ post.getProperty("postSpecialChar")+post.getProperty("postSpecialChar") + getRandomAlphaNum());
-		sel.setMultipleInstanceConjunction(post.getProperty("postRulesMultipleInstanceConjunction"));
-		sel.setType(post.getProperty("postRulesType"));
-		sel.setValue(post.getProperty("postRulesValue"));
-		sel.setSingleLogicOperator(post.getProperty("postRulesSingleLogicOperator"));
+		//sel.setId(post.getProperty("postRulesId"));
+		sel.setName("Work Program 1 /\\nProcedure 2");
+		sel.setTempId("1615527874317");
+		sel.setIsNew(true);
+		sel.setIsMultipleInstancesConjunction(false);
+		sel.setSourceId("604afe90776641acb09dbfa5");
+		sel.setType("MultipleItem");
+		sel.setValue("");
+		sel.setValues(new String[] { "604afe93776641acb09dbfa8" } );
+		sel.setMultipleLogicOperator("Any");
 
 		conditions.add(sel);
 
 		RootConditionGroup rootConditionGroup = new RootConditionGroup();
-		rootConditionGroup.setId(post.getProperty("postRulesId1"));
-		rootConditionGroup.setOperator(post.getProperty("postRulesOperator"));
-		// rootConditionGroup.setChildren("null");
+		rootConditionGroup.setTempId("tempId");
+		rootConditionGroup.setOperator("operator");
+		rootConditionGroup.setIsNew("isNew");
 		rootConditionGroup.setConditions(conditions);
+		
 
 		Result result = new Result();
+		result.setName("result");
+		result.setOperation("Show");
+		result.setTargetId("604afe04776641acb09dbfa1");
 
 		ServiceDetailsPojo sp = new ServiceDetailsPojo();
 		sp.setName("Demo");
 		sp.setRootConditionGroup(rootConditionGroup);
 		sp.setResult(result);
+		sp.setIsComplex(false);
 
-		Restassured_Automation_Utils getRulsByRevId = new Restassured_Automation_Utils();
+		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
+
+        // Fetching Org Id
+		
+        Response OrganizationsDetails = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/org");
+        JsonPath jsonPathEvaluator = OrganizationsDetails.jsonPath();
+        listOrdId = jsonPathEvaluator.get("id");
+        OrganizationsDetails.prettyPrint();
+
+        /**
+         * GETTING THE REVISION ID
+         */
+
+        Restassured_Automation_Utils getRulsByRevId = new Restassured_Automation_Utils();
+        Response getMethodologyRes = getRulsByRevId.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
+                "Organization", listOrdId.get(4));
+        getMethodologyRes.prettyPrint();
 
 		/**
 		 * Retrieving list of all records
 		 */
-		Response getMethodologyRes = getRulsByRevId.get_URL_Without_Params(URL, AuthorizationKey,
-				"/api/methodology");
-		JsonPath jsonPathEvaluator = getMethodologyRes.jsonPath();
-		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions");
+
+		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
+		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions.id");
 
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
 
