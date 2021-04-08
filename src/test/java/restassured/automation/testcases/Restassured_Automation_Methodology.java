@@ -85,7 +85,6 @@ public class Restassured_Automation_Methodology {
 		 */
 		ExtentTestManager.statusLogMessage(getMethodologyRes.statusCode());
 		ExtentTestManager.getTest().log(Status.INFO, getMethodologyRes.asString());
-		System.out.println("This particular below line is based on Sprint 7 & the Requirement ID : 1008");
 		getMethodology.validate_HTTPStrictTransportSecurity(getMethodologyRes);
 
 	}
@@ -126,7 +125,6 @@ public class Restassured_Automation_Methodology {
 		 */
 		ExtentTestManager.statusLogMessage(getMethodologyRes.statusCode());
 		ExtentTestManager.getTest().log(Status.INFO, getMethodologyRes.asString());
-		System.out.println("This particular below line is based on Sprint 7 & the Requirement ID : 1008");
 		getMethodology.validate_HTTPStrictTransportSecurity(getMethodologyRes);
 
 	}
@@ -176,7 +174,6 @@ public class Restassured_Automation_Methodology {
 		 */
 		ExtentTestManager.statusLogMessage(getMethodologyByrevisonIdRes.statusCode());
 		ExtentTestManager.getTest().log(Status.INFO, getMethodologyByrevisonIdRes.asString());
-		System.out.println("This particular below line is based on Sprint 7 & the Requirement ID : 1008");
 		getMethodologyByrevisonId.validate_HTTPStrictTransportSecurity(getMethodologyByrevisonIdRes);
 
 	}
@@ -240,7 +237,6 @@ public class Restassured_Automation_Methodology {
 		 */
 		ExtentTestManager.statusLogMessage(getMethodologyByrevisonIdRes.statusCode());
 		ExtentTestManager.getTest().log(Status.INFO, getMethodologyByrevisonIdRes.asString());
-		System.out.println("This particular below line is based on Sprint 7 & the Requirement ID : 1008");
 		getMethodologyByrevisonId.validate_HTTPStrictTransportSecurity(getMethodologyByrevisonIdRes);
 
 	}
@@ -290,7 +286,6 @@ public class Restassured_Automation_Methodology {
 		 */
 		ExtentTestManager.statusLogMessage(methodRes.statusCode());
 		ExtentTestManager.getTest().log(Status.INFO, methodRes.asString());
-		System.out.println("This particular below line is based on Sprint 7 & the Requirement ID : 1008");
 		allUtils.validate_HTTPStrictTransportSecurity(methodRes);
 
 	}
@@ -349,7 +344,6 @@ public class Restassured_Automation_Methodology {
 		 */
 		ExtentTestManager.statusLogMessage(getMethodologyByrevisonIdRes.statusCode());
 		ExtentTestManager.getTest().log(Status.INFO, getMethodologyByrevisonIdRes.asString());
-		System.out.println("This particular below line is based on Sprint 7 & the Requirement ID : 1008");
 		getMethodologyByrevisonId.validate_HTTPStrictTransportSecurity(getMethodologyByrevisonIdRes);
 
 	}
@@ -398,7 +392,6 @@ public class Restassured_Automation_Methodology {
 		 */
 		ExtentTestManager.statusLogMessage(getMethodologyByrevisonIdRes.statusCode());
 		ExtentTestManager.getTest().log(Status.INFO, getMethodologyByrevisonIdRes.asString());
-		System.out.println("This particular below line is based on Sprint 7 & the Requirement ID : 1008");
 		getMethodologyByrevisonId.validate_HTTPStrictTransportSecurity(getMethodologyByrevisonIdRes);
 
 	}
@@ -447,7 +440,6 @@ public class Restassured_Automation_Methodology {
 		 */
 		ExtentTestManager.statusLogMessage(getMethodologyByrevisonIdRes.statusCode());
 		ExtentTestManager.getTest().log(Status.INFO, getMethodologyByrevisonIdRes.asString());
-		System.out.println("This particular below line is based on Sprint 7 & the Requirement ID : 1008");
 		getMethodologyByrevisonId.validate_HTTPStrictTransportSecurity(getMethodologyByrevisonIdRes);
 
 	}
@@ -497,7 +489,6 @@ public class Restassured_Automation_Methodology {
 		 */
 		ExtentTestManager.statusLogMessage(methodologyTypeRes.statusCode());
 		ExtentTestManager.getTest().log(Status.INFO, methodologyTypeRes.asString());
-		System.out.println("This particular below line is based on Sprint 7 & the Requirement ID : 1008");
 		allUtils.validate_HTTPStrictTransportSecurity(methodologyTypeRes);
 
 	}
@@ -549,7 +540,6 @@ public class Restassured_Automation_Methodology {
 		 */
 		ExtentTestManager.statusLogMessage(getMethodologyByrevisonIdRes.statusCode());
 		ExtentTestManager.getTest().log(Status.INFO, getMethodologyByrevisonIdRes.asString());
-		System.out.println("This particular below line is based on Sprint 7 & the Requirement ID : 1008");
 		getMethodologyByrevisonId.validate_HTTPStrictTransportSecurity(getMethodologyByrevisonIdRes);
 
 	}
@@ -602,7 +592,6 @@ public class Restassured_Automation_Methodology {
 		 */
 		ExtentTestManager.statusLogMessage(getMethodologyByrevisonIdRes.statusCode());
 		ExtentTestManager.getTest().log(Status.INFO, getMethodologyByrevisonIdRes.asString());
-		System.out.println("This particular below line is based on Sprint 7 & the Requirement ID : 1008");
 		getMethodologyByrevisonId.validate_HTTPStrictTransportSecurity(getMethodologyByrevisonIdRes);
 
 	}
@@ -810,7 +799,6 @@ public class Restassured_Automation_Methodology {
 		 */
 		ExtentTestManager.statusLogMessage(candidateRes.statusCode());
 		ExtentTestManager.getTest().log(Status.INFO, candidateRes.asString());
-		System.out.println("This particular below line is based on Sprint 7 & the Requirement ID : 1008");
 		getEngagementType.validate_HTTPStrictTransportSecurity(candidateRes);
 
 	}
@@ -1018,7 +1006,6 @@ public class Restassured_Automation_Methodology {
 		 */
 		ExtentTestManager.statusLogMessage(candidateRes.statusCode());
 		ExtentTestManager.getTest().log(Status.INFO, candidateRes.asString());
-		System.out.println("This particular below line is based on Sprint 7 & the Requirement ID : 1008");
 		getEngagementType.validate_HTTPStrictTransportSecurity(candidateRes);
 
 	}
@@ -1226,7 +1213,6 @@ public class Restassured_Automation_Methodology {
 		 */
 		ExtentTestManager.statusLogMessage(candidateRes.statusCode());
 		ExtentTestManager.getTest().log(Status.INFO, candidateRes.asString());
-		System.out.println("This particular below line is based on Sprint 7 & the Requirement ID : 1008");
 		getEngagementType.validate_HTTPStrictTransportSecurity(candidateRes);
 
 	}
@@ -1261,7 +1247,6 @@ public class Restassured_Automation_Methodology {
 		 */
 		ExtentTestManager.statusLogMessage(getCandidateRes.statusCode());
 		ExtentTestManager.getTest().log(Status.INFO, getCandidateRes.asString());
-		System.out.println("This particular below line is based on Sprint 7 & the Requirement ID : 1008");
 		getMethodology.validate_HTTPStrictTransportSecurity(getCandidateRes);
 
 	}
@@ -1296,7 +1281,6 @@ public class Restassured_Automation_Methodology {
 		 */
 		ExtentTestManager.statusLogMessage(getCandidateRes.statusCode());
 		ExtentTestManager.getTest().log(Status.INFO, getCandidateRes.asString());
-		System.out.println("This particular below line is based on Sprint 7 & the Requirement ID : 1008");
 		getMethodology.validate_HTTPStrictTransportSecurity(getCandidateRes);
 
 	}
@@ -1532,7 +1516,6 @@ public class Restassured_Automation_Methodology {
 		 */
 		ExtentTestManager.statusLogMessage(deleteRes.statusCode());
 		ExtentTestManager.getTest().log(Status.INFO, deleteRes.asString());
-		System.out.println("This particular below line is based on Sprint 7 & the Requirement ID : 1008");
 		getMethodology.validate_HTTPStrictTransportSecurity(deleteRes);
 
 	}
@@ -1748,7 +1731,6 @@ public class Restassured_Automation_Methodology {
 		 */
 		ExtentTestManager.statusLogMessage(deleteRes.statusCode());
 		ExtentTestManager.getTest().log(Status.INFO, deleteRes.asString());
-		System.out.println("This particular below line is based on Sprint 7 & the Requirement ID : 1008");
 		getMethodology.validate_HTTPStrictTransportSecurity(deleteRes);
 
 
@@ -1833,7 +1815,6 @@ public class Restassured_Automation_Methodology {
 		 */
 		ExtentTestManager.statusLogMessage(getMethodologyByIdRes.statusCode());
 		ExtentTestManager.getTest().log(Status.INFO, getMethodologyByIdRes.asString());
-		System.out.println("This particular below line is based on Sprint 7 & the Requirement ID : 1008");
 		allUtils.validate_HTTPStrictTransportSecurity(getMethodologyByIdRes);
 
 	}

@@ -13,6 +13,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.Status;
 import com.google.gson.JsonIOException;
 import com.google.gson.JsonSyntaxException;
 
@@ -22,6 +23,7 @@ import restassured.automation.Pojo.Result;
 import restassured.automation.Pojo.RootConditionGroup;
 import restassured.automation.Pojo.ServiceDetailsPojo;
 import restassured.automation.Pojo.RootConditionGroup.Conditions;
+import restassured.automation.listeners.ExtentTestManager;
 import restassured.automation.utils.DataSources_Read_Utils;
 import restassured.automation.utils.Restassured_Automation_Utils;
 import restassured.automation.utils.read_Configuration_Propertites;
@@ -112,6 +114,12 @@ public class Restassured_Automation_Rules extends read_Configuration_Propertites
 
 		validate_HTTPStrictTransportSecurity(RulesDetails);
 		Assert.assertEquals(RulesDetails.statusCode(), 200);
+		/**
+		 * Extent report generation
+		 */
+		ExtentTestManager.statusLogMessage(RulesDetails.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,RulesDetails.asString());
+		rules.validate_HTTPStrictTransportSecurity(RulesDetails);
 
 	}
 
@@ -189,6 +197,13 @@ public class Restassured_Automation_Rules extends read_Configuration_Propertites
 		
 		validate_HTTPStrictTransportSecurity(postOrganizationData);
 		Assert.assertEquals(postOrganizationData.statusCode(), 200);
+		/**
+		 * Extent report generation
+		 */
+		ExtentTestManager.statusLogMessage(postOrganizationData.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,postOrganizationData.asString());
+		getRulsByRevId.validate_HTTPStrictTransportSecurity(postOrganizationData);
+
 
 	}
 
@@ -237,6 +252,12 @@ public class Restassured_Automation_Rules extends read_Configuration_Propertites
 
 		Response postOrganizationData = rules.post_URL(URL, AuthorizationKey, patchId, Organizationdata);
 		System.out.println(postOrganizationData.asString());
+		/**
+		 * Extent report generation
+		 */
+		ExtentTestManager.statusLogMessage(postOrganizationData.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,postOrganizationData.asString());
+		rules.validate_HTTPStrictTransportSecurity(postOrganizationData);
 		
 
 	}
@@ -329,8 +350,14 @@ public class Restassured_Automation_Rules extends read_Configuration_Propertites
 		Response putOrganizationData = getRulsByRevId.post_URLPOJO(URL, AuthorizationKey, patchId1, sp);
 		System.out.println(putOrganizationData.asString());
 		
-		validate_HTTPStrictTransportSecurity(postOrganizationData);
+		validate_HTTPStrictTransportSecurity(putOrganizationData);
 		Assert.assertEquals(putOrganizationData.statusCode(), 409);
+		/**
+		 * Extent report generation
+		 */
+		ExtentTestManager.statusLogMessage(putOrganizationData.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,putOrganizationData.asString());
+		getRulsByRevId.validate_HTTPStrictTransportSecurity(putOrganizationData);
 
 		
 	}
@@ -426,6 +453,12 @@ public class Restassured_Automation_Rules extends read_Configuration_Propertites
 		
 		validate_HTTPStrictTransportSecurity(postOrganizationData);
 		Assert.assertEquals(putOrganizationData.statusCode(), 200);
+		/**
+		 * Extent report generation
+		 */
+		ExtentTestManager.statusLogMessage(putOrganizationData.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,putOrganizationData.asString());
+		getRulsByRevId.validate_HTTPStrictTransportSecurity(putOrganizationData);
 		
 	}
 
@@ -522,6 +555,12 @@ public class Restassured_Automation_Rules extends read_Configuration_Propertites
 		
 		validate_HTTPStrictTransportSecurity(postOrganizationData);
 		Assert.assertEquals(putOrganizationData.statusCode(), 400);
+		/**
+		 * Extent report generation
+		 */
+		ExtentTestManager.statusLogMessage(putOrganizationData.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,putOrganizationData.asString());
+		getRulsByRevId.validate_HTTPStrictTransportSecurity(putOrganizationData);
 		
 	
 
@@ -619,6 +658,12 @@ public class Restassured_Automation_Rules extends read_Configuration_Propertites
 		
 		validate_HTTPStrictTransportSecurity(postOrganizationData);
 		Assert.assertEquals(putRuleData.statusCode(), 409);
+		/**
+		 * Extent report generation
+		 */
+		ExtentTestManager.statusLogMessage(putRuleData.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,putRuleData.asString());
+		getRulsByRevId.validate_HTTPStrictTransportSecurity(putRuleData);
 		
 	}
 
@@ -677,6 +722,12 @@ public class Restassured_Automation_Rules extends read_Configuration_Propertites
 		
 		validate_HTTPStrictTransportSecurity(postOrganizationData);
 		Assert.assertEquals(postOrganizationData.statusCode(), 204);
+		/**
+		 * Extent report generation
+		 */
+		ExtentTestManager.statusLogMessage(postOrganizationData.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,postOrganizationData.asString());
+		rules.validate_HTTPStrictTransportSecurity(postOrganizationData);
 
 	}
 
@@ -735,6 +786,12 @@ public class Restassured_Automation_Rules extends read_Configuration_Propertites
 		
 		validate_HTTPStrictTransportSecurity(postOrganizationData);
 		Assert.assertEquals(postOrganizationData.statusCode(), 400);
+		/**
+		 * Extent report generation
+		 */
+		ExtentTestManager.statusLogMessage(postOrganizationData.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,postOrganizationData.asString());
+		rules.validate_HTTPStrictTransportSecurity(postOrganizationData);
 
 	}
 	
@@ -822,6 +879,12 @@ public class Restassured_Automation_Rules extends read_Configuration_Propertites
 		
 		validate_HTTPStrictTransportSecurity(deleteRuleData);
 		Assert.assertEquals(deleteRuleData.statusCode(), 204);
+		/**
+		 * Extent report generation
+		 */
+		ExtentTestManager.statusLogMessage(deleteRuleData.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,deleteRuleData.asString());
+		rules.validate_HTTPStrictTransportSecurity(deleteRuleData);
 	}
 
 		

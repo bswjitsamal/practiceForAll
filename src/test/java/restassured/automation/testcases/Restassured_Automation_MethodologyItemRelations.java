@@ -303,7 +303,6 @@ public class Restassured_Automation_MethodologyItemRelations {
 		 */
 		ExtentTestManager.statusLogMessage(postNewRelation.statusCode());
 		ExtentTestManager.getTest().log(Status.INFO, postNewRelation.asString());
-		System.out.println("This particular below line is based on Sprint 7 & the Requirement ID : 1008");
 		AllUtils.validate_HTTPStrictTransportSecurity(postNewRelation);
 
 	}
@@ -404,7 +403,6 @@ public class Restassured_Automation_MethodologyItemRelations {
 		 */
 		ExtentTestManager.statusLogMessage(relationResponse.statusCode());
 		ExtentTestManager.getTest().log(Status.INFO, relationResponse.asString());
-		System.out.println("This particular below line is based on Sprint 7 & the Requirement ID : 1008");
 		MethodologyItem.validate_HTTPStrictTransportSecurity(relationResponse);
 
 	}
@@ -444,7 +442,6 @@ public class Restassured_Automation_MethodologyItemRelations {
 		 */
 		ExtentTestManager.statusLogMessage(getRelationRes.statusCode());
 		ExtentTestManager.getTest().log(Status.INFO, getRelationRes.asString());
-		System.out.println("This particular below line is based on Sprint 7 & the Requirement ID : 1008");
 		allUtils.validate_HTTPStrictTransportSecurity(getRelationRes);
 
 	}
@@ -485,7 +482,6 @@ public class Restassured_Automation_MethodologyItemRelations {
 		 */
 		ExtentTestManager.statusLogMessage(getRelationRes.statusCode());
 		ExtentTestManager.getTest().log(Status.INFO, getRelationRes.asString());
-		System.out.println("This particular below line is based on Sprint 7 & the Requirement ID : 1008");
 		allUtils.validate_HTTPStrictTransportSecurity(getRelationRes);
 
 	}
@@ -773,7 +769,6 @@ public class Restassured_Automation_MethodologyItemRelations {
 		 */
 		ExtentTestManager.statusLogMessage(patchNewRelation.statusCode());
 		ExtentTestManager.getTest().log(Status.INFO, patchNewRelation.asString());
-		System.out.println("This particular below line is based on Sprint 7 & the Requirement ID : 1008");
 		AllUtils.validate_HTTPStrictTransportSecurity(patchNewRelation);
 
 	}
@@ -1048,7 +1043,6 @@ public class Restassured_Automation_MethodologyItemRelations {
 		 */
 		ExtentTestManager.statusLogMessage(patchNewRelation.statusCode());
 		ExtentTestManager.getTest().log(Status.INFO, patchNewRelation.asString());
-		System.out.println("This particular below line is based on Sprint 7 & the Requirement ID : 1008");
 		AllUtils.validate_HTTPStrictTransportSecurity(patchNewRelation);
 
 	}
@@ -1156,7 +1150,6 @@ public class Restassured_Automation_MethodologyItemRelations {
 		 */
 		ExtentTestManager.statusLogMessage(deleteRelationRes.statusCode());
 		ExtentTestManager.getTest().log(Status.INFO, deleteRelationRes.asString());
-		System.out.println("This particular below line is based on Sprint 7 & the Requirement ID : 1008");
 		MethodologyItem.validate_HTTPStrictTransportSecurity(deleteRelationRes);
 
 	}
@@ -1264,7 +1257,6 @@ public class Restassured_Automation_MethodologyItemRelations {
 		 */
 		ExtentTestManager.statusLogMessage(deleteRelationRes.statusCode());
 		ExtentTestManager.getTest().log(Status.INFO, deleteRelationRes.asString());
-		System.out.println("This particular below line is based on Sprint 7 & the Requirement ID : 1008");
 		MethodologyItem.validate_HTTPStrictTransportSecurity(deleteRelationRes);
 	}
 
@@ -1554,7 +1546,6 @@ public class Restassured_Automation_MethodologyItemRelations {
 		 */
 		ExtentTestManager.statusLogMessage(deleteRelationRes.statusCode());
 		ExtentTestManager.getTest().log(Status.INFO, deleteRelationRes.asString());
-		System.out.println("This particular below line is based on Sprint 7 & the Requirement ID : 1008");
 		AllUtils.validate_HTTPStrictTransportSecurity(deleteRelationRes);
 
 	}
@@ -1845,7 +1836,6 @@ public class Restassured_Automation_MethodologyItemRelations {
 		 */
 		ExtentTestManager.statusLogMessage(deleteRelationRes.statusCode());
 		ExtentTestManager.getTest().log(Status.INFO, deleteRelationRes.asString());
-		System.out.println("This particular below line is based on Sprint 7 & the Requirement ID : 1008");
 		AllUtils.validate_HTTPStrictTransportSecurity(deleteRelationRes);
 
 	}
@@ -1971,7 +1961,6 @@ public class Restassured_Automation_MethodologyItemRelations {
 		 */
 		ExtentTestManager.statusLogMessage(deleteRelationRes.statusCode());
 		ExtentTestManager.getTest().log(Status.INFO, deleteRelationRes.asString());
-		System.out.println("This particular below line is based on Sprint 7 & the Requirement ID : 1008");
 		MethodologyItem.validate_HTTPStrictTransportSecurity(deleteRelationRes);
 
 	}

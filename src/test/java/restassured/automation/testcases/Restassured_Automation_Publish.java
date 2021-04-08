@@ -16,6 +16,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.Status;
 import com.google.gson.JsonIOException;
 import com.google.gson.JsonSyntaxException;
 
@@ -23,6 +24,7 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import restassured.automation.Pojo.PublishPojo;
 import restassured.automation.Pojo.User_Pojo;
+import restassured.automation.listeners.ExtentTestManager;
 import restassured.automation.utils.Restassured_Automation_Utils;
 import restassured.automation.utils.read_Configuration_Propertites;
 
@@ -128,8 +130,14 @@ public class Restassured_Automation_Publish extends read_Configuration_Propertit
 				"/api/publish/publish/" + methodologyId.get(methodologyId.size()-1) + "/" + rediD.substring(1, rediD.length() - 1), PublishPojo);
 		createPublish.prettyPrint();
 		
-		validate_HTTPStrictTransportSecurity(createPublish);
+		
 		Assert.assertEquals(createPublish.statusCode(), 200);
+		/**
+		 * Extent report generation
+		 */
+		ExtentTestManager.statusLogMessage(createPublish.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,createPublish.asString());
+		getMethodology.validate_HTTPStrictTransportSecurity(createPublish);
 		
 		//return createPublish.statusCode();
 
@@ -174,8 +182,14 @@ public class Restassured_Automation_Publish extends read_Configuration_Propertit
 				"/api/publish/validate/" + methodologyId.get(methodologyId.size()-1) + "/" + rediD.substring(1, rediD.length() - 1));
 		createPublish.prettyPrint();
 		
-		validate_HTTPStrictTransportSecurity(createPublish);
+		
 		Assert.assertEquals(createPublish.statusCode(), 200);
+		/**
+		 * Extent report generation
+		 */
+		ExtentTestManager.statusLogMessage(createPublish.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,createPublish.asString());
+		getMethodology.validate_HTTPStrictTransportSecurity(createPublish);
 
 	}
 	
@@ -215,13 +229,18 @@ public class Restassured_Automation_Publish extends read_Configuration_Propertit
 				"/api/publish/publish/" + methodologyId.get(methodologyId.size()-1));
 		createValidate.prettyPrint();
 		
-		validate_HTTPStrictTransportSecurity(createValidate);
 		Assert.assertEquals(createValidate.statusCode(), 200);
+		/**
+		 * Extent report generation
+		 */
+		ExtentTestManager.statusLogMessage(createValidate.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,createValidate.asString());
+		getMethodology.validate_HTTPStrictTransportSecurity(createValidate);
 		
 	}
 
 	
-	@Test(groups = "IntegrationTests")
+	//@Test(groups = "IntegrationTests")
 	public void MethodologyItemRelation_DeleteLinkedMethodologyItem_status400()
 			throws JsonIOException, JsonSyntaxException, IOException {
 

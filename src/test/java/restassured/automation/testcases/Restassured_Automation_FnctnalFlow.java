@@ -14,6 +14,8 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.Status;
+
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import jxl.read.biff.BiffException;
@@ -24,6 +26,7 @@ import restassured.automation.Pojo.Methodology_Pojo;
 import restassured.automation.Pojo.RootConditionGroup;
 import restassured.automation.Pojo.User_Pojo;
 import restassured.automation.Pojo.MethodologyItem_Pojo.InitData;
+import restassured.automation.listeners.ExtentTestManager;
 import restassured.automation.utils.Excel_Data_Source_Utils;
 import restassured.automation.utils.Restassured_Automation_Utils;
 import restassured.automation.utils.read_Configuration_Propertites;
@@ -128,9 +131,15 @@ public class Restassured_Automation_FnctnalFlow {
 		Excel_Data_Source_Utils.writeToExcel(originalExcelPath, copyExcelPath, engagementId1, 2, 2, 1);
 
 		Assert.assertEquals(createEngagementType.statusCode(), statusCode);
+		/**
+		 * Extent report generation
+		 */
+		ExtentTestManager.statusLogMessage(createEngagementType.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,createEngagementType.asString());
+		restUtils.validate_HTTPStrictTransportSecurity(createEngagementType);
 
 	}
-
+	
 	/**
 	 * 
 	 * SPTE-2: CREATING A NEW METHODOLOGY (calling the post Method)
@@ -179,6 +188,13 @@ public class Restassured_Automation_FnctnalFlow {
 		Excel_Data_Source_Utils.writeToExcel(originalExcelPath, copyExcelPath, methodologyId, 3, 1, 5);
 
 		Assert.assertEquals(createMethodology.statusCode(), statusCode);
+		/**
+		 * Extent report generation
+		 */
+		ExtentTestManager.statusLogMessage(createMethodology.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,createMethodology.asString());
+		restUtils.validate_HTTPStrictTransportSecurity(createMethodology);
+
 
 	}
 
@@ -237,6 +253,12 @@ public class Restassured_Automation_FnctnalFlow {
 		Excel_Data_Source_Utils.writeToExcel(originalExcelPath, copyExcelPath, removeDoubleQuotes(postMethodologyItem.asString()), 4, 1, 4);
 
 		Assert.assertEquals(postMethodologyItem.statusCode(), statusCode);
+		/**
+		 * Extent report generation
+		 */
+		ExtentTestManager.statusLogMessage(postMethodologyItem.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,postMethodologyItem.asString());
+		restUtils.validate_HTTPStrictTransportSecurity(postMethodologyItem);
 
 	}
 
@@ -288,6 +310,13 @@ public class Restassured_Automation_FnctnalFlow {
 		//Excel_Data_Source_Utils.writeToExcel(originalExcelPath, copyExcelPath, postMethodologyItem.asString(), 4, 1, 0);
 
 		Assert.assertEquals(postMethodologyItem.statusCode(), statusCode);
+		/**
+		 * Extent report generation
+		 */
+		ExtentTestManager.statusLogMessage(postMethodologyItem.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,postMethodologyItem.asString());
+		MethodologyItem.validate_HTTPStrictTransportSecurity(postMethodologyItem);
+
 
 
 	}

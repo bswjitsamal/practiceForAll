@@ -70,15 +70,17 @@ public class Restassured_Automation_EngagementType {
 		Response getEngagementTypeRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/engagementType",
 				"Organization", listOrdId.get(5));
 		getEngagementTypeRes.prettyPrint();
-		//allUtils.validate_HTTPStrictTransportSecurity(getEngagementTypeRes);
+		
 		Assert.assertEquals(getEngagementTypeRes.statusCode(), 200);
+		
 		/**
 		 * Extent report generation
 		 */
 		ExtentTestManager.statusLogMessage(getEngagementTypeRes.statusCode());
 		ExtentTestManager.getTest().log(Status.INFO,getEngagementTypeRes.asString());
-		System.out.println("This particular below line is based on Sprint 7 & the Requirement ID : 1008");
 		allUtils.validate_HTTPStrictTransportSecurity(getEngagementTypeRes);
+		
+		
 		
 
 	}
@@ -103,12 +105,12 @@ public class Restassured_Automation_EngagementType {
 		//System.out.println("This particular below line is based on Sprint 7 & the Requirement ID : 1008");
 		//engagementType.validate_HTTPStrictTransportSecurity(postEngagementType);
 		Assert.assertEquals(postEngagementType.statusCode(), 200);
+		
 		/**
 		 * Extent report generation
 		 */
 		ExtentTestManager.statusLogMessage(postEngagementType.statusCode());
 		ExtentTestManager.getTest().log(Status.INFO,postEngagementType.asString());
-		System.out.println("This particular below line is based on Sprint 7 & the Requirement ID : 1008");
 		engagementType.validate_HTTPStrictTransportSecurity(postEngagementType);
 
 	}
@@ -127,14 +129,13 @@ public class Restassured_Automation_EngagementType {
 		Response postEngagementType = engagementType.post_URLPOJO(URL, AuthorizationKey, "/api/engagementType", en);
 		postEngagementType.prettyPrint();
 
-		//engagementType.validate_HTTPStrictTransportSecurity(postEngagementType);
+		
 		Assert.assertEquals(postEngagementType.statusCode(), 400);
 		/**
 		 * Extent report generation
 		 */
 		ExtentTestManager.statusLogMessage(postEngagementType.statusCode());
 		ExtentTestManager.getTest().log(Status.INFO,postEngagementType.asString());
-		System.out.println("This particular below line is based on Sprint 7 & the Requirement ID : 1008");
 		engagementType.validate_HTTPStrictTransportSecurity(postEngagementType);
 
 
@@ -153,14 +154,13 @@ public class Restassured_Automation_EngagementType {
 
 		Response postEngagementType = engagementType.post_URLPOJO(URL, AuthorizationKey, "/api/engagementType", en);
 		postEngagementType.prettyPrint();
-		//engagementType.validate_HTTPStrictTransportSecurity(postEngagementType);
+		
 		Assert.assertEquals(postEngagementType.statusCode(), 409);
 		/**
 		 * Extent report generation
 		 */
 		ExtentTestManager.statusLogMessage(postEngagementType.statusCode());
 		ExtentTestManager.getTest().log(Status.INFO,postEngagementType.asString());
-		System.out.println("This particular below line is based on Sprint 7 & the Requirement ID : 1008");
 		engagementType.validate_HTTPStrictTransportSecurity(postEngagementType);
 
 
@@ -203,14 +203,13 @@ public class Restassured_Automation_EngagementType {
 		Response patchEngagementType = allUtils.patch_URLPOJO(URL, AuthorizationKey, patchId, en);
 		patchEngagementType.prettyPrint();
 		System.out.println("url passed");
-		//allUtils.validate_HTTPStrictTransportSecurity(patchEngagementType);
+		
 		Assert.assertEquals(patchEngagementType.statusCode(), 200);
 		/**
 		 * Extent report generation
 		 */
 		ExtentTestManager.statusLogMessage(patchEngagementType.statusCode());
 		ExtentTestManager.getTest().log(Status.INFO,patchEngagementType.asString());
-		System.out.println("This particular below line is based on Sprint 7 & the Requirement ID : 1008");
 		allUtils.validate_HTTPStrictTransportSecurity(patchEngagementType);
 
 
@@ -253,13 +252,13 @@ public class Restassured_Automation_EngagementType {
 		Response patchEngagementType = allUtils.patch_URLPOJO(URL, AuthorizationKey, patchId, en);
 		patchEngagementType.prettyPrint();
 		// System.out.println("url passed");
+		
 		Assert.assertEquals(patchEngagementType.statusCode(), 400);
 		/**
 		 * Extent report generation
 		 */
 		ExtentTestManager.statusLogMessage(patchEngagementType.statusCode());
 		ExtentTestManager.getTest().log(Status.INFO,patchEngagementType.asString());
-		System.out.println("This particular below line is based on Sprint 7 & the Requirement ID : 1008");
 		allUtils.validate_HTTPStrictTransportSecurity(patchEngagementType);
 
 	}
@@ -304,13 +303,13 @@ public class Restassured_Automation_EngagementType {
 
 		Response patchEngagementType = allUtils.patch_URLPOJO(URL, AuthorizationKey, patchId, en);
 		patchEngagementType.prettyPrint();
+		
 		Assert.assertEquals(patchEngagementType.statusCode(), 409);
 		/**
 		 * Extent report generation
 		 */
 		ExtentTestManager.statusLogMessage(patchEngagementType.statusCode());
 		ExtentTestManager.getTest().log(Status.INFO,patchEngagementType.asString());
-		System.out.println("This particular below line is based on Sprint 7 & the Requirement ID : 1008");
 		allUtils.validate_HTTPStrictTransportSecurity(patchEngagementType);
 
 	}
@@ -362,13 +361,13 @@ public class Restassured_Automation_EngagementType {
 
 		Response deleteEngagementType = allUtils.delete(URL, AuthorizationKey, patchId);
 		deleteEngagementType.prettyPrint();
+		
 		Assert.assertEquals(deleteEngagementType.statusCode(), 204);
 		/**
 		 * Extent report generation
 		 */
 		ExtentTestManager.statusLogMessage(deleteEngagementType.statusCode());
 		ExtentTestManager.getTest().log(Status.INFO,deleteEngagementType.asString());
-		System.out.println("This particular below line is based on Sprint 7 & the Requirement ID : 1008");
 		allUtils.validate_HTTPStrictTransportSecurity(deleteEngagementType);
 
 		
@@ -407,13 +406,13 @@ public class Restassured_Automation_EngagementType {
 		allUtils.delete(URL, AuthorizationKey, patchId);
 		Response deleteEngagementType = allUtils.delete(URL, AuthorizationKey, patchId);
 		deleteEngagementType.prettyPrint();
+		
 		Assert.assertEquals(deleteEngagementType.statusCode(), 400);
 		/**
 		 * Extent report generation
 		 */
 		ExtentTestManager.statusLogMessage(deleteEngagementType.statusCode());
 		ExtentTestManager.getTest().log(Status.INFO,deleteEngagementType.asString());
-		System.out.println("This particular below line is based on Sprint 7 & the Requirement ID : 1008");
 		allUtils.validate_HTTPStrictTransportSecurity(deleteEngagementType);
 
 
@@ -480,12 +479,12 @@ public class Restassured_Automation_EngagementType {
 		Response deleteEngagementType = allUtils.delete(URL, AuthorizationKey, patchId);
 		deleteEngagementType.prettyPrint();
 		Assert.assertEquals(deleteEngagementType.statusCode(), 204);
+		
 		/**
 		 * Extent report generation
 		 */
 		ExtentTestManager.statusLogMessage(deleteEngagementType.statusCode());
 		ExtentTestManager.getTest().log(Status.INFO,deleteEngagementType.asString());
-		System.out.println("This particular below line is based on Sprint 7 & the Requirement ID : 1008");
 		allUtils.validate_HTTPStrictTransportSecurity(deleteEngagementType);
 
 

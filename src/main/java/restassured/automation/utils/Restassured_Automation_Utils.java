@@ -320,13 +320,16 @@ public void validate_HTTPStrictTransportSecurity(Response response) {
     String strictTransportSecurity = response.header("Strict-Transport-Security");
     System.out.println("Server value: " + strictTransportSecurity);
     
-    if("max-age=63072000; includeSubDomains; preload" == strictTransportSecurity) {
+    /*if("max-age=63072000; includeSubDomains; preload" == strictTransportSecurity) {
         System.out.println("This is following HTTPStrictTransportSecurity");
-        ExtentTestManager.getTest().log(Status.INFO,"This is following HTTPStrictTransportSecurity");
+        ExtentTestManager.getTest().log(Status.INFO,"This is following HTTPStrictTransportSecurity--->"+strictTransportSecurity);
     }else {
         System.out.println("This is NOT following HTTPStrictTransportSecurity");
         ExtentTestManager.getTest().log(Status.INFO,"This is NOT following HTTPStrictTransportSecurity. This particular validation is based on Sprint 7 & the Requirement ID : 1008");
-    }
-    //Assert.assertEquals("max-age=63072000; includeSubDomains; preload", strictTransportSecurity);
+    }*/
+    Assert.assertEquals("max-age=63072000; includeSubDomains; preload", strictTransportSecurity);
+    ExtentTestManager.getTest().log(Status.INFO,"This is following HTTPStrictTransportSecurity--->"+strictTransportSecurity);
 }
+
+
 }

@@ -15,9 +15,12 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.Status;
+
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import restassured.automation.Pojo.EngagementTeamRoles_Pojo;
+import restassured.automation.listeners.ExtentTestManager;
 import restassured.automation.utils.Restassured_Automation_Utils;
 import restassured.automation.utils.read_Configuration_Propertites;
 
@@ -83,6 +86,12 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		getEngagementTeamRoles.prettyPrint();
 		
 		Assert.assertEquals(getEngagementTeamRoles.statusCode(), 200);
+		/**
+		 * Extent report generation
+		 */
+		ExtentTestManager.statusLogMessage(getEngagementTeamRoles.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,getEngagementTeamRoles.asString());
+		getMethodology.validate_HTTPStrictTransportSecurity(getEngagementTeamRoles);
 		
 	}
 	
@@ -117,6 +126,12 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		postEngagementTeamRoles.prettyPrint();
 		
 		Assert.assertEquals(postEngagementTeamRoles.statusCode(), 200);
+		/**
+		 * Extent report generation
+		 */
+		ExtentTestManager.statusLogMessage(postEngagementTeamRoles.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,postEngagementTeamRoles.asString());
+		getMethodology.validate_HTTPStrictTransportSecurity(postEngagementTeamRoles);
 		
 	}
 	
@@ -151,7 +166,12 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		postEngagementTeamRoles.prettyPrint();
 		
 		Assert.assertEquals(postEngagementTeamRoles.statusCode(), 409);
-		
+		/**
+		 * Extent report generation
+		 */
+		ExtentTestManager.statusLogMessage(postEngagementTeamRoles.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,postEngagementTeamRoles.asString());
+		getMethodology.validate_HTTPStrictTransportSecurity(postEngagementTeamRoles);
 	}
 
 	@Test(groups = { "IntegrationTests" })
@@ -185,6 +205,12 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		postEngagementTeamRoles.prettyPrint();
 		
 		Assert.assertEquals(postEngagementTeamRoles.statusCode(), 400);
+		/**
+		 * Extent report generation
+		 */
+		ExtentTestManager.statusLogMessage(postEngagementTeamRoles.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,postEngagementTeamRoles.asString());
+		getMethodology.validate_HTTPStrictTransportSecurity(postEngagementTeamRoles);
 		
 	}
 	
@@ -224,6 +250,12 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		patchEngagementTeamRoles.prettyPrint();
 		
 		Assert.assertEquals(patchEngagementTeamRoles.statusCode(), 204);
+		/**
+		 * Extent report generation
+		 */
+		ExtentTestManager.statusLogMessage(patchEngagementTeamRoles.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,patchEngagementTeamRoles.asString());
+		getMethodology.validate_HTTPStrictTransportSecurity(patchEngagementTeamRoles);
 		
 	}
 	
@@ -263,6 +295,12 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		patchEngagementTeamRoles.prettyPrint();
 		
 		Assert.assertEquals(patchEngagementTeamRoles.statusCode(), 409);
+		/**
+		 * Extent report generation
+		 */
+		ExtentTestManager.statusLogMessage(patchEngagementTeamRoles.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,patchEngagementTeamRoles.asString());
+		getMethodology.validate_HTTPStrictTransportSecurity(patchEngagementTeamRoles);
 		
 	}
 	
@@ -302,6 +340,12 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		patchEngagementTeamRoles.prettyPrint();
 		
 		Assert.assertEquals(patchEngagementTeamRoles.statusCode(), 400);
+		/**
+		 * Extent report generation
+		 */
+		ExtentTestManager.statusLogMessage(patchEngagementTeamRoles.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,patchEngagementTeamRoles.asString());
+		getMethodology.validate_HTTPStrictTransportSecurity(patchEngagementTeamRoles);
 		
 	}
 	
@@ -332,6 +376,12 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		patchEngagementTeamRoles.prettyPrint();
 		
 		Assert.assertEquals(patchEngagementTeamRoles.statusCode(), 204);
+		/**
+		 * Extent report generation
+		 */
+		ExtentTestManager.statusLogMessage(patchEngagementTeamRoles.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,patchEngagementTeamRoles.asString());
+		allUtils.validate_HTTPStrictTransportSecurity(patchEngagementTeamRoles);
 		
 	}
 	
@@ -361,6 +411,12 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		patchEngagementTeamRoles.prettyPrint();
 		
 		Assert.assertEquals(patchEngagementTeamRoles.statusCode(), 400);
+		/**
+		 * Extent report generation
+		 */
+		ExtentTestManager.statusLogMessage(patchEngagementTeamRoles.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,patchEngagementTeamRoles.asString());
+		allUtils.validate_HTTPStrictTransportSecurity(patchEngagementTeamRoles);
 		
 	}
 	
@@ -405,6 +461,12 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		createPublish.prettyPrint();
 		
 		Assert.assertEquals(createPublish.statusCode(), 200);
+		/**
+		 * Extent report generation
+		 */
+		ExtentTestManager.statusLogMessage(createPublish.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,createPublish.asString());
+		getMethodology.validate_HTTPStrictTransportSecurity(createPublish);
 
 	}
 	
@@ -456,6 +518,13 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		createPublish.prettyPrint();
 		
 		Assert.assertEquals(createPublish.statusCode(), 200);
+		/**
+		 * Extent report generation
+		 */
+		ExtentTestManager.statusLogMessage(createPublish.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,createPublish.asString());
+		getMethodology.validate_HTTPStrictTransportSecurity(createPublish);
+
 
 	}
 	
@@ -506,6 +575,13 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		createPublish.prettyPrint();
 		
 		Assert.assertEquals(createPublish.statusCode(), 400);
+		/**
+		 * Extent report generation
+		 */
+		ExtentTestManager.statusLogMessage(createPublish.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,createPublish.asString());
+		getMethodology.validate_HTTPStrictTransportSecurity(createPublish);
+
 
 	}
 	
@@ -556,6 +632,13 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		createPublish.prettyPrint();
 		
 		Assert.assertEquals(createPublish.statusCode(), 409);
+		/**
+		 * Extent report generation
+		 */
+		ExtentTestManager.statusLogMessage(createPublish.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,createPublish.asString());
+		getMethodology.validate_HTTPStrictTransportSecurity(createPublish);
+
 
 	}
 	
@@ -618,6 +701,13 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		
 		
 		Assert.assertEquals(patchPublish.statusCode(), 204);
+		/**
+		 * Extent report generation
+		 */
+		ExtentTestManager.statusLogMessage(patchPublish.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,patchPublish.asString());
+		getMethodology.validate_HTTPStrictTransportSecurity(patchPublish);
+
 
 	}
 	
@@ -681,7 +771,12 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		
 		
 		Assert.assertEquals(patchPublish.statusCode(), 409);
-
+		/**
+		 * Extent report generation
+		 */
+		ExtentTestManager.statusLogMessage(patchPublish.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,patchPublish.asString());
+		getMethodology.validate_HTTPStrictTransportSecurity(patchPublish);
 	}
 	
 	@Test(groups = { "IntegrationTests" })
@@ -743,6 +838,12 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		
 		
 		Assert.assertEquals(patchPublish.statusCode(), 400);
+		/**
+		 * Extent report generation
+		 */
+		ExtentTestManager.statusLogMessage(patchPublish.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,patchPublish.asString());
+		getMethodology.validate_HTTPStrictTransportSecurity(patchPublish);
 
 	}
 
@@ -799,6 +900,12 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		dalatePublish.prettyPrint();		
 		
 		Assert.assertEquals(dalatePublish.statusCode(), 204);
+		/**
+		 * Extent report generation
+		 */
+		ExtentTestManager.statusLogMessage(dalatePublish.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,dalatePublish.asString());
+		getMethodology.validate_HTTPStrictTransportSecurity(dalatePublish);
 
 	}
 
@@ -861,6 +968,12 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		
 		
 		Assert.assertEquals(deletePublishAgain.statusCode(), 400);
+		/**
+		 * Extent report generation
+		 */
+		ExtentTestManager.statusLogMessage(deletePublishAgain.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,deletePublishAgain.asString());
+		getMethodology.validate_HTTPStrictTransportSecurity(deletePublishAgain);
 
 	}
 

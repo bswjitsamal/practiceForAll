@@ -162,7 +162,6 @@ public class Restassured_Automation_Organizations  {
 		 */
 		ExtentTestManager.statusLogMessage(postOrganizationData.statusCode());
 		ExtentTestManager.getTest().log(Status.INFO,postOrganizationData.asString());
-		System.out.println("This particular below line is based on Sprint 7 & the Requirement ID : 1008");
 		Organization.validate_HTTPStrictTransportSecurity(postOrganizationData);
 	}
 
@@ -187,7 +186,6 @@ public class Restassured_Automation_Organizations  {
 		 */
 		ExtentTestManager.statusLogMessage(getMethodologyByrevisonIdRes.statusCode());
 		ExtentTestManager.getTest().log(Status.INFO,getMethodologyByrevisonIdRes.asString());
-		System.out.println("This particular below line is based on Sprint 7 & the Requirement ID : 1008");
 		Organization.validate_HTTPStrictTransportSecurity(getMethodologyByrevisonIdRes);
 		
 	}
@@ -228,7 +226,6 @@ public class Restassured_Automation_Organizations  {
 		 */
 		ExtentTestManager.statusLogMessage(patchOrgRes.statusCode());
 		ExtentTestManager.getTest().log(Status.INFO,patchOrgRes.asString());
-		System.out.println("This particular below line is based on Sprint 7 & the Requirement ID : 1008");
 		Organization.validate_HTTPStrictTransportSecurity(patchOrgRes);
 	}
 
@@ -284,7 +281,6 @@ public class Restassured_Automation_Organizations  {
 		 */
 		ExtentTestManager.statusLogMessage(getOrgId.statusCode());
 		ExtentTestManager.getTest().log(Status.INFO,getOrgId.asString());
-		System.out.println("This particular below line is based on Sprint 7 & the Requirement ID : 1008");
 		OrganizationsGet.validate_HTTPStrictTransportSecurity(getOrgId);
 
 	}
