@@ -141,9 +141,9 @@ public class Restassured_Automation_Organizations  {
 		 * Extent Report Generation
 		 */
 		
-		/*ExtentTestManager.statusLogMessage(getMethodologyByIdRes.statusCode());
+		ExtentTestManager.statusLogMessage(getMethodologyByIdRes.statusCode());
 		ExtentTestManager.getTest().log(Status.INFO,getMethodologyByIdRes.asString());
-		getMethodologyById.validate_HTTPStrictTransportSecurity(getMethodologyByIdRes);*/
+		getMethodologyById.validate_HTTPStrictTransportSecurity(getMethodologyByIdRes);
 
 	}
 
@@ -192,7 +192,7 @@ public class Restassured_Automation_Organizations  {
 		
 	}
 
-	@Test(groups = "IntegrationTests")
+	//@Test(groups = "IntegrationTests")
 	public void Organisation_PatchCreateNewOrg200() throws Exception {
 		
 		Restassured_Automation_Utils OrganizationsGet = new Restassured_Automation_Utils();
@@ -232,7 +232,7 @@ public class Restassured_Automation_Organizations  {
 		Organization.validate_HTTPStrictTransportSecurity(patchOrgRes);
 	}
 
-	@Test(groups =  "EndToEnd")
+	//@Test(groups =  "EndToEnd")
 	public void Organisation_EndToEnd_Scenario() throws JsonIOException, JsonSyntaxException, IOException {
 		/**
 		 * CRREATING THE NEW ORGANISATION

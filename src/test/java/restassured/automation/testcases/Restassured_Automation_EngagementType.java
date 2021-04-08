@@ -68,7 +68,7 @@ public class Restassured_Automation_EngagementType {
 		 */
 
 		Response getEngagementTypeRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/engagementType",
-				"Organization", listOrdId.get(4));
+				"Organization", listOrdId.get(5));
 		getEngagementTypeRes.prettyPrint();
 		//allUtils.validate_HTTPStrictTransportSecurity(getEngagementTypeRes);
 		Assert.assertEquals(getEngagementTypeRes.statusCode(), 200);
@@ -83,7 +83,7 @@ public class Restassured_Automation_EngagementType {
 
 	}
 
-	@Test(groups = "IntegrationTests")
+	//@Test(groups = "IntegrationTests")
 	public void EngagementType_PostcreateANewEngagementType_status200() throws IOException {
 
 		Properties post = read_Configuration_Propertites.loadproperty("Configuration");
@@ -166,7 +166,7 @@ public class Restassured_Automation_EngagementType {
 
 	}
 
-	@Test(groups = "IntegrationTests")
+	//@Test(groups = "IntegrationTests")
 	public void EngagementType_PatchUpdateAnEngagementType_status200() throws IOException {
 
 		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
@@ -183,7 +183,7 @@ public class Restassured_Automation_EngagementType {
 		 */
 
 		Response getEngagementTypeRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/engagementType",
-				"Organization", listOrdId.get(4));
+				"Organization", listOrdId.get(5));
 		 getEngagementTypeRes.prettyPrint();
 
 		JsonPath jsonEvaluator1 = getEngagementTypeRes.jsonPath();
@@ -198,7 +198,7 @@ public class Restassured_Automation_EngagementType {
 		en.setTitle(post.getProperty("postEngagementTypeTitle") + allUtils.getRandomNumber(1, 7));
 		// en.setOrganization(listOrdId.get(7));
 
-		String patchId = "/api/engagementType/" + listEngagementTypeId.get(5);
+		String patchId = "/api/engagementType/" + listEngagementTypeId.get(2);
 
 		Response patchEngagementType = allUtils.patch_URLPOJO(URL, AuthorizationKey, patchId, en);
 		patchEngagementType.prettyPrint();
@@ -233,14 +233,14 @@ public class Restassured_Automation_EngagementType {
 		 */
 
 		Response getEngagementTypeRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/engagementType",
-				"Organization", listOrdId.get(4));
+				"Organization", listOrdId.get(5));
 		// getEngagementTypeRes.prettyPrint();
 
 		JsonPath jsonEvaluator1 = getEngagementTypeRes.jsonPath();
 		listEngagementTypeId = jsonEvaluator1.get("id");
 		listTitle = jsonEvaluator1.get("title");
 		listOrdId = jsonEvaluator1.get("Organization");
-		System.out.println("Engagement id" + listEngagementTypeId.get(5));
+		System.out.println("Engagement id" + listEngagementTypeId.get(2));
 
 		Properties post = read_Configuration_Propertites.loadproperty("Configuration");
 
@@ -248,7 +248,7 @@ public class Restassured_Automation_EngagementType {
 		en.setTitle(" ");
 		// en.setOrganization(listOrdId.get(7));
 
-		String patchId = "/api/engagementType/" + listEngagementTypeId.get(5);
+		String patchId = "/api/engagementType/" + listEngagementTypeId.get(2);
 
 		Response patchEngagementType = allUtils.patch_URLPOJO(URL, AuthorizationKey, patchId, en);
 		patchEngagementType.prettyPrint();
@@ -274,6 +274,8 @@ public class Restassured_Automation_EngagementType {
 		Response OrganizationsDetails = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/org");
 		JsonPath jsonPathEvaluator = OrganizationsDetails.jsonPath();
 		listOrdId = jsonPathEvaluator.get("id");
+		String orgId=listOrdId.get(5);
+		
 		OrganizationsDetails.prettyPrint();
 
 		/**
@@ -281,24 +283,24 @@ public class Restassured_Automation_EngagementType {
 		 */
 
 		Response getEngagementTypeRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/engagementType",
-				"Organization", listOrdId.get(4));
+				"Organization", listOrdId.get(5));
 		getEngagementTypeRes.prettyPrint();
 
 		JsonPath jsonEvaluator1 = getEngagementTypeRes.jsonPath();
 		listEngagementTypeId = jsonEvaluator1.get("id");
 		listTitle = jsonEvaluator1.get("title");
 		listOrdId = jsonEvaluator1.get("Organization");
-		System.out.println("Engagement id---->" + listEngagementTypeId.get(0));
+		System.out.println("Engagement id---->" + listEngagementTypeId.get(2));
 		String title = listTitle.get(1);
 		System.out.println("Title------>" + title);
 
 		Properties post = read_Configuration_Propertites.loadproperty("Configuration");
 
 		Engagement_Type_Pojo en = new Engagement_Type_Pojo();
-		en.setTitle(listTitle.get(1));
-		en.setOrganization(listOrdId.get(7));
+		en.setTitle(title);
+		en.setOrganization(orgId);
 
-		String patchId = "/api/engagementType/" + listEngagementTypeId.get(0);
+		String patchId = "/api/engagementType/" + listEngagementTypeId.get(2);
 
 		Response patchEngagementType = allUtils.patch_URLPOJO(URL, AuthorizationKey, patchId, en);
 		patchEngagementType.prettyPrint();
@@ -313,7 +315,7 @@ public class Restassured_Automation_EngagementType {
 
 	}
 
-	@Test(groups = "IntegrationTests")
+	//@Test(groups = "IntegrationTests")
 	public void EngagementType_DeleteAnEngagementType_status204() throws IOException {
 
 		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
@@ -334,7 +336,7 @@ public class Restassured_Automation_EngagementType {
 		Engagement_Type_Pojo en = new Engagement_Type_Pojo();
 		en.setTitle(post.getProperty("postEngagementTypeTitle") + getRandomAlphaNum()
 				+ engagementType.getRandomNumber(1, 20));
-		en.setOrganization(post.getProperty("postEngagementTypeOrganization"));
+		en.setOrganization(listOrdId.get(5));
 
 		Response postEngagementType = engagementType.post_URLPOJO(URL, AuthorizationKey, "/api/engagementType", en);
 		postEngagementType.prettyPrint();
@@ -373,7 +375,7 @@ public class Restassured_Automation_EngagementType {
 
 	}
 
-	@Test(groups = "IntegrationTests")
+	//@Test(groups = "IntegrationTests")
 	public void EngagementType_DeleteAnEngagementType_status400() throws IOException {
 
 		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
@@ -390,14 +392,14 @@ public class Restassured_Automation_EngagementType {
 		 */
 
 		Response getEngagementTypeRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/engagementType",
-				"Organization", listOrdId.get(4));
+				"Organization", listOrdId.get(5));
 		getEngagementTypeRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator1 = getEngagementTypeRes.jsonPath();
 		listEngagementTypeId = jsonPathEvaluator1.get("id");
 		int size=listEngagementTypeId.size();
 
-		String engagementTypeId = listEngagementTypeId.get(size-4);
+		String engagementTypeId = listEngagementTypeId.get(size-1);
 		System.out.println("engagementTypeId----->" + engagementTypeId);
 
 		String patchId = "/api/engagementType/" + engagementTypeId;
@@ -417,7 +419,7 @@ public class Restassured_Automation_EngagementType {
 
 	}
 
-	@Test(groups = { "EndToEnd" })
+	//@Test(groups = { "EndToEnd" })
 	public void EngagementType_EndToEnd_Scenario() throws JsonIOException, JsonSyntaxException, IOException {
 
 		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
@@ -434,7 +436,7 @@ public class Restassured_Automation_EngagementType {
 		 */
 
 		Response getEngagementTypeRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/engagementType",
-				"Organization", listOrdId.get(4));
+				"Organization", listOrdId.get(5));
 		getEngagementTypeRes.prettyPrint();
 		Assert.assertEquals(getEngagementTypeRes.statusCode(), 200);
 

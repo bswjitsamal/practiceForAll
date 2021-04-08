@@ -12,7 +12,13 @@
       </run>
     </groups>
     <classes>
+      <class name="restassured.automation.testcases.Restassured_Automation_Organizations"/>
+      <class name="restassured.automation.testcases.Restassured_Automation_OrgRoles"/>
+      <class name="restassured.automation.testcases.Restassured_Automation_EngagementType"/>
+      <class name="restassured.automation.testcases.Restassured_Automation_Methodology"/>
       <class name="restassured.automation.testcases.Restassured_Automation_ItemSelectQuestion"/>
+      <class name="restassured.automation.testcases.Restassured_Automation_MethodologItem"/>
+      <class name="restassured.automation.testcases.Restassured_Automation_MethodologyItemRelations"/>
     </classes>
   </test> <!-- Test -->
   <test name="Test(failed)">
@@ -27,13 +33,48 @@
         <methods>
           <include name="setup"/>
           <include name="ItemSelectQuestion_DeleteAnOptionFromAnItemSelectQuestion_status400"/>
-          <include name="ItemSelectQuestion_MoveASelectQuestionFromItemOption_status404"/>
+          <include name="ItemSelectQuestion_EndToEnd_Scenario"/>
           <include name="ItemSelectQuestion_DeleteAnOptionGroupFromAnItemSelectQuestion_400"/>
-          <include name="ItemSelectQuestion_UpdateASelectQuestionItemOptionGroup_404"/>
-          <include name="ItemSelectQuestion_MoveASelectQuestionFromItemOption_status200"/>
-          <include name="ItemSelectQuestion_MoveASelectQuestionFromItemOption_status400"/>
+          <include name="ItemSelectQuestion_DeleteAnOptionFromAnItemSelectQuestion_status204"/>
         </methods>
       </class> <!-- restassured.automation.testcases.Restassured_Automation_ItemSelectQuestion -->
+      <class name="restassured.automation.testcases.Restassured_Automation_Organizations">
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- restassured.automation.testcases.Restassured_Automation_Organizations -->
+      <class name="restassured.automation.testcases.Restassured_Automation_MethodologyItemRelations">
+        <methods>
+          <include name="MethodologyItemRelation_UpdateAMethodologyRelation_status400"/>
+          <include name="MethodologyItemRelation_UpdateAMethodologyRelation_status200"/>
+          <include name="MethodologyItemRelation_ListOfAllMethodologyRelation_status400"/>
+          <include name="MethodologyItemRelation_PostCreateANewMethodologyRelation_status200"/>
+          <include name="MethodologyItemRelation_DeleteAnMethodologyRelation_status400"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- restassured.automation.testcases.Restassured_Automation_MethodologyItemRelations -->
+      <class name="restassured.automation.testcases.Restassured_Automation_OrgRoles">
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- restassured.automation.testcases.Restassured_Automation_OrgRoles -->
+      <class name="restassured.automation.testcases.Restassured_Automation_Methodology">
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- restassured.automation.testcases.Restassured_Automation_Methodology -->
+      <class name="restassured.automation.testcases.Restassured_Automation_MethodologItem">
+        <methods>
+          <include name="MethodologyItem_PutMoveATreeItemToAFolderAtSpecifiedIndex_status409"/>
+          <include name="MethodologyItem_GetAllMethodologyItemsForARevision_status400"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- restassured.automation.testcases.Restassured_Automation_MethodologItem -->
+      <class name="restassured.automation.testcases.Restassured_Automation_EngagementType">
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- restassured.automation.testcases.Restassured_Automation_EngagementType -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

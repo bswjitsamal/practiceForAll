@@ -77,7 +77,7 @@ public class Restassured_Automation_Methodology {
 		Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();
 
 		Response getMethodologyRes = getMethodology.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(4));
+				"Organization", listOrdId.get(5));
 		getMethodologyRes.prettyPrint();
 		Assert.assertEquals(getMethodologyRes.statusCode(), 200);
 		/**
@@ -109,16 +109,16 @@ public class Restassured_Automation_Methodology {
 		Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();
 
 		Response getMethodologyRes = getMethodology.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(4));
+				"Organization", listOrdId.get(5));
 		getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
 		methodologyId = jsonPathEvaluator1.get("id");
 
-		System.out.println(methodologyId);
+		System.out.println("methodologyId---------------->"+methodologyId.get(2));
 
 		Response getMethodologyByIdRes = getMethodology.get_URL_WithOne_PathParams(URL, AuthorizationKey,
-				"/api/methodology/{value}", methodologyId.get(0));
+				"/api/methodology/{value}", methodologyId.get(2));
 		getMethodologyByIdRes.prettyPrint();
 		Assert.assertEquals(getMethodologyByIdRes.statusCode(), 200);
 		/**
@@ -146,7 +146,7 @@ public class Restassured_Automation_Methodology {
 		Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();
 
 		Response getMethodologyRes = getMethodology.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(7));
+				"Organization", listOrdId.get(5));
 
 		getMethodologyRes.prettyPrint();
 
@@ -157,13 +157,13 @@ public class Restassured_Automation_Methodology {
 
 		// System.out.println(String.valueOf(listRevision.get(0)));
 
-		String revId = String.valueOf(listRevision.get(1));
+		String revId = String.valueOf(listRevision.get(2));
 		System.out.println("revision-------->" + revId);
 
 		System.out.println(methodologyId);
 
-		String patchId = "/api/methodology/" + methodologyId.get(1) + "/revision/"
-				+ revId.substring(1, revId.length() - 1);
+		String patchId = "/api/methodology/" + methodologyId.get(2) + "/revision/"
+				+ revId.substring(1,25);
 
 		Restassured_Automation_Utils getMethodologyByrevisonId = new Restassured_Automation_Utils();
 
@@ -200,7 +200,7 @@ public class Restassured_Automation_Methodology {
 		Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();
 
 		Response getMethodologyRes1 = getMethodology.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(4));
+				"Organization", listOrdId.get(5));
 		getMethodologyRes1.prettyPrint();
 
 		JsonPath jsonPathEvaluator2 = getMethodologyRes1.jsonPath();
@@ -211,7 +211,7 @@ public class Restassured_Automation_Methodology {
 		 */
 
 		Response getMethodologyRes = getMethodology.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(7));
+				"Organization", listOrdId.get(5));
 
 		getMethodologyRes.prettyPrint();
 
@@ -222,12 +222,12 @@ public class Restassured_Automation_Methodology {
 
 		// System.out.println(String.valueOf(listRevision.get(0)));
 
-		String revId = String.valueOf(listRevision.get(0));
+		String revId = String.valueOf(listRevision.get(2));
 
 		System.out.println(methodologyId);
 
-		String patchId = "/api/methodology/" + methodologyId1.get(2) + "/revision/"
-				+ revId.substring(1, revId.length() - 1);
+		String patchId = "/api/methodology/" + methodologyId1.get(0) + "/revisionss/"
+				+ revId.substring(1,25);
 
 		Restassured_Automation_Utils getMethodologyByrevisonId = new Restassured_Automation_Utils();
 
@@ -259,7 +259,7 @@ public class Restassured_Automation_Methodology {
 		
 
 		Response getMethodologyRes = getMethodology.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(4));
+				"Organization", listOrdId.get(5));
 
 		getMethodologyRes.prettyPrint();
 		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
@@ -295,7 +295,7 @@ public class Restassured_Automation_Methodology {
 
 	}
 
-	@Test(groups = "IntegrationTests")
+	//@Test(groups = "IntegrationTests")
 	public void Methodology_PostAddANewMethodology_status400() throws IOException {
 
 		Properties post = read_Configuration_Propertites.loadproperty("Configuration");
@@ -312,19 +312,20 @@ public class Restassured_Automation_Methodology {
 		Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();
 
 		Response getMethodologyRes = getMethodology.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(4));
+				"Organization", listOrdId.get(5));
 
 		getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator = getMethodologyRes.jsonPath();
 		engagementTypeId = jsonPathEvaluator.get("engagementType");
 		organizationId = jsonPathEvaluator.get("organization");
-		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions");
+		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions.id");
 
 		System.out.println(String.valueOf(listRevisionI1.get(0)));
 		System.out.println(String.valueOf(organizationId.get(0)));
 
-		String revId = String.valueOf(listRevisionI1.get(1));
+		String revId1 = String.valueOf(listRevisionI1.get(2));
+		String revId=revId1.substring(1,25); 
 
 		System.out.println(engagementTypeId);
 		System.out.println(revId);
@@ -370,14 +371,14 @@ public class Restassured_Automation_Methodology {
 		Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();
 
 		Response getMethodologyRes = getMethodology.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(4));
+				"Organization", listOrdId.get(5));
 
 		getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator = getMethodologyRes.jsonPath();
 
 		methodologyId = jsonPathEvaluator.get("id");
-		String patchId = "/api/methodology/" + methodologyId.get(0);
+		String patchId = "/api/methodology/" + methodologyId.get(2);
 
 		Map<String,String>map=new HashMap<String, String>();
 		map.put("title",post.getProperty("patchMethodologyTitle"));
@@ -402,7 +403,7 @@ public class Restassured_Automation_Methodology {
 
 	}
 
-	@Test(groups = "IntegrationTests")
+	//@Test(groups = "IntegrationTests")
 	public void Methodology_PatchUpdateAMethodology_status204() throws IOException {
 
 		Properties post = read_Configuration_Propertites.loadproperty("Configuration");
@@ -419,14 +420,14 @@ public class Restassured_Automation_Methodology {
 		Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();
 
 		Response getMethodologyRes = getMethodology.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(4));
+				"Organization", listOrdId.get(5));
 
 		getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator = getMethodologyRes.jsonPath();
 
 		methodologyId = jsonPathEvaluator.get("id");
-		String patchId = "/api/methodology/" + methodologyId.get(0);
+		String patchId = "/api/methodology/" + methodologyId.get(1);
 
 		Map<String,String>map=new HashMap<String, String>();
 		map.put("title",post.getProperty("postMethodologyTitle")+allUtils.getRandomNumber(1,30));
@@ -501,7 +502,7 @@ public class Restassured_Automation_Methodology {
 
 	}
 
-	@Test(groups = "IntegrationTests")
+	//@Test(groups = "IntegrationTests")
 	public void Methodology_PatchUpdateASpecificMethodologiesWith_Status_204() throws IOException {
 		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
 
@@ -514,7 +515,7 @@ public class Restassured_Automation_Methodology {
 		Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();
 
 		Response getMethodologyRes = getMethodology.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(4));
+				"Organization", listOrdId.get(5));
 
 		getMethodologyRes.prettyPrint();
 
@@ -566,7 +567,7 @@ public class Restassured_Automation_Methodology {
 		Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();
 
 		Response getMethodologyRes = getMethodology.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(7));
+				"Organization", listOrdId.get(5));
 
 		// getMethodologyRes.prettyPrint();
 
@@ -575,7 +576,7 @@ public class Restassured_Automation_Methodology {
 		listRevision = jsonPathEvaluator1.get("revisions.id");
 		// System.out.println(String.valueOf(listRevision.get(0)));
 		System.out.println("List---->" + listRevision);
-		String revId = String.valueOf(listRevision.get(1));
+		String revId = String.valueOf(listRevision.get(2));
 		System.out.println("Revision id------>" + revId);
 		System.out.println(methodologyId);
 		listDraftDescription = jsonPathEvaluator1.get("revisions.draftDescription");
@@ -589,7 +590,7 @@ public class Restassured_Automation_Methodology {
 		String createMethodology=po.methodologyAdd(map);
 	
 		String patchId = "/api/methodology/" + methodologyId.get(0) + "/revision/"
-				+ revId.substring(1, revId.length() - 1);
+				+ revId.substring(1,25);
 
 		Restassured_Automation_Utils getMethodologyByrevisonId = new Restassured_Automation_Utils();
 		Response getMethodologyByrevisonIdRes = getMethodologyByrevisonId.patch_URLPOJO(URL, AuthorizationKey, patchId,
@@ -606,7 +607,7 @@ public class Restassured_Automation_Methodology {
 
 	}
 
-	@Test(groups = "IntegrationTests")
+	//@Test(groups = "IntegrationTests")
 	public void Methodology_CreateANewCandidateRevisionWithStatus_200() throws IOException {
 		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
 
@@ -620,7 +621,7 @@ public class Restassured_Automation_Methodology {
 		Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();
 
 		Response getMethodologyRes = getMethodology.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(4));
+				"Organization", listOrdId.get(5));
 
 		getMethodologyRes.prettyPrint();
 
@@ -630,14 +631,14 @@ public class Restassured_Automation_Methodology {
 		ArrayList<String> parentId = jsonPathEvaluator1.get("id");
 		System.out.println(String.valueOf(listRevisionI1.get(0)));
 
-		String revId = String.valueOf(listRevisionI1.get(9));
-		String parntId = String.valueOf(parentId.get(0));
+		String revId = String.valueOf(listRevisionI1.get(1));
+		String parntId = String.valueOf(parentId.get(1));
 
 		/**
 		 * Creating an phase
 		 */
 
-		String patchId = "/api/methodologyItem/revision/" + revId.substring(1, revId.length() - 1) + "/item";
+		String patchId = "/api/methodologyItem/revision/" + revId.substring(1,25) + "/item";
 
 		Properties post = read_Configuration_Propertites.loadproperty("Configuration");
 		// MethodologyItem_Pojo mi1 = new MethodologyItem_Pojo();
@@ -670,7 +671,7 @@ public class Restassured_Automation_Methodology {
 		 * CREATING ONE MORE WP AGAIN WITH NEW DATA
 		 */
 
-		String patchId6 = "/api/methodologyItem/revision/" + revId.substring(1, revId.length() - 1) + "/item";
+		String patchId6 = "/api/methodologyItem/revision/" + revId.substring(1,25) + "/item";
 
 		Map<String, String> data6 = new HashMap<String, String>();
 		data6.put("title", post.getProperty("postMethodologyItemTitle"));
@@ -723,7 +724,7 @@ public class Restassured_Automation_Methodology {
 		 * Create an procedure
 		 */
 
-		String patchId3 = "/api/methodologyItem/revision/" + revId.substring(1, revId.length() - 1) + "/item";
+		String patchId3 = "/api/methodologyItem/revision/" + revId.substring(1,25) + "/item";
 
 		Map<String, String> data3 = new HashMap<String, String>();
 		data3.put("title", post.getProperty("postMethodologyItemTitle"));
@@ -763,7 +764,7 @@ public class Restassured_Automation_Methodology {
 		/**
 		 * Create an workflow - ReadyForApprove
 		 */
-		String workFlowURI = "/api/methodologyItem/revision/" + revId.substring(1, revId.length() - 1);
+		String workFlowURI = "/api/methodologyItem/revision/" + revId.substring(1,25);
 
 		Restassured_Automation_Utils getEngagementType = new Restassured_Automation_Utils();
 
@@ -777,7 +778,7 @@ public class Restassured_Automation_Methodology {
 
 		String workFlowParam = post.getProperty("postWorkFlowState");
 
-		String postId = "/api/methodologyItem/revision/" + revId.substring(1, revId.length() - 1) + "/workProgram/"
+		String postId = "/api/methodologyItem/revision/" + revId.substring(1,25) + "/workProgram/"
 				+ methodItemId3 + "/workFlow/" + workFlowParam;
 
 		Response postWorkFlowRes = getEngagementType.post_URL_WithoutBody(URL, AuthorizationKey, postId);
@@ -788,7 +789,7 @@ public class Restassured_Automation_Methodology {
 		 */
 
 		String workFlowParam1 = post.getProperty("postWorkFlowState2");
-		String postId1 = "/api/methodologyItem/revision/" + revId.substring(1, revId.length() - 1) + "/workProgram/"
+		String postId1 = "/api/methodologyItem/revision/" + revId.substring(1,25) + "/workProgram/"
 				+ methodItemId2 + "/workFlow/" + workFlowParam1;
 
 		Response postWorkFlowRes1 = getEngagementType.post_URL_WithoutBody(URL, AuthorizationKey, postId1);
@@ -814,7 +815,7 @@ public class Restassured_Automation_Methodology {
 
 	}
 	
-	@Test(groups = "IntegrationTests")
+	//@Test(groups = "IntegrationTests")
 	public void Methodology_CreateANewCandidateRevisionWithStatus_400() throws IOException {
 		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
 
@@ -828,7 +829,7 @@ public class Restassured_Automation_Methodology {
 		Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();
 
 		Response getMethodologyRes = getMethodology.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(4));
+				"Organization", listOrdId.get(5));
 
 		getMethodologyRes.prettyPrint();
 
@@ -838,14 +839,14 @@ public class Restassured_Automation_Methodology {
 		ArrayList<String> parentId = jsonPathEvaluator1.get("id");
 		System.out.println(String.valueOf(listRevisionI1.get(0)));
 
-		String revId = String.valueOf(listRevisionI1.get(9));
+		String revId = String.valueOf(listRevisionI1.get(0));
 		String parntId = String.valueOf(parentId.get(0));
 
 		/**
 		 * Creating an phase
 		 */
 
-		String patchId = "/api/methodologyItem/revision/" + revId.substring(1, revId.length() - 1) + "/item";
+		String patchId = "/api/methodologyItem/revision/" + revId.substring(1,25) + "/item";
 
 		Properties post = read_Configuration_Propertites.loadproperty("Configuration");
 		// MethodologyItem_Pojo mi1 = new MethodologyItem_Pojo();
@@ -878,7 +879,7 @@ public class Restassured_Automation_Methodology {
 		 * CREATING ONE MORE WP AGAIN WITH NEW DATA
 		 */
 
-		String patchId6 = "/api/methodologyItem/revision/" + revId.substring(1, revId.length() - 1) + "/item";
+		String patchId6 = "/api/methodologyItem/revision/" + revId.substring(1,25) + "/item";
 
 		Map<String, String> data6 = new HashMap<String, String>();
 		data6.put("title", post.getProperty("postMethodologyItemTitle"));
@@ -931,7 +932,7 @@ public class Restassured_Automation_Methodology {
 		 * Create an procedure
 		 */
 
-		String patchId3 = "/api/methodologyItem/revision/" + revId.substring(1, revId.length() - 1) + "/item";
+		String patchId3 = "/api/methodologyItem/revision/" + revId.substring(1,25) + "/item";
 
 		Map<String, String> data3 = new HashMap<String, String>();
 		data3.put("title", post.getProperty("postMethodologyItemTitle"));
@@ -971,7 +972,7 @@ public class Restassured_Automation_Methodology {
 		/**
 		 * Create an workflow - ReadyForApprove
 		 */
-		String workFlowURI = "/api/methodologyItem/revision/" + revId.substring(1, revId.length() - 1);
+		String workFlowURI = "/api/methodologyItem/revision/" + revId.substring(1,25);
 
 		Restassured_Automation_Utils getEngagementType = new Restassured_Automation_Utils();
 
@@ -985,7 +986,7 @@ public class Restassured_Automation_Methodology {
 
 		String workFlowParam = post.getProperty("postWorkFlowState");
 
-		String postId = "/api/methodologyItem/revision/" + revId.substring(1, revId.length() - 1) + "/workProgram/"
+		String postId = "/api/methodologyItem/revision/" + revId.substring(1,25) + "/workProgram/"
 				+ methodItemId3 + "/workFlow/" + workFlowParam;
 
 		Response postWorkFlowRes = getEngagementType.post_URL_WithoutBody(URL, AuthorizationKey, postId);
@@ -996,7 +997,7 @@ public class Restassured_Automation_Methodology {
 		 */
 
 		String workFlowParam1 = post.getProperty("postWorkFlowState2");
-		String postId1 = "/api/methodologyItem/revision/" + revId.substring(1, revId.length() - 1) + "/workProgram/"
+		String postId1 = "/api/methodologyItem/revision/" + revId.substring(1,25) + "/workProgram/"
 				+ methodItemId2 + "/workFlow/" + workFlowParam1;
 
 		Response postWorkFlowRes1 = getEngagementType.post_URL_WithoutBody(URL, AuthorizationKey, postId1);
@@ -1021,7 +1022,7 @@ public class Restassured_Automation_Methodology {
 		getEngagementType.validate_HTTPStrictTransportSecurity(candidateRes);
 
 	}
-	@Test(groups = "IntegrationTests")
+	//@Test(groups = "IntegrationTests")
 	public void Methodology_CreateANewCandidateRevisionWithStatus_409() throws IOException {
 		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
 
@@ -1035,7 +1036,7 @@ public class Restassured_Automation_Methodology {
 		Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();
 
 		Response getMethodologyRes = getMethodology.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(4));
+				"Organization", listOrdId.get(5));
 
 		getMethodologyRes.prettyPrint();
 
@@ -1045,14 +1046,14 @@ public class Restassured_Automation_Methodology {
 		ArrayList<String> parentId = jsonPathEvaluator1.get("id");
 		System.out.println(String.valueOf(listRevisionI1.get(0)));
 
-		String revId = String.valueOf(listRevisionI1.get(9));
+		String revId = String.valueOf(listRevisionI1.get(0));
 		String parntId = String.valueOf(parentId.get(0));
 
 		/**
 		 * Creating an phase
 		 */
 
-		String patchId = "/api/methodologyItem/revision/" + revId.substring(1, revId.length() - 1) + "/item";
+		String patchId = "/api/methodologyItem/revision/" + revId.substring(1, 25) + "/item";
 
 		Properties post = read_Configuration_Propertites.loadproperty("Configuration");
 		// MethodologyItem_Pojo mi1 = new MethodologyItem_Pojo();
@@ -1085,7 +1086,7 @@ public class Restassured_Automation_Methodology {
 		 * CREATING ONE MORE WP AGAIN WITH NEW DATA
 		 */
 
-		String patchId6 = "/api/methodologyItem/revision/" + revId.substring(1, revId.length() - 1) + "/item";
+		String patchId6 = "/api/methodologyItem/revision/" + revId.substring(1,25) + "/item";
 
 		Map<String, String> data6 = new HashMap<String, String>();
 		data6.put("title", post.getProperty("postMethodologyItemTitle"));
@@ -1138,7 +1139,7 @@ public class Restassured_Automation_Methodology {
 		 * Create an procedure
 		 */
 
-		String patchId3 = "/api/methodologyItem/revision/" + revId.substring(1, revId.length() - 1) + "/item";
+		String patchId3 = "/api/methodologyItem/revision/" + revId.substring(1,25) + "/item";
 
 		Map<String, String> data3 = new HashMap<String, String>();
 		data3.put("title", post.getProperty("postMethodologyItemTitle"));
@@ -1178,7 +1179,7 @@ public class Restassured_Automation_Methodology {
 		/**
 		 * Create an workflow - ReadyForApprove
 		 */
-		String workFlowURI = "/api/methodologyItem/revision/" + revId.substring(1, revId.length() - 1);
+		String workFlowURI = "/api/methodologyItem/revision/" + revId.substring(1,25);
 
 		Restassured_Automation_Utils getEngagementType = new Restassured_Automation_Utils();
 
@@ -1192,7 +1193,7 @@ public class Restassured_Automation_Methodology {
 
 		String workFlowParam = post.getProperty("postWorkFlowState");
 
-		String postId = "/api/methodologyItem/revision/" + revId.substring(1, revId.length() - 1) + "/workProgram/"
+		String postId = "/api/methodologyItem/revision/" + revId.substring(1,25) + "/workProgram/"
 				+ methodItemId3 + "/workFlow/" + workFlowParam;
 
 		Response postWorkFlowRes = getEngagementType.post_URL_WithoutBody(URL, AuthorizationKey, postId);
@@ -1203,7 +1204,7 @@ public class Restassured_Automation_Methodology {
 		 */
 
 		String workFlowParam1 = post.getProperty("postWorkFlowState2");
-		String postId1 = "/api/methodologyItem/revision/" + revId.substring(1, revId.length() - 1) + "/workProgram/"
+		String postId1 = "/api/methodologyItem/revision/" + revId.substring(1,25) + "/workProgram/"
 				+ methodItemId2 + "/workFlow/" + workFlowParam1;
 
 		Response postWorkFlowRes1 = getEngagementType.post_URL_WithoutBody(URL, AuthorizationKey, postId1);
@@ -1229,7 +1230,7 @@ public class Restassured_Automation_Methodology {
 		getEngagementType.validate_HTTPStrictTransportSecurity(candidateRes);
 
 	}
-	@Test(groups = "IntegrationTests")
+	//@Test(groups = "IntegrationTests")
 	public void Methodology_GetCandidateRevisionWithStatus_200(){
 		
 		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
@@ -1244,7 +1245,7 @@ public class Restassured_Automation_Methodology {
 		Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();
 
 		Response getMethodologyRes = getMethodology.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(4));
+				"Organization", listOrdId.get(5));
 
 		getMethodologyRes.prettyPrint();
 
@@ -1279,7 +1280,7 @@ public class Restassured_Automation_Methodology {
 		Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();
 
 		Response getMethodologyRes = getMethodology.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(4));
+				"Organization", listOrdId.get(5));
 
 		getMethodologyRes.prettyPrint();
 
@@ -1316,7 +1317,7 @@ public class Restassured_Automation_Methodology {
 		
 
 		Response getMethodologyRes = getMethodology.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(4));
+				"Organization", listOrdId.get(5));
 
 		getMethodologyRes.prettyPrint();
 		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
@@ -1344,16 +1345,16 @@ public class Restassured_Automation_Methodology {
 		JsonPath methodJson=methodRes.jsonPath();
 		ArrayList<Map<String, ?>> listRevisionI1=methodJson.get("revisions.id");
 		String parentId=methodJson.get("id");
-		System.out.println(String.valueOf(listRevisionI1.get(0)));
+		System.out.println(String.valueOf(listRevisionI1.get(2)));
 
-		String revId = String.valueOf(listRevisionI1.get(0));
+		String revId = String.valueOf(listRevisionI1.get(2));
 		String parntId = String.valueOf(parentId);
 			
 		/**
 		 * Creating an phase
 		 */
 
-		String patchId = "/api/methodologyItem/revision/" + revId + "/item";
+		String patchId = "/api/methodologyItem/revision/" + revId.substring(1,25) + "/item";
 
 		
 		// MethodologyItem_Pojo mi1 = new MethodologyItem_Pojo();
@@ -1386,7 +1387,7 @@ public class Restassured_Automation_Methodology {
 		 * CREATING ONE MORE WP AGAIN WITH NEW DATA
 		 */
 
-		String patchId6 = "/api/methodologyItem/revision/" + revId + "/item";
+		String patchId6 = "/api/methodologyItem/revision/" + revId.substring(1,25) + "/item";
 
 		Map<String, String> data6 = new HashMap<String, String>();
 		data6.put("title", post.getProperty("postMethodologyItemTitle"));
@@ -1423,7 +1424,7 @@ public class Restassured_Automation_Methodology {
 		patchCreatePhase1.prettyPrint();
 		//Assert.assertEquals(patchCreatePhase1.getStatusCode(), 204);
 
-		String patchId2 = "/api/methodologyItem/revision/" + revId + "/workProgram/" + methodItemId2 + "/initialize";
+		String patchId2 = "/api/methodologyItem/revision/" + revId.substring(1,25) + "/workProgram/" + methodItemId2 + "/initialize";
 
 		Map<String, String> data2 = new HashMap<String, String>();
 		data2.put("ruleContextType", post.getProperty("postRuleContextType"));
@@ -1439,7 +1440,7 @@ public class Restassured_Automation_Methodology {
 		 * Create an procedure
 		 */
 
-		String patchId3 = "/api/methodologyItem/revision/" + revId + "/item";
+		String patchId3 = "/api/methodologyItem/revision/" + revId.substring(1,25) + "/item";
 
 		Map<String, String> data3 = new HashMap<String, String>();
 		data3.put("title", post.getProperty("postMethodologyItemTitle"));
@@ -1463,7 +1464,7 @@ public class Restassured_Automation_Methodology {
 		JsonPath jsonEvaluator1 = postProcedureRes.jsonPath();
 		String methodItemId1 = jsonEvaluator1.get("methodologyItemId");
 
-		String patchId4 = "/api/methodologyItem/revision/" + revId + "/item/" + methodItemId1;
+		String patchId4 = "/api/methodologyItem/revision/" + revId.substring(1,25) + "/item/" + methodItemId1;
 
 		Map<String, String> data4 = new HashMap<String, String>();
 		data4.put("workProgramItemType", post.getProperty("postWorkProgramItemType"));
@@ -1479,7 +1480,7 @@ public class Restassured_Automation_Methodology {
 		/**
 		 * Create an workflow - ReadyForApprove
 		 */
-		String workFlowURI = "/api/methodologyItem/revision/" + revId;
+		String workFlowURI = "/api/methodologyItem/revision/" + revId.substring(1,25);
 
 		Restassured_Automation_Utils getEngagementType = new Restassured_Automation_Utils();
 
@@ -1493,7 +1494,7 @@ public class Restassured_Automation_Methodology {
 
 		String workFlowParam = post.getProperty("postWorkFlowState");
 
-		String postId = "/api/methodologyItem/revision/" + revId + "/workProgram/"
+		String postId = "/api/methodologyItem/revision/" + revId.substring(1,25) + "/workProgram/"
 				+ methodItemId3 + "/workFlow/" + workFlowParam;
 
 		Response postWorkFlowRes = getEngagementType.post_URL_WithoutBody(URL, AuthorizationKey, postId);
@@ -1504,7 +1505,7 @@ public class Restassured_Automation_Methodology {
 		 */
 
 		String workFlowParam1 = post.getProperty("postWorkFlowState2");
-		String postId1 = "/api/methodologyItem/revision/" + revId + "/workProgram/"
+		String postId1 = "/api/methodologyItem/revision/" + revId.substring(1,25) + "/workProgram/"
 				+ methodItemId2 + "/workFlow/" + workFlowParam1;
 
 		Response postWorkFlowRes1 = getEngagementType.post_URL_WithoutBody(URL, AuthorizationKey, postId1);
@@ -1551,7 +1552,7 @@ public class Restassured_Automation_Methodology {
 		Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();
 
 		Response getMethodologyRes = getMethodology.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(4));
+				"Organization", listOrdId.get(5));
 
 		getMethodologyRes.prettyPrint();
 
@@ -1561,14 +1562,14 @@ public class Restassured_Automation_Methodology {
 		ArrayList<String> parentId = jsonPathEvaluator1.get("id");
 		System.out.println(String.valueOf(listRevisionI1.get(0)));
 
-		String revId = String.valueOf(listRevisionI1.get(9));
-		String parntId = String.valueOf(parentId.get(0));
+		String revId = String.valueOf(listRevisionI1.get(2));
+		String parntId = String.valueOf(parentId.get(2));
 
 		/**
 		 * Creating an phase
 		 */
 
-		String patchId = "/api/methodologyItem/revision/" + revId.substring(1, revId.length() - 1) + "/item";
+		String patchId = "/api/methodologyItem/revision/" + revId.substring(1,25) + "/item";
 
 		Properties post = read_Configuration_Propertites.loadproperty("Configuration");
 		// MethodologyItem_Pojo mi1 = new MethodologyItem_Pojo();
@@ -1601,7 +1602,7 @@ public class Restassured_Automation_Methodology {
 		 * CREATING ONE MORE WP AGAIN WITH NEW DATA
 		 */
 
-		String patchId6 = "/api/methodologyItem/revision/" + revId.substring(1, revId.length() - 1) + "/item";
+		String patchId6 = "/api/methodologyItem/revision/" + revId.substring(1,25) + "/item";
 
 		Map<String, String> data6 = new HashMap<String, String>();
 		data6.put("title", post.getProperty("postMethodologyItemTitle"));
@@ -1654,7 +1655,7 @@ public class Restassured_Automation_Methodology {
 		 * Create an procedure
 		 */
 
-		String patchId3 = "/api/methodologyItem/revision/" + revId.substring(1, revId.length() - 1) + "/item";
+		String patchId3 = "/api/methodologyItem/revision/" + revId.substring(1,25) + "/item";
 
 		Map<String, String> data3 = new HashMap<String, String>();
 		data3.put("title", post.getProperty("postMethodologyItemTitle"));
@@ -1694,7 +1695,7 @@ public class Restassured_Automation_Methodology {
 		/**
 		 * Create an workflow - ReadyForApprove
 		 */
-		String workFlowURI = "/api/methodologyItem/revision/" + revId.substring(1, revId.length() - 1);
+		String workFlowURI = "/api/methodologyItem/revision/" + revId.substring(1,25);
 
 		Restassured_Automation_Utils getEngagementType = new Restassured_Automation_Utils();
 
@@ -1708,7 +1709,7 @@ public class Restassured_Automation_Methodology {
 
 		String workFlowParam = post.getProperty("postWorkFlowState");
 
-		String postId = "/api/methodologyItem/revision/" + revId.substring(1, revId.length() - 1) + "/workProgram/"
+		String postId = "/api/methodologyItem/revision/" + revId.substring(1,25) + "/workProgram/"
 				+ methodItemId3 + "/workFlow/" + workFlowParam;
 
 		Response postWorkFlowRes = getEngagementType.post_URL_WithoutBody(URL, AuthorizationKey, postId);
@@ -1719,7 +1720,7 @@ public class Restassured_Automation_Methodology {
 		 */
 
 		String workFlowParam1 = post.getProperty("postWorkFlowState2");
-		String postId1 = "/api/methodologyItem/revision/" + revId.substring(1, revId.length() - 1) + "/workProgram/"
+		String postId1 = "/api/methodologyItem/revision/" + revId.substring(1,25) + "/workProgram/"
 				+ methodItemId2 + "/workFlow/" + workFlowParam1;
 
 		Response postWorkFlowRes1 = getEngagementType.post_URL_WithoutBody(URL, AuthorizationKey, postId1);
@@ -1738,7 +1739,7 @@ public class Restassured_Automation_Methodology {
 		/**
 		 * Delete the candidate
 		 */
-		String deleteUri="/api/methodology/candidates/" + parntId+"/"+revId.substring(1, revId.length() - 1);
+		String deleteUri="/api/methodology/candidates/" + parntId+"/"+revId.substring(1,25);
 		Response deleteRes=getEngagementType.delete(URL, AuthorizationKey, deleteUri);
 		deleteRes.prettyPrint();
 		Assert.assertEquals(deleteRes.getStatusCode(),404);
@@ -1754,7 +1755,7 @@ public class Restassured_Automation_Methodology {
 	}
 	
 
-	@Test(groups = { "EndToEnd" })
+	//@Test(groups = { "EndToEnd" })
 	public void Methodology_ENDTOEND_Scenario() throws IOException {
 		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
 
@@ -1775,7 +1776,7 @@ public class Restassured_Automation_Methodology {
 		 */
 
 		Response getMethodologyRes = getMethodology.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(7));
+				"Organization", listOrdId.get(5));
 
 		getMethodologyRes.prettyPrint();
 

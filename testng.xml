@@ -15,9 +15,24 @@
 			</run>
 		</groups>
 		<classes>
+
+			<class
+				name="restassured.automation.testcases.Restassured_Automation_Organizations" />
+			<class
+				name="restassured.automation.testcases.Restassured_Automation_OrgRoles" />
+			<class
+				name="restassured.automation.testcases.Restassured_Automation_EngagementType" />
+			<class
+				name="restassured.automation.testcases.Restassured_Automation_Methodology" />
 			<class
 				name="restassured.automation.testcases.Restassured_Automation_ItemSelectQuestion" />
-			
+			<class
+				name="restassured.automation.testcases.Restassured_Automation_MethodologItem" />
+
+			<class
+				name="restassured.automation.testcases.Restassured_Automation_MethodologyItemRelations" />
+
+
 
 
 		</classes>
