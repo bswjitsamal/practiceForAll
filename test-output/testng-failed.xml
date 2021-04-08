@@ -12,7 +12,26 @@
       </run>
     </groups>
     <classes>
-      <class name="restassured.automation.testcases.Restassured_Automation_EngagementType"/>
+      <class name="restassured.automation.testcases.Restassured_Automation_Rules"/>
     </classes>
   </test> <!-- Test -->
+  <test name="Test(failed)">
+    <groups>
+      <run>
+        <include name="IntegrationTests"/>
+        <include name="EndToEnd"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="restassured.automation.testcases.Restassured_Automation_Rules">
+        <methods>
+          <include name="deleteARuleSet_status400"/>
+          <include name="putUpdateANewRuleSet_status200"/>
+          <include name="putUpdateANewRuleSet_status409"/>
+          <include name="postCreateANewRuleSet_status409"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- restassured.automation.testcases.Restassured_Automation_Rules -->
+    </classes>
+  </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

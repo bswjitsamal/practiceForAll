@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 4 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Suite">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,7 +91,36 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">5 methods,   5 passed</span>
+                    <span class="method-stats">9 methods, 4 failed,   5 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="restassured.automation.testcases.Restassured_Automation_Rules" hash-for-method="deleteARuleSet_status400">deleteARuleSet_status400</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="restassured.automation.testcases.Restassured_Automation_Rules" hash-for-method="postCreateANewRuleSet_status409">postCreateANewRuleSet_status409</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="restassured.automation.testcases.Restassured_Automation_Rules" hash-for-method="putUpdateANewRuleSet_status200">putUpdateANewRuleSet_status200</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="restassured.automation.testcases.Restassured_Automation_Rules" hash-for-method="putUpdateANewRuleSet_status409">putUpdateANewRuleSet_status409</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,27 +131,27 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="restassured.automation.testcases.Restassured_Automation_EngagementType" hash-for-method="EngagementType_GetListAllEngagementType">EngagementType_GetListAllEngagementType</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="restassured.automation.testcases.Restassured_Automation_Rules" hash-for-method="deleteARuleSet_status204">deleteARuleSet_status204</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="restassured.automation.testcases.Restassured_Automation_EngagementType" hash-for-method="EngagementType_PatchUpdateAnEngagementType_status400">EngagementType_PatchUpdateAnEngagementType_status400</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="restassured.automation.testcases.Restassured_Automation_Rules" hash-for-method="getTheListOfRulesForARevision_status200">getTheListOfRulesForARevision_status200</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="restassured.automation.testcases.Restassured_Automation_EngagementType" hash-for-method="EngagementType_PatchUpdateAnEngagementType_status409">EngagementType_PatchUpdateAnEngagementType_status409</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="restassured.automation.testcases.Restassured_Automation_Rules" hash-for-method="postCreateANewRuleSet_status200">postCreateANewRuleSet_status200</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="restassured.automation.testcases.Restassured_Automation_EngagementType" hash-for-method="EngagementType_PostcreateANewEngagementType_status400">EngagementType_PostcreateANewEngagementType_status400</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="restassured.automation.testcases.Restassured_Automation_Rules" hash-for-method="postCreateANewRuleSet_status400">postCreateANewRuleSet_status400</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="restassured.automation.testcases.Restassured_Automation_EngagementType" hash-for-method="EngagementType_PostcreateANewEngagementType_status409">EngagementType_PostcreateANewEngagementType_status409</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="restassured.automation.testcases.Restassured_Automation_Rules" hash-for-method="putUpdateANewRuleSet_status400">putUpdateANewRuleSet_status400</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -137,45 +166,99 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-passed">
+          <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">restassured.automation.testcases.Restassured_Automation_EngagementType</span>
+              <img src="failed.png"/>
+              <span class="class-name">restassured.automation.testcases.Restassured_Automation_Rules</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="EngagementType_GetListAllEngagementType">
-                  </a> <!-- EngagementType_GetListAllEngagementType -->
-                  <span class="method-name">EngagementType_GetListAllEngagementType</span>
+                  <a name="deleteARuleSet_status400">
+                  </a> <!-- deleteARuleSet_status400 -->
+                  <span class="method-name">deleteARuleSet_status400</span>
+                  <div class="stack-trace">java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at restassured.automation.testcases.Restassured_Automation_Rules.deleteARuleSet_status400(Restassured_Automation_Rules.java:781)
+... Removed 24 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="EngagementType_PatchUpdateAnEngagementType_status400">
-                  </a> <!-- EngagementType_PatchUpdateAnEngagementType_status400 -->
-                  <span class="method-name">EngagementType_PatchUpdateAnEngagementType_status400</span>
+                  <a name="postCreateANewRuleSet_status409">
+                  </a> <!-- postCreateANewRuleSet_status409 -->
+                  <span class="method-name">postCreateANewRuleSet_status409</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [409] but found [500]
+	at restassured.automation.testcases.Restassured_Automation_Rules.postCreateANewRuleSet_status409(Restassured_Automation_Rules.java:354)
+... Removed 30 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="EngagementType_PatchUpdateAnEngagementType_status409">
-                  </a> <!-- EngagementType_PatchUpdateAnEngagementType_status409 -->
-                  <span class="method-name">EngagementType_PatchUpdateAnEngagementType_status409</span>
+                  <a name="putUpdateANewRuleSet_status200">
+                  </a> <!-- putUpdateANewRuleSet_status200 -->
+                  <span class="method-name">putUpdateANewRuleSet_status200</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [200] but found [500]
+	at restassured.automation.testcases.Restassured_Automation_Rules.putUpdateANewRuleSet_status200(Restassured_Automation_Rules.java:455)
+... Removed 30 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="EngagementType_PostcreateANewEngagementType_status400">
-                  </a> <!-- EngagementType_PostcreateANewEngagementType_status400 -->
-                  <span class="method-name">EngagementType_PostcreateANewEngagementType_status400</span>
+                  <a name="putUpdateANewRuleSet_status409">
+                  </a> <!-- putUpdateANewRuleSet_status409 -->
+                  <span class="method-name">putUpdateANewRuleSet_status409</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [409] but found [200]
+	at restassured.automation.testcases.Restassured_Automation_Rules.putUpdateANewRuleSet_status409(Restassured_Automation_Rules.java:660)
+... Removed 30 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">restassured.automation.testcases.Restassured_Automation_Rules</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="deleteARuleSet_status204">
+                  </a> <!-- deleteARuleSet_status204 -->
+                  <span class="method-name">deleteARuleSet_status204</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="EngagementType_PostcreateANewEngagementType_status409">
-                  </a> <!-- EngagementType_PostcreateANewEngagementType_status409 -->
-                  <span class="method-name">EngagementType_PostcreateANewEngagementType_status409</span>
+                  <a name="getTheListOfRulesForARevision_status200">
+                  </a> <!-- getTheListOfRulesForARevision_status200 -->
+                  <span class="method-name">getTheListOfRulesForARevision_status200</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="postCreateANewRuleSet_status200">
+                  </a> <!-- postCreateANewRuleSet_status200 -->
+                  <span class="method-name">postCreateANewRuleSet_status200</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="postCreateANewRuleSet_status400">
+                  </a> <!-- postCreateANewRuleSet_status400 -->
+                  <span class="method-name">postCreateANewRuleSet_status400</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="putUpdateANewRuleSet_status400">
+                  </a> <!-- putUpdateANewRuleSet_status400 -->
+                  <span class="method-name">putUpdateANewRuleSet_status400</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -201,7 +284,7 @@
       &lt;/run&gt;
     &lt;/groups&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;restassured.automation.testcases.Restassured_Automation_EngagementType&quot;/&gt;
+      &lt;class name=&quot;restassured.automation.testcases.Restassured_Automation_Rules&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -229,23 +312,39 @@
               <span class="test-group-name">IntegrationTests</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">EngagementType_GetListAllEngagementType</span>
+                <span class="method-in-group-name">deleteARuleSet_status204</span>
                 <br/>
               </div> <!-- method-in-group -->
               <div class="method-in-group">
-                <span class="method-in-group-name">EngagementType_PatchUpdateAnEngagementType_status400</span>
+                <span class="method-in-group-name">deleteARuleSet_status400</span>
                 <br/>
               </div> <!-- method-in-group -->
               <div class="method-in-group">
-                <span class="method-in-group-name">EngagementType_PatchUpdateAnEngagementType_status409</span>
+                <span class="method-in-group-name">getTheListOfRulesForARevision_status200</span>
                 <br/>
               </div> <!-- method-in-group -->
               <div class="method-in-group">
-                <span class="method-in-group-name">EngagementType_PostcreateANewEngagementType_status400</span>
+                <span class="method-in-group-name">postCreateANewRuleSet_status200</span>
                 <br/>
               </div> <!-- method-in-group -->
               <div class="method-in-group">
-                <span class="method-in-group-name">EngagementType_PostcreateANewEngagementType_status409</span>
+                <span class="method-in-group-name">postCreateANewRuleSet_status400</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">postCreateANewRuleSet_status409</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">putUpdateANewRuleSet_status200</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">putUpdateANewRuleSet_status400</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">putUpdateANewRuleSet_status409</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -265,32 +364,48 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(5);
+data.addRows(9);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'EngagementType_GetListAllEngagementType')
-data.setCell(0, 2, 'restassured.automation.testcases.Restassured_Automation_EngagementType')
-data.setCell(0, 3, 4790);
+data.setCell(0, 1, 'getTheListOfRulesForARevision_status200')
+data.setCell(0, 2, 'restassured.automation.testcases.Restassured_Automation_Rules')
+data.setCell(0, 3, 3806);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'EngagementType_PatchUpdateAnEngagementType_status400')
-data.setCell(1, 2, 'restassured.automation.testcases.Restassured_Automation_EngagementType')
-data.setCell(1, 3, 2522);
+data.setCell(1, 1, 'putUpdateANewRuleSet_status409')
+data.setCell(1, 2, 'restassured.automation.testcases.Restassured_Automation_Rules')
+data.setCell(1, 3, 2204);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'EngagementType_PatchUpdateAnEngagementType_status409')
-data.setCell(2, 2, 'restassured.automation.testcases.Restassured_Automation_EngagementType')
-data.setCell(2, 3, 1847);
+data.setCell(2, 1, 'deleteARuleSet_status204')
+data.setCell(2, 2, 'restassured.automation.testcases.Restassured_Automation_Rules')
+data.setCell(2, 3, 2102);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'EngagementType_PostcreateANewEngagementType_status400')
-data.setCell(3, 2, 'restassured.automation.testcases.Restassured_Automation_EngagementType')
-data.setCell(3, 3, 815);
+data.setCell(3, 1, 'putUpdateANewRuleSet_status400')
+data.setCell(3, 2, 'restassured.automation.testcases.Restassured_Automation_Rules')
+data.setCell(3, 3, 2056);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'EngagementType_PostcreateANewEngagementType_status409')
-data.setCell(4, 2, 'restassured.automation.testcases.Restassured_Automation_EngagementType')
-data.setCell(4, 3, 689);
+data.setCell(4, 1, 'postCreateANewRuleSet_status409')
+data.setCell(4, 2, 'restassured.automation.testcases.Restassured_Automation_Rules')
+data.setCell(4, 3, 2051);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'postCreateANewRuleSet_status200')
+data.setCell(5, 2, 'restassured.automation.testcases.Restassured_Automation_Rules')
+data.setCell(5, 3, 2048);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'putUpdateANewRuleSet_status200')
+data.setCell(6, 2, 'restassured.automation.testcases.Restassured_Automation_Rules')
+data.setCell(6, 3, 2030);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'postCreateANewRuleSet_status400')
+data.setCell(7, 2, 'restassured.automation.testcases.Restassured_Automation_Rules')
+data.setCell(7, 3, 1650);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'deleteARuleSet_status400')
+data.setCell(8, 2, 'restassured.automation.testcases.Restassured_Automation_Rules')
+data.setCell(8, 3, 1561);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 10 seconds</span>
+              <span class="suite-total-time">Total running time: 19 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -316,30 +431,54 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">restassured.automation.testcases.Restassured_Automation_EngagementType</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">restassured.automation.testcases.Restassured_Automation_Rules</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">setup</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
-                <span class="method-name">EngagementType_GetListAllEngagementType</span>
-                <span class="method-start">28 ms</span>
+                <span class="method-name">getTheListOfRulesForARevision_status200</span>
+                <span class="method-start">73 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">EngagementType_PatchUpdateAnEngagementType_status400</span>
-                <span class="method-start">4821 ms</span>
+                <span class="method-name">postCreateANewRuleSet_status200</span>
+                <span class="method-start">3881 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">EngagementType_PatchUpdateAnEngagementType_status409</span>
-                <span class="method-start">7344 ms</span>
+                <span class="method-name">postCreateANewRuleSet_status400</span>
+                <span class="method-start">5930 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">EngagementType_PostcreateANewEngagementType_status400</span>
-                <span class="method-start">9193 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">postCreateANewRuleSet_status409</span>
+                <span class="method-start">7581 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">EngagementType_PostcreateANewEngagementType_status409</span>
-                <span class="method-start">10011 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">putUpdateANewRuleSet_status200</span>
+                <span class="method-start">9638 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">putUpdateANewRuleSet_status400</span>
+                <span class="method-start">11670 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">putUpdateANewRuleSet_status409</span>
+                <span class="method-start">13729 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">deleteARuleSet_status204</span>
+                <span class="method-start">15935 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">deleteARuleSet_status400</span>
+                <span class="method-start">18039 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
