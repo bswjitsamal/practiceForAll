@@ -1,10 +1,14 @@
 package restassured.automation.testcases;
 
+import static java.util.concurrent.TimeUnit.MILLISECONDS;
+import static java.util.concurrent.TimeUnit.SECONDS;
+
 import java.io.IOException;
 import java.util.List;
 import java.util.Properties;
 import java.util.Random;
 
+import org.awaitility.Awaitility;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -51,6 +55,10 @@ public class Restassured_Automation_OrgRoles {
 		Properties BaseUrl = configDetails.loadproperty("Configuration");
 		URL = BaseUrl.getProperty("ApiBaseUrl");
 		AuthorizationKey = BaseUrl.getProperty("AuthorizationKey1");
+		Awaitility.reset();
+        Awaitility.setDefaultPollDelay(999, MILLISECONDS);
+        Awaitility.setDefaultPollInterval(99, SECONDS);
+        Awaitility.setDefaultTimeout(99, SECONDS);
 
 	}
 

@@ -1,5 +1,8 @@
 package restassured.automation.testcases;
 
+import static java.util.concurrent.TimeUnit.MILLISECONDS;
+import static java.util.concurrent.TimeUnit.SECONDS;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -8,6 +11,7 @@ import java.util.Map;
 import java.util.Properties;
 import java.util.Random;
 
+import org.awaitility.Awaitility;
 import org.testng.Assert;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
@@ -50,6 +54,10 @@ public class Restassured_Automation_MethodologyItemRelations {
 		URL = BaseUrl.getProperty("ApiBaseUrl");
 		AuthorizationKey = BaseUrl.getProperty("AuthorizationKey");
 		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
+		Awaitility.reset();
+        Awaitility.setDefaultPollDelay(999, MILLISECONDS);
+        Awaitility.setDefaultPollInterval(99, SECONDS);
+        Awaitility.setDefaultTimeout(99, SECONDS);
 
 	}
 
