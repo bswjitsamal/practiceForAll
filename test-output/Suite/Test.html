@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>5/4/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>7/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Apr 08 19:38:03 IST 2021</td>
+<td>Started on:</td><td>Thu Apr 08 20:03:49 IST 2021</td>
 </tr>
-<tr><td>Total time:</td><td>19 seconds (19604 ms)</td>
+<tr><td>Total time:</td><td>24 seconds (24818 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td>EndToEnd IntegrationTests </td>
 </tr><tr>
@@ -80,8 +80,8 @@ function toggleAllBoxes() {
 	at java.util.ArrayList.rangeCheck(Unknown Source)
 	at java.util.ArrayList.get(Unknown Source)
 	at restassured.automation.testcases.Restassured_Automation_Rules.deleteARuleSet_status400(Restassured_Automation_Rules.java:781)
-... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1704600661", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1704600661'><pre>java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1497538476", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1497538476'><pre>java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
 	at java.util.ArrayList.rangeCheck(Unknown Source)
 	at java.util.ArrayList.get(Unknown Source)
 	at restassured.automation.testcases.Restassured_Automation_Rules.deleteARuleSet_status400(Restassured_Automation_Rules.java:781)
@@ -89,149 +89,71 @@ function toggleAllBoxes() {
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:782)
-	at org.testng.TestRunner.run(TestRunner.java:632)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
 	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
-	at org.testng.TestNG.run(TestNG.java:1064)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>1</td>
-<td>restassured.automation.testcases.Restassured_Automation_Rules@4e04a765</td></tr>
-<tr>
-<td title='restassured.automation.testcases.Restassured_Automation_Rules.postCreateANewRuleSet_status409()'><b>postCreateANewRuleSet_status409</b><br>Test class: restassured.automation.testcases.Restassured_Automation_Rules</td>
-<td><div><pre>java.lang.AssertionError: expected [409] but found [500]
-	at restassured.automation.testcases.Restassured_Automation_Rules.postCreateANewRuleSet_status409(Restassured_Automation_Rules.java:354)
-... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1503614751", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1503614751'><pre>java.lang.AssertionError: expected [409] but found [500]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:513)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
-	at org.testng.Assert.assertEquals(Assert.java:116)
-	at org.testng.Assert.assertEquals(Assert.java:389)
-	at org.testng.Assert.assertEquals(Assert.java:399)
-	at restassured.automation.testcases.Restassured_Automation_Rules.postCreateANewRuleSet_status409(Restassured_Automation_Rules.java:354)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:782)
-	at org.testng.TestRunner.run(TestRunner.java:632)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
-	at org.testng.TestNG.run(TestNG.java:1064)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
-</pre></div></td>
-<td>2</td>
-<td>restassured.automation.testcases.Restassured_Automation_Rules@4e04a765</td></tr>
-<tr>
-<td title='restassured.automation.testcases.Restassured_Automation_Rules.putUpdateANewRuleSet_status200()'><b>putUpdateANewRuleSet_status200</b><br>Test class: restassured.automation.testcases.Restassured_Automation_Rules</td>
-<td><div><pre>java.lang.AssertionError: expected [200] but found [500]
-	at restassured.automation.testcases.Restassured_Automation_Rules.putUpdateANewRuleSet_status200(Restassured_Automation_Rules.java:455)
-... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1566099239", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1566099239'><pre>java.lang.AssertionError: expected [200] but found [500]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:513)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
-	at org.testng.Assert.assertEquals(Assert.java:116)
-	at org.testng.Assert.assertEquals(Assert.java:389)
-	at org.testng.Assert.assertEquals(Assert.java:399)
-	at restassured.automation.testcases.Restassured_Automation_Rules.putUpdateANewRuleSet_status200(Restassured_Automation_Rules.java:455)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:782)
-	at org.testng.TestRunner.run(TestRunner.java:632)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
-	at org.testng.TestNG.run(TestNG.java:1064)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
-</pre></div></td>
-<td>2</td>
-<td>restassured.automation.testcases.Restassured_Automation_Rules@4e04a765</td></tr>
+<td>restassured.automation.testcases.Restassured_Automation_Rules@71423665</td></tr>
 <tr>
 <td title='restassured.automation.testcases.Restassured_Automation_Rules.putUpdateANewRuleSet_status409()'><b>putUpdateANewRuleSet_status409</b><br>Test class: restassured.automation.testcases.Restassured_Automation_Rules</td>
 <td><div><pre>java.lang.AssertionError: expected [409] but found [200]
 	at restassured.automation.testcases.Restassured_Automation_Rules.putUpdateANewRuleSet_status409(Restassured_Automation_Rules.java:660)
-... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace369333979", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace369333979'><pre>java.lang.AssertionError: expected [409] but found [200]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:513)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
-	at org.testng.Assert.assertEquals(Assert.java:116)
-	at org.testng.Assert.assertEquals(Assert.java:389)
-	at org.testng.Assert.assertEquals(Assert.java:399)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace9983638", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace9983638'><pre>java.lang.AssertionError: expected [409] but found [200]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:652)
+	at org.testng.Assert.assertEquals(Assert.java:662)
 	at restassured.automation.testcases.Restassured_Automation_Rules.putUpdateANewRuleSet_status409(Restassured_Automation_Rules.java:660)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:782)
-	at org.testng.TestRunner.run(TestRunner.java:632)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
 	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
-	at org.testng.TestNG.run(TestNG.java:1064)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>2</td>
-<td>restassured.automation.testcases.Restassured_Automation_Rules@4e04a765</td></tr>
+<td>restassured.automation.testcases.Restassured_Automation_Rules@71423665</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -244,27 +166,37 @@ function toggleAllBoxes() {
 <td title='restassured.automation.testcases.Restassured_Automation_Rules.deleteARuleSet_status204()'><b>deleteARuleSet_status204</b><br>Test class: restassured.automation.testcases.Restassured_Automation_Rules</td>
 <td></td>
 <td>2</td>
-<td>restassured.automation.testcases.Restassured_Automation_Rules@4e04a765</td></tr>
+<td>restassured.automation.testcases.Restassured_Automation_Rules@71423665</td></tr>
 <tr>
 <td title='restassured.automation.testcases.Restassured_Automation_Rules.getTheListOfRulesForARevision_status200()'><b>getTheListOfRulesForARevision_status200</b><br>Test class: restassured.automation.testcases.Restassured_Automation_Rules</td>
 <td></td>
-<td>3</td>
-<td>restassured.automation.testcases.Restassured_Automation_Rules@4e04a765</td></tr>
+<td>6</td>
+<td>restassured.automation.testcases.Restassured_Automation_Rules@71423665</td></tr>
 <tr>
 <td title='restassured.automation.testcases.Restassured_Automation_Rules.postCreateANewRuleSet_status200()'><b>postCreateANewRuleSet_status200</b><br>Test class: restassured.automation.testcases.Restassured_Automation_Rules</td>
 <td></td>
 <td>2</td>
-<td>restassured.automation.testcases.Restassured_Automation_Rules@4e04a765</td></tr>
+<td>restassured.automation.testcases.Restassured_Automation_Rules@71423665</td></tr>
 <tr>
 <td title='restassured.automation.testcases.Restassured_Automation_Rules.postCreateANewRuleSet_status400()'><b>postCreateANewRuleSet_status400</b><br>Test class: restassured.automation.testcases.Restassured_Automation_Rules</td>
 <td></td>
 <td>1</td>
-<td>restassured.automation.testcases.Restassured_Automation_Rules@4e04a765</td></tr>
+<td>restassured.automation.testcases.Restassured_Automation_Rules@71423665</td></tr>
+<tr>
+<td title='restassured.automation.testcases.Restassured_Automation_Rules.postCreateANewRuleSet_status409()'><b>postCreateANewRuleSet_status409</b><br>Test class: restassured.automation.testcases.Restassured_Automation_Rules</td>
+<td></td>
+<td>2</td>
+<td>restassured.automation.testcases.Restassured_Automation_Rules@71423665</td></tr>
+<tr>
+<td title='restassured.automation.testcases.Restassured_Automation_Rules.putUpdateANewRuleSet_status200()'><b>putUpdateANewRuleSet_status200</b><br>Test class: restassured.automation.testcases.Restassured_Automation_Rules</td>
+<td></td>
+<td>3</td>
+<td>restassured.automation.testcases.Restassured_Automation_Rules@71423665</td></tr>
 <tr>
 <td title='restassured.automation.testcases.Restassured_Automation_Rules.putUpdateANewRuleSet_status400()'><b>putUpdateANewRuleSet_status400</b><br>Test class: restassured.automation.testcases.Restassured_Automation_Rules</td>
 <td></td>
-<td>2</td>
-<td>restassured.automation.testcases.Restassured_Automation_Rules@4e04a765</td></tr>
+<td>1</td>
+<td>restassured.automation.testcases.Restassured_Automation_Rules@71423665</td></tr>
 </table><p>
 </body>
 </html>

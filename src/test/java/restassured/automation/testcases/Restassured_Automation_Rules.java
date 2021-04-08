@@ -344,7 +344,7 @@ public class Restassured_Automation_Rules extends read_Configuration_Propertites
 
 		System.out.println("-------"+ruleId);
 		
-		String patchId1 = "/api/rules/revision/" +  revId.substring(1, revId.length() - 1);
+		String patchId1 = "/api/rules/revision/" +  revId.substring(1,25);
 
 
 		Response putOrganizationData = getRulsByRevId.post_URLPOJO(URL, AuthorizationKey, patchId1, sp);
@@ -445,7 +445,7 @@ public class Restassured_Automation_Rules extends read_Configuration_Propertites
 
 		System.out.println("-------"+ruleId);
 		
-		String patchId1 = "/api/rules/revision/" +  revId.substring(1, revId.length() - 1)+"/rule/"+ruleId.get(0);
+		String patchId1 = "/api/rules/revision/" +  revId.substring(1,25)+"/rule/"+ruleId.get(0);
 
 
 		Response putOrganizationData = getRulsByRevId.put_URLPOJO(URL, AuthorizationKey, patchId1, sp);
