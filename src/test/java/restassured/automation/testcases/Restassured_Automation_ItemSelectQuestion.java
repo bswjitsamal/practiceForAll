@@ -1998,7 +1998,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 		JsonPath jsonPathEvaluator = getMethodologyRes.jsonPath();
 		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions.id");
 
-		System.out.println(String.valueOf(listRevisionI1.get(1)));
+		System.out.println(String.valueOf(listRevisionI1.get(2)));
 
 		String revId = String.valueOf(listRevisionI1.get(2));
 		/**
@@ -2075,5 +2075,66 @@ public class Restassured_Automation_ItemSelectQuestion {
 		ExtentTestManager.getTest().log(Status.INFO, getMethodologyRes4.asString());
 		getMethodology.validate_HTTPStrictTransportSecurity(getMethodologyRes4);
 	}
+	
+	@Test(groups = "IntegrationTests")
+	public void ItemSelectQuestion_EndToEnd() {
 
+		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
+
+		// fetching Org Id
+
+		Response OrganizationsDetails = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/org");
+		JsonPath jsonPathEvaluator0 = OrganizationsDetails.jsonPath();
+		listOrdId = jsonPathEvaluator0.get("id");
+		OrganizationsDetails.prettyPrint();
+
+		Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();
+
+		Response getMethodologyRes = getMethodology.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
+				"Organization", listOrdId.get(5));
+
+		getMethodologyRes.prettyPrint();
+
+		JsonPath jsonPathEvaluator = getMethodologyRes.jsonPath();
+		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions.id");
+
+		System.out.println(String.valueOf(listRevisionI1.get(1)));
+
+		String revId = String.valueOf(listRevisionI1.get(2));
+
+		
+
+		String patchId = "/api/methodologyItem/revision/" + revId.substring(1,25);
+
+		Restassured_Automation_Utils getEngagementType = new Restassured_Automation_Utils();
+
+		Response getEngagementTypeRes = getEngagementType.get_URL_Without_Params(URL, AuthorizationKey, patchId);
+		getEngagementTypeRes.prettyPrint();
+		List<String> s = getEngagementTypeRes.body().path("options");
+
+		String s1 = getEngagementTypeRes.path("find { it.renderAsSelect == false }.methodologyItemId");
+		System.out.println(s1);
+
+		String patchId1 = "/api/methodologyItem/revision/" + revId.substring(1,25)
+				+ "/itemSelectQuestion/" + s1 + "/option";
+
+		ItemSelectQuestion_Pojo isq = new ItemSelectQuestion_Pojo();
+		isq.setTitle("Demo");
+
+		Response getMethodologyRes1 = getMethodology.post_URLPOJO(URL, AuthorizationKey, patchId1, isq);
+		getMethodologyRes1.prettyPrint();
+
+		JsonPath jsonPathEvaluator1 = getMethodologyRes1.jsonPath();
+		String ss = jsonPathEvaluator1.get("id");
+		System.out.println(ss);
+
+		String patchId2 = "/api/methodologyItem/revisions/" + revId.substring(1,25)
+				+ "/itemSelectQuestions/" +s1+ "/option/"+ss;
+
+		Response getMethodologyRes3 = getMethodology.delete(URL, AuthorizationKey, patchId2);
+		Response getMethodologyRes2 = getMethodology.delete(URL, AuthorizationKey, patchId2);
+		getMethodologyRes2.prettyPrint();
+		Assert.assertEquals(getMethodologyRes1.statusCode(), 200);
+
+}
 }
