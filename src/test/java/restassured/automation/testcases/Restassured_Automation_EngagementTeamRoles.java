@@ -457,7 +457,7 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		System.out.println(reviD);
 		
 		Response createPublish = getMethodology.get_URL_Without_Params(URL, AuthorizationKey,
-				"/api/engagementTeam/org/" +listOrdId.get(5) + "/revision/" + reviD.substring(1, reviD.length() - 1)+"/roles");
+				"/api/engagementTeam/org/" +listOrdId.get(5) + "/revision/" + reviD.substring(1,25)+"/roles");
 		createPublish.prettyPrint();
 		
 		Assert.assertEquals(createPublish.statusCode(), 200);
@@ -514,7 +514,7 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		
 		
 		Response createPublish = getMethodology.post_URLPOJO(URL, AuthorizationKey,
-				"/api/engagementTeam/org/" +listOrdId.get(5) + "/revision/" + reviD.substring(1, reviD.length() - 1)+"/roles",engagementTeamRolesPojo);
+				"/api/engagementTeam/org/" +listOrdId.get(5) + "/revision/" + reviD.substring(1, 25)+"/roles",engagementTeamRolesPojo);
 		createPublish.prettyPrint();
 		
 		Assert.assertEquals(createPublish.statusCode(), 200);
@@ -571,7 +571,7 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		
 		
 		Response createPublish = getMethodology.post_URLPOJO(URL, AuthorizationKey,
-				"/api/engagementTeam/org/" +listOrdId.get(5) + "/revision/" + reviD.substring(1, reviD.length() - 1)+"/roles",engagementTeamRolesPojo);
+				"/api/engagementTeam/org/" +listOrdId.get(5) + "/revision/" + reviD.substring(1,25)+"/roles",engagementTeamRolesPojo);
 		createPublish.prettyPrint();
 		
 		Assert.assertEquals(createPublish.statusCode(), 400);
@@ -628,7 +628,7 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		
 		
 		Response createPublish = getMethodology.post_URLPOJO(URL, AuthorizationKey,
-				"/api/engagementTeam/org/" +listOrdId.get(5) + "/revision/" + reviD.substring(1, reviD.length() - 1)+"/roles",engagementTeamRolesPojo);
+				"/api/engagementTeam/org/" +listOrdId.get(5) + "/revision/" + reviD.substring(1,25)+"/roles",engagementTeamRolesPojo);
 		createPublish.prettyPrint();
 		
 		Assert.assertEquals(createPublish.statusCode(), 409);
@@ -680,7 +680,7 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		//Retriving th eroleID
 		
 		Response createPublish = getMethodology.get_URL_Without_Params(URL, AuthorizationKey,
-				"/api/engagementTeam/org/" +listOrdId.get(5) + "/revision/" + reviD.substring(1, reviD.length() - 1)+"/roles");
+				"/api/engagementTeam/org/" +listOrdId.get(5) + "/revision/" + reviD.substring(1,25)+"/roles");
 		createPublish.prettyPrint();
 		
 		
@@ -696,7 +696,7 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		engagementTeamRolesPojo1.setTitle("Test"+getRandomAlphaNum());
 		
 		Response patchPublish = getMethodology.patch_URLPOJO(URL, AuthorizationKey,
-				"/api/engagementTeam/org/" +listOrdId.get(5) + "/revision/" + reviD.substring(1, reviD.length() - 1)+"/roles/"+engagementRoleId.get(0),engagementTeamRolesPojo1);
+				"/api/engagementTeam/org/" +listOrdId.get(5) + "/revision/" + reviD.substring(1, 25)+"/roles/"+engagementRoleId.get(0),engagementTeamRolesPojo1);
 		patchPublish.prettyPrint();
 		
 		
@@ -750,7 +750,7 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		//Retriving th eroleID
 		
 		Response createPublish = getMethodology.get_URL_Without_Params(URL, AuthorizationKey,
-				"/api/engagementTeam/org/" +listOrdId.get(5) + "/revision/" + reviD.substring(1, reviD.length() - 1)+"/roles");
+				"/api/engagementTeam/org/" +listOrdId.get(5) + "/revision/" + reviD.substring(1,25)+"/roles");
 		createPublish.prettyPrint();
 		
 		
@@ -766,7 +766,7 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		engagementTeamRolesPojo1.setTitle("Test");
 		
 		Response patchPublish = getMethodology.patch_URLPOJO(URL, AuthorizationKey,
-				"/api/engagementTeam/org/" +listOrdId.get(5) + "/revision/" + reviD.substring(1, reviD.length() - 1)+"/roles/"+engagementRoleId.get(0),engagementTeamRolesPojo1);
+				"/api/engagementTeam/org/" +listOrdId.get(5) + "/revision/" + reviD.substring(1,25)+"/roles/"+engagementRoleId.get(0),engagementTeamRolesPojo1);
 		patchPublish.prettyPrint();
 		
 		
@@ -817,7 +817,7 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		//Retriving th eroleID
 		
 		Response createPublish = getMethodology.get_URL_Without_Params(URL, AuthorizationKey,
-				"/api/engagementTeam/org/" +listOrdId.get(5) + "/revision/" + reviD.substring(1, reviD.length() - 1)+"/roles");
+				"/api/engagementTeam/org/" +listOrdId.get(5) + "/revision/" + reviD.substring(1,25)+"/roles");
 		createPublish.prettyPrint();
 		
 		
@@ -833,7 +833,7 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		engagementTeamRolesPojo1.setTitle("");
 		
 		Response patchPublish = getMethodology.patch_URLPOJO(URL, AuthorizationKey,
-				"/api/engagementTeam/org/" +listOrdId.get(5) + "/revision/" + reviD.substring(1, reviD.length() - 1)+"/roles/"+engagementRoleId.get(0),engagementTeamRolesPojo1);
+				"/api/engagementTeam/org/" +listOrdId.get(5) + "/revision/" + reviD.substring(1, 25)+"/roles/"+engagementRoleId.get(0),engagementTeamRolesPojo1);
 		patchPublish.prettyPrint();
 		
 		
@@ -885,7 +885,7 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		//Retriving th eroleID
 		
 		Response createPublish = getMethodology.get_URL_Without_Params(URL, AuthorizationKey,
-				"/api/engagementTeam/org/" +listOrdId.get(5) + "/revision/" + reviD.substring(1, reviD.length() - 1)+"/roles");
+				"/api/engagementTeam/org/" +listOrdId.get(5) + "/revision/" + reviD.substring(1, 25)+"/roles");
 		createPublish.prettyPrint();
 		
 		
@@ -896,7 +896,7 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		String id = engagementRoleId.get(1);
 		
 		Response dalatePublish = getMethodology.delete(URL, AuthorizationKey,
-				"/api/engagementTeam/org/" +listOrdId.get(5) + "/revision/" + reviD.substring(1, reviD.length() - 1)+"/roles/"+id);
+				"/api/engagementTeam/org/" +listOrdId.get(5) + "/revision/" + reviD.substring(1, 25)+"/roles/"+id);
 		dalatePublish.prettyPrint();		
 		
 		Assert.assertEquals(dalatePublish.statusCode(), 204);
@@ -948,7 +948,7 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		//Retriving th eroleID
 		
 		Response createPublish = getMethodology.get_URL_Without_Params(URL, AuthorizationKey,
-				"/api/engagementTeam/org/" +listOrdId.get(5) + "/revision/" + reviD.substring(1, reviD.length() - 1)+"/roles");
+				"/api/engagementTeam/org/" +listOrdId.get(5) + "/revision/" + reviD.substring(1,25)+"/roles");
 		createPublish.prettyPrint();
 		
 		
@@ -959,11 +959,11 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		String id = engagementRoleId.get(1);
 		
 		Response dalatePublish = getMethodology.delete(URL, AuthorizationKey,
-				"/api/engagementTeam/org/" +listOrdId.get(5) + "/revision/" + reviD.substring(1, reviD.length() - 1)+"/roles/"+id);
+				"/api/engagementTeam/org/" +listOrdId.get(5) + "/revision/" + reviD.substring(1, 25)+"/roles/"+id);
 		dalatePublish.prettyPrint();
 		
 		Response deletePublishAgain = getMethodology.delete(URL, AuthorizationKey,
-				"/api/engagementTeam/org/" +listOrdId.get(5) + "/revision/" + reviD.substring(1, reviD.length() - 1)+"/roles/"+id);
+				"/api/engagementTeam/org/" +listOrdId.get(5) + "/revision/" + reviD.substring(1,25)+"/roles/"+id);
 		deletePublishAgain.prettyPrint();
 		
 		
