@@ -1630,7 +1630,7 @@ public class Restassured_Automation_MethodologyItemRelations {
 
 	}
 
-	 @Test(groups = "IntegrationTests")
+	 //@Test(groups = "IntegrationTests")
 	public void MethodologyItemRelation_DeleteLinkedMethodologyItem_status200()
 			throws JsonIOException, JsonSyntaxException, IOException {
 
