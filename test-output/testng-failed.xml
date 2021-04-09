@@ -1,91 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <listeners>
-    <listener class-name="restassured.automation.listeners.TestListeners"/>
-  </listeners>
-  <test name="Test">
-    <groups>
-      <run>
-        <include name="IntegrationTests"/>
-        <include name="EndToEnd"/>
-      </run>
-    </groups>
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test verbose="2" name="Default test">
     <classes>
-      <class name="restassured.automation.testcases.Restassured_Automation_Organizations"/>
-      <class name="restassured.automation.testcases.Restassured_Automation_OrgRoles"/>
-      <class name="restassured.automation.testcases.Restassured_Automation_EngagementType"/>
-      <class name="restassured.automation.testcases.Restassured_Automation_Methodology"/>
-      <class name="restassured.automation.testcases.Restassured_Automation_ItemSelectQuestion"/>
-      <class name="restassured.automation.testcases.Restassured_Automation_MethodologItem"/>
-      <class name="restassured.automation.testcases.Restassured_Automation_MethodologyItemRelations"/>
-      <class name="restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles"/>
-      <class name="restassured.automation.testcases.Restassured_Automation_Rules"/>
-    </classes>
-  </test> <!-- Test -->
-  <test name="Test(failed)">
-    <groups>
-      <run>
-        <include name="IntegrationTests"/>
-        <include name="EndToEnd"/>
-      </run>
-    </groups>
-    <classes>
-      <class name="restassured.automation.testcases.Restassured_Automation_EngagementType">
+      <class name="restassured.automation.testcases.Restassured_Automation_ItemSelectQuestion">
         <methods>
-          <include name="setup"/>
+          <include name="ItemSelectQuestion_EndToEnd_Scenario"/>
         </methods>
-      </class> <!-- restassured.automation.testcases.Restassured_Automation_EngagementType -->
+      </class> <!-- restassured.automation.testcases.Restassured_Automation_ItemSelectQuestion -->
+    </classes>
+  </test> <!-- Default test -->
+  <test name="Default test(failed)">
+    <classes>
       <class name="restassured.automation.testcases.Restassured_Automation_ItemSelectQuestion">
         <methods>
           <include name="setup"/>
           <include name="ItemSelectQuestion_EndToEnd_Scenario"/>
-          <include name="ItemSelectQuestion_DeleteAnOptionGroupFromAnItemSelectQuestion_400"/>
         </methods>
       </class> <!-- restassured.automation.testcases.Restassured_Automation_ItemSelectQuestion -->
-      <class name="restassured.automation.testcases.Restassured_Automation_MethodologItem">
-        <methods>
-          <include name="MethodologyItem_GetAllMethodologyItemsForARevision_status400"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- restassured.automation.testcases.Restassured_Automation_MethodologItem -->
-      <class name="restassured.automation.testcases.Restassured_Automation_Rules">
-        <methods>
-          <include name="deleteARuleSet_status400"/>
-          <include name="putUpdateANewRuleSet_status409"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- restassured.automation.testcases.Restassured_Automation_Rules -->
-      <class name="restassured.automation.testcases.Restassured_Automation_MethodologyItemRelations">
-        <methods>
-          <include name="MethodologyItemRelation_ListOfAllMethodologyRelation_status400"/>
-          <include name="MethodologyItemRelation_DeleteAnMethodologyRelation_status400"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- restassured.automation.testcases.Restassured_Automation_MethodologyItemRelations -->
-      <class name="restassured.automation.testcases.Restassured_Automation_OrgRoles">
-        <methods>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- restassured.automation.testcases.Restassured_Automation_OrgRoles -->
-      <class name="restassured.automation.testcases.Restassured_Automation_Methodology">
-        <methods>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- restassured.automation.testcases.Restassured_Automation_Methodology -->
-      <class name="restassured.automation.testcases.Restassured_Automation_Organizations">
-        <methods>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- restassured.automation.testcases.Restassured_Automation_Organizations -->
-      <class name="restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles">
-        <methods>
-          <include name="setup"/>
-          <include name="patchUpdateAnEngagementRoleForAMethodology_status409"/>
-          <include name="postCreateAnEngagementRoleForAMethodology_status409"/>
-          <include name="patchUpdateAnEngagementRoleForAnOrganization_status409"/>
-        </methods>
-      </class> <!-- restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

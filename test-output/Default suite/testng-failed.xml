@@ -5,7 +5,7 @@
     <classes>
       <class name="restassured.automation.testcases.Restassured_Automation_ItemSelectQuestion">
         <methods>
-          <include name="ItemSelectQuestion_DeleteAnOptionFromAnItemSelectQuestion_Status400"/>
+          <include name="ItemSelectQuestion_EndToEnd_Scenario"/>
         </methods>
       </class> <!-- restassured.automation.testcases.Restassured_Automation_ItemSelectQuestion -->
     </classes>
@@ -15,7 +15,7 @@
       <class name="restassured.automation.testcases.Restassured_Automation_ItemSelectQuestion">
         <methods>
           <include name="setup"/>
-          <include name="ItemSelectQuestion_DeleteAnOptionFromAnItemSelectQuestion_Status400"/>
+          <include name="ItemSelectQuestion_EndToEnd_Scenario"/>
         </methods>
       </class> <!-- restassured.automation.testcases.Restassured_Automation_ItemSelectQuestion -->
     </classes>
