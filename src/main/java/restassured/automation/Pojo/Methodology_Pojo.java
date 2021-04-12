@@ -13,6 +13,7 @@ public class Methodology_Pojo {
 	private String treeItemId ;
 	private String draftDescription;
 	private String[] itemIds;
+	private String hotFixMajorVersion;
 	
 	
 	public String getDraftDescription() {
@@ -69,6 +70,13 @@ public class Methodology_Pojo {
 	public void setItemIds(String[] itemIds) {
 		this.itemIds = itemIds;
 	}
+	public String getHotFixMajorVersion() {
+		return hotFixMajorVersion;
+	}
+	public void setHotFixMajorVersion(String hotFixMajorVersion) {
+		this.hotFixMajorVersion = hotFixMajorVersion;
+	}
+	
 	
 
 }

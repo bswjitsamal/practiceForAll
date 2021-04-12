@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="6748" started-at="2021-04-09T09:12:45Z" finished-at="2021-04-09T09:12:51Z">
+  <suite name="Default suite" duration-ms="14938" started-at="2021-04-12T10:58:15Z" finished-at="2021-04-12T10:58:30Z">
     <groups>
-      <group name="EndToEnd">
-        <method signature="Restassured_Automation_ItemSelectQuestion.ItemSelectQuestion_EndToEnd_Scenario()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_ItemSelectQuestion@4411d970]" name="ItemSelectQuestion_EndToEnd_Scenario" class="restassured.automation.testcases.Restassured_Automation_ItemSelectQuestion"/>
-      </group> <!-- EndToEnd -->
+      <group name="IntegrationTests">
+        <method signature="Restassured_Automation_Methodology.Methodology_DeleteACandidateRevisionWithStatus_404()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_Methodology@4411d970]" name="Methodology_DeleteACandidateRevisionWithStatus_404" class="restassured.automation.testcases.Restassured_Automation_Methodology"/>
+      </group> <!-- IntegrationTests -->
     </groups>
-    <test name="Default test" duration-ms="6748" started-at="2021-04-09T09:12:45Z" finished-at="2021-04-09T09:12:51Z">
-      <class name="restassured.automation.testcases.Restassured_Automation_ItemSelectQuestion">
-        <test-method status="PASS" signature="setup()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_ItemSelectQuestion@4411d970]" name="setup" is-config="true" duration-ms="62" started-at="2021-04-09T14:42:45Z" finished-at="2021-04-09T14:42:45Z">
+    <test name="Default test" duration-ms="14938" started-at="2021-04-12T10:58:15Z" finished-at="2021-04-12T10:58:30Z">
+      <class name="restassured.automation.testcases.Restassured_Automation_Methodology">
+        <test-method status="PASS" signature="setup()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_Methodology@4411d970]" name="setup" is-config="true" duration-ms="111" started-at="2021-04-12T16:28:15Z" finished-at="2021-04-12T16:28:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="FAIL" signature="ItemSelectQuestion_EndToEnd_Scenario()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_ItemSelectQuestion@4411d970]" name="ItemSelectQuestion_EndToEnd_Scenario" duration-ms="6676" started-at="2021-04-09T14:42:45Z" finished-at="2021-04-09T14:42:51Z">
+        <test-method status="FAIL" signature="Methodology_DeleteACandidateRevisionWithStatus_404()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_Methodology@4411d970]" name="Methodology_DeleteACandidateRevisionWithStatus_404" duration-ms="14809" started-at="2021-04-12T16:28:15Z" finished-at="2021-04-12T16:28:30Z">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
-	at restassured.automation.listeners.ExtentTestManager.statusLogMessage(ExtentTestManager.java:37)
-	at restassured.automation.testcases.Restassured_Automation_ItemSelectQuestion.ItemSelectQuestion_EndToEnd_Scenario(Restassured_Automation_ItemSelectQuestion.java:2155)
+	at restassured.automation.listeners.ExtentTestManager.statusLogMessage(ExtentTestManager.java:46)
+	at restassured.automation.testcases.Restassured_Automation_Methodology.Methodology_DeleteACandidateRevisionWithStatus_404(Restassured_Automation_Methodology.java:1674)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -49,8 +49,8 @@
           </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ItemSelectQuestion_EndToEnd_Scenario -->
-      </class> <!-- restassured.automation.testcases.Restassured_Automation_ItemSelectQuestion -->
+        </test-method> <!-- Methodology_DeleteACandidateRevisionWithStatus_404 -->
+      </class> <!-- restassured.automation.testcases.Restassured_Automation_Methodology -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

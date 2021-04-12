@@ -452,55 +452,7 @@ public class Restassured_Automation_Methodology {
 
 	}
 
-	// @Test
-	public void createANewMethodology() throws IOException {
-
-		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
-
-		/**
-		 * FETCHING THE ORGANISATION ID
-		 */
-
-		Response OrganizationsDetails = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/org");
-		JsonPath jsonPathEvaluator = OrganizationsDetails.jsonPath();
-		listOrdId = jsonPathEvaluator.get("id");
-		OrganizationsDetails.prettyPrint();
-
-		/**
-		 * FETCHING THE ENGAGEMENT ID
-		 */
-
-		Response getEngagementTypeRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/engagementType",
-				"Organization", listOrdId.get(7));
-		getEngagementTypeRes.prettyPrint();
-		Properties post = read_Configuration_Propertites.loadproperty("Configuration");
-		JsonPath jsonEvaluator1 = getEngagementTypeRes.jsonPath();
-		engagementTypeId = jsonEvaluator1.get("id");
-
-		/**
-		 * PERFORMING THE POST OPERATION
-		 */
-		Methodology_Pojo methodology = new Methodology_Pojo();
-		methodology.setOrganization(listOrdId.get(7));
-		methodology.setEngagementType(engagementTypeId.get(7));
-		methodology.setTitle(
-				post.getProperty("postMethodologyTitle") + getRandomAlphaNum() + allUtils.getRandomNumber(1, 20));
-		methodology.setDraftDescription("This is for testing purpose");
-
-		String patchId = "/api/methodology";
-		Response methodologyTypeRes = allUtils.post_URLPOJO(URL, AuthorizationKey, patchId, methodology);
-
-		methodologyTypeRes.prettyPrint();
-		Assert.assertEquals(methodologyTypeRes.statusCode(), 200);
-		/**
-		 * Extent report generation
-		 */
-		ExtentTestManager.statusLogMessage(methodologyTypeRes.statusCode());
-		ExtentTestManager.getTest().log(Status.INFO, methodologyTypeRes.asString());
-		allUtils.validate_HTTPStrictTransportSecurity(methodologyTypeRes);
-
-	}
-
+	
 	//@Test(groups = "IntegrationTests")
 	public void Methodology_PatchUpdateASpecificMethodologiesWith_Status_204() throws IOException {
 		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
@@ -604,7 +556,7 @@ public class Restassured_Automation_Methodology {
 
 	}
 
-	//@Test(groups = "IntegrationTests")
+	@Test(groups = "IntegrationTests")
 	public void Methodology_CreateANewCandidateRevisionWithStatus_200() throws IOException {
 		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
 
@@ -628,8 +580,8 @@ public class Restassured_Automation_Methodology {
 		ArrayList<String> parentId = jsonPathEvaluator1.get("id");
 		System.out.println(String.valueOf(listRevisionI1.get(0)));
 
-		String revId = String.valueOf(listRevisionI1.get(1));
-		String parntId = String.valueOf(parentId.get(1));
+		String revId = String.valueOf(listRevisionI1.get(2));
+		String parntId = String.valueOf(parentId.get(2));
 
 		/**
 		 * Creating an phase
@@ -811,7 +763,7 @@ public class Restassured_Automation_Methodology {
 
 	}
 	
-	//@Test(groups = "IntegrationTests")
+	@Test(groups = "IntegrationTests")
 	public void Methodology_CreateANewCandidateRevisionWithStatus_400() throws IOException {
 		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
 
@@ -835,8 +787,8 @@ public class Restassured_Automation_Methodology {
 		ArrayList<String> parentId = jsonPathEvaluator1.get("id");
 		System.out.println(String.valueOf(listRevisionI1.get(0)));
 
-		String revId = String.valueOf(listRevisionI1.get(0));
-		String parntId = String.valueOf(parentId.get(0));
+		String revId = String.valueOf(listRevisionI1.get(2));
+		String parntId = String.valueOf(parentId.get(2));
 
 		/**
 		 * Creating an phase
@@ -1017,7 +969,7 @@ public class Restassured_Automation_Methodology {
 		getEngagementType.validate_HTTPStrictTransportSecurity(candidateRes);
 
 	}
-	//@Test(groups = "IntegrationTests")
+	@Test(groups = "IntegrationTests")
 	public void Methodology_CreateANewCandidateRevisionWithStatus_409() throws IOException {
 		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
 
@@ -1041,8 +993,8 @@ public class Restassured_Automation_Methodology {
 		ArrayList<String> parentId = jsonPathEvaluator1.get("id");
 		System.out.println(String.valueOf(listRevisionI1.get(0)));
 
-		String revId = String.valueOf(listRevisionI1.get(0));
-		String parntId = String.valueOf(parentId.get(0));
+		String revId = String.valueOf(listRevisionI1.get(2));
+		String parntId = String.valueOf(parentId.get(2));
 
 		/**
 		 * Creating an phase
@@ -1211,8 +1163,8 @@ public class Restassured_Automation_Methodology {
 
 		String CandidateURI = "/api/methodology/candidate/" + parntId;
 		Methodology_Pojo mi = new Methodology_Pojo();
-		mi.setItemIds(new String[] { methodItemId1, methodItemId1 });
-		
+		mi.setItemIds(new String[] { methodItemId1, methodItemId1});
+		mi.setHotFixMajorVersion("0");
 		Response candidateRes = getEngagementType.post_URLPOJO(URL, AuthorizationKey, CandidateURI, mi);
 		candidateRes.prettyPrint();
 		Assert.assertEquals(candidateRes.getStatusCode(), 409);
@@ -1224,7 +1176,7 @@ public class Restassured_Automation_Methodology {
 		getEngagementType.validate_HTTPStrictTransportSecurity(candidateRes);
 
 	}
-	//@Test(groups = "IntegrationTests")
+	@Test(groups = "IntegrationTests")
 	public void Methodology_GetCandidateRevisionWithStatus_200(){
 		
 		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
@@ -1245,7 +1197,7 @@ public class Restassured_Automation_Methodology {
 
 		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
 		ArrayList<String> methodologyId = jsonPathEvaluator1.get("id");
-		String parntId = String.valueOf(methodologyId.get(0));
+		String parntId = String.valueOf(methodologyId.get(2));
 		String getCandidateURI="/api/methodology/candidate/" + parntId;
 		Response getCandidateRes=getMethodology.get_URL_Without_Params(URL, AuthorizationKey, getCandidateURI);
 		getCandidateRes.prettyPrint();
@@ -1258,7 +1210,7 @@ public class Restassured_Automation_Methodology {
 		getMethodology.validate_HTTPStrictTransportSecurity(getCandidateRes);
 
 	}
-	//@Test(groups = "IntegrationTests")
+	@Test(groups = "IntegrationTests")
 	public void Methodology_GetCandidateRevisionWithStatus_404(){
 		
 		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
@@ -1279,7 +1231,7 @@ public class Restassured_Automation_Methodology {
 
 		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
 		ArrayList<String> methodologyId = jsonPathEvaluator1.get("id");
-		String parntId = String.valueOf(methodologyId.get(0));
+		String parntId = String.valueOf(methodologyId.get(2));
 		String getCandidateURI="/api/methodology/candidates/" + parntId;
 		Response getCandidateRes=getMethodology.get_URL_Without_Params(URL, AuthorizationKey, getCandidateURI);
 		getCandidateRes.prettyPrint();
@@ -1293,254 +1245,15 @@ public class Restassured_Automation_Methodology {
 
 	}
 	
-	//@Test(groups="IntegrationTests")
+	@Test(groups="IntegrationTests")
 	public void Methodology_DeleteACandidateRevisionWithStatus_200() throws IOException {
-		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
-		Properties post = read_Configuration_Propertites.loadproperty("Configuration");
-
-		// fetching Org Id
-
-		Response OrganizationsDetails = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/org");
+		Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();
+		Response OrganizationsDetails = getMethodology.get_URL_Without_Params(URL, AuthorizationKey, "/api/org");
 		JsonPath jsonPathEvaluator = OrganizationsDetails.jsonPath();
 		listOrdId = jsonPathEvaluator.get("id");
 		OrganizationsDetails.prettyPrint();
 
-		Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();
 		
-
-		Response getMethodologyRes = getMethodology.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(5));
-
-		getMethodologyRes.prettyPrint();
-		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
-		List<String>eType=jsonPathEvaluator1.get("engagementType");
-		String engagementType=eType.get(0);
-		/*ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator1.get("revisions.id");
-
-		ArrayList<String> parentId = jsonPathEvaluator1.get("id");
-		System.out.println(String.valueOf(listRevisionI1.get(0)));
-
-		String revId = String.valueOf(listRevisionI1.get(9));
-		String parntId = String.valueOf(parentId.get(0));*/
-
-		Map<String,String>map=new HashMap<String, String>();
-		map.put("title",post.getProperty("postMethodologyTitle")+allUtils.getRandomNumber(1,30));
-		map.put("engagementType", engagementType);
-		map.put("draftDescription", post.getProperty("postMethodologyDraftDescription"));
-		
-		User_Pojo po=new User_Pojo();
-		String createMethodology=po.methodologyAdd(map);
-		
-		String postMethodologyId="/api/methodology";
-		Response methodRes=allUtils.post_URLPOJO(URL, AuthorizationKey, postMethodologyId,createMethodology);
-		methodRes.prettyPrint();
-		JsonPath methodJson=methodRes.jsonPath();
-		ArrayList<Map<String, ?>> listRevisionI1=methodJson.get("revisions.id");
-		String parentId=methodJson.get("id");
-		System.out.println(String.valueOf(listRevisionI1.get(2)));
-
-		String revId = String.valueOf(listRevisionI1.get(2));
-		String parntId = String.valueOf(parentId);
-			
-		/**
-		 * Creating an phase
-		 */
-
-		String patchId = "/api/methodologyItem/revision/" + revId.substring(1,25) + "/item";
-
-		
-		// MethodologyItem_Pojo mi1 = new MethodologyItem_Pojo();
-
-		Map<String, String> data = new HashMap<String, String>();
-		data.put("title", post.getProperty("postMethodologyItemTitle"));
-		// data.put("parentId", parntId);
-		data.put("index", post.getProperty("postMethodologyItemIndex"));
-		data.put("itemType", post.getProperty("postMethodologyItemItemType"));
-
-		User_Pojo createPhase = new User_Pojo();
-		String createPhaseData = createPhase.PhaseCreate(data);
-
-		Restassured_Automation_Utils AllUtils = new Restassured_Automation_Utils();
-		System.out.println("Creating an phase");
-
-		Response postCreatePhase = AllUtils.post_URLPOJO(URL, AuthorizationKey, patchId, createPhaseData);
-		postCreatePhase.prettyPrint();
-		//Assert.assertEquals(postCreatePhase.getStatusCode(), 200);
-
-		JsonPath jsonEvaluator = postCreatePhase.jsonPath();
-		//String revision = jsonEvaluator.get("revisionId");
-		String methodItemId = jsonEvaluator.get("methodologyItemId");
-
-		String methodologyItemId = postCreatePhase.asString();
-		System.out.println("---->" + methodItemId);
-
-		/**
-		 * 
-		 * CREATING ONE MORE WP AGAIN WITH NEW DATA
-		 */
-
-		String patchId6 = "/api/methodologyItem/revision/" + revId.substring(1,25) + "/item";
-
-		Map<String, String> data6 = new HashMap<String, String>();
-		data6.put("title", post.getProperty("postMethodologyItemTitle"));
-		data6.put("parentId", methodItemId);
-		data6.put("index", post.getProperty("postMethodologyItemIndex"));
-		data6.put("itemType", post.getProperty("postMethodologyItemType"));
-
-		User_Pojo createPhase1 = new User_Pojo();
-		String createPhaseData1 = createPhase1.PhaseCreate(data6);
-
-		Response postCreatePhase1 = AllUtils.post_URLPOJO(URL, AuthorizationKey, patchId6, createPhaseData1);
-		postCreatePhase1.prettyPrint();
-
-		JsonPath jsonEvaluator2 = postCreatePhase1.jsonPath();
-		String revision1 = jsonEvaluator2.get("revisionId");
-		String methodItemId2 = jsonEvaluator2.get("methodologyItemId");
-
-		String methodologyItemId1 = postCreatePhase1.asString();
-		System.out.println("---->" + methodItemId2);
-
-		// Performing PATCH operation
-
-		String patchId7 = "/api/methodologyItem/revision/" + revision1 + "/item/" + methodItemId2;
-
-		Map<String, String> data7 = new HashMap<String, String>();
-		data7.put("workProgramType", post.getProperty("patchWorkProgramType"));
-		data7.put("tailoring", post.getProperty("patchTailoring"));
-		data7.put("visibility", post.getProperty("patchVisibility"));
-
-		User_Pojo patchPhase1 = new User_Pojo();
-		String patchPhaseData1 = patchPhase1.PhaseCreatePatch(data7);
-
-		Response patchCreatePhase1 = AllUtils.patch_URLPOJO(URL, AuthorizationKey, patchId7, patchPhaseData1);
-		patchCreatePhase1.prettyPrint();
-		//Assert.assertEquals(patchCreatePhase1.getStatusCode(), 204);
-
-		String patchId2 = "/api/methodologyItem/revision/" + revId.substring(1,25) + "/workProgram/" + methodItemId2 + "/initialize";
-
-		Map<String, String> data2 = new HashMap<String, String>();
-		data2.put("ruleContextType", post.getProperty("postRuleContextType"));
-
-		User_Pojo postPhase = new User_Pojo();
-		String initializePhaseData = postPhase.initializeWorkProgramType(data2);
-
-		Response initializePhase = AllUtils.post_URLPOJO(URL, AuthorizationKey, patchId2, initializePhaseData);
-		initializePhase.prettyPrint();
-		//Assert.assertEquals(initializePhase.getStatusCode(), 204);
-
-		/**
-		 * Create an procedure
-		 */
-
-		String patchId3 = "/api/methodologyItem/revision/" + revId.substring(1,25) + "/item";
-
-		Map<String, String> data3 = new HashMap<String, String>();
-		data3.put("title", post.getProperty("postMethodologyItemTitle"));
-		data3.put("parentId", methodItemId);
-		data3.put("index", post.getProperty("postMethodologyItemIndex"));
-		data3.put("itemType", post.getProperty("postWorkProgramItemItemType"));
-		data3.put("workProgramId", parntId);
-
-		User_Pojo postProcedure = new User_Pojo();
-		String postProcedureData = postProcedure.procedureAdd(data3);
-
-		String firstReplacment = postProcedureData.replace("revisions", "parentId");
-		String scndReplacement = firstReplacment.replace("WPId", "workProgramId");
-
-		Response postProcedureRes = AllUtils.post_URLPOJO(URL, AuthorizationKey, patchId3, scndReplacement);
-		postProcedureRes.prettyPrint();
-		//Assert.assertEquals(postProcedureRes.getStatusCode(), 200);
-
-		// Performing PATCH operation
-
-		JsonPath jsonEvaluator1 = postProcedureRes.jsonPath();
-		String methodItemId1 = jsonEvaluator1.get("methodologyItemId");
-
-		String patchId4 = "/api/methodologyItem/revision/" + revId.substring(1,25) + "/item/" + methodItemId1;
-
-		Map<String, String> data4 = new HashMap<String, String>();
-		data4.put("workProgramItemType", post.getProperty("postWorkProgramItemType"));
-
-		User_Pojo patchProcedure = new User_Pojo();
-		String patchProcedureData = patchProcedure.procedureTypeAdd(data4);
-
-		Response patchCreateProcedure = AllUtils.patch_URLPOJO(URL, AuthorizationKey, patchId4,
-				patchProcedureData.replaceFirst("WPId", "workProgramItemType"));
-		patchCreateProcedure.prettyPrint();
-		//Assert.assertEquals(patchCreateProcedure.getStatusCode(), 204);
-
-		/**
-		 * Create an workflow - ReadyForApprove
-		 */
-		String workFlowURI = "/api/methodologyItem/revision/" + revId.substring(1,25);
-
-		Restassured_Automation_Utils getEngagementType = new Restassured_Automation_Utils();
-
-		Response getEngagementTypeRes = getEngagementType.get_URL_Without_Params(URL, AuthorizationKey, workFlowURI);
-		getEngagementTypeRes.prettyPrint();
-		//Assert.assertEquals(getEngagementTypeRes.statusCode(), 200);
-		JsonPath workFlowJson = getEngagementTypeRes.jsonPath();
-		// workFlow=workFlowJson.get("workFlowState");
-		methodlogyItemId = workFlowJson.get("methodologyItemId");
-		String methodItemId3 = methodlogyItemId.get(1);
-
-		String workFlowParam = post.getProperty("postWorkFlowState");
-
-		String postId = "/api/methodologyItem/revision/" + revId.substring(1,25) + "/workProgram/"
-				+ methodItemId3 + "/workFlow/" + workFlowParam;
-
-		Response postWorkFlowRes = getEngagementType.post_URL_WithoutBody(URL, AuthorizationKey, postId);
-		postWorkFlowRes.prettyPrint();
-		// Assert.assertEquals(postWorkFlowRes.getStatusCode(), 204);
-		/**
-		 * Create an workflow - Approved
-		 */
-
-		String workFlowParam1 = post.getProperty("postWorkFlowState2");
-		String postId1 = "/api/methodologyItem/revision/" + revId.substring(1,25) + "/workProgram/"
-				+ methodItemId2 + "/workFlow/" + workFlowParam1;
-
-		Response postWorkFlowRes1 = getEngagementType.post_URL_WithoutBody(URL, AuthorizationKey, postId1);
-		postWorkFlowRes1.prettyPrint();
-		// .assertEquals(postWorkFlowRes1.getStatusCode(), 204);
-		/**
-		 * CREATE AN CANDIDATE FOR AN METHODOLOGY
-		 */
-
-		String CandidateURI = "/api/methodology/candidate/" + parntId;
-		Methodology_Pojo mi = new Methodology_Pojo();
-		mi.setItemIds(new String[] { methodItemId, methodItemId2 });
-		Response candidateRes = getEngagementType.post_URLPOJO(URL, AuthorizationKey, CandidateURI, mi);
-		candidateRes.prettyPrint();
-		/**
-		 * Delete the candidate
-		 */
-		String deleteUri="/api/methodology/candidate/" + parntId+"/"+revId;
-		Response deleteRes=getEngagementType.delete(URL, AuthorizationKey, deleteUri);
-		deleteRes.prettyPrint();
-		Assert.assertEquals(deleteRes.getStatusCode(),200);
-		/**
-		 * Extent Report Generation
-		 */
-		ExtentTestManager.statusLogMessage(deleteRes.statusCode());
-		ExtentTestManager.getTest().log(Status.INFO, deleteRes.asString());
-		getMethodology.validate_HTTPStrictTransportSecurity(deleteRes);
-
-	}
-	
-	
-	//@Test(groups = "IntegrationTests")
-	public void Methodology_DeleteACandidateRevisionWithStatus_404() throws IOException {
-		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
-
-		// fetching Org Id
-
-		Response OrganizationsDetails = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/org");
-		JsonPath jsonPathEvaluator = OrganizationsDetails.jsonPath();
-		listOrdId = jsonPathEvaluator.get("id");
-		OrganizationsDetails.prettyPrint();
-
-		Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();
 
 		Response getMethodologyRes = getMethodology.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
 				"Organization", listOrdId.get(5));
@@ -1579,7 +1292,7 @@ public class Restassured_Automation_Methodology {
 
 		Response postCreatePhase = AllUtils.post_URLPOJO(URL, AuthorizationKey, patchId, createPhaseData);
 		postCreatePhase.prettyPrint();
-		Assert.assertEquals(postCreatePhase.getStatusCode(), 200);
+		//Assert.assertEquals(postCreatePhase.getStatusCode(), 200);
 
 		JsonPath jsonEvaluator = postCreatePhase.jsonPath();
 		String revision = jsonEvaluator.get("revisionId");
@@ -1640,7 +1353,7 @@ public class Restassured_Automation_Methodology {
 
 		Response initializePhase = AllUtils.post_URLPOJO(URL, AuthorizationKey, patchId2, initializePhaseData);
 		initializePhase.prettyPrint();
-		Assert.assertEquals(initializePhase.getStatusCode(), 204);
+		//Assert.assertEquals(initializePhase.getStatusCode(), 204);
 
 		/**
 		 * Create an procedure
@@ -1692,7 +1405,7 @@ public class Restassured_Automation_Methodology {
 
 		Response getEngagementTypeRes = getEngagementType.get_URL_Without_Params(URL, AuthorizationKey, workFlowURI);
 		getEngagementTypeRes.prettyPrint();
-		Assert.assertEquals(getEngagementTypeRes.statusCode(), 200);
+		//Assert.assertEquals(getEngagementTypeRes.statusCode(), 200);
 		JsonPath workFlowJson = getEngagementTypeRes.jsonPath();
 		// workFlow=workFlowJson.get("workFlowState");
 		methodlogyItemId = workFlowJson.get("methodologyItemId");
@@ -1726,13 +1439,234 @@ public class Restassured_Automation_Methodology {
 		mi.setItemIds(new String[] { methodItemId, methodItemId2 });
 		Response candidateRes = getEngagementType.post_URLPOJO(URL, AuthorizationKey, CandidateURI, mi);
 		candidateRes.prettyPrint();
-		Assert.assertEquals(candidateRes.getStatusCode(), 200);
+		JsonPath candidateJson=candidateRes.jsonPath();
+		String candidateMethodologyId=candidateJson.get("methodologyId");
+		String str=candidateMethodologyId.toString();
+		System.out.println("Methodology id------>"+candidateMethodologyId);
+		
 		/**
 		 * Delete the candidate
 		 */
-		String deleteUri="/api/methodology/candidates/" + parntId+"/"+revId.substring(1,25);
+		String deleteUri="/api/methodology/candidate/" + str+"/"+revId.substring(1,25);
 		Response deleteRes=getEngagementType.delete(URL, AuthorizationKey, deleteUri);
 		deleteRes.prettyPrint();
+		Assert.assertEquals(deleteRes.getStatusCode(),200);
+		/**
+		 * Extent Report Generation
+		 */
+		ExtentTestManager.statusLogMessage(deleteRes.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO, deleteRes.asString());
+		getMethodology.validate_HTTPStrictTransportSecurity(deleteRes);
+
+	}
+	
+	
+	@Test(groups = "IntegrationTests")
+	public void Methodology_DeleteACandidateRevisionWithStatus_404() throws IOException {
+		Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();
+		Response OrganizationsDetails = getMethodology.get_URL_Without_Params(URL, AuthorizationKey, "/api/org");
+		JsonPath jsonPathEvaluator = OrganizationsDetails.jsonPath();
+		listOrdId = jsonPathEvaluator.get("id");
+		OrganizationsDetails.prettyPrint();
+
+		
+
+		Response getMethodologyRes = getMethodology.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
+				"Organization", listOrdId.get(5));
+
+		getMethodologyRes.prettyPrint();
+
+		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
+		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator1.get("revisions.id");
+
+		ArrayList<String> parentId = jsonPathEvaluator1.get("id");
+		System.out.println(String.valueOf(listRevisionI1.get(0)));
+
+		String revId = String.valueOf(listRevisionI1.get(2));
+		String parntId = String.valueOf(parentId.get(2));
+
+		/**
+		 * Creating an phase
+		 */
+
+		String patchId = "/api/methodologyItem/revision/" + revId.substring(1,25) + "/item";
+
+		Properties post = read_Configuration_Propertites.loadproperty("Configuration");
+		// MethodologyItem_Pojo mi1 = new MethodologyItem_Pojo();
+
+		Map<String, String> data = new HashMap<String, String>();
+		data.put("title", post.getProperty("postMethodologyItemTitle"));
+		// data.put("parentId", parntId);
+		data.put("index", post.getProperty("postMethodologyItemIndex"));
+		data.put("itemType", post.getProperty("postMethodologyItemItemType"));
+
+		User_Pojo createPhase = new User_Pojo();
+		String createPhaseData = createPhase.PhaseCreate(data);
+
+		Restassured_Automation_Utils AllUtils = new Restassured_Automation_Utils();
+		System.out.println("Creating an phase");
+
+		Response postCreatePhase = AllUtils.post_URLPOJO(URL, AuthorizationKey, patchId, createPhaseData);
+		postCreatePhase.prettyPrint();
+		//Assert.assertEquals(postCreatePhase.getStatusCode(), 200);
+
+		JsonPath jsonEvaluator = postCreatePhase.jsonPath();
+		String revision = jsonEvaluator.get("revisionId");
+		String methodItemId = jsonEvaluator.get("methodologyItemId");
+
+		String methodologyItemId = postCreatePhase.asString();
+		System.out.println("---->" + methodItemId);
+
+		/**
+		 * 
+		 * CREATING ONE MORE WP AGAIN WITH NEW DATA
+		 */
+
+		String patchId6 = "/api/methodologyItem/revision/" + revId.substring(1,25) + "/item";
+
+		Map<String, String> data6 = new HashMap<String, String>();
+		data6.put("title", post.getProperty("postMethodologyItemTitle"));
+		data6.put("parentId", methodItemId);
+		data6.put("index", post.getProperty("postMethodologyItemIndex"));
+		data6.put("itemType", post.getProperty("postMethodologyItemType"));
+
+		User_Pojo createPhase1 = new User_Pojo();
+		String createPhaseData1 = createPhase1.PhaseCreate(data6);
+
+		Response postCreatePhase1 = AllUtils.post_URLPOJO(URL, AuthorizationKey, patchId6, createPhaseData1);
+		postCreatePhase1.prettyPrint();
+
+		JsonPath jsonEvaluator2 = postCreatePhase1.jsonPath();
+		String revision1 = jsonEvaluator2.get("revisionId");
+		String methodItemId2 = jsonEvaluator2.get("methodologyItemId");
+
+		String methodologyItemId1 = postCreatePhase1.asString();
+		System.out.println("---->" + methodItemId2);
+
+		// Performing PATCH operation
+
+		String patchId7 = "/api/methodologyItem/revision/" + revision1 + "/item/" + methodItemId2;
+
+		Map<String, String> data7 = new HashMap<String, String>();
+		data7.put("workProgramType", post.getProperty("patchWorkProgramType"));
+		data7.put("tailoring", post.getProperty("patchTailoring"));
+		data7.put("visibility", post.getProperty("patchVisibility"));
+
+		User_Pojo patchPhase1 = new User_Pojo();
+		String patchPhaseData1 = patchPhase1.PhaseCreatePatch(data7);
+
+		Response patchCreatePhase1 = AllUtils.patch_URLPOJO(URL, AuthorizationKey, patchId7, patchPhaseData1);
+		patchCreatePhase1.prettyPrint();
+		//Assert.assertEquals(patchCreatePhase1.getStatusCode(), 204);
+
+		String patchId2 = "/api/methodologyItem/revision/" + revision + "/workProgram/" + methodItemId2 + "/initialize";
+
+		Map<String, String> data2 = new HashMap<String, String>();
+		data2.put("ruleContextType", post.getProperty("postRuleContextType"));
+
+		User_Pojo postPhase = new User_Pojo();
+		String initializePhaseData = postPhase.initializeWorkProgramType(data2);
+
+		Response initializePhase = AllUtils.post_URLPOJO(URL, AuthorizationKey, patchId2, initializePhaseData);
+		initializePhase.prettyPrint();
+		//Assert.assertEquals(initializePhase.getStatusCode(), 204);
+
+		/**
+		 * Create an procedure
+		 */
+
+		String patchId3 = "/api/methodologyItem/revision/" + revId.substring(1,25) + "/item";
+
+		Map<String, String> data3 = new HashMap<String, String>();
+		data3.put("title", post.getProperty("postMethodologyItemTitle"));
+		data3.put("parentId", methodItemId);
+		data3.put("index", post.getProperty("postMethodologyItemIndex"));
+		data3.put("itemType", post.getProperty("postProcedureItemType"));
+		data3.put("workProgramId", parntId);
+
+		User_Pojo postProcedure = new User_Pojo();
+		String postProcedureData = postProcedure.procedureAdd(data3);
+
+		String firstReplacment = postProcedureData.replace("revisions", "parentId");
+		String scndReplacement = firstReplacment.replace("WPId", "workProgramId");
+
+		Response postProcedureRes = AllUtils.post_URLPOJO(URL, AuthorizationKey, patchId3, scndReplacement);
+		postProcedureRes.prettyPrint();
+		//Assert.assertEquals(postProcedureRes.getStatusCode(), 200);
+
+		// Performing PATCH operation
+
+		JsonPath jsonEvaluator1 = postProcedureRes.jsonPath();
+		String methodItemId1 = jsonEvaluator1.get("methodologyItemId");
+
+		String patchId4 = "/api/methodologyItem/revision/" + revision + "/item/" + methodItemId1;
+
+		Map<String, String> data4 = new HashMap<String, String>();
+		data4.put("workProgramItemType", post.getProperty("postWorkProgramItemType"));
+
+		User_Pojo patchProcedure = new User_Pojo();
+		String patchProcedureData = patchProcedure.procedureTypeAdd(data4);
+
+		Response patchCreateProcedure = AllUtils.patch_URLPOJO(URL, AuthorizationKey, patchId4,
+				patchProcedureData.replaceFirst("WPId", "workProgramItemType"));
+		patchCreateProcedure.prettyPrint();
+		//Assert.assertEquals(patchCreateProcedure.getStatusCode(), 204);
+
+		/**
+		 * Create an workflow - ReadyForApprove
+		 */
+		String workFlowURI = "/api/methodologyItem/revision/" + revId.substring(1,25);
+
+		Restassured_Automation_Utils getEngagementType = new Restassured_Automation_Utils();
+
+		Response getEngagementTypeRes = getEngagementType.get_URL_Without_Params(URL, AuthorizationKey, workFlowURI);
+		getEngagementTypeRes.prettyPrint();
+		//Assert.assertEquals(getEngagementTypeRes.statusCode(), 200);
+		JsonPath workFlowJson = getEngagementTypeRes.jsonPath();
+		// workFlow=workFlowJson.get("workFlowState");
+		methodlogyItemId = workFlowJson.get("methodologyItemId");
+		String methodItemId3 = methodlogyItemId.get(1);
+
+		String workFlowParam = post.getProperty("postWorkFlowState");
+
+		String postId = "/api/methodologyItem/revision/" + revId.substring(1,25) + "/workProgram/"
+				+ methodItemId3 + "/workFlow/" + workFlowParam;
+
+		Response postWorkFlowRes = getEngagementType.post_URL_WithoutBody(URL, AuthorizationKey, postId);
+		postWorkFlowRes.prettyPrint();
+		// Assert.assertEquals(postWorkFlowRes.getStatusCode(), 204);
+		/**
+		 * Create an workflow - Approved
+		 */
+
+		String workFlowParam1 = post.getProperty("postWorkFlowState2");
+		String postId1 = "/api/methodologyItem/revision/" + revId.substring(1,25) + "/workProgram/"
+				+ methodItemId2 + "/workFlow/" + workFlowParam1;
+
+		Response postWorkFlowRes1 = getEngagementType.post_URL_WithoutBody(URL, AuthorizationKey, postId1);
+		postWorkFlowRes1.prettyPrint();
+		// .assertEquals(postWorkFlowRes1.getStatusCode(), 204);
+		/**
+		 * CREATE AN CANDIDATE FOR AN METHODOLOGY
+		 */
+
+		String CandidateURI = "/api/methodology/candidate/" + parntId;
+		Methodology_Pojo mi = new Methodology_Pojo();
+		mi.setItemIds(new String[] { methodItemId, methodItemId2 });
+		Response candidateRes = getEngagementType.post_URLPOJO(URL, AuthorizationKey, CandidateURI, mi);
+		candidateRes.prettyPrint();
+		JsonPath candidateJson=candidateRes.jsonPath();
+		String candidateMethodologyId=candidateJson.get("methodologyId");
+		String str=candidateMethodologyId.toString();
+		System.out.println("Methodology id------>"+candidateMethodologyId);
+		
+		/**
+		 * Delete the candidate
+		 */
+		String deleteUri="/api/methodology//" + str+"/"+revId.substring(1,25);
+		Response deleteRes=getEngagementType.delete(URL, AuthorizationKey, deleteUri);
+		deleteRes.prettyPrint();
+		
 		Assert.assertEquals(deleteRes.getStatusCode(),404);
 		/**
 		 * Extent Report Generation
