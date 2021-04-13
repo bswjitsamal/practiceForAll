@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test verbose="2" name="Default test">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="restassured.automation.listeners.TestListeners"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <groups>
+      <run>
+        <include name="IntegrationTests"/>
+        <include name="EndToEnd"/>
+      </run>
+    </groups>
     <classes>
-      <class name="restassured.automation.testcases.Restassured_Automation_Methodology">
+      <class name="restassured.automation.testcases.Restassured_Automation_Rules">
         <methods>
-          <include name="Methodology_DeleteACandidateRevisionWithStatus_404"/>
-        </methods>
-      </class> <!-- restassured.automation.testcases.Restassured_Automation_Methodology -->
-    </classes>
-  </test> <!-- Default test -->
-  <test name="Default test(failed)">
-    <classes>
-      <class name="restassured.automation.testcases.Restassured_Automation_Methodology">
-        <methods>
-          <include name="Methodology_DeleteACandidateRevisionWithStatus_404"/>
+          <include name="deleteARuleSet_status400"/>
+          <include name="putUpdateANewRuleSet_status409"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- restassured.automation.testcases.Restassured_Automation_Methodology -->
+      </class> <!-- restassured.automation.testcases.Restassured_Automation_Rules -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

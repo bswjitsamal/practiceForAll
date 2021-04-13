@@ -1,12 +1,14 @@
 package restassured.automation.testcases;
 
+import static java.util.concurrent.TimeUnit.MILLISECONDS;
+import static java.util.concurrent.TimeUnit.SECONDS;
+
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
-import java.util.Random;
 
 import org.awaitility.Awaitility;
 import org.testng.Assert;
@@ -21,15 +23,12 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import restassured.automation.Pojo.Result;
 import restassured.automation.Pojo.RootConditionGroup;
-import restassured.automation.Pojo.ServiceDetailsPojo;
 import restassured.automation.Pojo.RootConditionGroup.Conditions;
+import restassured.automation.Pojo.ServiceDetailsPojo;
 import restassured.automation.listeners.ExtentTestManager;
 import restassured.automation.utils.DataSources_Read_Utils;
 import restassured.automation.utils.Restassured_Automation_Utils;
 import restassured.automation.utils.read_Configuration_Propertites;
-
-import static java.util.concurrent.TimeUnit.MILLISECONDS;
-import static java.util.concurrent.TimeUnit.SECONDS;
 
 public class Restassured_Automation_Rules extends read_Configuration_Propertites {
 
@@ -123,7 +122,7 @@ public class Restassured_Automation_Rules extends read_Configuration_Propertites
 
 	}
 
-	@Test(priority = 2 ,groups = { "IntegrationTests" })
+	@Test(priority = 4 ,groups = { "IntegrationTests" })
 	public void postCreateANewRuleSet_status200() throws JsonIOException, JsonSyntaxException, IOException {
 		
 		Properties post = read_Configuration_Propertites.loadproperty("Configuration");
@@ -182,14 +181,15 @@ public class Restassured_Automation_Rules extends read_Configuration_Propertites
 		getMethodologyRes.prettyPrint();
 		
 		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
-		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator1.get("revisions.id");
+		//ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator1.get("revisions.id");
+		String listRevisionI1 = jsonPathEvaluator1.get("find{it.title== 'createMethodologyAPI'}.revisions[0].id");
 
-		System.out.println(String.valueOf(listRevisionI1.get(2)));
+		//System.out.println(String.valueOf(listRevisionI1.get(1)));
 
-		String revId = String.valueOf(listRevisionI1.get(2));
+		//String revId = String.valueOf(listRevisionI1.get(1));
 
 
-		String patchId = "/api/rules/revision/" +  revId.substring(1,25);
+		String patchId = "/api/rules/revision/" +  listRevisionI1;
 
 
 		Response postOrganizationData = getRulsByRevId.post_URLPOJO(URL, AuthorizationKey, patchId, sp);
@@ -207,7 +207,7 @@ public class Restassured_Automation_Rules extends read_Configuration_Propertites
 
 	}
 
-	@Test(priority = 3 ,groups = { "IntegrationTests" })
+	@Test(priority = 5 ,groups = { "IntegrationTests" })
 	public void postCreateANewRuleSet_status400() throws JsonIOException, JsonSyntaxException, FileNotFoundException {
 		
 		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
@@ -262,7 +262,7 @@ public class Restassured_Automation_Rules extends read_Configuration_Propertites
 
 	}
 	
-	@Test(priority = 4 ,groups = { "IntegrationTests" })
+	@Test(priority = 6 ,groups = { "IntegrationTests" })
 	public void postCreateANewRuleSet_status409() throws JsonIOException, JsonSyntaxException, FileNotFoundException {
 		
 
@@ -362,7 +362,7 @@ public class Restassured_Automation_Rules extends read_Configuration_Propertites
 		
 	}
 
-	@Test(priority = 5 ,groups = { "IntegrationTests" })
+	@Test(priority = 7 ,groups = { "IntegrationTests" })
 	public void putUpdateANewRuleSet_status200() throws JsonIOException, JsonSyntaxException, IOException {
 		
 		Properties post = read_Configuration_Propertites.loadproperty("Configuration");
@@ -462,7 +462,7 @@ public class Restassured_Automation_Rules extends read_Configuration_Propertites
 		
 	}
 
-	@Test(priority = 6 ,groups = { "IntegrationTests" })
+	@Test(priority = 8 ,groups = { "IntegrationTests" })
 	public void putUpdateANewRuleSet_status400() throws JsonIOException, JsonSyntaxException, IOException {
 
 
@@ -566,7 +566,7 @@ public class Restassured_Automation_Rules extends read_Configuration_Propertites
 
 	}
 	
-	@Test(priority = 7 ,groups = { "IntegrationTests" })
+	@Test(priority = 9 ,groups = { "IntegrationTests" })
 	public void putUpdateANewRuleSet_status409() throws JsonIOException, JsonSyntaxException, IOException {
 		
 		Properties post = read_Configuration_Propertites.loadproperty("Configuration");
@@ -625,14 +625,14 @@ public class Restassured_Automation_Rules extends read_Configuration_Propertites
 		getMethodologyRes.prettyPrint();
 		
 		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
-		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator1.get("revisions.id");
+		String listRevisionI1 = jsonPathEvaluator1.get("find{it.title== 'createMethodologyAPI'}.revisions[0].id");
 
-		System.out.println(String.valueOf(listRevisionI1.get(2)));
+		/*System.out.println(String.valueOf(listRevisionI1.get(2)));
 
 		String revId = String.valueOf(listRevisionI1.get(2));
+*/
 
-
-		String patchId = "/api/rules/revision/" +  revId.substring(1,25)+"/list";
+		String patchId = "/api/rules/revision/" +  listRevisionI1+"/list";
 
 
 		//Response postOrganizationData = getRulsByRevId.put_URLPOJO(URL, AuthorizationKey, patchId, sp);
@@ -650,7 +650,7 @@ public class Restassured_Automation_Rules extends read_Configuration_Propertites
 		System.out.println("-------"+ruleId);
 		
 		
-		String patchId1 = "/api/rules/revision/" +  revId.substring(1,25)+"/rule/"+ruleId.get(0);
+		String patchId1 = "/api/rules/revision/" +  listRevisionI1+"/rule/"+ruleId.get(0);
 
 
 		Response putRuleData = getRulsByRevId.put_URLPOJO(URL, AuthorizationKey, patchId1, sp);
@@ -667,7 +667,7 @@ public class Restassured_Automation_Rules extends read_Configuration_Propertites
 		
 	}
 
-	@Test(priority = 8 ,groups = { "IntegrationTests" })
+	@Test(priority = 2 ,groups = { "IntegrationTests" })
 	public void deleteARuleSet_status204() throws IOException {
 		
 		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
@@ -695,16 +695,16 @@ public class Restassured_Automation_Rules extends read_Configuration_Propertites
 		//fetching the last item from the list
 		System.out.println(methodologyId.get(methodologyId.size()-1));		
 		
-		ArrayList<Map<String, ?>> listRevisionId = jsonPathEvaluator1.get("revisions.id");
+		String listRevisionId = jsonPathEvaluator1.get("find{it.title== 'createMethodologyAPI'}.revisions[0].id");
 
-		Object[] revId = listRevisionId.toArray();
+		/*Object[] revId = listRevisionId.toArray();
 		
 		String rediD = revId[revId.length-1].toString();
-		System.out.println(rediD);
+		System.out.println(rediD);*/
 
 		// 1st retrive the ruleID		
 
-		String patchId = "/api/rules/revision/" + rediD.substring(1,25) + "/list";
+		String patchId = "/api/rules/revision/" + listRevisionId + "/list";
 
 		Restassured_Automation_Utils rules = new Restassured_Automation_Utils();
 
@@ -715,7 +715,7 @@ public class Restassured_Automation_Rules extends read_Configuration_Propertites
 		// Now delete the value
 
 		String ruleId = listRuleId.get(0);
-		String patchId1 = "/api/rules/revision/" + rediD.substring(1,25) + "/rule/" + ruleId;
+		String patchId1 = "/api/rules/revision/" + listRevisionId + "/rule/" + ruleId;
 
 		Response postOrganizationData = rules.delete(URL, AuthorizationKey, patchId1);
 		System.out.println(postOrganizationData.asString());
@@ -731,7 +731,7 @@ public class Restassured_Automation_Rules extends read_Configuration_Propertites
 
 	}
 
-	@Test(priority = 9 ,groups = { "IntegrationTests" })
+	@Test(priority = 3 ,groups = { "IntegrationTests" })
 	public void deleteARuleSet_status400() throws IOException {
 		
 		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
@@ -759,16 +759,16 @@ public class Restassured_Automation_Rules extends read_Configuration_Propertites
 		//fetching the last item from the list
 		System.out.println(methodologyId.get(methodologyId.size()-1));		
 		
-		ArrayList<Map<String, ?>> listRevisionId = jsonPathEvaluator1.get("revisions.id");
+		String listRevisionId = jsonPathEvaluator1.get("find{it.title== 'createMethodologyAPI'}.revisions[0].id");
 
-		Object[] revId = listRevisionId.toArray();
+		/*Object[] revId = listRevisionId.toArray();
 		
 		String rediD = revId[revId.length-1].toString();
-		System.out.println(rediD);
+		System.out.println(rediD);*/
 
 		// 1st retrive the ruleID		
 
-		String patchId = "/api/rules/revision/" + rediD.substring(1,25) + "/list";
+		String patchId = "/api/rules/revision/" + listRevisionId + "/list";
 
 		Restassured_Automation_Utils rules = new Restassured_Automation_Utils();
 
@@ -779,7 +779,7 @@ public class Restassured_Automation_Rules extends read_Configuration_Propertites
 		// Now delete the value
 
 		String ruleId = listRuleId.get(0);
-		String patchId1 = "/api/rules/revision/" + rediD.substring(1,25) + "/rule/" + ruleId;
+		String patchId1 = "/api/rules/revision/" + listRevisionId + "/rule/" + ruleId;
 
 		Response postOrganizationData = rules.delete(URL, AuthorizationKey, patchId1);
 		System.out.println(postOrganizationData.asString());

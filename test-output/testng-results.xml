@@ -1,56 +1,142 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results skipped="0" failed="2" ignored="0" total="9" passed="7">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="14938" started-at="2021-04-12T10:58:15Z" finished-at="2021-04-12T10:58:30Z">
+  <suite name="Suite" duration-ms="22928" started-at="2021-04-13T17:05:44Z" finished-at="2021-04-13T17:06:07Z">
     <groups>
       <group name="IntegrationTests">
-        <method signature="Restassured_Automation_Methodology.Methodology_DeleteACandidateRevisionWithStatus_404()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_Methodology@4411d970]" name="Methodology_DeleteACandidateRevisionWithStatus_404" class="restassured.automation.testcases.Restassured_Automation_Methodology"/>
+        <method signature="Restassured_Automation_Rules.deleteARuleSet_status204()[pri:2, instance:restassured.automation.testcases.Restassured_Automation_Rules@71423665]" name="deleteARuleSet_status204" class="restassured.automation.testcases.Restassured_Automation_Rules"/>
+        <method signature="Restassured_Automation_Rules.deleteARuleSet_status400()[pri:3, instance:restassured.automation.testcases.Restassured_Automation_Rules@71423665]" name="deleteARuleSet_status400" class="restassured.automation.testcases.Restassured_Automation_Rules"/>
+        <method signature="Restassured_Automation_Rules.getTheListOfRulesForARevision_status200()[pri:1, instance:restassured.automation.testcases.Restassured_Automation_Rules@71423665]" name="getTheListOfRulesForARevision_status200" class="restassured.automation.testcases.Restassured_Automation_Rules"/>
+        <method signature="Restassured_Automation_Rules.postCreateANewRuleSet_status200()[pri:4, instance:restassured.automation.testcases.Restassured_Automation_Rules@71423665]" name="postCreateANewRuleSet_status200" class="restassured.automation.testcases.Restassured_Automation_Rules"/>
+        <method signature="Restassured_Automation_Rules.postCreateANewRuleSet_status400()[pri:5, instance:restassured.automation.testcases.Restassured_Automation_Rules@71423665]" name="postCreateANewRuleSet_status400" class="restassured.automation.testcases.Restassured_Automation_Rules"/>
+        <method signature="Restassured_Automation_Rules.postCreateANewRuleSet_status409()[pri:6, instance:restassured.automation.testcases.Restassured_Automation_Rules@71423665]" name="postCreateANewRuleSet_status409" class="restassured.automation.testcases.Restassured_Automation_Rules"/>
+        <method signature="Restassured_Automation_Rules.putUpdateANewRuleSet_status200()[pri:7, instance:restassured.automation.testcases.Restassured_Automation_Rules@71423665]" name="putUpdateANewRuleSet_status200" class="restassured.automation.testcases.Restassured_Automation_Rules"/>
+        <method signature="Restassured_Automation_Rules.putUpdateANewRuleSet_status400()[pri:8, instance:restassured.automation.testcases.Restassured_Automation_Rules@71423665]" name="putUpdateANewRuleSet_status400" class="restassured.automation.testcases.Restassured_Automation_Rules"/>
+        <method signature="Restassured_Automation_Rules.putUpdateANewRuleSet_status409()[pri:9, instance:restassured.automation.testcases.Restassured_Automation_Rules@71423665]" name="putUpdateANewRuleSet_status409" class="restassured.automation.testcases.Restassured_Automation_Rules"/>
       </group> <!-- IntegrationTests -->
     </groups>
-    <test name="Default test" duration-ms="14938" started-at="2021-04-12T10:58:15Z" finished-at="2021-04-12T10:58:30Z">
-      <class name="restassured.automation.testcases.Restassured_Automation_Methodology">
-        <test-method status="PASS" signature="setup()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_Methodology@4411d970]" name="setup" is-config="true" duration-ms="111" started-at="2021-04-12T16:28:15Z" finished-at="2021-04-12T16:28:15Z">
+    <test name="Test" duration-ms="22928" started-at="2021-04-13T17:05:44Z" finished-at="2021-04-13T17:06:07Z">
+      <class name="restassured.automation.testcases.Restassured_Automation_Rules">
+        <test-method status="PASS" signature="setup()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_Rules@71423665]" name="setup" is-config="true" duration-ms="51" started-at="2021-04-13T17:05:44Z" finished-at="2021-04-13T17:05:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="FAIL" signature="Methodology_DeleteACandidateRevisionWithStatus_404()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_Methodology@4411d970]" name="Methodology_DeleteACandidateRevisionWithStatus_404" duration-ms="14809" started-at="2021-04-12T16:28:15Z" finished-at="2021-04-12T16:28:30Z">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at restassured.automation.listeners.ExtentTestManager.statusLogMessage(ExtentTestManager.java:46)
-	at restassured.automation.testcases.Restassured_Automation_Methodology.Methodology_DeleteACandidateRevisionWithStatus_404(Restassured_Automation_Methodology.java:1674)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:782)
-	at org.testng.TestRunner.run(TestRunner.java:632)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
-	at org.testng.TestNG.run(TestNG.java:1064)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        <test-method status="PASS" signature="getTheListOfRulesForARevision_status200()[pri:1, instance:restassured.automation.testcases.Restassured_Automation_Rules@71423665]" name="getTheListOfRulesForARevision_status200" duration-ms="5153" started-at="2021-04-13T17:05:44Z" finished-at="2021-04-13T17:05:49Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Methodology_DeleteACandidateRevisionWithStatus_404 -->
-      </class> <!-- restassured.automation.testcases.Restassured_Automation_Methodology -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- getTheListOfRulesForARevision_status200 -->
+        <test-method status="PASS" signature="deleteARuleSet_status204()[pri:2, instance:restassured.automation.testcases.Restassured_Automation_Rules@71423665]" name="deleteARuleSet_status204" duration-ms="2352" started-at="2021-04-13T17:05:49Z" finished-at="2021-04-13T17:05:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteARuleSet_status204 -->
+        <test-method status="FAIL" signature="deleteARuleSet_status400()[pri:3, instance:restassured.automation.testcases.Restassured_Automation_Rules@71423665]" name="deleteARuleSet_status400" duration-ms="1783" started-at="2021-04-13T17:05:52Z" finished-at="2021-04-13T17:05:53Z">
+          <exception class="java.lang.IndexOutOfBoundsException">
+            <message>
+              <![CDATA[Index: 0, Size: 0]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+at java.util.ArrayList.rangeCheck(Unknown Source)
+at java.util.ArrayList.get(Unknown Source)
+at restassured.automation.testcases.Restassured_Automation_Rules.deleteARuleSet_status400(Restassured_Automation_Rules.java:781)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IndexOutOfBoundsException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteARuleSet_status400 -->
+        <test-method status="PASS" signature="postCreateANewRuleSet_status200()[pri:4, instance:restassured.automation.testcases.Restassured_Automation_Rules@71423665]" name="postCreateANewRuleSet_status200" duration-ms="1985" started-at="2021-04-13T17:05:53Z" finished-at="2021-04-13T17:05:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postCreateANewRuleSet_status200 -->
+        <test-method status="PASS" signature="postCreateANewRuleSet_status400()[pri:5, instance:restassured.automation.testcases.Restassured_Automation_Rules@71423665]" name="postCreateANewRuleSet_status400" duration-ms="1702" started-at="2021-04-13T17:05:55Z" finished-at="2021-04-13T17:05:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postCreateANewRuleSet_status400 -->
+        <test-method status="PASS" signature="postCreateANewRuleSet_status409()[pri:6, instance:restassured.automation.testcases.Restassured_Automation_Rules@71423665]" name="postCreateANewRuleSet_status409" duration-ms="2135" started-at="2021-04-13T17:05:57Z" finished-at="2021-04-13T17:05:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postCreateANewRuleSet_status409 -->
+        <test-method status="PASS" signature="putUpdateANewRuleSet_status200()[pri:7, instance:restassured.automation.testcases.Restassured_Automation_Rules@71423665]" name="putUpdateANewRuleSet_status200" duration-ms="2396" started-at="2021-04-13T17:05:59Z" finished-at="2021-04-13T17:06:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- putUpdateANewRuleSet_status200 -->
+        <test-method status="PASS" signature="putUpdateANewRuleSet_status400()[pri:8, instance:restassured.automation.testcases.Restassured_Automation_Rules@71423665]" name="putUpdateANewRuleSet_status400" duration-ms="2056" started-at="2021-04-13T17:06:02Z" finished-at="2021-04-13T17:06:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- putUpdateANewRuleSet_status400 -->
+        <test-method status="FAIL" signature="putUpdateANewRuleSet_status409()[pri:9, instance:restassured.automation.testcases.Restassured_Automation_Rules@71423665]" name="putUpdateANewRuleSet_status409" duration-ms="3270" started-at="2021-04-13T17:06:04Z" finished-at="2021-04-13T17:06:07Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [409] but found [200]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [409] but found [200]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:652)
+at org.testng.Assert.assertEquals(Assert.java:662)
+at restassured.automation.testcases.Restassured_Automation_Rules.putUpdateANewRuleSet_status409(Restassured_Automation_Rules.java:660)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- putUpdateANewRuleSet_status409 -->
+      </class> <!-- restassured.automation.testcases.Restassured_Automation_Rules -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
