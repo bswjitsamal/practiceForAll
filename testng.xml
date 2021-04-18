@@ -16,12 +16,10 @@
 		</groups>
 		<classes>
 
-
-			
-		
+				<class
+				name="restassured.automation.testcases.Restassured_Automation_Publish" />
 				<class
 				name="restassured.automation.testcases.Restassured_Automation_Rules" />
-
 
 
 		</classes>

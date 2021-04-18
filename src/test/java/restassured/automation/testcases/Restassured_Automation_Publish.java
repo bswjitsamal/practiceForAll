@@ -88,116 +88,9 @@ public class Restassured_Automation_Publish extends read_Configuration_Propertit
 	
 	
 	@Test(groups = { "IntegrationTests" })
-	public void postPublish_status200() throws IOException {
-
-		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
-
-		// fetching Org Id
-
-		Response OrganizationsDetails = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/org");
-		JsonPath jsonPathEvaluator = OrganizationsDetails.jsonPath();
-		listOrdId = jsonPathEvaluator.get("id");
-		OrganizationsDetails.prettyPrint();
-
-		/**
-		 * GETTING THE REVISION ID
-		 */
-
-		Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();
-
-		Response getMethodologyRes = getMethodology.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(4));
-		getMethodologyRes.prettyPrint();
-		
-		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
-		List<String> methodologyId = jsonPathEvaluator1.get("id");	
-		
-		//fetching the last item from the list
-		System.out.println(methodologyId.get(methodologyId.size()-1));		
-		
-		ArrayList<Map<String, ?>> listRevisionId = jsonPathEvaluator1.get("revisions.id");
-
-		Object[] revId = listRevisionId.toArray();
-		
-		String rediD = revId[revId.length-1].toString();
-		System.out.println(rediD);
-
-		// step 3 perfrom validate
-		PublishPojo PublishPojo = new PublishPojo();
-		PublishPojo.setPublishType("Draft");
-		
-		Response createPublish = getMethodology.post_URLPOJO(URL, AuthorizationKey,
-				"/api/publish/publish/" + methodologyId.get(methodologyId.size()-1) + "/" + rediD.substring(1, rediD.length() - 1), PublishPojo);
-		createPublish.prettyPrint();
-		
-		
-		Assert.assertEquals(createPublish.statusCode(), 200);
-		/**
-		 * Extent report generation
-		 */
-		ExtentTestManager.statusLogMessage(createPublish.statusCode());
-		ExtentTestManager.getTest().log(Status.INFO,createPublish.asString());
-		getMethodology.validate_HTTPStrictTransportSecurity(createPublish);
-		
-		//return createPublish.statusCode();
-
-	}
-
-	@Test(groups = { "IntegrationTests" })
 	public void postValidate_status200() throws IOException {
-
-		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
-
-		// fetching Org Id
-
-		Response OrganizationsDetails = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/org");
-		JsonPath jsonPathEvaluator = OrganizationsDetails.jsonPath();
-		listOrdId = jsonPathEvaluator.get("id");
-		OrganizationsDetails.prettyPrint();
-
-		/**
-		 * GETTING THE REVISION ID
-		 */
-
-		Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();
-
-		Response getMethodologyRes = getMethodology.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(4));
-		getMethodologyRes.prettyPrint();
-		
-		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
-		List<String> methodologyId = jsonPathEvaluator1.get("id");
-		
-		//fetching the last item from the list
-		System.out.println(methodologyId.get(methodologyId.size()-1));		
-		
-		ArrayList<Map<String, ?>> listRevisionId = jsonPathEvaluator1.get("revisions.id");
-
-		Object[] revId = listRevisionId.toArray();
-		
-		String rediD = revId[revId.length-1].toString();
-		System.out.println(rediD);
-		
-		Response createPublish = getMethodology.post_WithOutBody(URL, AuthorizationKey,
-				"/api/publish/validate/" + methodologyId.get(methodologyId.size()-1) + "/" + rediD.substring(1, rediD.length() - 1));
-		createPublish.prettyPrint();
 		
 		
-		Assert.assertEquals(createPublish.statusCode(), 200);
-		/**
-		 * Extent report generation
-		 */
-		ExtentTestManager.statusLogMessage(createPublish.statusCode());
-		ExtentTestManager.getTest().log(Status.INFO,createPublish.asString());
-		getMethodology.validate_HTTPStrictTransportSecurity(createPublish);
-
-	}
-	
-	
-	@Test(groups = { "IntegrationTests" })
-	
-	public void getPublish_status200() throws IOException {
-
 		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
 
 		// fetching Org Id
@@ -223,25 +116,96 @@ public class Restassured_Automation_Publish extends read_Configuration_Propertit
 		//fetching the last item from the list
 		System.out.println(methodologyId.get(methodologyId.size()-1));		
 		
-
-		//return createPublish.statusCode();
-		Response createValidate = getMethodology.get_URL_Without_Params(URL, AuthorizationKey,
-				"/api/publish/publish/" + methodologyId.get(methodologyId.size()-1));
-		createValidate.prettyPrint();
+		//Fetching the updatedId
+		List<String> listRevisionI1 = jsonPathEvaluator1.get("find{it.title== 'createMethodologyAPI'}.revisions[1].updatedIds");
+		System.out.println(listRevisionI1.get(0));
 		
-		Assert.assertEquals(createValidate.statusCode(), 200);
-		/**
-		 * Extent report generation
-		 */
-		ExtentTestManager.statusLogMessage(createValidate.statusCode());
-		ExtentTestManager.getTest().log(Status.INFO,createValidate.asString());
-		getMethodology.validate_HTTPStrictTransportSecurity(createValidate);
+		
+		//Step 3: CREATE A PUBLISH CANDIDATE
+		
+		Map<String, String[]> data = new HashMap<String, String[]>();
+		data.put("itemIds", new String[]  {listRevisionI1.get(0)});
+		
+		
+		Response postpublishCandaidate = allUtils.post_URL_WithOne_PathParams(URL, AuthorizationKey, "/api/methodology/candidate/{value}",
+				 methodologyId.get(methodologyId.size()-1), data);
+		postpublishCandaidate.prettyPrint();
+		
+		
+		//Now retrieve the 
+		JsonPath jsonPathEvaluator2 = postpublishCandaidate.jsonPath();
+		String candidateId = jsonPathEvaluator2.get("id");
+		System.out.println(candidateId);
+		
+		Map<String, String> data1 = new HashMap<String, String>();
+		//data1.put("","");
+		
+		Response postpublish = allUtils.post_URL_WithTwo_PathParams(URL, AuthorizationKey, "/api/publish/validate/{methodologyId}/{revisionId}",
+				 methodologyId.get(methodologyId.size()-1),candidateId, data1);
+		postpublish.prettyPrint();
+		
 		
 	}
 
-	
-	
+	@Test(groups = { "IntegrationTests" })
+	public void postPublish_status200() throws IOException {
+		
+		
+		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
 
+		// fetching Org Id
 
+		Response OrganizationsDetails = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/org");
+		JsonPath jsonPathEvaluator = OrganizationsDetails.jsonPath();
+		listOrdId = jsonPathEvaluator.get("id");
+		OrganizationsDetails.prettyPrint();
+
+		/**
+		 * GETTING THE REVISION ID
+		 */
+
+		Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();
+
+		Response getMethodologyRes = getMethodology.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
+				"Organization", listOrdId.get(5));
+		getMethodologyRes.prettyPrint();
+		
+		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
+		List<String> methodologyId = jsonPathEvaluator1.get("id");
+		
+		//fetching the last item from the list
+		System.out.println(methodologyId.get(methodologyId.size()-1));		
+		
+		//Fetching the updatedId
+		List<String> listRevisionI1 = jsonPathEvaluator1.get("find{it.title== 'createMethodologyAPI'}.revisions[1].updatedIds");
+		System.out.println(listRevisionI1.get(0));
+		
+		
+		//Step 3: CREATE A PUBLISH CANDIDATE
+		
+		Map<String, String[]> data = new HashMap<String, String[]>();
+		data.put("itemIds", new String[]  {listRevisionI1.get(0)});
+		
+		
+		Response postpublishCandaidate = allUtils.post_URL_WithOne_PathParams(URL, AuthorizationKey, "/api/methodology/candidate/{value}",
+				 methodologyId.get(methodologyId.size()-1), data);
+		postpublishCandaidate.prettyPrint();
+		
+		
+		//Now retrieve the 
+		JsonPath jsonPathEvaluator2 = postpublishCandaidate.jsonPath();
+		String candidateId = jsonPathEvaluator2.get("id");
+		System.out.println(candidateId);
+		
+		Map<String, String> data1 = new HashMap<String, String>();
+		data1.put("publishType","Draft");
+		
+		Response postpublish = allUtils.post_URL_WithTwo_PathParams(URL, AuthorizationKey, "/api/publish/publish/{methodologyId}/{revisionId}",
+				 methodologyId.get(methodologyId.size()-1),candidateId, data1);
+		postpublish.prettyPrint();
+		
+		
+	}
+	
 
 }

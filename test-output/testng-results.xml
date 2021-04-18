@@ -1,36 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="2" ignored="0" total="9" passed="7">
+<testng-results skipped="0" failed="2" ignored="0" total="11" passed="9">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="22928" started-at="2021-04-13T17:05:44Z" finished-at="2021-04-13T17:06:07Z">
+  <suite name="Suite" duration-ms="30461" started-at="2021-04-18T06:58:44Z" finished-at="2021-04-18T06:59:14Z">
     <groups>
       <group name="IntegrationTests">
-        <method signature="Restassured_Automation_Rules.deleteARuleSet_status204()[pri:2, instance:restassured.automation.testcases.Restassured_Automation_Rules@71423665]" name="deleteARuleSet_status204" class="restassured.automation.testcases.Restassured_Automation_Rules"/>
-        <method signature="Restassured_Automation_Rules.deleteARuleSet_status400()[pri:3, instance:restassured.automation.testcases.Restassured_Automation_Rules@71423665]" name="deleteARuleSet_status400" class="restassured.automation.testcases.Restassured_Automation_Rules"/>
-        <method signature="Restassured_Automation_Rules.getTheListOfRulesForARevision_status200()[pri:1, instance:restassured.automation.testcases.Restassured_Automation_Rules@71423665]" name="getTheListOfRulesForARevision_status200" class="restassured.automation.testcases.Restassured_Automation_Rules"/>
-        <method signature="Restassured_Automation_Rules.postCreateANewRuleSet_status200()[pri:4, instance:restassured.automation.testcases.Restassured_Automation_Rules@71423665]" name="postCreateANewRuleSet_status200" class="restassured.automation.testcases.Restassured_Automation_Rules"/>
-        <method signature="Restassured_Automation_Rules.postCreateANewRuleSet_status400()[pri:5, instance:restassured.automation.testcases.Restassured_Automation_Rules@71423665]" name="postCreateANewRuleSet_status400" class="restassured.automation.testcases.Restassured_Automation_Rules"/>
-        <method signature="Restassured_Automation_Rules.postCreateANewRuleSet_status409()[pri:6, instance:restassured.automation.testcases.Restassured_Automation_Rules@71423665]" name="postCreateANewRuleSet_status409" class="restassured.automation.testcases.Restassured_Automation_Rules"/>
-        <method signature="Restassured_Automation_Rules.putUpdateANewRuleSet_status200()[pri:7, instance:restassured.automation.testcases.Restassured_Automation_Rules@71423665]" name="putUpdateANewRuleSet_status200" class="restassured.automation.testcases.Restassured_Automation_Rules"/>
-        <method signature="Restassured_Automation_Rules.putUpdateANewRuleSet_status400()[pri:8, instance:restassured.automation.testcases.Restassured_Automation_Rules@71423665]" name="putUpdateANewRuleSet_status400" class="restassured.automation.testcases.Restassured_Automation_Rules"/>
-        <method signature="Restassured_Automation_Rules.putUpdateANewRuleSet_status409()[pri:9, instance:restassured.automation.testcases.Restassured_Automation_Rules@71423665]" name="putUpdateANewRuleSet_status409" class="restassured.automation.testcases.Restassured_Automation_Rules"/>
+        <method signature="Restassured_Automation_Publish.postPublish_status200()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_Publish@20398b7c]" name="postPublish_status200" class="restassured.automation.testcases.Restassured_Automation_Publish"/>
+        <method signature="Restassured_Automation_Publish.postValidate_status200()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_Publish@20398b7c]" name="postValidate_status200" class="restassured.automation.testcases.Restassured_Automation_Publish"/>
+        <method signature="Restassured_Automation_Rules.deleteARuleSet_status204()[pri:2, instance:restassured.automation.testcases.Restassured_Automation_Rules@6fc6f14e]" name="deleteARuleSet_status204" class="restassured.automation.testcases.Restassured_Automation_Rules"/>
+        <method signature="Restassured_Automation_Rules.deleteARuleSet_status400()[pri:3, instance:restassured.automation.testcases.Restassured_Automation_Rules@6fc6f14e]" name="deleteARuleSet_status400" class="restassured.automation.testcases.Restassured_Automation_Rules"/>
+        <method signature="Restassured_Automation_Rules.getTheListOfRulesForARevision_status200()[pri:1, instance:restassured.automation.testcases.Restassured_Automation_Rules@6fc6f14e]" name="getTheListOfRulesForARevision_status200" class="restassured.automation.testcases.Restassured_Automation_Rules"/>
+        <method signature="Restassured_Automation_Rules.postCreateANewRuleSet_status200()[pri:4, instance:restassured.automation.testcases.Restassured_Automation_Rules@6fc6f14e]" name="postCreateANewRuleSet_status200" class="restassured.automation.testcases.Restassured_Automation_Rules"/>
+        <method signature="Restassured_Automation_Rules.postCreateANewRuleSet_status400()[pri:5, instance:restassured.automation.testcases.Restassured_Automation_Rules@6fc6f14e]" name="postCreateANewRuleSet_status400" class="restassured.automation.testcases.Restassured_Automation_Rules"/>
+        <method signature="Restassured_Automation_Rules.postCreateANewRuleSet_status409()[pri:6, instance:restassured.automation.testcases.Restassured_Automation_Rules@6fc6f14e]" name="postCreateANewRuleSet_status409" class="restassured.automation.testcases.Restassured_Automation_Rules"/>
+        <method signature="Restassured_Automation_Rules.putUpdateANewRuleSet_status200()[pri:7, instance:restassured.automation.testcases.Restassured_Automation_Rules@6fc6f14e]" name="putUpdateANewRuleSet_status200" class="restassured.automation.testcases.Restassured_Automation_Rules"/>
+        <method signature="Restassured_Automation_Rules.putUpdateANewRuleSet_status400()[pri:8, instance:restassured.automation.testcases.Restassured_Automation_Rules@6fc6f14e]" name="putUpdateANewRuleSet_status400" class="restassured.automation.testcases.Restassured_Automation_Rules"/>
+        <method signature="Restassured_Automation_Rules.putUpdateANewRuleSet_status409()[pri:9, instance:restassured.automation.testcases.Restassured_Automation_Rules@6fc6f14e]" name="putUpdateANewRuleSet_status409" class="restassured.automation.testcases.Restassured_Automation_Rules"/>
       </group> <!-- IntegrationTests -->
     </groups>
-    <test name="Test" duration-ms="22928" started-at="2021-04-13T17:05:44Z" finished-at="2021-04-13T17:06:07Z">
+    <test name="Test" duration-ms="30461" started-at="2021-04-18T06:58:44Z" finished-at="2021-04-18T06:59:14Z">
       <class name="restassured.automation.testcases.Restassured_Automation_Rules">
-        <test-method status="PASS" signature="setup()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_Rules@71423665]" name="setup" is-config="true" duration-ms="51" started-at="2021-04-13T17:05:44Z" finished-at="2021-04-13T17:05:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="getTheListOfRulesForARevision_status200()[pri:1, instance:restassured.automation.testcases.Restassured_Automation_Rules@71423665]" name="getTheListOfRulesForARevision_status200" duration-ms="5153" started-at="2021-04-13T17:05:44Z" finished-at="2021-04-13T17:05:49Z">
+        <test-method status="PASS" signature="getTheListOfRulesForARevision_status200()[pri:1, instance:restassured.automation.testcases.Restassured_Automation_Rules@6fc6f14e]" name="getTheListOfRulesForARevision_status200" duration-ms="2104" started-at="2021-04-18T06:58:55Z" finished-at="2021-04-18T06:58:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getTheListOfRulesForARevision_status200 -->
-        <test-method status="PASS" signature="deleteARuleSet_status204()[pri:2, instance:restassured.automation.testcases.Restassured_Automation_Rules@71423665]" name="deleteARuleSet_status204" duration-ms="2352" started-at="2021-04-13T17:05:49Z" finished-at="2021-04-13T17:05:52Z">
+        <test-method status="PASS" signature="deleteARuleSet_status204()[pri:2, instance:restassured.automation.testcases.Restassured_Automation_Rules@6fc6f14e]" name="deleteARuleSet_status204" duration-ms="2616" started-at="2021-04-18T06:58:57Z" finished-at="2021-04-18T06:59:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteARuleSet_status204 -->
-        <test-method status="FAIL" signature="deleteARuleSet_status400()[pri:3, instance:restassured.automation.testcases.Restassured_Automation_Rules@71423665]" name="deleteARuleSet_status400" duration-ms="1783" started-at="2021-04-13T17:05:52Z" finished-at="2021-04-13T17:05:53Z">
+        <test-method status="FAIL" signature="deleteARuleSet_status400()[pri:3, instance:restassured.automation.testcases.Restassured_Automation_Rules@6fc6f14e]" name="deleteARuleSet_status400" duration-ms="1863" started-at="2021-04-18T06:59:00Z" finished-at="2021-04-18T06:59:02Z">
           <exception class="java.lang.IndexOutOfBoundsException">
             <message>
               <![CDATA[Index: 0, Size: 0]]>
@@ -71,27 +69,27 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteARuleSet_status400 -->
-        <test-method status="PASS" signature="postCreateANewRuleSet_status200()[pri:4, instance:restassured.automation.testcases.Restassured_Automation_Rules@71423665]" name="postCreateANewRuleSet_status200" duration-ms="1985" started-at="2021-04-13T17:05:53Z" finished-at="2021-04-13T17:05:55Z">
+        <test-method status="PASS" signature="postCreateANewRuleSet_status200()[pri:4, instance:restassured.automation.testcases.Restassured_Automation_Rules@6fc6f14e]" name="postCreateANewRuleSet_status200" duration-ms="1806" started-at="2021-04-18T06:59:02Z" finished-at="2021-04-18T06:59:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- postCreateANewRuleSet_status200 -->
-        <test-method status="PASS" signature="postCreateANewRuleSet_status400()[pri:5, instance:restassured.automation.testcases.Restassured_Automation_Rules@71423665]" name="postCreateANewRuleSet_status400" duration-ms="1702" started-at="2021-04-13T17:05:55Z" finished-at="2021-04-13T17:05:57Z">
+        <test-method status="PASS" signature="postCreateANewRuleSet_status400()[pri:5, instance:restassured.automation.testcases.Restassured_Automation_Rules@6fc6f14e]" name="postCreateANewRuleSet_status400" duration-ms="1777" started-at="2021-04-18T06:59:04Z" finished-at="2021-04-18T06:59:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- postCreateANewRuleSet_status400 -->
-        <test-method status="PASS" signature="postCreateANewRuleSet_status409()[pri:6, instance:restassured.automation.testcases.Restassured_Automation_Rules@71423665]" name="postCreateANewRuleSet_status409" duration-ms="2135" started-at="2021-04-13T17:05:57Z" finished-at="2021-04-13T17:05:59Z">
+        <test-method status="PASS" signature="postCreateANewRuleSet_status409()[pri:6, instance:restassured.automation.testcases.Restassured_Automation_Rules@6fc6f14e]" name="postCreateANewRuleSet_status409" duration-ms="2299" started-at="2021-04-18T06:59:05Z" finished-at="2021-04-18T06:59:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- postCreateANewRuleSet_status409 -->
-        <test-method status="PASS" signature="putUpdateANewRuleSet_status200()[pri:7, instance:restassured.automation.testcases.Restassured_Automation_Rules@71423665]" name="putUpdateANewRuleSet_status200" duration-ms="2396" started-at="2021-04-13T17:05:59Z" finished-at="2021-04-13T17:06:02Z">
+        <test-method status="PASS" signature="putUpdateANewRuleSet_status200()[pri:7, instance:restassured.automation.testcases.Restassured_Automation_Rules@6fc6f14e]" name="putUpdateANewRuleSet_status200" duration-ms="2257" started-at="2021-04-18T06:59:08Z" finished-at="2021-04-18T06:59:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- putUpdateANewRuleSet_status200 -->
-        <test-method status="PASS" signature="putUpdateANewRuleSet_status400()[pri:8, instance:restassured.automation.testcases.Restassured_Automation_Rules@71423665]" name="putUpdateANewRuleSet_status400" duration-ms="2056" started-at="2021-04-13T17:06:02Z" finished-at="2021-04-13T17:06:04Z">
+        <test-method status="PASS" signature="putUpdateANewRuleSet_status400()[pri:8, instance:restassured.automation.testcases.Restassured_Automation_Rules@6fc6f14e]" name="putUpdateANewRuleSet_status400" duration-ms="2149" started-at="2021-04-18T06:59:10Z" finished-at="2021-04-18T06:59:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- putUpdateANewRuleSet_status400 -->
-        <test-method status="FAIL" signature="putUpdateANewRuleSet_status409()[pri:9, instance:restassured.automation.testcases.Restassured_Automation_Rules@71423665]" name="putUpdateANewRuleSet_status409" duration-ms="3270" started-at="2021-04-13T17:06:04Z" finished-at="2021-04-13T17:06:07Z">
+        <test-method status="FAIL" signature="putUpdateANewRuleSet_status409()[pri:9, instance:restassured.automation.testcases.Restassured_Automation_Rules@6fc6f14e]" name="putUpdateANewRuleSet_status409" duration-ms="2342" started-at="2021-04-18T06:59:12Z" finished-at="2021-04-18T06:59:14Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [409] but found [200]]]>
@@ -137,6 +135,24 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </reporter-output>
         </test-method> <!-- putUpdateANewRuleSet_status409 -->
       </class> <!-- restassured.automation.testcases.Restassured_Automation_Rules -->
+      <class name="restassured.automation.testcases.Restassured_Automation_Publish">
+        <test-method status="PASS" signature="setup()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_Publish@20398b7c]" name="setup" is-config="true" duration-ms="64" started-at="2021-04-18T06:58:44Z" finished-at="2021-04-18T06:58:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_Rules@6fc6f14e]" name="setup" is-config="true" duration-ms="1" started-at="2021-04-18T06:58:44Z" finished-at="2021-04-18T06:58:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="postPublish_status200()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_Publish@20398b7c]" name="postPublish_status200" duration-ms="6839" started-at="2021-04-18T06:58:44Z" finished-at="2021-04-18T06:58:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postPublish_status200 -->
+        <test-method status="PASS" signature="postValidate_status200()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_Publish@20398b7c]" name="postValidate_status200" duration-ms="4274" started-at="2021-04-18T06:58:51Z" finished-at="2021-04-18T06:58:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postValidate_status200 -->
+      </class> <!-- restassured.automation.testcases.Restassured_Automation_Publish -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

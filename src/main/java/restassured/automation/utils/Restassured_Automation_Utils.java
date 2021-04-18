@@ -79,11 +79,28 @@ public Response get(String BaseURL, String AuthorizationKey , String URI ) {
 
 	}
 	
+	public Response post_URL_WithOne_PathParams(String BaseURL, String AuthorizationKey, String URI, 
+			String pathParam, Map<String, String[]> body) {
+
+		BaseURL = BaseURL + URI;
+		return RestAssured.given().header("Authorization", AuthorizationKey).header("Content-Type", "application/json")
+				.pathParam("value", pathParam).body(body).log().all().post(BaseURL);
+
+	}
+	
 	public Response get_URL_WithTwo_Params(String BaseURL, String AuthorizationKey, String URI, String pathParam1,String pathParam2) {
 
 		BaseURL = BaseURL + URI;
 		return RestAssured.given().header("Authorization", AuthorizationKey).header("Content-Type", "application/json")
 				.pathParam(pathParam1, pathParam2).log().all().get(BaseURL);
+
+	}
+	
+	public Response post_URL_WithTwo_PathParams(String BaseURL, String AuthorizationKey, String URI, String pathParam1,String pathParam2, Map<String, String> body) {
+
+		BaseURL = BaseURL + URI;
+		return RestAssured.given().header("Authorization", AuthorizationKey).header("Content-Type", "application/json")
+				.pathParam("methodologyId", pathParam1).pathParam("revisionId", pathParam2).body(body).log().all().post(BaseURL);
 
 	}
 

@@ -93,7 +93,7 @@ public class Restassured_Automation_EngagementType {
 
 	}
 
-	//@Test(groups = "IntegrationTests")
+	@Test(groups = "IntegrationTests")
 	public void EngagementType_PostcreateANewEngagementType_status200() throws IOException {
 
 		Properties post = read_Configuration_Propertites.loadproperty("Configuration");
