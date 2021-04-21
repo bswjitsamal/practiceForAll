@@ -117,8 +117,9 @@ public class Restassured_Automation_Publish extends read_Configuration_Propertit
 		System.out.println(methodologyId.get(methodologyId.size()-1));		
 		
 		//Fetching the updatedId
-		List<String> listRevisionI1 = jsonPathEvaluator1.get("find{it.title== 'createMethodologyAPI'}.revisions[1].updatedIds");
-		System.out.println(listRevisionI1.get(0));
+		//List<String> listRevisionI1 = jsonPathEvaluator1.get("find{it.title== 'createMethodologyAPI'}.revisions[0].updatedIds");
+		List<String> listRevisionI1 = jsonPathEvaluator1.get("find{it.title== 'createMethodologyAPI'}.revisions");
+		System.out.println(listRevisionI1);
 		
 		
 		//Step 3: CREATE A PUBLISH CANDIDATE
@@ -177,8 +178,11 @@ public class Restassured_Automation_Publish extends read_Configuration_Propertit
 		System.out.println(methodologyId.get(methodologyId.size()-1));		
 		
 		//Fetching the updatedId
-		List<String> listRevisionI1 = jsonPathEvaluator1.get("find{it.title== 'createMethodologyAPI'}.revisions[1].updatedIds");
-		System.out.println(listRevisionI1.get(0));
+		/*List<String> listRevisionI1 = jsonPathEvaluator1.get("find{it.title== 'createMethodologyAPI'}.revisions[1].updatedIds");
+		System.out.println(listRevisionI1.get(0));*/
+		
+		List<String> listRevisionI1 = jsonPathEvaluator1.get("find{it.title== 'createMethodologyAPI'}.revisions");
+		System.out.println(listRevisionI1);
 		
 		
 		//Step 3: CREATE A PUBLISH CANDIDATE

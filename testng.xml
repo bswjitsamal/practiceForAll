@@ -20,6 +20,9 @@
 				name="restassured.automation.testcases.Restassured_Automation_Publish" />
 				<class
 				name="restassured.automation.testcases.Restassured_Automation_Rules" />
+				<class
+				name="restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles" />
+				
 
 
 		</classes>

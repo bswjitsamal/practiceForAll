@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="restassured.automation.testcases.Restassured_Automation_Publish">
+      <class name="restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles">
         <methods>
-          <include name="postPublish_status200"/>
           <include name="setup"/>
+          <include name="deleteAnEngagementRoleForAMethodology_status400"/>
         </methods>
-      </class> <!-- restassured.automation.testcases.Restassured_Automation_Publish -->
+      </class> <!-- restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

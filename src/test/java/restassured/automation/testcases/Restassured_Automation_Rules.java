@@ -97,7 +97,7 @@ public class Restassured_Automation_Rules extends read_Configuration_Propertites
 		getMethodologyRes.prettyPrint();
 		
 		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
-		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator1.get("revisions.id");
+		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator1.get("revisions");
 
 		System.out.println(String.valueOf(listRevisionI1.get(2)));
 
@@ -182,7 +182,7 @@ public class Restassured_Automation_Rules extends read_Configuration_Propertites
 		
 		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
 		//ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator1.get("revisions.id");
-		String listRevisionI1 = jsonPathEvaluator1.get("find{it.title== 'createMethodologyAPI'}.revisions[0].id");
+		String listRevisionI1 = jsonPathEvaluator1.get("find{it.title== 'createMethodologyAPI'}.revisions[0]");
 
 		//System.out.println(String.valueOf(listRevisionI1.get(1)));
 

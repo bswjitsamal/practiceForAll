@@ -12,13 +12,14 @@
       </run>
     </groups>
     <classes>
-      <class name="restassured.automation.testcases.Restassured_Automation_Rules">
+      <class name="restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles">
         <methods>
-          <include name="deleteARuleSet_status400"/>
-          <include name="putUpdateANewRuleSet_status409"/>
           <include name="setup"/>
+          <include name="patchUpdateAnEngagementRoleForAMethodology_status409"/>
+          <include name="patchUpdateAnEngagementRoleForAnOrganization_status409"/>
+          <include name="postCreateAnEngagementRoleForAMethodology_status200"/>
         </methods>
-      </class> <!-- restassured.automation.testcases.Restassured_Automation_Rules -->
+      </class> <!-- restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -1,108 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="2" ignored="0" total="11" passed="9">
+<testng-results skipped="0" failed="3" ignored="0" total="20" passed="17">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="30461" started-at="2021-04-18T06:58:44Z" finished-at="2021-04-18T06:59:14Z">
+  <suite name="Suite" duration-ms="40152" started-at="2021-04-21T11:53:55Z" finished-at="2021-04-21T11:54:35Z">
     <groups>
       <group name="IntegrationTests">
-        <method signature="Restassured_Automation_Publish.postPublish_status200()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_Publish@20398b7c]" name="postPublish_status200" class="restassured.automation.testcases.Restassured_Automation_Publish"/>
-        <method signature="Restassured_Automation_Publish.postValidate_status200()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_Publish@20398b7c]" name="postValidate_status200" class="restassured.automation.testcases.Restassured_Automation_Publish"/>
-        <method signature="Restassured_Automation_Rules.deleteARuleSet_status204()[pri:2, instance:restassured.automation.testcases.Restassured_Automation_Rules@6fc6f14e]" name="deleteARuleSet_status204" class="restassured.automation.testcases.Restassured_Automation_Rules"/>
-        <method signature="Restassured_Automation_Rules.deleteARuleSet_status400()[pri:3, instance:restassured.automation.testcases.Restassured_Automation_Rules@6fc6f14e]" name="deleteARuleSet_status400" class="restassured.automation.testcases.Restassured_Automation_Rules"/>
-        <method signature="Restassured_Automation_Rules.getTheListOfRulesForARevision_status200()[pri:1, instance:restassured.automation.testcases.Restassured_Automation_Rules@6fc6f14e]" name="getTheListOfRulesForARevision_status200" class="restassured.automation.testcases.Restassured_Automation_Rules"/>
-        <method signature="Restassured_Automation_Rules.postCreateANewRuleSet_status200()[pri:4, instance:restassured.automation.testcases.Restassured_Automation_Rules@6fc6f14e]" name="postCreateANewRuleSet_status200" class="restassured.automation.testcases.Restassured_Automation_Rules"/>
-        <method signature="Restassured_Automation_Rules.postCreateANewRuleSet_status400()[pri:5, instance:restassured.automation.testcases.Restassured_Automation_Rules@6fc6f14e]" name="postCreateANewRuleSet_status400" class="restassured.automation.testcases.Restassured_Automation_Rules"/>
-        <method signature="Restassured_Automation_Rules.postCreateANewRuleSet_status409()[pri:6, instance:restassured.automation.testcases.Restassured_Automation_Rules@6fc6f14e]" name="postCreateANewRuleSet_status409" class="restassured.automation.testcases.Restassured_Automation_Rules"/>
-        <method signature="Restassured_Automation_Rules.putUpdateANewRuleSet_status200()[pri:7, instance:restassured.automation.testcases.Restassured_Automation_Rules@6fc6f14e]" name="putUpdateANewRuleSet_status200" class="restassured.automation.testcases.Restassured_Automation_Rules"/>
-        <method signature="Restassured_Automation_Rules.putUpdateANewRuleSet_status400()[pri:8, instance:restassured.automation.testcases.Restassured_Automation_Rules@6fc6f14e]" name="putUpdateANewRuleSet_status400" class="restassured.automation.testcases.Restassured_Automation_Rules"/>
-        <method signature="Restassured_Automation_Rules.putUpdateANewRuleSet_status409()[pri:9, instance:restassured.automation.testcases.Restassured_Automation_Rules@6fc6f14e]" name="putUpdateANewRuleSet_status409" class="restassured.automation.testcases.Restassured_Automation_Rules"/>
+        <method signature="Restassured_Automation_EngagementTeamRoles.deleteAnEngagementRoleForAMethodology_status204()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles@3632be31]" name="deleteAnEngagementRoleForAMethodology_status204" class="restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles"/>
+        <method signature="Restassured_Automation_EngagementTeamRoles.deleteAnEngagementRoleForAMethodology_status400()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles@3632be31]" name="deleteAnEngagementRoleForAMethodology_status400" class="restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles"/>
+        <method signature="Restassured_Automation_EngagementTeamRoles.deleteDeleteAnEngagementRoleForAnOrganization_status204()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles@3632be31]" name="deleteDeleteAnEngagementRoleForAnOrganization_status204" class="restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles"/>
+        <method signature="Restassured_Automation_EngagementTeamRoles.deleteDeleteAnEngagementRoleForAnOrganization_status400()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles@3632be31]" name="deleteDeleteAnEngagementRoleForAnOrganization_status400" class="restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles"/>
+        <method signature="Restassured_Automation_EngagementTeamRoles.getLoadAllEngagementRolesInformationForARevision_status200()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles@3632be31]" name="getLoadAllEngagementRolesInformationForARevision_status200" class="restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles"/>
+        <method signature="Restassured_Automation_EngagementTeamRoles.getLoadAllEngagementRolesInformationForAnOrganization_status200()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles@3632be31]" name="getLoadAllEngagementRolesInformationForAnOrganization_status200" class="restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles"/>
+        <method signature="Restassured_Automation_EngagementTeamRoles.patchUpdateAnEngagementRoleForAMethodology_status204()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles@3632be31]" name="patchUpdateAnEngagementRoleForAMethodology_status204" class="restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles"/>
+        <method signature="Restassured_Automation_EngagementTeamRoles.patchUpdateAnEngagementRoleForAMethodology_status400()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles@3632be31]" name="patchUpdateAnEngagementRoleForAMethodology_status400" class="restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles"/>
+        <method signature="Restassured_Automation_EngagementTeamRoles.patchUpdateAnEngagementRoleForAMethodology_status409()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles@3632be31]" name="patchUpdateAnEngagementRoleForAMethodology_status409" class="restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles"/>
+        <method signature="Restassured_Automation_EngagementTeamRoles.patchUpdateAnEngagementRoleForAnOrganization_status204()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles@3632be31]" name="patchUpdateAnEngagementRoleForAnOrganization_status204" class="restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles"/>
+        <method signature="Restassured_Automation_EngagementTeamRoles.patchUpdateAnEngagementRoleForAnOrganization_status400()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles@3632be31]" name="patchUpdateAnEngagementRoleForAnOrganization_status400" class="restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles"/>
+        <method signature="Restassured_Automation_EngagementTeamRoles.patchUpdateAnEngagementRoleForAnOrganization_status409()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles@3632be31]" name="patchUpdateAnEngagementRoleForAnOrganization_status409" class="restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles"/>
+        <method signature="Restassured_Automation_EngagementTeamRoles.postCreateAnEngagementRoleForAMethodology_status200()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles@3632be31]" name="postCreateAnEngagementRoleForAMethodology_status200" class="restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles"/>
+        <method signature="Restassured_Automation_EngagementTeamRoles.postCreateAnEngagementRoleForAMethodology_status400()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles@3632be31]" name="postCreateAnEngagementRoleForAMethodology_status400" class="restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles"/>
+        <method signature="Restassured_Automation_EngagementTeamRoles.postCreateAnEngagementRoleForAMethodology_status409()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles@3632be31]" name="postCreateAnEngagementRoleForAMethodology_status409" class="restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles"/>
+        <method signature="Restassured_Automation_EngagementTeamRoles.postCreateAnEngagementRoleForAnOrganization_status200()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles@3632be31]" name="postCreateAnEngagementRoleForAnOrganization_status200" class="restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles"/>
+        <method signature="Restassured_Automation_EngagementTeamRoles.postCreateAnEngagementRoleForAnOrganization_status400()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles@3632be31]" name="postCreateAnEngagementRoleForAnOrganization_status400" class="restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles"/>
+        <method signature="Restassured_Automation_EngagementTeamRoles.postCreateAnEngagementRoleForAnOrganization_status409()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles@3632be31]" name="postCreateAnEngagementRoleForAnOrganization_status409" class="restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles"/>
+        <method signature="Restassured_Automation_Publish.postPublish_status200()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_Publish@6fc6f14e]" name="postPublish_status200" class="restassured.automation.testcases.Restassured_Automation_Publish"/>
+        <method signature="Restassured_Automation_Publish.postValidate_status200()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_Publish@6fc6f14e]" name="postValidate_status200" class="restassured.automation.testcases.Restassured_Automation_Publish"/>
+        <method signature="Restassured_Automation_Rules.deleteARuleSet_status204()[pri:2, instance:restassured.automation.testcases.Restassured_Automation_Rules@56235b8e]" name="deleteARuleSet_status204" class="restassured.automation.testcases.Restassured_Automation_Rules"/>
+        <method signature="Restassured_Automation_Rules.deleteARuleSet_status400()[pri:3, instance:restassured.automation.testcases.Restassured_Automation_Rules@56235b8e]" name="deleteARuleSet_status400" class="restassured.automation.testcases.Restassured_Automation_Rules"/>
+        <method signature="Restassured_Automation_Rules.getTheListOfRulesForARevision_status200()[pri:1, instance:restassured.automation.testcases.Restassured_Automation_Rules@56235b8e]" name="getTheListOfRulesForARevision_status200" class="restassured.automation.testcases.Restassured_Automation_Rules"/>
+        <method signature="Restassured_Automation_Rules.postCreateANewRuleSet_status200()[pri:4, instance:restassured.automation.testcases.Restassured_Automation_Rules@56235b8e]" name="postCreateANewRuleSet_status200" class="restassured.automation.testcases.Restassured_Automation_Rules"/>
+        <method signature="Restassured_Automation_Rules.postCreateANewRuleSet_status400()[pri:5, instance:restassured.automation.testcases.Restassured_Automation_Rules@56235b8e]" name="postCreateANewRuleSet_status400" class="restassured.automation.testcases.Restassured_Automation_Rules"/>
+        <method signature="Restassured_Automation_Rules.postCreateANewRuleSet_status409()[pri:6, instance:restassured.automation.testcases.Restassured_Automation_Rules@56235b8e]" name="postCreateANewRuleSet_status409" class="restassured.automation.testcases.Restassured_Automation_Rules"/>
+        <method signature="Restassured_Automation_Rules.putUpdateANewRuleSet_status200()[pri:7, instance:restassured.automation.testcases.Restassured_Automation_Rules@56235b8e]" name="putUpdateANewRuleSet_status200" class="restassured.automation.testcases.Restassured_Automation_Rules"/>
+        <method signature="Restassured_Automation_Rules.putUpdateANewRuleSet_status400()[pri:8, instance:restassured.automation.testcases.Restassured_Automation_Rules@56235b8e]" name="putUpdateANewRuleSet_status400" class="restassured.automation.testcases.Restassured_Automation_Rules"/>
+        <method signature="Restassured_Automation_Rules.putUpdateANewRuleSet_status409()[pri:9, instance:restassured.automation.testcases.Restassured_Automation_Rules@56235b8e]" name="putUpdateANewRuleSet_status409" class="restassured.automation.testcases.Restassured_Automation_Rules"/>
       </group> <!-- IntegrationTests -->
     </groups>
-    <test name="Test" duration-ms="30461" started-at="2021-04-18T06:58:44Z" finished-at="2021-04-18T06:59:14Z">
-      <class name="restassured.automation.testcases.Restassured_Automation_Rules">
-        <test-method status="PASS" signature="getTheListOfRulesForARevision_status200()[pri:1, instance:restassured.automation.testcases.Restassured_Automation_Rules@6fc6f14e]" name="getTheListOfRulesForARevision_status200" duration-ms="2104" started-at="2021-04-18T06:58:55Z" finished-at="2021-04-18T06:58:57Z">
+    <test name="Test" duration-ms="40152" started-at="2021-04-21T11:53:55Z" finished-at="2021-04-21T11:54:35Z">
+      <class name="restassured.automation.testcases.Restassured_Automation_Publish">
+        <test-method status="PASS" signature="postPublish_status200()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_Publish@6fc6f14e]" name="postPublish_status200" duration-ms="5570" started-at="2021-04-21T11:53:55Z" finished-at="2021-04-21T11:54:00Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getTheListOfRulesForARevision_status200 -->
-        <test-method status="PASS" signature="deleteARuleSet_status204()[pri:2, instance:restassured.automation.testcases.Restassured_Automation_Rules@6fc6f14e]" name="deleteARuleSet_status204" duration-ms="2616" started-at="2021-04-18T06:58:57Z" finished-at="2021-04-18T06:59:00Z">
+        </test-method> <!-- postPublish_status200 -->
+        <test-method status="PASS" signature="postValidate_status200()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_Publish@6fc6f14e]" name="postValidate_status200" duration-ms="4223" started-at="2021-04-21T11:54:00Z" finished-at="2021-04-21T11:54:05Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- deleteARuleSet_status204 -->
-        <test-method status="FAIL" signature="deleteARuleSet_status400()[pri:3, instance:restassured.automation.testcases.Restassured_Automation_Rules@6fc6f14e]" name="deleteARuleSet_status400" duration-ms="1863" started-at="2021-04-18T06:59:00Z" finished-at="2021-04-18T06:59:02Z">
-          <exception class="java.lang.IndexOutOfBoundsException">
-            <message>
-              <![CDATA[Index: 0, Size: 0]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
-at java.util.ArrayList.rangeCheck(Unknown Source)
-at java.util.ArrayList.get(Unknown Source)
-at restassured.automation.testcases.Restassured_Automation_Rules.deleteARuleSet_status400(Restassured_Automation_Rules.java:781)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IndexOutOfBoundsException -->
+        </test-method> <!-- postValidate_status200 -->
+      </class> <!-- restassured.automation.testcases.Restassured_Automation_Publish -->
+      <class name="restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles">
+        <test-method status="PASS" signature="setup()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles@3632be31]" name="setup" is-config="true" duration-ms="57" started-at="2021-04-21T11:53:55Z" finished-at="2021-04-21T11:53:55Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- deleteARuleSet_status400 -->
-        <test-method status="PASS" signature="postCreateANewRuleSet_status200()[pri:4, instance:restassured.automation.testcases.Restassured_Automation_Rules@6fc6f14e]" name="postCreateANewRuleSet_status200" duration-ms="1806" started-at="2021-04-18T06:59:02Z" finished-at="2021-04-18T06:59:04Z">
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_Publish@6fc6f14e]" name="setup" is-config="true" duration-ms="0" started-at="2021-04-21T11:53:55Z" finished-at="2021-04-21T11:53:55Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- postCreateANewRuleSet_status200 -->
-        <test-method status="PASS" signature="postCreateANewRuleSet_status400()[pri:5, instance:restassured.automation.testcases.Restassured_Automation_Rules@6fc6f14e]" name="postCreateANewRuleSet_status400" duration-ms="1777" started-at="2021-04-18T06:59:04Z" finished-at="2021-04-18T06:59:05Z">
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_Rules@56235b8e]" name="setup" is-config="true" duration-ms="0" started-at="2021-04-21T11:53:55Z" finished-at="2021-04-21T11:53:55Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- postCreateANewRuleSet_status400 -->
-        <test-method status="PASS" signature="postCreateANewRuleSet_status409()[pri:6, instance:restassured.automation.testcases.Restassured_Automation_Rules@6fc6f14e]" name="postCreateANewRuleSet_status409" duration-ms="2299" started-at="2021-04-18T06:59:05Z" finished-at="2021-04-18T06:59:08Z">
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="deleteAnEngagementRoleForAMethodology_status204()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles@3632be31]" name="deleteAnEngagementRoleForAMethodology_status204" duration-ms="2498" started-at="2021-04-21T11:54:05Z" finished-at="2021-04-21T11:54:07Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- postCreateANewRuleSet_status409 -->
-        <test-method status="PASS" signature="putUpdateANewRuleSet_status200()[pri:7, instance:restassured.automation.testcases.Restassured_Automation_Rules@6fc6f14e]" name="putUpdateANewRuleSet_status200" duration-ms="2257" started-at="2021-04-18T06:59:08Z" finished-at="2021-04-18T06:59:10Z">
+        </test-method> <!-- deleteAnEngagementRoleForAMethodology_status204 -->
+        <test-method status="PASS" signature="deleteAnEngagementRoleForAMethodology_status400()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles@3632be31]" name="deleteAnEngagementRoleForAMethodology_status400" duration-ms="3157" started-at="2021-04-21T11:54:07Z" finished-at="2021-04-21T11:54:10Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- putUpdateANewRuleSet_status200 -->
-        <test-method status="PASS" signature="putUpdateANewRuleSet_status400()[pri:8, instance:restassured.automation.testcases.Restassured_Automation_Rules@6fc6f14e]" name="putUpdateANewRuleSet_status400" duration-ms="2149" started-at="2021-04-18T06:59:10Z" finished-at="2021-04-18T06:59:12Z">
+        </test-method> <!-- deleteAnEngagementRoleForAMethodology_status400 -->
+        <test-method status="PASS" signature="deleteDeleteAnEngagementRoleForAnOrganization_status204()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles@3632be31]" name="deleteDeleteAnEngagementRoleForAnOrganization_status204" duration-ms="1441" started-at="2021-04-21T11:54:10Z" finished-at="2021-04-21T11:54:12Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- putUpdateANewRuleSet_status400 -->
-        <test-method status="FAIL" signature="putUpdateANewRuleSet_status409()[pri:9, instance:restassured.automation.testcases.Restassured_Automation_Rules@6fc6f14e]" name="putUpdateANewRuleSet_status409" duration-ms="2342" started-at="2021-04-18T06:59:12Z" finished-at="2021-04-18T06:59:14Z">
+        </test-method> <!-- deleteDeleteAnEngagementRoleForAnOrganization_status204 -->
+        <test-method status="PASS" signature="deleteDeleteAnEngagementRoleForAnOrganization_status400()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles@3632be31]" name="deleteDeleteAnEngagementRoleForAnOrganization_status400" duration-ms="1443" started-at="2021-04-21T11:54:12Z" finished-at="2021-04-21T11:54:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteDeleteAnEngagementRoleForAnOrganization_status400 -->
+        <test-method status="PASS" signature="getLoadAllEngagementRolesInformationForARevision_status200()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles@3632be31]" name="getLoadAllEngagementRolesInformationForARevision_status200" duration-ms="1811" started-at="2021-04-21T11:54:13Z" finished-at="2021-04-21T11:54:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getLoadAllEngagementRolesInformationForARevision_status200 -->
+        <test-method status="PASS" signature="getLoadAllEngagementRolesInformationForAnOrganization_status200()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles@3632be31]" name="getLoadAllEngagementRolesInformationForAnOrganization_status200" duration-ms="904" started-at="2021-04-21T11:54:15Z" finished-at="2021-04-21T11:54:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getLoadAllEngagementRolesInformationForAnOrganization_status200 -->
+        <test-method status="PASS" signature="patchUpdateAnEngagementRoleForAMethodology_status204()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles@3632be31]" name="patchUpdateAnEngagementRoleForAMethodology_status204" duration-ms="2420" started-at="2021-04-21T11:54:16Z" finished-at="2021-04-21T11:54:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- patchUpdateAnEngagementRoleForAMethodology_status204 -->
+        <test-method status="PASS" signature="patchUpdateAnEngagementRoleForAMethodology_status400()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles@3632be31]" name="patchUpdateAnEngagementRoleForAMethodology_status400" duration-ms="2254" started-at="2021-04-21T11:54:18Z" finished-at="2021-04-21T11:54:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- patchUpdateAnEngagementRoleForAMethodology_status400 -->
+        <test-method status="FAIL" signature="patchUpdateAnEngagementRoleForAMethodology_status409()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles@3632be31]" name="patchUpdateAnEngagementRoleForAMethodology_status409" duration-ms="2470" started-at="2021-04-21T11:54:21Z" finished-at="2021-04-21T11:54:23Z">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [409] but found [200]]]>
+              <![CDATA[expected [409] but found [204]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [409] but found [200]
+              <![CDATA[java.lang.AssertionError: expected [409] but found [204]
 at org.testng.Assert.fail(Assert.java:96)
 at org.testng.Assert.failNotEquals(Assert.java:776)
 at org.testng.Assert.assertEqualsImpl(Assert.java:137)
 at org.testng.Assert.assertEquals(Assert.java:118)
 at org.testng.Assert.assertEquals(Assert.java:652)
 at org.testng.Assert.assertEquals(Assert.java:662)
-at restassured.automation.testcases.Restassured_Automation_Rules.putUpdateANewRuleSet_status409(Restassured_Automation_Rules.java:660)
+at restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles.patchUpdateAnEngagementRoleForAMethodology_status409(Restassured_Automation_EngagementTeamRoles.java:778)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -133,26 +136,122 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- putUpdateANewRuleSet_status409 -->
-      </class> <!-- restassured.automation.testcases.Restassured_Automation_Rules -->
-      <class name="restassured.automation.testcases.Restassured_Automation_Publish">
-        <test-method status="PASS" signature="setup()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_Publish@20398b7c]" name="setup" is-config="true" duration-ms="64" started-at="2021-04-18T06:58:44Z" finished-at="2021-04-18T06:58:44Z">
+        </test-method> <!-- patchUpdateAnEngagementRoleForAMethodology_status409 -->
+        <test-method status="PASS" signature="patchUpdateAnEngagementRoleForAnOrganization_status204()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles@3632be31]" name="patchUpdateAnEngagementRoleForAnOrganization_status204" duration-ms="1401" started-at="2021-04-21T11:54:23Z" finished-at="2021-04-21T11:54:24Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_Rules@6fc6f14e]" name="setup" is-config="true" duration-ms="1" started-at="2021-04-18T06:58:44Z" finished-at="2021-04-18T06:58:44Z">
+        </test-method> <!-- patchUpdateAnEngagementRoleForAnOrganization_status204 -->
+        <test-method status="PASS" signature="patchUpdateAnEngagementRoleForAnOrganization_status400()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles@3632be31]" name="patchUpdateAnEngagementRoleForAnOrganization_status400" duration-ms="1380" started-at="2021-04-21T11:54:24Z" finished-at="2021-04-21T11:54:26Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="postPublish_status200()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_Publish@20398b7c]" name="postPublish_status200" duration-ms="6839" started-at="2021-04-18T06:58:44Z" finished-at="2021-04-18T06:58:51Z">
+        </test-method> <!-- patchUpdateAnEngagementRoleForAnOrganization_status400 -->
+        <test-method status="FAIL" signature="patchUpdateAnEngagementRoleForAnOrganization_status409()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles@3632be31]" name="patchUpdateAnEngagementRoleForAnOrganization_status409" duration-ms="1408" started-at="2021-04-21T11:54:26Z" finished-at="2021-04-21T11:54:27Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [409] but found [204]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [409] but found [204]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:652)
+at org.testng.Assert.assertEquals(Assert.java:662)
+at restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles.patchUpdateAnEngagementRoleForAnOrganization_status409(Restassured_Automation_EngagementTeamRoles.java:297)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- postPublish_status200 -->
-        <test-method status="PASS" signature="postValidate_status200()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_Publish@20398b7c]" name="postValidate_status200" duration-ms="4274" started-at="2021-04-18T06:58:51Z" finished-at="2021-04-18T06:58:55Z">
+        </test-method> <!-- patchUpdateAnEngagementRoleForAnOrganization_status409 -->
+        <test-method status="FAIL" signature="postCreateAnEngagementRoleForAMethodology_status200()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles@3632be31]" name="postCreateAnEngagementRoleForAMethodology_status200" duration-ms="1116" started-at="2021-04-21T11:54:27Z" finished-at="2021-04-21T11:54:28Z">
+          <exception class="java.lang.StringIndexOutOfBoundsException">
+            <message>
+              <![CDATA[String index out of range: 37]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.StringIndexOutOfBoundsException: String index out of range: 37
+at java.lang.String.substring(Unknown Source)
+at restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles.getRandomAlphaNum(Restassured_Automation_EngagementTeamRoles.java:48)
+at restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles.postCreateAnEngagementRoleForAMethodology_status200(Restassured_Automation_EngagementTeamRoles.java:514)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.StringIndexOutOfBoundsException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- postValidate_status200 -->
-      </class> <!-- restassured.automation.testcases.Restassured_Automation_Publish -->
+        </test-method> <!-- postCreateAnEngagementRoleForAMethodology_status200 -->
+        <test-method status="PASS" signature="postCreateAnEngagementRoleForAMethodology_status400()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles@3632be31]" name="postCreateAnEngagementRoleForAMethodology_status400" duration-ms="1539" started-at="2021-04-21T11:54:28Z" finished-at="2021-04-21T11:54:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postCreateAnEngagementRoleForAMethodology_status400 -->
+        <test-method status="PASS" signature="postCreateAnEngagementRoleForAMethodology_status409()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles@3632be31]" name="postCreateAnEngagementRoleForAMethodology_status409" duration-ms="1825" started-at="2021-04-21T11:54:30Z" finished-at="2021-04-21T11:54:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postCreateAnEngagementRoleForAMethodology_status409 -->
+        <test-method status="PASS" signature="postCreateAnEngagementRoleForAnOrganization_status200()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles@3632be31]" name="postCreateAnEngagementRoleForAnOrganization_status200" duration-ms="1175" started-at="2021-04-21T11:54:32Z" finished-at="2021-04-21T11:54:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postCreateAnEngagementRoleForAnOrganization_status200 -->
+        <test-method status="PASS" signature="postCreateAnEngagementRoleForAnOrganization_status400()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles@3632be31]" name="postCreateAnEngagementRoleForAnOrganization_status400" duration-ms="935" started-at="2021-04-21T11:54:33Z" finished-at="2021-04-21T11:54:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postCreateAnEngagementRoleForAnOrganization_status400 -->
+        <test-method status="PASS" signature="postCreateAnEngagementRoleForAnOrganization_status409()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles@3632be31]" name="postCreateAnEngagementRoleForAnOrganization_status409" duration-ms="1005" started-at="2021-04-21T11:54:34Z" finished-at="2021-04-21T11:54:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postCreateAnEngagementRoleForAnOrganization_status409 -->
+      </class> <!-- restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

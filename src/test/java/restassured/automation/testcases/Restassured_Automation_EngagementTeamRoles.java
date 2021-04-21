@@ -449,7 +449,8 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		//fetching the last item from the list
 		System.out.println(methodologyId.get(methodologyId.size()-1));		
 		
-		ArrayList<Map<String, ?>> listRevisionId = jsonPathEvaluator1.get("revisions.id");
+		//ArrayList<Map<String, ?>> listRevisionId = jsonPathEvaluator1.get("revisions.id");
+		ArrayList<Map<String, ?>> listRevisionId = jsonPathEvaluator1.get("revisions");
 
 		Object[] revId = listRevisionId.toArray();
 		
@@ -499,8 +500,8 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		//fetching the last item from the list
 		System.out.println(methodologyId.get(methodologyId.size()-1));		
 		
-		ArrayList<Map<String, ?>> listRevisionId = jsonPathEvaluator1.get("revisions.id");
-
+		//ArrayList<Map<String, ?>> listRevisionId = jsonPathEvaluator1.get("revisions.id");
+		ArrayList<Map<String, ?>> listRevisionId = jsonPathEvaluator1.get("revisions");
 		Object[] revId = listRevisionId.toArray();
 		
 		String reviD = revId[revId.length-1].toString();
@@ -556,8 +557,9 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		//fetching the last item from the list
 		System.out.println(methodologyId.get(methodologyId.size()-1));		
 		
-		ArrayList<Map<String, ?>> listRevisionId = jsonPathEvaluator1.get("revisions.id");
-
+		//ArrayList<Map<String, ?>> listRevisionId = jsonPathEvaluator1.get("revisions.id");
+		ArrayList<Map<String, ?>> listRevisionId = jsonPathEvaluator1.get("revisions");
+		
 		Object[] revId = listRevisionId.toArray();
 		
 		String reviD = revId[revId.length-1].toString();
@@ -613,7 +615,8 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		//fetching the last item from the list
 		System.out.println(methodologyId.get(methodologyId.size()-1));		
 		
-		ArrayList<Map<String, ?>> listRevisionId = jsonPathEvaluator1.get("revisions.id");
+		//ArrayList<Map<String, ?>> listRevisionId = jsonPathEvaluator1.get("revisions.id");
+		ArrayList<Map<String, ?>> listRevisionId = jsonPathEvaluator1.get("revisions");
 
 		Object[] revId = listRevisionId.toArray();
 		
@@ -670,7 +673,8 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		//fetching the last item from the list
 		System.out.println(methodologyId.get(methodologyId.size()-1));		
 		
-		ArrayList<Map<String, ?>> listRevisionId = jsonPathEvaluator1.get("revisions.id");
+		//ArrayList<Map<String, ?>> listRevisionId = jsonPathEvaluator1.get("revisions.id");
+		ArrayList<Map<String, ?>> listRevisionId = jsonPathEvaluator1.get("revisions");
 
 		Object[] revId = listRevisionId.toArray();
 		
@@ -740,7 +744,8 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		//fetching the last item from the list
 		System.out.println(methodologyId.get(methodologyId.size()-1));		
 		
-		ArrayList<Map<String, ?>> listRevisionId = jsonPathEvaluator1.get("revisions.id");
+		//ArrayList<Map<String, ?>> listRevisionId = jsonPathEvaluator1.get("revisions.id");
+		ArrayList<Map<String, ?>> listRevisionId = jsonPathEvaluator1.get("revisions");
 
 		Object[] revId = listRevisionId.toArray();
 		
@@ -807,7 +812,8 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		//fetching the last item from the list
 		System.out.println(methodologyId.get(methodologyId.size()-1));		
 		
-		ArrayList<Map<String, ?>> listRevisionId = jsonPathEvaluator1.get("revisions.id");
+		//ArrayList<Map<String, ?>> listRevisionId = jsonPathEvaluator1.get("revisions.id");
+		ArrayList<Map<String, ?>> listRevisionId = jsonPathEvaluator1.get("revisions");
 
 		Object[] revId = listRevisionId.toArray();
 		
@@ -875,7 +881,8 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		//fetching the last item from the list
 		System.out.println(methodologyId.get(methodologyId.size()-1));		
 		
-		ArrayList<Map<String, ?>> listRevisionId = jsonPathEvaluator1.get("revisions.id");
+		//ArrayList<Map<String, ?>> listRevisionId = jsonPathEvaluator1.get("revisions.id");
+		ArrayList<Map<String, ?>> listRevisionId = jsonPathEvaluator1.get("revisions");
 
 		Object[] revId = listRevisionId.toArray();
 		
@@ -938,7 +945,8 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		//fetching the last item from the list
 		System.out.println(methodologyId.get(methodologyId.size()-1));		
 		
-		ArrayList<Map<String, ?>> listRevisionId = jsonPathEvaluator1.get("revisions.id");
+		//ArrayList<Map<String, ?>> listRevisionId = jsonPathEvaluator1.get("revisions.id");
+		ArrayList<Map<String, ?>> listRevisionId = jsonPathEvaluator1.get("revisions");
 
 		Object[] revId = listRevisionId.toArray();
 		
