@@ -82,7 +82,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 		getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator = getMethodologyRes.jsonPath();
-		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions.id");
+		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions");
 
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
 
@@ -143,7 +143,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 		getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
-		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator1.get("revisions.id");
+		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator1.get("revisions");
 
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
 
@@ -205,7 +205,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 		getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator = getMethodologyRes.jsonPath();
-		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions.id");
+		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions");
 
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
 
@@ -267,7 +267,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 		getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator = getMethodologyRes.jsonPath();
-		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions.id");
+		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions");
 
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
 
@@ -322,7 +322,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 		getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator = getMethodologyRes.jsonPath();
-		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions.id");
+		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions");
 
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
 
@@ -377,7 +377,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 		getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator = getMethodologyRes.jsonPath();
-		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions.id");
+		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions");
 
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
 
@@ -432,7 +432,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 		getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator = getMethodologyRes.jsonPath();
-		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions.id");
+		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions");
 
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
 
@@ -487,7 +487,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 		getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator = getMethodologyRes.jsonPath();
-		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions.id");
+		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions");
 
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
 
@@ -542,7 +542,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 		getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator = getMethodologyRes.jsonPath();
-		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions.id");
+		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions");
 
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
 
@@ -602,7 +602,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 		getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator = getMethodologyRes.jsonPath();
-		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions.id");
+		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions");
 
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
 
@@ -687,7 +687,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 		getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator = getMethodologyRes.jsonPath();
-		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions.id");
+		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions");
 
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
 
@@ -754,7 +754,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 		getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator = getMethodologyRes.jsonPath();
-		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions.id");
+		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions");
 
 		System.out.println(String.valueOf(listRevisionI1.get(2)));
 
@@ -824,7 +824,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 		getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator = getMethodologyRes.jsonPath();
-		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions.id");
+		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions");
 
 		System.out.println(String.valueOf(listRevisionI1.get(2)));
 
@@ -914,7 +914,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 		getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator = getMethodologyRes.jsonPath();
-		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions.id");
+		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions");
 
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
 
@@ -979,7 +979,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 		getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator = getMethodologyRes.jsonPath();
-		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions.id");
+		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions");
 
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
 
@@ -1045,7 +1045,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 		getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator = getMethodologyRes.jsonPath();
-		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions.id");
+		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions");
 
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
 
@@ -1117,7 +1117,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 		getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator = getMethodologyRes.jsonPath();
-		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions.id");
+		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions");
 
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
 
@@ -1179,7 +1179,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 		getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator = getMethodologyRes.jsonPath();
-		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions.id");
+		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions");
 
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
 
@@ -1241,7 +1241,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 		getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator = getMethodologyRes.jsonPath();
-		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions.id");
+		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions");
 
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
 
@@ -1328,7 +1328,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 		getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator = getMethodologyRes.jsonPath();
-		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions.id");
+		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions");
 
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
 
@@ -1418,7 +1418,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 		getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator = getMethodologyRes.jsonPath();
-		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions.id");
+		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions");
 
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
 
@@ -1506,7 +1506,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 		getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator = getMethodologyRes.jsonPath();
-		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions.id");
+		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions");
 
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
 
@@ -1592,7 +1592,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 		getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator = getMethodologyRes.jsonPath();
-		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions.id");
+		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions");
 
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
 
@@ -1678,7 +1678,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 		getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator = getMethodologyRes.jsonPath();
-		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions.id");
+		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions");
 
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
 
@@ -1776,7 +1776,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 		getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator = getMethodologyRes.jsonPath();
-		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions.id");
+		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions");
 
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
 
@@ -1853,7 +1853,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 		getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator = getMethodologyRes.jsonPath();
-		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions.id");
+		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions");
 
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
 
@@ -1932,7 +1932,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 		getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator = getMethodologyRes.jsonPath();
-		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions.id");
+		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions");
 
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
 
@@ -2007,7 +2007,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 		getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator = getMethodologyRes.jsonPath();
-		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions.id");
+		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions");
 
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
 
@@ -2056,7 +2056,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 		String patchId2 = "/api/methodologyItem/revision/" + revId.substring(1, 25) + "/itemSelectQuestion/" + s1
 				+ "/option/" + ss;
 		ItemSelectQuestion_Pojo isq1 = new ItemSelectQuestion_Pojo();
-		isq.setOptionTitles(new String [] {"DemoTesting"});
+		isq1.setTitle("DemoTesting1");
 
 		Response PatchOptionRes = getMethodology.patch_URLPOJO(URL, AuthorizationKey, patchId2, isq1);
 		PatchOptionRes.prettyPrint();

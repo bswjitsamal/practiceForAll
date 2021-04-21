@@ -159,7 +159,7 @@ public class Restassured_Automation_Methodology {
 		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
 		methodologyId = jsonPathEvaluator1.get("id");
 
-		listRevision = jsonPathEvaluator1.get("revisions.id");
+		listRevision = jsonPathEvaluator1.get("revisions");
 
 		// System.out.println(String.valueOf(listRevision.get(0)));
 
@@ -223,7 +223,7 @@ public class Restassured_Automation_Methodology {
 		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
 		methodologyId = jsonPathEvaluator1.get("id");
 
-		listRevision = jsonPathEvaluator1.get("revisions.id");
+		listRevision = jsonPathEvaluator1.get("revisions");
 
 		// System.out.println(String.valueOf(listRevision.get(0)));
 
@@ -322,7 +322,7 @@ public class Restassured_Automation_Methodology {
 		JsonPath jsonPathEvaluator = getMethodologyRes.jsonPath();
 		engagementTypeId = jsonPathEvaluator.get("engagementType");
 		organizationId = jsonPathEvaluator.get("organization");
-		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions.id");
+		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions");
 
 		System.out.println(String.valueOf(listRevisionI1.get(0)));
 		System.out.println(String.valueOf(organizationId.get(0)));
@@ -428,7 +428,7 @@ public class Restassured_Automation_Methodology {
 		JsonPath jsonPathEvaluator = getMethodologyRes.jsonPath();
 
 		methodologyId = jsonPathEvaluator.get("id");
-		String patchId = "/api/methodology/" + methodologyId.get(1);
+		String patchId = "/api/methodology/" + methodologyId.get(2);
 
 		Map<String,String>map=new HashMap<String, String>();
 		map.put("title",post.getProperty("postMethodologyTitle")+allUtils.getRandomNumber(1,30));
@@ -472,10 +472,10 @@ public class Restassured_Automation_Methodology {
 
 		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
 		methodologyId = jsonPathEvaluator1.get("id");
-		listRevision = jsonPathEvaluator1.get("revisions.id");
+		listRevision = jsonPathEvaluator1.get("revisions");
 		// System.out.println(String.valueOf(listRevision.get(0)));
 		System.out.println("List---->" + listRevision);
-		String revId = String.valueOf(listRevision.get(1));
+		String revId = String.valueOf(listRevision.get(2));
 		System.out.println("Revision id------>" + revId);
 		System.out.println(methodologyId);
 		listDraftDescription = jsonPathEvaluator1.get("revisions.draftDescription");
@@ -488,7 +488,7 @@ public class Restassured_Automation_Methodology {
 		
 
 		String patchId = "/api/methodology/" + methodologyId.get(1) + "/revision/"
-				+ revId.substring(1, revId.length() - 1);
+				+ revId.substring(1,25);
 
 		Restassured_Automation_Utils getMethodologyByrevisonId = new Restassured_Automation_Utils();
 		Response getMethodologyByrevisonIdRes = getMethodologyByrevisonId.patch_URLPOJO(URL, AuthorizationKey, patchId,
@@ -505,7 +505,7 @@ public class Restassured_Automation_Methodology {
 	}
 
 	@Test(groups = "IntegrationTests")
-	public void Methodology_PatchUpdateASpecificMethodologiesWith_Status_400() throws IOException {
+	public void Methodology_PatchUpdateASpecificMethodologiesWith_Status_404() throws IOException {
 		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
 
 		// fetching Org Id
@@ -523,30 +523,29 @@ public class Restassured_Automation_Methodology {
 
 		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
 		methodologyId = jsonPathEvaluator1.get("id");
-		listRevision = jsonPathEvaluator1.get("revisions.id");
+		listRevision = jsonPathEvaluator1.get("revisions");
 		// System.out.println(String.valueOf(listRevision.get(0)));
 		System.out.println("List---->" + listRevision);
 		String revId = String.valueOf(listRevision.get(2));
 		System.out.println("Revision id------>" + revId);
 		System.out.println(methodologyId);
-		listDraftDescription = jsonPathEvaluator1.get("revisions.draftDescription");
+		listDraftDescription = jsonPathEvaluator1.get("revisions");
 		Properties post = read_Configuration_Propertites.loadproperty("Configuration");
 		
 		Map<String,String>map=new HashMap<String, String>();
-		map.put("draftDescription", post.getProperty("postMethodologyDraftDescription") + getRandomAlphaNum()
-		+ getMethodology.getRandomNumber(1, 20));
+		map.put("draftDescription", post.getProperty("postMethodologyDraftDescription1"));
 		
 		User_Pojo po=new User_Pojo();
 		String createMethodology=po.methodologyAdd(map);
 	
-		String patchId = "/api/methodology/" + methodologyId.get(0) + "/revision/"
+		String patchId = "/api/methodology/" + methodologyId.get(2) + "/revisionsss/"
 				+ revId.substring(1,25);
 
 		Restassured_Automation_Utils getMethodologyByrevisonId = new Restassured_Automation_Utils();
 		Response getMethodologyByrevisonIdRes = getMethodologyByrevisonId.patch_URLPOJO(URL, AuthorizationKey, patchId,
 				createMethodology);
 		getMethodologyByrevisonIdRes.prettyPrint();
-		Assert.assertEquals(getMethodologyByrevisonIdRes.statusCode(), 400);
+		Assert.assertEquals(getMethodologyByrevisonIdRes.statusCode(), 404);
 		/**
 		 * Extent report generation
 		 */
@@ -575,7 +574,7 @@ public class Restassured_Automation_Methodology {
 		getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
-		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator1.get("revisions.id");
+		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator1.get("revisions");
 
 		ArrayList<String> parentId = jsonPathEvaluator1.get("id");
 		System.out.println(String.valueOf(listRevisionI1.get(0)));
@@ -782,7 +781,7 @@ public class Restassured_Automation_Methodology {
 		getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
-		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator1.get("revisions.id");
+		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator1.get("revisions");
 
 		ArrayList<String> parentId = jsonPathEvaluator1.get("id");
 		System.out.println(String.valueOf(listRevisionI1.get(0)));
@@ -988,7 +987,7 @@ public class Restassured_Automation_Methodology {
 		getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
-		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator1.get("revisions.id");
+		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator1.get("revisions");
 
 		ArrayList<String> parentId = jsonPathEvaluator1.get("id");
 		System.out.println(String.valueOf(listRevisionI1.get(0)));
@@ -1163,7 +1162,7 @@ public class Restassured_Automation_Methodology {
 
 		String CandidateURI = "/api/methodology/candidate/" + parntId;
 		Methodology_Pojo mi = new Methodology_Pojo();
-		mi.setItemIds(new String[] { methodItemId1, methodItemId1});
+		mi.setItemIds(new String[] { methodItemId1, methodItemId1,methodItemId1});
 		mi.setHotFixMajorVersion("0");
 		Response candidateRes = getEngagementType.post_URLPOJO(URL, AuthorizationKey, CandidateURI, mi);
 		candidateRes.prettyPrint();
@@ -1261,7 +1260,7 @@ public class Restassured_Automation_Methodology {
 		getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
-		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator1.get("revisions.id");
+		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator1.get("revisions");
 
 		ArrayList<String> parentId = jsonPathEvaluator1.get("id");
 		System.out.println(String.valueOf(listRevisionI1.get(0)));
@@ -1477,7 +1476,7 @@ public class Restassured_Automation_Methodology {
 		getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
-		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator1.get("revisions.id");
+		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator1.get("revisions");
 
 		ArrayList<String> parentId = jsonPathEvaluator1.get("id");
 		System.out.println(String.valueOf(listRevisionI1.get(0)));
@@ -1712,7 +1711,7 @@ public class Restassured_Automation_Methodology {
 		 */
 		Map<String,String>map=new HashMap<String, String>();
 		map.put("title",post.getProperty("postMethodologyTitle")+allUtils.getRandomNumber(1,30));
-		map.put("engagementType", engagementTypeId.get(0));
+		map.put("engagementType", engagementTypeId.get(2));
 		map.put("draftDescription", post.getProperty("postMethodologyDraftDescription"));
 		
 		User_Pojo po=new User_Pojo();

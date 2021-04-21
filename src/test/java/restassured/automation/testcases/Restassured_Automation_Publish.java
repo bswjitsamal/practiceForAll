@@ -144,6 +144,12 @@ public class Restassured_Automation_Publish extends read_Configuration_Propertit
 		Response postpublish = allUtils.post_URL_WithTwo_PathParams(URL, AuthorizationKey, "/api/publish/validate/{methodologyId}/{revisionId}",
 				 methodologyId.get(methodologyId.size()-1),candidateId, data1);
 		postpublish.prettyPrint();
+		/**
+		 * Extent report generation
+		 */
+		ExtentTestManager.statusLogMessage(postpublish.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO, postpublish.asString());
+		allUtils.validate_HTTPStrictTransportSecurity(postpublish);
 		
 		
 	}
@@ -207,6 +213,12 @@ public class Restassured_Automation_Publish extends read_Configuration_Propertit
 		Response postpublish = allUtils.post_URL_WithTwo_PathParams(URL, AuthorizationKey, "/api/publish/publish/{methodologyId}/{revisionId}",
 				 methodologyId.get(methodologyId.size()-1),candidateId, data1);
 		postpublish.prettyPrint();
+		/**
+		 * Extent report generation
+		 */
+		ExtentTestManager.statusLogMessage(postpublish.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO, postpublish.asString());
+		allUtils.validate_HTTPStrictTransportSecurity(postpublish);
 		
 		
 	}

@@ -1,25 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <listeners>
-    <listener class-name="restassured.automation.listeners.TestListeners"/>
-  </listeners>
-  <test thread-count="5" name="Test(failed)">
-    <groups>
-      <run>
-        <include name="IntegrationTests"/>
-        <include name="EndToEnd"/>
-      </run>
-    </groups>
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test verbose="2" name="Default test">
     <classes>
-      <class name="restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles">
+      <class name="restassured.automation.testcases.Restassured_Automation_ItemSelectQuestion">
+        <methods>
+          <include name="ItemSelectQuestion_EndToEnd_Scenario"/>
+        </methods>
+      </class> <!-- restassured.automation.testcases.Restassured_Automation_ItemSelectQuestion -->
+    </classes>
+  </test> <!-- Default test -->
+  <test name="Default test(failed)">
+    <classes>
+      <class name="restassured.automation.testcases.Restassured_Automation_ItemSelectQuestion">
         <methods>
           <include name="setup"/>
-          <include name="patchUpdateAnEngagementRoleForAMethodology_status409"/>
-          <include name="patchUpdateAnEngagementRoleForAnOrganization_status409"/>
-          <include name="postCreateAnEngagementRoleForAMethodology_status200"/>
+          <include name="ItemSelectQuestion_EndToEnd_Scenario"/>
         </methods>
-      </class> <!-- restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles -->
+      </class> <!-- restassured.automation.testcases.Restassured_Automation_ItemSelectQuestion -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
