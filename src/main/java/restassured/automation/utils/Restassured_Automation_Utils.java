@@ -268,7 +268,7 @@ BaseURL = BaseURL + URI;
 
 public Response post_URLPOJO(String BaseURL, String AuthorizationKey, String URI, Object obj) {
 	// TODO Auto-generated method stub
-BaseURL = BaseURL + URI;
+    BaseURL = BaseURL + URI;
 	
 	return RestAssured.given()
 	.header("Authorization", AuthorizationKey)		

@@ -6,8 +6,25 @@ public class RootConditionGroup {
 
 	private String tempId;
 	private String operator;
-	private String isNew;
-	private List<Conditions> conditions;
+	//private String isNew;
+	private String type;
+	private List<Children> children;
+	
+	public List<Children> getChildren() {
+		return children;
+	}
+
+	public void setChildren(List<Children> children) {
+		this.children = children;
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
 
 	public String getTempId() {
 		return tempId;
@@ -17,13 +34,13 @@ public class RootConditionGroup {
 		this.tempId = tempId;
 	}
 
-	public String getIsNew() {
+	/*public String getIsNew() {
 		return isNew;
 	}
 
 	public void setIsNew(String isNew) {
 		this.isNew = isNew;
-	}
+	}*/
 
 	public String getOperator() {
 		return operator;
@@ -33,17 +50,10 @@ public class RootConditionGroup {
 		this.operator = operator;
 	}
 
-	public List<Conditions> getConditions() {
-		return conditions;
-	}
 
-	public void setConditions(List<Conditions> conditions) {
-		this.conditions = conditions;
-	}
+	public static class Children {
 
-	public static class Conditions {
-
-		private String name;
+		//private String name;
 		private String tempId;
 		private boolean isNew;
 		private boolean isMultipleInstancesConjunction;
@@ -101,13 +111,13 @@ public class RootConditionGroup {
 			this.sourceId = sourceId;
 		}
 
-		public String getName() {
+		/*public String getName() {
 			return name;
 		}
 
 		public void setName(String name) {
 			this.name = name;
-		}
+		}*/
 
 		public String getType() {
 			return type;

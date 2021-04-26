@@ -1955,7 +1955,7 @@ public class Restassured_Automation_MethodologyItemRelations {
 
 		Response OrganizationsDetails = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/org");
 		JsonPath jsonPathEvaluator = OrganizationsDetails.jsonPath();
-		// listOrdId = jsonPathEvaluator.get("id");
+		listOrdId = jsonPathEvaluator.get("id");
 		OrganizationsDetails.prettyPrint();
 
 		Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();

@@ -22,8 +22,8 @@ import restassured.automation.Pojo.MethodologyItem_Pojo;
 import restassured.automation.Pojo.Organization_Pojo;
 import restassured.automation.Pojo.Result;
 import restassured.automation.Pojo.RootConditionGroup;
+import restassured.automation.Pojo.RootConditionGroup.Children;
 import restassured.automation.Pojo.ServiceDetailsPojo;
-import restassured.automation.Pojo.RootConditionGroup.Conditions;
 import restassured.automation.utils.Restassured_Automation_Utils;
 import restassured.automation.utils.read_Configuration_Propertites;
 
@@ -199,10 +199,10 @@ public class Restassured_Automation_Security {
 		
 		Properties post = read_Configuration_Propertites.loadproperty("Configuration");
 
-		List<Conditions> conditions = new ArrayList<Conditions>();
-		RootConditionGroup.Conditions sel = new RootConditionGroup.Conditions();
+		List<Children> children = new ArrayList<Children>();
+		RootConditionGroup.Children sel = new RootConditionGroup.Children();
 		//sel.setId(post.getProperty("postRulesId"));
-		sel.setName("Work Program 1 /\\nProcedure 2");
+		//sel.setName("Work Program 1 /\\nProcedure 2");
 		sel.setTempId("1615527874317");
 		sel.setIsNew(true);
 		sel.setIsMultipleInstancesConjunction(false);
@@ -212,22 +212,22 @@ public class Restassured_Automation_Security {
 		sel.setValues(new String[] { "604afe93776641acb09dbfa8" } );
 		sel.setMultipleLogicOperator("Any");
 
-		conditions.add(sel);
+		children.add(sel);
 
 		RootConditionGroup rootConditionGroup = new RootConditionGroup();
 		rootConditionGroup.setTempId("tempId");
 		rootConditionGroup.setOperator("operator");
-		rootConditionGroup.setIsNew("isNew");
-		rootConditionGroup.setConditions(conditions);
+		//rootConditionGroup.setIsNew("isNew");
+		rootConditionGroup.setChildren(children);
 		
 
 		Result result = new Result();
-		result.setName("result");
+		//result.setName("result");
 		result.setOperation("Show");
 		result.setTargetId("604afe04776641acb09dbfa1");
 
 		ServiceDetailsPojo sp = new ServiceDetailsPojo();
-		sp.setName("Demo");
+		//sp.setName("Demo");
 		sp.setRootConditionGroup(rootConditionGroup);
 		sp.setResult(result);
 		sp.setIsComplex(false);

@@ -2,7 +2,7 @@ package restassured.automation.Pojo;
 
 public class ServiceDetailsPojo {
 	
-	private String name;
+	//private String name;
 	private RootConditionGroup rootConditionGroup;
 	private Result result;
 	private boolean isComplex;
@@ -14,12 +14,12 @@ public class ServiceDetailsPojo {
 	public void setIsComplex(boolean b) {
 		this.isComplex = b;
 	}
-	public String getName() {
+	/*public String getName() {
 		return name;
 	}
 	public void setName(String name) {
 		this.name = name;
-	}
+	}*/
 	public RootConditionGroup getRootConditionGroup() {
 		return rootConditionGroup;
 	}

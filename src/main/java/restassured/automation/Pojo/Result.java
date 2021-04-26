@@ -2,17 +2,27 @@ package restassured.automation.Pojo;
 
 public class Result {
 
-	private String name;
+	//private String name;
 	private String operation;
 	private String targetId;
+	private String type;
 	
-	public String getName() {
+	
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
+
+	/*public String getName() {
 		return name;
 	}
 
 	public void setName(String name) {
 		this.name = name;
-	}
+	}*/
 
 	public String getOperation() {
 		return operation;
