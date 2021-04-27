@@ -22,7 +22,7 @@ public class Organization_Pojo {
 	private String resourceId;
 	private String memberFirmId;
 	private String permissionSet;
-	
+	private String methodologyId;
 
 	public String getMemberFirmId() {
 		return memberFirmId;
@@ -85,6 +85,14 @@ public class Organization_Pojo {
 
 		Gson Josnbody = new Gson();
 		return Josnbody.toJson(Organization);
+	}
+
+	public String getMethodologyId() {
+		return methodologyId;
+	}
+
+	public void setMethodologyId(String methodologyId) {
+		this.methodologyId = methodologyId;
 	}
 
 	@Override

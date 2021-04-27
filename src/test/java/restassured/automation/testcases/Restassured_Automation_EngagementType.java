@@ -425,6 +425,21 @@ public class Restassured_Automation_EngagementType {
 
 
 	}
+	@Test(groups = "IntegrationTests")
+	public void EngagementType_ListAllEngagementTypesForTheStore(){
+		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
+		Response EngagementStore=allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/engagementType/store");
+		EngagementStore.prettyPrint();
+		Assert.assertEquals(EngagementStore.getStatusCode(),200);
+		/**
+		 * Extent report generation
+		 */
+		ExtentTestManager.statusLogMessage(EngagementStore.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,EngagementStore.asString());
+		allUtils.validate_HTTPStrictTransportSecurity(EngagementStore);
+	}
+	
+	
 
 	//@Test(groups = { "EndToEnd" })
 	public void EngagementType_EndToEnd_Scenario() throws JsonIOException, JsonSyntaxException, IOException {

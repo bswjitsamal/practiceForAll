@@ -18,7 +18,12 @@ public class User_Pojo {
 		Gson Josnbody = new Gson();
 		return Josnbody.toJson(CreateEngagement);
 	}
-	
+	public String createMethodologyStore(Map<String, String> data){
+		Organization_Pojo createMethodology=new Organization_Pojo();
+		createMethodology.setMethodologyId(data.get("methodologyId"));
+		Gson jsonbody=new Gson();
+		return jsonbody.toJson(createMethodology);
+	}
 	public String Get_Organization(Map<String, String> data) {
 
 		Organization_Pojo CreateEngagement = new Organization_Pojo();
