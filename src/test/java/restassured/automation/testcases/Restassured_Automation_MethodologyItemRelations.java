@@ -328,6 +328,7 @@ public class Restassured_Automation_MethodologyItemRelations {
 
 		Response postNewRelation = AllUtils.post_URLPOJO(URL, AuthorizationKey, patchId11, postRelationData);
 		postNewRelation.prettyPrint();
+		
 		Assert.assertEquals(postNewRelation.getStatusCode(), 200);
 		/**
 		 * Extent Report generation

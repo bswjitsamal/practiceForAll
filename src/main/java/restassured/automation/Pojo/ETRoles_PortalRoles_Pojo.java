@@ -1,8 +1,10 @@
 package restassured.automation.Pojo;
 
-public class Roles_PortalRoles_Pojo {
+public class ETRoles_PortalRoles_Pojo {
 	private String portalRoleId;
 	private String UserID;
+	private String name;
+	private String[] permission;
 	
 	
 	
@@ -18,6 +20,19 @@ public class Roles_PortalRoles_Pojo {
 	public void setUserID(String userID) {
 		UserID = userID;
 	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String[] getPermission() {
+		return permission;
+	}
+	public void setPermission(String[] permission) {
+		this.permission = permission;
+	}
+	
 	
 
 }

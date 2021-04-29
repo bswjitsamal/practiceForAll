@@ -253,14 +253,7 @@ public class User_Pojo {
  		 return Josnbody.toJson(upDateId);
  	}
      
-      public String putPortalRoles(Map<String,String> data){
-    	  
-    	Roles_PortalRoles_Pojo po=new Roles_PortalRoles_Pojo();
-    	po.setPortalRoleId(data.get("portalRoles"));
-    	po.setUserID(data.get("userId"));
-    	Gson jsonBody=new Gson();
-    	return jsonBody.toJson(po);
-      }
+     
       
       
 	
