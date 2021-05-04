@@ -1651,7 +1651,7 @@ public class Restassured_Automation_Methodology {
 
 	}
 	
-	@Test(groups = "IntegrationTests")
+	//@Test(groups = "IntegrationTests")
 	public void Methodology_ListAllPublishedStoreMethodologies(){
 		
 		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();

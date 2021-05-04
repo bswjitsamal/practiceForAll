@@ -124,7 +124,7 @@ public class Restassured_Automation_ETPortalRoles {
 		String myPermissionURI = "/api/" + post.getProperty("memberFirmSlug") + "/roles/portal";
 		Map<String, String> map = new HashMap<String, String>();
 		map.put("name", post.getProperty("postPermissionName") + rolesUtils.getRandomNumber(1, 50));
-		map.put("permission", post.getProperty("postPermission"));
+		map.put("permissions", post.getProperty("postPermission"));
 		ETUser_Pojo po = new ETUser_Pojo();
 		String createPortalRoles = po.createPortalRoles(map);
 

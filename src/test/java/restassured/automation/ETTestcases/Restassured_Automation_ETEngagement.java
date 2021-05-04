@@ -4,6 +4,7 @@ import static java.util.concurrent.TimeUnit.MILLISECONDS;
 import static java.util.concurrent.TimeUnit.SECONDS;
 
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Properties;
 
@@ -14,6 +15,7 @@ import org.testng.annotations.Test;
 
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
+import restassured.automation.Pojo.ETUser_Pojo;
 import restassured.automation.utils.Restassured_Automation_Utils;
 import restassured.automation.utils.read_Configuration_Propertites;
 
@@ -22,6 +24,7 @@ public class Restassured_Automation_ETEngagement {
 	String AuthorizationKey;
 	Properties post;
 	List<String> engagementId;
+	
 
 	@BeforeTest(groups = { "IntegrationTests", "EndToEnd", "IntegrationTests1" })
 	public void setup() throws IOException {
@@ -99,13 +102,14 @@ public class Restassured_Automation_ETEngagement {
 		allEnagementRes.prettyPrint();
 		JsonPath allEngagmentJson=allEnagementRes.jsonPath();
 		engagementId=allEngagmentJson.get("id");
-		String id=engagementId.get(0);
+		String id=engagementId.get(1);
 		
 		String getEngagementURI = "/api/" + post.getProperty("memberFirmSlug") + "/engagements/"+id+"/events";
 		Response myPermissionResponse = rolesUtils.get_URL_Without_Params(URL, AuthorizationKey, getEngagementURI);
 		myPermissionResponse.prettyPrint();
 		Assert.assertEquals(myPermissionResponse.getStatusCode(), 200);
 	}
+	
 	
 	
 }

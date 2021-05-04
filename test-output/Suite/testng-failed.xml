@@ -4,7 +4,7 @@
   <listeners>
     <listener class-name="restassured.automation.listeners.TestListeners"/>
   </listeners>
-  <test thread-count="5" name="Test(failed)">
+  <test name="Test">
     <groups>
       <run>
         <include name="IntegrationTests"/>
@@ -12,6 +12,84 @@
       </run>
     </groups>
     <classes>
+      <class name="restassured.automation.testcases.Restassured_Automation_Organizations"/>
+      <class name="restassured.automation.testcases.Restassured_Automation_OrgRoles"/>
+      <class name="restassured.automation.testcases.Restassured_Automation_EngagementType"/>
+      <class name="restassured.automation.testcases.Restassured_Automation_Methodology"/>
+      <class name="restassured.automation.testcases.Restassured_Automation_ItemSelectQuestion"/>
+      <class name="restassured.automation.testcases.Restassured_Automation_MethodologItem"/>
+      <class name="restassured.automation.testcases.Restassured_Automation_MethodologyItemRelations"/>
+      <class name="restassured.automation.testcases.Restassured_Automation_Rules"/>
+      <class name="restassured.automation.testcases.Restassured_Automation_Publish"/>
+      <class name="restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles"/>
+      <class name="restassured.automation.testcases.Restassured_Automation_ProcedureGroups"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="Test(failed)">
+    <groups>
+      <run>
+        <include name="IntegrationTests"/>
+        <include name="EndToEnd"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="restassured.automation.testcases.Restassured_Automation_EngagementType">
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- restassured.automation.testcases.Restassured_Automation_EngagementType -->
+      <class name="restassured.automation.testcases.Restassured_Automation_ItemSelectQuestion">
+        <methods>
+          <include name="setup"/>
+          <include name="ItemSelectQuestion_UpdateASelectQuestionItemOptionGroup_204"/>
+          <include name="ItemSelectQuestion_EndToEnd_Scenario"/>
+          <include name="ItemSelectQuestion_DeleteAnOptionGroupFromAnItemSelectQuestion_400"/>
+        </methods>
+      </class> <!-- restassured.automation.testcases.Restassured_Automation_ItemSelectQuestion -->
+      <class name="restassured.automation.testcases.Restassured_Automation_MethodologItem">
+        <methods>
+          <include name="MethodologyItem_GetAllMethodologyItemsForARevision_status400"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- restassured.automation.testcases.Restassured_Automation_MethodologItem -->
+      <class name="restassured.automation.testcases.Restassured_Automation_Publish">
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- restassured.automation.testcases.Restassured_Automation_Publish -->
+      <class name="restassured.automation.testcases.Restassured_Automation_MethodologyItemRelations">
+        <methods>
+          <include name="MethodologyItemRelation_ListOfAllMethodologyRelation_status400"/>
+          <include name="MethodologyItemRelation_DeleteAnMethodologyRelation_status400"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- restassured.automation.testcases.Restassured_Automation_MethodologyItemRelations -->
+      <class name="restassured.automation.testcases.Restassured_Automation_OrgRoles">
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- restassured.automation.testcases.Restassured_Automation_OrgRoles -->
+      <class name="restassured.automation.testcases.Restassured_Automation_Methodology">
+        <methods>
+          <include name="Methodology_CreateANewCandidateRevisionWithStatus_409"/>
+          <include name="Methodology_CreateANewCandidateRevisionWithStatus_400"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- restassured.automation.testcases.Restassured_Automation_Methodology -->
+      <class name="restassured.automation.testcases.Restassured_Automation_Organizations">
+        <methods>
+          <include name="Organisation_RemovePublishedStoreMethodologyFromOrganizationsHiddenMethodologyList"/>
+          <include name="Organisation_CreatePublishedStoreMethodologyFromOrganizationsHiddenMethodologyList"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- restassured.automation.testcases.Restassured_Automation_Organizations -->
+      <class name="restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles">
+        <methods>
+          <include name="setup"/>
+          <include name="patchUpdateAnEngagementRoleForAMethodology_status409"/>
+          <include name="patchUpdateAnEngagementRoleForAnOrganization_status409"/>
+        </methods>
+      </class> <!-- restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles -->
       <class name="restassured.automation.testcases.Restassured_Automation_ProcedureGroups">
         <methods>
           <include name="getCreateAProcedureGroup_status200"/>
@@ -19,6 +97,13 @@
           <include name="setup"/>
         </methods>
       </class> <!-- restassured.automation.testcases.Restassured_Automation_ProcedureGroups -->
+      <class name="restassured.automation.testcases.Restassured_Automation_Rules">
+        <methods>
+          <include name="deleteARuleSet_status400"/>
+          <include name="putUpdateANewRuleSet_status409"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- restassured.automation.testcases.Restassured_Automation_Rules -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
