@@ -17,32 +17,12 @@
 		<classes>
 			
 			<class
-				name="restassured.automation.testcases.Restassured_Automation_Organizations" />
+				name="restassured.automation.ETTestcases.Restassured_Automation_ETEngagement" />
 			<class
-				name="restassured.automation.testcases.Restassured_Automation_OrgRoles" />
-			<class
-				name="restassured.automation.testcases.Restassured_Automation_EngagementType" />
-			<class
-				name="restassured.automation.testcases.Restassured_Automation_Methodology" />
-			<class
-				name="restassured.automation.testcases.Restassured_Automation_ItemSelectQuestion" />
-			<class
-				name="restassured.automation.testcases.Restassured_Automation_MethodologItem" />
-
-			<class
-				name="restassured.automation.testcases.Restassured_Automation_MethodologyItemRelations" />
+				name="restassured.automation.ETTestcases.Restassured_Automation_ETEngagementTeam" />
 				<class
-				name="restassured.automation.testcases.Restassured_Automation_Rules" />
-				<class
-				name="restassured.automation.testcases.Restassured_Automation_Publish" />
-			<class
-				name="restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles" />
-
-			<class
-				name="restassured.automation.testcases.Restassured_Automation_ProcedureGroups" />
-
-
-
+				name="restassured.automation.ETTestcases.Restassured_Automation_ETPortalRoles" />
+			
 
 		</classes>
 	</test> <!-- Test -->

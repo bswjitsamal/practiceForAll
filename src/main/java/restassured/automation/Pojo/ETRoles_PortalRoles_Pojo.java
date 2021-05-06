@@ -4,7 +4,7 @@ public class ETRoles_PortalRoles_Pojo {
 	private String portalRoleId;
 	private String UserID;
 	private String name;
-	private String[] permission;
+	private String[] permissions;
 	
 	
 	
@@ -26,11 +26,11 @@ public class ETRoles_PortalRoles_Pojo {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String[] getPermission() {
-		return permission;
+	public String[] getPermissions() {
+		return permissions;
 	}
-	public void setPermission(String[] permission) {
-		this.permission = permission;
+	public void setPermissions(String[] permissions) {
+		this.permissions = permissions;
 	}
 	
 	

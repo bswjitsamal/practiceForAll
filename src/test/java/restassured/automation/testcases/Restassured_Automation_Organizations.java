@@ -248,12 +248,12 @@ public class Restassured_Automation_Organizations {
 		System.out.println("Organisation Id----->"+OrganisationId);
 		
 		
-		String URI="/api/methodology/store"; 
+		/*String URI="/api/methodology/store"; 
 		Response methodologyStore=OrganizationsGet.get_URL_Without_Params(URL,AuthorizationKey,URI);
 		methodologyStore.prettyPrint();
 		JsonPath methodologyJson=methodologyStore.jsonPath();
-		listMethodologyId=methodologyJson.get("id");
-		String methodologyId=listMethodologyId.get(0);
+		listMethodologyId=methodologyJson.get("id");*/
+		String methodologyId="607f111053141b72a87b2c82";
 		System.out.println("MethodologyId------>"+methodologyId);
 		/**
 		 * performing post operation
@@ -295,13 +295,14 @@ public class Restassured_Automation_Organizations {
 		String OrganisationId=listOrgId.get(5);
 		System.out.println("Organisation Id----->"+OrganisationId);
 		
-		
+		/*
 		String URI="/api/methodology/store"; 
 		Response methodologyStore=OrganizationsGet.get_URL_Without_Params(URL,AuthorizationKey,URI);
 		methodologyStore.prettyPrint();
 		JsonPath methodologyJson=methodologyStore.jsonPath();
-		listMethodologyId=methodologyJson.get("id");
-		String methodologyId=listMethodologyId.get(1);
+		listMethodologyId=methodologyJson.get("id");*/
+		
+		String methodologyId="607f111053141b72a87b2c82";
 		System.out.println("MethodologyId------>"+methodologyId);
 		/**
 		 * Performing the deletion
