@@ -155,6 +155,12 @@ public class Restassured_Automation_ETPortalRoles {
 				createPortalRoles);
 		postPortalRolesRes.prettyPrint();
 		Assert.assertEquals(postPortalRolesRes.getStatusCode(), 200);
+		/**
+		 * Extent Report Generation
+		 */
+		ExtentTestManager.statusLogMessage(postPortalRolesRes.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO, postPortalRolesRes.asString());
+
 	}
 
 	@Test(groups = "IntegrationTests")
@@ -185,6 +191,11 @@ public class Restassured_Automation_ETPortalRoles {
 		Response patchPortalRolesRes = rolesUtils.patch_URLPOJO(URL, AuthorizationKey, patchURI, patch);
 		patchPortalRolesRes.prettyPrint();
 		Assert.assertEquals(patchPortalRolesRes.getStatusCode(), 204);
+		/**
+		 * Extent Report Generation
+		 */
+		ExtentTestManager.statusLogMessage(patchPortalRolesRes.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO, patchPortalRolesRes.asString());
 
 	}
 
@@ -207,6 +218,11 @@ public class Restassured_Automation_ETPortalRoles {
 		String deleteURI = "/api/" + post.getProperty("memberFirmSlug") + "/roles/portal/" + rolesId;
 		Response deleteRolesRes = rolesUtils.delete(URL, AuthorizationKey, deleteURI);
 		Assert.assertEquals(deleteRolesRes.getStatusCode(), 204);
+		/**
+		 * Extent Report Generation
+		 */
+		ExtentTestManager.statusLogMessage(deleteRolesRes.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO, deleteRolesRes.asString());
 	}
 
 }

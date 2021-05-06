@@ -15,9 +15,12 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.Status;
+
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import restassured.automation.Pojo.ETUser_Pojo;
+import restassured.automation.listeners.ExtentTestManager;
 import restassured.automation.utils.Restassured_Automation_Utils;
 import restassured.automation.utils.read_Configuration_Propertites;
 
@@ -66,6 +69,11 @@ public class Restassured_Automation_ETRolesUser {
 		Response getRolesSearchResponse = rolesUtils.get_URL_QueryParams(URL, AuthorizationKey, rolesURI,"UserId",userId.get(4));
 		getRolesSearchResponse.prettyPrint();
 		Assert.assertEquals(getRolesSearchResponse.getStatusCode(), 200);
+		/** 
+		 * Extent Report Generation
+		 */
+		ExtentTestManager.statusLogMessage(getRolesSearchResponse.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,getRolesSearchResponse.asString());
 
 	}
 
@@ -81,6 +89,11 @@ public class Restassured_Automation_ETRolesUser {
 		Response getRolesSearchResponse = rolesUtils.get_URL_Without_Params(URL, AuthorizationKey, rolesURI);
 		getRolesSearchResponse.prettyPrint();
 		Assert.assertEquals(getRolesSearchResponse.getStatusCode(), 400);
+		/** 
+		 * Extent Report Generation
+		 */
+		ExtentTestManager.statusLogMessage(getRolesSearchResponse.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,getRolesSearchResponse.asString());
 
 	}
 
@@ -94,6 +107,11 @@ public class Restassured_Automation_ETRolesUser {
 		Response myPermissionResponse = rolesUtils.get_URL_Without_Params(URL, AuthorizationKey, myPermissionURI);
 		myPermissionResponse.prettyPrint();
 		Assert.assertEquals(myPermissionResponse.getStatusCode(), 200);
+		/** 
+		 * Extent Report Generation
+		 */
+		ExtentTestManager.statusLogMessage(myPermissionResponse.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,myPermissionResponse.asString());
 	}
 	
 	

@@ -124,6 +124,11 @@ public class Restassured_Automation_ETEngagementTeam {
 		Response deleteAccessRes = rolesUtils.delete_URLPOJO(URL, AuthorizationKey, accessUri, userOobj);
 		deleteAccessRes.prettyPrint();
 		Assert.assertEquals(deleteAccessRes.getStatusCode(), 204);
+		/** 
+		 * Extent Report Generation
+		 */
+		ExtentTestManager.statusLogMessage(deleteAccessRes.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,deleteAccessRes.asString());
 	}
 
 	@Test(groups = "IntegrationTests")
@@ -148,6 +153,11 @@ public class Restassured_Automation_ETEngagementTeam {
 		Response putAccessRes = rolesUtils.put_URLPOJO(URL, AuthorizationKey, accessUri, userOobj);
 		putAccessRes.prettyPrint();
 		Assert.assertEquals(putAccessRes.getStatusCode(), 204);
+		/** 
+		 * Extent Report Generation
+		 */
+		ExtentTestManager.statusLogMessage(putAccessRes.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,putAccessRes.asString());
 	}
 
 	@Test(groups = "IntegrationTests")
@@ -213,6 +223,11 @@ public class Restassured_Automation_ETEngagementTeam {
 		Response putRes = rolesUtils.put_URLPOJO(URL, AuthorizationKey, teamId1, team1);
 		putRes.prettyPrint();
 		Assert.assertEquals(putRes.getStatusCode(), 200);
+		/** 
+		 * Extent Report Generation
+		 */
+		ExtentTestManager.statusLogMessage(putRes.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,putRes.asString());
 
 	}
 	
@@ -282,6 +297,11 @@ public class Restassured_Automation_ETEngagementTeam {
 
 		delRes.prettyPrint();
 		Assert.assertEquals(delRes.getStatusCode(), 204);
+		/** 
+		 * Extent Report Generation
+		 */
+		ExtentTestManager.statusLogMessage(delRes.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,delRes.asString());
 
 	}
 	

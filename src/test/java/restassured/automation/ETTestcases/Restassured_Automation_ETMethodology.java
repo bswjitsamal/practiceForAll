@@ -12,8 +12,11 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.Status;
+
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
+import restassured.automation.listeners.ExtentTestManager;
 import restassured.automation.utils.Restassured_Automation_Utils;
 import restassured.automation.utils.read_Configuration_Propertites;
 
@@ -47,6 +50,11 @@ public class Restassured_Automation_ETMethodology {
 		Response myPermissionResponse = rolesUtils.get_URL_Without_Params(URL, AuthorizationKey, myPermissionURI);
 		myPermissionResponse.prettyPrint();
 		Assert.assertEquals(myPermissionResponse.getStatusCode(), 200);
+		/** 
+		 * Extent Report Generation
+		 */
+		ExtentTestManager.statusLogMessage(myPermissionResponse.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,myPermissionResponse.asString());
 		}
 	@Test(groups = "IntegrationTests")
 	public void ETMethodology_GetMethodologyTranslations_Status200() throws IOException {
@@ -64,6 +72,11 @@ public class Restassured_Automation_ETMethodology {
 		Response myPermissionResponse = rolesUtils.get_URL_Without_Params(URL, AuthorizationKey, myPermissionURI);
 		myPermissionResponse.prettyPrint();
 		Assert.assertEquals(myPermissionResponse.getStatusCode(), 200);
+		/** 
+		 * Extent Report Generation
+		 */
+		ExtentTestManager.statusLogMessage(myPermissionResponse.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,myPermissionResponse.asString());
 		}
 	@Test(groups = "IntegrationTests")
 	public void ETMethodology_GetMethodologyForAnEngagements_Status200() throws IOException {
@@ -81,6 +94,11 @@ public class Restassured_Automation_ETMethodology {
 		Response myPermissionResponse = rolesUtils.get_URL_Without_Params(URL, AuthorizationKey, myPermissionURI);
 		myPermissionResponse.prettyPrint();
 		Assert.assertEquals(myPermissionResponse.getStatusCode(), 200);
+		/** 
+		 * Extent Report Generation
+		 */
+		ExtentTestManager.statusLogMessage(myPermissionResponse.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,myPermissionResponse.asString());
 		}
 	
 }

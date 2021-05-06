@@ -15,10 +15,13 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.Status;
+
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import restassured.automation.Pojo.ETUser_Pojo;
 import restassured.automation.Pojo.ET_Responses_Pojo;
+import restassured.automation.listeners.ExtentTestManager;
 import restassured.automation.utils.Restassured_Automation_Utils;
 import restassured.automation.utils.read_Configuration_Propertites;
 
@@ -74,6 +77,11 @@ public class Restassured_Automation_ETResponses {
 		Response res=rolesUtils.put_URLPOJO(URL, AuthorizationKey, accessUri, po);
 		res.prettyPrint();
 		Assert.assertEquals(res.getStatusCode(),204);
+		/** 
+		 * Extent Report Generation
+		 */
+		ExtentTestManager.statusLogMessage(res.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,res.asString());
 		
 		
 		
