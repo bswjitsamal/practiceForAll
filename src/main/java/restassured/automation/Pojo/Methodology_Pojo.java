@@ -14,8 +14,15 @@ public class Methodology_Pojo {
 	private String draftDescription;
 	private String[] itemIds;
 	private String hotFixMajorVersion;
+	private String inheritFrom;
 	
 	
+	public String getInheritFrom() {
+		return inheritFrom;
+	}
+	public void setInheritFrom(String inheritFrom) {
+		this.inheritFrom = inheritFrom;
+	}
 	public String getDraftDescription() {
 		return draftDescription;
 	}

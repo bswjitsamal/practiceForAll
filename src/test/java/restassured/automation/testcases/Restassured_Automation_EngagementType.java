@@ -4,6 +4,7 @@ import static java.util.concurrent.TimeUnit.MILLISECONDS;
 import static java.util.concurrent.TimeUnit.SECONDS;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -22,6 +23,7 @@ import com.google.gson.JsonSyntaxException;
 
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
+import restassured.automation.Pojo.ETUser_Pojo;
 import restassured.automation.Pojo.Engagement_Type_Pojo;
 import restassured.automation.Pojo.User_Pojo;
 
@@ -510,6 +512,108 @@ public class Restassured_Automation_EngagementType {
 		ExtentTestManager.getTest().log(Status.INFO,deleteEngagementType.asString());
 		allUtils.validate_HTTPStrictTransportSecurity(deleteEngagementType);
 
+
+	}
+	
+	@Test(groups = "IntegrationTests")
+	public void EngagementType_InheritAnEngagementType409() {
+
+		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
+
+		// fetching Org Id
+
+		Response OrganizationsDetails = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/org");
+		JsonPath jsonPathEvaluator = OrganizationsDetails.jsonPath();
+		listOrdId = jsonPathEvaluator.get("id");
+		OrganizationsDetails.prettyPrint();
+
+		/**
+		 * GETTING THE REVISION ID
+		 */
+
+		Response getEngagementTypeRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/engagementType",
+				"Organization", listOrdId.get(5));
+		getEngagementTypeRes.prettyPrint();
+		
+		// Retrieving the inheritedFrom 
+		
+		JsonPath jp = getEngagementTypeRes.jsonPath();
+		List<String> inheritedFrom = jp.getList("inheritedFrom");
+		
+		System.out.println(inheritedFrom);
+		
+		HashMap<String, String> map = new HashMap<String, String>();
+		map.put("storeEngagementType", inheritedFrom.get(5));
+		map.put("organization", listOrdId.get(5));
+		
+		User_Pojo po = new User_Pojo();
+		String userOobj = po.engagementTypeInherit(map);
+		
+		String URI="/api/engagementType/inherit/";
+		Response postEngagementTypeInheriteRes = allUtils.post_URLPOJO(URL, AuthorizationKey,URI, userOobj);
+		postEngagementTypeInheriteRes.prettyPrint();
+		
+		/*Response postEngagementTypeInheriteRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/engagementType/inherit/",
+				"Organization", inheritedFrom.get(5));
+		postEngagementTypeInheriteRes.prettyPrint();
+		*/
+		Assert.assertEquals(postEngagementTypeInheriteRes.statusCode(), 409);
+		
+		/**
+		 * Extent report generation
+		 */
+		ExtentTestManager.statusLogMessage(getEngagementTypeRes.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,getEngagementTypeRes.asString());
+		allUtils.validate_HTTPStrictTransportSecurity(getEngagementTypeRes);	
+
+	}
+	
+	@Test(groups = "IntegrationTests")
+	public void EngagementType_InheritAnEngagementType400() {
+
+		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
+
+		// fetching Org Id
+
+		Response OrganizationsDetails = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/org");
+		JsonPath jsonPathEvaluator = OrganizationsDetails.jsonPath();
+		listOrdId = jsonPathEvaluator.get("id");
+		OrganizationsDetails.prettyPrint();
+
+		/**
+		 * GETTING THE REVISION ID
+		 */
+
+		Response getEngagementTypeRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/engagementType",
+				"Organization", listOrdId.get(5));
+		getEngagementTypeRes.prettyPrint();
+		
+		// Retrieving the inheritedFrom 
+		
+		JsonPath jp = getEngagementTypeRes.jsonPath();
+		List<String> inheritedFrom = jp.getList("inheritedFrom");
+		
+		System.out.println(inheritedFrom);
+		
+		HashMap<String, String> map = new HashMap<String, String>();
+		map.put("storeEngagementType", inheritedFrom.get(5).substring(1,6));
+		map.put("organization", listOrdId.get(5).substring(1,6));
+		
+		User_Pojo po = new User_Pojo();
+		String userOobj = po.engagementTypeInherit(map);
+		
+		String URI="/api/engagementType/inherit/";
+		Response postEngagementTypeInheriteRes = allUtils.post_URLPOJO(URL, AuthorizationKey,URI, userOobj);
+		postEngagementTypeInheriteRes.prettyPrint();
+		
+		Assert.assertEquals(postEngagementTypeInheriteRes.statusCode(), 400);
+		
+		/**
+		 * Extent report generation
+		 */
+		ExtentTestManager.statusLogMessage(getEngagementTypeRes.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,getEngagementTypeRes.asString());
+		allUtils.validate_HTTPStrictTransportSecurity(getEngagementTypeRes);	
 
 	}
 

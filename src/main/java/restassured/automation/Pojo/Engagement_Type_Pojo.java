@@ -5,7 +5,17 @@ public class Engagement_Type_Pojo {
 	private String title;
 	private String organization;
 	private String id;
+	private String storeEngagementType;
+		
 	
+	public String getStoreEngagementType() {
+		return storeEngagementType;
+	}
+
+	public void setStoreEngagementType(String storeEngagementType) {
+		this.storeEngagementType = storeEngagementType;
+	}
+
 	public String getOrganization() {
 		return organization;
 	}

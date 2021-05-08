@@ -4,9 +4,6 @@ import static java.util.concurrent.TimeUnit.MILLISECONDS;
 import static java.util.concurrent.TimeUnit.SECONDS;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -18,14 +15,10 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.Status;
-import com.google.common.collect.Lists;
-import com.google.gson.JsonArray;
 
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-import restassured.automation.Pojo.ETRoles_PortalRoles_Pojo;
 import restassured.automation.Pojo.ETUser_Pojo;
-import restassured.automation.Pojo.ET_Engagement_Pojo;
 import restassured.automation.listeners.ExtentTestManager;
 import restassured.automation.utils.Restassured_Automation_Utils;
 import restassured.automation.utils.read_Configuration_Propertites;

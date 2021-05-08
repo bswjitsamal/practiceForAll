@@ -253,9 +253,40 @@ public class User_Pojo {
  		 return Josnbody.toJson(upDateId);
  	}
      
-     
+	public String engagementTypeInherit(Map<String, String> data) {
+
+		Engagement_Type_Pojo upDateId = new Engagement_Type_Pojo();
+
+		upDateId.setStoreEngagementType(data.get("storeEngagementType"));
+		upDateId.setOrganization(data.get("organization"));
+
+		Gson Josnbody = new Gson();
+		return Josnbody.toJson(upDateId);
+	}
+    
+	public String methodologyInherit(Map<String, String> data) {
+
+		Methodology_Pojo upDateId = new Methodology_Pojo();
+
+		upDateId.setInheritFrom(data.get("inheritFrom"));
+		upDateId.setOrganization(data.get("organization"));
+
+		Gson Josnbody = new Gson();
+		return Josnbody.toJson(upDateId);
+	}
       
-      
+	
+	public String publishInherit(Map<String, String> data) {
+
+		Methodology_Pojo upDateId = new Methodology_Pojo();
+
+		upDateId.setInheritFrom(data.get("inheritFrom"));
+		upDateId.setOrganization(data.get("organization"));
+
+		Gson Josnbody = new Gson();
+		return Josnbody.toJson(upDateId);
+	}
+    
 	
 
 }
