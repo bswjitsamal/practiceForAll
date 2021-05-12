@@ -23,12 +23,12 @@ import io.restassured.response.Response;
 
 import restassured.automation.Pojo.ItemSelectQuestion_Pojo;
 import restassured.automation.Pojo.MethodologyItem_Pojo;
+import restassured.automation.Pojo.User_Pojo;
 import restassured.automation.listeners.ExtentTestManager;
 import restassured.automation.utils.Restassured_Automation_Utils;
 import restassured.automation.utils.read_Configuration_Propertites;
 
 public class Restassured_Automation_ItemSelectQuestion {
-
 	String URL;
 	String AuthorizationKey;
 	List<String> listRevisionId;
@@ -880,7 +880,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 		System.out.println(ss);
 
 		String patchId2 = "/api/methodologyItem/revision/" + revId.substring(1, 25) + "/itemSelectQuestion/" + s1
-				+ "/option/" + ss;
+				+ "/option/" + s1;
 
 		Response getMethodologyRes4 = getMethodology.delete(URL, AuthorizationKey, patchId2);
 		getMethodologyRes4.prettyPrint();
@@ -1292,12 +1292,16 @@ public class Restassured_Automation_ItemSelectQuestion {
 		/**
 		 * Update the option group
 		 */
-		ItemSelectQuestion_Pojo pojo = new ItemSelectQuestion_Pojo();
-		pojo.setOptions(new String[] { optId });
+		Map<String,String> map=new HashMap<String,String>();
+		map.put("title",post.getProperty("putMethodologyItemTitle"));
+		User_Pojo po=new User_Pojo();
+		String data=po.updateOption(map);
+		/*ItemSelectQuestion_Pojo pojo = new ItemSelectQuestion_Pojo();
+		pojo.setOptions(new String[] { optId });*/
 		String patchId5 = "/api/methodologyItem/revision/" + revId.substring(1, 25) + "/itemSelectQuestion/" + s1
 				+ "/optionGroup/" + optionGrpId;
 
-		Response optionGroupRes = getEngagementType.patch_URLPOJO(URL, AuthorizationKey, patchId5, pojo);
+		Response optionGroupRes = getEngagementType.patch_URLPOJO(URL, AuthorizationKey, patchId5, data);
 		optionGroupRes.prettyPrint();
 		Assert.assertEquals(optionGroupRes.getStatusCode(), 204);
 		/**
@@ -1987,7 +1991,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 	}
 
 	
-	@Test(groups = "EndToEnd")
+	//@Test(groups = "EndToEnd")
 	public void ItemSelectQuestion_EndToEnd_Scenario() {
 
 		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();

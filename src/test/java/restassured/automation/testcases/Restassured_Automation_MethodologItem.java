@@ -5,6 +5,7 @@ import static java.util.concurrent.TimeUnit.SECONDS;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
@@ -22,7 +23,7 @@ import com.google.gson.JsonSyntaxException;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import restassured.automation.Pojo.MethodologyItem_Pojo;
-
+import restassured.automation.Pojo.User_Pojo;
 import restassured.automation.listeners.ExtentTestManager;
 import restassured.automation.utils.Restassured_Automation_Utils;
 import restassured.automation.utils.read_Configuration_Propertites;
@@ -53,9 +54,9 @@ public class Restassured_Automation_MethodologItem {
 		URL = BaseUrl.getProperty("ApiBaseUrl");
 		AuthorizationKey = BaseUrl.getProperty("AuthorizationKey");
 		Awaitility.reset();
-        Awaitility.setDefaultPollDelay(999, MILLISECONDS);
-        Awaitility.setDefaultPollInterval(99, SECONDS);
-        Awaitility.setDefaultTimeout(99, SECONDS);
+		Awaitility.setDefaultPollDelay(999, MILLISECONDS);
+		Awaitility.setDefaultPollInterval(99, SECONDS);
+		Awaitility.setDefaultTimeout(99, SECONDS);
 
 	}
 
@@ -69,7 +70,7 @@ public class Restassured_Automation_MethodologItem {
 		Response OrganizationsDetails = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/org");
 		JsonPath jsonPathEvaluator = OrganizationsDetails.jsonPath();
 		listOrdId = jsonPathEvaluator.get("id");
-		//OrganizationsDetails.prettyPrint();
+		// OrganizationsDetails.prettyPrint();
 
 		/**
 		 * GETTING THE REVISION ID
@@ -79,7 +80,7 @@ public class Restassured_Automation_MethodologItem {
 
 		Response getMethodologyRes = getMethodology.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
 				"Organization", listOrdId.get(5));
-		//getMethodologyRes.prettyPrint();
+		// getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
 		ArrayList listRevisionI1 = jsonPathEvaluator1.get("revisions");
@@ -88,7 +89,7 @@ public class Restassured_Automation_MethodologItem {
 
 		String revId = String.valueOf(listRevisionI1.get(2));
 		String id = revId.substring(1, revId.length() - 1);
-		//String subId = id.substring(8, 12);
+		// String subId = id.substring(8, 12);
 
 		String patchId = "/api/methodologyItem/revision/";
 
@@ -116,7 +117,7 @@ public class Restassured_Automation_MethodologItem {
 		Response OrganizationsDetails = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/org");
 		JsonPath jsonPathEvaluator = OrganizationsDetails.jsonPath();
 		listOrdId = jsonPathEvaluator.get("id");
-		//OrganizationsDetails.prettyPrint();
+		// OrganizationsDetails.prettyPrint();
 
 		/**
 		 * GETTING THE REVISION ID
@@ -126,7 +127,7 @@ public class Restassured_Automation_MethodologItem {
 
 		Response getMethodologyRes = getMethodology.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
 				"Organization", listOrdId.get(5));
-		//getMethodologyRes.prettyPrint();
+		// getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
 		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator1.get("revisions");
@@ -169,7 +170,7 @@ public class Restassured_Automation_MethodologItem {
 		Response OrganizationsDetails = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/org");
 		JsonPath jsonPathEvaluator = OrganizationsDetails.jsonPath();
 		listOrdId = jsonPathEvaluator.get("id");
-		//OrganizationsDetails.prettyPrint();
+		// OrganizationsDetails.prettyPrint();
 
 		/**
 		 * GETTING THE REVISION ID
@@ -177,7 +178,7 @@ public class Restassured_Automation_MethodologItem {
 
 		Response getMethodologyRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
 				"Organization", listOrdId.get(5));
-		//getMethodologyRes.prettyPrint();
+		// getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
 		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator1.get("revisions");
@@ -186,7 +187,7 @@ public class Restassured_Automation_MethodologItem {
 
 		String revId = String.valueOf(listRevisionI1.get(2));
 
-		String patchId = "/api/methodologyItem/revision/" + revId.substring(1,25);
+		String patchId = "/api/methodologyItem/revision/" + revId.substring(1, 25);
 
 		Restassured_Automation_Utils getEngagementType = new Restassured_Automation_Utils();
 
@@ -213,11 +214,11 @@ public class Restassured_Automation_MethodologItem {
 		Response OrganizationsDetails = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/org");
 		JsonPath jsonPathEvaluator = OrganizationsDetails.jsonPath();
 		listOrdId = jsonPathEvaluator.get("id");
-		//OrganizationsDetails.prettyPrint();
+		// OrganizationsDetails.prettyPrint();
 
 		Response getMethodologyRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
 				"Organization", listOrdId.get(5));
-		//getMethodologyRes.prettyPrint();
+		// getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
 		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator1.get("revisions");
@@ -226,7 +227,7 @@ public class Restassured_Automation_MethodologItem {
 
 		String revId = String.valueOf(listRevisionI1.get(2));
 
-		String patchId = "/api/methodologyItem/revision/" + revId.substring(1,25) + "/item";
+		String patchId = "/api/methodologyItem/revision/" + revId.substring(1, 25) + "/item";
 
 		Properties post = read_Configuration_Propertites.loadproperty("Configuration");
 		MethodologyItem_Pojo mi = new MethodologyItem_Pojo();
@@ -261,13 +262,13 @@ public class Restassured_Automation_MethodologItem {
 		Response OrganizationsDetails = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/org");
 		JsonPath jsonPathEvaluator = OrganizationsDetails.jsonPath();
 		listOrdId = jsonPathEvaluator.get("id");
-		//OrganizationsDetails.prettyPrint();
+		// OrganizationsDetails.prettyPrint();
 
 		Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();
 
 		Response getMethodologyRes = getMethodology.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
 				"Organization", listOrdId.get(5));
-		//getMethodologyRes.prettyPrint();
+		// getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
 		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator1.get("revisions");
@@ -276,7 +277,7 @@ public class Restassured_Automation_MethodologItem {
 
 		String revId = String.valueOf(listRevisionI1.get(2));
 
-		String patchId = "/api/methodologyItem/revision/" + revId.substring(1,25) + "/item";
+		String patchId = "/api/methodologyItem/revision/" + revId.substring(1, 25) + "/item";
 
 		Properties post = read_Configuration_Propertites.loadproperty("Configuration");
 		MethodologyItem_Pojo mi = new MethodologyItem_Pojo();
@@ -310,11 +311,11 @@ public class Restassured_Automation_MethodologItem {
 		Response OrganizationsDetails = getMethodology.get_URL_Without_Params(URL, AuthorizationKey, "/api/org");
 		JsonPath jsonPathEvaluator2 = OrganizationsDetails.jsonPath();
 		listOrdId = jsonPathEvaluator2.get("id");
-		//OrganizationsDetails.prettyPrint();
+		// OrganizationsDetails.prettyPrint();
 
 		Response getMethodologyRes = getMethodology.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
 				"Organization", listOrdId.get(5));
-		//getMethodologyRes.prettyPrint();
+		// getMethodologyRes.prettyPrint();
 
 		/**
 		 * FETCHING REVISION ID
@@ -332,7 +333,7 @@ public class Restassured_Automation_MethodologItem {
 		String mId = String.valueOf(methodologyId.get(2));
 		System.out.println(mId);
 
-		String patchId = "/api/methodologyItem/revisionss/" + revId.substring(1,25) + "/item";
+		String patchId = "/api/methodologyItem/revisionss/" + revId.substring(1, 25) + "/item";
 
 		Properties post = read_Configuration_Propertites.loadproperty("Configuration");
 		MethodologyItem_Pojo mi = new MethodologyItem_Pojo();
@@ -367,14 +368,14 @@ public class Restassured_Automation_MethodologItem {
 		Response OrganizationsDetails = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/org");
 		JsonPath jsonPathEvaluator = OrganizationsDetails.jsonPath();
 		listOrdId = jsonPathEvaluator.get("id");
-		//OrganizationsDetails.prettyPrint();
+		// OrganizationsDetails.prettyPrint();
 
 		Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();
 
 		Response getMethodologyRes = getMethodology.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
 				"Organization", listOrdId.get(5));
 
-		//getMethodologyRes.prettyPrint();
+		// getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
 		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator1.get("revisions");
@@ -383,7 +384,7 @@ public class Restassured_Automation_MethodologItem {
 
 		String revId = String.valueOf(listRevisionI1.get(2));
 
-		String patchId = "/api/methodologyItem/revision/" + revId.substring(1,25) + "/item";
+		String patchId = "/api/methodologyItem/revision/" + revId.substring(1, 25) + "/item";
 
 		Properties post = read_Configuration_Propertites.loadproperty("Configuration");
 		MethodologyItem_Pojo mi = new MethodologyItem_Pojo();
@@ -400,7 +401,7 @@ public class Restassured_Automation_MethodologItem {
 		Response postMethodologyItem = MethodologyItem.post_URLPOJO(URL, AuthorizationKey, patchId, mi);
 		postMethodologyItem.prettyPrint();
 
-		//Assert.assertEquals(postMethodologyItem.statusCode(), 200);
+		// Assert.assertEquals(postMethodologyItem.statusCode(), 200);
 
 		String methodologyItemId = postMethodologyItem.asString();
 		System.out.println("---->" + methodologyItemId);
@@ -455,7 +456,7 @@ public class Restassured_Automation_MethodologItem {
 		String revId = String.valueOf(listRevisionI1.get(2));
 		System.out.println("Revision id-------->" + revId);
 
-		String patchId = "/api/methodologyItem/revision/" + revId.substring(1,25) + "/item";
+		String patchId = "/api/methodologyItem/revision/" + revId.substring(1, 25) + "/item";
 
 		Properties post = read_Configuration_Propertites.loadproperty("Configuration");
 		MethodologyItem_Pojo mi = new MethodologyItem_Pojo();
@@ -470,7 +471,7 @@ public class Restassured_Automation_MethodologItem {
 		Response postMethodologyItem = MethodologyItem.post_URLPOJO(URL, AuthorizationKey, patchId, mi);
 		postMethodologyItem.prettyPrint();
 
-		//Assert.assertEquals(postMethodologyItem.statusCode(), 200);
+		// Assert.assertEquals(postMethodologyItem.statusCode(), 200);
 
 		String methodologyItemId = postMethodologyItem.asString();
 		System.out.println("---->" + methodologyItemId);
@@ -508,22 +509,22 @@ public class Restassured_Automation_MethodologItem {
 		Response OrganizationsDetails = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/org");
 		JsonPath jsonPathEvaluator = OrganizationsDetails.jsonPath();
 		listOrdId = jsonPathEvaluator.get("id");
-		//OrganizationsDetails.prettyPrint();
+		// OrganizationsDetails.prettyPrint();
 
 		Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();
 
 		Response getMethodologyRes = getMethodology.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
 				"Organization", listOrdId.get(5));
 
-		//getMethodologyRes.prettyPrint();
+		// getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
 		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator1.get("revisions");
 
 		String revId = String.valueOf(listRevisionI1.get(2));
-		System.out.println("Revision id------>"+revId);
+		System.out.println("Revision id------>" + revId);
 
-		String patchId = "/api/methodologyItem/revision/" + revId.substring(1,25) + "/item";
+		String patchId = "/api/methodologyItem/revision/" + revId.substring(1, 25) + "/item";
 
 		Properties post = read_Configuration_Propertites.loadproperty("Configuration");
 		MethodologyItem_Pojo mi = new MethodologyItem_Pojo();
@@ -580,14 +581,14 @@ public class Restassured_Automation_MethodologItem {
 		Response OrganizationsDetails = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/org");
 		JsonPath jsonPathEvaluator = OrganizationsDetails.jsonPath();
 		listOrdId = jsonPathEvaluator.get("id");
-		//OrganizationsDetails.prettyPrint();
+		OrganizationsDetails.prettyPrint();
 
 		Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();
 
 		Response getMethodologyRes = getMethodology.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(5));
+				"Organization", listOrdId.get(7));
 
-		//getMethodologyRes.prettyPrint();
+		// getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
 		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator1.get("revisions");
@@ -596,7 +597,7 @@ public class Restassured_Automation_MethodologItem {
 
 		String revId = String.valueOf(listRevisionI1.get(2));
 
-		String patchId = "/api/methodologyItem/revision/" + revId.substring(1,25) + "/item";
+		String patchId = "/api/methodologyItem/revision/" + revId.substring(1, 25) + "/item";
 
 		Properties post = read_Configuration_Propertites.loadproperty("Configuration");
 		MethodologyItem_Pojo mi = new MethodologyItem_Pojo();
@@ -611,7 +612,7 @@ public class Restassured_Automation_MethodologItem {
 		Response postMethodologyItem = MethodologyItem.post_URLPOJO(URL, AuthorizationKey, patchId, mi);
 		postMethodologyItem.prettyPrint();
 
-		//Assert.assertEquals(postMethodologyItem.statusCode(), 200);
+		// Assert.assertEquals(postMethodologyItem.statusCode(), 200);
 
 		String methodologyItemId = postMethodologyItem.asString();
 		System.out.println("---->" + methodologyItemId);
@@ -623,13 +624,12 @@ public class Restassured_Automation_MethodologItem {
 		System.out.println("Method id------>" + methodItemId);
 		System.out.println("Revision id------>" + revision);
 		String patchId1 = "/api/methodologyItem/revision/" + revision + "/item/" + methodItemId;
+		Map<String, String> map = new HashMap<String, String>();
+		map.put("title", post.getProperty("putMethodologyItemTitle"));
+		User_Pojo po=new User_Pojo();
+		String data=po.phaseAdd(map);
 
-		mi.setTitle(post.getProperty("putMethodologyItemTitle") + getRandomAlphaNum()+MethodologyItem.getRandomNumber(1, 20));
-		mi.setParentId(post.getProperty("postMethodologyItemParentId"));
-		mi.setIndex(post.getProperty("postMethodologyItemIndex"));
-		mi.setItemType(post.getProperty("postMethodologyItemItemType"));
-
-		Response putMethodologyItem = MethodologyItem.patch_URLPOJO(URL, AuthorizationKey, patchId1, mi);
+		Response putMethodologyItem = MethodologyItem.patch_URLPOJO(URL, AuthorizationKey, patchId1, data);
 		putMethodologyItem.prettyPrint();
 		Assert.assertEquals(putMethodologyItem.statusCode(), 204);
 		/**
@@ -652,14 +652,14 @@ public class Restassured_Automation_MethodologItem {
 		Response OrganizationsDetails = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/org");
 		JsonPath jsonPathEvaluator = OrganizationsDetails.jsonPath();
 		listOrdId = jsonPathEvaluator.get("id");
-		//OrganizationsDetails.prettyPrint();
+		// OrganizationsDetails.prettyPrint();
 
 		Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();
 
 		Response getMethodologyRes = getMethodology.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
 				"Organization", listOrdId.get(5));
 
-		//getMethodologyRes.prettyPrint();
+		// getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
 		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator1.get("revisions");
@@ -668,7 +668,7 @@ public class Restassured_Automation_MethodologItem {
 
 		String revId = String.valueOf(listRevisionI1.get(2));
 
-		String patchId = "/api/methodologyItem/revision/" + revId.substring(1,25) + "/item";
+		String patchId = "/api/methodologyItem/revision/" + revId.substring(1, 25) + "/item";
 
 		Properties post = read_Configuration_Propertites.loadproperty("Configuration");
 		MethodologyItem_Pojo mi = new MethodologyItem_Pojo();
@@ -683,7 +683,7 @@ public class Restassured_Automation_MethodologItem {
 		Response postMethodologyItem = MethodologyItem.post_URLPOJO(URL, AuthorizationKey, patchId, mi);
 		postMethodologyItem.prettyPrint();
 
-		//Assert.assertEquals(postMethodologyItem.statusCode(), 200);
+		// Assert.assertEquals(postMethodologyItem.statusCode(), 200);
 
 		String methodologyItemId = postMethodologyItem.asString();
 		System.out.println("---->" + methodologyItemId);
@@ -724,14 +724,14 @@ public class Restassured_Automation_MethodologItem {
 		Response OrganizationsDetails = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/org");
 		JsonPath jsonPathEvaluator = OrganizationsDetails.jsonPath();
 		listOrdId = jsonPathEvaluator.get("id");
-		//OrganizationsDetails.prettyPrint();
+		// OrganizationsDetails.prettyPrint();
 
 		Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();
 
 		Response getMethodologyRes = getMethodology.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
 				"Organization", listOrdId.get(5));
 
-		//getMethodologyRes.prettyPrint();
+		// getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
 		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator1.get("revisions");
@@ -740,7 +740,7 @@ public class Restassured_Automation_MethodologItem {
 
 		String revId = String.valueOf(listRevisionI1.get(2));
 
-		String patchId = "/api/methodologyItem/revision/" + revId.substring(1,25) + "/item";
+		String patchId = "/api/methodologyItem/revision/" + revId.substring(1, 25) + "/item";
 
 		Properties post = read_Configuration_Propertites.loadproperty("Configuration");
 		MethodologyItem_Pojo mi = new MethodologyItem_Pojo();
@@ -755,13 +755,13 @@ public class Restassured_Automation_MethodologItem {
 		Response postMethodologyItem = MethodologyItem.post_URLPOJO(URL, AuthorizationKey, patchId, mi);
 		postMethodologyItem.prettyPrint();
 
-		//Assert.assertEquals(postMethodologyItem.statusCode(), 200);
+		// Assert.assertEquals(postMethodologyItem.statusCode(), 200);
 
 		String methodologyItemId = postMethodologyItem.asString();
 		System.out.println("---->" + methodologyItemId);
 
-		String patchId1 = "/api/methodologyItem/revisionss/" + revId.substring(1,25) + "/item/"
-				+ methodologyItemId.substring(1,25);
+		String patchId1 = "/api/methodologyItem/revisionss/" + revId.substring(1, 25) + "/item/"
+				+ methodologyItemId.substring(1, 25);
 
 		mi.setTitle(post.getProperty("putMethodologyItemBadTitle"));
 		mi.setParentId(post.getProperty("putMethodologyItemParentId"));
@@ -791,14 +791,14 @@ public class Restassured_Automation_MethodologItem {
 		Response OrganizationsDetails = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/org");
 		JsonPath jsonPathEvaluator = OrganizationsDetails.jsonPath();
 		listOrdId = jsonPathEvaluator.get("id");
-		//OrganizationsDetails.prettyPrint();
+		// OrganizationsDetails.prettyPrint();
 
 		Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();
 
 		Response getMethodologyRes = getMethodology.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
 				"Organization", listOrdId.get(5));
 
-		//getMethodologyRes.prettyPrint();
+		// getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
 		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator1.get("revisions");
@@ -810,7 +810,7 @@ public class Restassured_Automation_MethodologItem {
 		 * Creating an phase
 		 */
 
-		String patchId = "/api/methodologyItem/revision/" + revId.substring(1,25) + "/item";
+		String patchId = "/api/methodologyItem/revision/" + revId.substring(1, 25) + "/item";
 
 		Properties post = read_Configuration_Propertites.loadproperty("Configuration");
 		MethodologyItem_Pojo mi = new MethodologyItem_Pojo();
@@ -826,7 +826,7 @@ public class Restassured_Automation_MethodologItem {
 		Response postMethodologyItem = MethodologyItem.post_URLPOJO(URL, AuthorizationKey, patchId, mi);
 		postMethodologyItem.prettyPrint();
 
-		//Assert.assertEquals(postMethodologyItem.statusCode(), 200);
+		// Assert.assertEquals(postMethodologyItem.statusCode(), 200);
 		JsonPath jsonEvaluator = postMethodologyItem.jsonPath();
 		String revision = jsonEvaluator.get("revisionId");
 		String methodItemId = jsonEvaluator.get("methodologyItemId");
@@ -864,14 +864,14 @@ public class Restassured_Automation_MethodologItem {
 		Response OrganizationsDetails = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/org");
 		JsonPath jsonPathEvaluator = OrganizationsDetails.jsonPath();
 		listOrdId = jsonPathEvaluator.get("id");
-		//OrganizationsDetails.prettyPrint();
+		// OrganizationsDetails.prettyPrint();
 
 		Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();
 
 		Response getMethodologyRes = getMethodology.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
 				"Organization", listOrdId.get(5));
 
-		//getMethodologyRes.prettyPrint();
+		// getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
 		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator1.get("revisions");
@@ -896,10 +896,10 @@ public class Restassured_Automation_MethodologItem {
 		Response postMethodologyItem = MethodologyItem.post_URLPOJO(URL, AuthorizationKey, patchId, mi);
 		postMethodologyItem.prettyPrint();
 
-		//Assert.assertEquals(postMethodologyItem.statusCode(), 200);
+		// Assert.assertEquals(postMethodologyItem.statusCode(), 200);
 
 		String methodologyItemId = postMethodologyItem.asString();
-		
+
 		System.out.println("---->" + methodologyItemId);
 
 		JsonPath jsonEvaluator = postMethodologyItem.jsonPath();
@@ -911,7 +911,6 @@ public class Restassured_Automation_MethodologItem {
 		MethodologyItem_Pojo mi1 = new MethodologyItem_Pojo();
 		mi1.setRuleContextType(post.getProperty("postRuleContextType1"));
 		mi1.setRuleContextSource(post.getProperty("postRuleContextSource"));
-		
 
 		Response putMethodologyItem = MethodologyItem.post_URLPOJO(URL, AuthorizationKey, patchId1, mi1);
 		putMethodologyItem.prettyPrint();
@@ -936,14 +935,14 @@ public class Restassured_Automation_MethodologItem {
 		Response OrganizationsDetails = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/org");
 		JsonPath jsonPathEvaluator = OrganizationsDetails.jsonPath();
 		listOrdId = jsonPathEvaluator.get("id");
-		//OrganizationsDetails.prettyPrint();
+		// OrganizationsDetails.prettyPrint();
 
 		Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();
 
 		Response getMethodologyRes = getMethodology.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
 				"Organization", listOrdId.get(5));
 
-		//getMethodologyRes.prettyPrint();
+		// getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
 		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator1.get("revisions");
@@ -967,7 +966,7 @@ public class Restassured_Automation_MethodologItem {
 		Response postMethodologyItem = MethodologyItem.post_URLPOJO(URL, AuthorizationKey, patchId, mi);
 		postMethodologyItem.prettyPrint();
 
-		//Assert.assertEquals(postMethodologyItem.statusCode(), 200);
+		// Assert.assertEquals(postMethodologyItem.statusCode(), 200);
 
 		String methodologyItemId = postMethodologyItem.asString();
 		System.out.println("---->" + methodologyItemId);
@@ -1003,14 +1002,14 @@ public class Restassured_Automation_MethodologItem {
 		Response OrganizationsDetails = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/org");
 		JsonPath jsonPathEvaluator = OrganizationsDetails.jsonPath();
 		listOrdId = jsonPathEvaluator.get("id");
-		//OrganizationsDetails.prettyPrint();
+		// OrganizationsDetails.prettyPrint();
 
 		Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();
 
 		Response getMethodologyRes = getMethodology.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
 				"Organization", listOrdId.get(5));
 
-		//getMethodologyRes.prettyPrint();
+		// getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
 		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator1.get("revisions");
@@ -1034,7 +1033,7 @@ public class Restassured_Automation_MethodologItem {
 		Response postMethodologyItem = MethodologyItem.post_URLPOJO(URL, AuthorizationKey, patchId, mi);
 		postMethodologyItem.prettyPrint();
 
-		//Assert.assertEquals(postMethodologyItem.statusCode(), 200);
+		// Assert.assertEquals(postMethodologyItem.statusCode(), 200);
 
 		String methodologyItemId = postMethodologyItem.asString();
 		System.out.println("---->" + methodologyItemId);
@@ -1067,14 +1066,14 @@ public class Restassured_Automation_MethodologItem {
 		Response OrganizationsDetails = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/org");
 		JsonPath jsonPathEvaluator = OrganizationsDetails.jsonPath();
 		listOrdId = jsonPathEvaluator.get("id");
-		//OrganizationsDetails.prettyPrint();
+		// OrganizationsDetails.prettyPrint();
 
 		Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();
 
 		Response getMethodologyRes = getMethodology.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
 				"Organization", listOrdId.get(5));
 
-		//getMethodologyRes.prettyPrint();
+		// getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
 		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator1.get("revisions");
@@ -1098,7 +1097,7 @@ public class Restassured_Automation_MethodologItem {
 		Response postMethodologyItem = MethodologyItem.post_URLPOJO(URL, AuthorizationKey, patchId, mi);
 		postMethodologyItem.prettyPrint();
 
-		//Assert.assertEquals(postMethodologyItem.statusCode(), 200);
+		// Assert.assertEquals(postMethodologyItem.statusCode(), 200);
 
 		String methodologyItemId = postMethodologyItem.asString();
 		System.out.println("---->" + methodologyItemId);
@@ -1131,7 +1130,7 @@ public class Restassured_Automation_MethodologItem {
 		Response OrganizationsDetails = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/org");
 		JsonPath jsonPathEvaluator = OrganizationsDetails.jsonPath();
 		listOrdId = jsonPathEvaluator.get("id");
-		//OrganizationsDetails.prettyPrint();
+		// OrganizationsDetails.prettyPrint();
 
 		/**
 		 * GETTING THE REVISION ID
@@ -1148,13 +1147,13 @@ public class Restassured_Automation_MethodologItem {
 
 		String revId = String.valueOf(listRevisionI1.get(2));
 
-		String patchId = "/api/methodologyItem/revision/" + revId.substring(1,25);
+		String patchId = "/api/methodologyItem/revision/" + revId.substring(1, 25);
 
 		Restassured_Automation_Utils getEngagementType = new Restassured_Automation_Utils();
 
 		Response getEngagementTypeRes = getEngagementType.get_URL_Without_Params(URL, AuthorizationKey, patchId);
 		getEngagementTypeRes.prettyPrint();
-		//Assert.assertEquals(getEngagementTypeRes.statusCode(), 200);
+		// Assert.assertEquals(getEngagementTypeRes.statusCode(), 200);
 		JsonPath workFlowJson = getEngagementTypeRes.jsonPath();
 		// workFlow=workFlowJson.get("workFlowState");
 		methodlogyItemId = workFlowJson.get("methodologyItemId");
@@ -1162,8 +1161,8 @@ public class Restassured_Automation_MethodologItem {
 		Properties post = read_Configuration_Propertites.loadproperty("Configuration");
 		String workFlowParam = post.getProperty("postWorkFlowState");
 
-		String postId = "/api/methodologyItem/revision/" + revId.substring(1,25) + "/workProgram/"
-				+ methodItemId + "/workFlow/" + workFlowParam;
+		String postId = "/api/methodologyItem/revision/" + revId.substring(1, 25) + "/workProgram/" + methodItemId
+				+ "/workFlow/" + workFlowParam;
 
 		Response postWorkFlowRes = getEngagementType.post_URL_WithoutBody(URL, AuthorizationKey, postId);
 		postWorkFlowRes.prettyPrint();
@@ -1186,7 +1185,7 @@ public class Restassured_Automation_MethodologItem {
 		Response OrganizationsDetails = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/org");
 		JsonPath jsonPathEvaluator = OrganizationsDetails.jsonPath();
 		listOrdId = jsonPathEvaluator.get("id");
-		//OrganizationsDetails.prettyPrint();
+		// OrganizationsDetails.prettyPrint();
 
 		/**
 		 * GETTING THE REVISION ID
@@ -1194,7 +1193,7 @@ public class Restassured_Automation_MethodologItem {
 
 		Response getMethodologyRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
 				"Organization", listOrdId.get(5));
-		//getMethodologyRes.prettyPrint();
+		// getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
 		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator1.get("revisions");
@@ -1203,13 +1202,13 @@ public class Restassured_Automation_MethodologItem {
 
 		String revId = String.valueOf(listRevisionI1.get(2));
 
-		String patchId = "/api/methodologyItem/revision/" + revId.substring(1,25);
+		String patchId = "/api/methodologyItem/revision/" + revId.substring(1, 25);
 
 		Restassured_Automation_Utils getEngagementType = new Restassured_Automation_Utils();
 
 		Response getEngagementTypeRes = getEngagementType.get_URL_Without_Params(URL, AuthorizationKey, patchId);
 		getEngagementTypeRes.prettyPrint();
-		//Assert.assertEquals(getEngagementTypeRes.statusCode(), 200);
+		// Assert.assertEquals(getEngagementTypeRes.statusCode(), 200);
 		JsonPath workFlowJson = getEngagementTypeRes.jsonPath();
 		// workFlow=workFlowJson.get("workFlowState");
 		methodlogyItemId = workFlowJson.get("methodologyItemId");
@@ -1217,8 +1216,8 @@ public class Restassured_Automation_MethodologItem {
 		Properties post = read_Configuration_Propertites.loadproperty("Configuration");
 		String workFlowParam = post.getProperty("postWorkFlowState1");
 
-		String postId = "/api/methodologyItem/revision/" + revId.substring(1,25) + "/workProgram/"
-				+ methodItemId + "/workFlow/" + workFlowParam;
+		String postId = "/api/methodologyItem/revision/" + revId.substring(1, 25) + "/workProgram/" + methodItemId
+				+ "/workFlow/" + workFlowParam;
 
 		Response postWorkFlowRes = getEngagementType.post_URL_WithoutBody(URL, AuthorizationKey, postId);
 		postWorkFlowRes.prettyPrint();
@@ -1241,7 +1240,7 @@ public class Restassured_Automation_MethodologItem {
 		Response OrganizationsDetails = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/org");
 		JsonPath jsonPathEvaluator = OrganizationsDetails.jsonPath();
 		listOrdId = jsonPathEvaluator.get("id");
-		//OrganizationsDetails.prettyPrint();
+		// OrganizationsDetails.prettyPrint();
 
 		/**
 		 * GETTING THE REVISION ID
@@ -1249,7 +1248,7 @@ public class Restassured_Automation_MethodologItem {
 
 		Response getMethodologyRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
 				"Organization", listOrdId.get(5));
-		//getMethodologyRes.prettyPrint();
+		// getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
 		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator1.get("revisions");
@@ -1258,13 +1257,13 @@ public class Restassured_Automation_MethodologItem {
 
 		String revId = String.valueOf(listRevisionI1.get(2));
 
-		String patchId = "/api/methodologyItem/revision/" + revId.substring(1,25);
+		String patchId = "/api/methodologyItem/revision/" + revId.substring(1, 25);
 
 		Restassured_Automation_Utils getEngagementType = new Restassured_Automation_Utils();
 
 		Response getEngagementTypeRes = getEngagementType.get_URL_Without_Params(URL, AuthorizationKey, patchId);
 		getEngagementTypeRes.prettyPrint();
-		//Assert.assertEquals(getEngagementTypeRes.statusCode(), 200);
+		// Assert.assertEquals(getEngagementTypeRes.statusCode(), 200);
 		JsonPath workFlowJson = getEngagementTypeRes.jsonPath();
 		// workFlow=workFlowJson.get("workFlowState");
 		methodlogyItemId = workFlowJson.get("methodologyItemId");
@@ -1272,8 +1271,8 @@ public class Restassured_Automation_MethodologItem {
 		Properties post = read_Configuration_Propertites.loadproperty("Configuration");
 		String workFlowParam = post.getProperty("postWorkFlowState1");
 
-		String postId = "/api/methodologyItem/revision/" + revId.substring(1,25) + "/item/"
-				+ methodItemId + "/workFlow/" + workFlowParam;
+		String postId = "/api/methodologyItem/revision/" + revId.substring(1, 25) + "/item/" + methodItemId
+				+ "/workFlow/" + workFlowParam;
 
 		Response postWorkFlowRes = getEngagementType.post_URL_WithoutBody(URL, AuthorizationKey, postId);
 		postWorkFlowRes.prettyPrint();
@@ -1323,7 +1322,7 @@ public class Restassured_Automation_MethodologItem {
 		Response getEngagementTypeRes = getEngagementType.get_URL_Without_Params(URL, AuthorizationKey, patchId);
 		// getEngagementTypeRes.prettyPrint();
 
-		//Assert.assertEquals(getEngagementTypeRes.statusCode(), 200);
+		// Assert.assertEquals(getEngagementTypeRes.statusCode(), 200);
 
 		/**
 		 * PERFORMING THE POST OPERATION
@@ -1347,7 +1346,7 @@ public class Restassured_Automation_MethodologItem {
 		JsonPath jsonEvaluator = postMethodologyItem.jsonPath();
 		String revision = jsonEvaluator.get("revisionId");
 		String methodItemId = jsonEvaluator.get("methodologyItemId");
-		//Assert.assertEquals(postMethodologyItem.statusCode(), 200);
+		// Assert.assertEquals(postMethodologyItem.statusCode(), 200);
 
 		/**
 		 * PERFORMING THE PUT OPERATION
@@ -1366,7 +1365,7 @@ public class Restassured_Automation_MethodologItem {
 		Response putMethodologyItem = MethodologyItem.patch_URLPOJO(URL, AuthorizationKey, patchId2, mi);
 		putMethodologyItem.prettyPrint();
 
-		//Assert.assertEquals(putMethodologyItem.statusCode(), 204);
+		// Assert.assertEquals(putMethodologyItem.statusCode(), 204);
 
 		JsonPath jsonEvaluator1 = putMethodologyItem.jsonPath();
 		String revision1 = jsonEvaluator.get("revisionId");
@@ -1384,9 +1383,9 @@ public class Restassured_Automation_MethodologItem {
 		/**
 		 * Extent report generation
 		 */
-		ExtentTestManager.statusLogMessage(putMethodologyItem.statusCode());
-		ExtentTestManager.getTest().log(Status.INFO, putMethodologyItem.asString());
-		MethodologyItem.validate_HTTPStrictTransportSecurity(putMethodologyItem);
+		ExtentTestManager.statusLogMessage(deleteMethodologyItem.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO, deleteMethodologyItem.asString());
+		MethodologyItem.validate_HTTPStrictTransportSecurity(deleteMethodologyItem);
 
 	}
 

@@ -215,7 +215,7 @@ public class Restassured_Automation_Organizations {
 		Restassured_Automation_Utils Organization = new Restassured_Automation_Utils();
 
 		String orgId = post.getProperty("patchOrganisationId");
-		String patchId = "/api/org/" + listOrgId.get(8);
+		String patchId = "/api/org/" + listOrgId.get(7);
 
 		Organization_Pojo or = new Organization_Pojo();
 		or.setMemberFirmId(post.getProperty("postOrgMemberFirmId"));
@@ -244,16 +244,23 @@ public class Restassured_Automation_Organizations {
 		OrganizationsDetails.prettyPrint();
 		JsonPath jsonEvaluavator=OrganizationsDetails.jsonPath();
 		listOrgId=jsonEvaluavator.get("id");
-		String OrganisationId=listOrgId.get(5);
+		String OrganisationId=listOrgId.get(7);
 		System.out.println("Organisation Id----->"+OrganisationId);
+
+		Response getMethodologyRes = OrganizationsGet.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
+				"Organization", "600f549bcc7ffedb2877b691");
+		getMethodologyRes.prettyPrint();
+		JsonPath orgJson=getMethodologyRes.jsonPath();
+		listMethodologyId=orgJson.get("id");
 		
+		String methodologyId=listMethodologyId.get(0);
 		
 		/*String URI="/api/methodology/store"; 
 		Response methodologyStore=OrganizationsGet.get_URL_Without_Params(URL,AuthorizationKey,URI);
 		methodologyStore.prettyPrint();
 		JsonPath methodologyJson=methodologyStore.jsonPath();
 		listMethodologyId=methodologyJson.get("id");*/
-		String methodologyId="607f111053141b72a87b2c82";
+		
 		System.out.println("MethodologyId------>"+methodologyId);
 		/**
 		 * performing post operation
@@ -292,17 +299,16 @@ public class Restassured_Automation_Organizations {
 		OrganizationsDetails.prettyPrint();
 		JsonPath jsonEvaluavator=OrganizationsDetails.jsonPath();
 		listOrgId=jsonEvaluavator.get("id");
-		String OrganisationId=listOrgId.get(5);
+		String OrganisationId=listOrgId.get(7);
 		System.out.println("Organisation Id----->"+OrganisationId);
+
+		Response getMethodologyRes = OrganizationsGet.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
+				"Organization", "600f549bcc7ffedb2877b691");
+		getMethodologyRes.prettyPrint();
+		JsonPath orgJson=getMethodologyRes.jsonPath();
+		listMethodologyId=orgJson.get("id");
 		
-		/*
-		String URI="/api/methodology/store"; 
-		Response methodologyStore=OrganizationsGet.get_URL_Without_Params(URL,AuthorizationKey,URI);
-		methodologyStore.prettyPrint();
-		JsonPath methodologyJson=methodologyStore.jsonPath();
-		listMethodologyId=methodologyJson.get("id");*/
-		
-		String methodologyId="607f111053141b72a87b2c82";
+		String methodologyId=listMethodologyId.get(0);
 		System.out.println("MethodologyId------>"+methodologyId);
 		/**
 		 * Performing the deletion
@@ -384,6 +390,7 @@ public class Restassured_Automation_Organizations {
 		ExtentTestManager.statusLogMessage(getOrgId.statusCode());
 		ExtentTestManager.getTest().log(Status.INFO, getOrgId.asString());
 		OrganizationsGet.validate_HTTPStrictTransportSecurity(getOrgId);
+
 
 	}
 

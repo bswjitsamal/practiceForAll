@@ -80,7 +80,7 @@ public class Restassured_Automation_OrgRoles {
 		 * Get the resourceId
 		 */
 		Response getResourceId = OrganizationsGet.get_URL_QueryParams(URL, AuthorizationKey, "/api/org/users",
-				"Organization", listOrgId.get(5));
+				"Organization", listOrgId.get(7));
 		getResourceId.prettyPrint();
 
 		JsonPath jsonPathEvaluator2 = getResourceId.jsonPath();
@@ -257,7 +257,7 @@ public class Restassured_Automation_OrgRoles {
 		JsonPath jsonPathEvaluator = getOrgId.jsonPath();
 		listOrgId = jsonPathEvaluator.get("id");
 
-		String patchId = "/api/org/" + listOrgId.get(5) + "/roles/assignments";
+		String patchId = "/api/org/" + listOrgId.get(7) + "/roles/assignments";
 		Response rolesInfoRes = OrganizationsGet.get_URL_Without_Params(URL, AuthorizationKey, patchId);
 		rolesInfoRes.prettyPrint();
 		Assert.assertEquals(rolesInfoRes.getStatusCode(), 200);
@@ -283,7 +283,7 @@ public class Restassured_Automation_OrgRoles {
 		JsonPath jsonPathEvaluator = getOrgId.jsonPath();
 		listOrgId = jsonPathEvaluator.get("id");
 
-		String patchId = "/api/org/" + listOrgId.get(4) + "/roles/assignments";
+		String patchId = "/api/org/" + listOrgId.get(7) + "/roles/assignments";
 		Response rolesInfoRes = OrganizationsGet.get_URL_Without_Params(URL, AuthorizationKey, patchId);
 		rolesInfoRes.prettyPrint();
 		Assert.assertEquals(rolesInfoRes.getStatusCode(), 200);
@@ -327,7 +327,7 @@ public class Restassured_Automation_OrgRoles {
 		JsonPath jsonPathEvaluator = getOrgId.jsonPath();
 		listOrgId = jsonPathEvaluator.get("id");
 
-		String patchId = "/api/org/" + listOrgId.get(4) + "/roles/assignments";
+		String patchId = "/api/org/" + listOrgId.get(7) + "/roles/assignments";
 		Response rolesInfoRes = OrganizationsGet.get_URL_Without_Params(URL, AuthorizationKey, patchId);
 		rolesInfoRes.prettyPrint();
 		Assert.assertEquals(rolesInfoRes.getStatusCode(), 200);
@@ -870,6 +870,7 @@ public class Restassured_Automation_OrgRoles {
 		ExtentTestManager.statusLogMessage(patchPermissionId.statusCode());
 		ExtentTestManager.getTest().log(Status.INFO, patchPermissionId.asString());
 		getMethodologyById.validate_HTTPStrictTransportSecurity(patchPermissionId);
+
 
 	}
 
