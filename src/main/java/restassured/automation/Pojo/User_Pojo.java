@@ -280,7 +280,8 @@ public class User_Pojo {
 
 		Methodology_Pojo upDateId = new Methodology_Pojo();
 
-		upDateId.setInheritFrom(data.get("inheritFrom"));
+		//upDateId.setInheritFrom(data.get("inheritFrom"));
+		upDateId.setStoreEngagementType(data.get("storeEngagementType"));
 		upDateId.setOrganization(data.get("organization"));
 
 		Gson Josnbody = new Gson();

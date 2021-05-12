@@ -78,7 +78,7 @@ public class Restassured_Automation_EngagementType {
 		 */
 
 		Response getEngagementTypeRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/engagementType",
-				"Organization", listOrdId.get(5));
+				"Organization", listOrdId.get(8));
 		getEngagementTypeRes.prettyPrint();
 		
 		Assert.assertEquals(getEngagementTypeRes.statusCode(), 200);
@@ -193,7 +193,7 @@ public class Restassured_Automation_EngagementType {
 		 */
 
 		Response getEngagementTypeRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/engagementType",
-				"Organization", listOrdId.get(5));
+				"Organization", listOrdId.get(8));
 		 getEngagementTypeRes.prettyPrint();
 
 		JsonPath jsonEvaluator1 = getEngagementTypeRes.jsonPath();
@@ -242,7 +242,7 @@ public class Restassured_Automation_EngagementType {
 		 */
 
 		Response getEngagementTypeRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/engagementType",
-				"Organization", listOrdId.get(5));
+				"Organization", listOrdId.get(8));
 		// getEngagementTypeRes.prettyPrint();
 
 		JsonPath jsonEvaluator1 = getEngagementTypeRes.jsonPath();
@@ -283,7 +283,7 @@ public class Restassured_Automation_EngagementType {
 		Response OrganizationsDetails = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/org");
 		JsonPath jsonPathEvaluator = OrganizationsDetails.jsonPath();
 		listOrdId = jsonPathEvaluator.get("id");
-		String orgId=listOrdId.get(5);
+		String orgId=listOrdId.get(8);
 		
 		OrganizationsDetails.prettyPrint();
 
@@ -292,7 +292,7 @@ public class Restassured_Automation_EngagementType {
 		 */
 
 		Response getEngagementTypeRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/engagementType",
-				"Organization", listOrdId.get(5));
+				"Organization", listOrdId.get(8));
 		getEngagementTypeRes.prettyPrint();
 
 		JsonPath jsonEvaluator1 = getEngagementTypeRes.jsonPath();
@@ -345,7 +345,7 @@ public class Restassured_Automation_EngagementType {
 		Engagement_Type_Pojo en = new Engagement_Type_Pojo();
 		en.setTitle(post.getProperty("postEngagementTypeTitle") + getRandomAlphaNum()
 				+ engagementType.getRandomNumber(1, 20));
-		en.setOrganization(listOrdId.get(5));
+		en.setOrganization(listOrdId.get(8));
 
 		Response postEngagementType = engagementType.post_URLPOJO(URL, AuthorizationKey, "/api/engagementType", en);
 		postEngagementType.prettyPrint();
@@ -401,7 +401,7 @@ public class Restassured_Automation_EngagementType {
 		 */
 
 		Response getEngagementTypeRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/engagementType",
-				"Organization", listOrdId.get(5));
+				"Organization", listOrdId.get(8));
 		getEngagementTypeRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator1 = getEngagementTypeRes.jsonPath();
@@ -460,7 +460,7 @@ public class Restassured_Automation_EngagementType {
 		 */
 
 		Response getEngagementTypeRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/engagementType",
-				"Organization", listOrdId.get(5));
+				"Organization", listOrdId.get(8));
 		getEngagementTypeRes.prettyPrint();
 		Assert.assertEquals(getEngagementTypeRes.statusCode(), 200);
 
@@ -532,7 +532,7 @@ public class Restassured_Automation_EngagementType {
 		 */
 
 		Response getEngagementTypeRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/engagementType",
-				"Organization", listOrdId.get(5));
+				"Organization", listOrdId.get(8));
 		getEngagementTypeRes.prettyPrint();
 		
 		// Retrieving the inheritedFrom 
@@ -585,7 +585,7 @@ public class Restassured_Automation_EngagementType {
 		 */
 
 		Response getEngagementTypeRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/engagementType",
-				"Organization", listOrdId.get(5));
+				"Organization", listOrdId.get(8));
 		getEngagementTypeRes.prettyPrint();
 		
 		// Retrieving the inheritedFrom 
@@ -597,7 +597,7 @@ public class Restassured_Automation_EngagementType {
 		
 		HashMap<String, String> map = new HashMap<String, String>();
 		map.put("storeEngagementType", inheritedFrom.get(5).substring(1,6));
-		map.put("organization", listOrdId.get(5).substring(1,6));
+		map.put("organization", listOrdId.get(8).substring(1,6));
 		
 		User_Pojo po = new User_Pojo();
 		String userOobj = po.engagementTypeInherit(map);

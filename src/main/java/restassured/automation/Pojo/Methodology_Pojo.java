@@ -15,8 +15,15 @@ public class Methodology_Pojo {
 	private String[] itemIds;
 	private String hotFixMajorVersion;
 	private String inheritFrom;
+	private String storeEngagementType;
 	
 	
+	public String getStoreEngagementType() {
+		return storeEngagementType;
+	}
+	public void setStoreEngagementType(String storeEngagementType) {
+		this.storeEngagementType = storeEngagementType;
+	}
 	public String getInheritFrom() {
 		return inheritFrom;
 	}

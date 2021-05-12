@@ -1,14 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="restassured.automation.listeners.TestListeners"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <groups>
+      <run>
+        <include name="IntegrationTests"/>
+        <include name="EndToEnd"/>
+      </run>
+    </groups>
     <classes>
+      <class name="restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles">
+        <methods>
+          <include name="setup"/>
+          <include name="patchUpdateAnEngagementRoleForAMethodology_status409"/>
+          <include name="patchUpdateAnEngagementRoleForAnOrganization_status409"/>
+        </methods>
+      </class> <!-- restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles -->
+      <class name="restassured.automation.testcases.Restassured_Automation_ProcedureGroups">
+        <methods>
+          <include name="getCreateAProcedureGroup_status200"/>
+          <include name="postCreateAProcedureGroup_status409"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- restassured.automation.testcases.Restassured_Automation_ProcedureGroups -->
       <class name="restassured.automation.testcases.Restassured_Automation_Publish">
         <methods>
-          <include name="postValidate_status200"/>
+          <include name="postPublishInherit_status200"/>
           <include name="setup"/>
         </methods>
       </class> <!-- restassured.automation.testcases.Restassured_Automation_Publish -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

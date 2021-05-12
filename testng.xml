@@ -3,7 +3,8 @@
 
 <suite name="Suite">
 	<listeners>
-		<listener class-name="restassured.automation.listeners.TestListeners" />
+		<listener
+			class-name="restassured.automation.listeners.TestListeners" />
 	</listeners>
 	<test name="Test">
 
@@ -15,15 +16,16 @@
 			</run>
 		</groups>
 		<classes>
-			
-			<class
-				name="restassured.automation.ETTestcases.Restassured_Automation_ETEngagement" />
-			<class
-				name="restassured.automation.ETTestcases.Restassured_Automation_ETEngagementTeam" />
-				<class
-				name="restassured.automation.ETTestcases.Restassured_Automation_ETPortalRoles" />
-			
 
+	
+			<class
+				name="restassured.automation.testcases.Restassured_Automation_Publish" />
+				<class
+				name="restassured.automation.testcases.Restassured_Automation_ProcedureGroups" />
+				<class
+				name="restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles" />
+
+		
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

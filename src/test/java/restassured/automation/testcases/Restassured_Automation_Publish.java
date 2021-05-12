@@ -107,7 +107,7 @@ public class Restassured_Automation_Publish extends read_Configuration_Propertit
 		Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();
 
 		Response getMethodologyRes = getMethodology.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(5));
+				"Organization", listOrdId.get(7));
 		getMethodologyRes.prettyPrint();
 		
 		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
@@ -118,7 +118,7 @@ public class Restassured_Automation_Publish extends read_Configuration_Propertit
 		
 		//Fetching the updatedId
 		//List<String> listRevisionI1 = jsonPathEvaluator1.get("find{it.title== 'createMethodologyAPI'}.revisions[0].updatedIds");
-		List<String> listRevisionI1 = jsonPathEvaluator1.get("find{it.title== 'createMethodologyAPI'}.revisions");
+		List<String> listRevisionI1 = jsonPathEvaluator1.get("find{it.title== 'API CreateMethodology'}.revisions");
 		System.out.println(listRevisionI1);
 		
 		
@@ -174,7 +174,7 @@ public class Restassured_Automation_Publish extends read_Configuration_Propertit
 		Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();
 
 		Response getMethodologyRes = getMethodology.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(5));
+				"Organization", listOrdId.get(7));
 		getMethodologyRes.prettyPrint();
 		
 		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
@@ -187,7 +187,7 @@ public class Restassured_Automation_Publish extends read_Configuration_Propertit
 		/*List<String> listRevisionI1 = jsonPathEvaluator1.get("find{it.title== 'createMethodologyAPI'}.revisions[1].updatedIds");
 		System.out.println(listRevisionI1.get(0));*/
 		
-		List<String> listRevisionI1 = jsonPathEvaluator1.get("find{it.title== 'createMethodologyAPI'}.revisions");
+		List<String> listRevisionI1 = jsonPathEvaluator1.get("find{it.title== 'API CreateMethodology'}.revisions");
 		System.out.println(listRevisionI1);
 		
 		
@@ -240,7 +240,7 @@ public class Restassured_Automation_Publish extends read_Configuration_Propertit
 		 */
 
 		Response getEngagementTypeRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/engagementType",
-				"Organization", listOrdId.get(5));
+				"Organization", listOrdId.get(7));
 		getEngagementTypeRes.prettyPrint();
 		
 		// Retrieving the inheritedFrom 
@@ -251,8 +251,8 @@ public class Restassured_Automation_Publish extends read_Configuration_Propertit
 		System.out.println(inheritedFrom);
 		
 		HashMap<String, String> map = new HashMap<String, String>();
-		map.put("inheritFrom", inheritedFrom.get(5));
-		map.put("organization", listOrdId.get(5));
+		map.put("storeEngagementType", inheritedFrom.get(1));
+		map.put("organization", listOrdId.get(7));
 		
 		User_Pojo po = new User_Pojo();
 		String userOobj = po.publishInherit(map);
