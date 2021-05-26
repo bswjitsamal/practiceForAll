@@ -16,10 +16,11 @@
 			</run>
 		</groups>
 		<classes>
+ 
 
-	
-			<class
-				name="restassured.automation.testcases.Restassured_Automation_EngagementType" />
+            <class
+                name="restassured.automation.testcases.Restassured_Automation_ProcedureGroups" />
+
 				
 		
 		</classes>
