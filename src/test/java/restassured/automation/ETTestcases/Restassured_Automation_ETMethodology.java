@@ -66,7 +66,7 @@ public class Restassured_Automation_ETMethodology {
 		allEnagementRes.prettyPrint();
 		JsonPath allEngagmentJson = allEnagementRes.jsonPath();
 		engagementId = allEngagmentJson.get("id");
-		String id = engagementId.get(1);
+		String id = engagementId.get(0);
 		
 		String myPermissionURI = "/api/" + post.getProperty("memberFirmSlug") + "/methodologies/"+id+"/translations/base";
 		Response myPermissionResponse = rolesUtils.get_URL_Without_Params(URL, AuthorizationKey, myPermissionURI);
@@ -88,7 +88,7 @@ public class Restassured_Automation_ETMethodology {
 		allEnagementRes.prettyPrint();
 		JsonPath allEngagmentJson = allEnagementRes.jsonPath();
 		engagementId = allEngagmentJson.get("id");
-		String id = engagementId.get(1);
+		String id = engagementId.get(0);
 		
 		String myPermissionURI = "/api/" + post.getProperty("memberFirmSlug") + "/methodologies/"+id+"/methodology";
 		Response myPermissionResponse = rolesUtils.get_URL_Without_Params(URL, AuthorizationKey, myPermissionURI);

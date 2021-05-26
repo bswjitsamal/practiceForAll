@@ -88,7 +88,7 @@ public class Restassured_Automation_Publish extends read_Configuration_Propertit
 	
 	
 	@Test(groups = { "IntegrationTests" })
-	public void postValidate_status200() throws IOException {
+	public void Publish_PostValidate_status200() throws IOException {
 		
 		
 		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
@@ -155,7 +155,7 @@ public class Restassured_Automation_Publish extends read_Configuration_Propertit
 	}
 
 	@Test(groups = { "IntegrationTests" })
-	public void postPublish_status200() throws IOException {
+	public void Publish_PostPublish_status200() throws IOException {
 		
 		
 		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
@@ -224,7 +224,7 @@ public class Restassured_Automation_Publish extends read_Configuration_Propertit
 	}
 	
 	@Test(groups = "IntegrationTests")
-	public void postPublishInherit_status200() {
+	public void Publish_PostPublishInherit_status200() {
 
 		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
 

@@ -103,6 +103,7 @@ public class Restassured_Automation_OrgRoles {
 		ExtentTestManager.statusLogMessage(getPermission.statusCode());
 		ExtentTestManager.getTest().log(Status.INFO, getPermission.asString());
 		OrganizationsGet.validate_HTTPStrictTransportSecurity(getPermission);
+		
 
 	}
 

@@ -50,5 +50,20 @@ public class ETUser_Pojo {
 		Gson jsonBody=new Gson();
 		return jsonBody.toJson(po);
 	}
+	public String createResponses(Map<String,String>data){
+		ET_Responses_Pojo po=new ET_Responses_Pojo();
+		po.setWorkProgram(data.get("workProgram"));
+		Gson jsonBody=new Gson();
+		return jsonBody.toJson(po);
+	}
+	public String createEngagement(Map<String,String>data){
+		ET_Engagement_Pojo pojo=new ET_Engagement_Pojo();
+		pojo.setTitle(data.get("title"));
+		pojo.setClient(data.get("client"));
+		pojo.setAccessManager(new String[] {data.get("accessManagers")});
+		pojo.setMethodologyId(data.get("methodology"));
+		Gson jsonBody=new Gson();
+		return jsonBody.toJson(pojo);
+		}
 	
 }

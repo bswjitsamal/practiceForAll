@@ -113,6 +113,22 @@ public class Restassured_Automation_ETRolesUser {
 		ExtentTestManager.statusLogMessage(myPermissionResponse.statusCode());
 		ExtentTestManager.getTest().log(Status.INFO,myPermissionResponse.asString());
 	}
+	@Test(groups = "IntegrationTests")
+	public void PortalRoles_GetUserWithRoles_Status400() throws IOException {
+
+		Restassured_Automation_Utils rolesUtils = new Restassured_Automation_Utils();
+
+		post = read_Configuration_Propertites.loadproperty("Configuration");
+		String myPermissionURI = "/api/" + post.getProperty("badmemberFirmSlug") + "/roles/users/withRoles";
+		Response myPermissionResponse = rolesUtils.get_URL_Without_Params(URL, AuthorizationKey, myPermissionURI);
+		myPermissionResponse.prettyPrint();
+		Assert.assertEquals(myPermissionResponse.getStatusCode(), 400);
+		/** 
+		 * Extent Report Generation
+		 */
+		ExtentTestManager.statusLogMessage(myPermissionResponse.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,myPermissionResponse.asString());
+	}
 	
 	
 }

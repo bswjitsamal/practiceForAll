@@ -12,7 +12,24 @@
       </run>
     </groups>
     <classes>
-      <class name="restassured.automation.testcases.Restassured_Automation_EngagementType"/>
+      <class name="restassured.automation.testcases.Restassured_Automation_MethodologyItemRelations"/>
     </classes>
   </test> <!-- Test -->
+  <test name="Test(failed)">
+    <groups>
+      <run>
+        <include name="IntegrationTests"/>
+        <include name="EndToEnd"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="restassured.automation.testcases.Restassured_Automation_MethodologyItemRelations">
+        <methods>
+          <include name="MethodologyItemRelation_ListOfAllMethodologyRelation_status400"/>
+          <include name="MethodologyItemRelation_DeleteAnMethodologyRelation_status400"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- restassured.automation.testcases.Restassured_Automation_MethodologyItemRelations -->
+    </classes>
+  </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

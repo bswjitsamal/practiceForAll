@@ -105,7 +105,7 @@ public class Restassured_Automation_ETEngagementTeam {
 		allEnagementRes.prettyPrint();
 		JsonPath allEngagmentJson = allEnagementRes.jsonPath();
 		engagementId = allEngagmentJson.get("id");
-		String id = engagementId.get(1);
+		String id = engagementId.get(0);
 		String user = "9a7faa38-92eb-4934-a48f-ed43478d5f86";
 		String accessUri = "/api/" + post.getProperty("memberFirmSlug") + "/engagements/" + id + "/team/accessManager";
 		HashMap<String, String> map = new HashMap<String, String>();

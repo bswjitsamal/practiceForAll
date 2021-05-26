@@ -4,6 +4,7 @@ import static java.util.concurrent.TimeUnit.MILLISECONDS;
 import static java.util.concurrent.TimeUnit.SECONDS;
 
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
@@ -62,10 +63,11 @@ public class Restassured_Automation_ETResponses {
 		allEnagementRes.prettyPrint();
 		JsonPath allEngagmentJson = allEnagementRes.jsonPath();
 		engagementId = allEngagmentJson.get("id");
-		String id = engagementId.get(1);
+		String id = engagementId.get(0);
 		String accessUri = "/api/" + post.getProperty("memberFirmSlug") + "/responses/" + id;
-		String procedure="609269f737139c81e05304ee";
-		String response="609269f937139c81e05304f1";
+		String procedure="60a63659aa642c3ea70c70f4";
+		String response="60a6365eaa642c3ea70c70f6";
+		String row="1";
 		/*Map<String,String>map=new HashedMap<String,String>();
 		map.put("procedure",procedure);
 		map.put("response",responses);
@@ -74,6 +76,7 @@ public class Restassured_Automation_ETResponses {
 		ET_Responses_Pojo po=new ET_Responses_Pojo();
 		po.setProcedure(procedure);
 		po.setResponse(response);
+		po.setRow(row);
 		Response res=rolesUtils.put_URLPOJO(URL, AuthorizationKey, accessUri, po);
 		res.prettyPrint();
 		Assert.assertEquals(res.getStatusCode(),204);
@@ -82,11 +85,61 @@ public class Restassured_Automation_ETResponses {
 		 */
 		ExtentTestManager.statusLogMessage(res.statusCode());
 		ExtentTestManager.getTest().log(Status.INFO,res.asString());
-		
-		
-		
-		
-		
+						
 	}
+	@Test(groups = "IntegrationTests")
+	public void ETResponses_PostAddANewRowToAnItemizedWorkProgram_Status200() throws IOException {
+		Restassured_Automation_Utils rolesUtils = new Restassured_Automation_Utils();
+		post = read_Configuration_Propertites.loadproperty("Configuration");
+		String getAllEngagementURI = "/api/" + post.getProperty("memberFirmSlug") + "/engagements/mine";
+		Response allEnagementRes = rolesUtils.get_URL_QueryParams(URL, AuthorizationKey, getAllEngagementURI, "1",
+				"100");
+		allEnagementRes.prettyPrint();
+		JsonPath allEngagmentJson = allEnagementRes.jsonPath();
+		engagementId = allEngagmentJson.get("id");
+		String id = engagementId.get(0);
+		String accessUri = "/api/" + post.getProperty("memberFirmSlug") + "/responses/" + id+"/row";
+		HashMap<String,String> map=new HashMap<String, String>();
+		map.put("workProgram","60a6362faa642c3ea70c70ec");
+		ETUser_Pojo pojo=new ETUser_Pojo();
+		String po=pojo.createResponses(map);
+		Response res=rolesUtils.post_URLPOJO(URL, AuthorizationKey, accessUri, po);
+		res.prettyPrint();
+		Assert.assertEquals(res.getStatusCode(),200);
+		/** 
+		 * Extent Report Generation
+		 */
+		ExtentTestManager.statusLogMessage(res.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,res.asString());
+						
+	}
+	@Test(groups = "IntegrationTests")
+	public void ETResponses_deleteAddANewRowToAnItemizedWorkProgram_Status200() throws IOException {
+		Restassured_Automation_Utils rolesUtils = new Restassured_Automation_Utils();
+		post = read_Configuration_Propertites.loadproperty("Configuration");
+		String getAllEngagementURI = "/api/" + post.getProperty("memberFirmSlug") + "/engagements/mine";
+		Response allEnagementRes = rolesUtils.get_URL_QueryParams(URL, AuthorizationKey, getAllEngagementURI, "1",
+				"100");
+		allEnagementRes.prettyPrint();
+		JsonPath allEngagmentJson = allEnagementRes.jsonPath();
+		engagementId = allEngagmentJson.get("id");
+		String id = engagementId.get(0);
+		String accessUri = "/api/" + post.getProperty("memberFirmSlug") + "/responses/" + id+"/row";
+		HashMap<String,String>  map=new HashMap<String, String>();
+		map.put("workProgram","60a6362faa642c3ea70c70ec");
+		ETUser_Pojo pojo=new ETUser_Pojo();
+		String po=pojo.createResponses(map);
+		Response res=rolesUtils.delete_URLPOJO(URL, AuthorizationKey, accessUri, po);
+		res.prettyPrint();
+		Assert.assertEquals(res.getStatusCode(),204);
+		/** 
+		 * Extent Report Generation
+		 */
+		ExtentTestManager.statusLogMessage(res.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,res.asString());
+						
+	}
+	
+	
 
 }

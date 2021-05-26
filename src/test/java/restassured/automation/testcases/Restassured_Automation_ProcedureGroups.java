@@ -71,7 +71,7 @@ public class Restassured_Automation_ProcedureGroups extends read_Configuration_P
 
 		
 		@Test(groups = { "IntegrationTests" })
-		public void getCreateAProcedureGroup_status200() throws JsonIOException, JsonSyntaxException, IOException {
+		public void ProcedureGroup_GetCreateAProcedureGroup_status200() throws JsonIOException, JsonSyntaxException, IOException {
 			
 
 			
@@ -360,7 +360,7 @@ public class Restassured_Automation_ProcedureGroups extends read_Configuration_P
 		}
 
 		@Test(groups = { "IntegrationTests" })
-		public void postCreateAProcedureGroup_status200() throws JsonIOException, JsonSyntaxException, IOException {
+		public void ProcedureGroup_PostCreateAProcedureGroup_status200() throws JsonIOException, JsonSyntaxException, IOException {
 			
 			Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
 			// fetching Org Id
@@ -657,7 +657,7 @@ public class Restassured_Automation_ProcedureGroups extends read_Configuration_P
 		
 		
 		@Test(groups = { "IntegrationTests" })
-		public void postCreateAProcedureGroup_status400() throws JsonIOException, JsonSyntaxException, IOException {
+		public void ProcedureGroup_PostCreateAProcedureGroup_status400() throws JsonIOException, JsonSyntaxException, IOException {
 			
 			Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
 			// fetching Org Id
@@ -973,7 +973,7 @@ public class Restassured_Automation_ProcedureGroups extends read_Configuration_P
 		}
 		
 		@Test(groups = { "IntegrationTests" })
-		public void postCreateAProcedureGroup_status409() throws JsonIOException, JsonSyntaxException, IOException {
+		public void ProcedureGroup_PostCreateAProcedureGroup_status409() throws JsonIOException, JsonSyntaxException, IOException {
 			
 			
 			Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
@@ -1273,7 +1273,7 @@ public class Restassured_Automation_ProcedureGroups extends read_Configuration_P
 		}
 		
 		@Test(groups = { "IntegrationTests" })
-		public void putCreateAProcedureGroup_status200() throws JsonIOException, JsonSyntaxException, IOException {
+		public void ProcedureGroup_PutCreateAProcedureGroup_status200() throws JsonIOException, JsonSyntaxException, IOException {
 			
 			Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
 			// fetching Org Id
@@ -1617,7 +1617,7 @@ public class Restassured_Automation_ProcedureGroups extends read_Configuration_P
 
 		
 		@Test(groups = { "IntegrationTests" })
-		public void putCreateAProcedureGroup_status400() throws JsonIOException, JsonSyntaxException, IOException {
+		public void ProcedureGroup_PutCreateAProcedureGroup_status400() throws JsonIOException, JsonSyntaxException, IOException {
 			
 			Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
 			// fetching Org Id
@@ -1963,7 +1963,7 @@ public class Restassured_Automation_ProcedureGroups extends read_Configuration_P
 		
 		
 		@Test(groups = { "IntegrationTests" })
-		public void postCreateAProcedureGroupTree_status204() throws JsonIOException, JsonSyntaxException, IOException { 
+		public void ProcedureGroupTree_PostCreateAProcedureGroupTree_status204() throws JsonIOException, JsonSyntaxException, IOException { 
 			
 			Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
 			// fetching Org Id
@@ -2325,7 +2325,7 @@ public class Restassured_Automation_ProcedureGroups extends read_Configuration_P
 
 		
 		@Test(groups = { "IntegrationTests" })
-		public void postCreateAProcedureGroupTree_status400() throws JsonIOException, JsonSyntaxException, IOException { 
+		public void ProcedureGroupTree_PostCreateAProcedureGroupTree_status400() throws JsonIOException, JsonSyntaxException, IOException { 
 			
 			Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
 			// fetching Org Id
@@ -2687,7 +2687,7 @@ public class Restassured_Automation_ProcedureGroups extends read_Configuration_P
 		
 		
 		@Test(groups = { "IntegrationTests" })
-		public void deleteCreateAProcedureGroupTree_status204() throws JsonIOException, JsonSyntaxException, IOException { 
+		public void ProcedureGroupTree_DeleteCreateAProcedureGroupTree_status204() throws JsonIOException, JsonSyntaxException, IOException { 
 			
 			Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
 			// fetching Org Id
@@ -3039,7 +3039,7 @@ public class Restassured_Automation_ProcedureGroups extends read_Configuration_P
 		}
 		
 		@Test(groups = { "IntegrationTests" })
-		public void deleteCreateAProcedureGroupTree_status400() throws JsonIOException, JsonSyntaxException, IOException { 
+		public void ProcedureGroupTree_DeleteCreateAProcedureGroupTree_status400() throws JsonIOException, JsonSyntaxException, IOException { 
 			
 			Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
 			// fetching Org Id
@@ -3391,7 +3391,7 @@ public class Restassured_Automation_ProcedureGroups extends read_Configuration_P
 		}
 		
 		@Test(groups = { "IntegrationTests" })
-		public void putCreateAProcedureGroupTree_status204() throws JsonIOException, JsonSyntaxException, IOException { 
+		public void ProcedureGroupTree_PutCreateAProcedureGroupTree_status204() throws JsonIOException, JsonSyntaxException, IOException { 
 			
 			Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
 			// fetching Org Id
@@ -3744,7 +3744,7 @@ public class Restassured_Automation_ProcedureGroups extends read_Configuration_P
 
 
 		@Test(groups = { "IntegrationTests" })
-		public void putCreateAProcedureGroupTree_status400() throws JsonIOException, JsonSyntaxException, IOException { 
+		public void ProcedureGroupTree_PutCreateAProcedureGroupTree_status400() throws JsonIOException, JsonSyntaxException, IOException { 
 			
 			Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
 			// fetching Org Id

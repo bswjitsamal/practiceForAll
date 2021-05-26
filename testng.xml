@@ -18,8 +18,9 @@
 		<classes>
 
 	
+		
 			<class
-				name="restassured.automation.testcases.Restassured_Automation_EngagementType" />
+				name="restassured.automation.testcases.Restassured_Automation_MethodologyItemRelations" />
 				
 		
 		</classes>
