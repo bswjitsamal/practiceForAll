@@ -63,6 +63,16 @@ public Response get(String BaseURL, String AuthorizationKey , String URI ) {
 
 	}
 	
+	public Response get_URL_MultiQueryParams(String BaseURL, String AuthorizationKey, String URI, String value1 ,String queryParam1, String value2 ,String queryParam2) {
+
+		BaseURL = BaseURL + URI;
+		return RestAssured.given().header("Authorization", AuthorizationKey).header("Content-Type", "application/json")
+				.queryParam(value1, queryParam1).queryParam(value2, queryParam2).log().all().get(BaseURL);
+
+	}
+	
+	
+	
 	public Response get_URL_WithOne_QueryParams(String BaseURL, String AuthorizationKey, String URI, String pathParam) {
 
 		BaseURL = BaseURL + URI;
