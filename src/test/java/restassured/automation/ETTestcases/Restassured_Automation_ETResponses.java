@@ -65,19 +65,31 @@ public class Restassured_Automation_ETResponses {
 		engagementId = allEngagmentJson.get("id");
 		String id = engagementId.get(0);
 		String accessUri = "/api/" + post.getProperty("memberFirmSlug") + "/responses/" + id;
-		String procedure="60a63659aa642c3ea70c70f4";
-		String response="60a6365eaa642c3ea70c70f6";
+	
 		String row="1";
-		/*Map<String,String>map=new HashedMap<String,String>();
+		
+
+		String myPermissionURI = "/api/" + post.getProperty("memberFirmSlug") + "/methodologies/" + id + "/methodology";
+		Response myPermissionResponse = rolesUtils.get_URL_Without_Params(URL, AuthorizationKey, myPermissionURI);
+		myPermissionResponse.prettyPrint();
+		
+		JsonPath values = myPermissionResponse.jsonPath();
+		String procedure=values.get("items.collect { it.value }.reverse().data.find{it.workProgramItemType=='SingleItemSelectQuestion'}.id ");
+		String response=values.get("items.collect { it.value }.reverse().data.find{it.workProgramItemType=='SingleItemSelectQuestion'}.options.id[0] ");
+		System.out.println("response value"+response);
+		System.out.println(procedure);
+		Map<String,String>map=new HashedMap<String,String>();
 		map.put("procedure",procedure);
-		map.put("response",responses);
+		map.put("response",response);
+		//map.put("row", row);
 		ETUser_Pojo po=new ETUser_Pojo();
-		String body=po.UpdateResponses(map);*/
-		ET_Responses_Pojo po=new ET_Responses_Pojo();
-		po.setProcedure(procedure);
-		po.setResponse(response);
-		po.setRow(row);
-		Response res=rolesUtils.put_URLPOJO(URL, AuthorizationKey, accessUri, po);
+		String body=po.UpdateResponses(map);
+		
+	/*	ET_Responses_Pojo po=new ET_Responses_Pojo();
+		po.setProcedure(post.getProperty("ETProcedure"));
+		po.setResponse(post.getProperty("ETResponse"));
+		po.setRow(row);*/
+		Response res=rolesUtils.put_URLPOJO(URL, AuthorizationKey, accessUri, body);
 		res.prettyPrint();
 		Assert.assertEquals(res.getStatusCode(),204);
 		/** 
@@ -98,9 +110,17 @@ public class Restassured_Automation_ETResponses {
 		JsonPath allEngagmentJson = allEnagementRes.jsonPath();
 		engagementId = allEngagmentJson.get("id");
 		String id = engagementId.get(0);
+		
+		String myPermissionURI = "/api/" + post.getProperty("memberFirmSlug") + "/methodologies/" + id + "/methodology";
+		Response myPermissionResponse = rolesUtils.get_URL_Without_Params(URL, AuthorizationKey, myPermissionURI);
+		myPermissionResponse.prettyPrint();
+		
+		JsonPath values = myPermissionResponse.jsonPath();
+		String workProgramId=values.get("items.collect { it.value }.reverse().data.find{it.workProgramType=='Itemized'}.id ");
+		
 		String accessUri = "/api/" + post.getProperty("memberFirmSlug") + "/responses/" + id+"/row";
 		HashMap<String,String> map=new HashMap<String, String>();
-		map.put("workProgram","60a6362faa642c3ea70c70ec");
+		map.put("workProgram",workProgramId);
 		ETUser_Pojo pojo=new ETUser_Pojo();
 		String po=pojo.createResponses(map);
 		Response res=rolesUtils.post_URLPOJO(URL, AuthorizationKey, accessUri, po);
@@ -124,9 +144,16 @@ public class Restassured_Automation_ETResponses {
 		JsonPath allEngagmentJson = allEnagementRes.jsonPath();
 		engagementId = allEngagmentJson.get("id");
 		String id = engagementId.get(0);
+		String myPermissionURI = "/api/" + post.getProperty("memberFirmSlug") + "/methodologies/" + id + "/methodology";
+		Response myPermissionResponse = rolesUtils.get_URL_Without_Params(URL, AuthorizationKey, myPermissionURI);
+		myPermissionResponse.prettyPrint();
+		
+		JsonPath values = myPermissionResponse.jsonPath();
+		String workProgramId=values.get("items.collect { it.value }.reverse().data.find{it.workProgramType=='Itemized'}.id ");
+		
 		String accessUri = "/api/" + post.getProperty("memberFirmSlug") + "/responses/" + id+"/row";
 		HashMap<String,String>  map=new HashMap<String, String>();
-		map.put("workProgram","60a6362faa642c3ea70c70ec");
+		map.put("workProgram",workProgramId);
 		ETUser_Pojo pojo=new ETUser_Pojo();
 		String po=pojo.createResponses(map);
 		Response res=rolesUtils.delete_URLPOJO(URL, AuthorizationKey, accessUri, po);

@@ -1,5 +1,9 @@
 package restassured.automation.Pojo;
 
+import java.util.Map;
+
+import com.google.gson.Gson;
+
 public class OrgRolesPojo {
 
 	private String userId;
@@ -13,6 +17,7 @@ public class OrgRolesPojo {
 	private String minimumApplicationLevel;
 	private String[] permissions;
 	private String applicationLevel;
+	private String nameKey;
 
 
 	public String getApplicationLevel() {
@@ -104,7 +109,44 @@ public class OrgRolesPojo {
 		this.permissions = permissions;
 	}
 	
+	
+	public String getNameKey() {
+		return nameKey;
+	}
 
+	public void setNameKey(String nameKey) {
+		this.nameKey = nameKey;
+	}
+
+	public String CreatePermission(Map<String, String> data) {
+
+		OrgRolesPojo CreateRole = new OrgRolesPojo();
+
+		CreateRole.setUserId(data.get("userId"));
+		CreateRole.setRole(data.get("role"));
+		CreateRole.setResource(data.get("resource"));
+		CreateRole.setApplicationLevel(data.get("applicationLevel"));
+		Gson Josnbody = new Gson();
+		return Josnbody.toJson(CreateRole);
+	}
+	
+	public String CreateRole(Map<String,String> data){
+		OrgRolesPojo CreateRole = new OrgRolesPojo();
+
+		CreateRole.setName(data.get("name"));
+		CreateRole.setMinimumApplicationLevel(data.get("minimumApplicationLevel"));
+		Gson Josnbody = new Gson();
+		return Josnbody.toJson(CreateRole);
+	}
+	
+	public String UpdateRole(Map<String,String> data){
+		OrgRolesPojo CreateRole = new OrgRolesPojo();
+		CreateRole.setPermissions(new String[] {data.get("permissions")});
+		CreateRole.setPermissionSets(data.get("permission"));
+		CreateRole.setNameKey(data.get("nameKey"));
+		Gson Josnbody = new Gson();
+		return Josnbody.toJson(CreateRole);
+	}
 	
 	
 	

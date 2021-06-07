@@ -286,11 +286,17 @@ public class Restassured_Automation_ItemSelectQuestion {
 
 		String patchId1 = "/api/methodologyItem/revision/" + revId.substring(1, 25) + "/itemSelectQuestion/" + s1
 				+ "/option";
+		
+		Map<String,String> map=new HashMap<String, String>();
+		map.put("title","Demo");
+		
+		User_Pojo po=new User_Pojo();
+		String createOption=po.createOption(map);
+		
 
-		ItemSelectQuestion_Pojo isq = new ItemSelectQuestion_Pojo();
-		isq.setTitle("Demo");
+		
 
-		Response getMethodologyRes1 = getMethodology.post_URLPOJO(URL, AuthorizationKey, patchId1, isq);
+		Response getMethodologyRes1 = getMethodology.post_URLPOJO(URL, AuthorizationKey, patchId1, createOption);
 		getMethodologyRes1.prettyPrint();
 		Assert.assertEquals(getMethodologyRes1.statusCode(), 200);
 		/**
@@ -342,10 +348,13 @@ public class Restassured_Automation_ItemSelectQuestion {
 		String patchId1 = "/api/methodologyItem/revision/" + revId.substring(1, 25) + "/itemSelectQuestion/" + s1
 				+ "/option";
 
-		ItemSelectQuestion_Pojo isq = new ItemSelectQuestion_Pojo();
-		isq.setTitle("");
-
-		Response getMethodologyRes1 = getMethodology.post_URLPOJO(URL, AuthorizationKey, patchId1, isq);
+		Map<String,String> map=new HashMap<String, String>();
+		map.put("title"," ");
+		
+		User_Pojo po=new User_Pojo();
+		String createOption=po.createOption(map);
+		
+		Response getMethodologyRes1 = getMethodology.post_URLPOJO(URL, AuthorizationKey, patchId1, createOption);
 		getMethodologyRes1.prettyPrint();
 		Assert.assertEquals(getMethodologyRes1.statusCode(), 400);
 		/**
@@ -394,15 +403,18 @@ public class Restassured_Automation_ItemSelectQuestion {
 		String s1 = getEngagementTypeRes.path("find { it.renderAsSelect == false }.methodologyItemId");
 		System.out.println(s1);
 
-		String patchId1 = "/api/methodologyItem/revision/" + revId.substring(1, 25) + "/itemSelectQuestion/" + s1
+		String patchId1 = "/api/methodologyItem/revisionss/" + revId.substring(1, 25) + "/itemSelectQuestion/" + s1
 				+ "/option";
 
-		ItemSelectQuestion_Pojo isq = new ItemSelectQuestion_Pojo();
-		isq.setTitle("");
+		Map<String,String> map=new HashMap<String, String>();
+		map.put("title"," ");
+		
+		User_Pojo po=new User_Pojo();
+		String createOption=po.createOption(map);
 
-		Response getMethodologyRes1 = getMethodology.post_URLPOJO(URL, AuthorizationKey, patchId1, isq);
+		Response getMethodologyRes1 = getMethodology.post_URLPOJO(URL, AuthorizationKey, patchId1, createOption);
 		getMethodologyRes1.prettyPrint();
-		Assert.assertEquals(getMethodologyRes1.statusCode(), 400);
+		Assert.assertEquals(getMethodologyRes1.statusCode(), 404);
 		/**
 		 * Extent report generation
 		 */
@@ -451,11 +463,12 @@ public class Restassured_Automation_ItemSelectQuestion {
 
 		String patchId1 = "/api/methodologyItem/revision/" + revId.substring(1, 25) + "/itemSelectQuestion/" + s1
 				+ "/option";
-
-		ItemSelectQuestion_Pojo isq = new ItemSelectQuestion_Pojo();
-		isq.setOptionTitles(new String[] { "demoTesting" });
-
-		Response getMethodologyRes1 = getMethodology.put_URLPOJO(URL, AuthorizationKey, patchId1, isq);
+		
+		
+		User_Pojo po=new User_Pojo();
+		String createOption=po.UpdateOption();
+		
+		Response getMethodologyRes1 = getMethodology.put_URLPOJO(URL, AuthorizationKey, patchId1, createOption);
 		getMethodologyRes1.prettyPrint();
 		Assert.assertEquals(getMethodologyRes1.statusCode(), 200);
 		/**
@@ -622,10 +635,13 @@ public class Restassured_Automation_ItemSelectQuestion {
 		String patchId1 = "/api/methodologyItem/revision/" + revId.substring(1, 25) + "/itemSelectQuestion/" + s1
 				+ "/option";
 
-		ItemSelectQuestion_Pojo isq = new ItemSelectQuestion_Pojo();
-		isq.setTitle("Demo");
+		Map<String,String> map=new HashMap<String, String>();
+		map.put("title"," ");
+		
+		User_Pojo po=new User_Pojo();
+		String createOption=po.createOption(map);
 
-		Response getMethodologyRes1 = getMethodology.post_URLPOJO(URL, AuthorizationKey, patchId1, isq);
+		Response getMethodologyRes1 = getMethodology.post_URLPOJO(URL, AuthorizationKey, patchId1, createOption);
 		getMethodologyRes1.prettyPrint();
 
 		JsonPath jsonPathEvaluator1 = getMethodologyRes1.jsonPath();
@@ -707,10 +723,13 @@ public class Restassured_Automation_ItemSelectQuestion {
 		String patchId1 = "/api/methodologyItem/revision/" + revId.substring(1, 25) + "/itemSelectQuestion/" + s1
 				+ "/option";
 
-		ItemSelectQuestion_Pojo isq = new ItemSelectQuestion_Pojo();
-		isq.setTitle("Demo");
-
-		Response getMethodologyRes1 = getMethodology.post_URLPOJO(URL, AuthorizationKey, patchId1, isq);
+		Map<String,String> map=new HashMap<String, String>();
+		map.put("title"," ");
+		
+		User_Pojo po=new User_Pojo();
+		String createOption=po.createOption(map);
+		
+		Response getMethodologyRes1 = getMethodology.post_URLPOJO(URL, AuthorizationKey, patchId1, createOption);
 		getMethodologyRes1.prettyPrint();
 
 		JsonPath jsonPathEvaluator1 = getMethodologyRes1.jsonPath();
@@ -773,11 +792,13 @@ public class Restassured_Automation_ItemSelectQuestion {
 
 		String patchId1 = "/api/methodologyItem/revision/" + revId.substring(1, 25) + "/itemSelectQuestion/" + s1
 				+ "/option";
+		Map<String,String> map=new HashMap<String, String>();
+		map.put("title"," ");
+		
+		User_Pojo po=new User_Pojo();
+		String createOption=po.createOption(map);
 
-		ItemSelectQuestion_Pojo isq = new ItemSelectQuestion_Pojo();
-		isq.setTitle("");
-
-		Response getMethodologyRes1 = getMethodology.post_URLPOJO(URL, AuthorizationKey, patchId1, isq);
+		Response getMethodologyRes1 = getMethodology.post_URLPOJO(URL, AuthorizationKey, patchId1, createOption);
 		getMethodologyRes1.prettyPrint();
 
 		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
@@ -787,7 +808,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 		String patchId2 = "/api/methodologyItem/revision/" + revId.substring(1, 25) + "/itemSelectQuestion/" + s1
 				+ "/option/" + ss.get(0);
 
-		Response getMethodologyRes2 = getMethodology.patch_URLPOJO(URL, AuthorizationKey, patchId2, isq);
+		Response getMethodologyRes2 = getMethodology.patch_URLPOJO(URL, AuthorizationKey, patchId2, createOption);
 		getMethodologyRes2.prettyPrint();
 		Assert.assertEquals(getMethodologyRes2.statusCode(), 400);
 		/**
@@ -847,10 +868,14 @@ public class Restassured_Automation_ItemSelectQuestion {
 		String patchId1 = "/api/methodologyItem/revision/" + revId.substring(1, 25) + "/itemSelectQuestion/" + s1
 				+ "/option";
 
-		ItemSelectQuestion_Pojo isq = new ItemSelectQuestion_Pojo();
-		isq.setTitle("Demo");
+		Map<String,String> map=new HashMap<String, String>();
+		map.put("title","Demo");
+		
+		User_Pojo po=new User_Pojo();
+		String createOption=po.createOption(map);
 
-		Response getMethodologyRes1 = getMethodology.post_URLPOJO(URL, AuthorizationKey, patchId1, isq);
+
+		Response getMethodologyRes1 = getMethodology.post_URLPOJO(URL, AuthorizationKey, patchId1, createOption);
 		getMethodologyRes1.prettyPrint();
 		Assert.assertEquals(getMethodologyRes1.statusCode(), 200);
 		JsonPath jsonId = getMethodologyRes1.jsonPath();
@@ -1295,7 +1320,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 		Map<String,String> map=new HashMap<String,String>();
 		map.put("title",post.getProperty("putMethodologyItemTitle"));
 		User_Pojo po=new User_Pojo();
-		String data=po.updateOption(map);
+		String data=po.createOption(map);
 		/*ItemSelectQuestion_Pojo pojo = new ItemSelectQuestion_Pojo();
 		pojo.setOptions(new String[] { optId });*/
 		String patchId5 = "/api/methodologyItem/revision/" + revId.substring(1, 25) + "/itemSelectQuestion/" + s1

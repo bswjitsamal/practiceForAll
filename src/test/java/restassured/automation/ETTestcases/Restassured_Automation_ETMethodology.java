@@ -121,6 +121,7 @@ public class Restassured_Automation_ETMethodology {
 		myPermissionResponse.prettyPrint();
 		
 		JsonPath values = myPermissionResponse.jsonPath();
+		
 		//String a = values.get("$.items.[?(@.workProgramType=='Itemized')]");
 		String a = values.get("items.'609cdf63aa642c3ea70c5a79'.data.id");
 		System.out.println(a);

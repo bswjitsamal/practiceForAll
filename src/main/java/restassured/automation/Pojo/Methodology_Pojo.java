@@ -16,6 +16,8 @@ public class Methodology_Pojo {
 	private String hotFixMajorVersion;
 	private String inheritFrom;
 	private String storeEngagementType;
+	private String importing;
+	
 	
 	
 	public String getStoreEngagementType() {
@@ -89,6 +91,12 @@ public class Methodology_Pojo {
 	}
 	public void setHotFixMajorVersion(String hotFixMajorVersion) {
 		this.hotFixMajorVersion = hotFixMajorVersion;
+	}
+	public String getImporting() {
+		return importing;
+	}
+	public void setImporting(String importing) {
+		this.importing = importing;
 	}
 	
 	

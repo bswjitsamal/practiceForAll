@@ -1,0 +1,760 @@
+2021-06-07 16:20:42,477 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager  - Get connection for route {s}->https://mmsqa.leap.gtinet.org:443
+2021-06-07 16:20:42,517 [DEBUG] org.apache.http.impl.conn.DefaultClientConnectionOperator  - Connecting to mmsqa.leap.gtinet.org:443
+2021-06-07 16:20:43,529 [DEBUG] org.apache.http.client.protocol.RequestAddCookies  - CookieSpec selected: ignoreCookies
+2021-06-07 16:20:43,530 [DEBUG] org.apache.http.client.protocol.RequestAuthCache  - Auth cache not set in the context
+2021-06-07 16:20:43,530 [DEBUG] org.apache.http.client.protocol.RequestProxyAuthentication  - Proxy auth state: UNCHALLENGED
+2021-06-07 16:20:43,531 [DEBUG] org.apache.http.impl.client.DefaultHttpClient  - Attempt 1 to execute request
+2021-06-07 16:20:43,531 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection  - Sending request: GET /api/org HTTP/1.1
+2021-06-07 16:20:43,531 [DEBUG] org.apache.http.wire  -  >> "GET /api/org HTTP/1.1[\r][\n]"
+2021-06-07 16:20:43,531 [DEBUG] org.apache.http.wire  -  >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+2021-06-07 16:20:43,532 [DEBUG] org.apache.http.wire  -  >> "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiI3ZTc0OThlNy1hZjZjLTQ3YmQtYmYxNi00ZjljNWQ5NjAxYzgiLCJpc3MiOiJodHRwczovL2xvZ2luLm1pY3Jvc29mdG9ubGluZS5jb20vYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4L3YyLjAiLCJpYXQiOjE2MjMwNjIyNTYsIm5iZiI6MTYyMzA2MjI1NiwiZXhwIjoxNjIzMDY2MTU2LCJhaW8iOiJBVVFBdS84VEFBQUFTOFhtajFhL1JYblRyd2Era25zMUpUQklSdWp2SkkzbDNFTzJGQVo0aHU0WmJQQVJCSzZyVFJWRUx4Rk9nNmxra1MzcldtamhmSHFFRk56VXlLNWE3QT09IiwiaWRwIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvMGI4ZjY3NzAtYTQ5MC00OTVkLTg4M2YtZGM5ZjZiYWUzODRlLyIsIm5hbWUiOiJNTVMgVGVzdCBBcGFjIDE2Iiwibm9uY2UiOiJhYTA5N2U4NC1kOGZhLTQ4OTctYTg0NC1lMGE4MDczMzI1NzIiLCJvaWQiOiI1ZjlmMTkwZC02OWM5LTQ2NjAtOWQ4Mi05YjQ3ZjQ0MzI1MTMiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJtbXMudGVzdC5hcGFjLjE2QGd0YWRob2MuZ3QuY29tIiwicmgiOiIwLkFSc0FpN2R0cDBYWk9rcTdRdjBFRWZXTDJPZVlkSDVzcjcxSHZ4WlBuRjJXQWNnYkFINC4iLCJzdWIiOiJVMGItREc5Q2xaTjZXbDFWVWcxYXdVVGdrOTFWNWhWb1RHMWF4bzBadlBrIiwidGlkIjoiYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4IiwidXRpIjoiclNRU0hoOTFpa3k3T2FBajJhb2dBUSIsInZlciI6IjIuMCIsIm1lbWJlcmZpcm1pZCI6ImFwYWMudGVzdCJ9.BQE3i0LrLMi1s2H5WdALujT_n3LY4SwIXfEDMag9otiSaP0O6fyRCTgkiXjg2NYAp9KYJ7bKewj8rF0IuzPXic6Q1vrKAPadlIvv4ytY-CDi5yF0MrEZpbKd_pY7bY3mO50OMvlafi6irtrE2n9cIOXIlw2xUckXt6aaW9EZY2gwEBjTC6BqFRAVLwRATEVe9Y76_dgsed8f_TE8-bqjPypo_VIDEhpT0cva6RaNpngq_h7wPJvAFjFhCMf-2_qlNQHI7LoGya16cOpmrqvGYspI89qXzm5sO1eDDBeWV37H_p24j7LMcrNKgOYnovOK8xbI2mCFYI2AcU26sCG9sQ[\r][\n]"
+2021-06-07 16:20:43,532 [DEBUG] org.apache.http.wire  -  >> "Accept: */*[\r][\n]"
+2021-06-07 16:20:43,532 [DEBUG] org.apache.http.wire  -  >> "Host: mmsqa.leap.gtinet.org[\r][\n]"
+2021-06-07 16:20:43,532 [DEBUG] org.apache.http.wire  -  >> "Connection: Keep-Alive[\r][\n]"
+2021-06-07 16:20:43,532 [DEBUG] org.apache.http.wire  -  >> "User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_151)[\r][\n]"
+2021-06-07 16:20:43,532 [DEBUG] org.apache.http.wire  -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2021-06-07 16:20:43,532 [DEBUG] org.apache.http.wire  -  >> "[\r][\n]"
+2021-06-07 16:20:43,532 [DEBUG] org.apache.http.headers  - >> GET /api/org HTTP/1.1
+2021-06-07 16:20:43,532 [DEBUG] org.apache.http.headers  - >> Content-Type: application/json; charset=UTF-8
+2021-06-07 16:20:43,533 [DEBUG] org.apache.http.headers  - >> Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiI3ZTc0OThlNy1hZjZjLTQ3YmQtYmYxNi00ZjljNWQ5NjAxYzgiLCJpc3MiOiJodHRwczovL2xvZ2luLm1pY3Jvc29mdG9ubGluZS5jb20vYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4L3YyLjAiLCJpYXQiOjE2MjMwNjIyNTYsIm5iZiI6MTYyMzA2MjI1NiwiZXhwIjoxNjIzMDY2MTU2LCJhaW8iOiJBVVFBdS84VEFBQUFTOFhtajFhL1JYblRyd2Era25zMUpUQklSdWp2SkkzbDNFTzJGQVo0aHU0WmJQQVJCSzZyVFJWRUx4Rk9nNmxra1MzcldtamhmSHFFRk56VXlLNWE3QT09IiwiaWRwIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvMGI4ZjY3NzAtYTQ5MC00OTVkLTg4M2YtZGM5ZjZiYWUzODRlLyIsIm5hbWUiOiJNTVMgVGVzdCBBcGFjIDE2Iiwibm9uY2UiOiJhYTA5N2U4NC1kOGZhLTQ4OTctYTg0NC1lMGE4MDczMzI1NzIiLCJvaWQiOiI1ZjlmMTkwZC02OWM5LTQ2NjAtOWQ4Mi05YjQ3ZjQ0MzI1MTMiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJtbXMudGVzdC5hcGFjLjE2QGd0YWRob2MuZ3QuY29tIiwicmgiOiIwLkFSc0FpN2R0cDBYWk9rcTdRdjBFRWZXTDJPZVlkSDVzcjcxSHZ4WlBuRjJXQWNnYkFINC4iLCJzdWIiOiJVMGItREc5Q2xaTjZXbDFWVWcxYXdVVGdrOTFWNWhWb1RHMWF4bzBadlBrIiwidGlkIjoiYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4IiwidXRpIjoiclNRU0hoOTFpa3k3T2FBajJhb2dBUSIsInZlciI6IjIuMCIsIm1lbWJlcmZpcm1pZCI6ImFwYWMudGVzdCJ9.BQE3i0LrLMi1s2H5WdALujT_n3LY4SwIXfEDMag9otiSaP0O6fyRCTgkiXjg2NYAp9KYJ7bKewj8rF0IuzPXic6Q1vrKAPadlIvv4ytY-CDi5yF0MrEZpbKd_pY7bY3mO50OMvlafi6irtrE2n9cIOXIlw2xUckXt6aaW9EZY2gwEBjTC6BqFRAVLwRATEVe9Y76_dgsed8f_TE8-bqjPypo_VIDEhpT0cva6RaNpngq_h7wPJvAFjFhCMf-2_qlNQHI7LoGya16cOpmrqvGYspI89qXzm5sO1eDDBeWV37H_p24j7LMcrNKgOYnovOK8xbI2mCFYI2AcU26sCG9sQ
+2021-06-07 16:20:43,533 [DEBUG] org.apache.http.headers  - >> Accept: */*
+2021-06-07 16:20:43,533 [DEBUG] org.apache.http.headers  - >> Host: mmsqa.leap.gtinet.org
+2021-06-07 16:20:43,533 [DEBUG] org.apache.http.headers  - >> Connection: Keep-Alive
+2021-06-07 16:20:43,533 [DEBUG] org.apache.http.headers  - >> User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_151)
+2021-06-07 16:20:43,533 [DEBUG] org.apache.http.headers  - >> Accept-Encoding: gzip,deflate
+2021-06-07 16:20:43,781 [DEBUG] org.apache.http.wire  -  << "HTTP/1.1 200 OK[\r][\n]"
+2021-06-07 16:20:43,784 [DEBUG] org.apache.http.wire  -  << "Date: Mon, 07 Jun 2021 10:52:47 GMT[\r][\n]"
+2021-06-07 16:20:43,784 [DEBUG] org.apache.http.wire  -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2021-06-07 16:20:43,784 [DEBUG] org.apache.http.wire  -  << "Content-Length: 1167[\r][\n]"
+2021-06-07 16:20:43,784 [DEBUG] org.apache.http.wire  -  << "Connection: keep-alive[\r][\n]"
+2021-06-07 16:20:43,784 [DEBUG] org.apache.http.wire  -  << "Strict-Transport-Security: max-age=63072000; includeSubDomains; preload[\r][\n]"
+2021-06-07 16:20:43,784 [DEBUG] org.apache.http.wire  -  << "X-XSS-Protection: 1; mode=block[\r][\n]"
+2021-06-07 16:20:43,784 [DEBUG] org.apache.http.wire  -  << "X-Frame-Options: SAMEORIGIN[\r][\n]"
+2021-06-07 16:20:43,784 [DEBUG] org.apache.http.wire  -  << "X-Content-Type-Options: nosniff[\r][\n]"
+2021-06-07 16:20:43,784 [DEBUG] org.apache.http.wire  -  << "Referrer-Policy: strict-origin[\r][\n]"
+2021-06-07 16:20:43,784 [DEBUG] org.apache.http.wire  -  << "[\r][\n]"
+2021-06-07 16:20:43,785 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection  - Receiving response: HTTP/1.1 200 OK
+2021-06-07 16:20:43,785 [DEBUG] org.apache.http.headers  - << HTTP/1.1 200 OK
+2021-06-07 16:20:43,785 [DEBUG] org.apache.http.headers  - << Date: Mon, 07 Jun 2021 10:52:47 GMT
+2021-06-07 16:20:43,785 [DEBUG] org.apache.http.headers  - << Content-Type: application/json; charset=utf-8
+2021-06-07 16:20:43,785 [DEBUG] org.apache.http.headers  - << Content-Length: 1167
+2021-06-07 16:20:43,785 [DEBUG] org.apache.http.headers  - << Connection: keep-alive
+2021-06-07 16:20:43,785 [DEBUG] org.apache.http.headers  - << Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+2021-06-07 16:20:43,785 [DEBUG] org.apache.http.headers  - << X-XSS-Protection: 1; mode=block
+2021-06-07 16:20:43,785 [DEBUG] org.apache.http.headers  - << X-Frame-Options: SAMEORIGIN
+2021-06-07 16:20:43,785 [DEBUG] org.apache.http.headers  - << X-Content-Type-Options: nosniff
+2021-06-07 16:20:43,785 [DEBUG] org.apache.http.headers  - << Referrer-Policy: strict-origin
+2021-06-07 16:20:43,788 [DEBUG] org.apache.http.impl.client.DefaultHttpClient  - Connection can be kept alive indefinitely
+2021-06-07 16:20:43,800 [DEBUG] io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder  - Parsing response as: application/json; charset=utf-8
+2021-06-07 16:20:43,801 [DEBUG] io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder  - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+2021-06-07 16:20:43,828 [DEBUG] org.apache.http.wire  -  << "[{"level":"Store","shardKey":"mms","memberFirmId":"GTIL_STORE","countryCode":"","name":"GTIL Store","active":true,"id":"600f549bcc7ffedb2877b691"},{"level":"Library","shardKey":"mms","memberFirmId":"amer","countryCode":"US","name":"United States","active":true,"id":"5f950768fc13ae0ade00000c"},{"level":"Library","shardKey":"mms","memberFirmId":"emea.test","countryCode":"US","name":"emea.test","active":true,"id":"5f950768fc13ae0ade000000"},{"level":"Library","shardKey":"mms","memberFirmId":"apac.test","countryCode":"US","name":"apac.test","active":true,"id":"5f950768fc13ae0ade000001"},{"level":"Library","shardKey":"mms","memberFirmId":"amer.test","countryCode":"US","name":"US DEV","active":true,"id":"5f950768fc13ae0ade000002"},{"level":"Library","shardKey":"mms","memberFirmId":"apac.po","countryCode":"US","name":"apac.po","active":true,"id":"5f950768fc13ae0ade000005"},{"level":"Library","shardKey":"mms","memberFirmId":"emea.po","countryCode":"US","name":"emea.po","active":true,"id":"5f950768fc13ae0ade000004"},{"level":"Library","shardKey":"mms","memberFirmId":"amer.po","countryCode":"US","name":"amer.po","active":true,"id":"5f950768fc13ae0ade000003"}]"
+2021-06-07 16:20:43,828 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager  - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@73c60324
+2021-06-07 16:20:43,828 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager  - Connection can be kept alive indefinitely
+2021-06-07 16:20:44,135 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager  - Get connection for route {s}->https://mmsqa.leap.gtinet.org:443
+2021-06-07 16:20:44,136 [DEBUG] org.apache.http.impl.conn.DefaultClientConnectionOperator  - Connecting to mmsqa.leap.gtinet.org:443
+2021-06-07 16:20:45,023 [DEBUG] org.apache.http.client.protocol.RequestAddCookies  - CookieSpec selected: ignoreCookies
+2021-06-07 16:20:45,024 [DEBUG] org.apache.http.client.protocol.RequestAuthCache  - Auth cache not set in the context
+2021-06-07 16:20:45,024 [DEBUG] org.apache.http.client.protocol.RequestProxyAuthentication  - Proxy auth state: UNCHALLENGED
+2021-06-07 16:20:45,024 [DEBUG] org.apache.http.impl.client.DefaultHttpClient  - Attempt 1 to execute request
+2021-06-07 16:20:45,024 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection  - Sending request: GET /api/methodology?Organization=5f950768fc13ae0ade000001 HTTP/1.1
+2021-06-07 16:20:45,024 [DEBUG] org.apache.http.wire  -  >> "GET /api/methodology?Organization=5f950768fc13ae0ade000001 HTTP/1.1[\r][\n]"
+2021-06-07 16:20:45,024 [DEBUG] org.apache.http.wire  -  >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+2021-06-07 16:20:45,024 [DEBUG] org.apache.http.wire  -  >> "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiI3ZTc0OThlNy1hZjZjLTQ3YmQtYmYxNi00ZjljNWQ5NjAxYzgiLCJpc3MiOiJodHRwczovL2xvZ2luLm1pY3Jvc29mdG9ubGluZS5jb20vYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4L3YyLjAiLCJpYXQiOjE2MjMwNjIyNTYsIm5iZiI6MTYyMzA2MjI1NiwiZXhwIjoxNjIzMDY2MTU2LCJhaW8iOiJBVVFBdS84VEFBQUFTOFhtajFhL1JYblRyd2Era25zMUpUQklSdWp2SkkzbDNFTzJGQVo0aHU0WmJQQVJCSzZyVFJWRUx4Rk9nNmxra1MzcldtamhmSHFFRk56VXlLNWE3QT09IiwiaWRwIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvMGI4ZjY3NzAtYTQ5MC00OTVkLTg4M2YtZGM5ZjZiYWUzODRlLyIsIm5hbWUiOiJNTVMgVGVzdCBBcGFjIDE2Iiwibm9uY2UiOiJhYTA5N2U4NC1kOGZhLTQ4OTctYTg0NC1lMGE4MDczMzI1NzIiLCJvaWQiOiI1ZjlmMTkwZC02OWM5LTQ2NjAtOWQ4Mi05YjQ3ZjQ0MzI1MTMiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJtbXMudGVzdC5hcGFjLjE2QGd0YWRob2MuZ3QuY29tIiwicmgiOiIwLkFSc0FpN2R0cDBYWk9rcTdRdjBFRWZXTDJPZVlkSDVzcjcxSHZ4WlBuRjJXQWNnYkFINC4iLCJzdWIiOiJVMGItREc5Q2xaTjZXbDFWVWcxYXdVVGdrOTFWNWhWb1RHMWF4bzBadlBrIiwidGlkIjoiYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4IiwidXRpIjoiclNRU0hoOTFpa3k3T2FBajJhb2dBUSIsInZlciI6IjIuMCIsIm1lbWJlcmZpcm1pZCI6ImFwYWMudGVzdCJ9.BQE3i0LrLMi1s2H5WdALujT_n3LY4SwIXfEDMag9otiSaP0O6fyRCTgkiXjg2NYAp9KYJ7bKewj8rF0IuzPXic6Q1vrKAPadlIvv4ytY-CDi5yF0MrEZpbKd_pY7bY3mO50OMvlafi6irtrE2n9cIOXIlw2xUckXt6aaW9EZY2gwEBjTC6BqFRAVLwRATEVe9Y76_dgsed8f_TE8-bqjPypo_VIDEhpT0cva6RaNpngq_h7wPJvAFjFhCMf-2_qlNQHI7LoGya16cOpmrqvGYspI89qXzm5sO1eDDBeWV37H_p24j7LMcrNKgOYnovOK8xbI2mCFYI2AcU26sCG9sQ[\r][\n]"
+2021-06-07 16:20:45,024 [DEBUG] org.apache.http.wire  -  >> "Accept: */*[\r][\n]"
+2021-06-07 16:20:45,024 [DEBUG] org.apache.http.wire  -  >> "Host: mmsqa.leap.gtinet.org[\r][\n]"
+2021-06-07 16:20:45,024 [DEBUG] org.apache.http.wire  -  >> "Connection: Keep-Alive[\r][\n]"
+2021-06-07 16:20:45,024 [DEBUG] org.apache.http.wire  -  >> "User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_151)[\r][\n]"
+2021-06-07 16:20:45,024 [DEBUG] org.apache.http.wire  -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2021-06-07 16:20:45,024 [DEBUG] org.apache.http.wire  -  >> "[\r][\n]"
+2021-06-07 16:20:45,025 [DEBUG] org.apache.http.headers  - >> GET /api/methodology?Organization=5f950768fc13ae0ade000001 HTTP/1.1
+2021-06-07 16:20:45,025 [DEBUG] org.apache.http.headers  - >> Content-Type: application/json; charset=UTF-8
+2021-06-07 16:20:45,025 [DEBUG] org.apache.http.headers  - >> Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiI3ZTc0OThlNy1hZjZjLTQ3YmQtYmYxNi00ZjljNWQ5NjAxYzgiLCJpc3MiOiJodHRwczovL2xvZ2luLm1pY3Jvc29mdG9ubGluZS5jb20vYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4L3YyLjAiLCJpYXQiOjE2MjMwNjIyNTYsIm5iZiI6MTYyMzA2MjI1NiwiZXhwIjoxNjIzMDY2MTU2LCJhaW8iOiJBVVFBdS84VEFBQUFTOFhtajFhL1JYblRyd2Era25zMUpUQklSdWp2SkkzbDNFTzJGQVo0aHU0WmJQQVJCSzZyVFJWRUx4Rk9nNmxra1MzcldtamhmSHFFRk56VXlLNWE3QT09IiwiaWRwIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvMGI4ZjY3NzAtYTQ5MC00OTVkLTg4M2YtZGM5ZjZiYWUzODRlLyIsIm5hbWUiOiJNTVMgVGVzdCBBcGFjIDE2Iiwibm9uY2UiOiJhYTA5N2U4NC1kOGZhLTQ4OTctYTg0NC1lMGE4MDczMzI1NzIiLCJvaWQiOiI1ZjlmMTkwZC02OWM5LTQ2NjAtOWQ4Mi05YjQ3ZjQ0MzI1MTMiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJtbXMudGVzdC5hcGFjLjE2QGd0YWRob2MuZ3QuY29tIiwicmgiOiIwLkFSc0FpN2R0cDBYWk9rcTdRdjBFRWZXTDJPZVlkSDVzcjcxSHZ4WlBuRjJXQWNnYkFINC4iLCJzdWIiOiJVMGItREc5Q2xaTjZXbDFWVWcxYXdVVGdrOTFWNWhWb1RHMWF4bzBadlBrIiwidGlkIjoiYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4IiwidXRpIjoiclNRU0hoOTFpa3k3T2FBajJhb2dBUSIsInZlciI6IjIuMCIsIm1lbWJlcmZpcm1pZCI6ImFwYWMudGVzdCJ9.BQE3i0LrLMi1s2H5WdALujT_n3LY4SwIXfEDMag9otiSaP0O6fyRCTgkiXjg2NYAp9KYJ7bKewj8rF0IuzPXic6Q1vrKAPadlIvv4ytY-CDi5yF0MrEZpbKd_pY7bY3mO50OMvlafi6irtrE2n9cIOXIlw2xUckXt6aaW9EZY2gwEBjTC6BqFRAVLwRATEVe9Y76_dgsed8f_TE8-bqjPypo_VIDEhpT0cva6RaNpngq_h7wPJvAFjFhCMf-2_qlNQHI7LoGya16cOpmrqvGYspI89qXzm5sO1eDDBeWV37H_p24j7LMcrNKgOYnovOK8xbI2mCFYI2AcU26sCG9sQ
+2021-06-07 16:20:45,025 [DEBUG] org.apache.http.headers  - >> Accept: */*
+2021-06-07 16:20:45,025 [DEBUG] org.apache.http.headers  - >> Host: mmsqa.leap.gtinet.org
+2021-06-07 16:20:45,025 [DEBUG] org.apache.http.headers  - >> Connection: Keep-Alive
+2021-06-07 16:20:45,025 [DEBUG] org.apache.http.headers  - >> User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_151)
+2021-06-07 16:20:45,025 [DEBUG] org.apache.http.headers  - >> Accept-Encoding: gzip,deflate
+2021-06-07 16:20:45,244 [DEBUG] org.apache.http.wire  -  << "HTTP/1.1 200 OK[\r][\n]"
+2021-06-07 16:20:45,245 [DEBUG] org.apache.http.wire  -  << "Date: Mon, 07 Jun 2021 10:52:48 GMT[\r][\n]"
+2021-06-07 16:20:45,245 [DEBUG] org.apache.http.wire  -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2021-06-07 16:20:45,245 [DEBUG] org.apache.http.wire  -  << "Content-Length: 3430[\r][\n]"
+2021-06-07 16:20:45,245 [DEBUG] org.apache.http.wire  -  << "Connection: keep-alive[\r][\n]"
+2021-06-07 16:20:45,245 [DEBUG] org.apache.http.wire  -  << "Strict-Transport-Security: max-age=63072000; includeSubDomains; preload[\r][\n]"
+2021-06-07 16:20:45,245 [DEBUG] org.apache.http.wire  -  << "X-XSS-Protection: 1; mode=block[\r][\n]"
+2021-06-07 16:20:45,246 [DEBUG] org.apache.http.wire  -  << "X-Frame-Options: SAMEORIGIN[\r][\n]"
+2021-06-07 16:20:45,246 [DEBUG] org.apache.http.wire  -  << "X-Content-Type-Options: nosniff[\r][\n]"
+2021-06-07 16:20:45,246 [DEBUG] org.apache.http.wire  -  << "Referrer-Policy: strict-origin[\r][\n]"
+2021-06-07 16:20:45,246 [DEBUG] org.apache.http.wire  -  << "[\r][\n]"
+2021-06-07 16:20:45,246 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection  - Receiving response: HTTP/1.1 200 OK
+2021-06-07 16:20:45,247 [DEBUG] org.apache.http.headers  - << HTTP/1.1 200 OK
+2021-06-07 16:20:45,247 [DEBUG] org.apache.http.headers  - << Date: Mon, 07 Jun 2021 10:52:48 GMT
+2021-06-07 16:20:45,247 [DEBUG] org.apache.http.headers  - << Content-Type: application/json; charset=utf-8
+2021-06-07 16:20:45,247 [DEBUG] org.apache.http.headers  - << Content-Length: 3430
+2021-06-07 16:20:45,247 [DEBUG] org.apache.http.headers  - << Connection: keep-alive
+2021-06-07 16:20:45,247 [DEBUG] org.apache.http.headers  - << Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+2021-06-07 16:20:45,247 [DEBUG] org.apache.http.headers  - << X-XSS-Protection: 1; mode=block
+2021-06-07 16:20:45,247 [DEBUG] org.apache.http.headers  - << X-Frame-Options: SAMEORIGIN
+2021-06-07 16:20:45,247 [DEBUG] org.apache.http.headers  - << X-Content-Type-Options: nosniff
+2021-06-07 16:20:45,247 [DEBUG] org.apache.http.headers  - << Referrer-Policy: strict-origin
+2021-06-07 16:20:45,247 [DEBUG] org.apache.http.impl.client.DefaultHttpClient  - Connection can be kept alive indefinitely
+2021-06-07 16:20:45,247 [DEBUG] io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder  - Parsing response as: application/json; charset=utf-8
+2021-06-07 16:20:45,247 [DEBUG] io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder  - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+2021-06-07 16:20:45,248 [DEBUG] org.apache.http.wire  -  << "[{"id":"60ba91e53b5c7ca3f50a47fe","title":"Audit Engagement Release Test","organization":"5f950768fc13ae0ade000001","engagementType":"60ba91e5b7759fc69b311caf","createdById":"eb4b99c6-9626-4e1c-a0a7-378a96aec7e7","creationDate":"2021-06-04T20:49:41.914Z","lastPublished":"2021-06-04T20:50:31.553Z","currentVersion":{"major":1,"minor":0,"iteration":0,"displayVersion":"1.0.0","indexVersion":"1_0_0"},"revisions":["60ba91e53b5c7ca3f50a4802","60ba920e3b5c7ca3f50a4818"],"status":"Published","inheritedFrom":"60ba8a7e3b5c7ca3f50a46b1","draftCount":1,"versions":{"1_0_0":"60ba920e3b5c7ca3f50a4818"}},{"id":"60ba94133b5c7ca3f50a481f","title":"Audit Release MF Import","organization":"5f950768fc13ae0ade000001","engagementType":"60ba93bab7759fc69b311cb3","createdById":"eb4b99c6-9626-4e1c-a0a7-378a96aec7e7","creationDate":"2021-06-04T20:58:59.569Z","lastPublished":"2021-06-04T21:02:23.335Z","currentVersion":{"major":1,"minor":0,"iteration":0,"displayVersion":"1.0.0","indexVersion":"1_0_0"},"revisions":["60ba94133b5c7ca3f50a4821","60ba94c03b5c7ca3f50a482f"],"status":"Published","draftCount":1,"versions":{"1_0_0":"60ba94c03b5c7ca3f50a482f"}},{"id":"60ba99083b5c7ca3f50a4840","title":"Audit Methodology MF Add New Release ","organization":"5f950768fc13ae0ade000001","engagementType":"60ba93bab7759fc69b311cb3","createdById":"eb4b99c6-9626-4e1c-a0a7-378a96aec7e7","creationDate":"2021-06-04T21:20:08.708Z","lastPublished":"2021-06-04T22:05:53.159Z","currentVersion":{"major":1,"minor":0,"iteration":1,"displayVersion":"1.0.1","indexVersion":"1_0_1"},"revisions":["60ba99083b5c7ca3f50a4842","60baa0d13b5c7ca3f50a485c","60baa3b03b5c7ca3f50a4886"],"status":"Published","draftCount":1,"versions":{"1_0_1":"60baa3b03b5c7ca3f50a4886"}},{"id":"60bdb1403b5c7ca3f50a48a2","title":"Automation Release","organization":"5f950768fc13ae0ade000001","engagementType":"60bdb12cb7759fc69b311cb8","createdById":"23cec279-9302-4a25-84ef-ae69e56b1524","creationDate":"2021-06-07T05:40:16.018Z","revisions":["60bdb1403b5c7ca3f50a48a4"],"status":"NotPublished","draftCount":1,"versions":{}},{"id":"60bdb79e3b5c7ca3f50a48c8","title":"Automation Release","organization":"5f950768fc13ae0ade000001","engagementType":"60bdb788b7759fc69b311cbf","createdById":"23cec279-9302-4a25-84ef-ae69e56b1524","creationDate":"2021-06-07T06:07:26.22Z","revisions":["60bdb79e3b5c7ca3f50a48ca"],"status":"NotPublished","draftCount":1,"versions":{}},{"id":"60bdc33a3b5c7ca3f50a48ee","title":"Performance Methodology","organization":"5f950768fc13ae0ade000001","engagementType":"60bdc327b7759fc69b311cc6","createdById":"4fe9982f-6386-4f4b-800c-bab51c74ded2","creationDate":"2021-06-07T06:56:58.231Z","revisions":["60bdc33a3b5c7ca3f50a48f0"],"status":"NotPublished","draftCount":1,"versions":{}},{"id":"60bdcf553b5c7ca3f50a49c6","title":"API Methodology Sprint 12","organization":"5f950768fc13ae0ade000001","engagementType":"60bdcf30b7759fc69b311cea","createdById":"5f9f190d-69c9-4660-9d82-9b47f4432513","creationDate":"2021-06-07T07:48:37.794Z","revisions":["60bdcf553b5c7ca3f50a49c8"],"status":"NotPublished","draftCount":1,"versions":{}},{"id":"60bdd6f83b5c7ca3f50a4a02","title":"Automation_Publishing","organization":"5f950768fc13ae0ade000001","engagementType":"60bdb788b7759fc69b311cbf","createdById":"23cec279-9302-4a25-84ef-ae69e56b1524","creationDate":"2021-06-07T08:21:12.949Z","revisions":["60bdd6f83b5c7ca3f50a4a04"],"status":"NotPublished","draftCount":1,"versions":{}}]"
+2021-06-07 16:20:45,248 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager  - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@24855019
+2021-06-07 16:20:45,249 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager  - Connection can be kept alive indefinitely
+2021-06-07 16:20:45,381 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager  - Get connection for route {s}->https://mmsqa.leap.gtinet.org:443
+2021-06-07 16:20:45,381 [DEBUG] org.apache.http.impl.conn.DefaultClientConnectionOperator  - Connecting to mmsqa.leap.gtinet.org:443
+2021-06-07 16:20:46,255 [DEBUG] org.apache.http.client.protocol.RequestAddCookies  - CookieSpec selected: ignoreCookies
+2021-06-07 16:20:46,256 [DEBUG] org.apache.http.client.protocol.RequestAuthCache  - Auth cache not set in the context
+2021-06-07 16:20:46,256 [DEBUG] org.apache.http.client.protocol.RequestProxyAuthentication  - Proxy auth state: UNCHALLENGED
+2021-06-07 16:20:46,256 [DEBUG] org.apache.http.impl.client.DefaultHttpClient  - Attempt 1 to execute request
+2021-06-07 16:20:46,256 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection  - Sending request: POST /api/methodologyItem/revision/60ba99083b5c7ca3f50a4842/item HTTP/1.1
+2021-06-07 16:20:46,256 [DEBUG] org.apache.http.wire  -  >> "POST /api/methodologyItem/revision/60ba99083b5c7ca3f50a4842/item HTTP/1.1[\r][\n]"
+2021-06-07 16:20:46,258 [DEBUG] org.apache.http.wire  -  >> "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiI3ZTc0OThlNy1hZjZjLTQ3YmQtYmYxNi00ZjljNWQ5NjAxYzgiLCJpc3MiOiJodHRwczovL2xvZ2luLm1pY3Jvc29mdG9ubGluZS5jb20vYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4L3YyLjAiLCJpYXQiOjE2MjMwNjIyNTYsIm5iZiI6MTYyMzA2MjI1NiwiZXhwIjoxNjIzMDY2MTU2LCJhaW8iOiJBVVFBdS84VEFBQUFTOFhtajFhL1JYblRyd2Era25zMUpUQklSdWp2SkkzbDNFTzJGQVo0aHU0WmJQQVJCSzZyVFJWRUx4Rk9nNmxra1MzcldtamhmSHFFRk56VXlLNWE3QT09IiwiaWRwIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvMGI4ZjY3NzAtYTQ5MC00OTVkLTg4M2YtZGM5ZjZiYWUzODRlLyIsIm5hbWUiOiJNTVMgVGVzdCBBcGFjIDE2Iiwibm9uY2UiOiJhYTA5N2U4NC1kOGZhLTQ4OTctYTg0NC1lMGE4MDczMzI1NzIiLCJvaWQiOiI1ZjlmMTkwZC02OWM5LTQ2NjAtOWQ4Mi05YjQ3ZjQ0MzI1MTMiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJtbXMudGVzdC5hcGFjLjE2QGd0YWRob2MuZ3QuY29tIiwicmgiOiIwLkFSc0FpN2R0cDBYWk9rcTdRdjBFRWZXTDJPZVlkSDVzcjcxSHZ4WlBuRjJXQWNnYkFINC4iLCJzdWIiOiJVMGItREc5Q2xaTjZXbDFWVWcxYXdVVGdrOTFWNWhWb1RHMWF4bzBadlBrIiwidGlkIjoiYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4IiwidXRpIjoiclNRU0hoOTFpa3k3T2FBajJhb2dBUSIsInZlciI6IjIuMCIsIm1lbWJlcmZpcm1pZCI6ImFwYWMudGVzdCJ9.BQE3i0LrLMi1s2H5WdALujT_n3LY4SwIXfEDMag9otiSaP0O6fyRCTgkiXjg2NYAp9KYJ7bKewj8rF0IuzPXic6Q1vrKAPadlIvv4ytY-CDi5yF0MrEZpbKd_pY7bY3mO50OMvlafi6irtrE2n9cIOXIlw2xUckXt6aaW9EZY2gwEBjTC6BqFRAVLwRATEVe9Y76_dgsed8f_TE8-bqjPypo_VIDEhpT0cva6RaNpngq_h7wPJvAFjFhCMf-2_qlNQHI7LoGya16cOpmrqvGYspI89qXzm5sO1eDDBeWV37H_p24j7LMcrNKgOYnovOK8xbI2mCFYI2AcU26sCG9sQ[\r][\n]"
+2021-06-07 16:20:46,258 [DEBUG] org.apache.http.wire  -  >> "Accept: */*[\r][\n]"
+2021-06-07 16:20:46,258 [DEBUG] org.apache.http.wire  -  >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+2021-06-07 16:20:46,258 [DEBUG] org.apache.http.wire  -  >> "Content-Length: 51[\r][\n]"
+2021-06-07 16:20:46,259 [DEBUG] org.apache.http.wire  -  >> "Host: mmsqa.leap.gtinet.org[\r][\n]"
+2021-06-07 16:20:46,259 [DEBUG] org.apache.http.wire  -  >> "Connection: Keep-Alive[\r][\n]"
+2021-06-07 16:20:46,259 [DEBUG] org.apache.http.wire  -  >> "User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_151)[\r][\n]"
+2021-06-07 16:20:46,259 [DEBUG] org.apache.http.wire  -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2021-06-07 16:20:46,259 [DEBUG] org.apache.http.wire  -  >> "[\r][\n]"
+2021-06-07 16:20:46,260 [DEBUG] org.apache.http.headers  - >> POST /api/methodologyItem/revision/60ba99083b5c7ca3f50a4842/item HTTP/1.1
+2021-06-07 16:20:46,260 [DEBUG] org.apache.http.headers  - >> Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiI3ZTc0OThlNy1hZjZjLTQ3YmQtYmYxNi00ZjljNWQ5NjAxYzgiLCJpc3MiOiJodHRwczovL2xvZ2luLm1pY3Jvc29mdG9ubGluZS5jb20vYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4L3YyLjAiLCJpYXQiOjE2MjMwNjIyNTYsIm5iZiI6MTYyMzA2MjI1NiwiZXhwIjoxNjIzMDY2MTU2LCJhaW8iOiJBVVFBdS84VEFBQUFTOFhtajFhL1JYblRyd2Era25zMUpUQklSdWp2SkkzbDNFTzJGQVo0aHU0WmJQQVJCSzZyVFJWRUx4Rk9nNmxra1MzcldtamhmSHFFRk56VXlLNWE3QT09IiwiaWRwIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvMGI4ZjY3NzAtYTQ5MC00OTVkLTg4M2YtZGM5ZjZiYWUzODRlLyIsIm5hbWUiOiJNTVMgVGVzdCBBcGFjIDE2Iiwibm9uY2UiOiJhYTA5N2U4NC1kOGZhLTQ4OTctYTg0NC1lMGE4MDczMzI1NzIiLCJvaWQiOiI1ZjlmMTkwZC02OWM5LTQ2NjAtOWQ4Mi05YjQ3ZjQ0MzI1MTMiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJtbXMudGVzdC5hcGFjLjE2QGd0YWRob2MuZ3QuY29tIiwicmgiOiIwLkFSc0FpN2R0cDBYWk9rcTdRdjBFRWZXTDJPZVlkSDVzcjcxSHZ4WlBuRjJXQWNnYkFINC4iLCJzdWIiOiJVMGItREc5Q2xaTjZXbDFWVWcxYXdVVGdrOTFWNWhWb1RHMWF4bzBadlBrIiwidGlkIjoiYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4IiwidXRpIjoiclNRU0hoOTFpa3k3T2FBajJhb2dBUSIsInZlciI6IjIuMCIsIm1lbWJlcmZpcm1pZCI6ImFwYWMudGVzdCJ9.BQE3i0LrLMi1s2H5WdALujT_n3LY4SwIXfEDMag9otiSaP0O6fyRCTgkiXjg2NYAp9KYJ7bKewj8rF0IuzPXic6Q1vrKAPadlIvv4ytY-CDi5yF0MrEZpbKd_pY7bY3mO50OMvlafi6irtrE2n9cIOXIlw2xUckXt6aaW9EZY2gwEBjTC6BqFRAVLwRATEVe9Y76_dgsed8f_TE8-bqjPypo_VIDEhpT0cva6RaNpngq_h7wPJvAFjFhCMf-2_qlNQHI7LoGya16cOpmrqvGYspI89qXzm5sO1eDDBeWV37H_p24j7LMcrNKgOYnovOK8xbI2mCFYI2AcU26sCG9sQ
+2021-06-07 16:20:46,260 [DEBUG] org.apache.http.headers  - >> Accept: */*
+2021-06-07 16:20:46,260 [DEBUG] org.apache.http.headers  - >> Content-Type: application/json; charset=UTF-8
+2021-06-07 16:20:46,261 [DEBUG] org.apache.http.headers  - >> Content-Length: 51
+2021-06-07 16:20:46,261 [DEBUG] org.apache.http.headers  - >> Host: mmsqa.leap.gtinet.org
+2021-06-07 16:20:46,261 [DEBUG] org.apache.http.headers  - >> Connection: Keep-Alive
+2021-06-07 16:20:46,261 [DEBUG] org.apache.http.headers  - >> User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_151)
+2021-06-07 16:20:46,261 [DEBUG] org.apache.http.headers  - >> Accept-Encoding: gzip,deflate
+2021-06-07 16:20:46,262 [DEBUG] org.apache.http.wire  -  >> "{"title":"Phase12","index":"0","itemType":"Folder"}"
+2021-06-07 16:20:46,535 [DEBUG] org.apache.http.wire  -  << "HTTP/1.1 200 OK[\r][\n]"
+2021-06-07 16:20:46,536 [DEBUG] org.apache.http.wire  -  << "Date: Mon, 07 Jun 2021 10:52:50 GMT[\r][\n]"
+2021-06-07 16:20:46,536 [DEBUG] org.apache.http.wire  -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2021-06-07 16:20:46,536 [DEBUG] org.apache.http.wire  -  << "Content-Length: 291[\r][\n]"
+2021-06-07 16:20:46,536 [DEBUG] org.apache.http.wire  -  << "Connection: keep-alive[\r][\n]"
+2021-06-07 16:20:46,537 [DEBUG] org.apache.http.wire  -  << "Strict-Transport-Security: max-age=63072000; includeSubDomains; preload[\r][\n]"
+2021-06-07 16:20:46,537 [DEBUG] org.apache.http.wire  -  << "X-XSS-Protection: 1; mode=block[\r][\n]"
+2021-06-07 16:20:46,537 [DEBUG] org.apache.http.wire  -  << "X-Frame-Options: SAMEORIGIN[\r][\n]"
+2021-06-07 16:20:46,537 [DEBUG] org.apache.http.wire  -  << "X-Content-Type-Options: nosniff[\r][\n]"
+2021-06-07 16:20:46,537 [DEBUG] org.apache.http.wire  -  << "Referrer-Policy: strict-origin[\r][\n]"
+2021-06-07 16:20:46,537 [DEBUG] org.apache.http.wire  -  << "[\r][\n]"
+2021-06-07 16:20:46,538 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection  - Receiving response: HTTP/1.1 200 OK
+2021-06-07 16:20:46,538 [DEBUG] org.apache.http.headers  - << HTTP/1.1 200 OK
+2021-06-07 16:20:46,538 [DEBUG] org.apache.http.headers  - << Date: Mon, 07 Jun 2021 10:52:50 GMT
+2021-06-07 16:20:46,538 [DEBUG] org.apache.http.headers  - << Content-Type: application/json; charset=utf-8
+2021-06-07 16:20:46,538 [DEBUG] org.apache.http.headers  - << Content-Length: 291
+2021-06-07 16:20:46,538 [DEBUG] org.apache.http.headers  - << Connection: keep-alive
+2021-06-07 16:20:46,538 [DEBUG] org.apache.http.headers  - << Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+2021-06-07 16:20:46,538 [DEBUG] org.apache.http.headers  - << X-XSS-Protection: 1; mode=block
+2021-06-07 16:20:46,538 [DEBUG] org.apache.http.headers  - << X-Frame-Options: SAMEORIGIN
+2021-06-07 16:20:46,538 [DEBUG] org.apache.http.headers  - << X-Content-Type-Options: nosniff
+2021-06-07 16:20:46,539 [DEBUG] org.apache.http.headers  - << Referrer-Policy: strict-origin
+2021-06-07 16:20:46,539 [DEBUG] org.apache.http.impl.client.DefaultHttpClient  - Connection can be kept alive indefinitely
+2021-06-07 16:20:46,540 [DEBUG] io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder  - Parsing response as: application/json; charset=utf-8
+2021-06-07 16:20:46,540 [DEBUG] io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder  - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+2021-06-07 16:20:46,542 [DEBUG] org.apache.http.wire  -  << "{"revisionId":"60ba99083b5c7ca3f50a4842","methodologyItemId":"60bdfa82512276300ed54193","title":"Phase12","itemType":"Folder","workFlowState":"Draft","updatedOn":"2021-06-07T10:52:50.2298162Z","updatedBy":"5f9f190d-69c9-4660-9d82-9b47f4432513","updated":true,"id":"60bdfa82512276300ed54194"}"
+2021-06-07 16:20:46,542 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager  - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@67fe380b
+2021-06-07 16:20:46,543 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager  - Connection can be kept alive indefinitely
+2021-06-07 16:20:46,580 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager  - Get connection for route {s}->https://mmsqa.leap.gtinet.org:443
+2021-06-07 16:20:46,580 [DEBUG] org.apache.http.impl.conn.DefaultClientConnectionOperator  - Connecting to mmsqa.leap.gtinet.org:443
+2021-06-07 16:20:47,456 [DEBUG] org.apache.http.client.protocol.RequestAddCookies  - CookieSpec selected: ignoreCookies
+2021-06-07 16:20:47,456 [DEBUG] org.apache.http.client.protocol.RequestAuthCache  - Auth cache not set in the context
+2021-06-07 16:20:47,456 [DEBUG] org.apache.http.client.protocol.RequestProxyAuthentication  - Proxy auth state: UNCHALLENGED
+2021-06-07 16:20:47,456 [DEBUG] org.apache.http.impl.client.DefaultHttpClient  - Attempt 1 to execute request
+2021-06-07 16:20:47,456 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection  - Sending request: POST /api/methodologyItem/revision/60ba99083b5c7ca3f50a4842/item HTTP/1.1
+2021-06-07 16:20:47,456 [DEBUG] org.apache.http.wire  -  >> "POST /api/methodologyItem/revision/60ba99083b5c7ca3f50a4842/item HTTP/1.1[\r][\n]"
+2021-06-07 16:20:47,456 [DEBUG] org.apache.http.wire  -  >> "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiI3ZTc0OThlNy1hZjZjLTQ3YmQtYmYxNi00ZjljNWQ5NjAxYzgiLCJpc3MiOiJodHRwczovL2xvZ2luLm1pY3Jvc29mdG9ubGluZS5jb20vYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4L3YyLjAiLCJpYXQiOjE2MjMwNjIyNTYsIm5iZiI6MTYyMzA2MjI1NiwiZXhwIjoxNjIzMDY2MTU2LCJhaW8iOiJBVVFBdS84VEFBQUFTOFhtajFhL1JYblRyd2Era25zMUpUQklSdWp2SkkzbDNFTzJGQVo0aHU0WmJQQVJCSzZyVFJWRUx4Rk9nNmxra1MzcldtamhmSHFFRk56VXlLNWE3QT09IiwiaWRwIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvMGI4ZjY3NzAtYTQ5MC00OTVkLTg4M2YtZGM5ZjZiYWUzODRlLyIsIm5hbWUiOiJNTVMgVGVzdCBBcGFjIDE2Iiwibm9uY2UiOiJhYTA5N2U4NC1kOGZhLTQ4OTctYTg0NC1lMGE4MDczMzI1NzIiLCJvaWQiOiI1ZjlmMTkwZC02OWM5LTQ2NjAtOWQ4Mi05YjQ3ZjQ0MzI1MTMiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJtbXMudGVzdC5hcGFjLjE2QGd0YWRob2MuZ3QuY29tIiwicmgiOiIwLkFSc0FpN2R0cDBYWk9rcTdRdjBFRWZXTDJPZVlkSDVzcjcxSHZ4WlBuRjJXQWNnYkFINC4iLCJzdWIiOiJVMGItREc5Q2xaTjZXbDFWVWcxYXdVVGdrOTFWNWhWb1RHMWF4bzBadlBrIiwidGlkIjoiYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4IiwidXRpIjoiclNRU0hoOTFpa3k3T2FBajJhb2dBUSIsInZlciI6IjIuMCIsIm1lbWJlcmZpcm1pZCI6ImFwYWMudGVzdCJ9.BQE3i0LrLMi1s2H5WdALujT_n3LY4SwIXfEDMag9otiSaP0O6fyRCTgkiXjg2NYAp9KYJ7bKewj8rF0IuzPXic6Q1vrKAPadlIvv4ytY-CDi5yF0MrEZpbKd_pY7bY3mO50OMvlafi6irtrE2n9cIOXIlw2xUckXt6aaW9EZY2gwEBjTC6BqFRAVLwRATEVe9Y76_dgsed8f_TE8-bqjPypo_VIDEhpT0cva6RaNpngq_h7wPJvAFjFhCMf-2_qlNQHI7LoGya16cOpmrqvGYspI89qXzm5sO1eDDBeWV37H_p24j7LMcrNKgOYnovOK8xbI2mCFYI2AcU26sCG9sQ[\r][\n]"
+2021-06-07 16:20:47,457 [DEBUG] org.apache.http.wire  -  >> "Accept: */*[\r][\n]"
+2021-06-07 16:20:47,457 [DEBUG] org.apache.http.wire  -  >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+2021-06-07 16:20:47,457 [DEBUG] org.apache.http.wire  -  >> "Content-Length: 94[\r][\n]"
+2021-06-07 16:20:47,457 [DEBUG] org.apache.http.wire  -  >> "Host: mmsqa.leap.gtinet.org[\r][\n]"
+2021-06-07 16:20:47,457 [DEBUG] org.apache.http.wire  -  >> "Connection: Keep-Alive[\r][\n]"
+2021-06-07 16:20:47,457 [DEBUG] org.apache.http.wire  -  >> "User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_151)[\r][\n]"
+2021-06-07 16:20:47,457 [DEBUG] org.apache.http.wire  -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2021-06-07 16:20:47,457 [DEBUG] org.apache.http.wire  -  >> "[\r][\n]"
+2021-06-07 16:20:47,457 [DEBUG] org.apache.http.headers  - >> POST /api/methodologyItem/revision/60ba99083b5c7ca3f50a4842/item HTTP/1.1
+2021-06-07 16:20:47,457 [DEBUG] org.apache.http.headers  - >> Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiI3ZTc0OThlNy1hZjZjLTQ3YmQtYmYxNi00ZjljNWQ5NjAxYzgiLCJpc3MiOiJodHRwczovL2xvZ2luLm1pY3Jvc29mdG9ubGluZS5jb20vYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4L3YyLjAiLCJpYXQiOjE2MjMwNjIyNTYsIm5iZiI6MTYyMzA2MjI1NiwiZXhwIjoxNjIzMDY2MTU2LCJhaW8iOiJBVVFBdS84VEFBQUFTOFhtajFhL1JYblRyd2Era25zMUpUQklSdWp2SkkzbDNFTzJGQVo0aHU0WmJQQVJCSzZyVFJWRUx4Rk9nNmxra1MzcldtamhmSHFFRk56VXlLNWE3QT09IiwiaWRwIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvMGI4ZjY3NzAtYTQ5MC00OTVkLTg4M2YtZGM5ZjZiYWUzODRlLyIsIm5hbWUiOiJNTVMgVGVzdCBBcGFjIDE2Iiwibm9uY2UiOiJhYTA5N2U4NC1kOGZhLTQ4OTctYTg0NC1lMGE4MDczMzI1NzIiLCJvaWQiOiI1ZjlmMTkwZC02OWM5LTQ2NjAtOWQ4Mi05YjQ3ZjQ0MzI1MTMiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJtbXMudGVzdC5hcGFjLjE2QGd0YWRob2MuZ3QuY29tIiwicmgiOiIwLkFSc0FpN2R0cDBYWk9rcTdRdjBFRWZXTDJPZVlkSDVzcjcxSHZ4WlBuRjJXQWNnYkFINC4iLCJzdWIiOiJVMGItREc5Q2xaTjZXbDFWVWcxYXdVVGdrOTFWNWhWb1RHMWF4bzBadlBrIiwidGlkIjoiYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4IiwidXRpIjoiclNRU0hoOTFpa3k3T2FBajJhb2dBUSIsInZlciI6IjIuMCIsIm1lbWJlcmZpcm1pZCI6ImFwYWMudGVzdCJ9.BQE3i0LrLMi1s2H5WdALujT_n3LY4SwIXfEDMag9otiSaP0O6fyRCTgkiXjg2NYAp9KYJ7bKewj8rF0IuzPXic6Q1vrKAPadlIvv4ytY-CDi5yF0MrEZpbKd_pY7bY3mO50OMvlafi6irtrE2n9cIOXIlw2xUckXt6aaW9EZY2gwEBjTC6BqFRAVLwRATEVe9Y76_dgsed8f_TE8-bqjPypo_VIDEhpT0cva6RaNpngq_h7wPJvAFjFhCMf-2_qlNQHI7LoGya16cOpmrqvGYspI89qXzm5sO1eDDBeWV37H_p24j7LMcrNKgOYnovOK8xbI2mCFYI2AcU26sCG9sQ
+2021-06-07 16:20:47,457 [DEBUG] org.apache.http.headers  - >> Accept: */*
+2021-06-07 16:20:47,457 [DEBUG] org.apache.http.headers  - >> Content-Type: application/json; charset=UTF-8
+2021-06-07 16:20:47,457 [DEBUG] org.apache.http.headers  - >> Content-Length: 94
+2021-06-07 16:20:47,457 [DEBUG] org.apache.http.headers  - >> Host: mmsqa.leap.gtinet.org
+2021-06-07 16:20:47,457 [DEBUG] org.apache.http.headers  - >> Connection: Keep-Alive
+2021-06-07 16:20:47,457 [DEBUG] org.apache.http.headers  - >> User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_151)
+2021-06-07 16:20:47,457 [DEBUG] org.apache.http.headers  - >> Accept-Encoding: gzip,deflate
+2021-06-07 16:20:47,458 [DEBUG] org.apache.http.wire  -  >> "{"title":"Phase11","index":"0","itemType":"WorkProgram","parentId":"60bdfa82512276300ed54193"}"
+2021-06-07 16:20:47,751 [DEBUG] org.apache.http.wire  -  << "HTTP/1.1 200 OK[\r][\n]"
+2021-06-07 16:20:47,751 [DEBUG] org.apache.http.wire  -  << "Date: Mon, 07 Jun 2021 10:52:51 GMT[\r][\n]"
+2021-06-07 16:20:47,751 [DEBUG] org.apache.http.wire  -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2021-06-07 16:20:47,752 [DEBUG] org.apache.http.wire  -  << "Content-Length: 296[\r][\n]"
+2021-06-07 16:20:47,752 [DEBUG] org.apache.http.wire  -  << "Connection: keep-alive[\r][\n]"
+2021-06-07 16:20:47,752 [DEBUG] org.apache.http.wire  -  << "Strict-Transport-Security: max-age=63072000; includeSubDomains; preload[\r][\n]"
+2021-06-07 16:20:47,752 [DEBUG] org.apache.http.wire  -  << "X-XSS-Protection: 1; mode=block[\r][\n]"
+2021-06-07 16:20:47,752 [DEBUG] org.apache.http.wire  -  << "X-Frame-Options: SAMEORIGIN[\r][\n]"
+2021-06-07 16:20:47,752 [DEBUG] org.apache.http.wire  -  << "X-Content-Type-Options: nosniff[\r][\n]"
+2021-06-07 16:20:47,752 [DEBUG] org.apache.http.wire  -  << "Referrer-Policy: strict-origin[\r][\n]"
+2021-06-07 16:20:47,752 [DEBUG] org.apache.http.wire  -  << "[\r][\n]"
+2021-06-07 16:20:47,752 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection  - Receiving response: HTTP/1.1 200 OK
+2021-06-07 16:20:47,752 [DEBUG] org.apache.http.headers  - << HTTP/1.1 200 OK
+2021-06-07 16:20:47,752 [DEBUG] org.apache.http.headers  - << Date: Mon, 07 Jun 2021 10:52:51 GMT
+2021-06-07 16:20:47,752 [DEBUG] org.apache.http.headers  - << Content-Type: application/json; charset=utf-8
+2021-06-07 16:20:47,752 [DEBUG] org.apache.http.headers  - << Content-Length: 296
+2021-06-07 16:20:47,752 [DEBUG] org.apache.http.headers  - << Connection: keep-alive
+2021-06-07 16:20:47,752 [DEBUG] org.apache.http.headers  - << Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+2021-06-07 16:20:47,752 [DEBUG] org.apache.http.headers  - << X-XSS-Protection: 1; mode=block
+2021-06-07 16:20:47,752 [DEBUG] org.apache.http.headers  - << X-Frame-Options: SAMEORIGIN
+2021-06-07 16:20:47,752 [DEBUG] org.apache.http.headers  - << X-Content-Type-Options: nosniff
+2021-06-07 16:20:47,752 [DEBUG] org.apache.http.headers  - << Referrer-Policy: strict-origin
+2021-06-07 16:20:47,752 [DEBUG] org.apache.http.impl.client.DefaultHttpClient  - Connection can be kept alive indefinitely
+2021-06-07 16:20:47,752 [DEBUG] io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder  - Parsing response as: application/json; charset=utf-8
+2021-06-07 16:20:47,753 [DEBUG] io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder  - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+2021-06-07 16:20:47,754 [DEBUG] org.apache.http.wire  -  << "{"revisionId":"60ba99083b5c7ca3f50a4842","methodologyItemId":"60bdfa83512276300ed54195","title":"Phase11","itemType":"WorkProgram","workFlowState":"Draft","updatedOn":"2021-06-07T10:52:51.4507301Z","updatedBy":"5f9f190d-69c9-4660-9d82-9b47f4432513","updated":true,"id":"60bdfa83512276300ed54196"}"
+2021-06-07 16:20:47,754 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager  - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@138a7441
+2021-06-07 16:20:47,754 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager  - Connection can be kept alive indefinitely
+2021-06-07 16:20:47,780 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager  - Get connection for route {s}->https://mmsqa.leap.gtinet.org:443
+2021-06-07 16:20:47,780 [DEBUG] org.apache.http.impl.conn.DefaultClientConnectionOperator  - Connecting to mmsqa.leap.gtinet.org:443
+2021-06-07 16:20:48,657 [DEBUG] org.apache.http.client.protocol.RequestAddCookies  - CookieSpec selected: ignoreCookies
+2021-06-07 16:20:48,657 [DEBUG] org.apache.http.client.protocol.RequestAuthCache  - Auth cache not set in the context
+2021-06-07 16:20:48,657 [DEBUG] org.apache.http.client.protocol.RequestProxyAuthentication  - Proxy auth state: UNCHALLENGED
+2021-06-07 16:20:48,657 [DEBUG] org.apache.http.impl.client.DefaultHttpClient  - Attempt 1 to execute request
+2021-06-07 16:20:48,657 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection  - Sending request: PATCH /api/methodologyItem/revision/60ba99083b5c7ca3f50a4842/item/60bdfa83512276300ed54195 HTTP/1.1
+2021-06-07 16:20:48,657 [DEBUG] org.apache.http.wire  -  >> "PATCH /api/methodologyItem/revision/60ba99083b5c7ca3f50a4842/item/60bdfa83512276300ed54195 HTTP/1.1[\r][\n]"
+2021-06-07 16:20:48,658 [DEBUG] org.apache.http.wire  -  >> "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiI3ZTc0OThlNy1hZjZjLTQ3YmQtYmYxNi00ZjljNWQ5NjAxYzgiLCJpc3MiOiJodHRwczovL2xvZ2luLm1pY3Jvc29mdG9ubGluZS5jb20vYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4L3YyLjAiLCJpYXQiOjE2MjMwNjIyNTYsIm5iZiI6MTYyMzA2MjI1NiwiZXhwIjoxNjIzMDY2MTU2LCJhaW8iOiJBVVFBdS84VEFBQUFTOFhtajFhL1JYblRyd2Era25zMUpUQklSdWp2SkkzbDNFTzJGQVo0aHU0WmJQQVJCSzZyVFJWRUx4Rk9nNmxra1MzcldtamhmSHFFRk56VXlLNWE3QT09IiwiaWRwIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvMGI4ZjY3NzAtYTQ5MC00OTVkLTg4M2YtZGM5ZjZiYWUzODRlLyIsIm5hbWUiOiJNTVMgVGVzdCBBcGFjIDE2Iiwibm9uY2UiOiJhYTA5N2U4NC1kOGZhLTQ4OTctYTg0NC1lMGE4MDczMzI1NzIiLCJvaWQiOiI1ZjlmMTkwZC02OWM5LTQ2NjAtOWQ4Mi05YjQ3ZjQ0MzI1MTMiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJtbXMudGVzdC5hcGFjLjE2QGd0YWRob2MuZ3QuY29tIiwicmgiOiIwLkFSc0FpN2R0cDBYWk9rcTdRdjBFRWZXTDJPZVlkSDVzcjcxSHZ4WlBuRjJXQWNnYkFINC4iLCJzdWIiOiJVMGItREc5Q2xaTjZXbDFWVWcxYXdVVGdrOTFWNWhWb1RHMWF4bzBadlBrIiwidGlkIjoiYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4IiwidXRpIjoiclNRU0hoOTFpa3k3T2FBajJhb2dBUSIsInZlciI6IjIuMCIsIm1lbWJlcmZpcm1pZCI6ImFwYWMudGVzdCJ9.BQE3i0LrLMi1s2H5WdALujT_n3LY4SwIXfEDMag9otiSaP0O6fyRCTgkiXjg2NYAp9KYJ7bKewj8rF0IuzPXic6Q1vrKAPadlIvv4ytY-CDi5yF0MrEZpbKd_pY7bY3mO50OMvlafi6irtrE2n9cIOXIlw2xUckXt6aaW9EZY2gwEBjTC6BqFRAVLwRATEVe9Y76_dgsed8f_TE8-bqjPypo_VIDEhpT0cva6RaNpngq_h7wPJvAFjFhCMf-2_qlNQHI7LoGya16cOpmrqvGYspI89qXzm5sO1eDDBeWV37H_p24j7LMcrNKgOYnovOK8xbI2mCFYI2AcU26sCG9sQ[\r][\n]"
+2021-06-07 16:20:48,658 [DEBUG] org.apache.http.wire  -  >> "Accept: */*[\r][\n]"
+2021-06-07 16:20:48,658 [DEBUG] org.apache.http.wire  -  >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+2021-06-07 16:20:48,658 [DEBUG] org.apache.http.wire  -  >> "Content-Length: 78[\r][\n]"
+2021-06-07 16:20:48,658 [DEBUG] org.apache.http.wire  -  >> "Host: mmsqa.leap.gtinet.org[\r][\n]"
+2021-06-07 16:20:48,658 [DEBUG] org.apache.http.wire  -  >> "Connection: Keep-Alive[\r][\n]"
+2021-06-07 16:20:48,658 [DEBUG] org.apache.http.wire  -  >> "User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_151)[\r][\n]"
+2021-06-07 16:20:48,658 [DEBUG] org.apache.http.wire  -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2021-06-07 16:20:48,658 [DEBUG] org.apache.http.wire  -  >> "[\r][\n]"
+2021-06-07 16:20:48,658 [DEBUG] org.apache.http.headers  - >> PATCH /api/methodologyItem/revision/60ba99083b5c7ca3f50a4842/item/60bdfa83512276300ed54195 HTTP/1.1
+2021-06-07 16:20:48,658 [DEBUG] org.apache.http.headers  - >> Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiI3ZTc0OThlNy1hZjZjLTQ3YmQtYmYxNi00ZjljNWQ5NjAxYzgiLCJpc3MiOiJodHRwczovL2xvZ2luLm1pY3Jvc29mdG9ubGluZS5jb20vYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4L3YyLjAiLCJpYXQiOjE2MjMwNjIyNTYsIm5iZiI6MTYyMzA2MjI1NiwiZXhwIjoxNjIzMDY2MTU2LCJhaW8iOiJBVVFBdS84VEFBQUFTOFhtajFhL1JYblRyd2Era25zMUpUQklSdWp2SkkzbDNFTzJGQVo0aHU0WmJQQVJCSzZyVFJWRUx4Rk9nNmxra1MzcldtamhmSHFFRk56VXlLNWE3QT09IiwiaWRwIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvMGI4ZjY3NzAtYTQ5MC00OTVkLTg4M2YtZGM5ZjZiYWUzODRlLyIsIm5hbWUiOiJNTVMgVGVzdCBBcGFjIDE2Iiwibm9uY2UiOiJhYTA5N2U4NC1kOGZhLTQ4OTctYTg0NC1lMGE4MDczMzI1NzIiLCJvaWQiOiI1ZjlmMTkwZC02OWM5LTQ2NjAtOWQ4Mi05YjQ3ZjQ0MzI1MTMiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJtbXMudGVzdC5hcGFjLjE2QGd0YWRob2MuZ3QuY29tIiwicmgiOiIwLkFSc0FpN2R0cDBYWk9rcTdRdjBFRWZXTDJPZVlkSDVzcjcxSHZ4WlBuRjJXQWNnYkFINC4iLCJzdWIiOiJVMGItREc5Q2xaTjZXbDFWVWcxYXdVVGdrOTFWNWhWb1RHMWF4bzBadlBrIiwidGlkIjoiYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4IiwidXRpIjoiclNRU0hoOTFpa3k3T2FBajJhb2dBUSIsInZlciI6IjIuMCIsIm1lbWJlcmZpcm1pZCI6ImFwYWMudGVzdCJ9.BQE3i0LrLMi1s2H5WdALujT_n3LY4SwIXfEDMag9otiSaP0O6fyRCTgkiXjg2NYAp9KYJ7bKewj8rF0IuzPXic6Q1vrKAPadlIvv4ytY-CDi5yF0MrEZpbKd_pY7bY3mO50OMvlafi6irtrE2n9cIOXIlw2xUckXt6aaW9EZY2gwEBjTC6BqFRAVLwRATEVe9Y76_dgsed8f_TE8-bqjPypo_VIDEhpT0cva6RaNpngq_h7wPJvAFjFhCMf-2_qlNQHI7LoGya16cOpmrqvGYspI89qXzm5sO1eDDBeWV37H_p24j7LMcrNKgOYnovOK8xbI2mCFYI2AcU26sCG9sQ
+2021-06-07 16:20:48,658 [DEBUG] org.apache.http.headers  - >> Accept: */*
+2021-06-07 16:20:48,658 [DEBUG] org.apache.http.headers  - >> Content-Type: application/json; charset=UTF-8
+2021-06-07 16:20:48,658 [DEBUG] org.apache.http.headers  - >> Content-Length: 78
+2021-06-07 16:20:48,658 [DEBUG] org.apache.http.headers  - >> Host: mmsqa.leap.gtinet.org
+2021-06-07 16:20:48,658 [DEBUG] org.apache.http.headers  - >> Connection: Keep-Alive
+2021-06-07 16:20:48,658 [DEBUG] org.apache.http.headers  - >> User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_151)
+2021-06-07 16:20:48,658 [DEBUG] org.apache.http.headers  - >> Accept-Encoding: gzip,deflate
+2021-06-07 16:20:48,658 [DEBUG] org.apache.http.wire  -  >> "{"workProgramType":"QuestionAnswer","tailoring":"Allowed","visibility":"Show"}"
+2021-06-07 16:20:48,940 [DEBUG] org.apache.http.wire  -  << "HTTP/1.1 204 No Content[\r][\n]"
+2021-06-07 16:20:48,940 [DEBUG] org.apache.http.wire  -  << "Date: Mon, 07 Jun 2021 10:52:52 GMT[\r][\n]"
+2021-06-07 16:20:48,941 [DEBUG] org.apache.http.wire  -  << "Connection: keep-alive[\r][\n]"
+2021-06-07 16:20:48,941 [DEBUG] org.apache.http.wire  -  << "Strict-Transport-Security: max-age=63072000; includeSubDomains; preload[\r][\n]"
+2021-06-07 16:20:48,941 [DEBUG] org.apache.http.wire  -  << "X-XSS-Protection: 1; mode=block[\r][\n]"
+2021-06-07 16:20:48,941 [DEBUG] org.apache.http.wire  -  << "X-Frame-Options: SAMEORIGIN[\r][\n]"
+2021-06-07 16:20:48,941 [DEBUG] org.apache.http.wire  -  << "X-Content-Type-Options: nosniff[\r][\n]"
+2021-06-07 16:20:48,941 [DEBUG] org.apache.http.wire  -  << "Referrer-Policy: strict-origin[\r][\n]"
+2021-06-07 16:20:48,942 [DEBUG] org.apache.http.wire  -  << "[\r][\n]"
+2021-06-07 16:20:48,942 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection  - Receiving response: HTTP/1.1 204 No Content
+2021-06-07 16:20:48,942 [DEBUG] org.apache.http.headers  - << HTTP/1.1 204 No Content
+2021-06-07 16:20:48,942 [DEBUG] org.apache.http.headers  - << Date: Mon, 07 Jun 2021 10:52:52 GMT
+2021-06-07 16:20:48,942 [DEBUG] org.apache.http.headers  - << Connection: keep-alive
+2021-06-07 16:20:48,942 [DEBUG] org.apache.http.headers  - << Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+2021-06-07 16:20:48,942 [DEBUG] org.apache.http.headers  - << X-XSS-Protection: 1; mode=block
+2021-06-07 16:20:48,942 [DEBUG] org.apache.http.headers  - << X-Frame-Options: SAMEORIGIN
+2021-06-07 16:20:48,942 [DEBUG] org.apache.http.headers  - << X-Content-Type-Options: nosniff
+2021-06-07 16:20:48,943 [DEBUG] org.apache.http.headers  - << Referrer-Policy: strict-origin
+2021-06-07 16:20:48,943 [DEBUG] org.apache.http.impl.client.DefaultHttpClient  - Connection can be kept alive indefinitely
+2021-06-07 16:20:48,943 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager  - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@1a1ed4e5
+2021-06-07 16:20:48,943 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager  - Connection can be kept alive indefinitely
+2021-06-07 16:20:48,953 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager  - Get connection for route {s}->https://mmsqa.leap.gtinet.org:443
+2021-06-07 16:20:48,954 [DEBUG] org.apache.http.impl.conn.DefaultClientConnectionOperator  - Connecting to mmsqa.leap.gtinet.org:443
+2021-06-07 16:20:49,833 [DEBUG] org.apache.http.client.protocol.RequestAddCookies  - CookieSpec selected: ignoreCookies
+2021-06-07 16:20:49,834 [DEBUG] org.apache.http.client.protocol.RequestAuthCache  - Auth cache not set in the context
+2021-06-07 16:20:49,834 [DEBUG] org.apache.http.client.protocol.RequestProxyAuthentication  - Proxy auth state: UNCHALLENGED
+2021-06-07 16:20:49,834 [DEBUG] org.apache.http.impl.client.DefaultHttpClient  - Attempt 1 to execute request
+2021-06-07 16:20:49,834 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection  - Sending request: POST /api/methodologyItem/revision/60ba99083b5c7ca3f50a4842/workProgram/60bdfa83512276300ed54195/initialize HTTP/1.1
+2021-06-07 16:20:49,835 [DEBUG] org.apache.http.wire  -  >> "POST /api/methodologyItem/revision/60ba99083b5c7ca3f50a4842/workProgram/60bdfa83512276300ed54195/initialize HTTP/1.1[\r][\n]"
+2021-06-07 16:20:49,836 [DEBUG] org.apache.http.wire  -  >> "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiI3ZTc0OThlNy1hZjZjLTQ3YmQtYmYxNi00ZjljNWQ5NjAxYzgiLCJpc3MiOiJodHRwczovL2xvZ2luLm1pY3Jvc29mdG9ubGluZS5jb20vYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4L3YyLjAiLCJpYXQiOjE2MjMwNjIyNTYsIm5iZiI6MTYyMzA2MjI1NiwiZXhwIjoxNjIzMDY2MTU2LCJhaW8iOiJBVVFBdS84VEFBQUFTOFhtajFhL1JYblRyd2Era25zMUpUQklSdWp2SkkzbDNFTzJGQVo0aHU0WmJQQVJCSzZyVFJWRUx4Rk9nNmxra1MzcldtamhmSHFFRk56VXlLNWE3QT09IiwiaWRwIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvMGI4ZjY3NzAtYTQ5MC00OTVkLTg4M2YtZGM5ZjZiYWUzODRlLyIsIm5hbWUiOiJNTVMgVGVzdCBBcGFjIDE2Iiwibm9uY2UiOiJhYTA5N2U4NC1kOGZhLTQ4OTctYTg0NC1lMGE4MDczMzI1NzIiLCJvaWQiOiI1ZjlmMTkwZC02OWM5LTQ2NjAtOWQ4Mi05YjQ3ZjQ0MzI1MTMiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJtbXMudGVzdC5hcGFjLjE2QGd0YWRob2MuZ3QuY29tIiwicmgiOiIwLkFSc0FpN2R0cDBYWk9rcTdRdjBFRWZXTDJPZVlkSDVzcjcxSHZ4WlBuRjJXQWNnYkFINC4iLCJzdWIiOiJVMGItREc5Q2xaTjZXbDFWVWcxYXdVVGdrOTFWNWhWb1RHMWF4bzBadlBrIiwidGlkIjoiYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4IiwidXRpIjoiclNRU0hoOTFpa3k3T2FBajJhb2dBUSIsInZlciI6IjIuMCIsIm1lbWJlcmZpcm1pZCI6ImFwYWMudGVzdCJ9.BQE3i0LrLMi1s2H5WdALujT_n3LY4SwIXfEDMag9otiSaP0O6fyRCTgkiXjg2NYAp9KYJ7bKewj8rF0IuzPXic6Q1vrKAPadlIvv4ytY-CDi5yF0MrEZpbKd_pY7bY3mO50OMvlafi6irtrE2n9cIOXIlw2xUckXt6aaW9EZY2gwEBjTC6BqFRAVLwRATEVe9Y76_dgsed8f_TE8-bqjPypo_VIDEhpT0cva6RaNpngq_h7wPJvAFjFhCMf-2_qlNQHI7LoGya16cOpmrqvGYspI89qXzm5sO1eDDBeWV37H_p24j7LMcrNKgOYnovOK8xbI2mCFYI2AcU26sCG9sQ[\r][\n]"
+2021-06-07 16:20:49,836 [DEBUG] org.apache.http.wire  -  >> "Accept: */*[\r][\n]"
+2021-06-07 16:20:49,836 [DEBUG] org.apache.http.wire  -  >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+2021-06-07 16:20:49,836 [DEBUG] org.apache.http.wire  -  >> "Content-Length: 30[\r][\n]"
+2021-06-07 16:20:49,836 [DEBUG] org.apache.http.wire  -  >> "Host: mmsqa.leap.gtinet.org[\r][\n]"
+2021-06-07 16:20:49,836 [DEBUG] org.apache.http.wire  -  >> "Connection: Keep-Alive[\r][\n]"
+2021-06-07 16:20:49,836 [DEBUG] org.apache.http.wire  -  >> "User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_151)[\r][\n]"
+2021-06-07 16:20:49,836 [DEBUG] org.apache.http.wire  -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2021-06-07 16:20:49,836 [DEBUG] org.apache.http.wire  -  >> "[\r][\n]"
+2021-06-07 16:20:49,836 [DEBUG] org.apache.http.headers  - >> POST /api/methodologyItem/revision/60ba99083b5c7ca3f50a4842/workProgram/60bdfa83512276300ed54195/initialize HTTP/1.1
+2021-06-07 16:20:49,837 [DEBUG] org.apache.http.headers  - >> Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiI3ZTc0OThlNy1hZjZjLTQ3YmQtYmYxNi00ZjljNWQ5NjAxYzgiLCJpc3MiOiJodHRwczovL2xvZ2luLm1pY3Jvc29mdG9ubGluZS5jb20vYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4L3YyLjAiLCJpYXQiOjE2MjMwNjIyNTYsIm5iZiI6MTYyMzA2MjI1NiwiZXhwIjoxNjIzMDY2MTU2LCJhaW8iOiJBVVFBdS84VEFBQUFTOFhtajFhL1JYblRyd2Era25zMUpUQklSdWp2SkkzbDNFTzJGQVo0aHU0WmJQQVJCSzZyVFJWRUx4Rk9nNmxra1MzcldtamhmSHFFRk56VXlLNWE3QT09IiwiaWRwIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvMGI4ZjY3NzAtYTQ5MC00OTVkLTg4M2YtZGM5ZjZiYWUzODRlLyIsIm5hbWUiOiJNTVMgVGVzdCBBcGFjIDE2Iiwibm9uY2UiOiJhYTA5N2U4NC1kOGZhLTQ4OTctYTg0NC1lMGE4MDczMzI1NzIiLCJvaWQiOiI1ZjlmMTkwZC02OWM5LTQ2NjAtOWQ4Mi05YjQ3ZjQ0MzI1MTMiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJtbXMudGVzdC5hcGFjLjE2QGd0YWRob2MuZ3QuY29tIiwicmgiOiIwLkFSc0FpN2R0cDBYWk9rcTdRdjBFRWZXTDJPZVlkSDVzcjcxSHZ4WlBuRjJXQWNnYkFINC4iLCJzdWIiOiJVMGItREc5Q2xaTjZXbDFWVWcxYXdVVGdrOTFWNWhWb1RHMWF4bzBadlBrIiwidGlkIjoiYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4IiwidXRpIjoiclNRU0hoOTFpa3k3T2FBajJhb2dBUSIsInZlciI6IjIuMCIsIm1lbWJlcmZpcm1pZCI6ImFwYWMudGVzdCJ9.BQE3i0LrLMi1s2H5WdALujT_n3LY4SwIXfEDMag9otiSaP0O6fyRCTgkiXjg2NYAp9KYJ7bKewj8rF0IuzPXic6Q1vrKAPadlIvv4ytY-CDi5yF0MrEZpbKd_pY7bY3mO50OMvlafi6irtrE2n9cIOXIlw2xUckXt6aaW9EZY2gwEBjTC6BqFRAVLwRATEVe9Y76_dgsed8f_TE8-bqjPypo_VIDEhpT0cva6RaNpngq_h7wPJvAFjFhCMf-2_qlNQHI7LoGya16cOpmrqvGYspI89qXzm5sO1eDDBeWV37H_p24j7LMcrNKgOYnovOK8xbI2mCFYI2AcU26sCG9sQ
+2021-06-07 16:20:49,837 [DEBUG] org.apache.http.headers  - >> Accept: */*
+2021-06-07 16:20:49,837 [DEBUG] org.apache.http.headers  - >> Content-Type: application/json; charset=UTF-8
+2021-06-07 16:20:49,837 [DEBUG] org.apache.http.headers  - >> Content-Length: 30
+2021-06-07 16:20:49,837 [DEBUG] org.apache.http.headers  - >> Host: mmsqa.leap.gtinet.org
+2021-06-07 16:20:49,837 [DEBUG] org.apache.http.headers  - >> Connection: Keep-Alive
+2021-06-07 16:20:49,837 [DEBUG] org.apache.http.headers  - >> User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_151)
+2021-06-07 16:20:49,837 [DEBUG] org.apache.http.headers  - >> Accept-Encoding: gzip,deflate
+2021-06-07 16:20:49,837 [DEBUG] org.apache.http.wire  -  >> "{"ruleContextType":"Standard"}"
+2021-06-07 16:20:50,083 [DEBUG] org.apache.http.wire  -  << "HTTP/1.1 204 No Content[\r][\n]"
+2021-06-07 16:20:50,084 [DEBUG] org.apache.http.wire  -  << "Date: Mon, 07 Jun 2021 10:52:53 GMT[\r][\n]"
+2021-06-07 16:20:50,084 [DEBUG] org.apache.http.wire  -  << "Connection: keep-alive[\r][\n]"
+2021-06-07 16:20:50,084 [DEBUG] org.apache.http.wire  -  << "Strict-Transport-Security: max-age=63072000; includeSubDomains; preload[\r][\n]"
+2021-06-07 16:20:50,084 [DEBUG] org.apache.http.wire  -  << "X-XSS-Protection: 1; mode=block[\r][\n]"
+2021-06-07 16:20:50,084 [DEBUG] org.apache.http.wire  -  << "X-Frame-Options: SAMEORIGIN[\r][\n]"
+2021-06-07 16:20:50,084 [DEBUG] org.apache.http.wire  -  << "X-Content-Type-Options: nosniff[\r][\n]"
+2021-06-07 16:20:50,085 [DEBUG] org.apache.http.wire  -  << "Referrer-Policy: strict-origin[\r][\n]"
+2021-06-07 16:20:50,085 [DEBUG] org.apache.http.wire  -  << "[\r][\n]"
+2021-06-07 16:20:50,085 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection  - Receiving response: HTTP/1.1 204 No Content
+2021-06-07 16:20:50,085 [DEBUG] org.apache.http.headers  - << HTTP/1.1 204 No Content
+2021-06-07 16:20:50,085 [DEBUG] org.apache.http.headers  - << Date: Mon, 07 Jun 2021 10:52:53 GMT
+2021-06-07 16:20:50,085 [DEBUG] org.apache.http.headers  - << Connection: keep-alive
+2021-06-07 16:20:50,085 [DEBUG] org.apache.http.headers  - << Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+2021-06-07 16:20:50,085 [DEBUG] org.apache.http.headers  - << X-XSS-Protection: 1; mode=block
+2021-06-07 16:20:50,086 [DEBUG] org.apache.http.headers  - << X-Frame-Options: SAMEORIGIN
+2021-06-07 16:20:50,086 [DEBUG] org.apache.http.headers  - << X-Content-Type-Options: nosniff
+2021-06-07 16:20:50,086 [DEBUG] org.apache.http.headers  - << Referrer-Policy: strict-origin
+2021-06-07 16:20:50,086 [DEBUG] org.apache.http.impl.client.DefaultHttpClient  - Connection can be kept alive indefinitely
+2021-06-07 16:20:50,086 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager  - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@1450078a
+2021-06-07 16:20:50,087 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager  - Connection can be kept alive indefinitely
+2021-06-07 16:20:50,096 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager  - Get connection for route {s}->https://mmsqa.leap.gtinet.org:443
+2021-06-07 16:20:50,096 [DEBUG] org.apache.http.impl.conn.DefaultClientConnectionOperator  - Connecting to mmsqa.leap.gtinet.org:443
+2021-06-07 16:20:50,980 [DEBUG] org.apache.http.client.protocol.RequestAddCookies  - CookieSpec selected: ignoreCookies
+2021-06-07 16:20:50,980 [DEBUG] org.apache.http.client.protocol.RequestAuthCache  - Auth cache not set in the context
+2021-06-07 16:20:50,980 [DEBUG] org.apache.http.client.protocol.RequestProxyAuthentication  - Proxy auth state: UNCHALLENGED
+2021-06-07 16:20:50,980 [DEBUG] org.apache.http.impl.client.DefaultHttpClient  - Attempt 1 to execute request
+2021-06-07 16:20:50,980 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection  - Sending request: POST /api/methodologyItem/revision/60ba99083b5c7ca3f50a4842/item HTTP/1.1
+2021-06-07 16:20:50,980 [DEBUG] org.apache.http.wire  -  >> "POST /api/methodologyItem/revision/60ba99083b5c7ca3f50a4842/item HTTP/1.1[\r][\n]"
+2021-06-07 16:20:50,980 [DEBUG] org.apache.http.wire  -  >> "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiI3ZTc0OThlNy1hZjZjLTQ3YmQtYmYxNi00ZjljNWQ5NjAxYzgiLCJpc3MiOiJodHRwczovL2xvZ2luLm1pY3Jvc29mdG9ubGluZS5jb20vYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4L3YyLjAiLCJpYXQiOjE2MjMwNjIyNTYsIm5iZiI6MTYyMzA2MjI1NiwiZXhwIjoxNjIzMDY2MTU2LCJhaW8iOiJBVVFBdS84VEFBQUFTOFhtajFhL1JYblRyd2Era25zMUpUQklSdWp2SkkzbDNFTzJGQVo0aHU0WmJQQVJCSzZyVFJWRUx4Rk9nNmxra1MzcldtamhmSHFFRk56VXlLNWE3QT09IiwiaWRwIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvMGI4ZjY3NzAtYTQ5MC00OTVkLTg4M2YtZGM5ZjZiYWUzODRlLyIsIm5hbWUiOiJNTVMgVGVzdCBBcGFjIDE2Iiwibm9uY2UiOiJhYTA5N2U4NC1kOGZhLTQ4OTctYTg0NC1lMGE4MDczMzI1NzIiLCJvaWQiOiI1ZjlmMTkwZC02OWM5LTQ2NjAtOWQ4Mi05YjQ3ZjQ0MzI1MTMiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJtbXMudGVzdC5hcGFjLjE2QGd0YWRob2MuZ3QuY29tIiwicmgiOiIwLkFSc0FpN2R0cDBYWk9rcTdRdjBFRWZXTDJPZVlkSDVzcjcxSHZ4WlBuRjJXQWNnYkFINC4iLCJzdWIiOiJVMGItREc5Q2xaTjZXbDFWVWcxYXdVVGdrOTFWNWhWb1RHMWF4bzBadlBrIiwidGlkIjoiYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4IiwidXRpIjoiclNRU0hoOTFpa3k3T2FBajJhb2dBUSIsInZlciI6IjIuMCIsIm1lbWJlcmZpcm1pZCI6ImFwYWMudGVzdCJ9.BQE3i0LrLMi1s2H5WdALujT_n3LY4SwIXfEDMag9otiSaP0O6fyRCTgkiXjg2NYAp9KYJ7bKewj8rF0IuzPXic6Q1vrKAPadlIvv4ytY-CDi5yF0MrEZpbKd_pY7bY3mO50OMvlafi6irtrE2n9cIOXIlw2xUckXt6aaW9EZY2gwEBjTC6BqFRAVLwRATEVe9Y76_dgsed8f_TE8-bqjPypo_VIDEhpT0cva6RaNpngq_h7wPJvAFjFhCMf-2_qlNQHI7LoGya16cOpmrqvGYspI89qXzm5sO1eDDBeWV37H_p24j7LMcrNKgOYnovOK8xbI2mCFYI2AcU26sCG9sQ[\r][\n]"
+2021-06-07 16:20:50,980 [DEBUG] org.apache.http.wire  -  >> "Accept: */*[\r][\n]"
+2021-06-07 16:20:50,980 [DEBUG] org.apache.http.wire  -  >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+2021-06-07 16:20:50,981 [DEBUG] org.apache.http.wire  -  >> "Content-Length: 145[\r][\n]"
+2021-06-07 16:20:50,981 [DEBUG] org.apache.http.wire  -  >> "Host: mmsqa.leap.gtinet.org[\r][\n]"
+2021-06-07 16:20:50,981 [DEBUG] org.apache.http.wire  -  >> "Connection: Keep-Alive[\r][\n]"
+2021-06-07 16:20:50,981 [DEBUG] org.apache.http.wire  -  >> "User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_151)[\r][\n]"
+2021-06-07 16:20:50,981 [DEBUG] org.apache.http.wire  -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2021-06-07 16:20:50,981 [DEBUG] org.apache.http.wire  -  >> "[\r][\n]"
+2021-06-07 16:20:50,981 [DEBUG] org.apache.http.headers  - >> POST /api/methodologyItem/revision/60ba99083b5c7ca3f50a4842/item HTTP/1.1
+2021-06-07 16:20:50,981 [DEBUG] org.apache.http.headers  - >> Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiI3ZTc0OThlNy1hZjZjLTQ3YmQtYmYxNi00ZjljNWQ5NjAxYzgiLCJpc3MiOiJodHRwczovL2xvZ2luLm1pY3Jvc29mdG9ubGluZS5jb20vYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4L3YyLjAiLCJpYXQiOjE2MjMwNjIyNTYsIm5iZiI6MTYyMzA2MjI1NiwiZXhwIjoxNjIzMDY2MTU2LCJhaW8iOiJBVVFBdS84VEFBQUFTOFhtajFhL1JYblRyd2Era25zMUpUQklSdWp2SkkzbDNFTzJGQVo0aHU0WmJQQVJCSzZyVFJWRUx4Rk9nNmxra1MzcldtamhmSHFFRk56VXlLNWE3QT09IiwiaWRwIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvMGI4ZjY3NzAtYTQ5MC00OTVkLTg4M2YtZGM5ZjZiYWUzODRlLyIsIm5hbWUiOiJNTVMgVGVzdCBBcGFjIDE2Iiwibm9uY2UiOiJhYTA5N2U4NC1kOGZhLTQ4OTctYTg0NC1lMGE4MDczMzI1NzIiLCJvaWQiOiI1ZjlmMTkwZC02OWM5LTQ2NjAtOWQ4Mi05YjQ3ZjQ0MzI1MTMiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJtbXMudGVzdC5hcGFjLjE2QGd0YWRob2MuZ3QuY29tIiwicmgiOiIwLkFSc0FpN2R0cDBYWk9rcTdRdjBFRWZXTDJPZVlkSDVzcjcxSHZ4WlBuRjJXQWNnYkFINC4iLCJzdWIiOiJVMGItREc5Q2xaTjZXbDFWVWcxYXdVVGdrOTFWNWhWb1RHMWF4bzBadlBrIiwidGlkIjoiYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4IiwidXRpIjoiclNRU0hoOTFpa3k3T2FBajJhb2dBUSIsInZlciI6IjIuMCIsIm1lbWJlcmZpcm1pZCI6ImFwYWMudGVzdCJ9.BQE3i0LrLMi1s2H5WdALujT_n3LY4SwIXfEDMag9otiSaP0O6fyRCTgkiXjg2NYAp9KYJ7bKewj8rF0IuzPXic6Q1vrKAPadlIvv4ytY-CDi5yF0MrEZpbKd_pY7bY3mO50OMvlafi6irtrE2n9cIOXIlw2xUckXt6aaW9EZY2gwEBjTC6BqFRAVLwRATEVe9Y76_dgsed8f_TE8-bqjPypo_VIDEhpT0cva6RaNpngq_h7wPJvAFjFhCMf-2_qlNQHI7LoGya16cOpmrqvGYspI89qXzm5sO1eDDBeWV37H_p24j7LMcrNKgOYnovOK8xbI2mCFYI2AcU26sCG9sQ
+2021-06-07 16:20:50,981 [DEBUG] org.apache.http.headers  - >> Accept: */*
+2021-06-07 16:20:50,981 [DEBUG] org.apache.http.headers  - >> Content-Type: application/json; charset=UTF-8
+2021-06-07 16:20:50,981 [DEBUG] org.apache.http.headers  - >> Content-Length: 145
+2021-06-07 16:20:50,981 [DEBUG] org.apache.http.headers  - >> Host: mmsqa.leap.gtinet.org
+2021-06-07 16:20:50,981 [DEBUG] org.apache.http.headers  - >> Connection: Keep-Alive
+2021-06-07 16:20:50,981 [DEBUG] org.apache.http.headers  - >> User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_151)
+2021-06-07 16:20:50,981 [DEBUG] org.apache.http.headers  - >> Accept-Encoding: gzip,deflate
+2021-06-07 16:20:50,981 [DEBUG] org.apache.http.wire  -  >> "{"parentId":"60bdfa83512276300ed54195","title":"Procedure-3","index":"0","itemType":"WorkProgramItem","workProgramId":"60ba99083b5c7ca3f50a4840"}"
+2021-06-07 16:20:51,258 [DEBUG] org.apache.http.wire  -  << "HTTP/1.1 200 OK[\r][\n]"
+2021-06-07 16:20:51,259 [DEBUG] org.apache.http.wire  -  << "Date: Mon, 07 Jun 2021 10:52:54 GMT[\r][\n]"
+2021-06-07 16:20:51,259 [DEBUG] org.apache.http.wire  -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2021-06-07 16:20:51,259 [DEBUG] org.apache.http.wire  -  << "Content-Length: 383[\r][\n]"
+2021-06-07 16:20:51,259 [DEBUG] org.apache.http.wire  -  << "Connection: keep-alive[\r][\n]"
+2021-06-07 16:20:51,259 [DEBUG] org.apache.http.wire  -  << "Strict-Transport-Security: max-age=63072000; includeSubDomains; preload[\r][\n]"
+2021-06-07 16:20:51,259 [DEBUG] org.apache.http.wire  -  << "X-XSS-Protection: 1; mode=block[\r][\n]"
+2021-06-07 16:20:51,259 [DEBUG] org.apache.http.wire  -  << "X-Frame-Options: SAMEORIGIN[\r][\n]"
+2021-06-07 16:20:51,260 [DEBUG] org.apache.http.wire  -  << "X-Content-Type-Options: nosniff[\r][\n]"
+2021-06-07 16:20:51,260 [DEBUG] org.apache.http.wire  -  << "Referrer-Policy: strict-origin[\r][\n]"
+2021-06-07 16:20:51,260 [DEBUG] org.apache.http.wire  -  << "[\r][\n]"
+2021-06-07 16:20:51,260 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection  - Receiving response: HTTP/1.1 200 OK
+2021-06-07 16:20:51,260 [DEBUG] org.apache.http.headers  - << HTTP/1.1 200 OK
+2021-06-07 16:20:51,260 [DEBUG] org.apache.http.headers  - << Date: Mon, 07 Jun 2021 10:52:54 GMT
+2021-06-07 16:20:51,260 [DEBUG] org.apache.http.headers  - << Content-Type: application/json; charset=utf-8
+2021-06-07 16:20:51,260 [DEBUG] org.apache.http.headers  - << Content-Length: 383
+2021-06-07 16:20:51,261 [DEBUG] org.apache.http.headers  - << Connection: keep-alive
+2021-06-07 16:20:51,261 [DEBUG] org.apache.http.headers  - << Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+2021-06-07 16:20:51,261 [DEBUG] org.apache.http.headers  - << X-XSS-Protection: 1; mode=block
+2021-06-07 16:20:51,261 [DEBUG] org.apache.http.headers  - << X-Frame-Options: SAMEORIGIN
+2021-06-07 16:20:51,261 [DEBUG] org.apache.http.headers  - << X-Content-Type-Options: nosniff
+2021-06-07 16:20:51,261 [DEBUG] org.apache.http.headers  - << Referrer-Policy: strict-origin
+2021-06-07 16:20:51,261 [DEBUG] org.apache.http.impl.client.DefaultHttpClient  - Connection can be kept alive indefinitely
+2021-06-07 16:20:51,263 [DEBUG] io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder  - Parsing response as: application/json; charset=utf-8
+2021-06-07 16:20:51,263 [DEBUG] io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder  - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+2021-06-07 16:20:51,264 [DEBUG] org.apache.http.wire  -  << "{"workProgramItemType":"PlaceHolder","workProgramId":"60bdfa83512276300ed54195","revisionId":"60ba99083b5c7ca3f50a4842","methodologyItemId":"60bdfa86512276300ed54199","title":"Procedure-3","itemType":"WorkProgramItem","workFlowState":"Draft","updatedOn":"2021-06-07T10:52:54.9521621Z","updatedBy":"5f9f190d-69c9-4660-9d82-9b47f4432513","updated":true,"id":"60bdfa86512276300ed5419a"}"
+2021-06-07 16:20:51,264 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager  - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@36bc415e
+2021-06-07 16:20:51,264 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager  - Connection can be kept alive indefinitely
+2021-06-07 16:20:51,280 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager  - Get connection for route {s}->https://mmsqa.leap.gtinet.org:443
+2021-06-07 16:20:51,280 [DEBUG] org.apache.http.impl.conn.DefaultClientConnectionOperator  - Connecting to mmsqa.leap.gtinet.org:443
+2021-06-07 16:20:52,162 [DEBUG] org.apache.http.client.protocol.RequestAddCookies  - CookieSpec selected: ignoreCookies
+2021-06-07 16:20:52,162 [DEBUG] org.apache.http.client.protocol.RequestAuthCache  - Auth cache not set in the context
+2021-06-07 16:20:52,162 [DEBUG] org.apache.http.client.protocol.RequestProxyAuthentication  - Proxy auth state: UNCHALLENGED
+2021-06-07 16:20:52,162 [DEBUG] org.apache.http.impl.client.DefaultHttpClient  - Attempt 1 to execute request
+2021-06-07 16:20:52,162 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection  - Sending request: PATCH /api/methodologyItem/revision/60ba99083b5c7ca3f50a4842/item/60bdfa86512276300ed54199 HTTP/1.1
+2021-06-07 16:20:52,162 [DEBUG] org.apache.http.wire  -  >> "PATCH /api/methodologyItem/revision/60ba99083b5c7ca3f50a4842/item/60bdfa86512276300ed54199 HTTP/1.1[\r][\n]"
+2021-06-07 16:20:52,162 [DEBUG] org.apache.http.wire  -  >> "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiI3ZTc0OThlNy1hZjZjLTQ3YmQtYmYxNi00ZjljNWQ5NjAxYzgiLCJpc3MiOiJodHRwczovL2xvZ2luLm1pY3Jvc29mdG9ubGluZS5jb20vYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4L3YyLjAiLCJpYXQiOjE2MjMwNjIyNTYsIm5iZiI6MTYyMzA2MjI1NiwiZXhwIjoxNjIzMDY2MTU2LCJhaW8iOiJBVVFBdS84VEFBQUFTOFhtajFhL1JYblRyd2Era25zMUpUQklSdWp2SkkzbDNFTzJGQVo0aHU0WmJQQVJCSzZyVFJWRUx4Rk9nNmxra1MzcldtamhmSHFFRk56VXlLNWE3QT09IiwiaWRwIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvMGI4ZjY3NzAtYTQ5MC00OTVkLTg4M2YtZGM5ZjZiYWUzODRlLyIsIm5hbWUiOiJNTVMgVGVzdCBBcGFjIDE2Iiwibm9uY2UiOiJhYTA5N2U4NC1kOGZhLTQ4OTctYTg0NC1lMGE4MDczMzI1NzIiLCJvaWQiOiI1ZjlmMTkwZC02OWM5LTQ2NjAtOWQ4Mi05YjQ3ZjQ0MzI1MTMiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJtbXMudGVzdC5hcGFjLjE2QGd0YWRob2MuZ3QuY29tIiwicmgiOiIwLkFSc0FpN2R0cDBYWk9rcTdRdjBFRWZXTDJPZVlkSDVzcjcxSHZ4WlBuRjJXQWNnYkFINC4iLCJzdWIiOiJVMGItREc5Q2xaTjZXbDFWVWcxYXdVVGdrOTFWNWhWb1RHMWF4bzBadlBrIiwidGlkIjoiYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4IiwidXRpIjoiclNRU0hoOTFpa3k3T2FBajJhb2dBUSIsInZlciI6IjIuMCIsIm1lbWJlcmZpcm1pZCI6ImFwYWMudGVzdCJ9.BQE3i0LrLMi1s2H5WdALujT_n3LY4SwIXfEDMag9otiSaP0O6fyRCTgkiXjg2NYAp9KYJ7bKewj8rF0IuzPXic6Q1vrKAPadlIvv4ytY-CDi5yF0MrEZpbKd_pY7bY3mO50OMvlafi6irtrE2n9cIOXIlw2xUckXt6aaW9EZY2gwEBjTC6BqFRAVLwRATEVe9Y76_dgsed8f_TE8-bqjPypo_VIDEhpT0cva6RaNpngq_h7wPJvAFjFhCMf-2_qlNQHI7LoGya16cOpmrqvGYspI89qXzm5sO1eDDBeWV37H_p24j7LMcrNKgOYnovOK8xbI2mCFYI2AcU26sCG9sQ[\r][\n]"
+2021-06-07 16:20:52,162 [DEBUG] org.apache.http.wire  -  >> "Accept: */*[\r][\n]"
+2021-06-07 16:20:52,163 [DEBUG] org.apache.http.wire  -  >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+2021-06-07 16:20:52,163 [DEBUG] org.apache.http.wire  -  >> "Content-Length: 2[\r][\n]"
+2021-06-07 16:20:52,163 [DEBUG] org.apache.http.wire  -  >> "Host: mmsqa.leap.gtinet.org[\r][\n]"
+2021-06-07 16:20:52,163 [DEBUG] org.apache.http.wire  -  >> "Connection: Keep-Alive[\r][\n]"
+2021-06-07 16:20:52,163 [DEBUG] org.apache.http.wire  -  >> "User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_151)[\r][\n]"
+2021-06-07 16:20:52,163 [DEBUG] org.apache.http.wire  -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2021-06-07 16:20:52,163 [DEBUG] org.apache.http.wire  -  >> "[\r][\n]"
+2021-06-07 16:20:52,163 [DEBUG] org.apache.http.headers  - >> PATCH /api/methodologyItem/revision/60ba99083b5c7ca3f50a4842/item/60bdfa86512276300ed54199 HTTP/1.1
+2021-06-07 16:20:52,163 [DEBUG] org.apache.http.headers  - >> Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiI3ZTc0OThlNy1hZjZjLTQ3YmQtYmYxNi00ZjljNWQ5NjAxYzgiLCJpc3MiOiJodHRwczovL2xvZ2luLm1pY3Jvc29mdG9ubGluZS5jb20vYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4L3YyLjAiLCJpYXQiOjE2MjMwNjIyNTYsIm5iZiI6MTYyMzA2MjI1NiwiZXhwIjoxNjIzMDY2MTU2LCJhaW8iOiJBVVFBdS84VEFBQUFTOFhtajFhL1JYblRyd2Era25zMUpUQklSdWp2SkkzbDNFTzJGQVo0aHU0WmJQQVJCSzZyVFJWRUx4Rk9nNmxra1MzcldtamhmSHFFRk56VXlLNWE3QT09IiwiaWRwIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvMGI4ZjY3NzAtYTQ5MC00OTVkLTg4M2YtZGM5ZjZiYWUzODRlLyIsIm5hbWUiOiJNTVMgVGVzdCBBcGFjIDE2Iiwibm9uY2UiOiJhYTA5N2U4NC1kOGZhLTQ4OTctYTg0NC1lMGE4MDczMzI1NzIiLCJvaWQiOiI1ZjlmMTkwZC02OWM5LTQ2NjAtOWQ4Mi05YjQ3ZjQ0MzI1MTMiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJtbXMudGVzdC5hcGFjLjE2QGd0YWRob2MuZ3QuY29tIiwicmgiOiIwLkFSc0FpN2R0cDBYWk9rcTdRdjBFRWZXTDJPZVlkSDVzcjcxSHZ4WlBuRjJXQWNnYkFINC4iLCJzdWIiOiJVMGItREc5Q2xaTjZXbDFWVWcxYXdVVGdrOTFWNWhWb1RHMWF4bzBadlBrIiwidGlkIjoiYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4IiwidXRpIjoiclNRU0hoOTFpa3k3T2FBajJhb2dBUSIsInZlciI6IjIuMCIsIm1lbWJlcmZpcm1pZCI6ImFwYWMudGVzdCJ9.BQE3i0LrLMi1s2H5WdALujT_n3LY4SwIXfEDMag9otiSaP0O6fyRCTgkiXjg2NYAp9KYJ7bKewj8rF0IuzPXic6Q1vrKAPadlIvv4ytY-CDi5yF0MrEZpbKd_pY7bY3mO50OMvlafi6irtrE2n9cIOXIlw2xUckXt6aaW9EZY2gwEBjTC6BqFRAVLwRATEVe9Y76_dgsed8f_TE8-bqjPypo_VIDEhpT0cva6RaNpngq_h7wPJvAFjFhCMf-2_qlNQHI7LoGya16cOpmrqvGYspI89qXzm5sO1eDDBeWV37H_p24j7LMcrNKgOYnovOK8xbI2mCFYI2AcU26sCG9sQ
+2021-06-07 16:20:52,163 [DEBUG] org.apache.http.headers  - >> Accept: */*
+2021-06-07 16:20:52,163 [DEBUG] org.apache.http.headers  - >> Content-Type: application/json; charset=UTF-8
+2021-06-07 16:20:52,163 [DEBUG] org.apache.http.headers  - >> Content-Length: 2
+2021-06-07 16:20:52,163 [DEBUG] org.apache.http.headers  - >> Host: mmsqa.leap.gtinet.org
+2021-06-07 16:20:52,163 [DEBUG] org.apache.http.headers  - >> Connection: Keep-Alive
+2021-06-07 16:20:52,163 [DEBUG] org.apache.http.headers  - >> User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_151)
+2021-06-07 16:20:52,163 [DEBUG] org.apache.http.headers  - >> Accept-Encoding: gzip,deflate
+2021-06-07 16:20:52,163 [DEBUG] org.apache.http.wire  -  >> "{}"
+2021-06-07 16:20:52,671 [DEBUG] org.apache.http.wire  -  << "HTTP/1.1 204 No Content[\r][\n]"
+2021-06-07 16:20:52,672 [DEBUG] org.apache.http.wire  -  << "Date: Mon, 07 Jun 2021 10:52:56 GMT[\r][\n]"
+2021-06-07 16:20:52,672 [DEBUG] org.apache.http.wire  -  << "Connection: keep-alive[\r][\n]"
+2021-06-07 16:20:52,672 [DEBUG] org.apache.http.wire  -  << "Strict-Transport-Security: max-age=63072000; includeSubDomains; preload[\r][\n]"
+2021-06-07 16:20:52,672 [DEBUG] org.apache.http.wire  -  << "X-XSS-Protection: 1; mode=block[\r][\n]"
+2021-06-07 16:20:52,672 [DEBUG] org.apache.http.wire  -  << "X-Frame-Options: SAMEORIGIN[\r][\n]"
+2021-06-07 16:20:52,672 [DEBUG] org.apache.http.wire  -  << "X-Content-Type-Options: nosniff[\r][\n]"
+2021-06-07 16:20:52,672 [DEBUG] org.apache.http.wire  -  << "Referrer-Policy: strict-origin[\r][\n]"
+2021-06-07 16:20:52,672 [DEBUG] org.apache.http.wire  -  << "[\r][\n]"
+2021-06-07 16:20:52,673 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection  - Receiving response: HTTP/1.1 204 No Content
+2021-06-07 16:20:52,673 [DEBUG] org.apache.http.headers  - << HTTP/1.1 204 No Content
+2021-06-07 16:20:52,673 [DEBUG] org.apache.http.headers  - << Date: Mon, 07 Jun 2021 10:52:56 GMT
+2021-06-07 16:20:52,673 [DEBUG] org.apache.http.headers  - << Connection: keep-alive
+2021-06-07 16:20:52,673 [DEBUG] org.apache.http.headers  - << Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+2021-06-07 16:20:52,673 [DEBUG] org.apache.http.headers  - << X-XSS-Protection: 1; mode=block
+2021-06-07 16:20:52,673 [DEBUG] org.apache.http.headers  - << X-Frame-Options: SAMEORIGIN
+2021-06-07 16:20:52,673 [DEBUG] org.apache.http.headers  - << X-Content-Type-Options: nosniff
+2021-06-07 16:20:52,673 [DEBUG] org.apache.http.headers  - << Referrer-Policy: strict-origin
+2021-06-07 16:20:52,673 [DEBUG] org.apache.http.impl.client.DefaultHttpClient  - Connection can be kept alive indefinitely
+2021-06-07 16:20:52,674 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager  - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@25b865b5
+2021-06-07 16:20:52,674 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager  - Connection can be kept alive indefinitely
+2021-06-07 16:20:52,684 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager  - Get connection for route {s}->https://mmsqa.leap.gtinet.org:443
+2021-06-07 16:20:52,684 [DEBUG] org.apache.http.impl.conn.DefaultClientConnectionOperator  - Connecting to mmsqa.leap.gtinet.org:443
+2021-06-07 16:20:53,568 [DEBUG] org.apache.http.client.protocol.RequestAddCookies  - CookieSpec selected: ignoreCookies
+2021-06-07 16:20:53,568 [DEBUG] org.apache.http.client.protocol.RequestAuthCache  - Auth cache not set in the context
+2021-06-07 16:20:53,568 [DEBUG] org.apache.http.client.protocol.RequestProxyAuthentication  - Proxy auth state: UNCHALLENGED
+2021-06-07 16:20:53,568 [DEBUG] org.apache.http.impl.client.DefaultHttpClient  - Attempt 1 to execute request
+2021-06-07 16:20:53,569 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection  - Sending request: PUT /api/methodologyItem/revision/60ba99083b5c7ca3f50a4842/itemSelectQuestion/60bdfa86512276300ed54199/option HTTP/1.1
+2021-06-07 16:20:53,569 [DEBUG] org.apache.http.wire  -  >> "PUT /api/methodologyItem/revision/60ba99083b5c7ca3f50a4842/itemSelectQuestion/60bdfa86512276300ed54199/option HTTP/1.1[\r][\n]"
+2021-06-07 16:20:53,569 [DEBUG] org.apache.http.wire  -  >> "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiI3ZTc0OThlNy1hZjZjLTQ3YmQtYmYxNi00ZjljNWQ5NjAxYzgiLCJpc3MiOiJodHRwczovL2xvZ2luLm1pY3Jvc29mdG9ubGluZS5jb20vYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4L3YyLjAiLCJpYXQiOjE2MjMwNjIyNTYsIm5iZiI6MTYyMzA2MjI1NiwiZXhwIjoxNjIzMDY2MTU2LCJhaW8iOiJBVVFBdS84VEFBQUFTOFhtajFhL1JYblRyd2Era25zMUpUQklSdWp2SkkzbDNFTzJGQVo0aHU0WmJQQVJCSzZyVFJWRUx4Rk9nNmxra1MzcldtamhmSHFFRk56VXlLNWE3QT09IiwiaWRwIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvMGI4ZjY3NzAtYTQ5MC00OTVkLTg4M2YtZGM5ZjZiYWUzODRlLyIsIm5hbWUiOiJNTVMgVGVzdCBBcGFjIDE2Iiwibm9uY2UiOiJhYTA5N2U4NC1kOGZhLTQ4OTctYTg0NC1lMGE4MDczMzI1NzIiLCJvaWQiOiI1ZjlmMTkwZC02OWM5LTQ2NjAtOWQ4Mi05YjQ3ZjQ0MzI1MTMiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJtbXMudGVzdC5hcGFjLjE2QGd0YWRob2MuZ3QuY29tIiwicmgiOiIwLkFSc0FpN2R0cDBYWk9rcTdRdjBFRWZXTDJPZVlkSDVzcjcxSHZ4WlBuRjJXQWNnYkFINC4iLCJzdWIiOiJVMGItREc5Q2xaTjZXbDFWVWcxYXdVVGdrOTFWNWhWb1RHMWF4bzBadlBrIiwidGlkIjoiYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4IiwidXRpIjoiclNRU0hoOTFpa3k3T2FBajJhb2dBUSIsInZlciI6IjIuMCIsIm1lbWJlcmZpcm1pZCI6ImFwYWMudGVzdCJ9.BQE3i0LrLMi1s2H5WdALujT_n3LY4SwIXfEDMag9otiSaP0O6fyRCTgkiXjg2NYAp9KYJ7bKewj8rF0IuzPXic6Q1vrKAPadlIvv4ytY-CDi5yF0MrEZpbKd_pY7bY3mO50OMvlafi6irtrE2n9cIOXIlw2xUckXt6aaW9EZY2gwEBjTC6BqFRAVLwRATEVe9Y76_dgsed8f_TE8-bqjPypo_VIDEhpT0cva6RaNpngq_h7wPJvAFjFhCMf-2_qlNQHI7LoGya16cOpmrqvGYspI89qXzm5sO1eDDBeWV37H_p24j7LMcrNKgOYnovOK8xbI2mCFYI2AcU26sCG9sQ[\r][\n]"
+2021-06-07 16:20:53,570 [DEBUG] org.apache.http.wire  -  >> "Accept: */*[\r][\n]"
+2021-06-07 16:20:53,570 [DEBUG] org.apache.http.wire  -  >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+2021-06-07 16:20:53,570 [DEBUG] org.apache.http.wire  -  >> "Content-Length: 29[\r][\n]"
+2021-06-07 16:20:53,570 [DEBUG] org.apache.http.wire  -  >> "Host: mmsqa.leap.gtinet.org[\r][\n]"
+2021-06-07 16:20:53,570 [DEBUG] org.apache.http.wire  -  >> "Connection: Keep-Alive[\r][\n]"
+2021-06-07 16:20:53,570 [DEBUG] org.apache.http.wire  -  >> "User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_151)[\r][\n]"
+2021-06-07 16:20:53,570 [DEBUG] org.apache.http.wire  -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2021-06-07 16:20:53,570 [DEBUG] org.apache.http.wire  -  >> "[\r][\n]"
+2021-06-07 16:20:53,570 [DEBUG] org.apache.http.headers  - >> PUT /api/methodologyItem/revision/60ba99083b5c7ca3f50a4842/itemSelectQuestion/60bdfa86512276300ed54199/option HTTP/1.1
+2021-06-07 16:20:53,571 [DEBUG] org.apache.http.headers  - >> Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiI3ZTc0OThlNy1hZjZjLTQ3YmQtYmYxNi00ZjljNWQ5NjAxYzgiLCJpc3MiOiJodHRwczovL2xvZ2luLm1pY3Jvc29mdG9ubGluZS5jb20vYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4L3YyLjAiLCJpYXQiOjE2MjMwNjIyNTYsIm5iZiI6MTYyMzA2MjI1NiwiZXhwIjoxNjIzMDY2MTU2LCJhaW8iOiJBVVFBdS84VEFBQUFTOFhtajFhL1JYblRyd2Era25zMUpUQklSdWp2SkkzbDNFTzJGQVo0aHU0WmJQQVJCSzZyVFJWRUx4Rk9nNmxra1MzcldtamhmSHFFRk56VXlLNWE3QT09IiwiaWRwIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvMGI4ZjY3NzAtYTQ5MC00OTVkLTg4M2YtZGM5ZjZiYWUzODRlLyIsIm5hbWUiOiJNTVMgVGVzdCBBcGFjIDE2Iiwibm9uY2UiOiJhYTA5N2U4NC1kOGZhLTQ4OTctYTg0NC1lMGE4MDczMzI1NzIiLCJvaWQiOiI1ZjlmMTkwZC02OWM5LTQ2NjAtOWQ4Mi05YjQ3ZjQ0MzI1MTMiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJtbXMudGVzdC5hcGFjLjE2QGd0YWRob2MuZ3QuY29tIiwicmgiOiIwLkFSc0FpN2R0cDBYWk9rcTdRdjBFRWZXTDJPZVlkSDVzcjcxSHZ4WlBuRjJXQWNnYkFINC4iLCJzdWIiOiJVMGItREc5Q2xaTjZXbDFWVWcxYXdVVGdrOTFWNWhWb1RHMWF4bzBadlBrIiwidGlkIjoiYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4IiwidXRpIjoiclNRU0hoOTFpa3k3T2FBajJhb2dBUSIsInZlciI6IjIuMCIsIm1lbWJlcmZpcm1pZCI6ImFwYWMudGVzdCJ9.BQE3i0LrLMi1s2H5WdALujT_n3LY4SwIXfEDMag9otiSaP0O6fyRCTgkiXjg2NYAp9KYJ7bKewj8rF0IuzPXic6Q1vrKAPadlIvv4ytY-CDi5yF0MrEZpbKd_pY7bY3mO50OMvlafi6irtrE2n9cIOXIlw2xUckXt6aaW9EZY2gwEBjTC6BqFRAVLwRATEVe9Y76_dgsed8f_TE8-bqjPypo_VIDEhpT0cva6RaNpngq_h7wPJvAFjFhCMf-2_qlNQHI7LoGya16cOpmrqvGYspI89qXzm5sO1eDDBeWV37H_p24j7LMcrNKgOYnovOK8xbI2mCFYI2AcU26sCG9sQ
+2021-06-07 16:20:53,571 [DEBUG] org.apache.http.headers  - >> Accept: */*
+2021-06-07 16:20:53,571 [DEBUG] org.apache.http.headers  - >> Content-Type: application/json; charset=UTF-8
+2021-06-07 16:20:53,571 [DEBUG] org.apache.http.headers  - >> Content-Length: 29
+2021-06-07 16:20:53,571 [DEBUG] org.apache.http.headers  - >> Host: mmsqa.leap.gtinet.org
+2021-06-07 16:20:53,571 [DEBUG] org.apache.http.headers  - >> Connection: Keep-Alive
+2021-06-07 16:20:53,571 [DEBUG] org.apache.http.headers  - >> User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_151)
+2021-06-07 16:20:53,571 [DEBUG] org.apache.http.headers  - >> Accept-Encoding: gzip,deflate
+2021-06-07 16:20:53,571 [DEBUG] org.apache.http.wire  -  >> "{"optionTitles":["Yes","No"]}"
+2021-06-07 16:20:53,823 [DEBUG] org.apache.http.wire  -  << "HTTP/1.1 500 Internal Server Error[\r][\n]"
+2021-06-07 16:20:53,823 [DEBUG] org.apache.http.wire  -  << "Date: Mon, 07 Jun 2021 10:52:57 GMT[\r][\n]"
+2021-06-07 16:20:53,824 [DEBUG] org.apache.http.wire  -  << "Content-Length: 0[\r][\n]"
+2021-06-07 16:20:53,824 [DEBUG] org.apache.http.wire  -  << "Connection: keep-alive[\r][\n]"
+2021-06-07 16:20:53,824 [DEBUG] org.apache.http.wire  -  << "[\r][\n]"
+2021-06-07 16:20:53,824 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection  - Receiving response: HTTP/1.1 500 Internal Server Error
+2021-06-07 16:20:53,824 [DEBUG] org.apache.http.headers  - << HTTP/1.1 500 Internal Server Error
+2021-06-07 16:20:53,824 [DEBUG] org.apache.http.headers  - << Date: Mon, 07 Jun 2021 10:52:57 GMT
+2021-06-07 16:20:53,824 [DEBUG] org.apache.http.headers  - << Content-Length: 0
+2021-06-07 16:20:53,824 [DEBUG] org.apache.http.headers  - << Connection: keep-alive
+2021-06-07 16:20:53,825 [DEBUG] org.apache.http.impl.client.DefaultHttpClient  - Connection can be kept alive indefinitely
+2021-06-07 16:20:53,834 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager  - Get connection for route {s}->https://mmsqa.leap.gtinet.org:443
+2021-06-07 16:20:53,834 [DEBUG] org.apache.http.impl.conn.DefaultClientConnectionOperator  - Connecting to mmsqa.leap.gtinet.org:443
+2021-06-07 16:20:54,717 [DEBUG] org.apache.http.client.protocol.RequestAddCookies  - CookieSpec selected: ignoreCookies
+2021-06-07 16:20:54,718 [DEBUG] org.apache.http.client.protocol.RequestAuthCache  - Auth cache not set in the context
+2021-06-07 16:20:54,718 [DEBUG] org.apache.http.client.protocol.RequestProxyAuthentication  - Proxy auth state: UNCHALLENGED
+2021-06-07 16:20:54,718 [DEBUG] org.apache.http.impl.client.DefaultHttpClient  - Attempt 1 to execute request
+2021-06-07 16:20:54,718 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection  - Sending request: POST /api/methodologyItem/revision/60ba99083b5c7ca3f50a4842/item HTTP/1.1
+2021-06-07 16:20:54,718 [DEBUG] org.apache.http.wire  -  >> "POST /api/methodologyItem/revision/60ba99083b5c7ca3f50a4842/item HTTP/1.1[\r][\n]"
+2021-06-07 16:20:54,719 [DEBUG] org.apache.http.wire  -  >> "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiI3ZTc0OThlNy1hZjZjLTQ3YmQtYmYxNi00ZjljNWQ5NjAxYzgiLCJpc3MiOiJodHRwczovL2xvZ2luLm1pY3Jvc29mdG9ubGluZS5jb20vYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4L3YyLjAiLCJpYXQiOjE2MjMwNjIyNTYsIm5iZiI6MTYyMzA2MjI1NiwiZXhwIjoxNjIzMDY2MTU2LCJhaW8iOiJBVVFBdS84VEFBQUFTOFhtajFhL1JYblRyd2Era25zMUpUQklSdWp2SkkzbDNFTzJGQVo0aHU0WmJQQVJCSzZyVFJWRUx4Rk9nNmxra1MzcldtamhmSHFFRk56VXlLNWE3QT09IiwiaWRwIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvMGI4ZjY3NzAtYTQ5MC00OTVkLTg4M2YtZGM5ZjZiYWUzODRlLyIsIm5hbWUiOiJNTVMgVGVzdCBBcGFjIDE2Iiwibm9uY2UiOiJhYTA5N2U4NC1kOGZhLTQ4OTctYTg0NC1lMGE4MDczMzI1NzIiLCJvaWQiOiI1ZjlmMTkwZC02OWM5LTQ2NjAtOWQ4Mi05YjQ3ZjQ0MzI1MTMiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJtbXMudGVzdC5hcGFjLjE2QGd0YWRob2MuZ3QuY29tIiwicmgiOiIwLkFSc0FpN2R0cDBYWk9rcTdRdjBFRWZXTDJPZVlkSDVzcjcxSHZ4WlBuRjJXQWNnYkFINC4iLCJzdWIiOiJVMGItREc5Q2xaTjZXbDFWVWcxYXdVVGdrOTFWNWhWb1RHMWF4bzBadlBrIiwidGlkIjoiYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4IiwidXRpIjoiclNRU0hoOTFpa3k3T2FBajJhb2dBUSIsInZlciI6IjIuMCIsIm1lbWJlcmZpcm1pZCI6ImFwYWMudGVzdCJ9.BQE3i0LrLMi1s2H5WdALujT_n3LY4SwIXfEDMag9otiSaP0O6fyRCTgkiXjg2NYAp9KYJ7bKewj8rF0IuzPXic6Q1vrKAPadlIvv4ytY-CDi5yF0MrEZpbKd_pY7bY3mO50OMvlafi6irtrE2n9cIOXIlw2xUckXt6aaW9EZY2gwEBjTC6BqFRAVLwRATEVe9Y76_dgsed8f_TE8-bqjPypo_VIDEhpT0cva6RaNpngq_h7wPJvAFjFhCMf-2_qlNQHI7LoGya16cOpmrqvGYspI89qXzm5sO1eDDBeWV37H_p24j7LMcrNKgOYnovOK8xbI2mCFYI2AcU26sCG9sQ[\r][\n]"
+2021-06-07 16:20:54,719 [DEBUG] org.apache.http.wire  -  >> "Accept: */*[\r][\n]"
+2021-06-07 16:20:54,719 [DEBUG] org.apache.http.wire  -  >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+2021-06-07 16:20:54,719 [DEBUG] org.apache.http.wire  -  >> "Content-Length: 92[\r][\n]"
+2021-06-07 16:20:54,719 [DEBUG] org.apache.http.wire  -  >> "Host: mmsqa.leap.gtinet.org[\r][\n]"
+2021-06-07 16:20:54,719 [DEBUG] org.apache.http.wire  -  >> "Connection: Keep-Alive[\r][\n]"
+2021-06-07 16:20:54,720 [DEBUG] org.apache.http.wire  -  >> "User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_151)[\r][\n]"
+2021-06-07 16:20:54,720 [DEBUG] org.apache.http.wire  -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2021-06-07 16:20:54,720 [DEBUG] org.apache.http.wire  -  >> "[\r][\n]"
+2021-06-07 16:20:54,720 [DEBUG] org.apache.http.headers  - >> POST /api/methodologyItem/revision/60ba99083b5c7ca3f50a4842/item HTTP/1.1
+2021-06-07 16:20:54,720 [DEBUG] org.apache.http.headers  - >> Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiI3ZTc0OThlNy1hZjZjLTQ3YmQtYmYxNi00ZjljNWQ5NjAxYzgiLCJpc3MiOiJodHRwczovL2xvZ2luLm1pY3Jvc29mdG9ubGluZS5jb20vYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4L3YyLjAiLCJpYXQiOjE2MjMwNjIyNTYsIm5iZiI6MTYyMzA2MjI1NiwiZXhwIjoxNjIzMDY2MTU2LCJhaW8iOiJBVVFBdS84VEFBQUFTOFhtajFhL1JYblRyd2Era25zMUpUQklSdWp2SkkzbDNFTzJGQVo0aHU0WmJQQVJCSzZyVFJWRUx4Rk9nNmxra1MzcldtamhmSHFFRk56VXlLNWE3QT09IiwiaWRwIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvMGI4ZjY3NzAtYTQ5MC00OTVkLTg4M2YtZGM5ZjZiYWUzODRlLyIsIm5hbWUiOiJNTVMgVGVzdCBBcGFjIDE2Iiwibm9uY2UiOiJhYTA5N2U4NC1kOGZhLTQ4OTctYTg0NC1lMGE4MDczMzI1NzIiLCJvaWQiOiI1ZjlmMTkwZC02OWM5LTQ2NjAtOWQ4Mi05YjQ3ZjQ0MzI1MTMiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJtbXMudGVzdC5hcGFjLjE2QGd0YWRob2MuZ3QuY29tIiwicmgiOiIwLkFSc0FpN2R0cDBYWk9rcTdRdjBFRWZXTDJPZVlkSDVzcjcxSHZ4WlBuRjJXQWNnYkFINC4iLCJzdWIiOiJVMGItREc5Q2xaTjZXbDFWVWcxYXdVVGdrOTFWNWhWb1RHMWF4bzBadlBrIiwidGlkIjoiYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4IiwidXRpIjoiclNRU0hoOTFpa3k3T2FBajJhb2dBUSIsInZlciI6IjIuMCIsIm1lbWJlcmZpcm1pZCI6ImFwYWMudGVzdCJ9.BQE3i0LrLMi1s2H5WdALujT_n3LY4SwIXfEDMag9otiSaP0O6fyRCTgkiXjg2NYAp9KYJ7bKewj8rF0IuzPXic6Q1vrKAPadlIvv4ytY-CDi5yF0MrEZpbKd_pY7bY3mO50OMvlafi6irtrE2n9cIOXIlw2xUckXt6aaW9EZY2gwEBjTC6BqFRAVLwRATEVe9Y76_dgsed8f_TE8-bqjPypo_VIDEhpT0cva6RaNpngq_h7wPJvAFjFhCMf-2_qlNQHI7LoGya16cOpmrqvGYspI89qXzm5sO1eDDBeWV37H_p24j7LMcrNKgOYnovOK8xbI2mCFYI2AcU26sCG9sQ
+2021-06-07 16:20:54,720 [DEBUG] org.apache.http.headers  - >> Accept: */*
+2021-06-07 16:20:54,720 [DEBUG] org.apache.http.headers  - >> Content-Type: application/json; charset=UTF-8
+2021-06-07 16:20:54,720 [DEBUG] org.apache.http.headers  - >> Content-Length: 92
+2021-06-07 16:20:54,720 [DEBUG] org.apache.http.headers  - >> Host: mmsqa.leap.gtinet.org
+2021-06-07 16:20:54,720 [DEBUG] org.apache.http.headers  - >> Connection: Keep-Alive
+2021-06-07 16:20:54,720 [DEBUG] org.apache.http.headers  - >> User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_151)
+2021-06-07 16:20:54,720 [DEBUG] org.apache.http.headers  - >> Accept-Encoding: gzip,deflate
+2021-06-07 16:20:54,720 [DEBUG] org.apache.http.wire  -  >> "{"title":"Phase","index":"0","itemType":"WorkProgram","parentId":"60ba99083b5c7ca3f50a4840"}"
+2021-06-07 16:20:54,989 [DEBUG] org.apache.http.wire  -  << "HTTP/1.1 200 OK[\r][\n]"
+2021-06-07 16:20:54,990 [DEBUG] org.apache.http.wire  -  << "Date: Mon, 07 Jun 2021 10:52:58 GMT[\r][\n]"
+2021-06-07 16:20:54,990 [DEBUG] org.apache.http.wire  -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2021-06-07 16:20:54,990 [DEBUG] org.apache.http.wire  -  << "Content-Length: 294[\r][\n]"
+2021-06-07 16:20:54,990 [DEBUG] org.apache.http.wire  -  << "Connection: keep-alive[\r][\n]"
+2021-06-07 16:20:54,990 [DEBUG] org.apache.http.wire  -  << "Strict-Transport-Security: max-age=63072000; includeSubDomains; preload[\r][\n]"
+2021-06-07 16:20:54,990 [DEBUG] org.apache.http.wire  -  << "X-XSS-Protection: 1; mode=block[\r][\n]"
+2021-06-07 16:20:54,990 [DEBUG] org.apache.http.wire  -  << "X-Frame-Options: SAMEORIGIN[\r][\n]"
+2021-06-07 16:20:54,990 [DEBUG] org.apache.http.wire  -  << "X-Content-Type-Options: nosniff[\r][\n]"
+2021-06-07 16:20:54,990 [DEBUG] org.apache.http.wire  -  << "Referrer-Policy: strict-origin[\r][\n]"
+2021-06-07 16:20:54,991 [DEBUG] org.apache.http.wire  -  << "[\r][\n]"
+2021-06-07 16:20:54,991 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection  - Receiving response: HTTP/1.1 200 OK
+2021-06-07 16:20:54,991 [DEBUG] org.apache.http.headers  - << HTTP/1.1 200 OK
+2021-06-07 16:20:54,991 [DEBUG] org.apache.http.headers  - << Date: Mon, 07 Jun 2021 10:52:58 GMT
+2021-06-07 16:20:54,991 [DEBUG] org.apache.http.headers  - << Content-Type: application/json; charset=utf-8
+2021-06-07 16:20:54,991 [DEBUG] org.apache.http.headers  - << Content-Length: 294
+2021-06-07 16:20:54,991 [DEBUG] org.apache.http.headers  - << Connection: keep-alive
+2021-06-07 16:20:54,991 [DEBUG] org.apache.http.headers  - << Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+2021-06-07 16:20:54,991 [DEBUG] org.apache.http.headers  - << X-XSS-Protection: 1; mode=block
+2021-06-07 16:20:54,991 [DEBUG] org.apache.http.headers  - << X-Frame-Options: SAMEORIGIN
+2021-06-07 16:20:54,991 [DEBUG] org.apache.http.headers  - << X-Content-Type-Options: nosniff
+2021-06-07 16:20:54,991 [DEBUG] org.apache.http.headers  - << Referrer-Policy: strict-origin
+2021-06-07 16:20:54,992 [DEBUG] org.apache.http.impl.client.DefaultHttpClient  - Connection can be kept alive indefinitely
+2021-06-07 16:20:54,992 [DEBUG] io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder  - Parsing response as: application/json; charset=utf-8
+2021-06-07 16:20:54,993 [DEBUG] io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder  - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+2021-06-07 16:20:54,995 [DEBUG] org.apache.http.wire  -  << "{"revisionId":"60ba99083b5c7ca3f50a4842","methodologyItemId":"60bdfa8a512276300ed5419b","title":"Phase","itemType":"WorkProgram","workFlowState":"Draft","updatedOn":"2021-06-07T10:52:58.6878885Z","updatedBy":"5f9f190d-69c9-4660-9d82-9b47f4432513","updated":true,"id":"60bdfa8a512276300ed5419c"}"
+2021-06-07 16:20:54,995 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager  - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@f14e5bf
+2021-06-07 16:20:54,995 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager  - Connection can be kept alive indefinitely
+2021-06-07 16:20:55,014 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager  - Get connection for route {s}->https://mmsqa.leap.gtinet.org:443
+2021-06-07 16:20:55,014 [DEBUG] org.apache.http.impl.conn.DefaultClientConnectionOperator  - Connecting to mmsqa.leap.gtinet.org:443
+2021-06-07 16:20:55,895 [DEBUG] org.apache.http.client.protocol.RequestAddCookies  - CookieSpec selected: ignoreCookies
+2021-06-07 16:20:55,896 [DEBUG] org.apache.http.client.protocol.RequestAuthCache  - Auth cache not set in the context
+2021-06-07 16:20:55,896 [DEBUG] org.apache.http.client.protocol.RequestProxyAuthentication  - Proxy auth state: UNCHALLENGED
+2021-06-07 16:20:55,896 [DEBUG] org.apache.http.impl.client.DefaultHttpClient  - Attempt 1 to execute request
+2021-06-07 16:20:55,896 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection  - Sending request: PATCH /api/methodologyItem/revision/60ba99083b5c7ca3f50a4842/item/60bdfa8a512276300ed5419b HTTP/1.1
+2021-06-07 16:20:55,897 [DEBUG] org.apache.http.wire  -  >> "PATCH /api/methodologyItem/revision/60ba99083b5c7ca3f50a4842/item/60bdfa8a512276300ed5419b HTTP/1.1[\r][\n]"
+2021-06-07 16:20:55,897 [DEBUG] org.apache.http.wire  -  >> "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiI3ZTc0OThlNy1hZjZjLTQ3YmQtYmYxNi00ZjljNWQ5NjAxYzgiLCJpc3MiOiJodHRwczovL2xvZ2luLm1pY3Jvc29mdG9ubGluZS5jb20vYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4L3YyLjAiLCJpYXQiOjE2MjMwNjIyNTYsIm5iZiI6MTYyMzA2MjI1NiwiZXhwIjoxNjIzMDY2MTU2LCJhaW8iOiJBVVFBdS84VEFBQUFTOFhtajFhL1JYblRyd2Era25zMUpUQklSdWp2SkkzbDNFTzJGQVo0aHU0WmJQQVJCSzZyVFJWRUx4Rk9nNmxra1MzcldtamhmSHFFRk56VXlLNWE3QT09IiwiaWRwIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvMGI4ZjY3NzAtYTQ5MC00OTVkLTg4M2YtZGM5ZjZiYWUzODRlLyIsIm5hbWUiOiJNTVMgVGVzdCBBcGFjIDE2Iiwibm9uY2UiOiJhYTA5N2U4NC1kOGZhLTQ4OTctYTg0NC1lMGE4MDczMzI1NzIiLCJvaWQiOiI1ZjlmMTkwZC02OWM5LTQ2NjAtOWQ4Mi05YjQ3ZjQ0MzI1MTMiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJtbXMudGVzdC5hcGFjLjE2QGd0YWRob2MuZ3QuY29tIiwicmgiOiIwLkFSc0FpN2R0cDBYWk9rcTdRdjBFRWZXTDJPZVlkSDVzcjcxSHZ4WlBuRjJXQWNnYkFINC4iLCJzdWIiOiJVMGItREc5Q2xaTjZXbDFWVWcxYXdVVGdrOTFWNWhWb1RHMWF4bzBadlBrIiwidGlkIjoiYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4IiwidXRpIjoiclNRU0hoOTFpa3k3T2FBajJhb2dBUSIsInZlciI6IjIuMCIsIm1lbWJlcmZpcm1pZCI6ImFwYWMudGVzdCJ9.BQE3i0LrLMi1s2H5WdALujT_n3LY4SwIXfEDMag9otiSaP0O6fyRCTgkiXjg2NYAp9KYJ7bKewj8rF0IuzPXic6Q1vrKAPadlIvv4ytY-CDi5yF0MrEZpbKd_pY7bY3mO50OMvlafi6irtrE2n9cIOXIlw2xUckXt6aaW9EZY2gwEBjTC6BqFRAVLwRATEVe9Y76_dgsed8f_TE8-bqjPypo_VIDEhpT0cva6RaNpngq_h7wPJvAFjFhCMf-2_qlNQHI7LoGya16cOpmrqvGYspI89qXzm5sO1eDDBeWV37H_p24j7LMcrNKgOYnovOK8xbI2mCFYI2AcU26sCG9sQ[\r][\n]"
+2021-06-07 16:20:55,897 [DEBUG] org.apache.http.wire  -  >> "Accept: */*[\r][\n]"
+2021-06-07 16:20:55,897 [DEBUG] org.apache.http.wire  -  >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+2021-06-07 16:20:55,897 [DEBUG] org.apache.http.wire  -  >> "Content-Length: 78[\r][\n]"
+2021-06-07 16:20:55,897 [DEBUG] org.apache.http.wire  -  >> "Host: mmsqa.leap.gtinet.org[\r][\n]"
+2021-06-07 16:20:55,897 [DEBUG] org.apache.http.wire  -  >> "Connection: Keep-Alive[\r][\n]"
+2021-06-07 16:20:55,898 [DEBUG] org.apache.http.wire  -  >> "User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_151)[\r][\n]"
+2021-06-07 16:20:55,898 [DEBUG] org.apache.http.wire  -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2021-06-07 16:20:55,898 [DEBUG] org.apache.http.wire  -  >> "[\r][\n]"
+2021-06-07 16:20:55,898 [DEBUG] org.apache.http.headers  - >> PATCH /api/methodologyItem/revision/60ba99083b5c7ca3f50a4842/item/60bdfa8a512276300ed5419b HTTP/1.1
+2021-06-07 16:20:55,898 [DEBUG] org.apache.http.headers  - >> Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiI3ZTc0OThlNy1hZjZjLTQ3YmQtYmYxNi00ZjljNWQ5NjAxYzgiLCJpc3MiOiJodHRwczovL2xvZ2luLm1pY3Jvc29mdG9ubGluZS5jb20vYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4L3YyLjAiLCJpYXQiOjE2MjMwNjIyNTYsIm5iZiI6MTYyMzA2MjI1NiwiZXhwIjoxNjIzMDY2MTU2LCJhaW8iOiJBVVFBdS84VEFBQUFTOFhtajFhL1JYblRyd2Era25zMUpUQklSdWp2SkkzbDNFTzJGQVo0aHU0WmJQQVJCSzZyVFJWRUx4Rk9nNmxra1MzcldtamhmSHFFRk56VXlLNWE3QT09IiwiaWRwIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvMGI4ZjY3NzAtYTQ5MC00OTVkLTg4M2YtZGM5ZjZiYWUzODRlLyIsIm5hbWUiOiJNTVMgVGVzdCBBcGFjIDE2Iiwibm9uY2UiOiJhYTA5N2U4NC1kOGZhLTQ4OTctYTg0NC1lMGE4MDczMzI1NzIiLCJvaWQiOiI1ZjlmMTkwZC02OWM5LTQ2NjAtOWQ4Mi05YjQ3ZjQ0MzI1MTMiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJtbXMudGVzdC5hcGFjLjE2QGd0YWRob2MuZ3QuY29tIiwicmgiOiIwLkFSc0FpN2R0cDBYWk9rcTdRdjBFRWZXTDJPZVlkSDVzcjcxSHZ4WlBuRjJXQWNnYkFINC4iLCJzdWIiOiJVMGItREc5Q2xaTjZXbDFWVWcxYXdVVGdrOTFWNWhWb1RHMWF4bzBadlBrIiwidGlkIjoiYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4IiwidXRpIjoiclNRU0hoOTFpa3k3T2FBajJhb2dBUSIsInZlciI6IjIuMCIsIm1lbWJlcmZpcm1pZCI6ImFwYWMudGVzdCJ9.BQE3i0LrLMi1s2H5WdALujT_n3LY4SwIXfEDMag9otiSaP0O6fyRCTgkiXjg2NYAp9KYJ7bKewj8rF0IuzPXic6Q1vrKAPadlIvv4ytY-CDi5yF0MrEZpbKd_pY7bY3mO50OMvlafi6irtrE2n9cIOXIlw2xUckXt6aaW9EZY2gwEBjTC6BqFRAVLwRATEVe9Y76_dgsed8f_TE8-bqjPypo_VIDEhpT0cva6RaNpngq_h7wPJvAFjFhCMf-2_qlNQHI7LoGya16cOpmrqvGYspI89qXzm5sO1eDDBeWV37H_p24j7LMcrNKgOYnovOK8xbI2mCFYI2AcU26sCG9sQ
+2021-06-07 16:20:55,898 [DEBUG] org.apache.http.headers  - >> Accept: */*
+2021-06-07 16:20:55,898 [DEBUG] org.apache.http.headers  - >> Content-Type: application/json; charset=UTF-8
+2021-06-07 16:20:55,898 [DEBUG] org.apache.http.headers  - >> Content-Length: 78
+2021-06-07 16:20:55,898 [DEBUG] org.apache.http.headers  - >> Host: mmsqa.leap.gtinet.org
+2021-06-07 16:20:55,899 [DEBUG] org.apache.http.headers  - >> Connection: Keep-Alive
+2021-06-07 16:20:55,899 [DEBUG] org.apache.http.headers  - >> User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_151)
+2021-06-07 16:20:55,899 [DEBUG] org.apache.http.headers  - >> Accept-Encoding: gzip,deflate
+2021-06-07 16:20:55,899 [DEBUG] org.apache.http.wire  -  >> "{"workProgramType":"QuestionAnswer","tailoring":"Allowed","visibility":"Show"}"
+2021-06-07 16:20:56,170 [DEBUG] org.apache.http.wire  -  << "HTTP/1.1 204 No Content[\r][\n]"
+2021-06-07 16:20:56,171 [DEBUG] org.apache.http.wire  -  << "Date: Mon, 07 Jun 2021 10:52:59 GMT[\r][\n]"
+2021-06-07 16:20:56,171 [DEBUG] org.apache.http.wire  -  << "Connection: keep-alive[\r][\n]"
+2021-06-07 16:20:56,171 [DEBUG] org.apache.http.wire  -  << "Strict-Transport-Security: max-age=63072000; includeSubDomains; preload[\r][\n]"
+2021-06-07 16:20:56,171 [DEBUG] org.apache.http.wire  -  << "X-XSS-Protection: 1; mode=block[\r][\n]"
+2021-06-07 16:20:56,171 [DEBUG] org.apache.http.wire  -  << "X-Frame-Options: SAMEORIGIN[\r][\n]"
+2021-06-07 16:20:56,172 [DEBUG] org.apache.http.wire  -  << "X-Content-Type-Options: nosniff[\r][\n]"
+2021-06-07 16:20:56,172 [DEBUG] org.apache.http.wire  -  << "Referrer-Policy: strict-origin[\r][\n]"
+2021-06-07 16:20:56,172 [DEBUG] org.apache.http.wire  -  << "[\r][\n]"
+2021-06-07 16:20:56,172 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection  - Receiving response: HTTP/1.1 204 No Content
+2021-06-07 16:20:56,172 [DEBUG] org.apache.http.headers  - << HTTP/1.1 204 No Content
+2021-06-07 16:20:56,172 [DEBUG] org.apache.http.headers  - << Date: Mon, 07 Jun 2021 10:52:59 GMT
+2021-06-07 16:20:56,172 [DEBUG] org.apache.http.headers  - << Connection: keep-alive
+2021-06-07 16:20:56,172 [DEBUG] org.apache.http.headers  - << Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+2021-06-07 16:20:56,172 [DEBUG] org.apache.http.headers  - << X-XSS-Protection: 1; mode=block
+2021-06-07 16:20:56,172 [DEBUG] org.apache.http.headers  - << X-Frame-Options: SAMEORIGIN
+2021-06-07 16:20:56,172 [DEBUG] org.apache.http.headers  - << X-Content-Type-Options: nosniff
+2021-06-07 16:20:56,172 [DEBUG] org.apache.http.headers  - << Referrer-Policy: strict-origin
+2021-06-07 16:20:56,173 [DEBUG] org.apache.http.impl.client.DefaultHttpClient  - Connection can be kept alive indefinitely
+2021-06-07 16:20:56,173 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager  - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@5e39850
+2021-06-07 16:20:56,173 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager  - Connection can be kept alive indefinitely
+2021-06-07 16:20:56,181 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager  - Get connection for route {s}->https://mmsqa.leap.gtinet.org:443
+2021-06-07 16:20:56,181 [DEBUG] org.apache.http.impl.conn.DefaultClientConnectionOperator  - Connecting to mmsqa.leap.gtinet.org:443
+2021-06-07 16:20:57,066 [DEBUG] org.apache.http.client.protocol.RequestAddCookies  - CookieSpec selected: ignoreCookies
+2021-06-07 16:20:57,067 [DEBUG] org.apache.http.client.protocol.RequestAuthCache  - Auth cache not set in the context
+2021-06-07 16:20:57,067 [DEBUG] org.apache.http.client.protocol.RequestProxyAuthentication  - Proxy auth state: UNCHALLENGED
+2021-06-07 16:20:57,067 [DEBUG] org.apache.http.impl.client.DefaultHttpClient  - Attempt 1 to execute request
+2021-06-07 16:20:57,067 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection  - Sending request: POST /api/methodologyItem/revision/60ba99083b5c7ca3f50a4842/workProgram/60bdfa8a512276300ed5419b/initialize HTTP/1.1
+2021-06-07 16:20:57,067 [DEBUG] org.apache.http.wire  -  >> "POST /api/methodologyItem/revision/60ba99083b5c7ca3f50a4842/workProgram/60bdfa8a512276300ed5419b/initialize HTTP/1.1[\r][\n]"
+2021-06-07 16:20:57,068 [DEBUG] org.apache.http.wire  -  >> "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiI3ZTc0OThlNy1hZjZjLTQ3YmQtYmYxNi00ZjljNWQ5NjAxYzgiLCJpc3MiOiJodHRwczovL2xvZ2luLm1pY3Jvc29mdG9ubGluZS5jb20vYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4L3YyLjAiLCJpYXQiOjE2MjMwNjIyNTYsIm5iZiI6MTYyMzA2MjI1NiwiZXhwIjoxNjIzMDY2MTU2LCJhaW8iOiJBVVFBdS84VEFBQUFTOFhtajFhL1JYblRyd2Era25zMUpUQklSdWp2SkkzbDNFTzJGQVo0aHU0WmJQQVJCSzZyVFJWRUx4Rk9nNmxra1MzcldtamhmSHFFRk56VXlLNWE3QT09IiwiaWRwIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvMGI4ZjY3NzAtYTQ5MC00OTVkLTg4M2YtZGM5ZjZiYWUzODRlLyIsIm5hbWUiOiJNTVMgVGVzdCBBcGFjIDE2Iiwibm9uY2UiOiJhYTA5N2U4NC1kOGZhLTQ4OTctYTg0NC1lMGE4MDczMzI1NzIiLCJvaWQiOiI1ZjlmMTkwZC02OWM5LTQ2NjAtOWQ4Mi05YjQ3ZjQ0MzI1MTMiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJtbXMudGVzdC5hcGFjLjE2QGd0YWRob2MuZ3QuY29tIiwicmgiOiIwLkFSc0FpN2R0cDBYWk9rcTdRdjBFRWZXTDJPZVlkSDVzcjcxSHZ4WlBuRjJXQWNnYkFINC4iLCJzdWIiOiJVMGItREc5Q2xaTjZXbDFWVWcxYXdVVGdrOTFWNWhWb1RHMWF4bzBadlBrIiwidGlkIjoiYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4IiwidXRpIjoiclNRU0hoOTFpa3k3T2FBajJhb2dBUSIsInZlciI6IjIuMCIsIm1lbWJlcmZpcm1pZCI6ImFwYWMudGVzdCJ9.BQE3i0LrLMi1s2H5WdALujT_n3LY4SwIXfEDMag9otiSaP0O6fyRCTgkiXjg2NYAp9KYJ7bKewj8rF0IuzPXic6Q1vrKAPadlIvv4ytY-CDi5yF0MrEZpbKd_pY7bY3mO50OMvlafi6irtrE2n9cIOXIlw2xUckXt6aaW9EZY2gwEBjTC6BqFRAVLwRATEVe9Y76_dgsed8f_TE8-bqjPypo_VIDEhpT0cva6RaNpngq_h7wPJvAFjFhCMf-2_qlNQHI7LoGya16cOpmrqvGYspI89qXzm5sO1eDDBeWV37H_p24j7LMcrNKgOYnovOK8xbI2mCFYI2AcU26sCG9sQ[\r][\n]"
+2021-06-07 16:20:57,068 [DEBUG] org.apache.http.wire  -  >> "Accept: */*[\r][\n]"
+2021-06-07 16:20:57,068 [DEBUG] org.apache.http.wire  -  >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+2021-06-07 16:20:57,068 [DEBUG] org.apache.http.wire  -  >> "Content-Length: 30[\r][\n]"
+2021-06-07 16:20:57,068 [DEBUG] org.apache.http.wire  -  >> "Host: mmsqa.leap.gtinet.org[\r][\n]"
+2021-06-07 16:20:57,068 [DEBUG] org.apache.http.wire  -  >> "Connection: Keep-Alive[\r][\n]"
+2021-06-07 16:20:57,068 [DEBUG] org.apache.http.wire  -  >> "User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_151)[\r][\n]"
+2021-06-07 16:20:57,068 [DEBUG] org.apache.http.wire  -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2021-06-07 16:20:57,068 [DEBUG] org.apache.http.wire  -  >> "[\r][\n]"
+2021-06-07 16:20:57,069 [DEBUG] org.apache.http.headers  - >> POST /api/methodologyItem/revision/60ba99083b5c7ca3f50a4842/workProgram/60bdfa8a512276300ed5419b/initialize HTTP/1.1
+2021-06-07 16:20:57,069 [DEBUG] org.apache.http.headers  - >> Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiI3ZTc0OThlNy1hZjZjLTQ3YmQtYmYxNi00ZjljNWQ5NjAxYzgiLCJpc3MiOiJodHRwczovL2xvZ2luLm1pY3Jvc29mdG9ubGluZS5jb20vYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4L3YyLjAiLCJpYXQiOjE2MjMwNjIyNTYsIm5iZiI6MTYyMzA2MjI1NiwiZXhwIjoxNjIzMDY2MTU2LCJhaW8iOiJBVVFBdS84VEFBQUFTOFhtajFhL1JYblRyd2Era25zMUpUQklSdWp2SkkzbDNFTzJGQVo0aHU0WmJQQVJCSzZyVFJWRUx4Rk9nNmxra1MzcldtamhmSHFFRk56VXlLNWE3QT09IiwiaWRwIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvMGI4ZjY3NzAtYTQ5MC00OTVkLTg4M2YtZGM5ZjZiYWUzODRlLyIsIm5hbWUiOiJNTVMgVGVzdCBBcGFjIDE2Iiwibm9uY2UiOiJhYTA5N2U4NC1kOGZhLTQ4OTctYTg0NC1lMGE4MDczMzI1NzIiLCJvaWQiOiI1ZjlmMTkwZC02OWM5LTQ2NjAtOWQ4Mi05YjQ3ZjQ0MzI1MTMiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJtbXMudGVzdC5hcGFjLjE2QGd0YWRob2MuZ3QuY29tIiwicmgiOiIwLkFSc0FpN2R0cDBYWk9rcTdRdjBFRWZXTDJPZVlkSDVzcjcxSHZ4WlBuRjJXQWNnYkFINC4iLCJzdWIiOiJVMGItREc5Q2xaTjZXbDFWVWcxYXdVVGdrOTFWNWhWb1RHMWF4bzBadlBrIiwidGlkIjoiYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4IiwidXRpIjoiclNRU0hoOTFpa3k3T2FBajJhb2dBUSIsInZlciI6IjIuMCIsIm1lbWJlcmZpcm1pZCI6ImFwYWMudGVzdCJ9.BQE3i0LrLMi1s2H5WdALujT_n3LY4SwIXfEDMag9otiSaP0O6fyRCTgkiXjg2NYAp9KYJ7bKewj8rF0IuzPXic6Q1vrKAPadlIvv4ytY-CDi5yF0MrEZpbKd_pY7bY3mO50OMvlafi6irtrE2n9cIOXIlw2xUckXt6aaW9EZY2gwEBjTC6BqFRAVLwRATEVe9Y76_dgsed8f_TE8-bqjPypo_VIDEhpT0cva6RaNpngq_h7wPJvAFjFhCMf-2_qlNQHI7LoGya16cOpmrqvGYspI89qXzm5sO1eDDBeWV37H_p24j7LMcrNKgOYnovOK8xbI2mCFYI2AcU26sCG9sQ
+2021-06-07 16:20:57,069 [DEBUG] org.apache.http.headers  - >> Accept: */*
+2021-06-07 16:20:57,069 [DEBUG] org.apache.http.headers  - >> Content-Type: application/json; charset=UTF-8
+2021-06-07 16:20:57,069 [DEBUG] org.apache.http.headers  - >> Content-Length: 30
+2021-06-07 16:20:57,069 [DEBUG] org.apache.http.headers  - >> Host: mmsqa.leap.gtinet.org
+2021-06-07 16:20:57,069 [DEBUG] org.apache.http.headers  - >> Connection: Keep-Alive
+2021-06-07 16:20:57,069 [DEBUG] org.apache.http.headers  - >> User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_151)
+2021-06-07 16:20:57,069 [DEBUG] org.apache.http.headers  - >> Accept-Encoding: gzip,deflate
+2021-06-07 16:20:57,069 [DEBUG] org.apache.http.wire  -  >> "{"ruleContextType":"Standard"}"
+2021-06-07 16:20:57,323 [DEBUG] org.apache.http.wire  -  << "HTTP/1.1 204 No Content[\r][\n]"
+2021-06-07 16:20:57,324 [DEBUG] org.apache.http.wire  -  << "Date: Mon, 07 Jun 2021 10:53:01 GMT[\r][\n]"
+2021-06-07 16:20:57,324 [DEBUG] org.apache.http.wire  -  << "Connection: keep-alive[\r][\n]"
+2021-06-07 16:20:57,324 [DEBUG] org.apache.http.wire  -  << "Strict-Transport-Security: max-age=63072000; includeSubDomains; preload[\r][\n]"
+2021-06-07 16:20:57,324 [DEBUG] org.apache.http.wire  -  << "X-XSS-Protection: 1; mode=block[\r][\n]"
+2021-06-07 16:20:57,324 [DEBUG] org.apache.http.wire  -  << "X-Frame-Options: SAMEORIGIN[\r][\n]"
+2021-06-07 16:20:57,324 [DEBUG] org.apache.http.wire  -  << "X-Content-Type-Options: nosniff[\r][\n]"
+2021-06-07 16:20:57,324 [DEBUG] org.apache.http.wire  -  << "Referrer-Policy: strict-origin[\r][\n]"
+2021-06-07 16:20:57,324 [DEBUG] org.apache.http.wire  -  << "[\r][\n]"
+2021-06-07 16:20:57,325 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection  - Receiving response: HTTP/1.1 204 No Content
+2021-06-07 16:20:57,325 [DEBUG] org.apache.http.headers  - << HTTP/1.1 204 No Content
+2021-06-07 16:20:57,325 [DEBUG] org.apache.http.headers  - << Date: Mon, 07 Jun 2021 10:53:01 GMT
+2021-06-07 16:20:57,325 [DEBUG] org.apache.http.headers  - << Connection: keep-alive
+2021-06-07 16:20:57,325 [DEBUG] org.apache.http.headers  - << Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+2021-06-07 16:20:57,325 [DEBUG] org.apache.http.headers  - << X-XSS-Protection: 1; mode=block
+2021-06-07 16:20:57,325 [DEBUG] org.apache.http.headers  - << X-Frame-Options: SAMEORIGIN
+2021-06-07 16:20:57,325 [DEBUG] org.apache.http.headers  - << X-Content-Type-Options: nosniff
+2021-06-07 16:20:57,325 [DEBUG] org.apache.http.headers  - << Referrer-Policy: strict-origin
+2021-06-07 16:20:57,325 [DEBUG] org.apache.http.impl.client.DefaultHttpClient  - Connection can be kept alive indefinitely
+2021-06-07 16:20:57,326 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager  - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@51827393
+2021-06-07 16:20:57,326 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager  - Connection can be kept alive indefinitely
+2021-06-07 16:20:57,335 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager  - Get connection for route {s}->https://mmsqa.leap.gtinet.org:443
+2021-06-07 16:20:57,335 [DEBUG] org.apache.http.impl.conn.DefaultClientConnectionOperator  - Connecting to mmsqa.leap.gtinet.org:443
+2021-06-07 16:20:58,216 [DEBUG] org.apache.http.client.protocol.RequestAddCookies  - CookieSpec selected: ignoreCookies
+2021-06-07 16:20:58,216 [DEBUG] org.apache.http.client.protocol.RequestAuthCache  - Auth cache not set in the context
+2021-06-07 16:20:58,216 [DEBUG] org.apache.http.client.protocol.RequestProxyAuthentication  - Proxy auth state: UNCHALLENGED
+2021-06-07 16:20:58,216 [DEBUG] org.apache.http.impl.client.DefaultHttpClient  - Attempt 1 to execute request
+2021-06-07 16:20:58,216 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection  - Sending request: POST /api/methodologyItem/revision/60ba99083b5c7ca3f50a4842/item HTTP/1.1
+2021-06-07 16:20:58,216 [DEBUG] org.apache.http.wire  -  >> "POST /api/methodologyItem/revision/60ba99083b5c7ca3f50a4842/item HTTP/1.1[\r][\n]"
+2021-06-07 16:20:58,216 [DEBUG] org.apache.http.wire  -  >> "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiI3ZTc0OThlNy1hZjZjLTQ3YmQtYmYxNi00ZjljNWQ5NjAxYzgiLCJpc3MiOiJodHRwczovL2xvZ2luLm1pY3Jvc29mdG9ubGluZS5jb20vYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4L3YyLjAiLCJpYXQiOjE2MjMwNjIyNTYsIm5iZiI6MTYyMzA2MjI1NiwiZXhwIjoxNjIzMDY2MTU2LCJhaW8iOiJBVVFBdS84VEFBQUFTOFhtajFhL1JYblRyd2Era25zMUpUQklSdWp2SkkzbDNFTzJGQVo0aHU0WmJQQVJCSzZyVFJWRUx4Rk9nNmxra1MzcldtamhmSHFFRk56VXlLNWE3QT09IiwiaWRwIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvMGI4ZjY3NzAtYTQ5MC00OTVkLTg4M2YtZGM5ZjZiYWUzODRlLyIsIm5hbWUiOiJNTVMgVGVzdCBBcGFjIDE2Iiwibm9uY2UiOiJhYTA5N2U4NC1kOGZhLTQ4OTctYTg0NC1lMGE4MDczMzI1NzIiLCJvaWQiOiI1ZjlmMTkwZC02OWM5LTQ2NjAtOWQ4Mi05YjQ3ZjQ0MzI1MTMiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJtbXMudGVzdC5hcGFjLjE2QGd0YWRob2MuZ3QuY29tIiwicmgiOiIwLkFSc0FpN2R0cDBYWk9rcTdRdjBFRWZXTDJPZVlkSDVzcjcxSHZ4WlBuRjJXQWNnYkFINC4iLCJzdWIiOiJVMGItREc5Q2xaTjZXbDFWVWcxYXdVVGdrOTFWNWhWb1RHMWF4bzBadlBrIiwidGlkIjoiYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4IiwidXRpIjoiclNRU0hoOTFpa3k3T2FBajJhb2dBUSIsInZlciI6IjIuMCIsIm1lbWJlcmZpcm1pZCI6ImFwYWMudGVzdCJ9.BQE3i0LrLMi1s2H5WdALujT_n3LY4SwIXfEDMag9otiSaP0O6fyRCTgkiXjg2NYAp9KYJ7bKewj8rF0IuzPXic6Q1vrKAPadlIvv4ytY-CDi5yF0MrEZpbKd_pY7bY3mO50OMvlafi6irtrE2n9cIOXIlw2xUckXt6aaW9EZY2gwEBjTC6BqFRAVLwRATEVe9Y76_dgsed8f_TE8-bqjPypo_VIDEhpT0cva6RaNpngq_h7wPJvAFjFhCMf-2_qlNQHI7LoGya16cOpmrqvGYspI89qXzm5sO1eDDBeWV37H_p24j7LMcrNKgOYnovOK8xbI2mCFYI2AcU26sCG9sQ[\r][\n]"
+2021-06-07 16:20:58,216 [DEBUG] org.apache.http.wire  -  >> "Accept: */*[\r][\n]"
+2021-06-07 16:20:58,216 [DEBUG] org.apache.http.wire  -  >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+2021-06-07 16:20:58,216 [DEBUG] org.apache.http.wire  -  >> "Content-Length: 145[\r][\n]"
+2021-06-07 16:20:58,217 [DEBUG] org.apache.http.wire  -  >> "Host: mmsqa.leap.gtinet.org[\r][\n]"
+2021-06-07 16:20:58,217 [DEBUG] org.apache.http.wire  -  >> "Connection: Keep-Alive[\r][\n]"
+2021-06-07 16:20:58,217 [DEBUG] org.apache.http.wire  -  >> "User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_151)[\r][\n]"
+2021-06-07 16:20:58,217 [DEBUG] org.apache.http.wire  -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2021-06-07 16:20:58,217 [DEBUG] org.apache.http.wire  -  >> "[\r][\n]"
+2021-06-07 16:20:58,217 [DEBUG] org.apache.http.headers  - >> POST /api/methodologyItem/revision/60ba99083b5c7ca3f50a4842/item HTTP/1.1
+2021-06-07 16:20:58,217 [DEBUG] org.apache.http.headers  - >> Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiI3ZTc0OThlNy1hZjZjLTQ3YmQtYmYxNi00ZjljNWQ5NjAxYzgiLCJpc3MiOiJodHRwczovL2xvZ2luLm1pY3Jvc29mdG9ubGluZS5jb20vYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4L3YyLjAiLCJpYXQiOjE2MjMwNjIyNTYsIm5iZiI6MTYyMzA2MjI1NiwiZXhwIjoxNjIzMDY2MTU2LCJhaW8iOiJBVVFBdS84VEFBQUFTOFhtajFhL1JYblRyd2Era25zMUpUQklSdWp2SkkzbDNFTzJGQVo0aHU0WmJQQVJCSzZyVFJWRUx4Rk9nNmxra1MzcldtamhmSHFFRk56VXlLNWE3QT09IiwiaWRwIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvMGI4ZjY3NzAtYTQ5MC00OTVkLTg4M2YtZGM5ZjZiYWUzODRlLyIsIm5hbWUiOiJNTVMgVGVzdCBBcGFjIDE2Iiwibm9uY2UiOiJhYTA5N2U4NC1kOGZhLTQ4OTctYTg0NC1lMGE4MDczMzI1NzIiLCJvaWQiOiI1ZjlmMTkwZC02OWM5LTQ2NjAtOWQ4Mi05YjQ3ZjQ0MzI1MTMiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJtbXMudGVzdC5hcGFjLjE2QGd0YWRob2MuZ3QuY29tIiwicmgiOiIwLkFSc0FpN2R0cDBYWk9rcTdRdjBFRWZXTDJPZVlkSDVzcjcxSHZ4WlBuRjJXQWNnYkFINC4iLCJzdWIiOiJVMGItREc5Q2xaTjZXbDFWVWcxYXdVVGdrOTFWNWhWb1RHMWF4bzBadlBrIiwidGlkIjoiYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4IiwidXRpIjoiclNRU0hoOTFpa3k3T2FBajJhb2dBUSIsInZlciI6IjIuMCIsIm1lbWJlcmZpcm1pZCI6ImFwYWMudGVzdCJ9.BQE3i0LrLMi1s2H5WdALujT_n3LY4SwIXfEDMag9otiSaP0O6fyRCTgkiXjg2NYAp9KYJ7bKewj8rF0IuzPXic6Q1vrKAPadlIvv4ytY-CDi5yF0MrEZpbKd_pY7bY3mO50OMvlafi6irtrE2n9cIOXIlw2xUckXt6aaW9EZY2gwEBjTC6BqFRAVLwRATEVe9Y76_dgsed8f_TE8-bqjPypo_VIDEhpT0cva6RaNpngq_h7wPJvAFjFhCMf-2_qlNQHI7LoGya16cOpmrqvGYspI89qXzm5sO1eDDBeWV37H_p24j7LMcrNKgOYnovOK8xbI2mCFYI2AcU26sCG9sQ
+2021-06-07 16:20:58,217 [DEBUG] org.apache.http.headers  - >> Accept: */*
+2021-06-07 16:20:58,217 [DEBUG] org.apache.http.headers  - >> Content-Type: application/json; charset=UTF-8
+2021-06-07 16:20:58,217 [DEBUG] org.apache.http.headers  - >> Content-Length: 145
+2021-06-07 16:20:58,217 [DEBUG] org.apache.http.headers  - >> Host: mmsqa.leap.gtinet.org
+2021-06-07 16:20:58,217 [DEBUG] org.apache.http.headers  - >> Connection: Keep-Alive
+2021-06-07 16:20:58,217 [DEBUG] org.apache.http.headers  - >> User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_151)
+2021-06-07 16:20:58,217 [DEBUG] org.apache.http.headers  - >> Accept-Encoding: gzip,deflate
+2021-06-07 16:20:58,217 [DEBUG] org.apache.http.wire  -  >> "{"parentId":"60bdfa83512276300ed54195","title":"Procedure-3","index":"0","itemType":"WorkProgramItem","workProgramId":"60ba99083b5c7ca3f50a4840"}"
+2021-06-07 16:20:58,503 [DEBUG] org.apache.http.wire  -  << "HTTP/1.1 200 OK[\r][\n]"
+2021-06-07 16:20:58,503 [DEBUG] org.apache.http.wire  -  << "Date: Mon, 07 Jun 2021 10:53:02 GMT[\r][\n]"
+2021-06-07 16:20:58,503 [DEBUG] org.apache.http.wire  -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2021-06-07 16:20:58,503 [DEBUG] org.apache.http.wire  -  << "Content-Length: 383[\r][\n]"
+2021-06-07 16:20:58,503 [DEBUG] org.apache.http.wire  -  << "Connection: keep-alive[\r][\n]"
+2021-06-07 16:20:58,503 [DEBUG] org.apache.http.wire  -  << "Strict-Transport-Security: max-age=63072000; includeSubDomains; preload[\r][\n]"
+2021-06-07 16:20:58,503 [DEBUG] org.apache.http.wire  -  << "X-XSS-Protection: 1; mode=block[\r][\n]"
+2021-06-07 16:20:58,504 [DEBUG] org.apache.http.wire  -  << "X-Frame-Options: SAMEORIGIN[\r][\n]"
+2021-06-07 16:20:58,504 [DEBUG] org.apache.http.wire  -  << "X-Content-Type-Options: nosniff[\r][\n]"
+2021-06-07 16:20:58,504 [DEBUG] org.apache.http.wire  -  << "Referrer-Policy: strict-origin[\r][\n]"
+2021-06-07 16:20:58,504 [DEBUG] org.apache.http.wire  -  << "[\r][\n]"
+2021-06-07 16:20:58,504 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection  - Receiving response: HTTP/1.1 200 OK
+2021-06-07 16:20:58,504 [DEBUG] org.apache.http.headers  - << HTTP/1.1 200 OK
+2021-06-07 16:20:58,504 [DEBUG] org.apache.http.headers  - << Date: Mon, 07 Jun 2021 10:53:02 GMT
+2021-06-07 16:20:58,504 [DEBUG] org.apache.http.headers  - << Content-Type: application/json; charset=utf-8
+2021-06-07 16:20:58,504 [DEBUG] org.apache.http.headers  - << Content-Length: 383
+2021-06-07 16:20:58,504 [DEBUG] org.apache.http.headers  - << Connection: keep-alive
+2021-06-07 16:20:58,504 [DEBUG] org.apache.http.headers  - << Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+2021-06-07 16:20:58,505 [DEBUG] org.apache.http.headers  - << X-XSS-Protection: 1; mode=block
+2021-06-07 16:20:58,505 [DEBUG] org.apache.http.headers  - << X-Frame-Options: SAMEORIGIN
+2021-06-07 16:20:58,505 [DEBUG] org.apache.http.headers  - << X-Content-Type-Options: nosniff
+2021-06-07 16:20:58,505 [DEBUG] org.apache.http.headers  - << Referrer-Policy: strict-origin
+2021-06-07 16:20:58,505 [DEBUG] org.apache.http.impl.client.DefaultHttpClient  - Connection can be kept alive indefinitely
+2021-06-07 16:20:58,506 [DEBUG] io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder  - Parsing response as: application/json; charset=utf-8
+2021-06-07 16:20:58,506 [DEBUG] io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder  - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+2021-06-07 16:20:58,507 [DEBUG] org.apache.http.wire  -  << "{"workProgramItemType":"PlaceHolder","workProgramId":"60bdfa83512276300ed54195","revisionId":"60ba99083b5c7ca3f50a4842","methodologyItemId":"60bdfa8e512276300ed5419d","title":"Procedure-3","itemType":"WorkProgramItem","workFlowState":"Draft","updatedOn":"2021-06-07T10:53:02.1902845Z","updatedBy":"5f9f190d-69c9-4660-9d82-9b47f4432513","updated":true,"id":"60bdfa8e512276300ed5419e"}"
+2021-06-07 16:20:58,507 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager  - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@6a2eea2a
+2021-06-07 16:20:58,507 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager  - Connection can be kept alive indefinitely
+2021-06-07 16:20:58,519 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager  - Get connection for route {s}->https://mmsqa.leap.gtinet.org:443
+2021-06-07 16:20:58,519 [DEBUG] org.apache.http.impl.conn.DefaultClientConnectionOperator  - Connecting to mmsqa.leap.gtinet.org:443
+2021-06-07 16:20:59,400 [DEBUG] org.apache.http.client.protocol.RequestAddCookies  - CookieSpec selected: ignoreCookies
+2021-06-07 16:20:59,400 [DEBUG] org.apache.http.client.protocol.RequestAuthCache  - Auth cache not set in the context
+2021-06-07 16:20:59,400 [DEBUG] org.apache.http.client.protocol.RequestProxyAuthentication  - Proxy auth state: UNCHALLENGED
+2021-06-07 16:20:59,400 [DEBUG] org.apache.http.impl.client.DefaultHttpClient  - Attempt 1 to execute request
+2021-06-07 16:20:59,400 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection  - Sending request: PATCH /api/methodologyItem/revision/60ba99083b5c7ca3f50a4842/item/60bdfa8e512276300ed5419d HTTP/1.1
+2021-06-07 16:20:59,401 [DEBUG] org.apache.http.wire  -  >> "PATCH /api/methodologyItem/revision/60ba99083b5c7ca3f50a4842/item/60bdfa8e512276300ed5419d HTTP/1.1[\r][\n]"
+2021-06-07 16:20:59,401 [DEBUG] org.apache.http.wire  -  >> "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiI3ZTc0OThlNy1hZjZjLTQ3YmQtYmYxNi00ZjljNWQ5NjAxYzgiLCJpc3MiOiJodHRwczovL2xvZ2luLm1pY3Jvc29mdG9ubGluZS5jb20vYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4L3YyLjAiLCJpYXQiOjE2MjMwNjIyNTYsIm5iZiI6MTYyMzA2MjI1NiwiZXhwIjoxNjIzMDY2MTU2LCJhaW8iOiJBVVFBdS84VEFBQUFTOFhtajFhL1JYblRyd2Era25zMUpUQklSdWp2SkkzbDNFTzJGQVo0aHU0WmJQQVJCSzZyVFJWRUx4Rk9nNmxra1MzcldtamhmSHFFRk56VXlLNWE3QT09IiwiaWRwIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvMGI4ZjY3NzAtYTQ5MC00OTVkLTg4M2YtZGM5ZjZiYWUzODRlLyIsIm5hbWUiOiJNTVMgVGVzdCBBcGFjIDE2Iiwibm9uY2UiOiJhYTA5N2U4NC1kOGZhLTQ4OTctYTg0NC1lMGE4MDczMzI1NzIiLCJvaWQiOiI1ZjlmMTkwZC02OWM5LTQ2NjAtOWQ4Mi05YjQ3ZjQ0MzI1MTMiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJtbXMudGVzdC5hcGFjLjE2QGd0YWRob2MuZ3QuY29tIiwicmgiOiIwLkFSc0FpN2R0cDBYWk9rcTdRdjBFRWZXTDJPZVlkSDVzcjcxSHZ4WlBuRjJXQWNnYkFINC4iLCJzdWIiOiJVMGItREc5Q2xaTjZXbDFWVWcxYXdVVGdrOTFWNWhWb1RHMWF4bzBadlBrIiwidGlkIjoiYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4IiwidXRpIjoiclNRU0hoOTFpa3k3T2FBajJhb2dBUSIsInZlciI6IjIuMCIsIm1lbWJlcmZpcm1pZCI6ImFwYWMudGVzdCJ9.BQE3i0LrLMi1s2H5WdALujT_n3LY4SwIXfEDMag9otiSaP0O6fyRCTgkiXjg2NYAp9KYJ7bKewj8rF0IuzPXic6Q1vrKAPadlIvv4ytY-CDi5yF0MrEZpbKd_pY7bY3mO50OMvlafi6irtrE2n9cIOXIlw2xUckXt6aaW9EZY2gwEBjTC6BqFRAVLwRATEVe9Y76_dgsed8f_TE8-bqjPypo_VIDEhpT0cva6RaNpngq_h7wPJvAFjFhCMf-2_qlNQHI7LoGya16cOpmrqvGYspI89qXzm5sO1eDDBeWV37H_p24j7LMcrNKgOYnovOK8xbI2mCFYI2AcU26sCG9sQ[\r][\n]"
+2021-06-07 16:20:59,401 [DEBUG] org.apache.http.wire  -  >> "Accept: */*[\r][\n]"
+2021-06-07 16:20:59,401 [DEBUG] org.apache.http.wire  -  >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+2021-06-07 16:20:59,401 [DEBUG] org.apache.http.wire  -  >> "Content-Length: 38[\r][\n]"
+2021-06-07 16:20:59,402 [DEBUG] org.apache.http.wire  -  >> "Host: mmsqa.leap.gtinet.org[\r][\n]"
+2021-06-07 16:20:59,402 [DEBUG] org.apache.http.wire  -  >> "Connection: Keep-Alive[\r][\n]"
+2021-06-07 16:20:59,402 [DEBUG] org.apache.http.wire  -  >> "User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_151)[\r][\n]"
+2021-06-07 16:20:59,402 [DEBUG] org.apache.http.wire  -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2021-06-07 16:20:59,402 [DEBUG] org.apache.http.wire  -  >> "[\r][\n]"
+2021-06-07 16:20:59,402 [DEBUG] org.apache.http.headers  - >> PATCH /api/methodologyItem/revision/60ba99083b5c7ca3f50a4842/item/60bdfa8e512276300ed5419d HTTP/1.1
+2021-06-07 16:20:59,402 [DEBUG] org.apache.http.headers  - >> Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiI3ZTc0OThlNy1hZjZjLTQ3YmQtYmYxNi00ZjljNWQ5NjAxYzgiLCJpc3MiOiJodHRwczovL2xvZ2luLm1pY3Jvc29mdG9ubGluZS5jb20vYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4L3YyLjAiLCJpYXQiOjE2MjMwNjIyNTYsIm5iZiI6MTYyMzA2MjI1NiwiZXhwIjoxNjIzMDY2MTU2LCJhaW8iOiJBVVFBdS84VEFBQUFTOFhtajFhL1JYblRyd2Era25zMUpUQklSdWp2SkkzbDNFTzJGQVo0aHU0WmJQQVJCSzZyVFJWRUx4Rk9nNmxra1MzcldtamhmSHFFRk56VXlLNWE3QT09IiwiaWRwIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvMGI4ZjY3NzAtYTQ5MC00OTVkLTg4M2YtZGM5ZjZiYWUzODRlLyIsIm5hbWUiOiJNTVMgVGVzdCBBcGFjIDE2Iiwibm9uY2UiOiJhYTA5N2U4NC1kOGZhLTQ4OTctYTg0NC1lMGE4MDczMzI1NzIiLCJvaWQiOiI1ZjlmMTkwZC02OWM5LTQ2NjAtOWQ4Mi05YjQ3ZjQ0MzI1MTMiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJtbXMudGVzdC5hcGFjLjE2QGd0YWRob2MuZ3QuY29tIiwicmgiOiIwLkFSc0FpN2R0cDBYWk9rcTdRdjBFRWZXTDJPZVlkSDVzcjcxSHZ4WlBuRjJXQWNnYkFINC4iLCJzdWIiOiJVMGItREc5Q2xaTjZXbDFWVWcxYXdVVGdrOTFWNWhWb1RHMWF4bzBadlBrIiwidGlkIjoiYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4IiwidXRpIjoiclNRU0hoOTFpa3k3T2FBajJhb2dBUSIsInZlciI6IjIuMCIsIm1lbWJlcmZpcm1pZCI6ImFwYWMudGVzdCJ9.BQE3i0LrLMi1s2H5WdALujT_n3LY4SwIXfEDMag9otiSaP0O6fyRCTgkiXjg2NYAp9KYJ7bKewj8rF0IuzPXic6Q1vrKAPadlIvv4ytY-CDi5yF0MrEZpbKd_pY7bY3mO50OMvlafi6irtrE2n9cIOXIlw2xUckXt6aaW9EZY2gwEBjTC6BqFRAVLwRATEVe9Y76_dgsed8f_TE8-bqjPypo_VIDEhpT0cva6RaNpngq_h7wPJvAFjFhCMf-2_qlNQHI7LoGya16cOpmrqvGYspI89qXzm5sO1eDDBeWV37H_p24j7LMcrNKgOYnovOK8xbI2mCFYI2AcU26sCG9sQ
+2021-06-07 16:20:59,402 [DEBUG] org.apache.http.headers  - >> Accept: */*
+2021-06-07 16:20:59,402 [DEBUG] org.apache.http.headers  - >> Content-Type: application/json; charset=UTF-8
+2021-06-07 16:20:59,402 [DEBUG] org.apache.http.headers  - >> Content-Length: 38
+2021-06-07 16:20:59,402 [DEBUG] org.apache.http.headers  - >> Host: mmsqa.leap.gtinet.org
+2021-06-07 16:20:59,402 [DEBUG] org.apache.http.headers  - >> Connection: Keep-Alive
+2021-06-07 16:20:59,402 [DEBUG] org.apache.http.headers  - >> User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_151)
+2021-06-07 16:20:59,403 [DEBUG] org.apache.http.headers  - >> Accept-Encoding: gzip,deflate
+2021-06-07 16:20:59,403 [DEBUG] org.apache.http.wire  -  >> "{"workProgramItemType":"ResponseLink"}"
+2021-06-07 16:20:59,673 [DEBUG] org.apache.http.wire  -  << "HTTP/1.1 204 No Content[\r][\n]"
+2021-06-07 16:20:59,673 [DEBUG] org.apache.http.wire  -  << "Date: Mon, 07 Jun 2021 10:53:03 GMT[\r][\n]"
+2021-06-07 16:20:59,673 [DEBUG] org.apache.http.wire  -  << "Connection: keep-alive[\r][\n]"
+2021-06-07 16:20:59,674 [DEBUG] org.apache.http.wire  -  << "Strict-Transport-Security: max-age=63072000; includeSubDomains; preload[\r][\n]"
+2021-06-07 16:20:59,674 [DEBUG] org.apache.http.wire  -  << "X-XSS-Protection: 1; mode=block[\r][\n]"
+2021-06-07 16:20:59,674 [DEBUG] org.apache.http.wire  -  << "X-Frame-Options: SAMEORIGIN[\r][\n]"
+2021-06-07 16:20:59,674 [DEBUG] org.apache.http.wire  -  << "X-Content-Type-Options: nosniff[\r][\n]"
+2021-06-07 16:20:59,674 [DEBUG] org.apache.http.wire  -  << "Referrer-Policy: strict-origin[\r][\n]"
+2021-06-07 16:20:59,674 [DEBUG] org.apache.http.wire  -  << "[\r][\n]"
+2021-06-07 16:20:59,674 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection  - Receiving response: HTTP/1.1 204 No Content
+2021-06-07 16:20:59,674 [DEBUG] org.apache.http.headers  - << HTTP/1.1 204 No Content
+2021-06-07 16:20:59,674 [DEBUG] org.apache.http.headers  - << Date: Mon, 07 Jun 2021 10:53:03 GMT
+2021-06-07 16:20:59,674 [DEBUG] org.apache.http.headers  - << Connection: keep-alive
+2021-06-07 16:20:59,674 [DEBUG] org.apache.http.headers  - << Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+2021-06-07 16:20:59,674 [DEBUG] org.apache.http.headers  - << X-XSS-Protection: 1; mode=block
+2021-06-07 16:20:59,674 [DEBUG] org.apache.http.headers  - << X-Frame-Options: SAMEORIGIN
+2021-06-07 16:20:59,675 [DEBUG] org.apache.http.headers  - << X-Content-Type-Options: nosniff
+2021-06-07 16:20:59,675 [DEBUG] org.apache.http.headers  - << Referrer-Policy: strict-origin
+2021-06-07 16:20:59,675 [DEBUG] org.apache.http.impl.client.DefaultHttpClient  - Connection can be kept alive indefinitely
+2021-06-07 16:20:59,675 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager  - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@5327a06e
+2021-06-07 16:20:59,675 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager  - Connection can be kept alive indefinitely
+2021-06-07 16:21:00,189 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager  - Get connection for route {s}->https://mmsqa.leap.gtinet.org:443
+2021-06-07 16:21:00,189 [DEBUG] org.apache.http.impl.conn.DefaultClientConnectionOperator  - Connecting to mmsqa.leap.gtinet.org:443
+2021-06-07 16:21:01,064 [DEBUG] org.apache.http.client.protocol.RequestAddCookies  - CookieSpec selected: ignoreCookies
+2021-06-07 16:21:01,064 [DEBUG] org.apache.http.client.protocol.RequestAuthCache  - Auth cache not set in the context
+2021-06-07 16:21:01,064 [DEBUG] org.apache.http.client.protocol.RequestProxyAuthentication  - Proxy auth state: UNCHALLENGED
+2021-06-07 16:21:01,064 [DEBUG] org.apache.http.impl.client.DefaultHttpClient  - Attempt 1 to execute request
+2021-06-07 16:21:01,064 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection  - Sending request: POST /api/rules/revision/60ba99083b5c7ca3f50a4842 HTTP/1.1
+2021-06-07 16:21:01,064 [DEBUG] org.apache.http.wire  -  >> "POST /api/rules/revision/60ba99083b5c7ca3f50a4842 HTTP/1.1[\r][\n]"
+2021-06-07 16:21:01,065 [DEBUG] org.apache.http.wire  -  >> "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiI3ZTc0OThlNy1hZjZjLTQ3YmQtYmYxNi00ZjljNWQ5NjAxYzgiLCJpc3MiOiJodHRwczovL2xvZ2luLm1pY3Jvc29mdG9ubGluZS5jb20vYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4L3YyLjAiLCJpYXQiOjE2MjMwNjIyNTYsIm5iZiI6MTYyMzA2MjI1NiwiZXhwIjoxNjIzMDY2MTU2LCJhaW8iOiJBVVFBdS84VEFBQUFTOFhtajFhL1JYblRyd2Era25zMUpUQklSdWp2SkkzbDNFTzJGQVo0aHU0WmJQQVJCSzZyVFJWRUx4Rk9nNmxra1MzcldtamhmSHFFRk56VXlLNWE3QT09IiwiaWRwIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvMGI4ZjY3NzAtYTQ5MC00OTVkLTg4M2YtZGM5ZjZiYWUzODRlLyIsIm5hbWUiOiJNTVMgVGVzdCBBcGFjIDE2Iiwibm9uY2UiOiJhYTA5N2U4NC1kOGZhLTQ4OTctYTg0NC1lMGE4MDczMzI1NzIiLCJvaWQiOiI1ZjlmMTkwZC02OWM5LTQ2NjAtOWQ4Mi05YjQ3ZjQ0MzI1MTMiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJtbXMudGVzdC5hcGFjLjE2QGd0YWRob2MuZ3QuY29tIiwicmgiOiIwLkFSc0FpN2R0cDBYWk9rcTdRdjBFRWZXTDJPZVlkSDVzcjcxSHZ4WlBuRjJXQWNnYkFINC4iLCJzdWIiOiJVMGItREc5Q2xaTjZXbDFWVWcxYXdVVGdrOTFWNWhWb1RHMWF4bzBadlBrIiwidGlkIjoiYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4IiwidXRpIjoiclNRU0hoOTFpa3k3T2FBajJhb2dBUSIsInZlciI6IjIuMCIsIm1lbWJlcmZpcm1pZCI6ImFwYWMudGVzdCJ9.BQE3i0LrLMi1s2H5WdALujT_n3LY4SwIXfEDMag9otiSaP0O6fyRCTgkiXjg2NYAp9KYJ7bKewj8rF0IuzPXic6Q1vrKAPadlIvv4ytY-CDi5yF0MrEZpbKd_pY7bY3mO50OMvlafi6irtrE2n9cIOXIlw2xUckXt6aaW9EZY2gwEBjTC6BqFRAVLwRATEVe9Y76_dgsed8f_TE8-bqjPypo_VIDEhpT0cva6RaNpngq_h7wPJvAFjFhCMf-2_qlNQHI7LoGya16cOpmrqvGYspI89qXzm5sO1eDDBeWV37H_p24j7LMcrNKgOYnovOK8xbI2mCFYI2AcU26sCG9sQ[\r][\n]"
+2021-06-07 16:21:01,065 [DEBUG] org.apache.http.wire  -  >> "Accept: */*[\r][\n]"
+2021-06-07 16:21:01,065 [DEBUG] org.apache.http.wire  -  >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+2021-06-07 16:21:01,065 [DEBUG] org.apache.http.wire  -  >> "Content-Length: 441[\r][\n]"
+2021-06-07 16:21:01,065 [DEBUG] org.apache.http.wire  -  >> "Host: mmsqa.leap.gtinet.org[\r][\n]"
+2021-06-07 16:21:01,065 [DEBUG] org.apache.http.wire  -  >> "Connection: Keep-Alive[\r][\n]"
+2021-06-07 16:21:01,065 [DEBUG] org.apache.http.wire  -  >> "User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_151)[\r][\n]"
+2021-06-07 16:21:01,065 [DEBUG] org.apache.http.wire  -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2021-06-07 16:21:01,065 [DEBUG] org.apache.http.wire  -  >> "[\r][\n]"
+2021-06-07 16:21:01,066 [DEBUG] org.apache.http.headers  - >> POST /api/rules/revision/60ba99083b5c7ca3f50a4842 HTTP/1.1
+2021-06-07 16:21:01,066 [DEBUG] org.apache.http.headers  - >> Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiI3ZTc0OThlNy1hZjZjLTQ3YmQtYmYxNi00ZjljNWQ5NjAxYzgiLCJpc3MiOiJodHRwczovL2xvZ2luLm1pY3Jvc29mdG9ubGluZS5jb20vYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4L3YyLjAiLCJpYXQiOjE2MjMwNjIyNTYsIm5iZiI6MTYyMzA2MjI1NiwiZXhwIjoxNjIzMDY2MTU2LCJhaW8iOiJBVVFBdS84VEFBQUFTOFhtajFhL1JYblRyd2Era25zMUpUQklSdWp2SkkzbDNFTzJGQVo0aHU0WmJQQVJCSzZyVFJWRUx4Rk9nNmxra1MzcldtamhmSHFFRk56VXlLNWE3QT09IiwiaWRwIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvMGI4ZjY3NzAtYTQ5MC00OTVkLTg4M2YtZGM5ZjZiYWUzODRlLyIsIm5hbWUiOiJNTVMgVGVzdCBBcGFjIDE2Iiwibm9uY2UiOiJhYTA5N2U4NC1kOGZhLTQ4OTctYTg0NC1lMGE4MDczMzI1NzIiLCJvaWQiOiI1ZjlmMTkwZC02OWM5LTQ2NjAtOWQ4Mi05YjQ3ZjQ0MzI1MTMiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJtbXMudGVzdC5hcGFjLjE2QGd0YWRob2MuZ3QuY29tIiwicmgiOiIwLkFSc0FpN2R0cDBYWk9rcTdRdjBFRWZXTDJPZVlkSDVzcjcxSHZ4WlBuRjJXQWNnYkFINC4iLCJzdWIiOiJVMGItREc5Q2xaTjZXbDFWVWcxYXdVVGdrOTFWNWhWb1RHMWF4bzBadlBrIiwidGlkIjoiYTc2ZGI3OGItZDk0NS00YTNhLWJiNDItZmQwNDExZjU4YmQ4IiwidXRpIjoiclNRU0hoOTFpa3k3T2FBajJhb2dBUSIsInZlciI6IjIuMCIsIm1lbWJlcmZpcm1pZCI6ImFwYWMudGVzdCJ9.BQE3i0LrLMi1s2H5WdALujT_n3LY4SwIXfEDMag9otiSaP0O6fyRCTgkiXjg2NYAp9KYJ7bKewj8rF0IuzPXic6Q1vrKAPadlIvv4ytY-CDi5yF0MrEZpbKd_pY7bY3mO50OMvlafi6irtrE2n9cIOXIlw2xUckXt6aaW9EZY2gwEBjTC6BqFRAVLwRATEVe9Y76_dgsed8f_TE8-bqjPypo_VIDEhpT0cva6RaNpngq_h7wPJvAFjFhCMf-2_qlNQHI7LoGya16cOpmrqvGYspI89qXzm5sO1eDDBeWV37H_p24j7LMcrNKgOYnovOK8xbI2mCFYI2AcU26sCG9sQ
+2021-06-07 16:21:01,066 [DEBUG] org.apache.http.headers  - >> Accept: */*
+2021-06-07 16:21:01,066 [DEBUG] org.apache.http.headers  - >> Content-Type: application/json; charset=UTF-8
+2021-06-07 16:21:01,066 [DEBUG] org.apache.http.headers  - >> Content-Length: 441
+2021-06-07 16:21:01,066 [DEBUG] org.apache.http.headers  - >> Host: mmsqa.leap.gtinet.org
+2021-06-07 16:21:01,066 [DEBUG] org.apache.http.headers  - >> Connection: Keep-Alive
+2021-06-07 16:21:01,066 [DEBUG] org.apache.http.headers  - >> User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_151)
+2021-06-07 16:21:01,066 [DEBUG] org.apache.http.headers  - >> Accept-Encoding: gzip,deflate
+2021-06-07 16:21:01,066 [DEBUG] org.apache.http.wire  -  >> "{"rootConditionGroup":{"tempId":"1619011296814group","operator":"And","type":"ConditionGroup","children":[{"tempId":"1619011296814child","isNew":true,"isMultipleInstancesConjunction":true,"sourceId":"60bdfa8e512276300ed5419d","type":"MultipleItem","value":"","values":["604afe93776641acb09dbfa8"],"multipleLogicOperator":"Any"}]},"result":{"operation":"Show","targetId":"60bdfa86512276300ed54199","type":"MethodologyItem"},"isComplex":false}"
+2021-06-07 16:21:01,391 [DEBUG] org.apache.http.wire  -  << "HTTP/1.1 200 OK[\r][\n]"
+2021-06-07 16:21:01,391 [DEBUG] org.apache.http.wire  -  << "Date: Mon, 07 Jun 2021 10:53:05 GMT[\r][\n]"
+2021-06-07 16:21:01,393 [DEBUG] org.apache.http.wire  -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2021-06-07 16:21:01,393 [DEBUG] org.apache.http.wire  -  << "Content-Length: 537[\r][\n]"
+2021-06-07 16:21:01,393 [DEBUG] org.apache.http.wire  -  << "Connection: keep-alive[\r][\n]"
+2021-06-07 16:21:01,393 [DEBUG] org.apache.http.wire  -  << "Strict-Transport-Security: max-age=63072000; includeSubDomains; preload[\r][\n]"
+2021-06-07 16:21:01,393 [DEBUG] org.apache.http.wire  -  << "X-XSS-Protection: 1; mode=block[\r][\n]"
+2021-06-07 16:21:01,393 [DEBUG] org.apache.http.wire  -  << "X-Frame-Options: SAMEORIGIN[\r][\n]"
+2021-06-07 16:21:01,393 [DEBUG] org.apache.http.wire  -  << "X-Content-Type-Options: nosniff[\r][\n]"
+2021-06-07 16:21:01,393 [DEBUG] org.apache.http.wire  -  << "Referrer-Policy: strict-origin[\r][\n]"
+2021-06-07 16:21:01,393 [DEBUG] org.apache.http.wire  -  << "[\r][\n]"
+2021-06-07 16:21:01,393 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection  - Receiving response: HTTP/1.1 200 OK
+2021-06-07 16:21:01,394 [DEBUG] org.apache.http.headers  - << HTTP/1.1 200 OK
+2021-06-07 16:21:01,394 [DEBUG] org.apache.http.headers  - << Date: Mon, 07 Jun 2021 10:53:05 GMT
+2021-06-07 16:21:01,394 [DEBUG] org.apache.http.headers  - << Content-Type: application/json; charset=utf-8
+2021-06-07 16:21:01,394 [DEBUG] org.apache.http.headers  - << Content-Length: 537
+2021-06-07 16:21:01,394 [DEBUG] org.apache.http.headers  - << Connection: keep-alive
+2021-06-07 16:21:01,394 [DEBUG] org.apache.http.headers  - << Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+2021-06-07 16:21:01,394 [DEBUG] org.apache.http.headers  - << X-XSS-Protection: 1; mode=block
+2021-06-07 16:21:01,394 [DEBUG] org.apache.http.headers  - << X-Frame-Options: SAMEORIGIN
+2021-06-07 16:21:01,394 [DEBUG] org.apache.http.headers  - << X-Content-Type-Options: nosniff
+2021-06-07 16:21:01,394 [DEBUG] org.apache.http.headers  - << Referrer-Policy: strict-origin
+2021-06-07 16:21:01,395 [DEBUG] org.apache.http.impl.client.DefaultHttpClient  - Connection can be kept alive indefinitely
+2021-06-07 16:21:01,395 [DEBUG] io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder  - Parsing response as: application/json; charset=utf-8
+2021-06-07 16:21:01,395 [DEBUG] io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder  - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+2021-06-07 16:21:01,397 [DEBUG] org.apache.http.wire  -  << "{"revisionId":"60ba99083b5c7ca3f50a4842","ruleId":"60bdfa91d344627e1e4d935c","result":{"targetId":"60bdfa86512276300ed54199","operation":"Show","type":"MethodologyItem"},"rootConditionGroup":{"operator":"And","children":[{"values":["604afe93776641acb09dbfa8"],"multipleLogicOperator":"Any","sourceId":"60bdfa8e512276300ed5419d","id":"60bdfa91d344627e1e4d935e","type":"MultipleItem"}],"id":"60bdfa91d344627e1e4d935d","type":"ConditionGroup","inherited":false},"modifiedDate":"2021-06-07T10:53:05.0401359Z","id":"60bdfa91d344627e1e4d935f"}"
+2021-06-07 16:21:01,397 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager  - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@3fbcfe81
+2021-06-07 16:21:01,397 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager  - Connection can be kept alive indefinitely

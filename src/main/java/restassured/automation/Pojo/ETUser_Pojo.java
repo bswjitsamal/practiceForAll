@@ -47,6 +47,7 @@ public class ETUser_Pojo {
 		ET_Responses_Pojo po=new ET_Responses_Pojo();
 		po.setProcedure(data.get("procedure"));
 		po.setResponse(data.get("response"));
+		po.setRow(data.get("row"));
 		Gson jsonBody=new Gson();
 		return jsonBody.toJson(po);
 	}
@@ -65,5 +66,13 @@ public class ETUser_Pojo {
 		Gson jsonBody=new Gson();
 		return jsonBody.toJson(pojo);
 		}
+	public String createReviewNotes(Map<String,String>data){
+		
+		ET_ReviewNotes_Pojo pojo=new ET_ReviewNotes_Pojo();
+		pojo.setWorkProgram(data.get("workProgram"));
+		pojo.setNoteText(data.get("notesText"));
+		Gson jsonBody=new Gson();
+		return jsonBody.toJson(pojo);
+	}
 	
 }

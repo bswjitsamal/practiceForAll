@@ -228,7 +228,7 @@ public class Restassured_Automation_ProcedureGroups extends read_Configuration_P
 					+ "/option";
 
 			User_Pojo createMethodologyPojo = new User_Pojo();
-			String createMethodologyData = createMethodologyPojo.createOption();
+			String createMethodologyData = createMethodologyPojo.UpdateOption();
 			System.out.println("--->" + createMethodologyData);
 
 			Restassured_Automation_Utils CreateProcedure = new Restassured_Automation_Utils();
@@ -516,7 +516,7 @@ public class Restassured_Automation_ProcedureGroups extends read_Configuration_P
 					+ "/option";
 
 			User_Pojo createMethodologyPojo = new User_Pojo();
-			String createMethodologyData = createMethodologyPojo.createOption();
+			String createMethodologyData = createMethodologyPojo.UpdateOption();
 			System.out.println("--->" + createMethodologyData);
 
 			Restassured_Automation_Utils CreateProcedure = new Restassured_Automation_Utils();
@@ -813,7 +813,7 @@ public class Restassured_Automation_ProcedureGroups extends read_Configuration_P
 					+ "/option";
 
 			User_Pojo createMethodologyPojo = new User_Pojo();
-			String createMethodologyData = createMethodologyPojo.createOption();
+			String createMethodologyData = createMethodologyPojo.UpdateOption();
 			System.out.println("--->" + createMethodologyData);
 
 			Restassured_Automation_Utils CreateProcedure = new Restassured_Automation_Utils();
@@ -1130,7 +1130,7 @@ public class Restassured_Automation_ProcedureGroups extends read_Configuration_P
 					+ "/option";
 
 			User_Pojo createMethodologyPojo = new User_Pojo();
-			String createMethodologyData = createMethodologyPojo.createOption();
+			String createMethodologyData = createMethodologyPojo.UpdateOption();
 			System.out.println("--->" + createMethodologyData);
 
 			Restassured_Automation_Utils CreateProcedure = new Restassured_Automation_Utils();
@@ -1429,7 +1429,7 @@ public class Restassured_Automation_ProcedureGroups extends read_Configuration_P
 					+ "/option";
 
 			User_Pojo createMethodologyPojo = new User_Pojo();
-			String createMethodologyData = createMethodologyPojo.createOption();
+			String createMethodologyData = createMethodologyPojo.UpdateOption();
 			System.out.println("--->" + createMethodologyData);
 
 			Restassured_Automation_Utils CreateProcedure = new Restassured_Automation_Utils();
@@ -1773,7 +1773,7 @@ public class Restassured_Automation_ProcedureGroups extends read_Configuration_P
 					+ "/option";
 
 			User_Pojo createMethodologyPojo = new User_Pojo();
-			String createMethodologyData = createMethodologyPojo.createOption();
+			String createMethodologyData = createMethodologyPojo.UpdateOption();
 			System.out.println("--->" + createMethodologyData);
 
 			Restassured_Automation_Utils CreateProcedure = new Restassured_Automation_Utils();
@@ -2119,7 +2119,7 @@ public class Restassured_Automation_ProcedureGroups extends read_Configuration_P
 					+ "/option";
 
 			User_Pojo createMethodologyPojo = new User_Pojo();
-			String createMethodologyData = createMethodologyPojo.createOption();
+			String createMethodologyData = createMethodologyPojo.UpdateOption();
 			System.out.println("--->" + createMethodologyData);
 
 			Restassured_Automation_Utils CreateProcedure = new Restassured_Automation_Utils();
@@ -2285,7 +2285,7 @@ public class Restassured_Automation_ProcedureGroups extends read_Configuration_P
 			User_Pojo postProcedureGroups = new User_Pojo();
 			String postProcedureGroup = postProcedureGroups.procedureAdd(data11);
            */
-			
+			 
 			Response putProcedureGropusRes = AllUtils.post_URLPOJO(URL, AuthorizationKey, patchId13, data13);
 			putProcedureGropusRes.prettyPrint();
 			Assert.assertEquals(putProcedureGropusRes.statusCode(), 204)
@@ -2481,7 +2481,7 @@ public class Restassured_Automation_ProcedureGroups extends read_Configuration_P
 					+ "/option";
 
 			User_Pojo createMethodologyPojo = new User_Pojo();
-			String createMethodologyData = createMethodologyPojo.createOption();
+			String createMethodologyData = createMethodologyPojo.UpdateOption();
 			System.out.println("--->" + createMethodologyData);
 
 			Restassured_Automation_Utils CreateProcedure = new Restassured_Automation_Utils();
@@ -2843,7 +2843,7 @@ public class Restassured_Automation_ProcedureGroups extends read_Configuration_P
 					+ "/option";
 
 			User_Pojo createMethodologyPojo = new User_Pojo();
-			String createMethodologyData = createMethodologyPojo.createOption();
+			String createMethodologyData = createMethodologyPojo.UpdateOption();
 			System.out.println("--->" + createMethodologyData);
 
 			Restassured_Automation_Utils CreateProcedure = new Restassured_Automation_Utils();
@@ -3195,7 +3195,7 @@ public class Restassured_Automation_ProcedureGroups extends read_Configuration_P
 					+ "/option";
 
 			User_Pojo createMethodologyPojo = new User_Pojo();
-			String createMethodologyData = createMethodologyPojo.createOption();
+			String createMethodologyData = createMethodologyPojo.UpdateOption();
 			System.out.println("--->" + createMethodologyData);
 
 			Restassured_Automation_Utils CreateProcedure = new Restassured_Automation_Utils();
@@ -3547,7 +3547,7 @@ public class Restassured_Automation_ProcedureGroups extends read_Configuration_P
 					+ "/option";
 
 			User_Pojo createMethodologyPojo = new User_Pojo();
-			String createMethodologyData = createMethodologyPojo.createOption();
+			String createMethodologyData = createMethodologyPojo.UpdateOption();
 			System.out.println("--->" + createMethodologyData);
 
 			Restassured_Automation_Utils CreateProcedure = new Restassured_Automation_Utils();
@@ -3900,7 +3900,7 @@ public class Restassured_Automation_ProcedureGroups extends read_Configuration_P
 					+ "/option";
 
 			User_Pojo createMethodologyPojo = new User_Pojo();
-			String createMethodologyData = createMethodologyPojo.createOption();
+			String createMethodologyData = createMethodologyPojo.UpdateOption();
 			System.out.println("--->" + createMethodologyData);
 
 			Restassured_Automation_Utils CreateProcedure = new Restassured_Automation_Utils();

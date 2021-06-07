@@ -223,58 +223,7 @@ public class Restassured_Automation_Publish extends read_Configuration_Propertit
 		
 	}
 	
-	@Test(groups = "IntegrationTests")
-	public void Publish_PostPublishInherit_status200() {
-
-		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
-
-		// fetching Org Id
-
-		Response OrganizationsDetails = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/org");
-		JsonPath jsonPathEvaluator = OrganizationsDetails.jsonPath();
-		listOrdId = jsonPathEvaluator.get("id");
-		OrganizationsDetails.prettyPrint();
-
-		/**
-		 * GETTING THE REVISION ID
-		 */
-
-		Response getEngagementTypeRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/engagementType",
-				"Organization", listOrdId.get(7));
-		getEngagementTypeRes.prettyPrint();
-		
-		// Retrieving the inheritedFrom 
-		
-		JsonPath jp = getEngagementTypeRes.jsonPath();
-		List<String> inheritedFrom = jp.getList("inheritedFrom");
-		
-		System.out.println(inheritedFrom);
-		
-		HashMap<String, String> map = new HashMap<String, String>();
-		map.put("storeEngagementType", inheritedFrom.get(1));
-		map.put("organization", listOrdId.get(7));
-		
-		User_Pojo po = new User_Pojo();
-		String userOobj = po.publishInherit(map);
-		
-		String URI="/api/publish/inherit/";
-		Response postEngagementTypeInheriteRes = allUtils.post_URLPOJO(URL, AuthorizationKey,URI, userOobj);
-		postEngagementTypeInheriteRes.prettyPrint();
-		
-		/*Response postEngagementTypeInheriteRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/engagementType/inherit/",
-				"Organization", inheritedFrom.get(5));
-		postEngagementTypeInheriteRes.prettyPrint();
-		*/
-		Assert.assertEquals(postEngagementTypeInheriteRes.statusCode(), 200);
-		
-		/**
-		 * Extent report generation
-		 */
-		ExtentTestManager.statusLogMessage(getEngagementTypeRes.statusCode());
-		ExtentTestManager.getTest().log(Status.INFO,getEngagementTypeRes.asString());
-		allUtils.validate_HTTPStrictTransportSecurity(getEngagementTypeRes);	
-
-	}
+	
 	
 	
 	

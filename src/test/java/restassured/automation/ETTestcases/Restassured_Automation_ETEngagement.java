@@ -195,7 +195,7 @@ public class Restassured_Automation_ETEngagement {
 		String engagementID = engagementId.get(0);
 		String EngagementURI = "/api/" + post.getProperty("memberFirmSlug") + "/engagements/"+engagementID;
 		Response deleteEngagmentRes=rolesUtils.delete(URL, AuthorizationKey, EngagementURI);
-		Assert.assertEquals(deleteEngagmentRes.getStatusCode(),200);
+		Assert.assertEquals(deleteEngagmentRes.getStatusCode(),204);
 	}
 	
 }

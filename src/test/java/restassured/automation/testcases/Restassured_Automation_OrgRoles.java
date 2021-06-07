@@ -4,11 +4,14 @@ import static java.util.concurrent.TimeUnit.MILLISECONDS;
 import static java.util.concurrent.TimeUnit.SECONDS;
 
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Properties;
 import java.util.Random;
 
 import org.awaitility.Awaitility;
+import org.hamcrest.object.HasEqualValues;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -39,6 +42,7 @@ public class Restassured_Automation_OrgRoles {
 	List<String> listId;
 	List<String> listPermission;
 	List<String> listResourceType;
+	List<String> roleId;
 
 	final static String ALPHANUMERIC_CHARACTERS = "0123456789abcdefghijklmnopqrstuvwxyz-";
 
@@ -56,9 +60,9 @@ public class Restassured_Automation_OrgRoles {
 		URL = BaseUrl.getProperty("ApiBaseUrl");
 		AuthorizationKey = BaseUrl.getProperty("AuthorizationKey1");
 		Awaitility.reset();
-        Awaitility.setDefaultPollDelay(999, MILLISECONDS);
-        Awaitility.setDefaultPollInterval(99, SECONDS);
-        Awaitility.setDefaultTimeout(99, SECONDS);
+		Awaitility.setDefaultPollDelay(999, MILLISECONDS);
+		Awaitility.setDefaultPollInterval(99, SECONDS);
+		Awaitility.setDefaultTimeout(99, SECONDS);
 
 	}
 
@@ -103,11 +107,10 @@ public class Restassured_Automation_OrgRoles {
 		ExtentTestManager.statusLogMessage(getPermission.statusCode());
 		ExtentTestManager.getTest().log(Status.INFO, getPermission.asString());
 		OrganizationsGet.validate_HTTPStrictTransportSecurity(getPermission);
-		
 
 	}
 
-	//@Test(groups = "IntegrationTests")
+	// @Test(groups = "IntegrationTests")
 	public void OrganisationRoles_PostSuperUserFuntionCreateANewUserPremission_status200() {
 
 		/**
@@ -153,18 +156,21 @@ public class Restassured_Automation_OrgRoles {
 		listResourceType = jsonPathEvaluator2.get("resourceType");
 		listUserId = jsonPathEvaluator2.get("user");
 
+		Map<String, String> map = new HashMap<String, String>();
+		map.put("organization", listOrganization.get(0));
+		map.put("resource", listResourceId.get(5));
+		map.put("permission", listPermission.get(1));
+		map.put("resourceType", listResourceType.get(4));
+		map.put("user", "edogi23gfhdjg-fnjkdsf-" + getRandomAlphaNum());
+
 		OrgAdminRolePojo oarp = new OrgAdminRolePojo();
-		oarp.setOrganization(listOrganization.get(0));
-		oarp.setResource(listResourceId.get(5));
-		oarp.setPermission(listPermission.get(1));
-		oarp.setId(listResourceType.get(4));
-		oarp.setUser("edogi23gfhdjg-fnjkdsf-" + getRandomAlphaNum());
+		String createRole = oarp.Create_Permission(map);
 
 		String PostURI = "/api/org/user/" + listResourceId.get(1) + "/permissions";
 
 		Restassured_Automation_Utils engagementType = new Restassured_Automation_Utils();
 
-		Response postEngagementType = engagementType.post_URLPOJO(URL, AuthorizationKey, PostURI, oarp);
+		Response postEngagementType = engagementType.post_URLPOJO(URL, AuthorizationKey, PostURI, createRole);
 		Assert.assertEquals(postEngagementType.statusCode(), 200);
 
 		/**
@@ -218,21 +224,17 @@ public class Restassured_Automation_OrgRoles {
 		JsonPath jsonPathEvaluator2 = getPermission.jsonPath();
 
 		listOrganization = jsonPathEvaluator2.get("organization");
-		listResourceId = jsonPathEvaluator2.get("resource");
-		listPermission = jsonPathEvaluator2.get("permission");
 		listId = jsonPathEvaluator2.get("id");
-		listUserId = jsonPathEvaluator2.get("user");
+
+		Map<String, String> map = new HashMap<String, String>();
+		map.put("organization", listOrganization.get(0));
 
 		OrgAdminRolePojo oarp = new OrgAdminRolePojo();
-		oarp.setOrganization(listOrganization.get(0));
-		oarp.setResource(listResourceId.get(0));
-		oarp.setPermission(listPermission.get(0));
-		oarp.setId(listId.get(0));
-		oarp.setUser(listUserId.get(0));
+		String createRole = oarp.Create_Permission(map);
 
 		Restassured_Automation_Utils engagementType = new Restassured_Automation_Utils();
 		String patchId3 = "/api/org/user/" + listUserId.get(1) + "/permissions/" + listId.get(0);
-		Response postEngagementType = engagementType.delete_URLPOJO(URL, AuthorizationKey, patchId3, oarp);
+		Response postEngagementType = engagementType.delete_URLPOJO(URL, AuthorizationKey, patchId3, createRole);
 		Assert.assertEquals(postEngagementType.statusCode(), 204);
 
 		/**
@@ -270,7 +272,7 @@ public class Restassured_Automation_OrgRoles {
 		OrganizationsGet.validate_HTTPStrictTransportSecurity(rolesInfoRes);
 	}
 
-	//@Test(groups = "IntegrationTests")
+	// @Test(groups = "IntegrationTests")
 	public void OrganisationRoles_CreateAnNewRoleAssignmentForAnOrganizationWithStatus_200() {
 
 		/**
@@ -298,15 +300,18 @@ public class Restassured_Automation_OrgRoles {
 		String resId = resourceId.get(0);
 		String apLevel = appLevel.get(0);
 
-		OrgRolesPojo pojo = new OrgRolesPojo();
-		pojo.setUserId(uId);
-		pojo.setRole(rolId);
-		pojo.setResource(resId);
-		pojo.setApplicationLevel(apLevel);
+		Map<String, String> map = new HashMap<String, String>();
+		map.put("userId", uId);
+		map.put("role", rolId);
+		map.put("resource", resId);
+		map.put("applicationLevel", apLevel);
 
-		Response postRoleRes = OrganizationsGet.post_URLPOJO(URL, AuthorizationKey, patchId, pojo);
+		OrgRolesPojo pojo = new OrgRolesPojo();
+		String createPermissions = pojo.CreatePermission(map);
+
+		Response postRoleRes = OrganizationsGet.post_URLPOJO(URL, AuthorizationKey, patchId, createPermissions);
 		postRoleRes.prettyPrint();
-		Assert.assertEquals(postRoleRes.getStatusCode(),200);
+		Assert.assertEquals(postRoleRes.getStatusCode(), 200);
 		/**
 		 * Extent report generation
 		 */
@@ -314,7 +319,8 @@ public class Restassured_Automation_OrgRoles {
 		ExtentTestManager.getTest().log(Status.INFO, postRoleRes.asString());
 		OrganizationsGet.validate_HTTPStrictTransportSecurity(postRoleRes);
 	}
-	//@Test(groups = "IntegrationTests")
+
+	// @Test(groups = "IntegrationTests")
 	public void OrganisationRoles_DeleteAnNewRoleAssignmentForAnOrganizationWithStatus_200() {
 
 		/**
@@ -342,19 +348,22 @@ public class Restassured_Automation_OrgRoles {
 		String resId = resourceId.get(0);
 		String apLevel = appLevel.get(0);
 
-		OrgRolesPojo pojo = new OrgRolesPojo();
-		pojo.setUserId(uId);
-		pojo.setRole(rolId);
-		pojo.setResource(resId);
-		pojo.setApplicationLevel(apLevel);
+		Map<String, String> map = new HashMap<String, String>();
+		map.put("userId", uId);
+		map.put("role", rolId);
+		map.put("resource", resId);
+		map.put("applicationLevel", apLevel);
 
-		Response postRoleRes = OrganizationsGet.post_URLPOJO(URL, AuthorizationKey, patchId, pojo);
+		OrgRolesPojo pojo = new OrgRolesPojo();
+		String createPermissions = pojo.CreatePermission(map);
+
+		Response postRoleRes = OrganizationsGet.post_URLPOJO(URL, AuthorizationKey, patchId, createPermissions);
 		postRoleRes.prettyPrint();
-		Assert.assertEquals(postRoleRes.getStatusCode(),200);
-		JsonPath postRoleJson=postRoleRes.jsonPath();
-		String deleteId=postRoleJson.get("id");
-		String deletePatch="/api/org/" + listOrgId.get(4) + "/roles/assignments/"+deleteId;
-		Response deleteRes=OrganizationsGet.delete(URL, AuthorizationKey, deletePatch);
+		Assert.assertEquals(postRoleRes.getStatusCode(), 200);
+		JsonPath postRoleJson = postRoleRes.jsonPath();
+		String deleteId = postRoleJson.get("id");
+		String deletePatch = "/api/org/" + listOrgId.get(4) + "/roles/assignments/" + deleteId;
+		Response deleteRes = OrganizationsGet.delete(URL, AuthorizationKey, deletePatch);
 		Assert.assertEquals(deleteRes.getStatusCode(), 204);
 		/**
 		 * Extent report generation
@@ -362,31 +371,6 @@ public class Restassured_Automation_OrgRoles {
 		ExtentTestManager.statusLogMessage(deleteRes.statusCode());
 		ExtentTestManager.getTest().log(Status.INFO, deleteRes.asString());
 		OrganizationsGet.validate_HTTPStrictTransportSecurity(deleteRes);
-	}
-
-	//@Test(groups = "IntegrationTests")
-	public void OrganisationRoles_CreateANewRoleForAnOrganizationWithStatus_200() {
-
-		/**
-		 * Getting the orgId
-		 */
-		Restassured_Automation_Utils OrganizationsGet = new Restassured_Automation_Utils();
-
-		Response getOrgId = OrganizationsGet.get_URL_Without_Params(URL, AuthorizationKey, "/api/org");
-		// getOrgId.prettyPrint();
-
-		JsonPath jsonPathEvaluator = getOrgId.jsonPath();
-		listOrgId = jsonPathEvaluator.get("id");
-		String patchId = "/api/org/" + listOrgId.get(4) + "/roles/assignments";
-		Response rolesInfoRes = OrganizationsGet.get_URL_Without_Params(URL, AuthorizationKey, patchId);
-		rolesInfoRes.prettyPrint();
-		Assert.assertEquals(rolesInfoRes.getStatusCode(), 200);
-		/**
-		 * Extent report generation
-		 */
-		ExtentTestManager.statusLogMessage(rolesInfoRes.statusCode());
-		ExtentTestManager.getTest().log(Status.INFO, rolesInfoRes.asString());
-		OrganizationsGet.validate_HTTPStrictTransportSecurity(rolesInfoRes);
 	}
 
 	@Test(groups = "IntegrationTests")
@@ -409,16 +393,19 @@ public class Restassured_Automation_OrgRoles {
 
 	}
 
-	//@Test(groups = "IntegrationTests")
+	// @Test(groups = "IntegrationTests")
 	public void OrganisationRoles_SUPER_USE_ENDPOINT_CreateARole_WithStatus_200() throws IOException {
 		Properties post = read_Configuration_Propertites.loadproperty("Configuration");
 		Restassured_Automation_Utils getMethodologyById = new Restassured_Automation_Utils();
+		Map<String, String> map = new HashMap<String, String>();
+		map.put("name", post.getProperty("postOrganisationRoleName") + getMethodologyById.getRandomNumber(1, 20));
+		map.put("minimumApplicationLevel", post.getProperty("postMinimumApplicationLevel"));
+
 		OrgRolesPojo pojo = new OrgRolesPojo();
-		pojo.setName(post.getProperty("postOrganisationRoleName") + getMethodologyById.getRandomNumber(1, 20));
-		pojo.setMinimumApplicationLevel(post.getProperty("postMinimumApplicationLevel"));
-		System.out.println(pojo);
+		String createRole = pojo.CreateRole(map);
+
 		String patchId = "/api/org/roles";
-		Response roleResponse = getMethodologyById.post_URLPOJO(URL, AuthorizationKey, patchId, pojo);
+		Response roleResponse = getMethodologyById.post_URLPOJO(URL, AuthorizationKey, patchId, createRole);
 		roleResponse.prettyPrint();
 		Assert.assertEquals(roleResponse.getStatusCode(), 200);
 		/**
@@ -430,16 +417,19 @@ public class Restassured_Automation_OrgRoles {
 
 	}
 
-	//@Test(groups = "IntegrationTests")
+	@Test(groups = "IntegrationTests")
 	public void OrganisationRoles_SUPER_USE_ENDPOINT_UpdateARolePermissionWithStatus_200() throws IOException {
 		Properties post = read_Configuration_Propertites.loadproperty("Configuration");
 		Restassured_Automation_Utils getMethodologyById = new Restassured_Automation_Utils();
+		Map<String, String> map = new HashMap<String, String>();
+		map.put("name", post.getProperty("postOrganisationRoleName") + getMethodologyById.getRandomNumber(1, 20));
+		map.put("minimumApplicationLevel", post.getProperty("postMinimumApplicationLevel"));
+
 		OrgRolesPojo pojo = new OrgRolesPojo();
-		pojo.setName(post.getProperty("postOrganisationRoleName") + getMethodologyById.getRandomNumber(1, 30));
-		pojo.setMinimumApplicationLevel(post.getProperty("postMinimumApplicationLevel"));
-		System.out.println(pojo);
+		String createRole = pojo.CreateRole(map);
+
 		String patchId = "/api/org/roles";
-		Response roleResponse = getMethodologyById.post_URLPOJO(URL, AuthorizationKey, patchId, pojo);
+		Response roleResponse = getMethodologyById.post_URLPOJO(URL, AuthorizationKey, patchId, createRole);
 		roleResponse.prettyPrint();
 		Assert.assertEquals(roleResponse.getStatusCode(), 200);
 		/**
@@ -448,13 +438,15 @@ public class Restassured_Automation_OrgRoles {
 
 		JsonPath rolejson = roleResponse.jsonPath();
 		String roleId = rolejson.get("id");
+		Map<String, String> map1 = new HashMap<String, String>();
+		map1.put("permissions", post.getProperty("patchRolePermission"));
 
 		OrgRolesPojo pojo1 = new OrgRolesPojo();
-		pojo1.setPermissions(new String[] { post.getProperty("patchRolePermission") });
+		String updateRole = pojo1.UpdateRole(map1);
 
 		String patchId1 = "/api/org/roles/" + roleId;
 
-		Response updateRoleRes = getMethodologyById.patch_URLPOJO(URL, AuthorizationKey, patchId1, pojo1);
+		Response updateRoleRes = getMethodologyById.patch_URLPOJO(URL, AuthorizationKey, patchId1, updateRole);
 		updateRoleRes.prettyPrint();
 		Assert.assertEquals(updateRoleRes.getStatusCode(), 204);
 		/**
@@ -466,16 +458,90 @@ public class Restassured_Automation_OrgRoles {
 
 	}
 
-	//@Test(groups = "IntegrationTests")
+	@Test(groups = "IntegrationTests")
+	public void OrganisationRoles_SUPER_USE_ENDPOINT_UpdateARolePermissionWithStatus_409() throws IOException {
+		Properties post = read_Configuration_Propertites.loadproperty("Configuration");
+		Restassured_Automation_Utils getMethodologyById = new Restassured_Automation_Utils();
+		
+		String patchId = "/api/org/roles";
+		Response roleResponse = getMethodologyById.get_URL_Without_Params(URL, AuthorizationKey, patchId);
+		roleResponse.prettyPrint();
+		Assert.assertEquals(roleResponse.getStatusCode(), 200);
+		/**
+		 * Update the role
+		 */
+
+		JsonPath rolejson = roleResponse.jsonPath();
+		roleId = rolejson.get("id");
+		Map<String, String> map1 = new HashMap<String, String>();
+		map1.put("permissions", post.getProperty("patchRolePermissionConflict"));
+		map1.put("nameKey", post.getProperty("patchRoleNameKeyConflict"));
+
+		OrgRolesPojo pojo1 = new OrgRolesPojo();
+		String updateRole = pojo1.UpdateRole(map1);
+
+		String patchId1 = "/api/org/roles/" + roleId.get(0);
+
+		Response updateRoleRes = getMethodologyById.patch_URLPOJO(URL, AuthorizationKey, patchId1, updateRole);
+		updateRoleRes.prettyPrint();
+		Assert.assertEquals(updateRoleRes.getStatusCode(), 409);
+		/**
+		 * Extent report generation
+		 */
+		ExtentTestManager.statusLogMessage(updateRoleRes.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO, updateRoleRes.asString());
+		getMethodologyById.validate_HTTPStrictTransportSecurity(updateRoleRes);
+
+	}
+	@Test(groups = "IntegrationTests")
+		public void OrganisationRoles_SUPER_USE_ENDPOINT_UpdateARolePermissionWithStatus_400() throws IOException {
+			Properties post = read_Configuration_Propertites.loadproperty("Configuration");
+			Restassured_Automation_Utils getMethodologyById = new Restassured_Automation_Utils();
+			
+			String patchId = "/api/org/roles";
+			Response roleResponse = getMethodologyById.get_URL_Without_Params(URL, AuthorizationKey, patchId);
+			roleResponse.prettyPrint();
+			Assert.assertEquals(roleResponse.getStatusCode(), 200);
+			/**
+			 * Update the role
+			 */
+
+			JsonPath rolejson = roleResponse.jsonPath();
+			roleId = rolejson.get("id");
+			Map<String, String> map1 = new HashMap<String, String>();
+			map1.put("permission", post.getProperty("patchRolePermissionConflict"));
+			map1.put("nameKey", post.getProperty("patchRoleNameKeyConflict"));
+
+			OrgRolesPojo pojo1 = new OrgRolesPojo();
+			String updateRole = pojo1.UpdateRole(map1);
+
+			String patchId1 = "/api/org/roles/" + roleId.get(0);
+
+			Response updateRoleRes = getMethodologyById.patch_URLPOJO(URL, AuthorizationKey, patchId1, updateRole);
+			updateRoleRes.prettyPrint();
+			Assert.assertEquals(updateRoleRes.getStatusCode(), 400);
+			/**
+			 * Extent report generation
+			 */
+			ExtentTestManager.statusLogMessage(updateRoleRes.statusCode());
+			ExtentTestManager.getTest().log(Status.INFO, updateRoleRes.asString());
+			getMethodologyById.validate_HTTPStrictTransportSecurity(updateRoleRes);
+
+		}
+
+	// @Test(groups = "IntegrationTests")
 	public void OrganisationRoles_SUPER_USE_ENDPOINT_DeleteARole_WithStatus_200() throws IOException {
 		Properties post = read_Configuration_Propertites.loadproperty("Configuration");
 		Restassured_Automation_Utils getMethodologyById = new Restassured_Automation_Utils();
+		Map<String, String> map = new HashMap<String, String>();
+		map.put("name", post.getProperty("postOrganisationRoleName") + getMethodologyById.getRandomNumber(1, 20));
+		map.put("minimumApplicationLevel", post.getProperty("postMinimumApplicationLevel"));
+
 		OrgRolesPojo pojo = new OrgRolesPojo();
-		pojo.setName(post.getProperty("postOrganisationRoleName") + getMethodologyById.getRandomNumber(1, 20));
-		pojo.setMinimumApplicationLevel(post.getProperty("postMinimumApplicationLevel"));
-		System.out.println(pojo);
+		String createRole = pojo.CreateRole(map);
+
 		String patchId = "/api/org/roles";
-		Response roleResponse = getMethodologyById.post_URLPOJO(URL, AuthorizationKey, patchId, pojo);
+		Response roleResponse = getMethodologyById.post_URLPOJO(URL, AuthorizationKey, patchId, createRole);
 		roleResponse.prettyPrint();
 		Assert.assertEquals(roleResponse.getStatusCode(), 200);
 
@@ -494,7 +560,7 @@ public class Restassured_Automation_OrgRoles {
 
 	}
 
-	//@Test(groups = "EndToEnd")
+	// @Test(groups = "EndToEnd")
 	public void OrganisationRoles_OrganisationRolesScenario() {
 		/**
 		 * FETCHING THE ORGANISATION ID
@@ -801,7 +867,7 @@ public class Restassured_Automation_OrgRoles {
 	}
 
 	// @Test(groups = "IntegrationTests")-----> Duplicate Test case
-	public void getAListOfAllPremissionForAUser_status200() {
+	public void OrganisationRoles_getAListOfAllPremissionForAUser_status200() {
 
 		String patchId = "/api/org/roles";
 
@@ -817,7 +883,7 @@ public class Restassured_Automation_OrgRoles {
 		ExtentTestManager.statusLogMessage(getMethodologyByIdRes.statusCode());
 		ExtentTestManager.getTest().log(Status.INFO, getMethodologyByIdRes.asString());
 		getMethodologyById.validate_HTTPStrictTransportSecurity(getMethodologyByIdRes);
-		
+
 	}
 
 	// @Test(groups = "IntegrationTests")
@@ -871,7 +937,6 @@ public class Restassured_Automation_OrgRoles {
 		ExtentTestManager.statusLogMessage(patchPermissionId.statusCode());
 		ExtentTestManager.getTest().log(Status.INFO, patchPermissionId.asString());
 		getMethodologyById.validate_HTTPStrictTransportSecurity(patchPermissionId);
-
 
 	}
 

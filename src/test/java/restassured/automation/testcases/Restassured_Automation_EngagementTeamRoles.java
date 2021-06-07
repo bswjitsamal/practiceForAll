@@ -134,6 +134,45 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		getMethodology.validate_HTTPStrictTransportSecurity(postEngagementTeamRoles);
 		
 	}
+	@Test(groups = { "IntegrationTests" })
+	public void EngagementTeamRoles_PostCreateAnEngagementRoleForAnOrganization_status404() throws IOException {
+
+		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
+
+		// fetching Org Id
+
+		Response OrganizationsDetails = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/org");
+		JsonPath jsonPathEvaluator = OrganizationsDetails.jsonPath();
+		listOrdId = jsonPathEvaluator.get("id");
+		OrganizationsDetails.prettyPrint();
+
+		/**
+		 * GETTING THE REVISION ID
+		 */
+
+		Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();
+		// step 3 perfrom validate
+		
+		EngagementTeamRoles_Pojo engagementTeamRolesPojo = new EngagementTeamRoles_Pojo();
+		engagementTeamRolesPojo.setEngagementRoleId("6050fec083bab05523e2fbf5");
+		engagementTeamRolesPojo.setOrganization("5f950768fc13ae0ade000001");
+		engagementTeamRolesPojo.setRevision("6065690a2477890efb183f90");
+		engagementTeamRolesPojo.setTitle("Abc2"+getRandomAlphaNum());
+		
+
+		Response postEngagementTeamRoles = getMethodology.post_URLPOJO(URL, AuthorizationKey, 
+				"/api/engagementTeams/org/"+listOrdId.get(7)+"/roles", engagementTeamRolesPojo);
+		postEngagementTeamRoles.prettyPrint();
+		
+		Assert.assertEquals(postEngagementTeamRoles.statusCode(), 404);
+		/**
+		 * Extent report generation
+		 */
+		ExtentTestManager.statusLogMessage(postEngagementTeamRoles.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,postEngagementTeamRoles.asString());
+		getMethodology.validate_HTTPStrictTransportSecurity(postEngagementTeamRoles);
+		
+	}
 	
 	@Test(groups = { "IntegrationTests" })
 	public void EngagementTeamRoles_PostCreateAnEngagementRoleForAnOrganization_status409() throws IOException {
@@ -250,6 +289,50 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		patchEngagementTeamRoles.prettyPrint();
 		
 		Assert.assertEquals(patchEngagementTeamRoles.statusCode(), 204);
+		/**
+		 * Extent report generation
+		 */
+		ExtentTestManager.statusLogMessage(patchEngagementTeamRoles.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,patchEngagementTeamRoles.asString());
+		getMethodology.validate_HTTPStrictTransportSecurity(patchEngagementTeamRoles);
+		
+	}
+	@Test(groups = { "IntegrationTests" })
+	public void EngagementTeamRoles_PatchUpdateAnEngagementRoleForAnOrganization_status404() throws IOException {
+
+		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
+
+		// fetching Org Id
+
+		Response OrganizationsDetails = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/org");
+		JsonPath jsonPathEvaluator = OrganizationsDetails.jsonPath();
+		listOrdId = jsonPathEvaluator.get("id");
+		OrganizationsDetails.prettyPrint();
+
+		/**
+		 * GETTING THE ROLE ID
+		 */
+		Response getEngagementTeamRolesID = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/engagementTeam/org/"+listOrdId.get(7)+"/roles");
+		JsonPath jsonPathEvaluator1 = getEngagementTeamRolesID.jsonPath();
+		engagementRoleId = jsonPathEvaluator1.get("engagementRoleId");
+		getEngagementTeamRolesID.prettyPrint();
+		
+
+		Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();
+		// step 3 perfrom validate
+		
+		EngagementTeamRoles_Pojo engagementTeamRolesPojo = new EngagementTeamRoles_Pojo();
+		engagementTeamRolesPojo.setEngagementRoleId("6050fec083bab05523e2fbf5");
+		engagementTeamRolesPojo.setOrganization("5f950768fc13ae0ade000002");
+		engagementTeamRolesPojo.setRevision("6065690a2477890efb183f90");
+		engagementTeamRolesPojo.setTitle("Bs-Update"+getRandomAlphaNum());
+		
+
+		Response patchEngagementTeamRoles = allUtils.patch_URLPOJO(URL, AuthorizationKey, 
+				"/api/engagementTeams/org/"+listOrdId.get(7)+"/roles/"+engagementRoleId.get(0), engagementTeamRolesPojo);
+		patchEngagementTeamRoles.prettyPrint();
+		
+		Assert.assertEquals(patchEngagementTeamRoles.statusCode(), 404);
 		/**
 		 * Extent report generation
 		 */
@@ -376,6 +459,40 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		patchEngagementTeamRoles.prettyPrint();
 		
 		Assert.assertEquals(patchEngagementTeamRoles.statusCode(), 204);
+		/**
+		 * Extent report generation
+		 */
+		ExtentTestManager.statusLogMessage(patchEngagementTeamRoles.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,patchEngagementTeamRoles.asString());
+		allUtils.validate_HTTPStrictTransportSecurity(patchEngagementTeamRoles);
+		
+	}
+	@Test(groups = { "IntegrationTests" })
+	public void EngagementTeamRoles_DeleteDeleteAnEngagementRoleForAnOrganization_status404() throws IOException {
+
+		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
+
+		// fetching Org Id
+
+		Response OrganizationsDetails = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/org");
+		JsonPath jsonPathEvaluator = OrganizationsDetails.jsonPath();
+		listOrdId = jsonPathEvaluator.get("id");
+		OrganizationsDetails.prettyPrint();
+
+		/**
+		 * GETTING THE ROLE ID
+		 */
+		Response getEngagementTeamRolesID = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/engagementTeam/org/"+listOrdId.get(7)+"/roles");
+		JsonPath jsonPathEvaluator1 = getEngagementTeamRolesID.jsonPath();
+		engagementRoleId = jsonPathEvaluator1.get("engagementRoleId");
+		getEngagementTeamRolesID.prettyPrint();
+		
+
+		Response patchEngagementTeamRoles = allUtils.delete(URL, AuthorizationKey, 
+				"/api/engagementTeams/org/"+listOrdId.get(7)+"/roles/"+engagementRoleId.get(0));
+		patchEngagementTeamRoles.prettyPrint();
+		
+		Assert.assertEquals(patchEngagementTeamRoles.statusCode(), 404);
 		/**
 		 * Extent report generation
 		 */
@@ -528,7 +645,62 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 
 
 	}
-	
+	@Test(groups = { "IntegrationTests" })
+	public void EngagementTeamRoles_PostCreateAnEngagementRoleForAMethodology_status404() throws IOException {
+
+		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
+
+		// fetching Org Id
+
+		Response OrganizationsDetails = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/org");
+		JsonPath jsonPathEvaluator = OrganizationsDetails.jsonPath();
+		listOrdId = jsonPathEvaluator.get("id");
+		OrganizationsDetails.prettyPrint();
+
+		/**
+		 * GETTING THE REVISION ID
+		 */
+
+		Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();
+
+		Response getMethodologyRes = getMethodology.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
+				"Organization", listOrdId.get(7));
+		getMethodologyRes.prettyPrint();
+		
+		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
+		List<String> methodologyId = jsonPathEvaluator1.get("id");
+		
+		//fetching the last item from the list
+		System.out.println(methodologyId.get(methodologyId.size()-1));		
+		
+		//ArrayList<Map<String, ?>> listRevisionId = jsonPathEvaluator1.get("revisions.id");
+		ArrayList<Map<String, ?>> listRevisionId = jsonPathEvaluator1.get("revisions");
+		Object[] revId = listRevisionId.toArray();
+		
+		String reviD = revId[revId.length-1].toString();
+		System.out.println(reviD);
+		
+		EngagementTeamRoles_Pojo engagementTeamRolesPojo = new EngagementTeamRoles_Pojo();
+		engagementTeamRolesPojo.setEngagementRoleId("6050fec083bab05523e2fbf5");
+		engagementTeamRolesPojo.setOrganization("5f950768fc13ae0ade000002");
+		engagementTeamRolesPojo.setRevision("6065690a2477890efb183f90");
+		engagementTeamRolesPojo.setTitle("Tst"+getRandomAlphaNum());
+		
+		
+		Response createPublish = getMethodology.post_URLPOJO(URL, AuthorizationKey,
+				"/api/engagementTeams/org/" +listOrdId.get(7) + "/revision/" + reviD.substring(1, 25)+"/roles",engagementTeamRolesPojo);
+		createPublish.prettyPrint();
+		
+		Assert.assertEquals(createPublish.statusCode(), 404);
+		/**
+		 * Extent report generation
+		 */
+		ExtentTestManager.statusLogMessage(createPublish.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,createPublish.asString());
+		getMethodology.validate_HTTPStrictTransportSecurity(createPublish);
+
+
+	}
 	@Test(groups = { "IntegrationTests" })
 	public void EngagementTeamRoles_PostCreateAnEngagementRoleForAMethodology_status400() throws IOException {
 
@@ -714,7 +886,75 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 
 
 	}
-	
+	@Test(groups = { "IntegrationTests" })
+	public void EngagementTeamRoles_PatchUpdateAnEngagementRoleForAMethodology_status404() throws IOException {
+
+		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
+
+		// fetching Org Id
+
+		Response OrganizationsDetails = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/org");
+		JsonPath jsonPathEvaluator = OrganizationsDetails.jsonPath();
+		listOrdId = jsonPathEvaluator.get("id");
+		OrganizationsDetails.prettyPrint();
+
+		/**
+		 * GETTING THE REVISION ID
+		 */
+
+		Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();
+
+		Response getMethodologyRes = getMethodology.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
+				"Organization", listOrdId.get(7));
+		getMethodologyRes.prettyPrint();
+		
+		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
+		List<String> methodologyId = jsonPathEvaluator1.get("id");
+		
+		//fetching the last item from the list
+		System.out.println(methodologyId.get(methodologyId.size()-1));		
+		
+		//ArrayList<Map<String, ?>> listRevisionId = jsonPathEvaluator1.get("revisions.id");
+		ArrayList<Map<String, ?>> listRevisionId = jsonPathEvaluator1.get("revisions");
+
+		Object[] revId = listRevisionId.toArray();
+		
+		String reviD = revId[revId.length-1].toString();
+		System.out.println(reviD);
+		
+		//Retriving th eroleID
+		
+		Response createPublish = getMethodology.get_URL_Without_Params(URL, AuthorizationKey,
+				"/api/engagementTeam/org/" +listOrdId.get(7) + "/revision/" + reviD.substring(1,25)+"/roles");
+		createPublish.prettyPrint();
+		
+		
+		JsonPath jsonPathEvaluator2 = createPublish.jsonPath();
+		List<String> engagementRoleId = jsonPathEvaluator2.get("engagementRoleId");
+		System.out.println(engagementRoleId);
+		
+		//Performing Patch operation
+		EngagementTeamRoles_Pojo engagementTeamRolesPojo1 = new EngagementTeamRoles_Pojo();
+		engagementTeamRolesPojo1.setEngagementRoleId("6050fec083bab05523e2fbf6");
+		engagementTeamRolesPojo1.setOrganization("6050fec083bab05523e2fbf6");
+		engagementTeamRolesPojo1.setRevision("6050fec083bab05523e2fbf6");
+		engagementTeamRolesPojo1.setTitle("Test"+getRandomAlphaNum());
+		
+		Response patchPublish = getMethodology.patch_URLPOJO(URL, AuthorizationKey,
+				"/api/engagementTeams/org/" +listOrdId.get(7) + "/revision/" + reviD.substring(1, 25)+"/roles/"+engagementRoleId.get(0),engagementTeamRolesPojo1);
+		patchPublish.prettyPrint();
+		
+		
+		Assert.assertEquals(patchPublish.statusCode(), 404);
+		/**
+		 * Extent report generation
+		 */
+		ExtentTestManager.statusLogMessage(patchPublish.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,patchPublish.asString());
+		getMethodology.validate_HTTPStrictTransportSecurity(patchPublish);
+
+
+	}
 	
 	@Test(groups = { "IntegrationTests" })
 	public void EngagementTeamRoles_PatchUpdateAnEngagementRoleForAMethodology_status409() throws IOException {
@@ -916,7 +1156,69 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 
 	}
 
-	
+	@Test(groups = { "IntegrationTests" })
+	public void EngagementTeamRoles_DeleteAnEngagementRoleForAMethodology_status404() throws IOException {
+
+		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
+
+		// fetching Org Id
+
+		Response OrganizationsDetails = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/org");
+		JsonPath jsonPathEvaluator = OrganizationsDetails.jsonPath();
+		listOrdId = jsonPathEvaluator.get("id");
+		OrganizationsDetails.prettyPrint();
+
+		/**
+		 * GETTING THE REVISION ID
+		 */
+
+		Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();
+
+		Response getMethodologyRes = getMethodology.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
+				"Organization", listOrdId.get(7));
+		getMethodologyRes.prettyPrint();
+		
+		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
+		List<String> methodologyId = jsonPathEvaluator1.get("id");
+		
+		//fetching the last item from the list
+		System.out.println(methodologyId.get(methodologyId.size()-1));		
+		
+		//ArrayList<Map<String, ?>> listRevisionId = jsonPathEvaluator1.get("revisions.id");
+		ArrayList<Map<String, ?>> listRevisionId = jsonPathEvaluator1.get("revisions");
+
+		Object[] revId = listRevisionId.toArray();
+		
+		String reviD = revId[revId.length-1].toString();
+		System.out.println(reviD);
+		
+		//Retriving th eroleID
+		
+		Response createPublish = getMethodology.get_URL_Without_Params(URL, AuthorizationKey,
+				"/api/engagementTeam/org/" +listOrdId.get(7) + "/revision/" + reviD.substring(1, 25)+"/roles");
+		createPublish.prettyPrint();
+		
+		
+		JsonPath jsonPathEvaluator2 = createPublish.jsonPath();
+		List<String> engagementRoleId = jsonPathEvaluator2.get("engagementRoleId");
+		System.out.println(engagementRoleId);
+		
+		String id = engagementRoleId.get(1);
+		
+		Response dalatePublish = getMethodology.delete(URL, AuthorizationKey,
+				"/api/engagementTeams/org/" +listOrdId.get(7) + "/revision/" + reviD.substring(1, 25)+"/roles/"+id);
+		dalatePublish.prettyPrint();		
+		
+		Assert.assertEquals(dalatePublish.statusCode(), 404);
+		/**
+		 * Extent report generation
+		 */
+		ExtentTestManager.statusLogMessage(dalatePublish.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,dalatePublish.asString());
+		getMethodology.validate_HTTPStrictTransportSecurity(dalatePublish);
+
+	}
+
 	@Test(groups = { "IntegrationTests" })
 	public void EngagementTeamRoles_DeleteAnEngagementRoleForAMethodology_status400() throws IOException {
 
