@@ -179,6 +179,11 @@ public class Restassured_Automation_ETEngagement {
 		createEngagmentRes.prettyPrint();
 		
 		Assert.assertEquals(createEngagmentRes.getStatusCode(),200);
+		/** 
+		 * Extent Report Generation
+		 */
+		ExtentTestManager.statusLogMessage(createEngagmentRes.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,createEngagmentRes.asString());
 		
 	}
 	
@@ -196,6 +201,11 @@ public class Restassured_Automation_ETEngagement {
 		String EngagementURI = "/api/" + post.getProperty("memberFirmSlug") + "/engagements/"+engagementID;
 		Response deleteEngagmentRes=rolesUtils.delete(URL, AuthorizationKey, EngagementURI);
 		Assert.assertEquals(deleteEngagmentRes.getStatusCode(),204);
+		/** 
+		 * Extent Report Generation
+		 */
+		ExtentTestManager.statusLogMessage(deleteEngagmentRes.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,deleteEngagmentRes.asString());
 	}
 	
 }
