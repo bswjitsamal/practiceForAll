@@ -680,7 +680,7 @@ public class Restassured_Automation_MethodologyItemFsliFilters {
 		allUtils.validate_HTTPStrictTransportSecurity(patchFilterRes);
 
 	}
-	@Test(groups = "IntegrationTests")
+	//@Test(groups = "IntegrationTests")
 	public void MethodologyItem_FsliFliters_DeleteFinancialStatementFilters_400() throws IOException {
 
 		allUtils = new Restassured_Automation_Utils();

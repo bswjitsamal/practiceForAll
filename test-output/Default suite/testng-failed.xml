@@ -5,7 +5,7 @@
     <classes>
       <class name="restassured.automation.testcases.Restassured_Automation_Rules">
         <methods>
-          <include name="Rules_PostCreateANewRuleSet_status200"/>
+          <include name="Rules_putUpdateANewRuleSet_status409"/>
         </methods>
       </class> <!-- restassured.automation.testcases.Restassured_Automation_Rules -->
     </classes>
@@ -14,7 +14,7 @@
     <classes>
       <class name="restassured.automation.testcases.Restassured_Automation_Rules">
         <methods>
-          <include name="Rules_PostCreateANewRuleSet_status200"/>
+          <include name="Rules_putUpdateANewRuleSet_status409"/>
           <include name="setup"/>
         </methods>
       </class> <!-- restassured.automation.testcases.Restassured_Automation_Rules -->

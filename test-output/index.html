@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\56014\AppData\Local\Temp\testng-eclipse-315060733\testng-customsuite.xml</span>
+                    <span>C:\Users\56014\AppData\Local\Temp\testng-eclipse--1712516856\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -102,7 +102,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="restassured.automation.testcases.Restassured_Automation_Rules" hash-for-method="Rules_PostCreateANewRuleSet_status200">Rules_PostCreateANewRuleSet_status200</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="restassured.automation.testcases.Restassured_Automation_Rules" hash-for-method="Rules_putUpdateANewRuleSet_status409">Rules_putUpdateANewRuleSet_status409</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -125,12 +125,17 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="Rules_PostCreateANewRuleSet_status200">
-                  </a> <!-- Rules_PostCreateANewRuleSet_status200 -->
-                  <span class="method-name">Rules_PostCreateANewRuleSet_status200</span>
-                  <div class="stack-trace">java.lang.NullPointerException
-	at restassured.automation.listeners.ExtentTestManager.statusLogMessage(ExtentTestManager.java:33)
-	at restassured.automation.testcases.Restassured_Automation_Rules.Rules_PostCreateANewRuleSet_status200(Restassured_Automation_Rules.java:442)
+                  <a name="Rules_putUpdateANewRuleSet_status409">
+                  </a> <!-- Rules_putUpdateANewRuleSet_status409 -->
+                  <span class="method-name">Rules_putUpdateANewRuleSet_status409</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [409] but found [200]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at restassured.automation.testcases.Restassured_Automation_Rules.Rules_putUpdateANewRuleSet_status409(Restassured_Automation_Rules.java:2208)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -164,7 +169,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\56014\AppData\Local\Temp\testng-eclipse-315060733\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\56014\AppData\Local\Temp\testng-eclipse--1712516856\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -175,7 +180,7 @@
     &lt;classes&gt;
       &lt;class name=&quot;restassured.automation.testcases.Restassured_Automation_Rules&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;Rules_PostCreateANewRuleSet_status200&quot;/&gt;
+          &lt;include name=&quot;Rules_putUpdateANewRuleSet_status409&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- restassured.automation.testcases.Restassured_Automation_Rules --&gt;
     &lt;/classes&gt;
@@ -184,7 +189,7 @@
     &lt;classes&gt;
       &lt;class name=&quot;restassured.automation.testcases.Restassured_Automation_Rules&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;Rules_PostCreateANewRuleSet_status200&quot;/&gt;
+          &lt;include name=&quot;Rules_putUpdateANewRuleSet_status409&quot;/&gt;
           &lt;include name=&quot;setup&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- restassured.automation.testcases.Restassured_Automation_Rules --&gt;
@@ -218,7 +223,7 @@
               <span class="test-group-name">IntegrationTests</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">Rules_PostCreateANewRuleSet_status200</span>
+                <span class="method-in-group-name">Rules_putUpdateANewRuleSet_status409</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -240,14 +245,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'Rules_PostCreateANewRuleSet_status200')
+data.setCell(0, 1, 'Rules_putUpdateANewRuleSet_status409')
 data.setCell(0, 2, 'restassured.automation.testcases.Restassured_Automation_Rules')
-data.setCell(0, 3, 20501);
+data.setCell(0, 3, 58449);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 20 seconds</span>
+              <span class="suite-total-time">Total running time: 58 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -270,8 +275,6 @@ return data;
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">Rules_postCreateANewRuleSet_status200</span>
                 <br/>
-                <span class="ignored-method-name">Rules_putUpdateANewRuleSet_status409</span>
-                <br/>
                 <span class="ignored-method-name">Rules_postCreateANewRuleSet_status400</span>
                 <br/>
                 <span class="ignored-method-name">Rules_putUpdateANewRuleSet_status400</span>
@@ -281,6 +284,8 @@ return data;
                 <span class="ignored-method-name">Rules_putUpdateANewRuleSet_status200</span>
                 <br/>
                 <span class="ignored-method-name">Rules_getTheListOfRulesForARevision_status200</span>
+                <br/>
+                <span class="ignored-method-name">Rules_PostCreateANewRuleSet_status200</span>
                 <br/>
                 <span class="ignored-method-name">Rules_deleteARuleSet_status204</span>
                 <br/>
@@ -304,8 +309,8 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">Rules_PostCreateANewRuleSet_status200</span>
-                <span class="method-start">78 ms</span>
+                <span class="method-name">Rules_putUpdateANewRuleSet_status409</span>
+                <span class="method-start">94 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

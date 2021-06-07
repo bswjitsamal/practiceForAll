@@ -1851,7 +1851,7 @@ public class Restassured_Automation_Rules extends read_Configuration_Propertites
 		Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();
 
 		Response getMethodologyRes = getMethodology.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(5));
+				"Organization", listOrdId.get(3));
 
 		// getMethodologyRes.prettyPrint();
 
@@ -2194,12 +2194,18 @@ public class Restassured_Automation_Rules extends read_Configuration_Propertites
 
 		String patchId12 = "/api/rules/revision/" + revision+"/rule/" + ruleId;
 
-		Response putOrganizationData = AllUtils.put_URLPOJO(URL, AuthorizationKey, patchId12, sp1);
-		Response putOrganizationData1 = AllUtils.put_URLPOJO(URL, AuthorizationKey, patchId12, sp1);
-		System.out.println(putOrganizationData1.asString());
+		/*Response putOrganizationData = AllUtils.put_URLPOJO(URL, AuthorizationKey, patchId12, sp1);
+		Response putOrganizationData1 = AllUtils.put_URLPOJO(URL, AuthorizationKey, patchId12, sp1)*/
 		
-		validate_HTTPStrictTransportSecurity(putOrganizationData1);
-		Assert.assertEquals(putOrganizationData1.statusCode(), 409);
+		Response putOrganizationData = null;
+        for (int i = 0; i < 30; i++) {
+            putOrganizationData = AllUtils.put_URLPOJO(URL, AuthorizationKey, patchId12, sp1);
+        }
+        
+		System.out.println(putOrganizationData.asString());
+		
+		validate_HTTPStrictTransportSecurity(putOrganizationData);
+		Assert.assertEquals(putOrganizationData.statusCode(), 409);
 		/**
 		 * Extent report generation
 		 */

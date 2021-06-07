@@ -2,24 +2,32 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="20584" started-at="2021-06-07T10:50:41Z" finished-at="2021-06-07T10:51:01Z">
+  <suite name="Default suite" duration-ms="58553" started-at="2021-06-07T14:28:31Z" finished-at="2021-06-07T14:29:29Z">
     <groups>
       <group name="IntegrationTests">
-        <method signature="Restassured_Automation_Rules.Rules_PostCreateANewRuleSet_status200()[pri:4, instance:restassured.automation.testcases.Restassured_Automation_Rules@17550481]" name="Rules_PostCreateANewRuleSet_status200" class="restassured.automation.testcases.Restassured_Automation_Rules"/>
+        <method signature="Restassured_Automation_Rules.Rules_putUpdateANewRuleSet_status409()[pri:9, instance:restassured.automation.testcases.Restassured_Automation_Rules@17550481]" name="Rules_putUpdateANewRuleSet_status409" class="restassured.automation.testcases.Restassured_Automation_Rules"/>
       </group> <!-- IntegrationTests -->
     </groups>
-    <test name="Default test" duration-ms="20584" started-at="2021-06-07T10:50:41Z" finished-at="2021-06-07T10:51:01Z">
+    <test name="Default test" duration-ms="58553" started-at="2021-06-07T14:28:31Z" finished-at="2021-06-07T14:29:29Z">
       <class name="restassured.automation.testcases.Restassured_Automation_Rules">
-        <test-method status="PASS" signature="setup()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_Rules@17550481]" name="setup" is-config="true" duration-ms="74" started-at="2021-06-07T16:20:41Z" finished-at="2021-06-07T16:20:41Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_Rules@17550481]" name="setup" is-config="true" duration-ms="83" started-at="2021-06-07T19:58:31Z" finished-at="2021-06-07T19:58:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="FAIL" signature="Rules_PostCreateANewRuleSet_status200()[pri:4, instance:restassured.automation.testcases.Restassured_Automation_Rules@17550481]" name="Rules_PostCreateANewRuleSet_status200" duration-ms="20501" started-at="2021-06-07T16:20:41Z" finished-at="2021-06-07T16:21:01Z">
-          <exception class="java.lang.NullPointerException">
+        <test-method status="FAIL" signature="Rules_putUpdateANewRuleSet_status409()[pri:9, instance:restassured.automation.testcases.Restassured_Automation_Rules@17550481]" name="Rules_putUpdateANewRuleSet_status409" duration-ms="58449" started-at="2021-06-07T19:58:31Z" finished-at="2021-06-07T19:59:29Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [409] but found [200]]]>
+            </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at restassured.automation.listeners.ExtentTestManager.statusLogMessage(ExtentTestManager.java:33)
-	at restassured.automation.testcases.Restassured_Automation_Rules.Rules_PostCreateANewRuleSet_status200(Restassured_Automation_Rules.java:442)
+              <![CDATA[java.lang.AssertionError: expected [409] but found [200]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at restassured.automation.testcases.Restassured_Automation_Rules.Rules_putUpdateANewRuleSet_status409(Restassured_Automation_Rules.java:2208)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -46,10 +54,10 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Rules_PostCreateANewRuleSet_status200 -->
+        </test-method> <!-- Rules_putUpdateANewRuleSet_status409 -->
       </class> <!-- restassured.automation.testcases.Restassured_Automation_Rules -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

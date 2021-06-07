@@ -180,7 +180,7 @@ public class Restassured_Automation_Methodology {
 	}
 
 	@Test(groups = "IntegrationTests")
-	public void Methodology_getASpecificRevisionItemTree_status404() {
+	public void Methodology_GetASpecificRevisionItemTree_status404() {
 
 		allUtils = new Restassured_Automation_Utils();
 

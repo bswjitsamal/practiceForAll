@@ -1045,7 +1045,7 @@ public class Restassured_Automation_MethodologyItemFinancialStatment {
 		 */
 
 		Response getMethodologyRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(7));
+				"Organization", listOrdId.get(3));
 
 		getMethodologyRes.prettyPrint();
 
@@ -1167,18 +1167,20 @@ public class Restassured_Automation_MethodologyItemFinancialStatment {
 				+ "/fsli";
 		User_Pojo pojo1 = new User_Pojo();
 		Map<String, String> map2 = new HashMap<String, String>();
-		map2.put("financialStatementType", post.getProperty("postMethodologyItemFinancialStatement"));
+		map2.put("financialStatementType", post.getProperty("postMethodologyItemFinancialStatement1"));
 
 		String createFinStat = pojo1.CreateFinancialStatment(map2);
 		Response finanacialStatmentRes = allUtils.post_URLPOJO(URL, AuthorizationKey, postFinStatment, createFinStat);
 		finanacialStatmentRes.prettyPrint();
 		JsonPath statmentJson = finanacialStatmentRes.jsonPath();
 		String fsliId = statmentJson.get("id");
+		
 
 		String patchFinStatment = "/api/methodologyItem/revision/" + revisionId + "/workProgram/" + workProgramId
 				+ "/fsli/" + fsliId;
 		Map<String, String> fin = new HashMap<String, String>();
 		fin.put("type", "LineItem");
+		
 		User_Pojo fPojo = new User_Pojo();
 		String patchFsli = fPojo.UpdateFsliFinancialStatment(fin);
 		Response patchFsliRes = allUtils.patch_URLPOJO(URL, AuthorizationKey, patchFinStatment, patchFsli);
