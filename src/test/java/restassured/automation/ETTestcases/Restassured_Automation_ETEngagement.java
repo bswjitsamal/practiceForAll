@@ -158,7 +158,7 @@ public class Restassured_Automation_ETEngagement {
 		JsonPath allEngagmentJson = allEnagementRes.jsonPath();
 		engagementId = allEngagmentJson.get("id");
 		ArrayList<Map<String, ?>> accessManager = allEngagmentJson.get("accessManagers");
-		String userid = String.valueOf(accessManager.get(1));
+		String userid = String.valueOf(accessManager.get(0));
 		methodologyId = allEngagmentJson.get("methodology");
 		
 		String engagementID = engagementId.get(0);
@@ -171,8 +171,8 @@ public class Restassured_Automation_ETEngagement {
 		HashMap<String,String> map=new HashMap<String, String>();
 		map.put("title",post.getProperty("postETEngagementTitle"));
 		map.put("client",post.getProperty("postETEngagementClient"));
-		map.put("accessManagers", accessUserId);
-		map.put("methodology", methodology);
+		map.put("AccessManagers", accessUserId);
+		map.put("Methodology", methodology);
 		ETUser_Pojo pojo=new ETUser_Pojo();
 		String createEngagement=pojo.createEngagement(map);
 		Response createEngagmentRes=rolesUtils.post_URLPOJO(URL, AuthorizationKey, EngagementURI, createEngagement);
@@ -187,7 +187,7 @@ public class Restassured_Automation_ETEngagement {
 		
 	}
 	
-	@Test(groups = "IntegrationTests")
+	//@Test(groups = "IntegrationTests")
 	public void ETEngagement_DeleteAnNewEngagement_Status204() throws IOException {
 		Restassured_Automation_Utils rolesUtils = new Restassured_Automation_Utils();
 		post = read_Configuration_Propertites.loadproperty("Configuration");
@@ -197,9 +197,32 @@ public class Restassured_Automation_ETEngagement {
 		allEnagementRes.prettyPrint();
 		JsonPath allEngagmentJson = allEnagementRes.jsonPath();
 		engagementId = allEngagmentJson.get("id");
+		ArrayList<Map<String, ?>> accessManager = allEngagmentJson.get("accessManagers");
+		String userid = String.valueOf(accessManager.get(0));
+		methodologyId = allEngagmentJson.get("methodology");
+		
 		String engagementID = engagementId.get(0);
-		String EngagementURI = "/api/" + post.getProperty("memberFirmSlug") + "/engagements/"+engagementID;
-		Response deleteEngagmentRes=rolesUtils.delete(URL, AuthorizationKey, EngagementURI);
+		String accessUserId=userid.substring(1, 37);
+		String methodology=methodologyId.get(0);
+		
+		System.out.println("engagement id   "+engagementID+"    user id    "+accessUserId+"    methodology  "+methodology);
+		
+		String EngagementURI = "/api/" + post.getProperty("memberFirmSlug") + "/engagements";
+		HashMap<String,String> map=new HashMap<String, String>();
+		map.put("title",post.getProperty("postETEngagementTitle"));
+		map.put("client",post.getProperty("postETEngagementClient"));
+		map.put("AccessManagers", accessUserId);
+		map.put("Methodology", methodology);
+		ETUser_Pojo pojo=new ETUser_Pojo();
+		String createEngagement=pojo.createEngagement(map);
+		Response createEngagmentRes=rolesUtils.post_URLPOJO(URL, AuthorizationKey, EngagementURI, createEngagement);
+		createEngagmentRes.prettyPrint();
+		
+		JsonPath EngagmentJson = createEngagmentRes.jsonPath();
+		
+		String engagementId = EngagmentJson.get("id");
+		String deleteEngagementURI = "/api/" + post.getProperty("memberFirmSlug") + "/engagements/"+engagementId;
+		Response deleteEngagmentRes=rolesUtils.delete(URL, AuthorizationKey, deleteEngagementURI);
 		Assert.assertEquals(deleteEngagmentRes.getStatusCode(),204);
 		/** 
 		 * Extent Report Generation

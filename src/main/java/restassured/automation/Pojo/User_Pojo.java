@@ -2,6 +2,8 @@ package restassured.automation.Pojo;
 
 import java.util.Map;
 
+import org.json.JSONObject;
+
 import com.google.gson.Gson;
 
 import restassured.automation.Pojo.MethodologyItem_Pojo.InitData;
@@ -297,6 +299,7 @@ public class User_Pojo {
 		Gson Josnbody = new Gson();
 		return Josnbody.toJson(upDateId);
 	}
+
 	public String UpdateFsliFinancialStatment(Map<String, String> data) {
 
 		MethodologyItem_Pojo upDateId = new MethodologyItem_Pojo();
@@ -305,7 +308,17 @@ public class User_Pojo {
 		upDateId.setDisplayName(data.get("displayName"));
 		upDateId.setFilterId(data.get("filterId"));
 		upDateId.setIndex(data.get("index"));
-		
+
+		Gson Josnbody = new Gson();
+		return Josnbody.toJson(upDateId);
+	}
+	public String UpdateFinancialStatmentForRevision(Map<String, String> data) {
+
+		FinancialStatements_Pojo upDateId = new FinancialStatements_Pojo();
+
+		upDateId.setId(data.get("id"));
+		upDateId.setTitle(data.get("title"));
+
 		Gson Josnbody = new Gson();
 		return Josnbody.toJson(upDateId);
 	}
@@ -317,5 +330,23 @@ public class User_Pojo {
 
 		Gson Josnbody = new Gson();
 		return Josnbody.toJson(upDateId);
+	}
+
+	public String createAdminFinanceStatements(Map<String, String> data) {
+
+		FinancialStatements_Pojo po = new FinancialStatements_Pojo();
+		po.setTitle(data.get("title"));
+		
+		Gson jsonBody = new Gson();
+		return jsonBody.toJson(po);
+	}
+
+	public String UpdateAdminFinanceStatements(Map<String, Integer> map) {
+
+		FinancialStatements_Pojo po = new FinancialStatements_Pojo();
+		
+		po.setIndex(map.get("index"));
+		Gson jsonBody = new Gson();
+		return jsonBody.toJson(po);
 	}
 }

@@ -61,8 +61,8 @@ public class ETUser_Pojo {
 		ET_Engagement_Pojo pojo=new ET_Engagement_Pojo();
 		pojo.setTitle(data.get("title"));
 		pojo.setClient(data.get("client"));
-		pojo.setAccessManager(new String[] {data.get("accessManagers")});
-		pojo.setMethodologyId(data.get("methodology"));
+		pojo.setAccessManagers(new String[] {data.get("AccessManagers")});
+		pojo.setMethodology(data.get("Methodology"));
 		Gson jsonBody=new Gson();
 		return jsonBody.toJson(pojo);
 		}
@@ -73,6 +73,17 @@ public class ETUser_Pojo {
 		pojo.setNoteText(data.get("notesText"));
 		Gson jsonBody=new Gson();
 		return jsonBody.toJson(pojo);
+	}
+	public String createFinancialStatement(Map<String,String> data){
+		
+		ET_FinanacialStatment_Pojo po=new ET_FinanacialStatment_Pojo();
+		po.setIndex(data.get("index"));
+		po.setItemType(data.get("itemType"));
+		po.setTaxonomy(data.get("taxonomy"));
+		po.setDisplayText(data.get("displayText"));
+		po.setNewIndex(data.get("newIndex"));
+		Gson jsonBody=new Gson();
+		return jsonBody.toJson(po);
 	}
 	
 }

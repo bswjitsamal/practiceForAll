@@ -3,17 +3,18 @@ package restassured.automation.Pojo;
 public class ET_Engagement_Pojo {
 	private String userId;
 	private String engagementTeamRoleId;
-	private String methodologyId;
-	private String[] accessManager;
+	private String Methodology;
+	private String[] AccessManagers;
 	private String title;
 	private String client;
 
-	public String getMethodologyId() {
-		return methodologyId;
+	
+	public String getMethodology() {
+		return Methodology;
 	}
 
-	public void setMethodologyId(String methodologyId) {
-		this.methodologyId = methodologyId;
+	public void setMethodology(String methodology) {
+		Methodology = methodology;
 	}
 
 	public String getUserId() {
@@ -32,12 +33,14 @@ public class ET_Engagement_Pojo {
 		this.engagementTeamRoleId = engagementTeamRoleId;
 	}
 
-	public String[] getAccessManager() {
-		return accessManager;
+	
+
+	public String[] getAccessManagers() {
+		return AccessManagers;
 	}
 
-	public void setAccessManager(String[] accessManager) {
-		this.accessManager = accessManager;
+	public void setAccessManagers(String[] accessManagers) {
+		AccessManagers = accessManagers;
 	}
 
 	public String getTitle() {

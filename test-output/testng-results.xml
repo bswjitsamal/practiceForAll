@@ -2,32 +2,32 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="58553" started-at="2021-06-07T14:28:31Z" finished-at="2021-06-07T14:29:29Z">
+  <suite name="Default suite" duration-ms="11732" started-at="2021-06-08T15:05:03Z" finished-at="2021-06-08T15:05:15Z">
     <groups>
       <group name="IntegrationTests">
-        <method signature="Restassured_Automation_Rules.Rules_putUpdateANewRuleSet_status409()[pri:9, instance:restassured.automation.testcases.Restassured_Automation_Rules@17550481]" name="Rules_putUpdateANewRuleSet_status409" class="restassured.automation.testcases.Restassured_Automation_Rules"/>
+        <method signature="Restassured_Automation_FinancialStatements.FinancialStatements_PatchFinancialStatementsForTheRevision_Status200()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_FinancialStatements@6bf256fa]" name="FinancialStatements_PatchFinancialStatementsForTheRevision_Status200" class="restassured.automation.testcases.Restassured_Automation_FinancialStatements"/>
       </group> <!-- IntegrationTests -->
     </groups>
-    <test name="Default test" duration-ms="58553" started-at="2021-06-07T14:28:31Z" finished-at="2021-06-07T14:29:29Z">
-      <class name="restassured.automation.testcases.Restassured_Automation_Rules">
-        <test-method status="PASS" signature="setup()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_Rules@17550481]" name="setup" is-config="true" duration-ms="83" started-at="2021-06-07T19:58:31Z" finished-at="2021-06-07T19:58:31Z">
+    <test name="Default test" duration-ms="11732" started-at="2021-06-08T15:05:03Z" finished-at="2021-06-08T15:05:15Z">
+      <class name="restassured.automation.testcases.Restassured_Automation_FinancialStatements">
+        <test-method status="PASS" signature="setup()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_FinancialStatements@6bf256fa]" name="setup" is-config="true" duration-ms="116" started-at="2021-06-08T20:35:03Z" finished-at="2021-06-08T20:35:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="FAIL" signature="Rules_putUpdateANewRuleSet_status409()[pri:9, instance:restassured.automation.testcases.Restassured_Automation_Rules@17550481]" name="Rules_putUpdateANewRuleSet_status409" duration-ms="58449" started-at="2021-06-07T19:58:31Z" finished-at="2021-06-07T19:59:29Z">
+        <test-method status="FAIL" signature="FinancialStatements_PatchFinancialStatementsForTheRevision_Status200()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_FinancialStatements@6bf256fa]" name="FinancialStatements_PatchFinancialStatementsForTheRevision_Status200" duration-ms="11594" started-at="2021-06-08T20:35:03Z" finished-at="2021-06-08T20:35:15Z">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [409] but found [200]]]>
+              <![CDATA[expected [204] but found [400]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [409] but found [200]
+              <![CDATA[java.lang.AssertionError: expected [204] but found [400]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:513)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
 	at org.testng.Assert.assertEquals(Assert.java:116)
 	at org.testng.Assert.assertEquals(Assert.java:389)
 	at org.testng.Assert.assertEquals(Assert.java:399)
-	at restassured.automation.testcases.Restassured_Automation_Rules.Rules_putUpdateANewRuleSet_status409(Restassured_Automation_Rules.java:2208)
+	at restassured.automation.testcases.Restassured_Automation_FinancialStatements.FinancialStatements_PatchFinancialStatementsForTheRevision_Status200(Restassured_Automation_FinancialStatements.java:467)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -57,8 +57,8 @@
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Rules_putUpdateANewRuleSet_status409 -->
-      </class> <!-- restassured.automation.testcases.Restassured_Automation_Rules -->
+        </test-method> <!-- FinancialStatements_PatchFinancialStatementsForTheRevision_Status200 -->
+      </class> <!-- restassured.automation.testcases.Restassured_Automation_FinancialStatements -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
