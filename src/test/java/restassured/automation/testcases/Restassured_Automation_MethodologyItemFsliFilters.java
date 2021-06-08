@@ -78,7 +78,7 @@ public class Restassured_Automation_MethodologyItemFsliFilters {
 		 */
 
 		Response getMethodologyRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(7));
+				"Organization", listOrdId.get(3));
 
 		getMethodologyRes.prettyPrint();
 
@@ -132,7 +132,7 @@ public class Restassured_Automation_MethodologyItemFsliFilters {
 		 */
 
 		Response getMethodologyRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(7));
+				"Organization", listOrdId.get(3));
 
 		getMethodologyRes.prettyPrint();
 
@@ -187,7 +187,7 @@ public class Restassured_Automation_MethodologyItemFsliFilters {
 		 */
 
 		Response getMethodologyRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(7));
+				"Organization", listOrdId.get(3));
 
 		getMethodologyRes.prettyPrint();
 
@@ -242,7 +242,7 @@ public class Restassured_Automation_MethodologyItemFsliFilters {
 		 */
 
 		Response getMethodologyRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(7));
+				"Organization", listOrdId.get(3));
 
 		getMethodologyRes.prettyPrint();
 
@@ -297,7 +297,7 @@ public class Restassured_Automation_MethodologyItemFsliFilters {
 		 */
 
 		Response getMethodologyRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(7));
+				"Organization", listOrdId.get(3));
 
 		getMethodologyRes.prettyPrint();
 
@@ -365,7 +365,7 @@ public class Restassured_Automation_MethodologyItemFsliFilters {
 		 */
 
 		Response getMethodologyRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(7));
+				"Organization", listOrdId.get(3));
 
 		getMethodologyRes.prettyPrint();
 
@@ -433,7 +433,7 @@ public class Restassured_Automation_MethodologyItemFsliFilters {
 		 */
 
 		Response getMethodologyRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(7));
+				"Organization", listOrdId.get(3));
 
 		getMethodologyRes.prettyPrint();
 
@@ -501,7 +501,7 @@ public class Restassured_Automation_MethodologyItemFsliFilters {
 		 */
 
 		Response getMethodologyRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(7));
+				"Organization", listOrdId.get(3));
 
 		getMethodologyRes.prettyPrint();
 
@@ -570,7 +570,7 @@ public class Restassured_Automation_MethodologyItemFsliFilters {
 		 */
 
 		Response getMethodologyRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(7));
+				"Organization", listOrdId.get(3));
 
 		getMethodologyRes.prettyPrint();
 
@@ -634,7 +634,7 @@ public class Restassured_Automation_MethodologyItemFsliFilters {
 		 */
 
 		Response getMethodologyRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(7));
+				"Organization", listOrdId.get(3));
 
 		getMethodologyRes.prettyPrint();
 
@@ -698,7 +698,7 @@ public class Restassured_Automation_MethodologyItemFsliFilters {
 		 */
 
 		Response getMethodologyRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(7));
+				"Organization", listOrdId.get(3));
 
 		getMethodologyRes.prettyPrint();
 

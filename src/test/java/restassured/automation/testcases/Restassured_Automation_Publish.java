@@ -107,7 +107,7 @@ public class Restassured_Automation_Publish extends read_Configuration_Propertit
 		Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();
 
 		Response getMethodologyRes = getMethodology.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(7));
+				"Organization", listOrdId.get(3));
 		getMethodologyRes.prettyPrint();
 		
 		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
@@ -174,7 +174,7 @@ public class Restassured_Automation_Publish extends read_Configuration_Propertit
 		Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();
 
 		Response getMethodologyRes = getMethodology.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(7));
+				"Organization", listOrdId.get(3));
 		getMethodologyRes.prettyPrint();
 		
 		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();

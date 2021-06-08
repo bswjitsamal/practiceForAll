@@ -78,7 +78,7 @@ public class Restassured_Automation_PublishEngagementType {
 		 */
 
 		Response getEngagementTypeRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/engagementType",
-				"Organization", listOrdId.get(7));
+				"Organization", listOrdId.get(3));
 		getEngagementTypeRes.prettyPrint();
 		
 		// Retrieving the inheritedFrom 
@@ -90,7 +90,7 @@ public class Restassured_Automation_PublishEngagementType {
 		
 		HashMap<String, String> map = new HashMap<String, String>();
 		map.put("storeEngagementType", inheritedFrom.get(1));
-		map.put("organization", listOrdId.get(7));
+		map.put("organization", listOrdId.get(3));
 		
 		User_Pojo po = new User_Pojo();
 		String userOobj = po.publishInherit(map);

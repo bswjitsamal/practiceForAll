@@ -79,7 +79,7 @@ public class Restassured_Automation_MethodologItem {
 		 */
 
 		Response getMethodologyRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(7));
+				"Organization", listOrdId.get(3));
 		// getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
@@ -122,7 +122,7 @@ public class Restassured_Automation_MethodologItem {
 		 */
 
 		Response getMethodologyRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(7));
+				"Organization", listOrdId.get(3));
 		// getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
@@ -172,7 +172,7 @@ public class Restassured_Automation_MethodologItem {
 		 */
 
 		Response getMethodologyRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(7));
+				"Organization", listOrdId.get(3));
 		// getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
@@ -211,7 +211,7 @@ public class Restassured_Automation_MethodologItem {
 		// OrganizationsDetails.prettyPrint();
 
 		Response getMethodologyRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(7));
+				"Organization", listOrdId.get(3));
 		// getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
@@ -259,7 +259,7 @@ public class Restassured_Automation_MethodologItem {
 
 
 		Response getMethodologyRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(7));
+				"Organization", listOrdId.get(3));
 		// getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
@@ -309,7 +309,7 @@ public class Restassured_Automation_MethodologItem {
 		// OrganizationsDetails.prettyPrint();
 
 		Response getMethodologyRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(7));
+				"Organization", listOrdId.get(3));
 		// getMethodologyRes.prettyPrint();
 
 		/**
@@ -367,7 +367,7 @@ public class Restassured_Automation_MethodologItem {
 		// OrganizationsDetails.prettyPrint();
 
 		Response getMethodologyRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(7));
+				"Organization", listOrdId.get(3));
 
 		// getMethodologyRes.prettyPrint();
 
@@ -439,7 +439,7 @@ public class Restassured_Automation_MethodologItem {
 		// OrganizationsDetails.prettyPrint();
 
 		Response getMethodologyRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(7));
+				"Organization", listOrdId.get(3));
 
 		// getMethodologyRes.prettyPrint();
 
@@ -510,7 +510,7 @@ public class Restassured_Automation_MethodologItem {
 		// OrganizationsDetails.prettyPrint();
 
 		Response getMethodologyRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(7));
+				"Organization", listOrdId.get(3));
 
 		// getMethodologyRes.prettyPrint();
 
@@ -583,7 +583,7 @@ public class Restassured_Automation_MethodologItem {
 		OrganizationsDetails.prettyPrint();
 
 		Response getMethodologyRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(7));
+				"Organization", listOrdId.get(3));
 
 		// getMethodologyRes.prettyPrint();
 
@@ -652,7 +652,7 @@ public class Restassured_Automation_MethodologItem {
 		// OrganizationsDetails.prettyPrint();
 
 		Response getMethodologyRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(7));
+				"Organization", listOrdId.get(3));
 
 		// getMethodologyRes.prettyPrint();
 
@@ -727,7 +727,7 @@ public class Restassured_Automation_MethodologItem {
 		Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();
 
 		Response getMethodologyRes = getMethodology.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(7));
+				"Organization", listOrdId.get(3));
 
 		// getMethodologyRes.prettyPrint();
 
@@ -794,7 +794,7 @@ public class Restassured_Automation_MethodologItem {
 		OrganizationsDetails.prettyPrint();
 
 		Response getMethodologyRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(7));
+				"Organization", listOrdId.get(3));
 
 		// getMethodologyRes.prettyPrint();
 
@@ -864,7 +864,7 @@ public class Restassured_Automation_MethodologItem {
 		listOrdId = jsonPathEvaluator.get("id");
 		// OrganizationsDetails.prettyPrint();
 		Response getMethodologyRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(7));
+				"Organization", listOrdId.get(3));
 
 		// getMethodologyRes.prettyPrint();
 
@@ -938,7 +938,7 @@ public class Restassured_Automation_MethodologItem {
 		listOrdId = jsonPathEvaluator.get("id");
 		// OrganizationsDetails.prettyPrint();
 		Response getMethodologyRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(7));
+				"Organization", listOrdId.get(3));
 
 		// getMethodologyRes.prettyPrint();
 
@@ -1014,7 +1014,7 @@ public class Restassured_Automation_MethodologItem {
 		listOrdId = jsonPathEvaluator.get("id");
 		// OrganizationsDetails.prettyPrint();
 		Response getMethodologyRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(7));
+				"Organization", listOrdId.get(3));
 
 		// getMethodologyRes.prettyPrint();
 
@@ -1090,7 +1090,7 @@ public class Restassured_Automation_MethodologItem {
 		listOrdId = jsonPathEvaluator.get("id");
 		// OrganizationsDetails.prettyPrint();
 		Response getMethodologyRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(7));
+				"Organization", listOrdId.get(3));
 
 		// getMethodologyRes.prettyPrint();
 
@@ -1151,7 +1151,7 @@ public class Restassured_Automation_MethodologItem {
 		listOrdId = jsonPathEvaluator.get("id");
 		// OrganizationsDetails.prettyPrint();
 		Response getMethodologyRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(7));
+				"Organization", listOrdId.get(3));
 
 		// getMethodologyRes.prettyPrint();
 
@@ -1217,7 +1217,7 @@ public class Restassured_Automation_MethodologItem {
 		 */
 
 		Response getMethodologyRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(7));
+				"Organization", listOrdId.get(3));
 		getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
@@ -1272,7 +1272,7 @@ public class Restassured_Automation_MethodologItem {
 		 */
 
 		Response getMethodologyRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(7));
+				"Organization", listOrdId.get(3));
 		// getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
@@ -1327,7 +1327,7 @@ public class Restassured_Automation_MethodologItem {
 		 */
 
 		Response getMethodologyRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(7));
+				"Organization", listOrdId.get(3));
 		// getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
@@ -1385,7 +1385,7 @@ public class Restassured_Automation_MethodologItem {
 		 */
 
 		Response getMethodologyRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(7));
+				"Organization", listOrdId.get(3));
 		// getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();

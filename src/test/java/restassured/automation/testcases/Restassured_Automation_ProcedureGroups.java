@@ -671,7 +671,7 @@ public class Restassured_Automation_ProcedureGroups extends read_Configuration_P
 			Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();
 
 			Response getMethodologyRes = getMethodology.get_URL_MultiQueryParams(URL, AuthorizationKey, "/api/methodology",
-					"Organization", listOrdId.get(7), "PublishedOnly", "true");
+					"Organization", listOrdId.get(3), "PublishedOnly", "true");
 
 			// getMethodologyRes.prettyPrint();
 
@@ -1632,7 +1632,7 @@ public class Restassured_Automation_ProcedureGroups extends read_Configuration_P
 			Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();
 
 			Response getMethodologyRes = getMethodology.get_URL_MultiQueryParams(URL, AuthorizationKey, "/api/methodology",
-					"Organization", listOrdId.get(7), "PublishedOnly", "true");
+					"Organization", listOrdId.get(3), "PublishedOnly", "true");
 
 			// getMethodologyRes.prettyPrint();
 
@@ -2340,7 +2340,7 @@ public class Restassured_Automation_ProcedureGroups extends read_Configuration_P
 			Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();
 
 			Response getMethodologyRes = getMethodology.get_URL_MultiQueryParams(URL, AuthorizationKey, "/api/methodology",
-					"Organization", listOrdId.get(7), "PublishedOnly", "true");
+					"Organization", listOrdId.get(3), "PublishedOnly", "true");
 
 			// getMethodologyRes.prettyPrint();
 
@@ -2702,7 +2702,7 @@ public class Restassured_Automation_ProcedureGroups extends read_Configuration_P
 			Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();
 
 			Response getMethodologyRes = getMethodology.get_URL_MultiQueryParams(URL, AuthorizationKey, "/api/methodology",
-					"Organization", listOrdId.get(7), "PublishedOnly", "true");
+					"Organization", listOrdId.get(3), "PublishedOnly", "true");
 
 			// getMethodologyRes.prettyPrint();
 
@@ -3054,7 +3054,7 @@ public class Restassured_Automation_ProcedureGroups extends read_Configuration_P
 			Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();
 
 			Response getMethodologyRes = getMethodology.get_URL_MultiQueryParams(URL, AuthorizationKey, "/api/methodology",
-					"Organization", listOrdId.get(7), "PublishedOnly", "true");
+					"Organization", listOrdId.get(3), "PublishedOnly", "true");
 
 			// getMethodologyRes.prettyPrint();
 
@@ -3406,7 +3406,7 @@ public class Restassured_Automation_ProcedureGroups extends read_Configuration_P
 			Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();
 
 			Response getMethodologyRes = getMethodology.get_URL_MultiQueryParams(URL, AuthorizationKey, "/api/methodology",
-					"Organization", listOrdId.get(7), "PublishedOnly", "true");
+					"Organization", listOrdId.get(3), "PublishedOnly", "true");
 
 			// getMethodologyRes.prettyPrint();
 
@@ -3759,7 +3759,7 @@ public class Restassured_Automation_ProcedureGroups extends read_Configuration_P
 			Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();
 
 			Response getMethodologyRes = getMethodology.get_URL_MultiQueryParams(URL, AuthorizationKey, "/api/methodology",
-					"Organization", listOrdId.get(7), "PublishedOnly", "true");
+					"Organization", listOrdId.get(3), "PublishedOnly", "true");
 
 			// getMethodologyRes.prettyPrint();
 
