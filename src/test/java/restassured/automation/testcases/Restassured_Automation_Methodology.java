@@ -374,9 +374,9 @@ public class Restassured_Automation_Methodology {
 		System.out.println(revId);
 
 		Map<String, String> map = new HashMap<String, String>();
-		map.put("title", title.get(0));
-		map.put("engagementType", engagementTypeId.get(0));
-		map.put("draftDescription", post.getProperty("postMethodologyDraftDescription"));
+		map.put("title", title.get(1));
+		map.put("engagementType", engagementTypeId.get(1));
+		//map.put("draftDescription", post.getProperty("postMethodologyDraftDescription"));
 
 		User_Pojo po = new User_Pojo();
 		String createMethodology = po.methodologyAdd(map);
@@ -676,7 +676,7 @@ public class Restassured_Automation_Methodology {
 
 	@Test(groups = "IntegrationTests")
 	public void Methodology_CreateANewCandidateRevisionWithStatus_200() throws IOException {
-		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
+		 allUtils = new Restassured_Automation_Utils();
 
 		// fetching Org Id
 
@@ -685,9 +685,7 @@ public class Restassured_Automation_Methodology {
 		listOrdId = jsonPathEvaluator.get("id");
 		// OrganizationsDetails.prettyPrint();
 
-		Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();
-
-		Response getMethodologyRes = getMethodology.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
+		Response getMethodologyRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
 				"Organization", listOrdId.get(3));
 
 		// getMethodologyRes.prettyPrint();
@@ -698,7 +696,7 @@ public class Restassured_Automation_Methodology {
 		ArrayList<String> parentId = jsonPathEvaluator1.get("id");
 		System.out.println(String.valueOf(listRevisionI1.get(0)));
 
-		String revId = String.valueOf(listRevisionI1.get(3));
+		String revId = String.valueOf(listRevisionI1.get(1));
 		String parntId = String.valueOf(parentId.get(3));
 
 		/**
@@ -712,7 +710,6 @@ public class Restassured_Automation_Methodology {
 
 		Map<String, String> data = new HashMap<String, String>();
 		data.put("title", post.getProperty("postMethodologyItemTitle"));
-		// data.put("parentId", parntId);
 		data.put("index", post.getProperty("postMethodologyItemIndex"));
 		data.put("itemType", post.getProperty("postMethodologyItemItemType"));
 
@@ -804,12 +801,13 @@ public class Restassured_Automation_Methodology {
 
 		String workFlowParam = post.getProperty("postWorkFlowState");
 
+		/*
 		String postId = "/api/methodologyItem/revision/" + revId.substring(1, 25) + "/workProgram/" + methodologyItemId1
 				+ "/workFlow/" + workFlowParam;
 
 		Response postWorkFlowRes = getEngagementType.post_URL_WithoutBody(URL, AuthorizationKey, postId);
 		postWorkFlowRes.prettyPrint();
-
+*/
 		String postId2 = "/api/methodologyItem/revision/" + revId.substring(1, 25) + "/workProgram/" + methodItemId
 				+ "/workFlow/" + workFlowParam;
 
@@ -822,8 +820,9 @@ public class Restassured_Automation_Methodology {
 		 */
 
 		String workFlowParam1 = post.getProperty("postWorkFlowState2");
-		String postId1 = "/api/methodologyItem/revision/" + revId.substring(1, 25) + "/workProgram/"
-				+ methodologyItemId1 + "/workFlow/" + workFlowParam1;
+		
+		String postId1= "/api/methodologyItem/revision/" + revId.substring(1, 25) + "/workProgram/" + methodItemId
+				+ "/workFlow/" + workFlowParam1;
 
 		Response postWorkFlowRes1 = getEngagementType.post_URL_WithoutBody(URL, AuthorizationKey, postId1);
 		postWorkFlowRes1.prettyPrint();
@@ -877,7 +876,7 @@ public class Restassured_Automation_Methodology {
 		ArrayList<String> parentId = jsonPathEvaluator1.get("id");
 		System.out.println(String.valueOf(listRevisionI1.get(0)));
 
-		String revId = String.valueOf(listRevisionI1.get(3));
+		String revId = String.valueOf(listRevisionI1.get(1));
 		String parntId = String.valueOf(parentId.get(3));
 
 		/**
@@ -1056,7 +1055,7 @@ public class Restassured_Automation_Methodology {
 		ArrayList<String> parentId = jsonPathEvaluator1.get("id");
 		System.out.println(String.valueOf(listRevisionI1.get(0)));
 
-		String revId = String.valueOf(listRevisionI1.get(3));
+		String revId = String.valueOf(listRevisionI1.get(1));
 		String parntId = String.valueOf(parentId.get(3));
 
 		/**

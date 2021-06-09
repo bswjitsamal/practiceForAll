@@ -29,6 +29,8 @@ public class MethodologyItem_Pojo {
 	private String displayName;
 	private String filterId;
 	private String filterName;
+	private String displayAs;
+	
 	
 	
 	public String getDisplayName() {

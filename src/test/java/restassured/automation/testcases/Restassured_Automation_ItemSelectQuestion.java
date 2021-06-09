@@ -86,7 +86,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
 
-		String revId = String.valueOf(listRevisionI1.get(2));
+		String revId = String.valueOf(listRevisionI1.get(1));
 		/**
 		 * FETCHING THE ALL METHODOLOGY FOR AN REVISION
 		 */
@@ -147,7 +147,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
 
-		String revId = String.valueOf(listRevisionI1.get(2));
+		String revId = String.valueOf(listRevisionI1.get(1));
 
 		String patchId = "/api/methodologyItem/revision/" + revId.substring(1, 25);
 
@@ -271,7 +271,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
 
-		String revId = String.valueOf(listRevisionI1.get(2));
+		String revId = String.valueOf(listRevisionI1.get(1));
 
 		String patchId = "/api/methodologyItem/revision/" + revId.substring(1, 25);
 
@@ -332,7 +332,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
 
-		String revId = String.valueOf(listRevisionI1.get(2));
+		String revId = String.valueOf(listRevisionI1.get(1));
 
 		String patchId = "/api/methodologyItem/revision/" + revId.substring(1, 25);
 
@@ -390,7 +390,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
 
-		String revId = String.valueOf(listRevisionI1.get(2));
+		String revId = String.valueOf(listRevisionI1.get(1));
 
 		String patchId = "/api/methodologyItem/revision/" + revId.substring(1, 25);
 
@@ -448,7 +448,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
 
-		String revId = String.valueOf(listRevisionI1.get(2));
+		String revId = String.valueOf(listRevisionI1.get(1));
 
 		String patchId = "/api/methodologyItem/revision/" + revId.substring(1, 25);
 
@@ -504,7 +504,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
 
-		String revId = String.valueOf(listRevisionI1.get(2));
+		String revId = String.valueOf(listRevisionI1.get(1));
 
 		String patchId = "/api/methodologyItem/revision/" + revId.substring(1, 25);
 
@@ -559,7 +559,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
 
-		String revId = String.valueOf(listRevisionI1.get(2));
+		String revId = String.valueOf(listRevisionI1.get(1));
 
 		String patchId = "/api/methodologyItem/revision/" + revId.substring(1, 25);
 
@@ -619,7 +619,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
 
-		String revId = String.valueOf(listRevisionI1.get(2));
+		String revId = String.valueOf(listRevisionI1.get(1));
 
 		String patchId = "/api/methodologyItem/revision/" + revId.substring(1, 25);
 
@@ -707,7 +707,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
 
-		String revId = String.valueOf(listRevisionI1.get(2));
+		String revId = String.valueOf(listRevisionI1.get(1));
 
 		String patchId = "/api/methodologyItem/revision/" + revId.substring(1, 25);
 
@@ -777,7 +777,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 
 		System.out.println(String.valueOf(listRevisionI1.get(2)));
 
-		String revId = String.valueOf(listRevisionI1.get(2));
+		String revId = String.valueOf(listRevisionI1.get(1));
 
 		String patchId = "/api/methodologyItem/revision/" + revId.substring(1, 25);
 
@@ -849,7 +849,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 
 		System.out.println(String.valueOf(listRevisionI1.get(2)));
 
-		String revId = String.valueOf(listRevisionI1.get(2));
+		String revId = String.valueOf(listRevisionI1.get(1));
 		/**
 		 * FETCHING THE METHODOLOGY ID FROM METHODOLOGY ITEM
 		 */
@@ -943,7 +943,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
 
-		String revId = String.valueOf(listRevisionI1.get(2));
+		String revId = String.valueOf(listRevisionI1.get(1));
 
 		String patchId = "/api/methodologyItem/revision/" + revId.substring(1, 25);
 
@@ -1008,7 +1008,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
 
-		String revId = String.valueOf(listRevisionI1.get(2));
+		String revId = String.valueOf(listRevisionI1.get(1));
 
 		String patchId = "/api/methodologyItem/revision/" + revId.substring(1, 25);
 
@@ -1074,7 +1074,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
 
-		String revId = String.valueOf(listRevisionI1.get(2));
+		String revId = String.valueOf(listRevisionI1.get(1));
 
 		String patchId = "/api/methodologyItem/revision/" + revId.substring(1, 25);
 
@@ -1146,7 +1146,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
 
-		String revId = String.valueOf(listRevisionI1.get(2));
+		String revId = String.valueOf(listRevisionI1.get(1));
 
 		String patchId = "/api/methodologyItem/revision/" + revId.substring(1, 25);
 
@@ -1208,7 +1208,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
 
-		String revId = String.valueOf(listRevisionI1.get(2));
+		String revId = String.valueOf(listRevisionI1.get(1));
 
 		String patchId = "/api/methodologyItem/revision/" + revId.substring(1, 25);
 
@@ -1270,7 +1270,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
 
-		String revId = String.valueOf(listRevisionI1.get(2));
+		String revId = String.valueOf(listRevisionI1.get(1));
 
 		String patchId = "/api/methodologyItem/revision/" + revId.substring(1, 25);
 
@@ -1361,7 +1361,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
 
-		String revId = String.valueOf(listRevisionI1.get(2));
+		String revId = String.valueOf(listRevisionI1.get(1));
 
 		String patchId = "/api/methodologyItem/revision/" + revId.substring(1, 25);
 
@@ -1451,7 +1451,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
 
-		String revId = String.valueOf(listRevisionI1.get(2));
+		String revId = String.valueOf(listRevisionI1.get(1));
 
 		String patchId = "/api/methodologyItem/revision/" + revId.substring(1, 25);
 
@@ -1539,7 +1539,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
 
-		String revId = String.valueOf(listRevisionI1.get(2));
+		String revId = String.valueOf(listRevisionI1.get(1));
 
 		String patchId = "/api/methodologyItem/revision/" + revId.substring(1, 25);
 
@@ -1625,7 +1625,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
 
-		String revId = String.valueOf(listRevisionI1.get(2));
+		String revId = String.valueOf(listRevisionI1.get(1));
 
 		String patchId = "/api/methodologyItem/revision/" + revId.substring(1, 25);
 
@@ -1711,7 +1711,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
 
-		String revId = String.valueOf(listRevisionI1.get(2));
+		String revId = String.valueOf(listRevisionI1.get(1));
 
 		String patchId = "/api/methodologyItem/revision/" + revId.substring(1, 25);
 
@@ -1809,7 +1809,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
 
-		String revId = String.valueOf(listRevisionI1.get(2));
+		String revId = String.valueOf(listRevisionI1.get(1));
 		/**
 		 * FETCHING THE REVISION ID
 		 */
@@ -1886,7 +1886,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
 
-		String revId = String.valueOf(listRevisionI1.get(2));
+		String revId = String.valueOf(listRevisionI1.get(1));
 
 		String patchId = "/api/methodologyItem/revision/" + revId.substring(1, 25);
 
@@ -1965,7 +1965,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
 
-		String revId = String.valueOf(listRevisionI1.get(2));
+		String revId = String.valueOf(listRevisionI1.get(1));
 
 		String patchId = "/api/methodologyItem/revision/" + revId.substring(1, 25);
 
@@ -2040,7 +2040,7 @@ public class Restassured_Automation_ItemSelectQuestion {
 
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
 
-		String revId = String.valueOf(listRevisionI1.get(2));
+		String revId = String.valueOf(listRevisionI1.get(1));
 
 		String patchId = "/api/methodologyItem/revision/" + revId.substring(1, 25);
 

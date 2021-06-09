@@ -12,21 +12,7 @@
       </run>
     </groups>
     <classes>
-      <class name="restassured.automation.testcases.Restassured_Automation_Organizations"/>
-      <class name="restassured.automation.testcases.Restassured_Automation_OrgRoles"/>
       <class name="restassured.automation.testcases.Restassured_Automation_EngagementType"/>
-      <class name="restassured.automation.testcases.Restassured_Automation_Methodology"/>
-      <class name="restassured.automation.testcases.Restassured_Automation_MethodologyItemFinancialStatment"/>
-      <class name="restassured.automation.testcases.Restassured_Automation_MethodologyItemFsliFilters"/>
-      <class name="restassured.automation.testcases.Restassured_Automation_ItemSelectQuestion"/>
-      <class name="restassured.automation.testcases.Restassured_Automation_MethodologItem"/>
-      <class name="restassured.automation.testcases.Restassured_Automation_MethodologyItemRelations"/>
-      <class name="restassured.automation.testcases.Restassured_Automation_Rules"/>
-      <class name="restassured.automation.testcases.Restassured_Automation_PublishEngagementType"/>
-      <class name="restassured.automation.testcases.Restassured_Automation_Publish"/>
-      <class name="restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles"/>
-      <class name="restassured.automation.testcases.Restassured_Automation_ProcedureGroups"/>
-      <class name="restassured.automation.testcases.Restassured_Automation_FinancialStatements"/>
     </classes>
   </test> <!-- Test -->
   <test name="Test(failed)">
@@ -37,79 +23,6 @@
       </run>
     </groups>
     <classes>
-      <class name="restassured.automation.testcases.Restassured_Automation_MethodologyItemFsliFilters">
-        <methods>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- restassured.automation.testcases.Restassured_Automation_MethodologyItemFsliFilters -->
-      <class name="restassured.automation.testcases.Restassured_Automation_Methodology">
-        <methods>
-          <include name="Methodology_DeleteAnCandidateRevisionWithStatus_200"/>
-          <include name="Methodology_GetCandidateRevisionWithStatus_200"/>
-          <include name="Methodology_PostAddANewMethodology_status409"/>
-          <include name="Methodology_DeleteAnCandidateRevisionWithStatus_404"/>
-          <include name="Methodology_InheritAMethodology400"/>
-          <include name="Methodology_CreateANewCandidateRevisionWithStatus_200"/>
-          <include name="Methodology_InheritAMethodology200"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- restassured.automation.testcases.Restassured_Automation_Methodology -->
-      <class name="restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles">
-        <methods>
-          <include name="setup"/>
-          <include name="EngagementTeamRoles_PatchUpdateAnEngagementRoleForAMethodology_status404"/>
-          <include name="EngagementTeamRoles_PatchUpdateAnEngagementRoleForAnOrganization_status409"/>
-          <include name="EngagementTeamRoles_PatchUpdateAnEngagementRoleForAMethodology_status204"/>
-          <include name="EngagementTeamRoles_DeleteAnEngagementRoleForAMethodology_status204"/>
-          <include name="EngagementTeamRoles_DeleteAnEngagementRoleForAMethodology_status400"/>
-          <include name="EngagementTeamRoles_PatchUpdateAnEngagementRoleForAMethodology_status400"/>
-          <include name="EngagementTeamRoles_DeleteAnEngagementRoleForAMethodology_status404"/>
-          <include name="EngagementTeamRoles_PostCreateAnEngagementRoleForAMethodology_status409"/>
-          <include name="EngagementTeamRoles_PostCreateAnEngagementRoleForAnOrganization_status404"/>
-          <include name="EngagementTeamRoles_PostCreateAnEngagementRoleForAnOrganization_status409"/>
-          <include name="EngagementTeamRoles_PatchUpdateAnEngagementRoleForAnOrganization_status204"/>
-          <include name="EngagementTeamRoles_PatchUpdateAnEngagementRoleForAnOrganization_status400"/>
-          <include name="EngagementTeamRoles_PatchUpdateAnEngagementRoleForAMethodology_status409"/>
-          <include name="EngagementTeamRoles_PostCreateAnEngagementRoleForAMethodology_status200"/>
-          <include name="EngagementTeamRoles_DeleteDeleteAnEngagementRoleForAnOrganization_status404"/>
-          <include name="EngagementTeamRoles_DeleteDeleteAnEngagementRoleForAnOrganization_status204"/>
-          <include name="EngagementTeamRoles_PatchUpdateAnEngagementRoleForAnOrganization_status404"/>
-        </methods>
-      </class> <!-- restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles -->
-      <class name="restassured.automation.testcases.Restassured_Automation_ItemSelectQuestion">
-        <methods>
-          <include name="ItemSelectQuestion_UpdateASelectQuestionItemOptionGroup_400"/>
-          <include name="setup"/>
-          <include name="ItemSelectQuestion_GetOptionsForASpecificItemSelectQuestionMethodologyItem_status200"/>
-          <include name="ItemSelectQuestion_UpdateASelectQuestionItemOptionGroup_204"/>
-          <include name="ItemSelectQuestion_PutSafelyInitializeNewOptionsForASelectQuestion_status200"/>
-          <include name="ItemSelectQuestion_PutSafelyInitializeNewOptionsForASelectQuestion_status400"/>
-          <include name="ItemSelectQuestion_PatchUpdateASelectQuestionItemOption_status400"/>
-          <include name="ItemSelectQuestion_CreateANewOptionGroupForAnItemSelectQuestionStatus_400"/>
-          <include name="ItemSelectQuestion_MoveASelectQuestionFromItemOption_status200"/>
-          <include name="ItemSelectQuestion_CreateANewOptionGroupForAnItemSelectQuestionStatus_200"/>
-          <include name="ItemSelectQuestion_MoveASelectQuestionFromItemOption_status400"/>
-          <include name="ItemSelectQuestion_CreateANewOptionGroupForAnItemSelectQuestionStatus_404"/>
-          <include name="ItemSelectQuestion_DeleteAnOptionFromAnItemSelectQuestion_status200"/>
-          <include name="ItemSelectQuestion_MoveASelectQuestionFromItemOption_status404"/>
-          <include name="ItemSelectQuestion_PatchUpdateASelectQuestionItemOption_status200"/>
-          <include name="ItemSelectQuestion_PostCreateANewOptionForAnItemSelectQuestion_status400"/>
-          <include name="ItemSelectQuestion_DeleteAnOptionGroupFromAnItemSelectQuestion_400"/>
-          <include name="ItemSelectQuestion_DeleteAnOptionGroupFromAnItemSelectQuestion_204"/>
-          <include name="ItemSelectQuestion_UpdateASelectQuestionItemOptionGroup_404"/>
-          <include name="ItemSelectQuestion_DeleteAnOptionFromAnItemSelectQuestion_Status400"/>
-          <include name="ItemSelectQuestion_PostCreateANewOptionForAnItemSelectQuestion_status200"/>
-          <include name="ItemSelectQuestion_DeleteAnOptionGroupFromAnItemSelectQuestion_404"/>
-          <include name="ItemSelectQuestion_PatchUpdateASelectQuestionItemOption_status404"/>
-        </methods>
-      </class> <!-- restassured.automation.testcases.Restassured_Automation_ItemSelectQuestion -->
-      <class name="restassured.automation.testcases.Restassured_Automation_Rules">
-        <methods>
-          <include name="Rules_putUpdateANewRuleSet_status409"/>
-          <include name="Rules_deleteARuleSet_status400"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- restassured.automation.testcases.Restassured_Automation_Rules -->
       <class name="restassured.automation.testcases.Restassured_Automation_EngagementType">
         <methods>
           <include name="EngagementType_InheritAnEngagementType409"/>
@@ -119,63 +32,6 @@
           <include name="EngagementType_InheritAnEngagementType404"/>
         </methods>
       </class> <!-- restassured.automation.testcases.Restassured_Automation_EngagementType -->
-      <class name="restassured.automation.testcases.Restassured_Automation_FinancialStatements">
-        <methods>
-          <include name="FinancialStatements_createAnNewFinancialStatementsForTheStore_Status200"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- restassured.automation.testcases.Restassured_Automation_FinancialStatements -->
-      <class name="restassured.automation.testcases.Restassured_Automation_ProcedureGroups">
-        <methods>
-          <include name="ProcedureGroup_PostCreateAProcedureGroup_status409"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- restassured.automation.testcases.Restassured_Automation_ProcedureGroups -->
-      <class name="restassured.automation.testcases.Restassured_Automation_PublishEngagementType">
-        <methods>
-          <include name="Publish_PostPublishInherit_status200"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- restassured.automation.testcases.Restassured_Automation_PublishEngagementType -->
-      <class name="restassured.automation.testcases.Restassured_Automation_MethodologyItemRelations">
-        <methods>
-          <include name="MethodologyItemRelation_ListOfAllMethodologyRelation_status400"/>
-          <include name="MethodologyItemRelation_DeleteAnMethodologyRelation_status400"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- restassured.automation.testcases.Restassured_Automation_MethodologyItemRelations -->
-      <class name="restassured.automation.testcases.Restassured_Automation_MethodologItem">
-        <methods>
-          <include name="MethodologyItem_GetAllMethodologyItemsForARevision_status400"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- restassured.automation.testcases.Restassured_Automation_MethodologItem -->
-      <class name="restassured.automation.testcases.Restassured_Automation_OrgRoles">
-        <methods>
-          <include name="OrganisationRoles_GetSuperUserFuntionGetAListOfAllPremissionForAUser_status200"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- restassured.automation.testcases.Restassured_Automation_OrgRoles -->
-      <class name="restassured.automation.testcases.Restassured_Automation_MethodologyItemFinancialStatment">
-        <methods>
-          <include name="setup"/>
-          <include name="MethodologyItem_FinancialStatement_CreateANewFinancialStatementForAWorkProgramStatus_200"/>
-        </methods>
-      </class> <!-- restassured.automation.testcases.Restassured_Automation_MethodologyItemFinancialStatment -->
-      <class name="restassured.automation.testcases.Restassured_Automation_Organizations">
-        <methods>
-          <include name="Organisation_RemovePublishedStoreMethodologyFromOrganizationsHiddenMethodologyList"/>
-          <include name="Organisation_CreatePublishedStoreMethodologyFromOrganizationsHiddenMethodologyList"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- restassured.automation.testcases.Restassured_Automation_Organizations -->
-      <class name="restassured.automation.testcases.Restassured_Automation_Publish">
-        <methods>
-          <include name="Publish_PostPublish_status200"/>
-          <include name="setup"/>
-          <include name="Publish_PostValidate_status200"/>
-        </methods>
-      </class> <!-- restassured.automation.testcases.Restassured_Automation_Publish -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

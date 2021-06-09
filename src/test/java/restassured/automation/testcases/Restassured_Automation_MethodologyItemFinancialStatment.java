@@ -103,7 +103,7 @@ public class Restassured_Automation_MethodologyItemFinancialStatment {
 		 */
 
 		Map<String, String> data6 = new HashMap<String, String>();
-		data6.put("title", post.getProperty("postWorkProgramTitle") + getRandomAlphaNum());
+		data6.put("title", post.getProperty("postWorkProgramTitle") +allUtils.getRandomNumber(1, 30));
 		data6.put("parentId", parentId);
 		data6.put("index", post.getProperty("postMethodologyItemIndex"));
 		data6.put("itemType", post.getProperty("postMethodologyItemType"));
