@@ -17,9 +17,12 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.Status;
+
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import restassured.automation.Pojo.User_Pojo;
+import restassured.automation.listeners.ExtentTestManager;
 import restassured.automation.utils.Restassured_Automation_Utils;
 import restassured.automation.utils.read_Configuration_Propertites;
 
@@ -71,6 +74,12 @@ public class Restassured_Automation_FinancialStatements {
 		Response getFinancialStatementRes = allUtils.get_URL_Without_Params(URL, AuthorizationKey, URI);
 		getFinancialStatementRes.prettyPrint();
 		Assert.assertEquals(getFinancialStatementRes.getStatusCode(), 200);
+		/**
+		 * Extent report generation
+		 */
+		ExtentTestManager.statusLogMessage(getFinancialStatementRes.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO, getFinancialStatementRes.asString());
+		allUtils.validate_HTTPStrictTransportSecurity(getFinancialStatementRes);
 
 	}
 
@@ -96,6 +105,13 @@ public class Restassured_Automation_FinancialStatements {
 		Response getFinancialStatementRes = allUtils.post_URLPOJO(URL, AuthorizationKey, URI, createFinStatement);
 		getFinancialStatementRes.prettyPrint();
 		Assert.assertEquals(getFinancialStatementRes.getStatusCode(), 200);
+		/**
+		 * Extent report generation
+		 */
+		ExtentTestManager.statusLogMessage(getFinancialStatementRes.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO, getFinancialStatementRes.asString());
+		allUtils.validate_HTTPStrictTransportSecurity(getFinancialStatementRes);
+
 
 	}
 
@@ -121,6 +137,13 @@ public class Restassured_Automation_FinancialStatements {
 		Response getFinancialStatementRes = allUtils.post_URLPOJO(URL, AuthorizationKey, URI, createFinStatement);
 		getFinancialStatementRes.prettyPrint();
 		Assert.assertEquals(getFinancialStatementRes.getStatusCode(), 400);
+		/**
+		 * Extent report generation
+		 */
+		ExtentTestManager.statusLogMessage(getFinancialStatementRes.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO, getFinancialStatementRes.asString());
+		allUtils.validate_HTTPStrictTransportSecurity(getFinancialStatementRes);
+
 
 	}
 
@@ -152,6 +175,13 @@ public class Restassured_Automation_FinancialStatements {
 		Response postFinancialStatmentsRes = allUtils.post_URLPOJO(URL, AuthorizationKey, URI, createFinStatement);
 		postFinancialStatmentsRes.prettyPrint();
 		Assert.assertEquals(postFinancialStatmentsRes.getStatusCode(), 409);
+		/**
+		 * Extent report generation
+		 */
+		ExtentTestManager.statusLogMessage(postFinancialStatmentsRes.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO, postFinancialStatmentsRes.asString());
+		allUtils.validate_HTTPStrictTransportSecurity(postFinancialStatmentsRes);
+
 
 	}
 
@@ -182,6 +212,14 @@ public class Restassured_Automation_FinancialStatements {
 		Response getResponse = allUtils.get_URL_Without_Params(URL, AuthorizationKey, getURI);
 		getResponse.prettyPrint();
 		Assert.assertEquals(getResponse.getStatusCode(), 200);
+		/**
+		 * Extent report generation
+		 */
+		ExtentTestManager.statusLogMessage(getResponse.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO, getResponse.asString());
+		allUtils.validate_HTTPStrictTransportSecurity(getResponse);
+
+
 	}
 
 	@Test(groups = "IntegrationTests")
@@ -217,6 +255,14 @@ public class Restassured_Automation_FinancialStatements {
 		patchLineItemsres.prettyPrint();
 
 		Assert.assertEquals(patchLineItemsres.getStatusCode(), 204);
+		/**
+		 * Extent report generation
+		 */
+		ExtentTestManager.statusLogMessage(patchLineItemsres.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO, patchLineItemsres.asString());
+		allUtils.validate_HTTPStrictTransportSecurity(patchLineItemsres);
+
+
 
 	}
 
@@ -253,6 +299,14 @@ public class Restassured_Automation_FinancialStatements {
 		patchLineItemsres.prettyPrint();
 
 		Assert.assertEquals(patchLineItemsres.getStatusCode(), 400);
+		/**
+		 * Extent report generation
+		 */
+		ExtentTestManager.statusLogMessage(patchLineItemsres.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO, patchLineItemsres.asString());
+		allUtils.validate_HTTPStrictTransportSecurity(patchLineItemsres);
+
+
 
 	}
 
@@ -291,6 +345,14 @@ public class Restassured_Automation_FinancialStatements {
 		patchLineItemsres.prettyPrint();
 
 		Assert.assertEquals(patchLineItemsres.getStatusCode(), 409);
+		/**
+		 * Extent report generation
+		 */
+		ExtentTestManager.statusLogMessage(patchLineItemsres.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO, patchLineItemsres.asString());
+		allUtils.validate_HTTPStrictTransportSecurity(patchLineItemsres);
+
+
 
 	}
 
@@ -327,6 +389,14 @@ public class Restassured_Automation_FinancialStatements {
 		patchLineItemsres.prettyPrint();
 
 		Assert.assertEquals(patchLineItemsres.getStatusCode(), 404);
+		/**
+		 * Extent report generation
+		 */
+		ExtentTestManager.statusLogMessage(patchLineItemsres.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO, patchLineItemsres.asString());
+		allUtils.validate_HTTPStrictTransportSecurity(patchLineItemsres);
+
+
 
 	}
 
@@ -365,6 +435,14 @@ public class Restassured_Automation_FinancialStatements {
 		patchLineItemsres.prettyPrint();
 
 		Assert.assertEquals(patchLineItemsres.getStatusCode(), 404);
+		/**
+		 * Extent report generation
+		 */
+		ExtentTestManager.statusLogMessage(patchLineItemsres.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO, patchLineItemsres.asString());
+		allUtils.validate_HTTPStrictTransportSecurity(patchLineItemsres);
+
+
 
 	}
 
@@ -407,6 +485,14 @@ public class Restassured_Automation_FinancialStatements {
 		patchLineItemsres.prettyPrint();
 
 		Assert.assertEquals(patchLineItemsres.getStatusCode(), 204);
+		/**
+		 * Extent report generation
+		 */
+		ExtentTestManager.statusLogMessage(patchLineItemsres.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO, patchLineItemsres.asString());
+		allUtils.validate_HTTPStrictTransportSecurity(patchLineItemsres);
+
+
 
 	}
 	
@@ -465,6 +551,14 @@ public class Restassured_Automation_FinancialStatements {
 		String patchRevision=po.UpdateFinancialStatmentForRevision(map1);
 		Response patchRevisionRes=allUtils.patch_URLPOJO(URL, AuthorizationKey, patchURI, patchRevision);
 		Assert.assertEquals(patchRevisionRes.getStatusCode(),400);
+		/**
+		 * Extent report generation
+		 */
+		ExtentTestManager.statusLogMessage(patchRevisionRes.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO, patchRevisionRes.asString());
+		allUtils.validate_HTTPStrictTransportSecurity(patchRevisionRes);
+
+
 		
 	}
 

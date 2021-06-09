@@ -52,7 +52,7 @@ public class Restassured_Automation_ETRolesUser {
 
 	}
 
-	@Test(groups = "IntegrationTests")
+	//@Test(groups = "IntegrationTests")
 	public void PortalRoles_GetQueryForUsers_Status200() throws IOException {
 
 		Restassured_Automation_Utils rolesUtils = new Restassured_Automation_Utils();
@@ -77,7 +77,7 @@ public class Restassured_Automation_ETRolesUser {
 
 	}
 
-	@Test(groups = "IntegrationTests")
+	//@Test(groups = "IntegrationTests")
 	public void PortalRoles_GetQueryForUsers_Status400() throws IOException {
 
 		Restassured_Automation_Utils rolesUtils = new Restassured_Automation_Utils();

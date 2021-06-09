@@ -81,7 +81,7 @@ public class Restassured_Automation_ETEngagementTeam {
 		allEnagementRes.prettyPrint();
 		JsonPath allEngagmentJson = allEnagementRes.jsonPath();
 		engagementId = allEngagmentJson.get("id");
-		String id = engagementId.get(1);
+		String id = engagementId.get(0);
 
 		String getEngagementURI = "/api/" + post.getProperty("memberFirmSlug") + "/engagements/" + id + "/team/roles";
 		Response myPermissionResponse = rolesUtils.get_URL_Without_Params(URL, AuthorizationKey, getEngagementURI);
@@ -176,7 +176,7 @@ public class Restassured_Automation_ETEngagementTeam {
 		allEnagementRes.prettyPrint();
 		JsonPath allEngagmentJson = allEnagementRes.jsonPath();
 		engagementId = allEngagmentJson.get("id");
-		String id = engagementId.get(1);
+		String id = engagementId.get(0);
 		/**
 		 * Fetching role id
 		 */
@@ -247,7 +247,7 @@ public class Restassured_Automation_ETEngagementTeam {
 		allEnagementRes.prettyPrint();
 		JsonPath allEngagmentJson = allEnagementRes.jsonPath();
 		engagementId = allEngagmentJson.get("id");
-		String id = engagementId.get(1);
+		String id = engagementId.get(0);
 		/**
 		 * Fetching role id
 		 */

@@ -81,7 +81,7 @@ public class Restassured_Automation_ETResponses {
 		Map<String,String>map=new HashedMap<String,String>();
 		map.put("procedure",procedure);
 		map.put("response",response);
-		//map.put("row", row);
+		map.put("row", row);
 		ETUser_Pojo po=new ETUser_Pojo();
 		String body=po.UpdateResponses(map);
 		

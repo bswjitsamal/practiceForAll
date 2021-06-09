@@ -55,7 +55,7 @@ public class Restassured_Automation_ETReviewNotes {
 	}
 
 	@Test(groups = "IntegrationTests")
-	public void ETMethodology_GetAllReviewNotes_Status200() throws IOException {
+	public void ETReviewNotes_GetAllReviewNotes_Status200() throws IOException {
 		Restassured_Automation_Utils rolesUtils = new Restassured_Automation_Utils();
 
 		post = read_Configuration_Propertites.loadproperty("Configuration");
@@ -79,8 +79,8 @@ public class Restassured_Automation_ETReviewNotes {
 
 	}
 
-	@Test(groups = "IntegrationTests")
-	public void ETMethodology_CreateAnNewReviewNotes_Status200() throws IOException {
+	@Test(groups = "IntegrationTests",priority=0)
+	public void ETReviewNotes_CreateAnNewReviewNotes_Status200() throws IOException {
 		Restassured_Automation_Utils rolesUtils = new Restassured_Automation_Utils();
 
 		post = read_Configuration_Propertites.loadproperty("Configuration");
@@ -117,7 +117,7 @@ public class Restassured_Automation_ETReviewNotes {
 	}
 
 	@Test(groups = "IntegrationTests")
-	public void ETMethodology_GetReviewNotesByKey_Status200() throws IOException {
+	public void ETReviewNotes_GetReviewNotesByKey_Status200() throws IOException {
 		Restassured_Automation_Utils rolesUtils = new Restassured_Automation_Utils();
 
 		post = read_Configuration_Propertites.loadproperty("Configuration");
@@ -149,8 +149,8 @@ public class Restassured_Automation_ETReviewNotes {
 
 	}
 
-	@Test(groups = "IntegrationTests")
-	public void ETMethodology_GetSpecificReviewNotes_Status200() throws IOException {
+	@Test(groups = "IntegrationTests", priority=1)
+	public void ETReviewNotes_GetSpecificReviewNotes_Status200() throws IOException {
 		Restassured_Automation_Utils rolesUtils = new Restassured_Automation_Utils();
 
 		post = read_Configuration_Propertites.loadproperty("Configuration");
@@ -183,8 +183,8 @@ public class Restassured_Automation_ETReviewNotes {
 
 	}
 
-	@Test(groups = "IntegrationTests")
-	public void ETMethodology_UpdateSpecificReviewNotes_Status200() throws IOException {
+	@Test(groups = "IntegrationTests",priority=2)
+	public void ETReviewNotes_UpdateSpecificReviewNotes_Status200() throws IOException {
 		Restassured_Automation_Utils rolesUtils = new Restassured_Automation_Utils();
 
 		post = read_Configuration_Propertites.loadproperty("Configuration");
@@ -208,7 +208,7 @@ public class Restassured_Automation_ETReviewNotes {
 		String putSpecficReviewUri = "/api/" + post.getProperty("memberFirmSlug") + "/reviewNotes/" + id + "/"
 				+ reviewId;
 		Map<String,String>map=new HashMap<String, String>();
-		map.put("notesText",post.getProperty("putETReviewNotesText")+getRandomAlphaNum());
+		map.put("notesText",post.getProperty("putETReviewNotesText")+rolesUtils.getRandomNumber(1,30));
 		ETUser_Pojo po=new ETUser_Pojo();
 		String putReviewNotes=po.createReviewNotes(map);
 		
@@ -223,8 +223,8 @@ public class Restassured_Automation_ETReviewNotes {
 		
 	}
 	
-	@Test(groups = "IntegrationTests")
-	public void ETMethodology_DeleteSpecificReviewNotes_Status200() throws IOException {
+	@Test(groups = "IntegrationTests",priority=3)
+	public void ETReviewNotes_DeleteSpecificReviewNotes_Status200() throws IOException {
 		Restassured_Automation_Utils rolesUtils = new Restassured_Automation_Utils();
 
 		post = read_Configuration_Propertites.loadproperty("Configuration");

@@ -15,10 +15,13 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.Status;
+
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import restassured.automation.Pojo.ETUser_Pojo;
 import restassured.automation.Pojo.User_Pojo;
+import restassured.automation.listeners.ExtentTestManager;
 import restassured.automation.utils.Restassured_Automation_Utils;
 import restassured.automation.utils.read_Configuration_Propertites;
 
@@ -79,7 +82,12 @@ public class Restassured_Automation_ETFinancialStatement {
 		Response postResponse=rolesUtils.post_URLPOJO(URL, AuthorizationKey, postURI, createLineItem);
 		postResponse.prettyPrint();
 		Assert.assertEquals(postResponse.getStatusCode(),204);
-		Assert.assertEquals(myPermissionResponse.getStatusCode(), 200);
+		
+		/** 
+		 * Extent Report Generation
+		 */
+		ExtentTestManager.statusLogMessage(postResponse.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,postResponse.asString());
 		
 	}
 	@Test(groups = "IntegrationTests")
@@ -130,6 +138,11 @@ public class Restassured_Automation_ETFinancialStatement {
 				
 		Response deleteRes=rolesUtils.delete(URL, AuthorizationKey, deleteUri);
 		Assert.assertEquals(deleteRes.getStatusCode(),204);
+		/** 
+		 * Extent Report Generation
+		 */
+		ExtentTestManager.statusLogMessage(deleteRes.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,deleteRes.asString());
 		
 	}
 	
@@ -183,6 +196,11 @@ public class Restassured_Automation_ETFinancialStatement {
 		String putApi=po.createFinancialStatement(map1);
 		Response putResponse=rolesUtils.put_URLPOJO(URL, AuthorizationKey, PutUri, putApi);
 		Assert.assertEquals(putResponse.getStatusCode(),204);
+		/** 
+		 * Extent Report Generation
+		 */
+		ExtentTestManager.statusLogMessage(putResponse.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,putResponse.asString());
 		
 	}
 	@Test(groups = "IntegrationTests")
@@ -236,6 +254,11 @@ public class Restassured_Automation_ETFinancialStatement {
 		String patchApi=po.createFinancialStatement(map1);
 		Response patchRes=rolesUtils.patch_URLPOJO(URL, AuthorizationKey, PutUri,patchApi);
 		Assert.assertEquals(patchRes.getStatusCode(),204);
+		/** 
+		 * Extent Report Generation
+		 */
+		ExtentTestManager.statusLogMessage(patchRes.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO,patchRes.asString());
 		
 	}
 }
