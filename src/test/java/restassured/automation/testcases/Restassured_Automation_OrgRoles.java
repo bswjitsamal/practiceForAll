@@ -84,7 +84,7 @@ public class Restassured_Automation_OrgRoles {
 		 * Get the resourceId
 		 */
 		Response getResourceId = OrganizationsGet.get_URL_QueryParams(URL, AuthorizationKey, "/api/org/users",
-				"Organization", listOrgId.get(7));
+				"Organization", listOrgId.get(3));
 		getResourceId.prettyPrint();
 
 		JsonPath jsonPathEvaluator2 = getResourceId.jsonPath();
@@ -418,7 +418,7 @@ public class Restassured_Automation_OrgRoles {
 	}
 
 	@Test(groups = "IntegrationTests")
-	public void OrganisationRoles_SUPER_USE_ENDPOINT_UpdateARolePermissionWithStatus_200() throws IOException {
+	public void OrganisationRoles_SUPER_USE_ENDPOINT_UpdateARolePermissionWithStatus_204() throws IOException {
 		Properties post = read_Configuration_Propertites.loadproperty("Configuration");
 		Restassured_Automation_Utils getMethodologyById = new Restassured_Automation_Utils();
 		Map<String, String> map = new HashMap<String, String>();

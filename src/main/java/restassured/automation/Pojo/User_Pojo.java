@@ -1,5 +1,6 @@
 package restassured.automation.Pojo;
 
+import java.util.List;
 import java.util.Map;
 
 import org.json.JSONObject;
@@ -163,6 +164,16 @@ public class User_Pojo {
 		return Josnbody.toJson(upDateId);
 
 	}
+	public String createCandidate(String id,String id1) {
+
+		MethodologyItem_Pojo upDateId = new MethodologyItem_Pojo();
+
+		upDateId.setItemIds(new String[] {id,id1 });
+
+		Gson Josnbody = new Gson();
+		return Josnbody.toJson(upDateId);
+
+	}
 
 	public String newRelationAdd(Map<String, String> data) {
 
@@ -237,6 +248,7 @@ public class User_Pojo {
 
 		MethodologyItem_Pojo upDateId = new MethodologyItem_Pojo();
 
+		upDateId.setDisplayAs(data.get("displayAs"));
 		upDateId.setWorkProgramType(data.get("workProgramType"));
 		upDateId.setTailoring(data.get("tailoring"));
 		upDateId.setVisibility(data.get("visibility"));

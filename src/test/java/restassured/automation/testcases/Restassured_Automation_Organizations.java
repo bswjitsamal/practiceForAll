@@ -247,8 +247,8 @@ public class Restassured_Automation_Organizations {
 		String OrganisationId=listOrgId.get(7);
 		System.out.println("Organisation Id----->"+OrganisationId);
 
-		Response getMethodologyRes = OrganizationsGet.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", "600f549bcc7ffedb2877b691");
+		Response getMethodologyRes = OrganizationsGet.get_URL_MultiQueryParams(URL, AuthorizationKey, "/api/methodology",
+				"Organization", "600f549bcc7ffedb2877b691","PublishedOnly","true");
 		getMethodologyRes.prettyPrint();
 		JsonPath orgJson=getMethodologyRes.jsonPath();
 		listMethodologyId=orgJson.get("id");
@@ -302,8 +302,8 @@ public class Restassured_Automation_Organizations {
 		String OrganisationId=listOrgId.get(7);
 		System.out.println("Organisation Id----->"+OrganisationId);
 
-		Response getMethodologyRes = OrganizationsGet.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", "600f549bcc7ffedb2877b691");
+		Response getMethodologyRes = OrganizationsGet.get_URL_MultiQueryParams(URL, AuthorizationKey, "/api/methodology",
+				"Organization", "600f549bcc7ffedb2877b691","PublishedOnly","true");
 		getMethodologyRes.prettyPrint();
 		JsonPath orgJson=getMethodologyRes.jsonPath();
 		listMethodologyId=orgJson.get("id");

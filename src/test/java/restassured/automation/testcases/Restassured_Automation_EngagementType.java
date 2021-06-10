@@ -152,9 +152,26 @@ public class Restassured_Automation_EngagementType {
 		post = read_Configuration_Propertites.loadproperty("Configuration");
 		allUtils = new Restassured_Automation_Utils();
 
+		Response OrganizationsDetails = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/org");
+		JsonPath jsonPathEvaluator = OrganizationsDetails.jsonPath();
+		listOrdId = jsonPathEvaluator.get("id");
+		OrganizationsDetails.prettyPrint();
+
+		/**
+		 * GETTING THE REVISION ID
+		 */
+
+		Response getEngagementTypeRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/engagementType",
+				"Organization", listOrdId.get(3));
+		getEngagementTypeRes.prettyPrint();
+		JsonPath jpath=getEngagementTypeRes.jsonPath();
+		
+		listTitle=jpath.get("title");
+		String title=listTitle.get(0);
+		
 		Map<String, String> map = new HashMap<String, String>();
-		map.put("title", post.getProperty("postEngagementTypeTitle"));
-		map.put("organization", post.getProperty("postEngagementTypeOrganization"));
+		map.put("title", title);
+		map.put("organization",listOrdId.get(3));
 		User_Pojo en = new User_Pojo();
 		String createEngagement = en.Create_Engagement(map);
 		Response postEngagementType = allUtils.post_URLPOJO(URL, AuthorizationKey, "/api/engagementType",

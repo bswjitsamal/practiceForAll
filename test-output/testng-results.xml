@@ -2,24 +2,32 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="5544" started-at="2021-06-09T12:26:26Z" finished-at="2021-06-09T12:26:32Z">
+  <suite name="Default suite" duration-ms="39558" started-at="2021-06-10T07:50:21Z" finished-at="2021-06-10T07:51:00Z">
     <groups>
       <group name="IntegrationTests">
-        <method signature="Restassured_Automation_Methodology.Methodology_PostAddANewMethodology_status409()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_Methodology@6bf256fa]" name="Methodology_PostAddANewMethodology_status409" class="restassured.automation.testcases.Restassured_Automation_Methodology"/>
+        <method signature="Restassured_Automation_ProcedureGroups.ProcedureGroup_PostCreateAProcedureGroup_status409()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_ProcedureGroups@17550481]" name="ProcedureGroup_PostCreateAProcedureGroup_status409" class="restassured.automation.testcases.Restassured_Automation_ProcedureGroups"/>
       </group> <!-- IntegrationTests -->
     </groups>
-    <test name="Default test" duration-ms="5544" started-at="2021-06-09T12:26:26Z" finished-at="2021-06-09T12:26:32Z">
-      <class name="restassured.automation.testcases.Restassured_Automation_Methodology">
-        <test-method status="PASS" signature="setup()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_Methodology@6bf256fa]" name="setup" is-config="true" duration-ms="59" started-at="2021-06-09T17:56:26Z" finished-at="2021-06-09T17:56:27Z">
+    <test name="Default test" duration-ms="39558" started-at="2021-06-10T07:50:21Z" finished-at="2021-06-10T07:51:00Z">
+      <class name="restassured.automation.testcases.Restassured_Automation_ProcedureGroups">
+        <test-method status="PASS" signature="setup()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_ProcedureGroups@17550481]" name="setup" is-config="true" duration-ms="73" started-at="2021-06-10T13:20:21Z" finished-at="2021-06-10T13:20:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="FAIL" signature="Methodology_PostAddANewMethodology_status409()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_Methodology@6bf256fa]" name="Methodology_PostAddANewMethodology_status409" duration-ms="5477" started-at="2021-06-09T17:56:27Z" finished-at="2021-06-09T17:56:32Z">
-          <exception class="java.lang.NullPointerException">
+        <test-method status="FAIL" signature="ProcedureGroup_PostCreateAProcedureGroup_status409()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_ProcedureGroups@17550481]" name="ProcedureGroup_PostCreateAProcedureGroup_status409" duration-ms="39469" started-at="2021-06-10T13:20:21Z" finished-at="2021-06-10T13:21:00Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [409] but found [200]]]>
+            </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at restassured.automation.listeners.ExtentTestManager.statusLogMessage(ExtentTestManager.java:51)
-	at restassured.automation.testcases.Restassured_Automation_Methodology.Methodology_PostAddANewMethodology_status409(Restassured_Automation_Methodology.java:391)
+              <![CDATA[java.lang.AssertionError: expected [409] but found [200]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at restassured.automation.testcases.Restassured_Automation_ProcedureGroups.ProcedureGroup_PostCreateAProcedureGroup_status409(Restassured_Automation_ProcedureGroups.java:1262)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -46,11 +54,11 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Methodology_PostAddANewMethodology_status409 -->
-      </class> <!-- restassured.automation.testcases.Restassured_Automation_Methodology -->
+        </test-method> <!-- ProcedureGroup_PostCreateAProcedureGroup_status409 -->
+      </class> <!-- restassured.automation.testcases.Restassured_Automation_ProcedureGroups -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

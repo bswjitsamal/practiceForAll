@@ -30,9 +30,26 @@ public class MethodologyItem_Pojo {
 	private String filterId;
 	private String filterName;
 	private String displayAs;
+	private String[]  itemIds;
 	
 	
 	
+	public String[] getItemIds() {
+		return itemIds;
+	}
+
+	public void setItemIds(String[] itemIds) {
+		this.itemIds = itemIds;
+	}
+
+	public String getDisplayAs() {
+		return displayAs;
+	}
+
+	public void setDisplayAs(String displayAs) {
+		this.displayAs = displayAs;
+	}
+
 	public String getDisplayName() {
 		return displayName;
 	}
