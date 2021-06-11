@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Failed suite [Suite]]">
+  <listeners>
+    <listener class-name="restassured.automation.listeners.TestListeners"/>
+  </listeners>
+  <test name="Test">
+    <groups>
+      <run>
+        <include name="IntegrationTests"/>
+        <include name="EndToEnd"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="Test(failed)">
+    <groups>
+      <run>
+        <include name="IntegrationTests"/>
+        <include name="EndToEnd"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles">
+        <methods>
+          <include name="setup"/>
+          <include name="EngagementTeamRoles_PostCreateAnEngagementRoleForAMethodology_status409"/>
+          <include name="EngagementTeamRoles_PatchUpdateAnEngagementRoleForAnOrganization_status409"/>
+          <include name="EngagementTeamRoles_PatchUpdateAnEngagementRoleForAMethodology_status409"/>
+          <include name="EngagementTeamRoles_DeleteAnEngagementRoleForAMethodology_status204"/>
+          <include name="EngagementTeamRoles_DeleteAnEngagementRoleForAMethodology_status400"/>
+          <include name="EngagementTeamRoles_PatchUpdateAnEngagementRoleForAnOrganization_status404"/>
+          <include name="EngagementTeamRoles_PostCreateAnEngagementRoleForAnOrganization_status200"/>
+          <include name="EngagementTeamRoles_DeleteAnEngagementRoleForAMethodology_status404"/>
+        </methods>
+      </class> <!-- restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles -->
+    </classes>
+  </test> <!-- Test(failed) -->
+  <test name="Test(failed)">
+    <groups>
+      <run>
+        <include name="IntegrationTests"/>
+        <include name="EndToEnd"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles">
+        <methods>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="EngagementTeamRoles_PostCreateAnEngagementRoleForAMethodology_status409"/>
+          <include name="EngagementTeamRoles_PatchUpdateAnEngagementRoleForAnOrganization_status409"/>
+          <include name="EngagementTeamRoles_PatchUpdateAnEngagementRoleForAMethodology_status409"/>
+          <include name="EngagementTeamRoles_DeleteAnEngagementRoleForAMethodology_status404"/>
+        </methods>
+      </class> <!-- restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles -->
+    </classes>
+  </test> <!-- Test(failed) -->
+  <test name="Test(failed)(failed)">
+    <groups>
+      <run>
+        <include name="IntegrationTests"/>
+        <include name="EndToEnd"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles">
+        <methods>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="EngagementTeamRoles_PatchUpdateAnEngagementRoleForAnOrganization_status404"/>
+          <include name="EngagementTeamRoles_DeleteAnEngagementRoleForAMethodology_status404"/>
+        </methods>
+      </class> <!-- restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles -->
+    </classes>
+  </test> <!-- Test(failed)(failed) -->
+</suite> <!-- Failed suite [Failed suite [Suite]] -->

@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Jun 10 13:20:21 IST 2021</td>
+<td>Started on:</td><td>Fri Jun 11 20:01:17 IST 2021</td>
 </tr>
-<tr><td>Total time:</td><td>39 seconds (39558 ms)</td>
+<tr><td>Total time:</td><td>3 seconds (3172 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,15 +75,13 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='restassured.automation.testcases.Restassured_Automation_ProcedureGroups.ProcedureGroup_PostCreateAProcedureGroup_status409()'><b>ProcedureGroup_PostCreateAProcedureGroup_status409</b><br>Test class: restassured.automation.testcases.Restassured_Automation_ProcedureGroups</td>
-<td><div><pre>java.lang.AssertionError: expected [409] but found [200]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:513)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
-	at org.testng.Assert.assertEquals(Assert.java:116)
-	at org.testng.Assert.assertEquals(Assert.java:389)
-	at org.testng.Assert.assertEquals(Assert.java:399)
-	at restassured.automation.testcases.Restassured_Automation_ProcedureGroups.ProcedureGroup_PostCreateAProcedureGroup_status409(Restassured_Automation_ProcedureGroups.java:1262)
+<td title='restassured.automation.testcases.Restassured_Automation_Rules.Rules_putUpdateANewRuleSet_status400()'><b>Rules_putUpdateANewRuleSet_status400</b><br>Test class: restassured.automation.testcases.Restassured_Automation_Rules</td>
+<td><div><pre>io.restassured.path.json.exception.JsonPathException: Failed to parse the JSON document
+	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1002)
+	at io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:967)
+	at io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:1047)
+	at io.restassured.path.json.JsonPath.get(JsonPath.java:202)
+	at restassured.automation.testcases.Restassured_Automation_Rules.Rules_putUpdateANewRuleSet_status400(Restassured_Automation_Rules.java:1476)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -108,15 +106,27 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1051453514", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1051453514'><pre>java.lang.AssertionError: expected [409] but found [200]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:513)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
-	at org.testng.Assert.assertEquals(Assert.java:116)
-	at org.testng.Assert.assertEquals(Assert.java:389)
-	at org.testng.Assert.assertEquals(Assert.java:399)
-	at restassured.automation.testcases.Restassured_Automation_ProcedureGroups.ProcedureGroup_PostCreateAProcedureGroup_status409(Restassured_Automation_ProcedureGroups.java:1262)
+Caused by: java.lang.IllegalArgumentException: The JSON input text should neither be null nor empty.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:80)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:237)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:249)
+	at io.restassured.internal.path.json.ConfigurableJsonSlurper.parseText(ConfigurableJsonSlurper.groovy:80)
+	at io.restassured.path.json.JsonPath$4$1.method(JsonPath.java:965)
+	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1000)
+	... 28 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace1482748887", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1482748887'><pre>io.restassured.path.json.exception.JsonPathException: Failed to parse the JSON document
+	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1002)
+	at io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:967)
+	at io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:1047)
+	at io.restassured.path.json.JsonPath.get(JsonPath.java:202)
+	at restassured.automation.testcases.Restassured_Automation_Rules.Rules_putUpdateANewRuleSet_status400(Restassured_Automation_Rules.java:1476)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -141,9 +151,23 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+Caused by: java.lang.IllegalArgumentException: The JSON input text should neither be null nor empty.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:80)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:237)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:249)
+	at io.restassured.internal.path.json.ConfigurableJsonSlurper.parseText(ConfigurableJsonSlurper.groovy:80)
+	at io.restassured.path.json.JsonPath$4$1.method(JsonPath.java:965)
+	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1000)
+	... 28 more
 </pre></div></td>
-<td>39</td>
-<td>restassured.automation.testcases.Restassured_Automation_ProcedureGroups@17550481</td></tr>
+<td>3</td>
+<td>restassured.automation.testcases.Restassured_Automation_Rules@17550481</td></tr>
 </table><p>
 </body>
 </html>

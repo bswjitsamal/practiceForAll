@@ -19,8 +19,9 @@
  
 
           
-			<class
-				name="restassured.automation.testcases.Restassured_Automation_EngagementType" />
+		
+				<class
+				name="restassured.automation.testcases.Restassured_Automation_Rules" />
 			
 		</classes>
 	</test> <!-- Test -->

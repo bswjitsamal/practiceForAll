@@ -1719,9 +1719,6 @@ public class Restassured_Automation_ItemSelectQuestion {
 
 		Response getEngagementTypeRes = getEngagementType.get_URL_Without_Params(URL, AuthorizationKey, patchId);
 		getEngagementTypeRes.prettyPrint();
-		JsonPath methJson = getEngagementTypeRes.jsonPath();
-		listMethodologyId = methJson.get("methodologyItemId");
-		String mid = listMethodologyId.get(0);
 		List<String> s = getEngagementTypeRes.body().path("options");
 
 		String s1 = getEngagementTypeRes.path("find { it.renderAsSelect == false }.methodologyItemId");
@@ -1762,11 +1759,10 @@ public class Restassured_Automation_ItemSelectQuestion {
 		 * Delete the option group
 		 */
 
-		String patchId5 = "/api/methodologyItem/revision/" + revId.substring(1, 25) + "/itemSelectQuestion/" + mid
-				+ "/optionGroup/" + optId;
+		String patchId5 = "/api/methodologyItem/revision/" + revId.substring(1, 25) + "/itemSelectQuestion/" + s1
+				+ "/optionGroup/" + optionGrpId;
 		Response optionGroupRes1 = getEngagementType.delete(URL, AuthorizationKey, patchId5);
 		Response optionGroupRes = getEngagementType.delete(URL, AuthorizationKey, patchId5);
-
 		optionGroupRes.prettyPrint();
 		Assert.assertEquals(optionGroupRes.getStatusCode(), 400);
 		/**

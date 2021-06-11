@@ -2,32 +2,30 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="39558" started-at="2021-06-10T07:50:21Z" finished-at="2021-06-10T07:51:00Z">
+  <suite name="Default suite" duration-ms="3172" started-at="2021-06-11T14:31:17Z" finished-at="2021-06-11T14:31:20Z">
     <groups>
       <group name="IntegrationTests">
-        <method signature="Restassured_Automation_ProcedureGroups.ProcedureGroup_PostCreateAProcedureGroup_status409()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_ProcedureGroups@17550481]" name="ProcedureGroup_PostCreateAProcedureGroup_status409" class="restassured.automation.testcases.Restassured_Automation_ProcedureGroups"/>
+        <method signature="Restassured_Automation_Rules.Rules_putUpdateANewRuleSet_status400()[pri:8, instance:restassured.automation.testcases.Restassured_Automation_Rules@17550481]" name="Rules_putUpdateANewRuleSet_status400" class="restassured.automation.testcases.Restassured_Automation_Rules"/>
       </group> <!-- IntegrationTests -->
     </groups>
-    <test name="Default test" duration-ms="39558" started-at="2021-06-10T07:50:21Z" finished-at="2021-06-10T07:51:00Z">
-      <class name="restassured.automation.testcases.Restassured_Automation_ProcedureGroups">
-        <test-method status="PASS" signature="setup()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_ProcedureGroups@17550481]" name="setup" is-config="true" duration-ms="73" started-at="2021-06-10T13:20:21Z" finished-at="2021-06-10T13:20:21Z">
+    <test name="Default test" duration-ms="3172" started-at="2021-06-11T14:31:17Z" finished-at="2021-06-11T14:31:20Z">
+      <class name="restassured.automation.testcases.Restassured_Automation_Rules">
+        <test-method status="PASS" signature="setup()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_Rules@17550481]" name="setup" is-config="true" duration-ms="56" started-at="2021-06-11T20:01:17Z" finished-at="2021-06-11T20:01:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="FAIL" signature="ProcedureGroup_PostCreateAProcedureGroup_status409()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_ProcedureGroups@17550481]" name="ProcedureGroup_PostCreateAProcedureGroup_status409" duration-ms="39469" started-at="2021-06-10T13:20:21Z" finished-at="2021-06-10T13:21:00Z">
-          <exception class="java.lang.AssertionError">
+        <test-method status="FAIL" signature="Rules_putUpdateANewRuleSet_status400()[pri:8, instance:restassured.automation.testcases.Restassured_Automation_Rules@17550481]" name="Rules_putUpdateANewRuleSet_status400" duration-ms="3107" started-at="2021-06-11T20:01:17Z" finished-at="2021-06-11T20:01:20Z">
+          <exception class="io.restassured.path.json.exception.JsonPathException">
             <message>
-              <![CDATA[expected [409] but found [200]]]>
+              <![CDATA[Failed to parse the JSON document]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [409] but found [200]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:513)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
-	at org.testng.Assert.assertEquals(Assert.java:116)
-	at org.testng.Assert.assertEquals(Assert.java:389)
-	at org.testng.Assert.assertEquals(Assert.java:399)
-	at restassured.automation.testcases.Restassured_Automation_ProcedureGroups.ProcedureGroup_PostCreateAProcedureGroup_status409(Restassured_Automation_ProcedureGroups.java:1262)
+              <![CDATA[io.restassured.path.json.exception.JsonPathException: Failed to parse the JSON document
+	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1002)
+	at io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:967)
+	at io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:1047)
+	at io.restassured.path.json.JsonPath.get(JsonPath.java:202)
+	at restassured.automation.testcases.Restassured_Automation_Rules.Rules_putUpdateANewRuleSet_status400(Restassured_Automation_Rules.java:1476)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -52,13 +50,27 @@
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+Caused by: java.lang.IllegalArgumentException: The JSON input text should neither be null nor empty.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:80)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:237)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:249)
+	at io.restassured.internal.path.json.ConfigurableJsonSlurper.parseText(ConfigurableJsonSlurper.groovy:80)
+	at io.restassured.path.json.JsonPath$4$1.method(JsonPath.java:965)
+	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1000)
+	... 28 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- io.restassured.path.json.exception.JsonPathException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ProcedureGroup_PostCreateAProcedureGroup_status409 -->
-      </class> <!-- restassured.automation.testcases.Restassured_Automation_ProcedureGroups -->
+        </test-method> <!-- Rules_putUpdateANewRuleSet_status400 -->
+      </class> <!-- restassured.automation.testcases.Restassured_Automation_Rules -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
