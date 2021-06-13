@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Failed suite [Failed suite [Suite]]]">
+  <listeners>
+    <listener class-name="restassured.automation.listeners.TestListeners"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)(failed)(failed)">
+    <groups>
+      <run>
+        <include name="IntegrationTests"/>
+        <include name="EndToEnd"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="restassured.automation.testcases.Restassured_Automation_MethodologItem">
+        <methods>
+          <include name="MethodologyItem_GetAllMethodologyItemsForARevision_status400"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- restassured.automation.testcases.Restassured_Automation_MethodologItem -->
+      <class name="restassured.automation.testcases.Restassured_Automation_Methodology">
+        <methods>
+          <include name="Methodology_DeleteAnCandidateRevisionWithStatus_400"/>
+          <include name="Methodology_InheritAMethodology200"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- restassured.automation.testcases.Restassured_Automation_Methodology -->
+      <class name="restassured.automation.testcases.Restassured_Automation_ProcedureGroups">
+        <methods>
+          <include name="ProcedureGroup_PostCreateAProcedureGroup_status409"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- restassured.automation.testcases.Restassured_Automation_ProcedureGroups -->
+      <class name="restassured.automation.testcases.Restassured_Automation_MethodologyItemFsliFilters">
+        <methods>
+          <include name="MethodologyItem_FsliFliters_CreateFinancialStatementFilters_200"/>
+          <include name="MethodologyItem_FsliFliters_DeleteFinancialStatementFilters_204"/>
+          <include name="MethodologyItem_FsliFliters_PatchFinancialStatementFilters_204"/>
+          <include name="MethodologyItem_FsliFliters_PatchFinancialStatementFilters_400"/>
+          <include name="setup"/>
+          <include name="MethodologyItem_FsliFliters_PatchFinancialStatementFilters_409"/>
+        </methods>
+      </class> <!-- restassured.automation.testcases.Restassured_Automation_MethodologyItemFsliFilters -->
+      <class name="restassured.automation.testcases.Restassured_Automation_MethodologyItemRelations">
+        <methods>
+          <include name="MethodologyItemRelation_ListOfAllMethodologyRelation_status400"/>
+          <include name="MethodologyItemRelation_DeleteAnMethodologyRelation_status400"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- restassured.automation.testcases.Restassured_Automation_MethodologyItemRelations -->
+      <class name="restassured.automation.testcases.Restassured_Automation_PublishEngagementType">
+        <methods>
+          <include name="Publish_PostPublishInherit_status200"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- restassured.automation.testcases.Restassured_Automation_PublishEngagementType -->
+    </classes>
+  </test> <!-- Test(failed)(failed)(failed) -->
+</suite> <!-- Failed suite [Failed suite [Failed suite [Suite]]] -->

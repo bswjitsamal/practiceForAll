@@ -644,7 +644,7 @@ public class Restassured_Automation_EngagementType {
 		System.out.println(inheritedFrom);
 
 		HashMap<String, String> map = new HashMap<String, String>();
-		map.put("storeEngagementType", inheritedFrom.get(1));
+		map.put("storeEngagementType", inheritedFrom.get(0));
 		map.put("organization", listOrdId.get(3));
 
 		User_Pojo po = new User_Pojo();
@@ -699,7 +699,7 @@ public class Restassured_Automation_EngagementType {
 		System.out.println(inheritedFrom);
 
 		HashMap<String, String> map = new HashMap<String, String>();
-		map.put("storeEngagementType", inheritedFrom.get(1).substring(1, 6));
+		map.put("storeEngagementType", inheritedFrom.get(0).substring(1, 6));
 		map.put("organization", listOrdId.get(3).substring(1, 6));
 
 		User_Pojo po = new User_Pojo();
@@ -748,7 +748,7 @@ public class Restassured_Automation_EngagementType {
 		System.out.println(inheritedFrom);
 
 		HashMap<String, String> map = new HashMap<String, String>();
-		map.put("storeEngagementType", inheritedFrom.get(1).substring(1, 6));
+		map.put("storeEngagementType", inheritedFrom.get(0).substring(1, 6));
 		map.put("organization", listOrdId.get(3).substring(1, 6));
 
 		User_Pojo po = new User_Pojo();
@@ -763,9 +763,9 @@ public class Restassured_Automation_EngagementType {
 		/**
 		 * Extent report generation
 		 */
-		ExtentTestManager.statusLogMessage(getEngagementTypeRes.statusCode());
-		ExtentTestManager.getTest().log(Status.INFO, getEngagementTypeRes.asString());
-		allUtils.validate_HTTPStrictTransportSecurity(getEngagementTypeRes);
+		ExtentTestManager.statusLogMessage(postEngagementTypeInheriteRes.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO, postEngagementTypeInheriteRes.asString());
+		allUtils.validate_HTTPStrictTransportSecurity(postEngagementTypeInheriteRes);
 
 	}
 }

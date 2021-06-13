@@ -64,7 +64,7 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 
 	}
 	
-	@Test(groups = { "IntegrationTests" })
+	@Test(groups = { "IntegrationTests" }, priority =1)
 	public void EngagementTeamRoles_GetLoadAllEngagementRolesInformationForAnOrganization_status200() throws IOException {
 
 		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
@@ -95,7 +95,7 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		
 	}
 	
-	@Test(groups = { "IntegrationTests" })
+	@Test(groups = { "IntegrationTests" }, priority =2)
 	public void EngagementTeamRoles_PostCreateAnEngagementRoleForAnOrganization_status200() throws IOException {
 
 		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
@@ -118,7 +118,7 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		engagementTeamRolesPojo.setEngagementRoleId("6050fec083bab05523e2fbf5");
 		engagementTeamRolesPojo.setOrganization("5f950768fc13ae0ade000001");
 		engagementTeamRolesPojo.setRevision("6065690a2477890efb183f90");
-		engagementTeamRolesPojo.setTitle("Abc2"+getRandomAlphaNum());
+		engagementTeamRolesPojo.setTitle("Ss"+getRandomAlphaNum());
 		
 
 		Response postEngagementTeamRoles = getMethodology.post_URLPOJO(URL, AuthorizationKey, 
@@ -134,7 +134,7 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		getMethodology.validate_HTTPStrictTransportSecurity(postEngagementTeamRoles);
 		
 	}
-	@Test(groups = { "IntegrationTests" })
+	@Test(groups = { "IntegrationTests" }, priority =2)
 	public void EngagementTeamRoles_PostCreateAnEngagementRoleForAnOrganization_status404() throws IOException {
 
 		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
@@ -174,7 +174,7 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		
 	}
 	
-	@Test(groups = { "IntegrationTests" })
+	@Test(groups = { "IntegrationTests" }, priority =3)
 	public void EngagementTeamRoles_PostCreateAnEngagementRoleForAnOrganization_status409() throws IOException {
 
 		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
@@ -213,7 +213,7 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		getMethodology.validate_HTTPStrictTransportSecurity(postEngagementTeamRoles);
 	}
 
-	@Test(groups = { "IntegrationTests" })
+	@Test(groups = { "IntegrationTests" }, priority =4)
 	public void EngagementTeamRoles_PostCreateAnEngagementRoleForAnOrganization_status400() throws IOException {
 
 		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
@@ -253,7 +253,7 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		
 	}
 	
-	@Test(groups = { "IntegrationTests" })
+	@Test(groups = { "IntegrationTests" }, priority =5)
 	public void EngagementTeamRoles_PatchUpdateAnEngagementRoleForAnOrganization_status204() throws IOException {
 
 		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
@@ -297,7 +297,7 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		getMethodology.validate_HTTPStrictTransportSecurity(patchEngagementTeamRoles);
 		
 	}
-	@Test(groups = { "IntegrationTests" })
+	@Test(groups = { "IntegrationTests" }, priority =6)
 	public void EngagementTeamRoles_PatchUpdateAnEngagementRoleForAnOrganization_status404() throws IOException {
 
 		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
@@ -323,7 +323,7 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		
 		EngagementTeamRoles_Pojo engagementTeamRolesPojo = new EngagementTeamRoles_Pojo();
 		engagementTeamRolesPojo.setEngagementRoleId("6050fec083bab05523e2fbf5");
-		engagementTeamRolesPojo.setOrganization("5f950768fc13ae0ade000002");
+		engagementTeamRolesPojo.setOrganization("5f950768fc13ae0ade000001");
 		engagementTeamRolesPojo.setRevision("6065690a2477890efb183f90");
 		engagementTeamRolesPojo.setTitle("Bs-Update"+getRandomAlphaNum());
 		
@@ -342,7 +342,7 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		
 	}
 	
-	@Test(groups = { "IntegrationTests" })
+	@Test(groups = { "IntegrationTests" }, priority =7)
 	public void EngagementTeamRoles_PatchUpdateAnEngagementRoleForAnOrganization_status409() throws IOException {
 
 		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
@@ -387,7 +387,7 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		
 	}
 	
-	@Test(groups = { "IntegrationTests" })
+	@Test(groups = { "IntegrationTests" }, priority =8)
 	public void EngagementTeamRoles_PatchUpdateAnEngagementRoleForAnOrganization_status400() throws IOException {
 
 		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
@@ -433,7 +433,7 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 	}
 	
 	
-	@Test(groups = { "IntegrationTests" })
+	@Test(groups = { "IntegrationTests" }, priority =9)
 	public void EngagementTeamRoles_DeleteDeleteAnEngagementRoleForAnOrganization_status204() throws IOException {
 
 		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
@@ -467,7 +467,7 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		allUtils.validate_HTTPStrictTransportSecurity(patchEngagementTeamRoles);
 		
 	}
-	@Test(groups = { "IntegrationTests" })
+	@Test(groups = { "IntegrationTests" }, priority =10)
 	public void EngagementTeamRoles_DeleteDeleteAnEngagementRoleForAnOrganization_status404() throws IOException {
 
 		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
@@ -502,7 +502,7 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		
 	}
 	
-	@Test(groups = { "IntegrationTests" })
+	@Test(groups = { "IntegrationTests" }, priority =11)
 	public void EngagementTeamRoles_DeleteAnEngagementRoleForAnOrganization_status400() throws IOException {
 
 		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
@@ -538,7 +538,7 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 	}
 	
 	
-	@Test(groups = { "IntegrationTests" })
+	@Test(groups = { "IntegrationTests" }, priority =12)
 	public void EngagementTeamRoles_GetLoadAllEngagementRolesInformationForARevision_status200() throws IOException {
 
 		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
@@ -589,7 +589,7 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 	}
 	
 	
-	@Test(groups = { "IntegrationTests" })
+	@Test(groups = { "IntegrationTests" }, priority =13)
 	public void EngagementTeamRoles_PostCreateAnEngagementRoleForAMethodology_status200() throws IOException {
 
 		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
@@ -645,7 +645,7 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 
 
 	}
-	@Test(groups = { "IntegrationTests" })
+	@Test(groups = { "IntegrationTests" }, priority =14)
 	public void EngagementTeamRoles_PostCreateAnEngagementRoleForAMethodology_status404() throws IOException {
 
 		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
@@ -701,7 +701,7 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 
 
 	}
-	@Test(groups = { "IntegrationTests" })
+	@Test(groups = { "IntegrationTests" }, priority =15)
 	public void EngagementTeamRoles_PostCreateAnEngagementRoleForAMethodology_status400() throws IOException {
 
 		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
@@ -759,7 +759,7 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 
 	}
 	
-	@Test(groups = { "IntegrationTests" })
+	@Test(groups = { "IntegrationTests" }, priority =16)
 	public void EngagementTeamRoles_PostCreateAnEngagementRoleForAMethodology_status409() throws IOException {
 
 		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
@@ -817,7 +817,7 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 
 	}
 	
-	@Test(groups = { "IntegrationTests" })
+	@Test(groups = { "IntegrationTests" }, priority =17)
 	public void EngagementTeamRoles_PatchUpdateAnEngagementRoleForAMethodology_status204() throws IOException {
 
 		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
@@ -862,7 +862,7 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		
 		JsonPath jsonPathEvaluator2 = createPublish.jsonPath();
 		List<String> engagementRoleId = jsonPathEvaluator2.get("engagementRoleId");
-		System.out.println(engagementRoleId);
+		System.out.println(engagementRoleId.get(0));
 		
 		//Performing Patch operation
 		EngagementTeamRoles_Pojo engagementTeamRolesPojo1 = new EngagementTeamRoles_Pojo();
@@ -886,7 +886,7 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 
 
 	}
-	@Test(groups = { "IntegrationTests" })
+	@Test(groups = { "IntegrationTests" }, priority =18)
 	public void EngagementTeamRoles_PatchUpdateAnEngagementRoleForAMethodology_status404() throws IOException {
 
 		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
@@ -956,7 +956,7 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 
 	}
 	
-	@Test(groups = { "IntegrationTests" })
+	@Test(groups = { "IntegrationTests" }, priority =19)
 	public void EngagementTeamRoles_PatchUpdateAnEngagementRoleForAMethodology_status409() throws IOException {
 
 		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
@@ -1024,7 +1024,7 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		getMethodology.validate_HTTPStrictTransportSecurity(patchPublish);
 	}
 	
-	@Test(groups = { "IntegrationTests" })
+	@Test(groups = { "IntegrationTests" }, priority =20)
 	public void EngagementTeamRoles_PatchUpdateAnEngagementRoleForAMethodology_status400() throws IOException {
 
 		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
@@ -1093,7 +1093,7 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 
 	}
 
-	@Test(groups = { "IntegrationTests" })
+	@Test(groups = { "IntegrationTests" }, priority =21)
 	public void EngagementTeamRoles_DeleteAnEngagementRoleForAMethodology_status204() throws IOException {
 
 		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
@@ -1140,7 +1140,7 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		List<String> engagementRoleId = jsonPathEvaluator2.get("engagementRoleId");
 		System.out.println(engagementRoleId);
 		
-		String id = engagementRoleId.get(1);
+		String id = engagementRoleId.get(0);
 		
 		Response dalatePublish = getMethodology.delete(URL, AuthorizationKey,
 				"/api/engagementTeam/org/" +listOrdId.get(3) + "/revision/" + reviD.substring(1, 25)+"/roles/"+id);
@@ -1156,7 +1156,7 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 
 	}
 
-	@Test(groups = { "IntegrationTests" })
+	@Test(groups = { "IntegrationTests" }, priority =22)
 	public void EngagementTeamRoles_DeleteAnEngagementRoleForAMethodology_status404() throws IOException {
 
 		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
@@ -1203,7 +1203,7 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		List<String> engagementRoleId = jsonPathEvaluator2.get("engagementRoleId");
 		System.out.println(engagementRoleId);
 		
-		String id = engagementRoleId.get(1);
+		String id = engagementRoleId.get(0);
 		
 		Response dalatePublish = getMethodology.delete(URL, AuthorizationKey,
 				"/api/engagementTeams/org/" +listOrdId.get(3) + "/revision/" + reviD.substring(1, 25)+"/roles/"+id);
@@ -1219,7 +1219,7 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 
 	}
 
-	@Test(groups = { "IntegrationTests" })
+	@Test(groups = { "IntegrationTests" }, priority =23)
 	public void EngagementTeamRoles_DeleteAnEngagementRoleForAMethodology_status400() throws IOException {
 
 		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();

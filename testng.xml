@@ -16,13 +16,18 @@
 			</run>
 		</groups>
 		<classes>
- 
-
-          
 		
-				<class
-				name="restassured.automation.testcases.Restassured_Automation_Rules" />
-			
+           <class
+                name="restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles" />
+		
+    		<class
+                name="restassured.automation.testcases.Restassured_Automation_Rules" />
+            <class
+                name="restassured.automation.testcases.Restassured_Automation_Organizations" />
+            <class
+                name="restassured.automation.testcases.Restassured_Automation_OrgRoles" />
+                    
+
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

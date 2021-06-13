@@ -1145,7 +1145,7 @@ public class Restassured_Automation_Methodology {
 	}
 
 	@Test(groups = "IntegrationTests")
-	public void Methodology_GetCandidateRevisionWithStatus_200() {
+	public void Methodology_GetCandidateRevisionWithStatus_204() {
 
 		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
 
@@ -1169,7 +1169,7 @@ public class Restassured_Automation_Methodology {
 		String getCandidateURI = "/api/methodology/candidate/" + parntId;
 		Response getCandidateRes = getMethodology.get_URL_Without_Params(URL, AuthorizationKey, getCandidateURI);
 		getCandidateRes.prettyPrint();
-		Assert.assertEquals(getCandidateRes.getStatusCode(), 200);
+		Assert.assertEquals(getCandidateRes.getStatusCode(), 204);
 		/**
 		 * Extent Report Generation
 		 */
@@ -1843,7 +1843,7 @@ public class Restassured_Automation_Methodology {
 		System.out.println(inheritedFrom);
 
 		HashMap<String, String> map = new HashMap<String, String>();
-		map.put("inheritFrom", inheritedFrom.get(1).substring(1, 6));
+		map.put("inheritFrom", inheritedFrom.get(0).substring(1, 6));
 		map.put("organization", listOrdId.get(3).substring(1, 6));
 
 		User_Pojo po = new User_Pojo();
