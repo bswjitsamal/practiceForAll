@@ -172,6 +172,7 @@ public class Restassured_Automation_EngagementType {
 		Map<String, String> map = new HashMap<String, String>();
 		map.put("title", title);
 		map.put("organization",listOrdId.get(3));
+		map.put("importing","true");
 		User_Pojo en = new User_Pojo();
 		String createEngagement = en.Create_Engagement(map);
 		Response postEngagementType = allUtils.post_URLPOJO(URL, AuthorizationKey, "/api/engagementType",

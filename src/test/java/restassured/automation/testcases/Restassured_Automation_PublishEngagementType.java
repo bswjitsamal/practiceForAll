@@ -89,7 +89,7 @@ public class Restassured_Automation_PublishEngagementType {
 		System.out.println(inheritedFrom);
 		
 		HashMap<String, String> map = new HashMap<String, String>();
-		map.put("storeEngagementType", inheritedFrom.get(1));
+		map.put("storeEngagementType", inheritedFrom.get(0));
 		map.put("organization", listOrdId.get(3));
 		
 		User_Pojo po = new User_Pojo();

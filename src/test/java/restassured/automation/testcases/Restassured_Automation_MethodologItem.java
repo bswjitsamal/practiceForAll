@@ -592,7 +592,7 @@ public class Restassured_Automation_MethodologItem {
 
 		System.out.println(String.valueOf(listRevisionI1.get(0)));
 
-		String revId = String.valueOf(listRevisionI1.get(2));
+		String revId = String.valueOf(listRevisionI1.get(1));
 
 		String patchId = "/api/methodologyItem/revision/" + revId.substring(1, 25) + "/item";
 

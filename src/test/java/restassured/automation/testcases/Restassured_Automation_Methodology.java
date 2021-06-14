@@ -1979,4 +1979,59 @@ public class Restassured_Automation_Methodology {
 		ExtentTestManager.getTest().log(Status.INFO, getEngagementTypeRes.asString());
 		allUtils.validate_HTTPStrictTransportSecurity(getEngagementTypeRes);
 	}
+	@Test(groups = "IntegrationTests")
+	public void Methodology_InheritAMethodology409() {
+
+		Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
+
+		// fetching Org Id
+
+		Response OrganizationsDetails = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/org");
+		JsonPath jsonPathEvaluator = OrganizationsDetails.jsonPath();
+		listOrdId = jsonPathEvaluator.get("id");
+		OrganizationsDetails.prettyPrint();
+
+		/**
+		 * GETTING THE REVISION ID
+		 */
+
+		Response getEngagementTypeRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
+				"Organization", listOrdId.get(3));
+		getEngagementTypeRes.prettyPrint();
+
+		// Retrieving the inheritedFrom
+
+		JsonPath jp = getEngagementTypeRes.jsonPath();
+		List<String> inheritedFrom = jp.getList("inheritedFrom");
+		
+
+		System.out.println(inheritedFrom);
+
+		HashMap<String, String> map = new HashMap<String, String>();
+		map.put("inheritFrom", inheritedFrom.get(0));
+		map.put("organization", listOrdId.get(3));
+	//	map.put("inheritedFrom", inheritedFrom.get(0));
+
+		User_Pojo po = new User_Pojo();
+		String userOobj = po.methodologyInherit(map);
+
+		String URI = "/api/methodology/inherit/";
+		Response postEngagementTypeInheriteRes = allUtils.post_URLPOJO(URL, AuthorizationKey, URI, userOobj);
+		postEngagementTypeInheriteRes.prettyPrint();
+
+		/*
+		 * Response postEngagementTypeInheriteRes =
+		 * allUtils.get_URL_QueryParams(URL, AuthorizationKey,
+		 * "/api/engagementType/inherit/", "Organization",
+		 * inheritedFrom.get(5)); postEngagementTypeInheriteRes.prettyPrint();
+		 */
+		Assert.assertEquals(postEngagementTypeInheriteRes.statusCode(), 409);
+
+		/**
+		 * Extent report generation
+		 */
+		ExtentTestManager.statusLogMessage(getEngagementTypeRes.statusCode());
+		ExtentTestManager.getTest().log(Status.INFO, getEngagementTypeRes.asString());
+		allUtils.validate_HTTPStrictTransportSecurity(getEngagementTypeRes);
+	}
 }

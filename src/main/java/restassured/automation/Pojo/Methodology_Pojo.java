@@ -17,9 +17,16 @@ public class Methodology_Pojo {
 	private String inheritFrom;
 	private String storeEngagementType;
 	private String importing;
+	private String inheritedFrom;
 	
 	
 	
+	public String getInheritedFrom() {
+		return inheritedFrom;
+	}
+	public void setInheritedFrom(String inheritedFrom) {
+		this.inheritedFrom = inheritedFrom;
+	}
 	public String getStoreEngagementType() {
 		return storeEngagementType;
 	}

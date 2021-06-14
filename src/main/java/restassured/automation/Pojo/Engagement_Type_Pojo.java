@@ -6,8 +6,17 @@ public class Engagement_Type_Pojo {
 	private String organization;
 	private String id;
 	private String storeEngagementType;
+	private String importing;
 		
 	
+	public String getImporting() {
+		return importing;
+	}
+
+	public void setImporting(String importing) {
+		this.importing = importing;
+	}
+
 	public String getStoreEngagementType() {
 		return storeEngagementType;
 	}

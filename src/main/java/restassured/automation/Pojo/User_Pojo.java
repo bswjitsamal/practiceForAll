@@ -17,6 +17,7 @@ public class User_Pojo {
 
 		CreateEngagement.setTitle(data.get("title"));
 		CreateEngagement.setOrganization(data.get("organization"));
+		CreateEngagement.setImporting(data.get("importing"));
 
 		Gson Josnbody = new Gson();
 		return Josnbody.toJson(CreateEngagement);
@@ -274,6 +275,7 @@ public class User_Pojo {
 
 		upDateId.setInheritFrom(data.get("inheritFrom"));
 		upDateId.setOrganization(data.get("organization"));
+		upDateId.setInheritedFrom(data.get("inheritedFrom"));
 
 		Gson Josnbody = new Gson();
 		return Josnbody.toJson(upDateId);

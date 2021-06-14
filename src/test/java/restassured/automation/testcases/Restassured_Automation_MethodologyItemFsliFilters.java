@@ -72,7 +72,7 @@ public class Restassured_Automation_MethodologyItemFsliFilters {
 		Response OrganizationsDetails = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/org");
 		JsonPath jsonPathEvaluator1 = OrganizationsDetails.jsonPath();
 		listOrdId = jsonPathEvaluator1.get("id");
-		OrganizationsDetails.prettyPrint();
+		//OrganizationsDetails.prettyPrint();
 		/**
 		 * GETTING THE REVISION ID FROM METHODOLOGY
 		 */
@@ -80,12 +80,12 @@ public class Restassured_Automation_MethodologyItemFsliFilters {
 		Response getMethodologyRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
 				"Organization", listOrdId.get(3));
 
-		getMethodologyRes.prettyPrint();
+		//getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator = getMethodologyRes.jsonPath();
 		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions");
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
-		String revId = String.valueOf(listRevisionI1.get(2));
+		String revId = String.valueOf(listRevisionI1.get(1));
 
 		String patchId = "/api/methodologyItem/revision/" + revId.substring(1, 25);
 
@@ -96,7 +96,7 @@ public class Restassured_Automation_MethodologyItemFsliFilters {
 		System.out.println("methodologyId" + s1);
 
 		String postFsli = "/api/methodologyItem/revision/" + revId.substring(1, 25) + "/workProgram/" + s1
-				+ "/fsli/filter";
+				+ "/fsli/filter/";
 
 		Map<String, String> map = new HashMap<String, String>();
 
@@ -126,7 +126,7 @@ public class Restassured_Automation_MethodologyItemFsliFilters {
 		Response OrganizationsDetails = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/org");
 		JsonPath jsonPathEvaluator1 = OrganizationsDetails.jsonPath();
 		listOrdId = jsonPathEvaluator1.get("id");
-		OrganizationsDetails.prettyPrint();
+		//OrganizationsDetails.prettyPrint();
 		/**
 		 * GETTING THE REVISION ID FROM METHODOLOGY
 		 */
@@ -134,12 +134,12 @@ public class Restassured_Automation_MethodologyItemFsliFilters {
 		Response getMethodologyRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
 				"Organization", listOrdId.get(3));
 
-		getMethodologyRes.prettyPrint();
+		//getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator = getMethodologyRes.jsonPath();
 		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions");
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
-		String revId = String.valueOf(listRevisionI1.get(2));
+		String revId = String.valueOf(listRevisionI1.get(1));
 
 		String patchId = "/api/methodologyItem/revision/" + revId.substring(1, 25);
 
@@ -181,7 +181,7 @@ public class Restassured_Automation_MethodologyItemFsliFilters {
 		Response OrganizationsDetails = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/org");
 		JsonPath jsonPathEvaluator1 = OrganizationsDetails.jsonPath();
 		listOrdId = jsonPathEvaluator1.get("id");
-		OrganizationsDetails.prettyPrint();
+		//OrganizationsDetails.prettyPrint();
 		/**
 		 * GETTING THE REVISION ID FROM METHODOLOGY
 		 */
@@ -189,12 +189,12 @@ public class Restassured_Automation_MethodologyItemFsliFilters {
 		Response getMethodologyRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
 				"Organization", listOrdId.get(3));
 
-		getMethodologyRes.prettyPrint();
+		//getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator = getMethodologyRes.jsonPath();
 		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions");
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
-		String revId = String.valueOf(listRevisionI1.get(2));
+		String revId = String.valueOf(listRevisionI1.get(1));
 
 		String patchId = "/api/methodologyItem/revision/" + revId.substring(1, 25);
 
@@ -236,7 +236,7 @@ public class Restassured_Automation_MethodologyItemFsliFilters {
 		Response OrganizationsDetails = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/org");
 		JsonPath jsonPathEvaluator1 = OrganizationsDetails.jsonPath();
 		listOrdId = jsonPathEvaluator1.get("id");
-		OrganizationsDetails.prettyPrint();
+		//OrganizationsDetails.prettyPrint();
 		/**
 		 * GETTING THE REVISION ID FROM METHODOLOGY
 		 */
@@ -244,12 +244,12 @@ public class Restassured_Automation_MethodologyItemFsliFilters {
 		Response getMethodologyRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
 				"Organization", listOrdId.get(3));
 
-		getMethodologyRes.prettyPrint();
+		//getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator = getMethodologyRes.jsonPath();
 		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions");
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
-		String revId = String.valueOf(listRevisionI1.get(2));
+		String revId = String.valueOf(listRevisionI1.get(1));
 
 		String patchId = "/api/methodologyItem/revision/" + revId.substring(1, 25);
 
@@ -291,7 +291,7 @@ public class Restassured_Automation_MethodologyItemFsliFilters {
 		Response OrganizationsDetails = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/org");
 		JsonPath jsonPathEvaluator1 = OrganizationsDetails.jsonPath();
 		listOrdId = jsonPathEvaluator1.get("id");
-		OrganizationsDetails.prettyPrint();
+		//OrganizationsDetails.prettyPrint();
 		/**
 		 * GETTING THE REVISION ID FROM METHODOLOGY
 		 */
@@ -299,12 +299,12 @@ public class Restassured_Automation_MethodologyItemFsliFilters {
 		Response getMethodologyRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
 				"Organization", listOrdId.get(3));
 
-		getMethodologyRes.prettyPrint();
+		//getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator = getMethodologyRes.jsonPath();
 		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions");
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
-		String revId = String.valueOf(listRevisionI1.get(2));
+		String revId = String.valueOf(listRevisionI1.get(1));
 
 		String patchId = "/api/methodologyItem/revision/" + revId.substring(1, 25);
 
@@ -348,7 +348,7 @@ public class Restassured_Automation_MethodologyItemFsliFilters {
 
 	}
 	@Test(groups = "IntegrationTests")
-	public void MethodologyItem_FsliFliters_PatchFinancialStatementFilters_409() throws IOException {
+	public void MethodologyItem_FsliFliters_PatchFinancialStatementFilters_409() throws IOException, InterruptedException {
 
 		allUtils = new Restassured_Automation_Utils();
 		post = read_Configuration_Propertites.loadproperty("Configuration");
@@ -359,7 +359,7 @@ public class Restassured_Automation_MethodologyItemFsliFilters {
 		Response OrganizationsDetails = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/org");
 		JsonPath jsonPathEvaluator1 = OrganizationsDetails.jsonPath();
 		listOrdId = jsonPathEvaluator1.get("id");
-		OrganizationsDetails.prettyPrint();
+		//OrganizationsDetails.prettyPrint();
 		/**
 		 * GETTING THE REVISION ID FROM METHODOLOGY
 		 */
@@ -367,12 +367,12 @@ public class Restassured_Automation_MethodologyItemFsliFilters {
 		Response getMethodologyRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
 				"Organization", listOrdId.get(3));
 
-		getMethodologyRes.prettyPrint();
+		//getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator = getMethodologyRes.jsonPath();
 		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions");
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
-		String revId = String.valueOf(listRevisionI1.get(2));
+		String revId = String.valueOf(listRevisionI1.get(1));
 
 		String patchId = "/api/methodologyItem/revision/" + revId.substring(1, 25);
 
@@ -404,6 +404,7 @@ public class Restassured_Automation_MethodologyItemFsliFilters {
 		User_Pojo po1 = new User_Pojo();
 		String UpdateFilter = po1.CreateFsliFilters(map1);
 		allUtils.patch_URLPOJO(URL, AuthorizationKey, patchFsli, UpdateFilter);
+		Thread.sleep(3000);
 		Response patchFilterRes=allUtils.patch_URLPOJO(URL, AuthorizationKey, patchFsli, UpdateFilter);
 		
 		Assert.assertEquals(patchFilterRes.getStatusCode(), 409);
@@ -427,7 +428,7 @@ public class Restassured_Automation_MethodologyItemFsliFilters {
 		Response OrganizationsDetails = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/org");
 		JsonPath jsonPathEvaluator1 = OrganizationsDetails.jsonPath();
 		listOrdId = jsonPathEvaluator1.get("id");
-		OrganizationsDetails.prettyPrint();
+		//OrganizationsDetails.prettyPrint();
 		/**
 		 * GETTING THE REVISION ID FROM METHODOLOGY
 		 */
@@ -435,12 +436,12 @@ public class Restassured_Automation_MethodologyItemFsliFilters {
 		Response getMethodologyRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
 				"Organization", listOrdId.get(3));
 
-		getMethodologyRes.prettyPrint();
+		//getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator = getMethodologyRes.jsonPath();
 		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions");
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
-		String revId = String.valueOf(listRevisionI1.get(2));
+		String revId = String.valueOf(listRevisionI1.get(1));
 
 		String patchId = "/api/methodologyItem/revision/" + revId.substring(1, 25);
 
@@ -458,11 +459,11 @@ public class Restassured_Automation_MethodologyItemFsliFilters {
 		map.put("filterName", post.getProperty("postFilterName") + allUtils.getRandomNumber(1, 50));
 		User_Pojo po = new User_Pojo();
 		String createFilter = po.CreateFsliFilters(map);
-
 		Response postFilterRes = allUtils.post_URLPOJO(URL, AuthorizationKey, postFsli, createFilter);
 
 		postFilterRes.prettyPrint();
 		JsonPath filterJson=postFilterRes.jsonPath();
+		
 		String filterId=filterJson.get("id");
 		String patchFsli = "/api/methodologyItem/revision/" + revId.substring(1, 25) + "/workProgram/" + s1
 				+ "/fsli/filter/"+filterId;
@@ -495,7 +496,7 @@ public class Restassured_Automation_MethodologyItemFsliFilters {
 		Response OrganizationsDetails = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/org");
 		JsonPath jsonPathEvaluator1 = OrganizationsDetails.jsonPath();
 		listOrdId = jsonPathEvaluator1.get("id");
-		OrganizationsDetails.prettyPrint();
+		//OrganizationsDetails.prettyPrint();
 		/**
 		 * GETTING THE REVISION ID FROM METHODOLOGY
 		 */
@@ -503,12 +504,12 @@ public class Restassured_Automation_MethodologyItemFsliFilters {
 		Response getMethodologyRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
 				"Organization", listOrdId.get(3));
 
-		getMethodologyRes.prettyPrint();
+		//getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator = getMethodologyRes.jsonPath();
 		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions");
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
-		String revId = String.valueOf(listRevisionI1.get(2));
+		String revId = String.valueOf(listRevisionI1.get(1));
 
 		String patchId = "/api/methodologyItem/revision/" + revId.substring(1, 25);
 
@@ -564,7 +565,7 @@ public class Restassured_Automation_MethodologyItemFsliFilters {
 		Response OrganizationsDetails = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/org");
 		JsonPath jsonPathEvaluator1 = OrganizationsDetails.jsonPath();
 		listOrdId = jsonPathEvaluator1.get("id");
-		OrganizationsDetails.prettyPrint();
+		//OrganizationsDetails.prettyPrint();
 		/**
 		 * GETTING THE REVISION ID FROM METHODOLOGY
 		 */
@@ -572,19 +573,19 @@ public class Restassured_Automation_MethodologyItemFsliFilters {
 		Response getMethodologyRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
 				"Organization", listOrdId.get(3));
 
-		getMethodologyRes.prettyPrint();
+		//getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator = getMethodologyRes.jsonPath();
 		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions");
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
-		String revId = String.valueOf(listRevisionI1.get(2));
+		String revId = String.valueOf(listRevisionI1.get(1));
 
 		String patchId = "/api/methodologyItem/revision/" + revId.substring(1, 25);
 
 		Response getEngagementTypeRes = allUtils.get_URL_Without_Params(URL, AuthorizationKey, patchId);
 		getEngagementTypeRes.prettyPrint();
 		JsonPath getJson = getEngagementTypeRes.jsonPath();
-		String s1 = getEngagementTypeRes.path("find { it.workProgramItemType=='FinancialStatement' }.workProgramId");
+		String s1 = getEngagementTypeRes.path("find {it.workProgramItemType=='FinancialStatement'}.workProgramId");
 		System.out.println("methodologyId" + s1);
 
 		String postFsli = "/api/methodologyItem/revision/" + revId.substring(1, 25) + "/workProgram/" + s1
@@ -628,7 +629,7 @@ public class Restassured_Automation_MethodologyItemFsliFilters {
 		Response OrganizationsDetails = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/org");
 		JsonPath jsonPathEvaluator1 = OrganizationsDetails.jsonPath();
 		listOrdId = jsonPathEvaluator1.get("id");
-		OrganizationsDetails.prettyPrint();
+		//OrganizationsDetails.prettyPrint();
 		/**
 		 * GETTING THE REVISION ID FROM METHODOLOGY
 		 */
@@ -636,12 +637,12 @@ public class Restassured_Automation_MethodologyItemFsliFilters {
 		Response getMethodologyRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
 				"Organization", listOrdId.get(3));
 
-		getMethodologyRes.prettyPrint();
+		//getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator = getMethodologyRes.jsonPath();
 		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions");
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
-		String revId = String.valueOf(listRevisionI1.get(2));
+		String revId = String.valueOf(listRevisionI1.get(1));
 
 		String patchId = "/api/methodologyItem/revision/" + revId.substring(1, 25);
 
@@ -692,7 +693,7 @@ public class Restassured_Automation_MethodologyItemFsliFilters {
 		Response OrganizationsDetails = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/org");
 		JsonPath jsonPathEvaluator1 = OrganizationsDetails.jsonPath();
 		listOrdId = jsonPathEvaluator1.get("id");
-		OrganizationsDetails.prettyPrint();
+		//OrganizationsDetails.prettyPrint();
 		/**
 		 * GETTING THE REVISION ID FROM METHODOLOGY
 		 */
@@ -700,12 +701,12 @@ public class Restassured_Automation_MethodologyItemFsliFilters {
 		Response getMethodologyRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
 				"Organization", listOrdId.get(3));
 
-		getMethodologyRes.prettyPrint();
+		//getMethodologyRes.prettyPrint();
 
 		JsonPath jsonPathEvaluator = getMethodologyRes.jsonPath();
 		ArrayList<Map<String, ?>> listRevisionI1 = jsonPathEvaluator.get("revisions");
 		System.out.println(String.valueOf(listRevisionI1.get(1)));
-		String revId = String.valueOf(listRevisionI1.get(2));
+		String revId = String.valueOf(listRevisionI1.get(1));
 
 		String patchId = "/api/methodologyItem/revision/" + revId.substring(1, 25);
 

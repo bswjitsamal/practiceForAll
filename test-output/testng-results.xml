@@ -1,133 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="13" passed="13">
+<testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="85201" started-at="2021-06-13T06:25:12Z" finished-at="2021-06-13T06:26:37Z">
+  <suite name="Default suite" duration-ms="5745" started-at="2021-06-14T12:31:26Z" finished-at="2021-06-14T12:31:32Z">
     <groups>
       <group name="IntegrationTests">
-        <method signature="Restassured_Automation_EngagementTeamRoles.EngagementTeamRoles_DeleteAnEngagementRoleForAMethodology_status204()[pri:21, instance:restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles@5f9d02cb]" name="EngagementTeamRoles_DeleteAnEngagementRoleForAMethodology_status204" class="restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles"/>
-        <method signature="Restassured_Automation_EngagementTeamRoles.EngagementTeamRoles_DeleteAnEngagementRoleForAMethodology_status400()[pri:23, instance:restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles@5f9d02cb]" name="EngagementTeamRoles_DeleteAnEngagementRoleForAMethodology_status400" class="restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles"/>
-        <method signature="Restassured_Automation_EngagementTeamRoles.EngagementTeamRoles_DeleteAnEngagementRoleForAMethodology_status404()[pri:22, instance:restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles@5f9d02cb]" name="EngagementTeamRoles_DeleteAnEngagementRoleForAMethodology_status404" class="restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles"/>
-        <method signature="Restassured_Automation_EngagementTeamRoles.EngagementTeamRoles_DeleteAnEngagementRoleForAnOrganization_status400()[pri:11, instance:restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles@5f9d02cb]" name="EngagementTeamRoles_DeleteAnEngagementRoleForAnOrganization_status400" class="restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles"/>
-        <method signature="Restassured_Automation_EngagementTeamRoles.EngagementTeamRoles_DeleteDeleteAnEngagementRoleForAnOrganization_status204()[pri:9, instance:restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles@5f9d02cb]" name="EngagementTeamRoles_DeleteDeleteAnEngagementRoleForAnOrganization_status204" class="restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles"/>
-        <method signature="Restassured_Automation_EngagementTeamRoles.EngagementTeamRoles_DeleteDeleteAnEngagementRoleForAnOrganization_status404()[pri:10, instance:restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles@5f9d02cb]" name="EngagementTeamRoles_DeleteDeleteAnEngagementRoleForAnOrganization_status404" class="restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles"/>
-        <method signature="Restassured_Automation_EngagementTeamRoles.EngagementTeamRoles_GetLoadAllEngagementRolesInformationForARevision_status200()[pri:12, instance:restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles@5f9d02cb]" name="EngagementTeamRoles_GetLoadAllEngagementRolesInformationForARevision_status200" class="restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles"/>
-        <method signature="Restassured_Automation_EngagementTeamRoles.EngagementTeamRoles_GetLoadAllEngagementRolesInformationForAnOrganization_status200()[pri:1, instance:restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles@5f9d02cb]" name="EngagementTeamRoles_GetLoadAllEngagementRolesInformationForAnOrganization_status200" class="restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles"/>
-        <method signature="Restassured_Automation_EngagementTeamRoles.EngagementTeamRoles_PatchUpdateAnEngagementRoleForAMethodology_status204()[pri:17, instance:restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles@5f9d02cb]" name="EngagementTeamRoles_PatchUpdateAnEngagementRoleForAMethodology_status204" class="restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles"/>
-        <method signature="Restassured_Automation_EngagementTeamRoles.EngagementTeamRoles_PatchUpdateAnEngagementRoleForAMethodology_status400()[pri:20, instance:restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles@5f9d02cb]" name="EngagementTeamRoles_PatchUpdateAnEngagementRoleForAMethodology_status400" class="restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles"/>
-        <method signature="Restassured_Automation_EngagementTeamRoles.EngagementTeamRoles_PatchUpdateAnEngagementRoleForAMethodology_status404()[pri:18, instance:restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles@5f9d02cb]" name="EngagementTeamRoles_PatchUpdateAnEngagementRoleForAMethodology_status404" class="restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles"/>
-        <method signature="Restassured_Automation_EngagementTeamRoles.EngagementTeamRoles_PatchUpdateAnEngagementRoleForAMethodology_status409()[pri:19, instance:restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles@5f9d02cb]" name="EngagementTeamRoles_PatchUpdateAnEngagementRoleForAMethodology_status409" class="restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles"/>
-        <method signature="Restassured_Automation_EngagementTeamRoles.EngagementTeamRoles_PatchUpdateAnEngagementRoleForAnOrganization_status204()[pri:5, instance:restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles@5f9d02cb]" name="EngagementTeamRoles_PatchUpdateAnEngagementRoleForAnOrganization_status204" class="restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles"/>
-        <method signature="Restassured_Automation_EngagementTeamRoles.EngagementTeamRoles_PatchUpdateAnEngagementRoleForAnOrganization_status400()[pri:8, instance:restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles@5f9d02cb]" name="EngagementTeamRoles_PatchUpdateAnEngagementRoleForAnOrganization_status400" class="restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles"/>
-        <method signature="Restassured_Automation_EngagementTeamRoles.EngagementTeamRoles_PatchUpdateAnEngagementRoleForAnOrganization_status404()[pri:6, instance:restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles@5f9d02cb]" name="EngagementTeamRoles_PatchUpdateAnEngagementRoleForAnOrganization_status404" class="restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles"/>
-        <method signature="Restassured_Automation_EngagementTeamRoles.EngagementTeamRoles_PatchUpdateAnEngagementRoleForAnOrganization_status409()[pri:7, instance:restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles@5f9d02cb]" name="EngagementTeamRoles_PatchUpdateAnEngagementRoleForAnOrganization_status409" class="restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles"/>
-        <method signature="Restassured_Automation_EngagementTeamRoles.EngagementTeamRoles_PostCreateAnEngagementRoleForAMethodology_status200()[pri:13, instance:restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles@5f9d02cb]" name="EngagementTeamRoles_PostCreateAnEngagementRoleForAMethodology_status200" class="restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles"/>
-        <method signature="Restassured_Automation_EngagementTeamRoles.EngagementTeamRoles_PostCreateAnEngagementRoleForAMethodology_status400()[pri:15, instance:restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles@5f9d02cb]" name="EngagementTeamRoles_PostCreateAnEngagementRoleForAMethodology_status400" class="restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles"/>
-        <method signature="Restassured_Automation_EngagementTeamRoles.EngagementTeamRoles_PostCreateAnEngagementRoleForAMethodology_status404()[pri:14, instance:restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles@5f9d02cb]" name="EngagementTeamRoles_PostCreateAnEngagementRoleForAMethodology_status404" class="restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles"/>
-        <method signature="Restassured_Automation_EngagementTeamRoles.EngagementTeamRoles_PostCreateAnEngagementRoleForAMethodology_status409()[pri:16, instance:restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles@5f9d02cb]" name="EngagementTeamRoles_PostCreateAnEngagementRoleForAMethodology_status409" class="restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles"/>
-        <method signature="Restassured_Automation_EngagementTeamRoles.EngagementTeamRoles_PostCreateAnEngagementRoleForAnOrganization_status200()[pri:2, instance:restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles@5f9d02cb]" name="EngagementTeamRoles_PostCreateAnEngagementRoleForAnOrganization_status200" class="restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles"/>
-        <method signature="Restassured_Automation_EngagementTeamRoles.EngagementTeamRoles_PostCreateAnEngagementRoleForAnOrganization_status400()[pri:4, instance:restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles@5f9d02cb]" name="EngagementTeamRoles_PostCreateAnEngagementRoleForAnOrganization_status400" class="restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles"/>
-        <method signature="Restassured_Automation_EngagementTeamRoles.EngagementTeamRoles_PostCreateAnEngagementRoleForAnOrganization_status404()[pri:2, instance:restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles@5f9d02cb]" name="EngagementTeamRoles_PostCreateAnEngagementRoleForAnOrganization_status404" class="restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles"/>
-        <method signature="Restassured_Automation_EngagementTeamRoles.EngagementTeamRoles_PostCreateAnEngagementRoleForAnOrganization_status409()[pri:3, instance:restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles@5f9d02cb]" name="EngagementTeamRoles_PostCreateAnEngagementRoleForAnOrganization_status409" class="restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles"/>
-        <method signature="Restassured_Automation_OrgRoles.OrganisationRoles_GetSuperUserFuntionGetAListOfAllPremissionForAUser_status200()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_OrgRoles@6536e911]" name="OrganisationRoles_GetSuperUserFuntionGetAListOfAllPremissionForAUser_status200" class="restassured.automation.testcases.Restassured_Automation_OrgRoles"/>
-        <method signature="Restassured_Automation_OrgRoles.OrganisationRoles_GetTheListOfRoleDefinationsForTheOrganization_status200()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_OrgRoles@6536e911]" name="OrganisationRoles_GetTheListOfRoleDefinationsForTheOrganization_status200" class="restassured.automation.testcases.Restassured_Automation_OrgRoles"/>
-        <method signature="Restassured_Automation_OrgRoles.OrganisationRoles_LoadAllRolesInformationForAnOrganizationWithStatus_200()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_OrgRoles@6536e911]" name="OrganisationRoles_LoadAllRolesInformationForAnOrganizationWithStatus_200" class="restassured.automation.testcases.Restassured_Automation_OrgRoles"/>
-        <method signature="Restassured_Automation_OrgRoles.OrganisationRoles_SUPER_USE_ENDPOINT_UpdateARolePermissionWithStatus_204()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_OrgRoles@6536e911]" name="OrganisationRoles_SUPER_USE_ENDPOINT_UpdateARolePermissionWithStatus_204" class="restassured.automation.testcases.Restassured_Automation_OrgRoles"/>
-        <method signature="Restassured_Automation_OrgRoles.OrganisationRoles_SUPER_USE_ENDPOINT_UpdateARolePermissionWithStatus_400()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_OrgRoles@6536e911]" name="OrganisationRoles_SUPER_USE_ENDPOINT_UpdateARolePermissionWithStatus_400" class="restassured.automation.testcases.Restassured_Automation_OrgRoles"/>
-        <method signature="Restassured_Automation_OrgRoles.OrganisationRoles_SUPER_USE_ENDPOINT_UpdateARolePermissionWithStatus_409()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_OrgRoles@6536e911]" name="OrganisationRoles_SUPER_USE_ENDPOINT_UpdateARolePermissionWithStatus_409" class="restassured.automation.testcases.Restassured_Automation_OrgRoles"/>
-        <method signature="Restassured_Automation_Organizations.Organisation_CreatePublishedStoreMethodologyFromOrganizationsHiddenMethodologyList()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_Organizations@6b09bb57]" name="Organisation_CreatePublishedStoreMethodologyFromOrganizationsHiddenMethodologyList" class="restassured.automation.testcases.Restassured_Automation_Organizations"/>
-        <method signature="Restassured_Automation_Organizations.Organisation_GetQueryForUsers_status200()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_Organizations@6b09bb57]" name="Organisation_GetQueryForUsers_status200" class="restassured.automation.testcases.Restassured_Automation_Organizations"/>
-        <method signature="Restassured_Automation_Organizations.Organisation_GetQueryForUsers_status400()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_Organizations@6b09bb57]" name="Organisation_GetQueryForUsers_status400" class="restassured.automation.testcases.Restassured_Automation_Organizations"/>
-        <method signature="Restassured_Automation_Organizations.Organisation_GetTheListOfOrganization()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_Organizations@6b09bb57]" name="Organisation_GetTheListOfOrganization" class="restassured.automation.testcases.Restassured_Automation_Organizations"/>
-        <method signature="Restassured_Automation_Organizations.Organisation_GetThePermissionForTheAuthUser()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_Organizations@6b09bb57]" name="Organisation_GetThePermissionForTheAuthUser" class="restassured.automation.testcases.Restassured_Automation_Organizations"/>
-        <method signature="Restassured_Automation_Organizations.Organisation_RemovePublishedStoreMethodologyFromOrganizationsHiddenMethodologyList()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_Organizations@6b09bb57]" name="Organisation_RemovePublishedStoreMethodologyFromOrganizationsHiddenMethodologyList" class="restassured.automation.testcases.Restassured_Automation_Organizations"/>
-        <method signature="Restassured_Automation_Rules.Rules_PostCreateANewRuleSet_status200()[pri:4, instance:restassured.automation.testcases.Restassured_Automation_Rules@63753b6d]" name="Rules_PostCreateANewRuleSet_status200" class="restassured.automation.testcases.Restassured_Automation_Rules"/>
-        <method signature="Restassured_Automation_Rules.Rules_deleteARuleSet_status204()[pri:2, instance:restassured.automation.testcases.Restassured_Automation_Rules@63753b6d]" name="Rules_deleteARuleSet_status204" class="restassured.automation.testcases.Restassured_Automation_Rules"/>
-        <method signature="Restassured_Automation_Rules.Rules_deleteARuleSet_status400()[pri:3, instance:restassured.automation.testcases.Restassured_Automation_Rules@63753b6d]" name="Rules_deleteARuleSet_status400" class="restassured.automation.testcases.Restassured_Automation_Rules"/>
-        <method signature="Restassured_Automation_Rules.Rules_getTheListOfRulesForARevision_status200()[pri:1, instance:restassured.automation.testcases.Restassured_Automation_Rules@63753b6d]" name="Rules_getTheListOfRulesForARevision_status200" class="restassured.automation.testcases.Restassured_Automation_Rules"/>
-        <method signature="Restassured_Automation_Rules.Rules_postCreateANewRuleSet_status200()[pri:4, instance:restassured.automation.testcases.Restassured_Automation_Rules@63753b6d]" name="Rules_postCreateANewRuleSet_status200" class="restassured.automation.testcases.Restassured_Automation_Rules"/>
-        <method signature="Restassured_Automation_Rules.Rules_postCreateANewRuleSet_status400()[pri:5, instance:restassured.automation.testcases.Restassured_Automation_Rules@63753b6d]" name="Rules_postCreateANewRuleSet_status400" class="restassured.automation.testcases.Restassured_Automation_Rules"/>
-        <method signature="Restassured_Automation_Rules.Rules_postCreateANewRuleSet_status409()[pri:6, instance:restassured.automation.testcases.Restassured_Automation_Rules@63753b6d]" name="Rules_postCreateANewRuleSet_status409" class="restassured.automation.testcases.Restassured_Automation_Rules"/>
-        <method signature="Restassured_Automation_Rules.Rules_putUpdateANewRuleSet_status200()[pri:7, instance:restassured.automation.testcases.Restassured_Automation_Rules@63753b6d]" name="Rules_putUpdateANewRuleSet_status200" class="restassured.automation.testcases.Restassured_Automation_Rules"/>
-        <method signature="Restassured_Automation_Rules.Rules_putUpdateANewRuleSet_status400()[pri:8, instance:restassured.automation.testcases.Restassured_Automation_Rules@63753b6d]" name="Rules_putUpdateANewRuleSet_status400" class="restassured.automation.testcases.Restassured_Automation_Rules"/>
-        <method signature="Restassured_Automation_Rules.Rules_putUpdateANewRuleSet_status409()[pri:9, instance:restassured.automation.testcases.Restassured_Automation_Rules@63753b6d]" name="Rules_putUpdateANewRuleSet_status409" class="restassured.automation.testcases.Restassured_Automation_Rules"/>
+        <method signature="Restassured_Automation_Methodology.Methodology_InheritAMethodology409()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_Methodology@6bf256fa]" name="Methodology_InheritAMethodology409" class="restassured.automation.testcases.Restassured_Automation_Methodology"/>
       </group> <!-- IntegrationTests -->
     </groups>
-    <test name="Test" duration-ms="85201" started-at="2021-06-13T06:25:12Z" finished-at="2021-06-13T06:26:37Z">
-      <class name="restassured.automation.testcases.Restassured_Automation_OrgRoles">
-        <test-method status="PASS" signature="OrganisationRoles_GetSuperUserFuntionGetAListOfAllPremissionForAUser_status200()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_OrgRoles@6536e911]" name="OrganisationRoles_GetSuperUserFuntionGetAListOfAllPremissionForAUser_status200" duration-ms="13139" started-at="2021-06-13T06:25:53Z" finished-at="2021-06-13T06:26:06Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- OrganisationRoles_GetSuperUserFuntionGetAListOfAllPremissionForAUser_status200 -->
-        <test-method status="PASS" signature="OrganisationRoles_GetTheListOfRoleDefinationsForTheOrganization_status200()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_OrgRoles@6536e911]" name="OrganisationRoles_GetTheListOfRoleDefinationsForTheOrganization_status200" duration-ms="3076" started-at="2021-06-13T06:26:06Z" finished-at="2021-06-13T06:26:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- OrganisationRoles_GetTheListOfRoleDefinationsForTheOrganization_status200 -->
-        <test-method status="PASS" signature="OrganisationRoles_LoadAllRolesInformationForAnOrganizationWithStatus_200()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_OrgRoles@6536e911]" name="OrganisationRoles_LoadAllRolesInformationForAnOrganizationWithStatus_200" duration-ms="6340" started-at="2021-06-13T06:26:09Z" finished-at="2021-06-13T06:26:15Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- OrganisationRoles_LoadAllRolesInformationForAnOrganizationWithStatus_200 -->
-        <test-method status="PASS" signature="OrganisationRoles_SUPER_USE_ENDPOINT_UpdateARolePermissionWithStatus_204()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_OrgRoles@6536e911]" name="OrganisationRoles_SUPER_USE_ENDPOINT_UpdateARolePermissionWithStatus_204" duration-ms="6376" started-at="2021-06-13T06:26:15Z" finished-at="2021-06-13T06:26:21Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- OrganisationRoles_SUPER_USE_ENDPOINT_UpdateARolePermissionWithStatus_204 -->
-        <test-method status="PASS" signature="OrganisationRoles_SUPER_USE_ENDPOINT_UpdateARolePermissionWithStatus_400()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_OrgRoles@6536e911]" name="OrganisationRoles_SUPER_USE_ENDPOINT_UpdateARolePermissionWithStatus_400" duration-ms="4054" started-at="2021-06-13T06:26:21Z" finished-at="2021-06-13T06:26:26Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- OrganisationRoles_SUPER_USE_ENDPOINT_UpdateARolePermissionWithStatus_400 -->
-        <test-method status="PASS" signature="OrganisationRoles_SUPER_USE_ENDPOINT_UpdateARolePermissionWithStatus_409()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_OrgRoles@6536e911]" name="OrganisationRoles_SUPER_USE_ENDPOINT_UpdateARolePermissionWithStatus_409" duration-ms="5331" started-at="2021-06-13T06:26:26Z" finished-at="2021-06-13T06:26:31Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- OrganisationRoles_SUPER_USE_ENDPOINT_UpdateARolePermissionWithStatus_409 -->
-      </class> <!-- restassured.automation.testcases.Restassured_Automation_OrgRoles -->
-      <class name="restassured.automation.testcases.Restassured_Automation_Organizations">
-        <test-method status="PASS" signature="Organisation_CreatePublishedStoreMethodologyFromOrganizationsHiddenMethodologyList()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_Organizations@6b09bb57]" name="Organisation_CreatePublishedStoreMethodologyFromOrganizationsHiddenMethodologyList" duration-ms="12660" started-at="2021-06-13T06:25:12Z" finished-at="2021-06-13T06:25:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Organisation_CreatePublishedStoreMethodologyFromOrganizationsHiddenMethodologyList -->
-        <test-method status="PASS" signature="Organisation_GetQueryForUsers_status200()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_Organizations@6b09bb57]" name="Organisation_GetQueryForUsers_status200" duration-ms="7960" started-at="2021-06-13T06:25:25Z" finished-at="2021-06-13T06:25:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Organisation_GetQueryForUsers_status200 -->
-        <test-method status="PASS" signature="Organisation_GetQueryForUsers_status400()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_Organizations@6b09bb57]" name="Organisation_GetQueryForUsers_status400" duration-ms="3276" started-at="2021-06-13T06:25:33Z" finished-at="2021-06-13T06:25:36Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Organisation_GetQueryForUsers_status400 -->
-        <test-method status="PASS" signature="Organisation_GetTheListOfOrganization()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_Organizations@6b09bb57]" name="Organisation_GetTheListOfOrganization" duration-ms="2862" started-at="2021-06-13T06:25:36Z" finished-at="2021-06-13T06:25:39Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Organisation_GetTheListOfOrganization -->
-        <test-method status="PASS" signature="Organisation_GetThePermissionForTheAuthUser()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_Organizations@6b09bb57]" name="Organisation_GetThePermissionForTheAuthUser" duration-ms="2861" started-at="2021-06-13T06:25:39Z" finished-at="2021-06-13T06:25:42Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Organisation_GetThePermissionForTheAuthUser -->
-        <test-method status="PASS" signature="Organisation_RemovePublishedStoreMethodologyFromOrganizationsHiddenMethodologyList()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_Organizations@6b09bb57]" name="Organisation_RemovePublishedStoreMethodologyFromOrganizationsHiddenMethodologyList" duration-ms="11013" started-at="2021-06-13T06:25:42Z" finished-at="2021-06-13T06:25:53Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Organisation_RemovePublishedStoreMethodologyFromOrganizationsHiddenMethodologyList -->
-      </class> <!-- restassured.automation.testcases.Restassured_Automation_Organizations -->
-      <class name="restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles">
-        <test-method status="PASS" signature="setup()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles@5f9d02cb]" name="setup" is-config="true" duration-ms="47" started-at="2021-06-13T06:25:12Z" finished-at="2021-06-13T06:25:12Z">
+    <test name="Default test" duration-ms="5745" started-at="2021-06-14T12:31:26Z" finished-at="2021-06-14T12:31:32Z">
+      <class name="restassured.automation.testcases.Restassured_Automation_Methodology">
+        <test-method status="PASS" signature="setup()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_Methodology@6bf256fa]" name="setup" is-config="true" duration-ms="59" started-at="2021-06-14T18:01:26Z" finished-at="2021-06-14T18:01:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_OrgRoles@6536e911]" name="setup" is-config="true" duration-ms="0" started-at="2021-06-13T06:25:12Z" finished-at="2021-06-13T06:25:12Z">
+        <test-method status="FAIL" signature="Methodology_InheritAMethodology409()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_Methodology@6bf256fa]" name="Methodology_InheritAMethodology409" duration-ms="5678" started-at="2021-06-14T18:01:26Z" finished-at="2021-06-14T18:01:32Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at restassured.automation.listeners.ExtentTestManager.statusLogMessage(ExtentTestManager.java:33)
+	at restassured.automation.testcases.Restassured_Automation_Methodology.Methodology_InheritAMethodology409(Restassured_Automation_Methodology.java:2033)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_Organizations@6b09bb57]" name="setup" is-config="true" duration-ms="1" started-at="2021-06-13T06:25:12Z" finished-at="2021-06-13T06:25:12Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:restassured.automation.testcases.Restassured_Automation_Rules@63753b6d]" name="setup" is-config="true" duration-ms="0" started-at="2021-06-13T06:25:12Z" finished-at="2021-06-13T06:25:12Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="EngagementTeamRoles_GetLoadAllEngagementRolesInformationForAnOrganization_status200()[pri:1, instance:restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles@5f9d02cb]" name="EngagementTeamRoles_GetLoadAllEngagementRolesInformationForAnOrganization_status200" duration-ms="6136" started-at="2021-06-13T06:26:31Z" finished-at="2021-06-13T06:26:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- EngagementTeamRoles_GetLoadAllEngagementRolesInformationForAnOrganization_status200 -->
-      </class> <!-- restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- Methodology_InheritAMethodology409 -->
+      </class> <!-- restassured.automation.testcases.Restassured_Automation_Methodology -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

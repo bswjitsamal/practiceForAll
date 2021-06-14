@@ -36,6 +36,7 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 	List<String> engagementRoleId;
 	String methodologyId;
 	String engagementTypeId;
+List<String> listTitle;
 	
 	read_Configuration_Propertites configDetails = new read_Configuration_Propertites();
 	Restassured_Automation_Utils restUtils = new Restassured_Automation_Utils();
@@ -118,7 +119,7 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		engagementTeamRolesPojo.setEngagementRoleId("6050fec083bab05523e2fbf5");
 		engagementTeamRolesPojo.setOrganization("5f950768fc13ae0ade000001");
 		engagementTeamRolesPojo.setRevision("6065690a2477890efb183f90");
-		engagementTeamRolesPojo.setTitle("Ss"+getRandomAlphaNum());
+		engagementTeamRolesPojo.setTitle("Ss"+getRandomAlphaNum()+getMethodology.getRandomNumber(1, 20));
 		
 
 		Response postEngagementTeamRoles = getMethodology.post_URLPOJO(URL, AuthorizationKey, 
@@ -360,7 +361,9 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		Response getEngagementTeamRolesID = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/engagementTeam/org/"+listOrdId.get(3)+"/roles");
 		JsonPath jsonPathEvaluator1 = getEngagementTeamRolesID.jsonPath();
 		engagementRoleId = jsonPathEvaluator1.get("engagementRoleId");
-		getEngagementTeamRolesID.prettyPrint();
+		listTitle=jsonPathEvaluator1.get("title");
+	
+		//getEngagementTeamRolesID.prettyPrint();
 		
 
 		Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();
@@ -370,7 +373,7 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		engagementTeamRolesPojo.setEngagementRoleId("6050fec083bab05523e2fbf5");
 		engagementTeamRolesPojo.setOrganization("5f950768fc13ae0ade000002");
 		engagementTeamRolesPojo.setRevision("6065690a2477890efb183f90");
-		engagementTeamRolesPojo.setTitle("Bs-Update");
+		engagementTeamRolesPojo.setTitle(listTitle.get(0));
 		
 
 		Response patchEngagementTeamRoles = allUtils.patch_URLPOJO(URL, AuthorizationKey, 
@@ -628,7 +631,7 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		engagementTeamRolesPojo.setEngagementRoleId("6050fec083bab05523e2fbf5");
 		engagementTeamRolesPojo.setOrganization("5f950768fc13ae0ade000002");
 		engagementTeamRolesPojo.setRevision("6065690a2477890efb183f90");
-		engagementTeamRolesPojo.setTitle("Tst"+getRandomAlphaNum());
+		engagementTeamRolesPojo.setTitle("Tst"+getRandomAlphaNum()+getMethodology.getRandomNumber(1, 40));
 		
 		
 		Response createPublish = getMethodology.post_URLPOJO(URL, AuthorizationKey,
@@ -684,7 +687,7 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		engagementTeamRolesPojo.setEngagementRoleId("6050fec083bab05523e2fbf5");
 		engagementTeamRolesPojo.setOrganization("5f950768fc13ae0ade000002");
 		engagementTeamRolesPojo.setRevision("6065690a2477890efb183f90");
-		engagementTeamRolesPojo.setTitle("Tst"+getRandomAlphaNum());
+		engagementTeamRolesPojo.setTitle("Tst"+getRandomAlphaNum()+getMethodology.getRandomNumber(1,20));
 		
 		
 		Response createPublish = getMethodology.post_URLPOJO(URL, AuthorizationKey,
@@ -769,26 +772,34 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		Response OrganizationsDetails = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/org");
 		JsonPath jsonPathEvaluator = OrganizationsDetails.jsonPath();
 		listOrdId = jsonPathEvaluator.get("id");
-		OrganizationsDetails.prettyPrint();
+		//OrganizationsDetails.prettyPrint();
 
+		/**
+		 * GETTING THE ROLE ID
+		 */
+		Response getEngagementTeamRolesID = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/engagementTeam/org/"+listOrdId.get(3)+"/roles");
+		JsonPath jsonPathEvaluator1 = getEngagementTeamRolesID.jsonPath();
+		engagementRoleId = jsonPathEvaluator1.get("engagementRoleId");
+		listTitle=jsonPathEvaluator1.get("title");
+		
 		/**
 		 * GETTING THE REVISION ID
 		 */
 
-		Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();
+		
 
-		Response getMethodologyRes = getMethodology.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
+		Response getMethodologyRes = allUtils.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
 				"Organization", listOrdId.get(3));
 		getMethodologyRes.prettyPrint();
 		
-		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
-		List<String> methodologyId = jsonPathEvaluator1.get("id");
+		JsonPath jsonPathEvaluato1 = getMethodologyRes.jsonPath();
+		List<String> methodologyId = jsonPathEvaluato1.get("id");
 		
 		//fetching the last item from the list
 		System.out.println(methodologyId.get(methodologyId.size()-1));		
 		
 		//ArrayList<Map<String, ?>> listRevisionId = jsonPathEvaluator1.get("revisions.id");
-		ArrayList<Map<String, ?>> listRevisionId = jsonPathEvaluator1.get("revisions");
+		ArrayList<Map<String, ?>> listRevisionId = jsonPathEvaluato1.get("revisions");
 
 		Object[] revId = listRevisionId.toArray();
 		
@@ -802,7 +813,7 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		engagementTeamRolesPojo.setTitle("string");
 		
 		
-		Response createPublish = getMethodology.post_URLPOJO(URL, AuthorizationKey,
+		Response createPublish = allUtils.post_URLPOJO(URL, AuthorizationKey,
 				"/api/engagementTeam/org/" +listOrdId.get(3) + "/revision/" + reviD.substring(1,25)+"/roles",engagementTeamRolesPojo);
 		createPublish.prettyPrint();
 		
@@ -812,7 +823,7 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		 */
 		ExtentTestManager.statusLogMessage(createPublish.statusCode());
 		ExtentTestManager.getTest().log(Status.INFO,createPublish.asString());
-		getMethodology.validate_HTTPStrictTransportSecurity(createPublish);
+		allUtils.validate_HTTPStrictTransportSecurity(createPublish);
 
 
 	}
@@ -938,7 +949,7 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		engagementTeamRolesPojo1.setEngagementRoleId("6050fec083bab05523e2fbf6");
 		engagementTeamRolesPojo1.setOrganization("6050fec083bab05523e2fbf6");
 		engagementTeamRolesPojo1.setRevision("6050fec083bab05523e2fbf6");
-		engagementTeamRolesPojo1.setTitle("Test"+getRandomAlphaNum());
+		engagementTeamRolesPojo1.setTitle("Test"+getRandomAlphaNum()+getMethodology.getRandomNumber(1,30));
 		
 		Response patchPublish = getMethodology.patch_URLPOJO(URL, AuthorizationKey,
 				"/api/engagementTeams/org/" +listOrdId.get(3) + "/revision/" + reviD.substring(1, 25)+"/roles/"+engagementRoleId.get(0),engagementTeamRolesPojo1);
@@ -1001,6 +1012,7 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		
 		JsonPath jsonPathEvaluator2 = createPublish.jsonPath();
 		List<String> engagementRoleId = jsonPathEvaluator2.get("engagementRoleId");
+		listTitle=jsonPathEvaluator2.get("title");
 		System.out.println(engagementRoleId);
 		
 		//Performing Patch operation
@@ -1008,7 +1020,7 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		engagementTeamRolesPojo1.setEngagementRoleId("6050fec083bab05523e2fbf6");
 		engagementTeamRolesPojo1.setOrganization("6050fec083bab05523e2fbf6");
 		engagementTeamRolesPojo1.setRevision("6050fec083bab05523e2fbf6");
-		engagementTeamRolesPojo1.setTitle("Test");
+		engagementTeamRolesPojo1.setTitle(listTitle.get(0));
 		
 		Response patchPublish = getMethodology.patch_URLPOJO(URL, AuthorizationKey,
 				"/api/engagementTeam/org/" +listOrdId.get(3) + "/revision/" + reviD.substring(1,25)+"/roles/"+engagementRoleId.get(0),engagementTeamRolesPojo1);
@@ -1266,7 +1278,7 @@ public class Restassured_Automation_EngagementTeamRoles extends read_Configurati
 		List<String> engagementRoleId = jsonPathEvaluator2.get("engagementRoleId");
 		System.out.println(engagementRoleId);
 		
-		String id = engagementRoleId.get(1);
+		String id = engagementRoleId.get(0);
 		
 		Response dalatePublish = getMethodology.delete(URL, AuthorizationKey,
 				"/api/engagementTeam/org/" +listOrdId.get(3) + "/revision/" + reviD.substring(1, 25)+"/roles/"+id);
