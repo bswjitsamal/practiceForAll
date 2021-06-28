@@ -286,7 +286,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_i0tXkJhIEeuvUvk5AQUsHA" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_1FWdYJhIEeuOEv4zOxGdlw" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_h1Yom5hIEeuvUvk5AQUsHA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_U5U2QNfMEeuiOP9kFLU5Dg" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_h1Yom5hIEeuvUvk5AQUsHA"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_i0tXkZhIEeuvUvk5AQUsHA" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -307,7 +307,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_i0t-ophIEeuvUvk5AQUsHA" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_1FZgsJhIEeuOEv4zOxGdlw" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_h1XahZhIEeuvUvk5AQUsHA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_U5WrcdfMEeuiOP9kFLU5Dg" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_h1XahZhIEeuvUvk5AQUsHA"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_i0t-o5hIEeuvUvk5AQUsHA" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -764,6 +764,19 @@
   <bindingTables xmi:id="_jNLh8phIEeuvUvk5AQUsHA" bindingContext="_jNLh8ZhIEeuvUvk5AQUsHA"/>
   <bindingTables xmi:id="_jNLh9JhIEeuvUvk5AQUsHA" bindingContext="_jNLh85hIEeuvUvk5AQUsHA"/>
   <bindingTables xmi:id="_jNMJAZhIEeuvUvk5AQUsHA" bindingContext="_jNMJAJhIEeuvUvk5AQUsHA"/>
+  <bindingTables xmi:id="_UfJbsNfMEeuiOP9kFLU5Dg" elementId="org.epic.perleditor.perlEditorScope" bindingContext="_Uen3QNfMEeuiOP9kFLU5Dg">
+    <bindings xmi:id="_UfLQ4NfMEeuiOP9kFLU5Dg" keySequence="F3" command="_Uei-wNfMEeuiOP9kFLU5Dg"/>
+    <bindings xmi:id="_UfL38NfMEeuiOP9kFLU5Dg" keySequence="SHIFT+F5" command="_Uei-wtfMEeuiOP9kFLU5Dg"/>
+    <bindings xmi:id="_UfNGENfMEeuiOP9kFLU5Dg" keySequence="CTRL+/" command="_Uei-xdfMEeuiOP9kFLU5Dg"/>
+    <bindings xmi:id="_UfO7QNfMEeuiOP9kFLU5Dg" keySequence="ALT+SHIFT+O" command="_Uei-yNfMEeuiOP9kFLU5Dg"/>
+    <bindings xmi:id="_UfO7QdfMEeuiOP9kFLU5Dg" keySequence="CTRL+SHIFT+P" command="_Uei-xNfMEeuiOP9kFLU5Dg"/>
+    <bindings xmi:id="_UfQJYNfMEeuiOP9kFLU5Dg" keySequence="CTRL+SHIFT+H" command="_Uei-x9fMEeuiOP9kFLU5Dg"/>
+    <bindings xmi:id="_UfQwcNfMEeuiOP9kFLU5Dg" keySequence="CTRL+SHIFT+C" command="_UeiXsNfMEeuiOP9kFLU5Dg"/>
+    <bindings xmi:id="_UfQwcdfMEeuiOP9kFLU5Dg" keySequence="CTRL+SHIFT+D" command="_Uei-xtfMEeuiOP9kFLU5Dg"/>
+    <bindings xmi:id="_UfRXgNfMEeuiOP9kFLU5Dg" keySequence="CTRL+SHIFT+F" command="_Uei-w9fMEeuiOP9kFLU5Dg"/>
+  </bindingTables>
+  <bindingTables xmi:id="_U2Q7MNfMEeuiOP9kFLU5Dg" bindingContext="_U2QUINfMEeuiOP9kFLU5Dg"/>
+  <bindingTables xmi:id="_U2Q7MtfMEeuiOP9kFLU5Dg" bindingContext="_U2Q7MdfMEeuiOP9kFLU5Dg"/>
   <rootContext xmi:id="_hzLCFJhIEeuvUvk5AQUsHA" elementId="org.eclipse.ui.contexts.dialogAndWindow" contributorURI="platform:/plugin/org.eclipse.platform" name="In Dialogs and Windows" description="Either a dialog or a window is open">
     <children xmi:id="_hzLCFZhIEeuvUvk5AQUsHA" elementId="org.eclipse.ui.contexts.window" contributorURI="platform:/plugin/org.eclipse.platform" name="In Windows" description="A window is open">
       <children xmi:id="_hzLCFphIEeuvUvk5AQUsHA" elementId="org.eclipse.e4.ui.contexts.views" contributorURI="platform:/plugin/org.eclipse.platform" name="%bindingcontext.name.bindingView"/>
@@ -793,6 +806,7 @@
         </children>
         <children xmi:id="_h1n5QJhIEeuvUvk5AQUsHA" elementId="org.eclipse.ant.ui.AntEditorScope" name="Editing Ant Buildfiles" description="Editing Ant Buildfiles Context"/>
         <children xmi:id="_h1n5RphIEeuvUvk5AQUsHA" elementId="org.eclipse.jdt.ui.propertiesEditorScope" name="Editing Properties Files" description="Editing Properties Files Context"/>
+        <children xmi:id="_Uen3QNfMEeuiOP9kFLU5Dg" elementId="org.epic.perleditor.perlEditorScope" name="Editing Perl Source" description="Editing Perl Source Code Context"/>
       </children>
       <children xmi:id="_h1n5JJhIEeuvUvk5AQUsHA" elementId="org.eclipse.debug.ui.console" name="In I/O Console" description="In I/O console"/>
       <children xmi:id="_h1n5JZhIEeuvUvk5AQUsHA" elementId="org.eclipse.compare.compareEditorScope" name="Comparing in an Editor" description="Comparing in an Editor"/>
@@ -849,6 +863,8 @@
   <rootContext xmi:id="_jNLh8ZhIEeuvUvk5AQUsHA" elementId="org.eclipse.ui.WorkingSetActionSet" name="Auto::org.eclipse.ui.WorkingSetActionSet"/>
   <rootContext xmi:id="_jNLh85hIEeuvUvk5AQUsHA" elementId="org.eclipse.ui.actionSet.openFiles" name="Auto::org.eclipse.ui.actionSet.openFiles"/>
   <rootContext xmi:id="_jNMJAJhIEeuvUvk5AQUsHA" elementId="org.eclipse.ui.edit.text.actionSet.presentation" name="Auto::org.eclipse.ui.edit.text.actionSet.presentation"/>
+  <rootContext xmi:id="_U2QUINfMEeuiOP9kFLU5Dg" elementId="org.epic.perleditor.actionSet.coding" name="Auto::org.epic.perleditor.actionSet.coding"/>
+  <rootContext xmi:id="_U2Q7MdfMEeuiOP9kFLU5Dg" elementId="org.epic.perleditor.toolbar.actionSet.presentation" name="Auto::org.epic.perleditor.toolbar.actionSet.presentation"/>
   <descriptors xmi:id="_h8RTsJhIEeuvUvk5AQUsHA" elementId="org.eclipse.e4.ui.compatibility.editor" allowMultiple="true" category="org.eclipse.e4.primaryDataStack" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor">
     <tags>Editor</tags>
   </descriptors>
@@ -1235,6 +1251,36 @@
     <persistedState key="originalCompatibilityViewBundle" value="org.testng.eclipse"/>
     <tags>View</tags>
     <tags>categoryTag:Java</tags>
+  </descriptors>
+  <descriptors xmi:id="_UjNcUNfMEeuiOP9kFLU5Dg" elementId="org.eclipse.debug.expressionview" label="Perl Expression View" iconURI="platform:/plugin/org.epic.debug/icons/expression_view.gif" tooltip="" category="EPIC" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="org.epic.debug.ui.ExpressionView"/>
+    <persistedState key="originalCompatibilityViewBundle" value="org.epic.debug"/>
+    <tags>View</tags>
+    <tags>categoryTag:EPIC</tags>
+  </descriptors>
+  <descriptors xmi:id="_UjP4kNfMEeuiOP9kFLU5Dg" elementId="org.epic.perleditor.views.ExplainErrorsView" label="Explain Errors/Warnings" iconURI="platform:/plugin/org.epic.perleditor/icons/light_bulb.gif" tooltip="" category="EPIC" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="org.epic.perleditor.views.ExplainErrorsView"/>
+    <persistedState key="originalCompatibilityViewBundle" value="org.epic.perleditor"/>
+    <tags>View</tags>
+    <tags>categoryTag:EPIC</tags>
+  </descriptors>
+  <descriptors xmi:id="_UjRGsNfMEeuiOP9kFLU5Dg" elementId="org.epic.perleditor.views.PerlDocView" label="PerlDoc" iconURI="platform:/plugin/org.epic.perleditor/icons/book.gif" tooltip="" category="EPIC" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="org.epic.perleditor.views.PerlDocView"/>
+    <persistedState key="originalCompatibilityViewBundle" value="org.epic.perleditor"/>
+    <tags>View</tags>
+    <tags>categoryTag:EPIC</tags>
+  </descriptors>
+  <descriptors xmi:id="_UjRGsdfMEeuiOP9kFLU5Dg" elementId="org.epic.core.views.browser.BrowserView" label="EPIC Web Browser" iconURI="platform:/plugin/org.epic.perleditor/icons/epic_cgi.gif" tooltip="" category="EPIC" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="org.epic.core.views.browser.BrowserView"/>
+    <persistedState key="originalCompatibilityViewBundle" value="org.epic.perleditor"/>
+    <tags>View</tags>
+    <tags>categoryTag:EPIC</tags>
+  </descriptors>
+  <descriptors xmi:id="_UjSU0NfMEeuiOP9kFLU5Dg" elementId="org.epic.regexp.views.RegExpView" label="RegExp" iconURI="platform:/plugin/org.epic.regexp/icons/rx.gif" tooltip="" category="EPIC" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="org.epic.regexp.views.RegExpView"/>
+    <persistedState key="originalCompatibilityViewBundle" value="org.epic.regexp"/>
+    <tags>View</tags>
+    <tags>categoryTag:EPIC</tags>
   </descriptors>
   <menuContributions xmi:id="_hzLCGJhIEeuvUvk5AQUsHA" elementId="org.eclipse.ui.window.customizePerspective" contributorURI="platform:/plugin/org.eclipse.platform" positionInParent="popup:toolbar">
     <children xsi:type="menu:HandledMenuItem" xmi:id="_hzLCGZhIEeuvUvk5AQUsHA" elementId="org.eclipse.ui.window.customizePerspective" contributorURI="platform:/plugin/org.eclipse.platform" label="%command.name.customize" command="_hzLCGphIEeuvUvk5AQUsHA"/>
@@ -2249,6 +2295,24 @@
   <commands xmi:id="_itSg8ZhIEeuvUvk5AQUsHA" elementId="AUTOGEN:::org.eclipse.mylyn.tasks.ui.actions.view/org.eclipse.mylyn.tasks.ui.open.repositories.view" commandName="Show Task Repositories View" description="Show Task Repositories View" category="_h1RT4JhIEeuvUvk5AQUsHA"/>
   <commands xmi:id="_itSg8phIEeuvUvk5AQUsHA" elementId="AUTOGEN:::org.eclipse.mylyn.tasks.ui.actions.view/org.eclipse.mylyn.doc.legend.show.action" commandName="Show UI Legend" description="Show Tasks UI Legend" category="_h1RT4JhIEeuvUvk5AQUsHA"/>
   <commands xmi:id="_itTIAJhIEeuvUvk5AQUsHA" elementId="AUTOGEN:::org.eclipse.mylyn.tasks.ui.actions.view/org.eclipse.mylyn.context.ui.actions.tasklist.focus" commandName="Focus on Workweek" description="Focus on Workweek" category="_h1RT4JhIEeuvUvk5AQUsHA"/>
+  <commands xmi:id="_UeiXsNfMEeuiOP9kFLU5Dg" elementId="org.epic.perleditor.commands.perlCritic" commandName="Perl::Critic" description="Run Perl::Critic Against Source" category="_UehJkdfMEeuiOP9kFLU5Dg"/>
+  <commands xmi:id="_UeiXsdfMEeuiOP9kFLU5Dg" elementId="org.epic.perleditor.commands.extractSubroutine" commandName="Extract Subroutine" description="Extract Subroutine" category="_UehJkdfMEeuiOP9kFLU5Dg"/>
+  <commands xmi:id="_Uei-wNfMEeuiOP9kFLU5Dg" elementId="org.epic.perleditor.commands.openDeclaration" commandName="Open Declaration" description="Opens subroutine/package declaration" category="_h1QszJhIEeuvUvk5AQUsHA"/>
+  <commands xmi:id="_Uei-wdfMEeuiOP9kFLU5Dg" elementId="org.epic.perleditor.commands.clearMarker" commandName="Clear Markers" description="Clear EPIC Markers" category="_UehJkdfMEeuiOP9kFLU5Dg"/>
+  <commands xmi:id="_Uei-wtfMEeuiOP9kFLU5Dg" elementId="org.epic.perleditor.commands.validateSyntax" commandName="Validate Syntax" description="Validate Syntax" category="_UehJkdfMEeuiOP9kFLU5Dg"/>
+  <commands xmi:id="_Uei-w9fMEeuiOP9kFLU5Dg" elementId="org.epic.perleditor.commands.formatSource" commandName="Format Source" description="Format Source" category="_UehJkdfMEeuiOP9kFLU5Dg"/>
+  <commands xmi:id="_Uei-xNfMEeuiOP9kFLU5Dg" elementId="org.epic.perleditor.commands.jump2Bracket" commandName="Matching Bracket" description="Matching Bracket" category="_h1QszJhIEeuvUvk5AQUsHA"/>
+  <commands xmi:id="_Uei-xdfMEeuiOP9kFLU5Dg" elementId="org.epic.perleditor.commands.toggleComment" commandName="Toggle Comment" description="Toggle Source Comment" category="_UehJkdfMEeuiOP9kFLU5Dg"/>
+  <commands xmi:id="_Uei-xtfMEeuiOP9kFLU5Dg" elementId="org.epic.perleditor.commands.podChecker" commandName="Pod::Checker" description="Run PodChecker Against Source" category="_UehJkdfMEeuiOP9kFLU5Dg"/>
+  <commands xmi:id="_Uei-x9fMEeuiOP9kFLU5Dg" elementId="org.epic.perleditor.commands.searchPerlDoc" commandName="Search Perldoc" description="Search Perldoc" category="_h1RT05hIEeuvUvk5AQUsHA"/>
+  <commands xmi:id="_Uei-yNfMEeuiOP9kFLU5Dg" elementId="org.epic.perleditor.commands.toggleMarkOccurrences" commandName="Toggle Mark Occurrences" description="Toggle Mark Occurrences" category="_UehJkdfMEeuiOP9kFLU5Dg"/>
+  <commands xmi:id="_Uei-ydfMEeuiOP9kFLU5Dg" elementId="org.epic.perleditor.commands.htmlExport" commandName="HTML Export" description="HTML Export" category="_UehJkdfMEeuiOP9kFLU5Dg"/>
+  <commands xmi:id="_U1thkNfMEeuiOP9kFLU5Dg" elementId="AUTOGEN:::org.epic.perleditor.editors.PerlEditor.BreakpointRulerActions/org.epic.debug.ui.action.ManageBreakpointRulerAction" commandName="Toggle Breakpoint" category="_h1RT4JhIEeuvUvk5AQUsHA"/>
+  <commands xmi:id="_U1v90NfMEeuiOP9kFLU5Dg" elementId="AUTOGEN:::org.epic.debug.showLocalVariablesAction/org.epic.debug.showLocalVariablesAction" commandName="Show Local Variables" description="Show Local Variable" category="_h1RT4JhIEeuvUvk5AQUsHA"/>
+  <commands xmi:id="_U1v90dfMEeuiOP9kFLU5Dg" elementId="AUTOGEN:::org.epic.debug.showGlobalVariablesAction/org.epic.debug.showGlobalVariablesAction" commandName="Show Global Variables" description="Show Global Variable" category="_h1RT4JhIEeuvUvk5AQUsHA"/>
+  <commands xmi:id="_U1wk4NfMEeuiOP9kFLU5Dg" elementId="AUTOGEN:::org.epic.debug.showPerlInternalVariablesAction/org.epic.debug.showPerlInternalVariablesAction" commandName="Show Perl Internal Variables" description="Show Perl Internal Variables" category="_h1RT4JhIEeuvUvk5AQUsHA"/>
+  <commands xmi:id="_U1wk4dfMEeuiOP9kFLU5Dg" elementId="AUTOGEN:::org.epic.debug.showVarAddressAction/org.epic.debug.showVarAddressAction" commandName="Show Addresses of Variables" description="Show Addresses of Variables" category="_h1RT4JhIEeuvUvk5AQUsHA"/>
+  <commands xmi:id="_U1xL8NfMEeuiOP9kFLU5Dg" elementId="AUTOGEN:::org.epic.debug.highlightVarUpdatesAction/org.epic.debug.highlightVarUpdatesAction" commandName="Highlight Updated Variables" description="Highlight Updated Variables" category="_h1RT4JhIEeuvUvk5AQUsHA"/>
   <addons xmi:id="_hzLpIJhIEeuvUvk5AQUsHA" elementId="org.eclipse.e4.core.commands.service" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
   <addons xmi:id="_hzLpIZhIEeuvUvk5AQUsHA" elementId="org.eclipse.e4.ui.contexts.service" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
   <addons xmi:id="_hzLpIphIEeuvUvk5AQUsHA" elementId="org.eclipse.e4.ui.bindings.service" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
@@ -2260,7 +2324,7 @@
   <addons xmi:id="_hzLpKJhIEeuvUvk5AQUsHA" elementId="MinMax Addon" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon"/>
   <addons xmi:id="_hzLpKZhIEeuvUvk5AQUsHA" elementId="org.eclipse.ui.workbench.addon.0" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
   <addons xmi:id="_hzsmgJhIEeuvUvk5AQUsHA" elementId="SplitterAddon" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.splitteraddon.SplitterAddon"/>
-  <addons xmi:id="_0tglIZhIEeuOEv4zOxGdlw" elementId="org.eclipse.ui.ide.addon.0" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
+  <addons xmi:id="_IYS0IKimEeS11vbz3f9ezw" elementId="org.eclipse.ui.ide.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.ide" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
   <addons xmi:id="_dz0JgGOlEeSMMaPQU2nlzw" elementId="org.eclipse.ui.ide.application.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.ide.application" contributionURI="bundleclass://org.eclipse.ui.ide.application/org.eclipse.ui.internal.ide.application.addons.ModelCleanupAddon"/>
   <categories xmi:id="_h1QswJhIEeuvUvk5AQUsHA" elementId="org.eclipse.team.ui.category.team" name="Team" description="Actions that apply when working with a Team"/>
   <categories xmi:id="_h1QswZhIEeuvUvk5AQUsHA" elementId="org.eclipse.ui.category.views" name="Views" description="Commands for opening views"/>
@@ -2297,4 +2361,5 @@
   <categories xmi:id="_h1RT35hIEeuvUvk5AQUsHA" elementId="org.eclipse.oomph.commands" name="Oomph"/>
   <categories xmi:id="_h1RT4JhIEeuvUvk5AQUsHA" elementId="org.eclipse.core.commands.categories.autogenerated" name="Uncategorized" description="Commands that were either auto-generated or have no category"/>
   <categories xmi:id="_DbsAQOIjEeWDJvu3hU0AuQ" elementId="org.eclipse.recommenders.news.rcp.category.news" contributorURI="platform:/plugin/org.eclipse.recommenders.news.rcp" name="%category.name.news" description="%category.description.news"/>
+  <categories xmi:id="_UehJkdfMEeuiOP9kFLU5Dg" elementId="org.epic.perleditor.commands.source" name="Perl Source" description="Perl Source Actions"/>
 </application:Application>

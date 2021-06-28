@@ -533,8 +533,8 @@ public class Restassured_Automation_ProcedureGroups extends read_Configuration_P
 			String patchId6 = "/api/methodologyItem/revision/" + revId.substring(1,25) + "/item";
 
 			Map<String, String> data6 = new HashMap<String, String>();
-			data6.put("title", post.getProperty("postMethodologyItemTitle"));
-			data6.put("parentId", parntId);
+			data6.put("title", post.getProperty("postMethodologyItemTitle")+AllUtils.getRandomNumber(1, 20));
+			data6.put("parentId", methodItemId1);
 			data6.put("index", post.getProperty("postMethodologyItemIndex"));
 			data6.put("itemType", post.getProperty("postMethodologyItemType"));
 
@@ -830,8 +830,8 @@ public class Restassured_Automation_ProcedureGroups extends read_Configuration_P
 			String patchId6 = "/api/methodologyItem/revision/" + revId.substring(1,25) + "/item";
 
 			Map<String, String> data6 = new HashMap<String, String>();
-			data6.put("title", post.getProperty("postMethodologyItemTitle"));
-			data6.put("parentId", parntId);
+			data6.put("title", post.getProperty("postMethodologyItemTitle")+AllUtils.getRandomNumber(1, 20));
+			data6.put("parentId", methodItemId);
 			data6.put("index", post.getProperty("postMethodologyItemIndex"));
 			data6.put("itemType", post.getProperty("postMethodologyItemType"));
 
@@ -1447,8 +1447,8 @@ public class Restassured_Automation_ProcedureGroups extends read_Configuration_P
 			String patchId6 = "/api/methodologyItem/revision/" + revId.substring(1,25) + "/item";
 
 			Map<String, String> data6 = new HashMap<String, String>();
-			data6.put("title", post.getProperty("postMethodologyItemTitle"));
-			data6.put("parentId", parntId);
+			data6.put("title", post.getProperty("postMethodologyItemTitle")+AllUtils.getRandomNumber(1, 20));
+			data6.put("parentId", methodItemId);
 			data6.put("index", post.getProperty("postMethodologyItemIndex"));
 			data6.put("itemType", post.getProperty("postMethodologyItemType"));
 
@@ -1545,7 +1545,7 @@ public class Restassured_Automation_ProcedureGroups extends read_Configuration_P
 			
 			Map<String, String> data11 = new HashMap<String, String>();
 			data11.put("revision",revision);
-			data11.put("methodologyItemId", methodItemId2);
+			data11.put("methodologyItemId", methodItemId3);
 			data11.put("title", "New Group");
 
 			/**
@@ -2137,8 +2137,8 @@ public class Restassured_Automation_ProcedureGroups extends read_Configuration_P
 			String patchId6 = "/api/methodologyItem/revision/" + revId.substring(1,25) + "/item";
 
 			Map<String, String> data6 = new HashMap<String, String>();
-			data6.put("title", post.getProperty("postMethodologyItemTitle"));
-			data6.put("parentId", parntId);
+			data6.put("title", post.getProperty("postMethodologyItemTitle")+AllUtils.getRandomNumber(1, 20));
+			data6.put("parentId", methodItemId1);
 			data6.put("index", post.getProperty("postMethodologyItemIndex"));
 			data6.put("itemType", post.getProperty("postMethodologyItemType"));
 
@@ -2499,8 +2499,8 @@ public class Restassured_Automation_ProcedureGroups extends read_Configuration_P
 			String patchId6 = "/api/methodologyItem/revision/" + revId.substring(1,25) + "/item";
 
 			Map<String, String> data6 = new HashMap<String, String>();
-			data6.put("title", post.getProperty("postMethodologyItemTitle"));
-			data6.put("parentId", parntId);
+			data6.put("title", post.getProperty("postMethodologyItemTitle")+AllUtils.getRandomNumber(1, 20));
+			data6.put("parentId", methodItemId);
 			data6.put("index", post.getProperty("postMethodologyItemIndex"));
 			data6.put("itemType", post.getProperty("postMethodologyItemType"));
 
@@ -2689,7 +2689,7 @@ public class Restassured_Automation_ProcedureGroups extends read_Configuration_P
 		
 		
 		@Test(groups = { "IntegrationTests" })
-		public void ProcedureGroupTree_DeleteCreateAProcedureGroupTree_status204() throws JsonIOException, JsonSyntaxException, IOException { 
+		public void ProcedureGroupTree_DeleteCreateAProcedureGroupTree_status404() throws JsonIOException, JsonSyntaxException, IOException { 
 			
 			Restassured_Automation_Utils allUtils = new Restassured_Automation_Utils();
 			// fetching Org Id
@@ -2861,8 +2861,8 @@ public class Restassured_Automation_ProcedureGroups extends read_Configuration_P
 			String patchId6 = "/api/methodologyItem/revision/" + revId.substring(1,25) + "/item";
 
 			Map<String, String> data6 = new HashMap<String, String>();
-			data6.put("title", post.getProperty("postMethodologyItemTitle"));
-			data6.put("parentId", parntId);
+			data6.put("title", post.getProperty("postMethodologyItemTitle")+AllUtils.getRandomNumber(1, 20));
+			data6.put("parentId", methodItemId);
 			data6.put("index", post.getProperty("postMethodologyItemIndex"));
 			data6.put("itemType", post.getProperty("postMethodologyItemType"));
 
@@ -3025,7 +3025,7 @@ public class Restassured_Automation_ProcedureGroups extends read_Configuration_P
 			Response deleteProcedureGropusTreeRes = AllUtils.delete_URLPOJO(URL, AuthorizationKey, patchId14, data14);
 			deleteProcedureGropusTreeRes.prettyPrint();
 			
-			Assert.assertEquals(deleteProcedureGropusTreeRes.statusCode(), 204);
+			Assert.assertEquals(deleteProcedureGropusTreeRes.statusCode(), 404);
 			
 		
 			
@@ -3565,8 +3565,8 @@ public class Restassured_Automation_ProcedureGroups extends read_Configuration_P
 			String patchId6 = "/api/methodologyItem/revision/" + revId.substring(1,25) + "/item";
 
 			Map<String, String> data6 = new HashMap<String, String>();
-			data6.put("title", post.getProperty("postMethodologyItemTitle"));
-			data6.put("parentId", parntId);
+			data6.put("title", post.getProperty("postMethodologyItemTitle")+AllUtils.getRandomNumber(1, 20));
+			data6.put("parentId", methodItemId1);
 			data6.put("index", post.getProperty("postMethodologyItemIndex"));
 			data6.put("itemType", post.getProperty("postMethodologyItemType"));
 
@@ -3719,7 +3719,7 @@ public class Restassured_Automation_ProcedureGroups extends read_Configuration_P
 			putProcedureGropusRes.prettyPrint();
 			
 			/**
-			 * DELETE THE TREE
+			 * UPDATE THE TREE
 			 */
 			
 			 String patchId14 = "/api/procedureGroups/revision/" + revision+"/tree/"+procedureGroupId ;
@@ -3729,7 +3729,7 @@ public class Restassured_Automation_ProcedureGroups extends read_Configuration_P
 			Response putProcedureGropusTreeRes = AllUtils.put_URLPOJO(URL, AuthorizationKey, patchId14, data14);
 			putProcedureGropusTreeRes.prettyPrint();
 			
-			Assert.assertEquals(putProcedureGropusTreeRes.statusCode(), 204);
+			Assert.assertEquals(putProcedureGropusTreeRes.statusCode(), 404);
 			
 		
 			
