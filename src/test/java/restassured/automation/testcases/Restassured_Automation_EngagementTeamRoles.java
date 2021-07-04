@@ -123,7 +123,7 @@ List<String> listTitle;
 		
 
 		Response postEngagementTeamRoles = getMethodology.post_URLPOJO(URL, AuthorizationKey, 
-				"/api/engagementTeam/org/"+listOrdId.get(3)+"/roles", engagementTeamRolesPojo);
+				"/api/engagementTeam/org/"+listOrdId.get(0)+"/roles", engagementTeamRolesPojo);
 		postEngagementTeamRoles.prettyPrint();
 		
 		Assert.assertEquals(postEngagementTeamRoles.statusCode(), 200);
@@ -135,6 +135,7 @@ List<String> listTitle;
 		getMethodology.validate_HTTPStrictTransportSecurity(postEngagementTeamRoles);
 		
 	}
+	
 	@Test(groups = { "IntegrationTests" }, priority =2)
 	public void EngagementTeamRoles_PostCreateAnEngagementRoleForAnOrganization_status404() throws IOException {
 
@@ -269,7 +270,7 @@ List<String> listTitle;
 		/**
 		 * GETTING THE ROLE ID
 		 */
-		Response getEngagementTeamRolesID = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/engagementTeam/org/"+listOrdId.get(3)+"/roles");
+		Response getEngagementTeamRolesID = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/engagementTeam/org/"+listOrdId.get(0)+"/roles");
 		JsonPath jsonPathEvaluator1 = getEngagementTeamRolesID.jsonPath();
 		engagementRoleId = jsonPathEvaluator1.get("engagementRoleId");
 		getEngagementTeamRolesID.prettyPrint();
@@ -286,7 +287,7 @@ List<String> listTitle;
 		
 
 		Response patchEngagementTeamRoles = allUtils.patch_URLPOJO(URL, AuthorizationKey, 
-				"/api/engagementTeam/org/"+listOrdId.get(3)+"/roles/"+engagementRoleId.get(0), engagementTeamRolesPojo);
+				"/api/engagementTeam/org/"+listOrdId.get(0)+"/roles/"+engagementRoleId.get(0), engagementTeamRolesPojo);
 		patchEngagementTeamRoles.prettyPrint();
 		
 		Assert.assertEquals(patchEngagementTeamRoles.statusCode(), 204);
@@ -313,7 +314,7 @@ List<String> listTitle;
 		/**
 		 * GETTING THE ROLE ID
 		 */
-		Response getEngagementTeamRolesID = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/engagementTeam/org/"+listOrdId.get(3)+"/roles");
+		Response getEngagementTeamRolesID = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/engagementTeam/org/"+listOrdId.get(0)+"/roles");
 		JsonPath jsonPathEvaluator1 = getEngagementTeamRolesID.jsonPath();
 		engagementRoleId = jsonPathEvaluator1.get("engagementRoleId");
 		getEngagementTeamRolesID.prettyPrint();
@@ -330,7 +331,7 @@ List<String> listTitle;
 		
 
 		Response patchEngagementTeamRoles = allUtils.patch_URLPOJO(URL, AuthorizationKey, 
-				"/api/engagementTeams/org/"+listOrdId.get(3)+"/roles/"+engagementRoleId.get(0), engagementTeamRolesPojo);
+				"/api/engagementTeams/org/"+listOrdId.get(0)+"/roles/"+engagementRoleId.get(0), engagementTeamRolesPojo);
 		patchEngagementTeamRoles.prettyPrint();
 		
 		Assert.assertEquals(patchEngagementTeamRoles.statusCode(), 404);
@@ -358,7 +359,7 @@ List<String> listTitle;
 		/**
 		 * GETTING THE ROLE ID
 		 */
-		Response getEngagementTeamRolesID = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/engagementTeam/org/"+listOrdId.get(3)+"/roles");
+		Response getEngagementTeamRolesID = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/engagementTeam/org/"+listOrdId.get(0)+"/roles");
 		JsonPath jsonPathEvaluator1 = getEngagementTeamRolesID.jsonPath();
 		engagementRoleId = jsonPathEvaluator1.get("engagementRoleId");
 		listTitle=jsonPathEvaluator1.get("title");
@@ -377,7 +378,7 @@ List<String> listTitle;
 		
 
 		Response patchEngagementTeamRoles = allUtils.patch_URLPOJO(URL, AuthorizationKey, 
-				"/api/engagementTeam/org/"+listOrdId.get(3)+"/roles/"+engagementRoleId.get(0), engagementTeamRolesPojo);
+				"/api/engagementTeam/org/"+listOrdId.get(0)+"/roles/"+engagementRoleId.get(0), engagementTeamRolesPojo);
 		patchEngagementTeamRoles.prettyPrint();
 		
 		Assert.assertEquals(patchEngagementTeamRoles.statusCode(), 409);
@@ -405,7 +406,7 @@ List<String> listTitle;
 		/**
 		 * GETTING THE ROLE ID
 		 */
-		Response getEngagementTeamRolesID = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/engagementTeam/org/"+listOrdId.get(3)+"/roles");
+		Response getEngagementTeamRolesID = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/engagementTeam/org/"+listOrdId.get(0)+"/roles");
 		JsonPath jsonPathEvaluator1 = getEngagementTeamRolesID.jsonPath();
 		engagementRoleId = jsonPathEvaluator1.get("engagementRoleId");
 		getEngagementTeamRolesID.prettyPrint();
@@ -422,7 +423,7 @@ List<String> listTitle;
 		
 
 		Response patchEngagementTeamRoles = allUtils.patch_URLPOJO(URL, AuthorizationKey, 
-				"/api/engagementTeam/org/"+listOrdId.get(3)+"/roles/"+engagementRoleId.get(0), engagementTeamRolesPojo);
+				"/api/engagementTeam/org/"+listOrdId.get(0)+"/roles/"+engagementRoleId.get(0), engagementTeamRolesPojo);
 		patchEngagementTeamRoles.prettyPrint();
 		
 		Assert.assertEquals(patchEngagementTeamRoles.statusCode(), 400);
@@ -451,14 +452,14 @@ List<String> listTitle;
 		/**
 		 * GETTING THE ROLE ID
 		 */
-		Response getEngagementTeamRolesID = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/engagementTeam/org/"+listOrdId.get(3)+"/roles");
+		Response getEngagementTeamRolesID = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/engagementTeam/org/"+listOrdId.get(0)+"/roles");
 		JsonPath jsonPathEvaluator1 = getEngagementTeamRolesID.jsonPath();
 		engagementRoleId = jsonPathEvaluator1.get("engagementRoleId");
 		getEngagementTeamRolesID.prettyPrint();
 		
 
 		Response patchEngagementTeamRoles = allUtils.delete(URL, AuthorizationKey, 
-				"/api/engagementTeam/org/"+listOrdId.get(3)+"/roles/"+engagementRoleId.get(0));
+				"/api/engagementTeam/org/"+listOrdId.get(0)+"/roles/"+engagementRoleId.get(0));
 		patchEngagementTeamRoles.prettyPrint();
 		
 		Assert.assertEquals(patchEngagementTeamRoles.statusCode(), 204);
@@ -485,14 +486,14 @@ List<String> listTitle;
 		/**
 		 * GETTING THE ROLE ID
 		 */
-		Response getEngagementTeamRolesID = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/engagementTeam/org/"+listOrdId.get(3)+"/roles");
+		Response getEngagementTeamRolesID = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/engagementTeam/org/"+listOrdId.get(0)+"/roles");
 		JsonPath jsonPathEvaluator1 = getEngagementTeamRolesID.jsonPath();
 		engagementRoleId = jsonPathEvaluator1.get("engagementRoleId");
 		getEngagementTeamRolesID.prettyPrint();
 		
 
 		Response patchEngagementTeamRoles = allUtils.delete(URL, AuthorizationKey, 
-				"/api/engagementTeams/org/"+listOrdId.get(3)+"/roles/"+engagementRoleId.get(0));
+				"/api/engagementTeams/org/"+listOrdId.get(0)+"/roles/"+engagementRoleId.get(0));
 		patchEngagementTeamRoles.prettyPrint();
 		
 		Assert.assertEquals(patchEngagementTeamRoles.statusCode(), 404);
@@ -520,14 +521,14 @@ List<String> listTitle;
 		/**
 		 * GETTING THE ROLE ID
 		 */
-		Response getEngagementTeamRolesID = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/engagementTeam/org/"+listOrdId.get(3)+"/roles");
+		Response getEngagementTeamRolesID = allUtils.get_URL_Without_Params(URL, AuthorizationKey, "/api/engagementTeam/org/"+listOrdId.get(0)+"/roles");
 		JsonPath jsonPathEvaluator1 = getEngagementTeamRolesID.jsonPath();
 		engagementRoleId = jsonPathEvaluator1.get("engagementRoleId");
 		getEngagementTeamRolesID.prettyPrint();		
 		
 
 		Response patchEngagementTeamRoles = allUtils.delete(URL, AuthorizationKey, 
-				"/api/engagementTeam/org/"+listOrdId.get(3)+"/roles/6050fec083bab05523e2fbf6");
+				"/api/engagementTeam/org/"+listOrdId.get(0)+"/roles/6050fec083bab05523e2fbf6");
 		patchEngagementTeamRoles.prettyPrint();
 		
 		Assert.assertEquals(patchEngagementTeamRoles.statusCode(), 400);
@@ -847,7 +848,7 @@ List<String> listTitle;
 		Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();
 
 		Response getMethodologyRes = getMethodology.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(3));
+				"Organization", listOrdId.get(0));
 		getMethodologyRes.prettyPrint();
 		
 		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
@@ -867,7 +868,7 @@ List<String> listTitle;
 		//Retriving th eroleID
 		
 		Response createPublish = getMethodology.get_URL_Without_Params(URL, AuthorizationKey,
-				"/api/engagementTeam/org/" +listOrdId.get(3) + "/revision/" + reviD.substring(1,25)+"/roles");
+				"/api/engagementTeam/org/" +listOrdId.get(0) + "/revision/" + reviD.substring(1,25)+"/roles");
 		createPublish.prettyPrint();
 		
 		
@@ -883,7 +884,7 @@ List<String> listTitle;
 		engagementTeamRolesPojo1.setTitle("Test"+getRandomAlphaNum());
 		
 		Response patchPublish = getMethodology.patch_URLPOJO(URL, AuthorizationKey,
-				"/api/engagementTeam/org/" +listOrdId.get(3) + "/revision/" + reviD.substring(1, 25)+"/roles/"+engagementRoleId.get(0),engagementTeamRolesPojo1);
+				"/api/engagementTeam/org/" +listOrdId.get(0) + "/revision/" + reviD.substring(1, 25)+"/roles/"+engagementRoleId.get(0),engagementTeamRolesPojo1);
 		patchPublish.prettyPrint();
 		
 		
@@ -916,7 +917,7 @@ List<String> listTitle;
 		Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();
 
 		Response getMethodologyRes = getMethodology.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(3));
+				"Organization", listOrdId.get(0));
 		getMethodologyRes.prettyPrint();
 		
 		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
@@ -936,7 +937,7 @@ List<String> listTitle;
 		//Retriving th eroleID
 		
 		Response createPublish = getMethodology.get_URL_Without_Params(URL, AuthorizationKey,
-				"/api/engagementTeam/org/" +listOrdId.get(3) + "/revision/" + reviD.substring(1,25)+"/roles");
+				"/api/engagementTeam/org/" +listOrdId.get(0) + "/revision/" + reviD.substring(1,25)+"/roles");
 		createPublish.prettyPrint();
 		
 		
@@ -952,7 +953,7 @@ List<String> listTitle;
 		engagementTeamRolesPojo1.setTitle("Test"+getRandomAlphaNum()+getMethodology.getRandomNumber(1,30));
 		
 		Response patchPublish = getMethodology.patch_URLPOJO(URL, AuthorizationKey,
-				"/api/engagementTeams/org/" +listOrdId.get(3) + "/revision/" + reviD.substring(1, 25)+"/roles/"+engagementRoleId.get(0),engagementTeamRolesPojo1);
+				"/api/engagementTeams/org/" +listOrdId.get(0) + "/revision/" + reviD.substring(1, 25)+"/roles/"+engagementRoleId.get(0),engagementTeamRolesPojo1);
 		patchPublish.prettyPrint();
 		
 		
@@ -986,7 +987,7 @@ List<String> listTitle;
 		Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();
 
 		Response getMethodologyRes = getMethodology.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(3));
+				"Organization", listOrdId.get(0));
 		getMethodologyRes.prettyPrint();
 		
 		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
@@ -1006,7 +1007,7 @@ List<String> listTitle;
 		//Retriving th eroleID
 		
 		Response createPublish = getMethodology.get_URL_Without_Params(URL, AuthorizationKey,
-				"/api/engagementTeam/org/" +listOrdId.get(3) + "/revision/" + reviD.substring(1,25)+"/roles");
+				"/api/engagementTeam/org/" +listOrdId.get(0) + "/revision/" + reviD.substring(1,25)+"/roles");
 		createPublish.prettyPrint();
 		
 		
@@ -1023,7 +1024,7 @@ List<String> listTitle;
 		engagementTeamRolesPojo1.setTitle(listTitle.get(0));
 		
 		Response patchPublish = getMethodology.patch_URLPOJO(URL, AuthorizationKey,
-				"/api/engagementTeam/org/" +listOrdId.get(3) + "/revision/" + reviD.substring(1,25)+"/roles/"+engagementRoleId.get(0),engagementTeamRolesPojo1);
+				"/api/engagementTeam/org/" +listOrdId.get(0) + "/revision/" + reviD.substring(1,25)+"/roles/"+engagementRoleId.get(0),engagementTeamRolesPojo1);
 		patchPublish.prettyPrint();
 		
 		
@@ -1055,7 +1056,7 @@ List<String> listTitle;
 		Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();
 
 		Response getMethodologyRes = getMethodology.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(3));
+				"Organization", listOrdId.get(0));
 		getMethodologyRes.prettyPrint();
 		
 		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
@@ -1075,7 +1076,7 @@ List<String> listTitle;
 		//Retriving th eroleID
 		
 		Response createPublish = getMethodology.get_URL_Without_Params(URL, AuthorizationKey,
-				"/api/engagementTeam/org/" +listOrdId.get(3) + "/revision/" + reviD.substring(1,25)+"/roles");
+				"/api/engagementTeam/org/" +listOrdId.get(0) + "/revision/" + reviD.substring(1,25)+"/roles");
 		createPublish.prettyPrint();
 		
 		
@@ -1091,7 +1092,7 @@ List<String> listTitle;
 		engagementTeamRolesPojo1.setTitle("");
 		
 		Response patchPublish = getMethodology.patch_URLPOJO(URL, AuthorizationKey,
-				"/api/engagementTeam/org/" +listOrdId.get(3) + "/revision/" + reviD.substring(1, 25)+"/roles/"+engagementRoleId.get(0),engagementTeamRolesPojo1);
+				"/api/engagementTeam/org/" +listOrdId.get(0) + "/revision/" + reviD.substring(1, 25)+"/roles/"+engagementRoleId.get(0),engagementTeamRolesPojo1);
 		patchPublish.prettyPrint();
 		
 		
@@ -1124,7 +1125,7 @@ List<String> listTitle;
 		Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();
 
 		Response getMethodologyRes = getMethodology.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(3));
+				"Organization", listOrdId.get(0));
 		getMethodologyRes.prettyPrint();
 		
 		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
@@ -1144,7 +1145,7 @@ List<String> listTitle;
 		//Retriving th eroleID
 		
 		Response createPublish = getMethodology.get_URL_Without_Params(URL, AuthorizationKey,
-				"/api/engagementTeam/org/" +listOrdId.get(3) + "/revision/" + reviD.substring(1, 25)+"/roles");
+				"/api/engagementTeam/org/" +listOrdId.get(0) + "/revision/" + reviD.substring(1, 25)+"/roles");
 		createPublish.prettyPrint();
 		
 		
@@ -1155,7 +1156,7 @@ List<String> listTitle;
 		String id = engagementRoleId.get(0);
 		
 		Response dalatePublish = getMethodology.delete(URL, AuthorizationKey,
-				"/api/engagementTeam/org/" +listOrdId.get(3) + "/revision/" + reviD.substring(1, 25)+"/roles/"+id);
+				"/api/engagementTeam/org/" +listOrdId.get(0) + "/revision/" + reviD.substring(1, 25)+"/roles/"+id);
 		dalatePublish.prettyPrint();		
 		
 		Assert.assertEquals(dalatePublish.statusCode(), 204);
@@ -1187,7 +1188,7 @@ List<String> listTitle;
 		Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();
 
 		Response getMethodologyRes = getMethodology.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(3));
+				"Organization", listOrdId.get(0));
 		getMethodologyRes.prettyPrint();
 		
 		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
@@ -1207,7 +1208,7 @@ List<String> listTitle;
 		//Retriving th eroleID
 		
 		Response createPublish = getMethodology.get_URL_Without_Params(URL, AuthorizationKey,
-				"/api/engagementTeam/org/" +listOrdId.get(3) + "/revision/" + reviD.substring(1, 25)+"/roles");
+				"/api/engagementTeam/org/" +listOrdId.get(0) + "/revision/" + reviD.substring(1, 25)+"/roles");
 		createPublish.prettyPrint();
 		
 		
@@ -1218,7 +1219,7 @@ List<String> listTitle;
 		String id = engagementRoleId.get(0);
 		
 		Response dalatePublish = getMethodology.delete(URL, AuthorizationKey,
-				"/api/engagementTeams/org/" +listOrdId.get(3) + "/revision/" + reviD.substring(1, 25)+"/roles/"+id);
+				"/api/engagementTeams/org/" +listOrdId.get(0) + "/revision/" + reviD.substring(1, 25)+"/roles/"+id);
 		dalatePublish.prettyPrint();		
 		
 		Assert.assertEquals(dalatePublish.statusCode(), 404);
@@ -1250,7 +1251,7 @@ List<String> listTitle;
 		Restassured_Automation_Utils getMethodology = new Restassured_Automation_Utils();
 
 		Response getMethodologyRes = getMethodology.get_URL_QueryParams(URL, AuthorizationKey, "/api/methodology",
-				"Organization", listOrdId.get(3));
+				"Organization", listOrdId.get(0));
 		getMethodologyRes.prettyPrint();
 		
 		JsonPath jsonPathEvaluator1 = getMethodologyRes.jsonPath();
@@ -1270,7 +1271,7 @@ List<String> listTitle;
 		//Retriving th eroleID
 		
 		Response createPublish = getMethodology.get_URL_Without_Params(URL, AuthorizationKey,
-				"/api/engagementTeam/org/" +listOrdId.get(3) + "/revision/" + reviD.substring(1,25)+"/roles");
+				"/api/engagementTeam/org/" +listOrdId.get(0) + "/revision/" + reviD.substring(1,25)+"/roles");
 		createPublish.prettyPrint();
 		
 		
@@ -1281,11 +1282,11 @@ List<String> listTitle;
 		String id = engagementRoleId.get(0);
 		
 		Response dalatePublish = getMethodology.delete(URL, AuthorizationKey,
-				"/api/engagementTeam/org/" +listOrdId.get(3) + "/revision/" + reviD.substring(1, 25)+"/roles/"+id);
+				"/api/engagementTeam/org/" +listOrdId.get(0) + "/revision/" + reviD.substring(1, 25)+"/roles/"+id);
 		dalatePublish.prettyPrint();
 		
 		Response deletePublishAgain = getMethodology.delete(URL, AuthorizationKey,
-				"/api/engagementTeam/org/" +listOrdId.get(3) + "/revision/" + reviD.substring(1,25)+"/roles/"+id);
+				"/api/engagementTeam/org/" +listOrdId.get(0) + "/revision/" + reviD.substring(1,25)+"/roles/"+id);
 		deletePublishAgain.prettyPrint();
 		
 		

@@ -1,23 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test verbose="2" name="Default test">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="restassured.automation.listeners.TestListeners"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <groups>
+      <run>
+        <include name="IntegrationTests"/>
+        <include name="EndToEnd"/>
+      </run>
+    </groups>
     <classes>
-      <class name="restassured.automation.testcases.Restassured_Automation_Methodology">
+      <class name="restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles">
         <methods>
-          <include name="Methodology_InheritAMethodology409"/>
-        </methods>
-      </class> <!-- restassured.automation.testcases.Restassured_Automation_Methodology -->
-    </classes>
-  </test> <!-- Default test -->
-  <test name="Default test(failed)">
-    <classes>
-      <class name="restassured.automation.testcases.Restassured_Automation_Methodology">
-        <methods>
-          <include name="Methodology_InheritAMethodology409"/>
+          <include name="EngagementTeamRoles_GetLoadAllEngagementRolesInformationForAnOrganization_status200"/>
+          <include name="EngagementTeamRoles_PostCreateAnEngagementRoleForAnOrganization_status200"/>
+          <include name="EngagementTeamRoles_PostCreateAnEngagementRoleForAMethodology_status409"/>
+          <include name="EngagementTeamRoles_PostCreateAnEngagementRoleForAnOrganization_status404"/>
+          <include name="EngagementTeamRoles_PostCreateAnEngagementRoleForAnOrganization_status409"/>
+          <include name="EngagementTeamRoles_PatchUpdateAnEngagementRoleForAnOrganization_status204"/>
+          <include name="EngagementTeamRoles_PostCreateAnEngagementRoleForAnOrganization_status400"/>
+          <include name="EngagementTeamRoles_DeleteAnEngagementRoleForAnOrganization_status400"/>
+          <include name="EngagementTeamRoles_PatchUpdateAnEngagementRoleForAnOrganization_status400"/>
+          <include name="EngagementTeamRoles_PatchUpdateAnEngagementRoleForAMethodology_status409"/>
+          <include name="EngagementTeamRoles_PostCreateAnEngagementRoleForAMethodology_status200"/>
+          <include name="EngagementTeamRoles_GetLoadAllEngagementRolesInformationForARevision_status200"/>
+          <include name="EngagementTeamRoles_PostCreateAnEngagementRoleForAMethodology_status400"/>
+          <include name="EngagementTeamRoles_PatchUpdateAnEngagementRoleForAnOrganization_status404"/>
+          <include name="EngagementTeamRoles_PostCreateAnEngagementRoleForAMethodology_status404"/>
           <include name="setup"/>
+          <include name="EngagementTeamRoles_PatchUpdateAnEngagementRoleForAMethodology_status404"/>
+          <include name="EngagementTeamRoles_PatchUpdateAnEngagementRoleForAnOrganization_status409"/>
+          <include name="EngagementTeamRoles_PatchUpdateAnEngagementRoleForAMethodology_status204"/>
+          <include name="EngagementTeamRoles_DeleteAnEngagementRoleForAMethodology_status204"/>
+          <include name="EngagementTeamRoles_DeleteAnEngagementRoleForAMethodology_status400"/>
+          <include name="EngagementTeamRoles_PatchUpdateAnEngagementRoleForAMethodology_status400"/>
+          <include name="EngagementTeamRoles_DeleteAnEngagementRoleForAMethodology_status404"/>
+          <include name="EngagementTeamRoles_DeleteDeleteAnEngagementRoleForAnOrganization_status404"/>
+          <include name="EngagementTeamRoles_DeleteDeleteAnEngagementRoleForAnOrganization_status204"/>
         </methods>
-      </class> <!-- restassured.automation.testcases.Restassured_Automation_Methodology -->
+      </class> <!-- restassured.automation.testcases.Restassured_Automation_EngagementTeamRoles -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
